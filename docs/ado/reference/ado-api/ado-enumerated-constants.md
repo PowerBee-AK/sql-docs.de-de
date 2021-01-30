@@ -7,40 +7,40 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - enumerated constants [ADO]
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3c19b98cbb000abc93755c3de43ac5420db164d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5882488e36fb420ad808974d18b34acb8ccbc00c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976481"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161651"
 ---
 # <a name="ado-enumerated-constants"></a>ADO – Enumerationskonstanten
 Um das Debuggen zu unterstützen, listet die ADO-Enumerationen einen Wert für jede Konstante auf. Dieser Wert ist jedoch rein beratend und kann sich von einem Release von ADO zu einem anderen ändern. Der Code sollte nur vom Namen und nicht vom tatsächlichen Wert der einzelnen Enumerationskonstanten abhängen.  
   
-|Konstante|Beschreibung|  
+|Konstante|BESCHREIBUNG|  
 |-|-|  
-|[ADCPROP_ASYNCTHREADPRIORITY_ENUM](./adcprop-asyncthreadpriority-enum.md)|Gibt für ein **Recordset** RDS-Recordsetobjekt die Ausführungs Priorität des asynchronen Threads an, der Daten abruft.|  
-|[ADCPROP_AUTORECALC_ENUM](./adcprop-autorecalc-enum.md)|Gibt an, wann der **MSDataShape** -Anbieter aggregierte und berechnete Spalten in einem hierarchischen **Recordset**neu berechnet.|  
+|[ADCPROP_ASYNCTHREADPRIORITY_ENUM](./adcprop-asyncthreadpriority-enum.md)|Gibt für ein  RDS-Recordsetobjekt die Ausführungs Priorität des asynchronen Threads an, der Daten abruft.|  
+|[ADCPROP_AUTORECALC_ENUM](./adcprop-autorecalc-enum.md)|Gibt an, wann der **MSDataShape** -Anbieter aggregierte und berechnete Spalten in einem hierarchischen **Recordset** neu berechnet.|  
 |[ADCPROP_UPDATECRITERIA_ENUM](./adcprop-updatecriteria-enum.md)|Gibt an, welche Felder zum Erkennen von Konflikten während einer vollständigen Aktualisierung einer Zeile der Datenquelle mit einem **Recordset** -Objekt verwendet werden können.|  
 |[ADCPROP_UPDATERESYNC_ENUM](./adcprop-updateresync-enum.md)|Gibt an, ob auf die **UpdateBatch** -Methode ein impliziter Vorgang zum **erneuten Synchronisieren** der Methode folgt, und wenn ja, der Gültigkeitsbereich dieses Vorgangs.|  
 |[AffectEnum](./affectenum.md)|Gibt an, welche Datensätze von einem Vorgang betroffen sind.|  
 |[BookmarkEnum](./bookmarkenum.md)|Gibt ein Lesezeichen an, das angibt, wo der Vorgang beginnen soll.|  
 |[CommandTypeEnum](./commandtypeenum.md)|Gibt an, wie ein Befehls Argument interpretiert werden soll.|  
 |[CompareEnum](./compareenum.md)|Gibt die relative Position von zwei Datensätzen an, die durch Ihre Lesezeichen dargestellt werden.|  
-|[ConnectModeEnum](./connectmodeenum.md)|Gibt die verfügbaren Berechtigungen zum Ändern von Daten in einer **Verbindung**, zum Öffnen eines Daten **Satzes**oder zum Angeben von Werten für die **Mode** -Eigenschaft des **Datensatz** -und des **Stream** -Objekts an.|  
+|[ConnectModeEnum](./connectmodeenum.md)|Gibt die verfügbaren Berechtigungen zum Ändern von Daten in einer **Verbindung**, zum Öffnen eines Daten **Satzes** oder zum Angeben von Werten für die **Mode** -Eigenschaft des **Datensatz** -und des **Stream** -Objekts an.|  
 |[ConnectOptionEnum](./connectoptionenum.md)|Gibt an, ob die **Open** -Methode eines **Verbindungs** Objekts nach (synchron) oder vor (asynchron) der Verbindung zurückgegeben werden soll.|  
 |[ConnectPromptEnum](./connectpromptenum.md)|Gibt an, ob ein Dialogfeld angezeigt werden soll, um beim Öffnen einer Verbindung mit einer ODBC-Datenquelle nach fehlenden Parametern zu suchen.|  
 |[CopyRecordOptionsEnum](./copyrecordoptionsenum.md)|Gibt das Verhalten der **CopyRecord** -Methode an.|  
 |[CursorLocationEnum](./cursorlocationenum.md)|Gibt den Speicherort der Cursor-Engine an.|  
 |[CursorOptionEnum](./cursoroptionenum.md)|Gibt an, auf welche Funktionalität die **unterstützte** Methode testen soll.|  
 |[CursorTypeEnum](./cursortypeenum.md)|Gibt den Typ des Cursors an, der in einem **Recordset** -Objekt verwendet wird.|  
-|[DataTypeEnum](./datatypeenum.md)|Gibt den Datentyp eines **Felds**, eines **Parameters**oder einer **Eigenschaft**an.|  
+|[DataTypeEnum](./datatypeenum.md)|Gibt den Datentyp eines **Felds**, eines **Parameters** oder einer **Eigenschaft** an.|  
 |[EditModeEnum](./editmodeenum.md)|Gibt den Bearbeitungsstatus eines Datensatzes an.|  
 |[ErrorValueEnum](./errorvalueenum.md)|Gibt den Typ des ADO-Lauf Zeit Fehlers an.|  
 |[EventReasonEnum](./eventreasonenum.md)|Gibt den Grund an, warum ein Ereignis aufgetreten ist.|  
@@ -49,8 +49,8 @@ Um das Debuggen zu unterstützen, listet die ADO-Enumerationen einen Wert für j
 |[FieldEnum](./fieldenum.md)|Gibt die speziellen Felder an, auf die in der **Fields** -Auflistung eines **Datensatz** -Objekts verwiesen wird.|  
 |[FieldAttributeEnum](./fieldattributeenum.md)|Gibt ein oder mehrere Attribute eines **Feld** Objekts an.|  
 |[FieldStatusEnum](./fieldstatusenum.md)|Gibt den Status eines **Feld** Objekts an.|  
-|[FilterGroupEnum](./filtergroupenum.md)|Gibt die Gruppe von Datensätzen an, die von einem **Recordset**gefiltert werden sollen.|  
-|[GetRowsOptionEnum](./getrowsoptionenum.md)|Gibt an, wie viele Datensätze aus einem **Recordset**abgerufen werden sollen.|  
+|[FilterGroupEnum](./filtergroupenum.md)|Gibt die Gruppe von Datensätzen an, die von einem **Recordset** gefiltert werden sollen.|  
+|[GetRowsOptionEnum](./getrowsoptionenum.md)|Gibt an, wie viele Datensätze aus einem **Recordset** abgerufen werden sollen.|  
 |[IsolationLevelEnum](./isolationlevelenum.md)|Gibt die Ebene der Transaktions Isolation für ein **Verbindungs** Objekt an.|  
 |[LineSeparatorsEnum](./lineseparatorsenum.md)|Gibt das Zeichen an, das als Zeilen Trennzeichen in **textstreamobjekten** verwendet wird.|  
 |[LockTypeEnum](./locktypeenum.md)|Gibt den Typ der Sperre an, die während der Bearbeitung in Datensätzen eingefügt wird|  
@@ -59,17 +59,17 @@ Um das Debuggen zu unterstützen, listet die ADO-Enumerationen einen Wert für j
 |[ObjectStateEnum](./objectstateenum.md)|Gibt an, ob ein Objekt geöffnet oder geschlossen ist, ob eine Verbindung mit einer Datenquelle hergestellt wird, ob ein Befehl ausgeführt oder Daten abgerufen werden.|  
 |[ParameterAttributesEnum](./parameterattributesenum.md)|Gibt die Attribute eines **Parameter** Objekts an.|  
 |[ParameterDirectionEnum](./parameterdirectionenum.md)|Gibt an, ob der **Parameter** einen Eingabeparameter, einen Ausgabeparameter oder beides darstellt oder ob der Parameter der Rückgabewert einer gespeicherten Prozedur ist.|  
-|[PersistFormatEnum](./persistformatenum.md)|Gibt das Format an, in dem ein **Recordset**gespeichert werden soll.|  
-|[PositionEnum](./positionenum.md)|Gibt die aktuelle Position des Daten Satz Zeigers innerhalb eines **Recordsets**an.|  
+|[PersistFormatEnum](./persistformatenum.md)|Gibt das Format an, in dem ein **Recordset** gespeichert werden soll.|  
+|[PositionEnum](./positionenum.md)|Gibt die aktuelle Position des Daten Satz Zeigers innerhalb eines **Recordsets** an.|  
 |[PropertyAttributesEnum](./propertyattributesenum.md)|Gibt die Attribute eines **Eigenschafts** Objekts an.|  
 |[RecordCreateOptionsEnum](./recordcreateoptionsenum.md)|Gibt für die **Open** -Methode des **Daten Satz** Objekts an, ob ein vorhandener **Datensatz** geöffnet werden soll oder ob ein neuer **Datensatz** erstellt werden soll.|  
-|[RecordOpenOptionsEnum](./recordopenoptionsenum.md)|Gibt Optionen für das Öffnen eines **Datensatzes**an. Diese Werte können mit einem or-Operator kombiniert werden.|  
+|[RecordOpenOptionsEnum](./recordopenoptionsenum.md)|Gibt Optionen für das Öffnen eines **Datensatzes** an. Diese Werte können mit einem or-Operator kombiniert werden.|  
 |[RecordStatusEnum](./recordstatusenum.md)|Gibt den Status eines Datensatzes in Bezug auf Batch Updates und andere Massen Vorgänge an.|  
 |[RecordTypeEnum](./recordtypeenum.md)|Gibt den Typ des **Daten Satz** Objekts an.|  
-|[ResyncEnum](./resyncenum.md)|Gibt an, ob zugrunde liegende Werte durch einen Rückruf von **Resync**überschrieben werden.|  
+|[ResyncEnum](./resyncenum.md)|Gibt an, ob zugrunde liegende Werte durch einen Rückruf von **Resync** überschrieben werden.|  
 |[SaveOptionsEnum](./saveoptionsenum.md)|Gibt an, ob eine Datei beim Speichern aus einem **Streamobjekt** erstellt oder überschrieben werden soll. Die Werte können mit einem and-Operator kombiniert werden.|  
-|[SchemaEnum](./schemaenum.md)|Gibt den Typ des Schema- **Recordsets** an, das von der **OpenSchema** -Methode abgerufen wird. Gibt die Richtung einer Daten Satz Suche innerhalb eines **Recordsets**an.|  
-|[SearchDirectionEnum](./searchdirectionenum.md)|Gibt die Richtung einer Daten Satz Suche innerhalb eines **Recordsets**an. Gibt den Typ des auszuführenden **Suchtyps** an.|  
+|[SchemaEnum](./schemaenum.md)|Gibt den Typ des Schema- **Recordsets** an, das von der **OpenSchema** -Methode abgerufen wird. Gibt die Richtung einer Daten Satz Suche innerhalb eines **Recordsets** an.|  
+|[SearchDirectionEnum](./searchdirectionenum.md)|Gibt die Richtung einer Daten Satz Suche innerhalb eines **Recordsets** an. Gibt den Typ des auszuführenden **Suchtyps** an.|  
 |[SeekEnum](./seekenum.md)|Gibt den Typ des auszuführenden **Suchtyps** an. Gibt Optionen für das Öffnen eines Daten **Strom** Objekts an. Die Werte können mit einem and-Operator kombiniert werden.|  
 |[StreamOpenOptionsEnum](./streamopenoptionsenum.md)|Gibt Optionen für das Öffnen eines Daten **Strom** Objekts an. Die Werte können mit einem and-Operator kombiniert werden. Gibt an, ob der gesamte Stream oder die nächste Zeile aus einem **Streamobjekt** gelesen werden soll.|  
 |[StreamReadEnum](./streamreadenum.md)|Gibt an, ob der gesamte Stream oder die nächste Zeile aus einem **Streamobjekt** gelesen werden soll. Gibt den Typ der in einem **Streamobjekt** gespeicherten Daten an.|  

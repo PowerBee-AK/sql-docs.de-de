@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dbmmonitorresults
 - sp_dbmmonitorresults_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f623f377bf850f5c247c770f7cc38358cf4dabb2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7af393da5482f8955c8e5eea20c9742ffb269baa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543557"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160615"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -100,7 +100,7 @@ sp_dbmmonitorresults database_name
 |**time_behind**|**datetime**|Ungefähre Systemuhrzeit des Prinzipals, auf deren Stand die Spiegelungsdatenbank derzeit gebracht wird. Der Wert ist nur in der Prinzipalserverinstanz sinnvoll.|  
 |**local_time**|**datetime**|Systemuhrzeit in der lokalen Serverinstanz, zu der diese Zeile aktualisiert wurde.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_dbmmonitorresults** können nur im Kontext der **msdb** -Datenbank ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  

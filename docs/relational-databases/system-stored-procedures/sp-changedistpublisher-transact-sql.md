@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changedistpublisher_TSQL
 - sp_changedistpublisher
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ca2b3369a75d2e2b80624d99d2fe11459b8ff749
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d48757f7404ba4f915e7b92609c9077ab702adb4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548264"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159042"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 `[ @property = ] 'property'` Eine Eigenschaft, die für den angegebenen Verleger geändert werden soll. *Property* ist vom **Datentyp vom Datentyp sysname** . die folgenden Werte sind möglich.  
   
@@ -70,11 +70,11 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_changedistpublisher** wird bei allen Replikations Typen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_changedistpublisher**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_changedistpublisher** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

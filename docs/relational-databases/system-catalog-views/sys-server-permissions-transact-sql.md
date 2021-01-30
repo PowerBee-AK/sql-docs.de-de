@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.server_permissions_TSQL
 - sys.server_permissions
@@ -21,22 +21,22 @@ ms.assetid: 7d78bf17-6c64-4166-bd0b-9e9e20992136
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc833da8d53eadd88152e603777b4799ac30938f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b30e7adeb6ad09417b9ab02cb01610774d09a148
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464661"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159043"
 ---
 # <a name="sysserver_permissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Gibt eine Zeile für jede Berechtigung auf Serverebene zurück.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|Identifiziert die Klasse, in der die Berechtigung vorhanden ist.<br /><br /> 100 = Server<br /><br /> 101 = Serverprinzipal<br /><br /> 105 = Endpunkt|  
-|**class_desc**|**nvarchar(60)**|Beschreibung der Klasse, in der die Berechtigung vorhanden ist. Einer der folgenden Werte:<br /><br /> **Servers**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**class_desc**|**nvarchar(60)**|Beschreibung der Klasse, in der die Berechtigung vorhanden ist. Einer der folgenden Werte:<br /><br /> **Servers**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **Dreher**|  
 |**major_id**|**int**|ID des sicherbaren Elements, für das die Berechtigung vorhanden ist. Der Wert wird gemäß der Klasse interpretiert. Bei den meisten Elementen ist dies die ID, die die Klasse darstellt. Die Interpretation für Elemente, die nicht dem Standard entsprechen, lautet wie folgt:<br /><br /> 100 = immer 0|  
 |**minor_id**|**int**|Sekundäre ID des Elements, für das die Berechtigung vorhanden ist. Der Wert wird gemäß der Klasse interpretiert.|  
 |**grantee_principal_id**|**int**|Serverprinzipal-ID, der die Berechtigungen erteilt werden.|  

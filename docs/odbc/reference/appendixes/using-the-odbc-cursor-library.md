@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ODBC cursor library [ODBC], using cursor library
 - cursor library [ODBC], using cursor library
 ms.assetid: 9653f2f8-ccfc-4220-99ef-601dc0fa641c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be42c95692537c0479afb7ed492756b8a54ab030
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1658d3c628506f1b5c53a5c9271a10f96fa2ef44
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386196"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158189"
 ---
 # <a name="using-the-odbc-cursor-library"></a>Verwenden der ODBC-Cursorbibliothek
 > [!IMPORTANT]  
@@ -29,7 +29,7 @@ ms.locfileid: "88386196"
   
 1.  Ruft **SQLSetConnectAttr** mit einem *Attribut* von SQL_ATTR_ODBC_CURSORS auf, um anzugeben, wie die Cursor Bibliothek mit einer bestimmten Verbindung verwendet werden soll. Die Cursor Bibliothek kann immer verwendet werden (SQL_CUR_USE_ODBC), nur verwendet, wenn der Treiber keine scrollbaren Cursor (SQL_CUR_USE_IF_NEEDED) unterstützt oder nie verwendet wird (SQL_CUR_USE_DRIVER).  
   
-2.  Ruft **SQLCONNECT**, **SQLDriverConnect**oder **sqlbrowseconnetct** auf, um eine Verbindung mit der Datenquelle herzustellen.  
+2.  Ruft **SQLCONNECT**, **SQLDriverConnect** oder **sqlbrowseconnetct** auf, um eine Verbindung mit der Datenquelle herzustellen.  
   
 3.  Ruft **SQLSetStmtAttr** auf, um den Cursortyp (SQL_ATTR_CURSOR_TYPE), die Parallelität (SQL_ATTR_CONCURRENCY) und die Rowsetgröße (SQL_ATTR_ROW_ARRAY_SIZE) anzugeben. Die Cursor Bibliothek unterstützt Vorwärts Cursor und statische Cursor. Vorwärts Cursor müssen schreibgeschützt sein, während statische Cursor schreibgeschützt sein können oder die Steuerung der vollständigen Parallelität beim Vergleichen von Werten verwenden können.  
   
@@ -43,4 +43,4 @@ ms.locfileid: "88386196"
   
  Zum Abrufen von Daten aus einer ungebundenen Spalte Ruft die Anwendung **SQLSetPos** auf, um den Cursor in der gewünschten Zeile zu positionieren. Anschließend wird **SQLGetData** aufgerufen, um die Daten abzurufen.  
   
- Um die Anzahl der Zeilen zu bestimmen, die aus der Datenquelle abgerufen wurden, ruft die Anwendung **SQLRowCount**auf.
+ Um die Anzahl der Zeilen zu bestimmen, die aus der Datenquelle abgerufen wurden, ruft die Anwendung **SQLRowCount** auf.

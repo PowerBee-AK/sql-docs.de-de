@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_delete_log_sp_TSQL
 - sysmail_delete_log_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7cc01563da03abda4ea8eef8b639ba5704549f55
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1f3921d220f367d15849eab080369db986d8f53e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538434"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160021"
 ---
 # <a name="sysmail_delete_log_sp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,12 +44,12 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ## <a name="arguments"></a>Argumente  
 `[ @logged_before = ] 'logged_before'` Löscht Einträge bis zu dem Datum und der Uhrzeit, die durch das *logged_before* -Argument angegeben werden. *logged_before* ist vom Datentyp **datetime** . Der Standardwert ist NULL. NULL steht für alle Daten.  
   
-`[ @event_type = ] 'event_type'` Löscht Protokolleinträge des als *event_type*angegebenen Typs. *event_type* ist vom Datentyp **varchar(15)** und besitzt keinen Standardwert. Gültige Einträge sind **success**, **warning**, **error**und **informational**. NULL steht für alle Ereignistypen.  
+`[ @event_type = ] 'event_type'` Löscht Protokolleinträge des als *event_type* angegebenen Typs. *event_type* ist vom Datentyp **varchar(15)** und besitzt keinen Standardwert. Gültige Einträge sind **success**, **warning**, **error** und **informational**. NULL steht für alle Ereignistypen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die gespeicherte Prozedur **sysmail_delete_log_sp** , um Einträge dauerhaft aus dem Datenbank-E-Mail-Protokoll zu löschen. Mithilfe eines optionalen Arguments können Sie nur ältere Datensätze löschen, indem Sie ein Datum und eine Uhrzeit angeben. Ereignisse, die älter sind als dieses Argument, werden gelöscht. Mithilfe eines optionalen Arguments können Sie nur Ereignisse eines bestimmten Typs löschen. Diese werden als **event_type** -Argument angegeben.  
   
  Durch Löschen der Einträge im Datenbank-E-Mail-Protokoll werden die E-Mail-Einträge nicht aus den Datenbank-E-Mail-Tabellen gelöscht. Verwenden Sie [sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md) , um E-Mails aus den Datenbank-E-Mail-Tabellen zu löschen.  

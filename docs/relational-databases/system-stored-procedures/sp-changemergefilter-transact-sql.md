@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changemergefilter_TSQL
 - sp_changemergefilter
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e5a5208eeb1a47971e1960bd9c9c581d5d6517e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8081fc9a95452d68540acf3b2a5a412910f75219
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539118"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159850"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,13 +44,13 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @article = ] 'article'` Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @article = ] 'article'` Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @filtername = ] 'filtername'` Der aktuelle Name des Filters. *Filter Name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @filtername = ] 'filtername'` Der aktuelle Name des Filters. *Filter Name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @property = ] 'property'` Der Name der Eigenschaft, die geändert werden soll. *Property* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @property = ] 'property'` Der Name der Eigenschaft, die geändert werden soll. *Property* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 `[ @value = ] 'value'` Der neue Wert für die angegebene Eigenschaft. der Wert ist vom Datentyp **nvarchar (1000)** und hat keinen Standard *Wert*.  
   
@@ -67,7 +67,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_unique_key**|**true**|Der Join betrifft einen eindeutigen Schlüssel.|  
 ||**false**|Der Join betrifft nicht einen eindeutigen Schlüssel.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *force_invalidate_snapshot* ist ein **Bit**und hat den Standardwert **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *force_invalidate_snapshot* ist ein **Bit** und hat den Standardwert **0**.  
   
  der Wert **0** gibt an, dass Änderungen am Mergeartikel nicht bewirken, dass die Momentaufnahme ungültig wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderungen eine neue Momentaufnahme erfordern, tritt ein Fehler auf und es werden keine Änderungen vorgenommen.  
   
@@ -82,15 +82,15 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_changemergefilter** wird bei der Mergereplikation verwendet.  
   
- Das Ändern des Filters für einen Mergeartikel erfordert, dass eine vorhandene Momentaufnahme erneut erstellt wird. Dies erfolgt durch Festlegen des ** \@ force_invalidate_snapshot** auf **1**. Wenn es Abonnements für diesen Artikel gibt, müssen die Abonnements erneut initialisiert werden. Dies erfolgt durch Festlegen des ** \@ force_reinit_subscription** auf **1**.  
+ Das Ändern des Filters für einen Mergeartikel erfordert, dass eine vorhandene Momentaufnahme erneut erstellt wird. Dies erfolgt durch Festlegen des **\@ force_invalidate_snapshot** auf **1**. Wenn es Abonnements für diesen Artikel gibt, müssen die Abonnements erneut initialisiert werden. Dies erfolgt durch Festlegen des **\@ force_reinit_subscription** auf **1**.  
   
  Um logische Datensätze verwenden zu können, müssen die Veröffentlichung und die Artikel eine Reihe von Anforderungen erfüllen. Weitere Informationen finden Sie unter [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_changemergefilter**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_changemergefilter** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   

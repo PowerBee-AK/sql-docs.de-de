@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changedistributor_property_TSQL
 - sp_changedistributor_property
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 62768c7cca029d3424e478cb1b16aa01df1a52c1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bc6809a0120091ef489bd41618e4b81006961353
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539123"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159006"
 ---
 # <a name="sp_changedistributor_property-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,14 +51,14 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_changedistributor_property** wird bei allen Replikations Typen verwendet.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_changedistributor_property](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pro_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_changedistributor_property**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_changedistributor_property** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

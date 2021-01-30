@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_set_warehouse_database_name
 - sp_syscollector_set_warehouse_database_name_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a85aca1b-8135-4c81-9a05-da5aec76f1ed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1a6bd4bb5785126b8f0a9cb327ade7741b086b9c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 928e72b551a976c3b51d9260248e02a4963f4052
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543052"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159524"
 ---
 # <a name="sp_syscollector_set_warehouse_database_name-transact-sql"></a>sp_syscollector_set_warehouse_database_name (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Sie müssen den Datensammler deaktivieren, bevor Sie die Konfiguration für den gesamten Datensammler ändern. Dieser Vorgang schlägt fehl, wenn der Datensammler aktiviert ist.  
   
  Um den aktuellen Datenbanknamen anzuzeigen, Fragen Sie die [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) Systemsicht ab.  

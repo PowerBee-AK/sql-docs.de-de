@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], timestamp
 - timestamp data type [ODBC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e51d82e8acd59c8b4e6f5a8385720b0bd38eba4c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 54632816fb7013639e1cdb761fbc8df53c461a0d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449032"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158588"
 ---
 # <a name="c-to-sql-timestamp"></a>C zu SQL: Zeitstempel
 Der Bezeichner für den Zeitstempel-ODBC-C-Datentyp lautet:  
@@ -41,6 +41,6 @@ Der Bezeichner für den Zeitstempel-ODBC-C-Datentyp lautet:
   
  Informationen dazu, welche Werte in einer SQL_C_TIMESTAMP Struktur gültig sind, finden Sie unter [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md)weiter oben in diesem Anhang.  
   
- Wenn Zeitstempel-C-Daten in Zeichen-SQL-Daten konvertiert werden, befinden sich die resultierenden Zeichendaten im "*JJJJ* - *mm* - *DD* *HH*:*mm*:*SS*[.* f...*] " Ges.  
+ Wenn Zeitstempel-C-Daten in Zeichen-SQL-Daten konvertiert werden, befinden sich die resultierenden Zeichendaten im "*JJJJ* - *mm* - *DD* *HH*:*mm*:*SS*[.*f...*] "formatieren.  
   
- Der Treiber ignoriert den Längen-/indikatorenwert beim Umrechnen von Daten aus dem Datentyp Zeitstempel c und geht davon aus, dass die Größe des Daten Puffers die Größe des Zeitstempel-c-Datentyps ist. Der Wert für die Länge/den Indikator wird im *StrLen_Or_Ind* -Argument in **SQLPutData** und in dem Puffer übergeben, der mit dem *StrLen_or_IndPtr* -Argument in **SQLBindParameter**angegeben wird. Der Datenpuffer wird mit dem *DataPtr* -Argument in **SQLPutData** und dem *ParameterValuePtr* -Argument in **SQLBindParameter**angegeben.
+ Der Treiber ignoriert den Längen-/indikatorenwert beim Umrechnen von Daten aus dem Datentyp Zeitstempel c und geht davon aus, dass die Größe des Daten Puffers die Größe des Zeitstempel-c-Datentyps ist. Der Wert für die Länge/den Indikator wird im *StrLen_Or_Ind* -Argument in **SQLPutData** und in dem Puffer übergeben, der mit dem *StrLen_or_IndPtr* -Argument in **SQLBindParameter** angegeben wird. Der Datenpuffer wird mit dem *DataPtr* -Argument in **SQLPutData** und dem *ParameterValuePtr* -Argument in **SQLBindParameter** angegeben.

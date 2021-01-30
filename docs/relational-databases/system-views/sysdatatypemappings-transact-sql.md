@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysdatatypemappings
 - sysdatatypemappings_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ad4a6df1ae2dbdd418e133053330095a389bdf24
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 753a18b314ea51fa341fe8e6f8b0fdfd235bf95b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427532"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160325"
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88427532"
 |**source_scale_min**|**int**|Die Mindestdezimalstellen des Datentyps im Quell-DBMS, wobei der Wert NULL angibt, dass die Dezimalstellen nicht verwendet werden.|  
 |**source_scale_max**|**int**|Die maximalen Dezimalstellen des Datentyps im Quell-DBMS, wobei der Wert NULL angibt, dass die Dezimalstellen nicht verwendet werden.|  
 |**source_nullable**|**bit**|Gibt an, ob der Zieldatentyp NULL-Werte unterstützt.|  
-|**source_createparams**|**int**|Nur interne Verwendung.|  
+|**source_createparams**|**int**|Nur zur internen Verwendung.|  
 |**destination_dbms**|**sysname**|Gibt den Namen des Ziel-DBMS an, wobei die folgenden Werte möglich sind:<br /><br /> **MSSQLSERVER** = Das Ziel ist eine SQL Server-Datenbank.<br /><br /> **ORACLE** = Das Ziel ist eine Oracle-Datenbank.<br /><br /> **DB2** = Das Ziel ist eine IBM DB2-Datenbank.<br /><br /> **SYBASE** = Das Ziel ist eine Sybase-Datenbank.|  
 |**destination_version**|**sysname**|Die Produktversion des Ziel-DBMS.|  
 |**destination_type**|**sysname**|Der Datentyp im Ziel-DBMS.|  
@@ -51,7 +51,7 @@ ms.locfileid: "88427532"
 |**destination_precision**|**bigint**|Die Genauigkeit des Datentyps im Ziel-DBMS.|  
 |**destination_scale**|**int**|Die Dezimalstellen des Datentyps im Ziel-DBMS.|  
 |**destination_nullable**|**bit**|Gibt an, ob der Datentyp im Ziel-DBMS NULL-Werte unterstützt.|  
-|**destination_createparams**|**int**|Nur interne Verwendung.|  
+|**destination_createparams**|**int**|Nur zur internen Verwendung.|  
 |**Datenverlust**|**bit**|Gibt an, ob beim Zuordnen zwischen dem Datentyp des Quell- und Ziel-DBMS Daten verloren gehen.|  
 |**is_default**|**bit**|Gibt an, ob standardmäßig die Datentypzuordnung verwendet wird.|  
   

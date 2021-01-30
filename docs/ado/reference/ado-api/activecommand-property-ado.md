@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset20::ActiveCommand
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df737543e8cc09735c7da413b89406b6f2385079
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0a8d8dab4944cfa2d43bc571442e294699154f12
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977152"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159266"
 ---
 # <a name="activecommand-property-ado"></a>ActiveCommand-Eigenschaft (ADO)
 Gibt das [Befehls](./command-object-ado.md) Objekt an, das das zugeordnete [Recordset](./recordset-object-ado.md) -Objekt erstellt hat.  
@@ -32,7 +32,7 @@ Gibt das [Befehls](./command-object-ado.md) Objekt an, das das zugeordnete [Reco
 ## <a name="remarks"></a>Bemerkungen  
  Die **ActiveCommand** -Eigenschaft ist schreibgeschützt.  
   
- Wenn kein **Befehls** Objekt zum Erstellen des aktuellen **Recordsets**verwendet wurde, wird ein **null** -Objekt Verweis zurückgegeben.  
+ Wenn kein **Befehls** Objekt zum Erstellen des aktuellen **Recordsets** verwendet wurde, wird ein **null** -Objekt Verweis zurückgegeben.  
   
  Verwenden Sie diese Eigenschaft, um das zugeordnete **Befehls** Objekt zu suchen, wenn Sie nur das resultierende **Recordset** -Objekt erhalten.  
   

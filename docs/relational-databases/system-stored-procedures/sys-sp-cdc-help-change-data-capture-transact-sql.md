@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_help_change_data_capture_TSQL
 - sys.sp_cdc_help_change_data_capture_TSQL
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13f78f25cd02ccf9c698518b5aa10f7fda0b7694
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 79c12ab4b1bdfb3a955c83ef3d724a026f24f1ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809821"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159778"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,14 +47,14 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="arguments"></a>Argumente  
  [ @source_schema =] '*source_schema*'  
- Der Name des Schemas, zu dem die Quelltabelle gehört. *source_schema* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *source_schema* angegeben wird, müssen *source_name* ebenfalls angegeben werden.  
+ Der Name des Schemas, zu dem die Quelltabelle gehört. *source_schema* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn *source_schema* angegeben wird, müssen *source_name* ebenfalls angegeben werden.  
   
  Wenn der Wert nicht NULL ist, müssen *source_schema* in der aktuellen Datenbank vorhanden sein.  
   
  Wenn *source_schema* ungleich NULL ist, müssen *source_name* ebenfalls nicht NULL sein.  
   
  [ @source_name =] '*source_name*'  
- Der Name der Quelltabelle. *source_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *source_name* angegeben wird, müssen *source_schema* ebenfalls angegeben werden.  
+ Der Name der Quelltabelle. *source_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn *source_name* angegeben wird, müssen *source_schema* ebenfalls angegeben werden.  
   
  Wenn der Wert nicht NULL ist, müssen *source_name* in der aktuellen Datenbank vorhanden sein.  
   
@@ -65,7 +65,7 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|Name des Quelltabellenschemas.|  
 |source_table|**sysname**|Name der Quelltabelle.|  
@@ -83,7 +83,7 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|Liste der Indexspalten, mit deren Hilfe Zeilen in der Quelltabelle eindeutig identifiziert werden.|  
 |captured_column_list|**nvarchar(max)**|Liste der aufgezeichneten Quellspalten.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn sowohl *source_schema* als auch *source_name* standardmäßig auf NULL festgelegt ist, oder explizit auf NULL festgelegt ist, gibt diese gespeicherte Prozedur Informationen für alle Daten Bank Aufzeichnungs Instanzen zurück, für die der Aufrufer über SELECT-Zugriff verfügt. Wenn *source_schema* und *source_name* ungleich NULL sind, werden nur Informationen für die jeweilige benannte aktivierte Tabelle zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  

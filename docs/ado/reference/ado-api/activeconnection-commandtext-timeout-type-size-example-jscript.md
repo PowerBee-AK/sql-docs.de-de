@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - JScript
 helpviewer_keywords:
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 258cc6ac4f20b6704a8f40858d7c5f47e6854933
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b44f41b589e813e79e6a66e2736dbafc9d1c4e52
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977011"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159926"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>Beispiel für ActiveConnection, CommandText, CommandTimeout, CommandType, Size und Direction Properties (JScript)
 In diesem Beispiel werden die Eigenschaften [ActiveConnection](./activeconnection-property-ado.md), [CommandText](./commandtext-property-ado.md), [CommandTimeout](./commandtimeout-property-ado.md), [CommandType](./commandtype-property-ado.md), [size](./size-property-ado-parameter.md)und [Direction](./direction-property.md) verwendet, um eine gespeicherte Prozedur auszuführen. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **ActiveConnectionJS. ASP**.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changeobjectowner_TSQL
 - sp_changeobjectowner
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e96c93be7b21deb0966e0a48f5fde3258501ac6c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 482fcbdb2d7c1b79eb0a8b5ed88d1295785b994b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464422"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159832"
 ---
 # <a name="sp_changeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,15 +46,15 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @objname = ] 'object'` Der Name einer vorhandenen Tabelle, Sicht, benutzerdefinierten Funktion oder gespeicherten Prozedur in der aktuellen Datenbank. *Object* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert. Das *Objekt* kann mit dem Besitzer des vorhandenen Objekts im Formular _existing_owner_qualifiziert werden **.** _Objekt_ , wenn das Schema und der zugehörige Besitzer denselben Namen haben.  
+`[ @objname = ] 'object'` Der Name einer vorhandenen Tabelle, Sicht, benutzerdefinierten Funktion oder gespeicherten Prozedur in der aktuellen Datenbank. *Object* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert. Das *Objekt* kann mit dem Besitzer des vorhandenen Objekts im Formular _existing_owner_ qualifiziert werden **.** _Objekt_ , wenn das Schema und der zugehörige Besitzer denselben Namen haben.  
   
-`[ @newowner = ] 'owner_ '` Der Name des Sicherheits Kontos, das den neuen Besitzer des Objekts sein wird. *Owner* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. der *Besitzer* muss ein gültiger Datenbankbenutzer, eine Server Rolle, eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldung oder eine Windows-Gruppe mit Zugriff auf die aktuelle Datenbank sein. Wenn es sich beim neuen Besitzer um einen Windows-Benutzer oder eine Windows-Gruppe handelt, für den bzw. die kein entsprechender Datenbankprinzipal vorhanden ist, wird ein Datenbankbenutzer erstellt.  
+`[ @newowner = ] 'owner_ '` Der Name des Sicherheits Kontos, das den neuen Besitzer des Objekts sein wird. *Owner* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert. der *Besitzer* muss ein gültiger Datenbankbenutzer, eine Server Rolle, eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldung oder eine Windows-Gruppe mit Zugriff auf die aktuelle Datenbank sein. Wenn es sich beim neuen Besitzer um einen Windows-Benutzer oder eine Windows-Gruppe handelt, für den bzw. die kein entsprechender Datenbankprinzipal vorhanden ist, wird ein Datenbankbenutzer erstellt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="remarks"></a>Bemerkungen  
- **sp_changeobjectowner** entfernt alle vorhandenen Berechtigungen aus dem-Objekt. Sie müssen alle Berechtigungen, die Sie beibehalten möchten, nach dem Ausführen **sp_changeobjectowner**erneut anwenden. Daher wird empfohlen, vor dem Ausführen **sp_changeobjectowner**Skripts für vorhandene Berechtigungen zu erstellen. Nachdem der Besitz des Objekts geändert wurde, können Sie das Skript verwenden, um die Berechtigungen erneut zuzuweisen. Sie müssen den Objektbesitzer im Berechtigungsskript vor dem Ausführen ändern.  
+ **sp_changeobjectowner** entfernt alle vorhandenen Berechtigungen aus dem-Objekt. Sie müssen alle Berechtigungen, die Sie beibehalten möchten, nach dem Ausführen **sp_changeobjectowner** erneut anwenden. Daher wird empfohlen, vor dem Ausführen **sp_changeobjectowner** Skripts für vorhandene Berechtigungen zu erstellen. Nachdem der Besitz des Objekts geändert wurde, können Sie das Skript verwenden, um die Berechtigungen erneut zuzuweisen. Sie müssen den Objektbesitzer im Berechtigungsskript vor dem Ausführen ändern.  
   
  Wenn Sie den Besitzer eines sicherungsfähigen Elements ändern möchten, verwenden Sie ALTER AUTHORIZATION. Zum Ändern eines Schemas verwenden Sie ALTER SCHEMA.  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changemergepullsubscription
 - sp_changemergepullsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 39cb33678b853feadbbb20a88669f0b48a3d444a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f8590cd397f41ca4c4db8776f614f47b2b05c921
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546215"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159836"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +42,15 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert%.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert%.  
   
-`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert%.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert%.  
   
-`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert%.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert%.  
   
-`[ @property = ] 'property'` Der Name der Eigenschaft, die geändert werden soll. *Property* ist vom **Datentyp vom Datentyp sysname**und kann einen der Werte in der Tabelle aufweisen.  
+`[ @property = ] 'property'` Der Name der Eigenschaft, die geändert werden soll. *Property* ist vom **Datentyp vom Datentyp sysname** und kann einen der Werte in der Tabelle aufweisen.  
   
-`[ @value = ] 'value'` Der neue Wert für die angegebene Eigenschaft. der Wert ist vom Datentyp **nvarchar (255)**. der *Wert*kann einer der Werte in der Tabelle sein.  
+`[ @value = ] 'value'` Der neue Wert für die angegebene Eigenschaft. der Wert ist vom Datentyp **nvarchar (255)**. der *Wert* kann einer der Werte in der Tabelle sein.  
   
 |Eigenschaft|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
@@ -62,7 +62,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**distributor_security_mode**|**1**|Verwendet die Windows-Authentifizierung beim Herstellen der Verbindung mit dem Verteiler.|  
 ||**0**|Verwendet die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung beim Herstellen der Verbindung mit dem Verteiler.|  
 |**dynamic_snapshot_location**||Pfad zu dem Ordner, in dem die Momentaufnahmedateien gespeichert sind.|  
-|**ftp_address**||Nur aus Gründen der Abwärtskompatibilität verfügbar. Die Netzwerkadresse des Dateiübertragungsprotokoll (FTP)-Dienstanbieter für den Verteiler.|  
+|**ftp_address**||Nur aus Gründen der Abwärtskompatibilität verfügbar. Die Netzwerkadresse des File Transfer Protocol (FTP)-Dienstanbieter für den Verteiler.|  
 |**ftp_login**||Nur aus Gründen der Abwärtskompatibilität verfügbar. Der Benutzername, mit dem eine Verbindung zum FTP-Dienst hergestellt wird.|  
 |**ftp_password**||Nur aus Gründen der Abwärtskompatibilität verfügbar. Das Benutzerkennwort, mit dem eine Verbindung zum FTP-Dienst hergestellt wird.|  
 |**ftp_port**||Nur aus Gründen der Abwärtskompatibilität verfügbar. Die Anschlussnummer des FTP-Diensts für den Verteiler.|  
@@ -90,12 +90,12 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**use_interactive_resolver**|**true**|Der interaktive Konfliktlöser wird während der Konfliktlösung verwendet.|  
 ||**false**|Der interaktive Konfliktlöser wird nicht verwendet.|  
 |**working_directory**||Der vollqualifizierte Pfad zum Verzeichnis, in das die Momentaufnahmedateien mithilfe von FTP übertragen werden, wenn diese Option angegeben ist.|  
-|NULL (Standard)||Gibt die Liste der unterstützten Werte für die- *Eigenschaft*zurück.|  
+|NULL (Standard)||Gibt die Liste der unterstützten Werte für die- *Eigenschaft* zurück.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_changemergepullsubscription** wird bei der Mergereplikation verwendet.  
   
  Der aktuelle Server und die aktuelle Datenbank werden als Abonnent und Abonnentendatenbank angenommen.  
@@ -103,7 +103,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
  Nach dem Ändern des Anmeldenamens oder Kennworts eines Agents müssen Sie den Agent beenden und neu starten, damit die Änderungen in Kraft treten.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_changemergepullsubscription**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_changemergepullsubscription** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern der Eigenschaften von Pullabonnements](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   

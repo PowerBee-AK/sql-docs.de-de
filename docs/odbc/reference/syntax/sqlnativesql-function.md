@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLNativeSql
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cbdf43d1120065f981d43e58490e328c6ef7691c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7cc73e184b6b092e1de4eef40de8eaadd11d738b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428902"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160790"
 ---
 # <a name="sqlnativesql-function"></a>SQLNativeSql-Funktion
 **Konformitäts**  
@@ -60,29 +60,29 @@ SQLRETURN SQLNativeSql(
  *Outstatus-Text*  
  Ausgeben Zeiger auf einen Puffer, in den die übersetzte SQL-Zeichenfolge zurückgegeben werden soll.  
   
- Wenn *outstatuementtext* NULL ist, gibt *TextLength2Ptr* weiterhin die Gesamtzahl der Zeichen zurück (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten), die im Puffer zurückgegeben werden können, auf den von *Outstatus ementtext*verwiesen wird.  
+ Wenn *outstatuementtext* NULL ist, gibt *TextLength2Ptr* weiterhin die Gesamtzahl der Zeichen zurück (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten), die im Puffer zurückgegeben werden können, auf den von *Outstatus ementtext* verwiesen wird.  
   
  *BufferLength*  
- Der Anzahl der Zeichen im \* *Outstatus-Text* Puffer. Wenn der in * \* instatuementtext* zurückgegebene Wert eine Unicode-Zeichenfolge ist (beim Aufrufen von **sqlnativesqlw**), muss das *BufferLength* -Argument eine gerade Zahl sein.  
+ Der Anzahl der Zeichen im \* *Outstatus-Text* Puffer. Wenn der in *\* instatuementtext* zurückgegebene Wert eine Unicode-Zeichenfolge ist (beim Aufrufen von **sqlnativesqlw**), muss das *BufferLength* -Argument eine gerade Zahl sein.  
   
  *TextLength2Ptr*  
- Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen (mit Ausnahme der NULL-Beendigung) zurückgegeben werden soll, die in \* *Outstatus-Text*zurückgegeben werden können. Wenn die Anzahl der zurück zugebende Zeichen größer als oder gleich *BufferLength*ist, wird die übersetzte SQL-Zeichenfolge in \* *Outstatus-Text* auf *BufferLength* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
+ Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen (mit Ausnahme der NULL-Beendigung) zurückgegeben werden soll, die in \* *Outstatus-Text* zurückgegeben werden können. Wenn die Anzahl der zurück zugebende Zeichen größer als oder gleich *BufferLength* ist, wird die übersetzte SQL-Zeichenfolge in \* *Outstatus-Text* auf *BufferLength* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLNativeSql** entweder SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_DBC und einem *handle* von *connectionHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die häufig von **SQLNativeSql** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
+ Wenn **SQLNativeSql** entweder SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_DBC und einem *handle* von *connectionHandle* abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die häufig von **SQLNativeSql** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|Beschreibung|  
+|SQLSTATE|Fehler|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01004|Zeichen folgen Daten, rechts abgeschnitten|Der Puffer \* *Outstatus Text* war nicht groß genug, um die gesamte SQL-Zeichenfolge zurückzugeben, daher wurde die SQL-Zeichenfolge abgeschnitten. Die Länge der nicht abgeschnittene SQL-Zeichenfolge wird in **TextLength2Ptr*zurückgegeben. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01004|Zeichen folgen Daten, rechts abgeschnitten|Der Puffer \* *Outstatus Text* war nicht groß genug, um die gesamte SQL-Zeichenfolge zurückzugeben, daher wurde die SQL-Zeichenfolge abgeschnitten. Die Länge der nicht abgeschnittene SQL-Zeichenfolge wird in **TextLength2Ptr* zurückgegeben. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08003|Verbindung nicht geöffnet|Das *connectionHandle* befand sich nicht in einem verbundenen Zustand.|  
 |08S01|Kommunikations Verbindungsfehler|Die Kommunikationsverbindung zwischen dem Treiber und der Datenquelle, mit der der Treiber verbunden war, ist fehlgeschlagen, bevor die Funktion die Verarbeitung abgeschlossen hat.|  
 |22007|Ungültiges datetime-Format.|**Instatuementtext* enthielt eine Escape-Klausel mit einem ungültigen Date-, Time-oder Zeitstempel-Wert.|  
 |24.000|Ungültiger Cursorstatus|Der Cursor, auf den in der Anweisung verwiesen wird, wurde vor dem Anfang des Resultsets oder nach dem Ende des Resultsets positioniert. Dieser Fehler wird möglicherweise nicht von einem Treiber zurückgegeben, der über eine native DBMS-Cursor Implementierung verfügt.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im *\* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
 |HY009|Ungültige Verwendung des NULL-Zeigers|(DM) **instatus-Text* war ein NULL-Zeiger.|  
 |HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für *connectionHandle* aufgerufen und ausgeführt, als diese Funktion aufgerufen wurde.|  

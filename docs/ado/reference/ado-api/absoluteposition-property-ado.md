@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::AbsolutePosition
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ecb3290d73032568af7e0a92baf0c9d1b2628f4
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b394ab30d4ee8d73e879abe2687e1208ba3188ad
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977158"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161022"
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition-Eigenschaft (ADO)
 Gibt die Ordnungsposition des aktuellen Datensatzes eines [Recordset](./recordset-object-ado.md) -Objekts an.  
@@ -34,11 +34,11 @@ Gibt die Ordnungsposition des aktuellen Datensatzes eines [Recordset](./recordse
 ## <a name="remarks"></a>Bemerkungen  
  Um die **AbsolutePosition** -Eigenschaft festzulegen, erfordert ADO, dass der OLE DB-Anbieter, den Sie verwenden, die [IRowsetLocate: IRowset](/previous-versions/windows/desktop/ms721190(v=vs.85)) -Schnittstelle implementiert.  
   
- Durch den Zugriff auf die **AbsolutePosition** -Eigenschaft eines **Recordsets** , das entweder mit einem Vorwärts Cursor oder einem dynamischen Cursor geöffnet wurde, wird der Fehler **adErrFeatureNotAvailable**ausgelöst. Bei anderen Cursor Typen wird die korrekte Position zurückgegeben, solange der OLE DB Anbieter die **IRowsetScroll: IRowsetLocate** -Schnittstelle unterstützt. Wenn der Anbieter die **IRowsetScroll** -Schnittstelle nicht unterstützt, wird die-Eigenschaft auf **adPosUnknown**festgelegt. In der Dokumentation für Ihren Anbieter können Sie feststellen, ob **IRowsetScroll**unterstützt wird.  
+ Durch den Zugriff auf die **AbsolutePosition** -Eigenschaft eines **Recordsets** , das entweder mit einem Vorwärts Cursor oder einem dynamischen Cursor geöffnet wurde, wird der Fehler **adErrFeatureNotAvailable** ausgelöst. Bei anderen Cursor Typen wird die korrekte Position zurückgegeben, solange der OLE DB Anbieter die **IRowsetScroll: IRowsetLocate** -Schnittstelle unterstützt. Wenn der Anbieter die **IRowsetScroll** -Schnittstelle nicht unterstützt, wird die-Eigenschaft auf **adPosUnknown** festgelegt. In der Dokumentation für Ihren Anbieter können Sie feststellen, ob **IRowsetScroll** unterstützt wird.  
   
  Verwenden Sie die **AbsolutePosition** -Eigenschaft, um zu einem Datensatz zu wechseln, der auf seiner Ordinalposition im **Recordset** -Objekt basiert, oder um die Ordinalposition des aktuellen Datensatzes zu bestimmen. Der Anbieter muss die entsprechende Funktionalität unterstützen, damit diese Eigenschaft verfügbar ist.  
   
- Wie die [AbsolutePage](./absolutepage-property-ado.md) -Eigenschaft ist **AbsolutePosition** 1-basiert und entspricht 1, wenn der aktuelle Datensatz der erste Datensatz im **Recordset**ist. Sie können die Gesamtzahl der Datensätze im **Recordset** -Objekt aus der [RecordCount](./recordcount-property-ado.md) -Eigenschaft abrufen.  
+ Wie die [AbsolutePage](./absolutepage-property-ado.md) -Eigenschaft ist **AbsolutePosition** 1-basiert und entspricht 1, wenn der aktuelle Datensatz der erste Datensatz im **Recordset** ist. Sie können die Gesamtzahl der Datensätze im **Recordset** -Objekt aus der [RecordCount](./recordcount-property-ado.md) -Eigenschaft abrufen.  
   
  Wenn Sie die **AbsolutePosition** -Eigenschaft festlegen, auch wenn Sie sich in einem Datensatz im aktuellen Cache befindet, lädt ADO den Cache mit einer neuen Gruppe von Datensätzen neu, beginnend mit dem von Ihnen angegebenen Datensatz. Die [CacheSize](./cachesize-property-ado.md) -Eigenschaft bestimmt die Größe dieser Gruppe.  
   

@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], parameters
 - parameter data type [ODBC]
@@ -15,12 +15,12 @@ ms.assetid: fd7e99d8-d26a-408c-9733-6ffccde99f75
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: ''
-ms.openlocfilehash: 0114f0cff269d35ddf1e93c653c46bcc8d863a29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fbc01ee7f6c4e7cd3ca7dbe4deb6e78e5ff78449
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483243"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160830"
 ---
 # <a name="parameter-data-types"></a>Parameterdatentypen
 Obwohl jeder Parameter, der mit **SQLBindParameter** angegeben wird, mit einem SQL-Datentyp definiert wird, haben die Parameter in einer SQL-Anweisung keinen systeminternen Datentyp. Daher können Parameter Markierungen nur in eine SQL-Anweisung eingeschlossen werden, wenn Ihre Datentypen von einem anderen Operanden in der Anweisung abgeleitet werden können. Beispielsweise in einem arithmetischen Ausdruck wie? + COLUMN1, der Datentyp des Parameters kann aus dem Datentyp der benannten Spalte abgeleitet werden, die durch COLUMN1 dargestellt wird. Eine Anwendung kann keine Parameter Markierung verwenden, wenn der Datentyp nicht bestimmt werden kann.  

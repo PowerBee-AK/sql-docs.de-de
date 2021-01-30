@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.custom: ''
 ms.technology: in-memory-oltp
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_db_xtp_checkpoint_files
 - sys.dm_db_xtp_checkpoint_files_TSQL
@@ -21,12 +21,12 @@ ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d94ff0799552f1d6c89e30e3b2712942ed0d4177
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 44c8b94a441e276561f3eb8fff165fede678e952
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171412"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160177"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "98171412"
 ##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] und höher  
  In der folgenden Tabelle werden die Spalten für `sys.dm_db_xtp_checkpoint_files` , beginnend mit, beschrieben **[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]** .  
   
-|Spaltenname|type|Beschreibung|  
+|Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|Die ID des Containers (in sys.database_files als Datei vom Typ FILESTREAM dargestellt), dem die Daten- oder Änderungsdatei angehört. Joins mit file_id in [sys.database_files &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|GUID des Containers, zu dem die Stamm-, Daten-oder Änderungsdatei gehört. Joins mit file_guid in der sys.database_files Tabelle.|  
@@ -70,7 +70,7 @@ ms.locfileid: "98171412"
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  In der folgenden Tabelle werden die Spalten für `sys.dm_db_xtp_checkpoint_files` , für beschrieben **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
-|Spaltenname|type|Beschreibung|  
+|Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|Die ID des Containers (in sys.database_files als Datei vom Typ FILESTREAM dargestellt), dem die Daten- oder Änderungsdatei angehört. Joins mit file_id in [sys.database_files &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|Die GUID des Containers, dem die Daten- oder Änderungsdatei angehört.|  

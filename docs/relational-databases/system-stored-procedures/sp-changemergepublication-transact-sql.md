@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changemergepublication_TSQL
 - sp_changemergepublication
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e909e343a22ca1a249e5de03bc5eb64948e982cd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e7807a445de3ddf919679b09002646c87b313c5d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541895"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159857"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 `[ @property = ] 'property'` Die Eigenschaft, die für die angegebene Veröffentlichung geändert werden soll. *Property* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind in der folgenden Tabelle aufgeführt.  
   
@@ -93,7 +93,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**keep_partition_changes**|**true**|Die Synchronisierung wird optimiert, und es sind nur Abonnenten betroffen, die über Zeilen in den geänderten Partitionen verfügen. Für das Ändern dieser Eigenschaft ist eine neue Momentaufnahme erforderlich.|  
 ||**false**|Die Synchronisierung wird nicht optimiert, und die an Abonnenten gesendeten Partitionen werden überprüft, wenn sich Daten in einer Partition ändern. Für das Ändern dieser Eigenschaft ist eine neue Momentaufnahme erforderlich.|  
 |**max_concurrent_merge**||Dabei handelt es sich um einen **int** -Wert, der die maximale Anzahl gleichzeitiger Mergeprozesse darstellt, die für eine Veröffentlichung ausgeführt werden können. Bei 0 gibt es keine Beschränkung. Wenn die gleichzeitige Ausführung von mehr Mergeprozessen geplant ist, werden die überschüssigen Aufträge in eine Warteschlange eingereiht, in der diese darauf warten, dass ein aktuell ausgeführter Mergeprozess beendet wird.|  
-|**max_concurrent_dynamic_snapshots**||Dies ist ein **int** -Wert, der die maximale Anzahl von Momentaufnahme Sitzungen darstellt, um eine gefilterte Daten Momentaufnahme zu generieren, die gleichzeitig für eine Mergeveröffentlichung mit parametrisierten Zeilen filtern ausgeführt werden kann. Wenn der Wert **0**ist, gibt es keine Begrenzung. Wenn die gleichzeitige Ausführung von mehr Momentaufnahmeprozessen geplant ist, werden die überschüssigen Aufträge in eine Warteschlange eingereiht, bis ein aktueller Mergeprozess beendet wird.|  
+|**max_concurrent_dynamic_snapshots**||Dies ist ein **int** -Wert, der die maximale Anzahl von Momentaufnahme Sitzungen darstellt, um eine gefilterte Daten Momentaufnahme zu generieren, die gleichzeitig für eine Mergeveröffentlichung mit parametrisierten Zeilen filtern ausgeführt werden kann. Wenn der Wert **0** ist, gibt es keine Begrenzung. Wenn die gleichzeitige Ausführung von mehr Momentaufnahmeprozessen geplant ist, werden die überschüssigen Aufträge in eine Warteschlange eingereiht, bis ein aktueller Mergeprozess beendet wird.|  
 |**post_snapshot_script**||Gibt einen Zeiger auf einen Speicherort für **SQL** -Dateien an. Der Verteilungs-Agent oder der Merge-Agent führt post_snapshot_script aus, nachdem alle andere Skripts für replizierte Objekte und Daten während der Erstsynchronisierung angewendet wurden. Für das Ändern dieser Eigenschaft ist eine neue Momentaufnahme erforderlich.|  
 |**pre_snapshot_script**||Gibt einen Zeiger auf einen Speicherort für **SQL** -Dateien an. Der Merge-Agent führt das vor der Momentaufnahme ausgeführte Skript vor allen Skripts für replizierte Objekte aus, wenn die Momentaufnahme auf einem Abonnenten angewendet wird. Für das Ändern dieser Eigenschaft ist eine neue Momentaufnahme erforderlich.|  
 |**publication_compatibility_level**|**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
@@ -108,18 +108,18 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**month**|Die Beibehaltungsdauer wird in Monaten angegeben.|  
 ||**year**|Die Beibehaltungsdauer wird in Jahren angegeben.|  
 |**snapshot_in_defaultfolder**|**true**|Momentaufnahmedateien werden im Standardmomentaufnahmeordner gespeichert.|  
-||**false**|Momentaufnahme Dateien werden an dem alternativen Speicherort gespeichert, der durch *alt_snapshot_folder*angegeben wird. Diese Kombination gibt an, dass die Momentaufnahmedateien sowohl im Standardspeicherort als auch in alternativen Speicherorten gespeichert werden.|  
+||**false**|Momentaufnahme Dateien werden an dem alternativen Speicherort gespeichert, der durch *alt_snapshot_folder* angegeben wird. Diese Kombination gibt an, dass die Momentaufnahmedateien sowohl im Standardspeicherort als auch in alternativen Speicherorten gespeichert werden.|  
 |**snapshot_ready**|**true**|Die Momentaufnahme für die Veröffentlichung ist verfügbar.|  
 ||**false**|Die Momentaufnahme für die Veröffentlichung ist nicht verfügbar.|  
 |**status**|**active**|Die Veröffentlichung weist einen aktiven Status auf.|  
 ||**inactive**|Die Veröffentlichung weist einen inaktiven Status auf.|  
 |**sync_mode**|**native** oder<br /><br /> **bcp Native**|Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus wird für die Anfangsmomentaufnahme verwendet.|  
 ||**character**<br /><br /> oder **bcp-Zeichen**|Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus wird für die Anfangsmomentaufnahme verwendet. Dies ist für alle Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten erforderlich.|  
-|**use_partition_groups**<br /><br /> Hinweis: Wenn Sie partition_groups verwenden, die Verwendung von **setupes**wiederherstellen und **use_partition_groups = false** im **changemergearticle**festlegen, wird dies möglicherweise nicht ordnungsgemäß wiedergegeben, nachdem eine Momentaufnahme erstellt wurde. Die Trigger, die von der Momentaufnahme generiert werden, sind mit Partitionsgruppen kompatibel.<br /><br /> Die Problem Umgehung für dieses Szenario besteht darin, den Status auf "inaktiv" festzulegen, die **use_partition_groups**zu ändern und dann den Status "aktiv" festzulegen.|**true**|Die Veröffentlichung verwendet vorausberechnete Partitionen.|  
+|**use_partition_groups**<br /><br /> Hinweis: Wenn Sie partition_groups verwenden, die Verwendung von **setupes** wiederherstellen und **use_partition_groups = false** im **changemergearticle** festlegen, wird dies möglicherweise nicht ordnungsgemäß wiedergegeben, nachdem eine Momentaufnahme erstellt wurde. Die Trigger, die von der Momentaufnahme generiert werden, sind mit Partitionsgruppen kompatibel.<br /><br /> Die Problem Umgehung für dieses Szenario besteht darin, den Status auf "inaktiv" festzulegen, die **use_partition_groups** zu ändern und dann den Status "aktiv" festzulegen.|**true**|Die Veröffentlichung verwendet vorausberechnete Partitionen.|  
 ||**false**|Die Veröffentlichung verwendet keine vorausberechneten Partitionen.|  
 |**validate_subscriber_info**||Listet die Funktionen auf, die zum Abrufen von Abonnenteninformationen verwendet werden. Überprüft anschließend die dynamischen Filterkriterien, die für den Abonnenten verwendet werden, um zu überprüfen, dass die Informationen konsistent partitioniert werden.|  
 |**web_synchronization_url**||Der Standardwert für die Internet-URL, die für die Websynchronisierung verwendet wird.|  
-|NULL (Standard)||Gibt die Liste der unterstützten Werte für die- *Eigenschaft*zurück.|  
+|NULL (Standard)||Gibt die Liste der unterstützten Werte für die- *Eigenschaft* zurück.|  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *force_invalidate_snapshot* ist ein **Bit**, der Standardwert ist **0**.  
   
@@ -140,7 +140,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_changemergepublication** wird bei der Mergereplikation verwendet.  
   
  Das Ändern der folgenden Eigenschaften erfordert die Generierung einer neuen Momentaufnahme. Sie müssen den Wert **1** für den *force_invalidate_snapshot* -Parameter angeben.  
@@ -179,13 +179,13 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 -   **validate_subscriber_info**  
   
- Zum Auflisten von Veröffentlichungs Objekten, die mit dem *publish_to_active_directory*Active Directory werden sollen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss das Objekt bereits in Active Directory erstellt werden.  
+ Zum Auflisten von Veröffentlichungs Objekten, die mit dem *publish_to_active_directory* Active Directory werden sollen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss das Objekt bereits in Active Directory erstellt werden.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_changemergepublication](../../relational-databases/replication/codesnippet/tsql/sp-changemergepublicatio_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_changemergepublication**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_changemergepublication** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   

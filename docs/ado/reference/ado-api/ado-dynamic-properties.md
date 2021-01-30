@@ -6,19 +6,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - dynamic properties [ADO]
 - properties [ADO], dynamic
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9dd0186fba696d2fe3528f113bd0e07aeadd801f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f815c82b16ef31bc64e5524ec7114779b2ba3234
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976511"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161653"
 ---
 # <a name="ado-dynamic-properties"></a>ADO – dynamische Eigenschaften
 Dynamische Eigenschaften können den [Properties](./properties-collection-ado.md) -Auflistungen der [Connection](./connection-object-ado.md)-, [Command](./command-object-ado.md)-oder [Recordset](./recordset-object-ado.md) -Objekte hinzugefügt werden. Die Quelle für diese Eigenschaften ist entweder ein Datenanbieter, z. b. der [OLE DB Anbieter für SQL Server](../../guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), oder ein Dienstanbieter, z. b. der [Microsoft-Cursor Dienst für OLE DB](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Weitere Informationen zu einer bestimmten dynamischen Eigenschaft finden Sie in der entsprechenden Datenanbieter-oder Dienstanbieter Dokumentation.  
@@ -27,9 +27,9 @@ Dynamische Eigenschaften können den [Properties](./properties-collection-ado.md
   
  Die folgenden dynamischen Eigenschaften sind besonders interessant und auch in den zuvor erwähnten Quellen dokumentiert. Spezielle Funktionen mit ADO sind in den ADO-Hilfe Themen in der folgenden Liste dokumentiert.  
   
-|Dynamic-Eigenschaft|Beschreibung|  
+|Dynamic-Eigenschaft|BESCHREIBUNG|  
 |-|-|  
-|[Optimieren](./optimize-property-dynamic-ado.md)|Gibt an, ob für dieses Feld ein Index erstellt werden soll.|  
+|[Optimierungen](./optimize-property-dynamic-ado.md)|Gibt an, ob für dieses Feld ein Index erstellt werden soll.|  
 |[Eingabeaufforderung](./prompt-property-dynamic-ado.md)|Gibt an, ob der OLE DB Anbieter den Benutzer zur Eingabe von Initialisierungs Informationen auffordern soll.|  
 |[Name der erneuten Form](./reshape-name-property-dynamic-ado.md)|Gibt einen Namen für das **Recordset** -Objekt an.|  
 |[Befehl zum erneuten Synchronisieren](./resync-command-property-dynamic-ado.md)|Gibt eine vom Benutzer bereitgestellte Befehls Zeichenfolge an, mit der die Methode für die **erneute Synchronisierung** die Daten in der in der dynamischen Eigenschaft **Unique Table** genannten Tabelle aktualisiert.|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmergeextendedarticlesview
 - sysmergeextendedarticlesview_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f5f400a8e08d242427ca5101461ccb9dacd58310
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fbbf21526feee6e3340ad06e51bb2b5d7010d5bc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485453"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160306"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88485453"
 |**sync_objid**|**int**|Der Bezeichner der Sicht, die das synchronisierte Dataset darstellt.|  
 |**view_type**|**tinyint**|Der Typ der Sicht:<br /><br /> **0** = keine Ansicht; Verwenden Sie das gesamte Basisobjekt.<br /><br /> **1** = permanente Ansicht.<br /><br /> **2** = temporäre Ansicht.|  
 |**artid**|**uniqueidentifier**|Die eindeutige ID des angegebenen Artikels.|  
-|**Beschreibung**|**nvarchar(255)**|Eine kurze Beschreibung des Artikels.|  
+|**description**|**nvarchar(255)**|Eine kurze Beschreibung des Artikels.|  
 |**pre_creation_command**|**tinyint**|Die Standardaktion, die durchgeführt wird, wenn der Artikel in der Abonnementdatenbank erstellt wird:<br /><br /> **0** = None: Wenn die Tabelle bereits auf dem Abonnenten vorhanden ist, wird keine Aktion ausgeführt.<br /><br /> **1** = Drop-löscht die Tabelle, bevor Sie neu erstellt wird.<br /><br /> **2** = DELETE: gibt einen Löschvorgang basierend auf der WHERE-Klausel im Teilmengen Filter aus.<br /><br /> **3** = Abschneiden-identisch mit 2, löscht jedoch Seiten anstelle von Zeilen. Eine WHERE-Klausel wird jedoch nicht verwendet.|  
 |**pubid**|**uniqueidentifier**|Die ID der Veröffentlichung, zu der der aktuelle Artikel gehört.|  
 |**Namen**|**int**|Die Spitznamenzuordnung zur Identifikation des Artikels.|  
@@ -48,11 +48,11 @@ ms.locfileid: "88485453"
 |**creation_script**|**nvarchar(255)**|Das Erstellungsskript für diesen Artikel.|  
 |**conflict_script**|**nvarchar(255)**|Das Konfliktskript für diesen Artikel.|  
 |**article_resolver**|**nvarchar(255)**|Der benutzerdefinierte Konfliktlöser auf Zeilenebene für diesen Artikel.|  
-|**ins_conflict_proc**|**sysname**|Die Prozedur, die zum Schreiben von Konflikten in **conflict_table**verwendet wird.|  
+|**ins_conflict_proc**|**sysname**|Die Prozedur, die zum Schreiben von Konflikten in **conflict_table** verwendet wird.|  
 |**insert_proc**|**sysname**|Die Prozedur, die vom Standardkonfliktlöser zum Einfügen von Zeilen während der Synchronisierung verwendet wird.|  
 |**update_proc**|**sysname**|Die Prozedur, die vom Standardkonfliktlöser zum Aktualisieren von Zeilen während der Synchronisierung verwendet wird.|  
 |**select_proc**|**sysname**|Der Name einer automatisch generierten gespeicherten Prozedur, die der Merge-Agent verwendet, um Sperren einzurichten bzw. um Spalten und Zeilen für einen Artikel zu finden.|  
-|**schema_option**|**Binär (8)**|Die unterstützten Werte *schema_option*finden Sie unter [sp_addmergearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
+|**schema_option**|**Binär (8)**|Die unterstützten Werte *schema_option* finden Sie unter [sp_addmergearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 |**destination_object**|**sysname**|Der Name der auf dem Abonnenten erstellten Tabelle.|  
 |**resolver_clsid**|**nvarchar(50)**|Die ID des benutzerdefinierten Konfliktlösers.|  
 |**subset_filterclause**|**nvarchar (1000)**|Die Filterklausel für diesen Artikel.|  
@@ -68,7 +68,7 @@ ms.locfileid: "88485453"
 |**identity_support**|**int**|Gibt an, ob die automatische Verarbeitung der Identitätsbereiche aktiviert ist. **1** bedeutet, dass die Identitäts Bereichs Behandlung aktiviert ist, und **0** bedeutet, dass keine Identitäts Bereichs Unterstützung vorhanden ist.|  
 |**destination_owner**|**sysname**|Der Name des Besitzers des Zielobjekts.|  
 |**before_image_objid**|**int**|Die Objekt-ID der Nachverfolgungstabelle. Die Nachverfolgungstabelle enthält bestimmte Schlüsselspaltenwerte, wenn eine Veröffentlichung so konfiguriert ist, dass Optimierungen von Partitionsänderungen aktiviert sind.|  
-|**before_view_objid**|**int**|Die Objekt-ID einer Sichttabelle. Die Sicht ist für eine Tabelle festgelegt, die überwacht, ob eine Zeile zu einem bestimmten Abonnenten gehört hat, bevor sie gelöscht oder aktualisiert wurde. Gilt nur, wenn eine Veröffentlichung mit * \@ keep_partition_changes*  =  **true**erstellt wird.|  
+|**before_view_objid**|**int**|Die Objekt-ID einer Sichttabelle. Die Sicht ist für eine Tabelle festgelegt, die überwacht, ob eine Zeile zu einem bestimmten Abonnenten gehört hat, bevor sie gelöscht oder aktualisiert wurde. Gilt nur, wenn eine Veröffentlichung mit *\@ keep_partition_changes*  =  **true** erstellt wird.|  
 |**verify_resolver_signature**|**int**|Gibt an, ob eine digitale Signatur überprüft wird, bevor ein Konfliktlöser in einer Mergereplikation verwendet wird:<br /><br /> **0** = Signatur wird nicht überprüft.<br /><br /> **1** = Signatur wird überprüft, um festzustellen, ob Sie von einer vertrauenswürdigen Quelle ist.|  
 |**allow_interactive_resolver**|**bit**|Gibt an, ob die Verwendung des interaktiven Konfliktlösers für einen Artikel aktiviert ist. der Wert **1** gibt an, dass der interaktive Konflikt Löser für den Artikel verwendet wird.|  
 |**fast_multicol_updateproc**|**bit**|Gibt an, ob der Merge-Agent aktiviert wurde, um in einer UPDATE-Anweisung Änderungen auf mehrere Spalten in derselben Zeile anzuwenden.<br /><br /> **0** = gibt ein separates Update für jede geänderte Spalte aus.<br /><br /> **1** = wird bei der Update-Anweisung ausgegeben, wodurch Aktualisierungen in mehreren Spalten in einer Anweisung auftreten.|  
@@ -80,7 +80,7 @@ ms.locfileid: "88485453"
 |**Gewicht**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**delete_proc**|**sysname**|Die Prozedur, die vom Standardkonfliktlöser zum Löschen von Zeilen während der Synchronisierung verwendet wird.|  
 |**before_upd_view_objid**|**int**|Die ID der Sicht einer Tabelle vor Updates.|  
-|**delete_tracking**|**bit**|Zeigt an, ob Löschvorgänge repliziert werden.<br /><br /> **0** = Löschvorgänge werden nicht repliziert.<br /><br /> **1** = Löschvorgänge werden repliziert. Dies ist das Standardverhalten für die Mergereplikation.<br /><br /> Wenn der Wert von *delete_tracking* **0**ist, müssen auf dem Abonnenten gelöschte Zeilen manuell auf dem Verleger entfernt werden, und auf dem Verleger gelöschte Zeilen müssen manuell auf dem Abonnenten entfernt werden.<br /><br /> Hinweis: der Wert **0** führt zu einer nicht Konvergenz.|  
+|**delete_tracking**|**bit**|Zeigt an, ob Löschvorgänge repliziert werden.<br /><br /> **0** = Löschvorgänge werden nicht repliziert.<br /><br /> **1** = Löschvorgänge werden repliziert. Dies ist das Standardverhalten für die Mergereplikation.<br /><br /> Wenn der Wert von *delete_tracking* **0** ist, müssen auf dem Abonnenten gelöschte Zeilen manuell auf dem Verleger entfernt werden, und auf dem Verleger gelöschte Zeilen müssen manuell auf dem Abonnenten entfernt werden.<br /><br /> Hinweis: der Wert **0** führt zu einer nicht Konvergenz.|  
 |**compensate_for_errors**|**bit**|Zeigt an, ob kompensierende Aktionen ausgeführt werden, wenn während der Synchronisierung Fehler auftreten.<br /><br /> **0** = kompensierende Aktionen sind deaktiviert.<br /><br /> **1** = Änderungen, die nicht auf einem Abonnenten oder Verleger angewendet werden können, führen immer zu kompensierenden Aktionen, um diese Änderungen rückgängig zu machen. Dies ist das Standardverhalten der Mergereplikation.<br /><br /> Hinweis: der Wert **0** führt zu einer nicht Konvergenz.|  
 |**pub_range**|**bigint**|Die Größe des Identitätsbereichs für den Verleger.|  
 |**range**|**bigint**|Die Bereichsgröße der aufeinander folgenden Identitätswerte, die Abonnenten bei einer Anpassung zugewiesen würden.|  
@@ -93,7 +93,7 @@ ms.locfileid: "88485453"
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikations Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [sp_changemergearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
+ [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [sysmergearticles &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/sysmergearticles-transact-sql.md)  
   

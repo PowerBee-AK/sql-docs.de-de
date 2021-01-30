@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_db_xtp_index_stats
 - dm_db_xtp_index_stats
@@ -21,12 +21,12 @@ ms.assetid: 8d0a50b8-2015-4576-930f-e3307dfc888e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc6744d2f75df3aa6a7a40519ea014d9a7e1a200
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: f9fdfede86fd67c4911a8ec7bb0cdd75df012283
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171112"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160148"
 ---
 # <a name="sysdm_db_xtp_index_stats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "98171112"
  Weitere Informationen finden Sie unter [in-Memory OLTP &#40;In-Memory Optimization&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) und [Richtlinien für die Verwendung von Indizes in Memory-Optimized Tabellen](/previous-versions/sql/sql-server-2016/dn133166(v=sql.130)).  
 
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|ID des Objekts, zu dem dieser Index gehört.|  
 |xtp_object_id|**bigint**|Interne ID, die der aktuellen Version des-Objekts entspricht.<br /><br /> Hinweis: gilt für [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] .|  

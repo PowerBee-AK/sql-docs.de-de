@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Command15::ActiveConnection
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc1a54d70639e4e3ff78748b4e04483fcfefafdb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: efcb376c9ad27dff5a0c85d73f70ae4000385e3d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976961"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159240"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection-Eigenschaft (ADO)
 Gibt an, zu welchem [Verbindungs](./connection-object-ado.md) Objekt der angegebene [Befehl](./command-object-ado.md), das [Recordset](./recordset-object-ado.md)oder das [Datensatz](./record-object-ado.md) -Objekt derzeit gehört.  
@@ -34,7 +34,7 @@ Gibt an, zu welchem [Verbindungs](./connection-object-ado.md) Objekt der angegeb
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **ActiveConnection** -Eigenschaft, um das **Verbindungs** Objekt zu ermitteln, über das das angegebene **Befehls** Objekt ausgeführt wird oder das angegebene **Recordset** geöffnet wird.  
   
-## <a name="command"></a>Befehl  
+## <a name="command"></a>Get-Help  
  Für **Befehls** Objekte ist die **ActiveConnection** -Eigenschaft Lese-/Schreibzugriff.  
   
  Wenn Sie versuchen, die [Execute](./execute-method-ado-command.md) -Methode für ein **Befehls** Objekt aufzurufen, bevor Sie diese Eigenschaft auf ein offenes **Verbindungs** Objekt oder eine gültige Verbindungs Zeichenfolge festlegen, tritt ein Fehler auf.  
@@ -58,9 +58,9 @@ Gibt an, zu welchem [Verbindungs](./connection-object-ado.md) Objekt der angegeb
  Wenn Sie die **Source** -Eigenschaft des **Recordset** -Objekts auf eine gültige **Befehls** Objekt Variable festlegen, erbt die **ActiveConnection** -Eigenschaft des **Recordsets** die Einstellung der **ActiveConnection** -Eigenschaft des **Befehls** Objekts.  
   
 > [!NOTE]
->  **Verwendung von Remote Datendiensten** Wenn diese Eigenschaft auf einem Client seitigen **Recordset** Recordsetobjekt verwendet wird, kann Sie nur auf eine Verbindungs Zeichenfolge oder (in Microsoft Visual Basic oder Visual Basic, Scripting Edition) auf *Nothing*festgelegt werden.  
+>  **Verwendung von Remote Datendiensten** Wenn diese Eigenschaft auf einem Client seitigen  Recordsetobjekt verwendet wird, kann Sie nur auf eine Verbindungs Zeichenfolge oder (in Microsoft Visual Basic oder Visual Basic, Scripting Edition) auf *Nothing* festgelegt werden.  
   
-## <a name="record"></a>Datensatz  
+## <a name="record"></a>Record  
  Diese Eigenschaft ist Lese-/Schreibzugriff, wenn das **Datensatz** -Objekt geschlossen ist, und kann eine Verbindungs Zeichenfolge oder einen Verweis auf ein offenes **Verbindungs** Objekt enthalten. Diese Eigenschaft ist schreibgeschützt, wenn das **Datensatz** -Objekt geöffnet ist, und enthält einen Verweis auf ein geöffnetes **Verbindungs** Objekt.  
   
  Ein **Verbindungs** Objekt wird implizit erstellt, wenn das **Datensatz** -Objekt über eine URL geöffnet wird. Öffnen Sie den **Datensatz** mit einem vorhandenen geöffneten **Verbindungs** Objekt, indem Sie das **Verbindungs** Objekt dieser Eigenschaft zuweisen, oder verwenden Sie das **Verbindungs** Objekt als Parameter im [Open](./open-method-ado-record.md) -Methoden-aufrufen. Wenn der **Datensatz** von einem vorhandenen **Datensatz** oder [Recordset](./recordset-object-ado.md)aus geöffnet wird, wird er automatisch dem **Verbindungs** Objekt dieses **Datensatzes** oder des **Recordset** -Objekts zugeordnet.  

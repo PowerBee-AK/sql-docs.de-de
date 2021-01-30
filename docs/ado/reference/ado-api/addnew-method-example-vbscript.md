@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d10fadde8b509b504ca857530d43d81b749ffaf4
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 28facc99df37a43629596d0668d40fe84b68ad82
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976701"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161712"
 ---
 # <a name="addnew-method-example-vbscript"></a>AddNew-Methode – Beispiel (VBScript)
 In diesem Beispiel wird die [AddNew](./addnew-method-ado.md) -Methode verwendet, um einen neuen Datensatz mit dem angegebenen Namen zu erstellen.  
   
  Verwenden Sie das folgende Beispiel in einer Active Server Seite (ASP). Verwenden Sie **Suchen** , um die Datei adovsb. Inc zu suchen, und platzieren Sie Sie in dem Verzeichnis, das Sie verwenden möchten. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **addnewvsb. ASP**. Sie können das Ergebnis in einem beliebigen Client Browser anzeigen.  
   
- Fügen Sie einen neuen Datensatz in das HTML-Formular ein, um das Beispiel zu testen. Klicken Sie auf **neue hinzufügen**. Siehe das [Beispiel](./delete-method-example-vbscript.md) für eine Delete-Methode, um unerwünschte Datensätze zu entfernen  
+ Fügen Sie einen neuen Datensatz in das HTML-Formular ein, um das Beispiel zu testen. Klicken Sie auf **Add New** (Neue hinzufügen). Siehe das [Beispiel](./delete-method-example-vbscript.md) für eine Delete-Methode, um unerwünschte Datensätze zu entfernen  
   
 ```  
 <!-- BeginAddNewVBS -->  

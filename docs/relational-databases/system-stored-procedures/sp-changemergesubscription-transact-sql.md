@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changemergesubscription_TSQL
 - sp_changemergesubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d1df7bd62aa2cecb23096121630eb0d89ce21dc8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 83211e61ad8b6e241f46b1af0ba32266c9f673dd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536658"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159814"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +43,13 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der zu ändernden Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Die Veröffentlichung muss bereits vorhanden sein und den Regeln für Bezeichner entsprechen.  
+`[ @publication = ] 'publication'` Der Name der zu ändernden Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Die Veröffentlichung muss bereits vorhanden sein und den Regeln für Bezeichner entsprechen.  
   
-`[ @subscriber = ] 'subscriber'` Der Name des Abonnenten. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @subscriber = ] 'subscriber'` Der Name des Abonnenten. *Subscriber* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Der Name der Abonnement Datenbank. *subscriber_db*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` Der Name der Abonnement Datenbank. *subscriber_db* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @property = ] 'property'` Die Eigenschaft, die für die angegebene Veröffentlichung geändert werden soll. *Property* ist vom **Datentyp vom Datentyp sysname**und kann einen der Werte in der Tabelle aufweisen.  
+`[ @property = ] 'property'` Die Eigenschaft, die für die angegebene Veröffentlichung geändert werden soll. *Property* ist vom **Datentyp vom Datentyp sysname** und kann einen der Werte in der Tabelle aufweisen.  
   
 `[ @value = ] 'value'` Der neue Wert für die angegebene *Eigenschaft*. der Wert ist vom Datentyp **nvarchar (255)**. der *Wert* kann einer der Werte in der Tabelle sein.  
   
@@ -76,13 +76,13 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_changemergesubscription** wird bei der Mergereplikation verwendet.  
   
  Nach dem Ändern des Anmeldenamens oder Kennworts eines Agents müssen Sie den Agent beenden und neu starten, damit die Änderungen in Kraft treten.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_changemergesubscription**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_changemergesubscription** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_addmergesubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   

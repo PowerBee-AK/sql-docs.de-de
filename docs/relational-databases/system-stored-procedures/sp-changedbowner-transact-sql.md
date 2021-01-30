@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changedbowner
 - sp_changedbowner_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dc4f29dba1a922b5adae32e0fc42cf714afc292f
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: c11630e73b50eae7c1f972ac7bff1e6d809a464f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753483"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159029"
 ---
 # <a name="sp_changedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sp_changedbowner [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>Argumente  
  [ @loginame =] '*Login*'  
- Die Anmelde-ID des neuen Besitzers der aktuellen Datenbank. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. die *Anmeldung* muss ein bereits vorhandener- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Name oder Windows-Benutzer sein. der *Anmelde* Name kann nicht zum Besitzer der aktuellen Datenbank werden, wenn er bereits über ein vorhandenes Benutzer Sicherheits Konto innerhalb der Datenbank auf die Datenbank zugreifen kann. Um dies zu vermeiden, löschen Sie zunächst den Benutzer innerhalb der aktuellen Datenbank.  
+ Die Anmelde-ID des neuen Besitzers der aktuellen Datenbank. *login* ist vom Datentyp **sysname** und hat keinen Standardwert. die *Anmeldung* muss ein bereits vorhandener- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Name oder Windows-Benutzer sein. der *Anmelde* Name kann nicht zum Besitzer der aktuellen Datenbank werden, wenn er bereits über ein vorhandenes Benutzer Sicherheits Konto innerhalb der Datenbank auf die Datenbank zugreifen kann. Um dies zu vermeiden, löschen Sie zunächst den Benutzer innerhalb der aktuellen Datenbank.  
   
  [ @map =] *remap_alias_flag*  
  Der *remap_alias_flag* -Parameter ist veraltet, da die Anmeldungs Aliase aus entfernt wurden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Die Verwendung des *remap_alias_flag* -Parameters führt nicht zu einem Fehler, hat jedoch keine Auswirkungen.  
@@ -60,7 +60,7 @@ sp_changedbowner [ @loginame = ] 'login'
   
  Führen Sie die gespeicherte Prozedur sp_helplogins aus, um eine Liste der gültigen *Anmelde* Werte anzuzeigen.  
   
- Wenn Sie sp_changedbowner nur mit dem *Anmelde* Parameter ausführen, wird der Daten Bank Besitz in *Login*geändert.  
+ Wenn Sie sp_changedbowner nur mit dem *Anmelde* Parameter ausführen, wird der Daten Bank Besitz in *Login* geändert.  
   
  Sie können den Besitzer jedes sicherungsfähigen Elements mit der ALTER AUTHORIZATION-Anweisung ändern. Weitere Informationen finden Sie unter [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   

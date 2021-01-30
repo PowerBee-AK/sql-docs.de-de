@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changedistributor_password
 - sp_changedistributor_password_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9f9f964e2db0c47dcf03b52a65c3a8e7c2599dde
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dbffbe5309b0f48458c34c374d9621a6cad73266
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536715"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158995"
 ---
 # <a name="sp_changedistributor_password-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,19 +38,19 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @password = ] 'password'` Das neue Kennwort. *Password* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn der Verteiler lokal ist, wird das Kennwort des **distributor_admin** System-Anmelde namens geändert.  
+`[ @password = ] 'password'` Das neue Kennwort. *Password* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert. Wenn der Verteiler lokal ist, wird das Kennwort des **distributor_admin** System-Anmelde namens geändert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_changedistributor_password** wird bei allen Replikations Typen verwendet.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_changedistributor_password](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pas_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_changedistributor_password**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_changedistributor_password** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

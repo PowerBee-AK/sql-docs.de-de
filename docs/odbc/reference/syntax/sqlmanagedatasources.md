@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLManageDataSources
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 81f4616cb04d5d17cca687843d28efa1027ff65f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4fbb34d2daafc4a135cbf51c2b0382d3965f9dfc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460973"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160803"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **Konformitäts**  
@@ -39,20 +39,20 @@ ms.locfileid: "88460973"
 ```cpp  
   
 BOOL SQLManageDataSources(  
-     HWND     hwnd);  
+     HWND     hwnd);  
 ```  
   
 ## <a name="arguments"></a>Argumente  
  *HWND*  
  Der Handle des übergeordneten Fensters.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  **Sqlmanagedatasources** gibt false zurück, wenn *HWND* kein gültiges Fenster Handle ist. Andernfalls wird TRUE zurückgegeben.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **sqlmanagedatasources** false zurückgibt, kann ein zugeordneter " * \* pferrorcode* "-Wert durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die " * \* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **sqlmanagedatasources** false zurückgibt, kann ein zugeordneter " *\* pferrorcode* "-Wert durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die " *\* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|Beschreibung|  
+|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
 |ODBC_ERROR_REQUEST_FAILED|*Anforderung* fehlgeschlagen|Fehler beim **ConfigDSN** -Rückruf.|  
@@ -64,15 +64,15 @@ BOOL SQLManageDataSources(
   
  ![Dialogfeld "ODBC-Datenquellen-Administrator"](../../../odbc/reference/syntax/media/ch23e.gif "CH23E")  
   
- Im Dialogfeld werden die Datenquellen angezeigt, die in den Systeminformationen unter drei Registerkarten aufgeführt sind: **Benutzer-DSN**, **System-DSN**und **Datei-DSN**. Wenn der Benutzer auf eine Datenquelle doppelklickt oder eine Datenquelle auswählt und auf **Konfigurieren**klickt, ruft **sqlmanagedatasources** **ConfigDSN** in der Setup-DLL mit der ODBC_CONFIG_DSN-Option auf.  
+ Im Dialogfeld werden die Datenquellen angezeigt, die in den Systeminformationen unter drei Registerkarten aufgeführt sind: **Benutzer-DSN**, **System-DSN** und **Datei-DSN**. Wenn der Benutzer auf eine Datenquelle doppelklickt oder eine Datenquelle auswählt und auf **Konfigurieren** klickt, ruft **sqlmanagedatasources** **ConfigDSN** in der Setup-DLL mit der ODBC_CONFIG_DSN-Option auf.  
   
- Wenn der Benutzer auf **Hinzufügen**klickt, zeigt **sqlmanagedatasources** das Dialogfeld **neue Datenquelle erstellen** an, wie in der folgenden Abbildung dargestellt.  
+ Wenn der Benutzer auf **Hinzufügen** klickt, zeigt **sqlmanagedatasources** das Dialogfeld **neue Datenquelle erstellen** an, wie in der folgenden Abbildung dargestellt.  
   
  ![Dialogfeld "Neue Datenquelle erstellen"](../../../odbc/reference/syntax/media/ch23f.gif "CH23F")  
   
- Im Dialogfeld wird eine Liste der installierten Treiber angezeigt. Wenn der Benutzer auf einen Treiber doppelklickt oder einen Treiber auswählt und auf **OK**klickt, ruft **sqlmanagedatasources** **ConfigDSN** in der Setup-DLL auf und übergibt ihm die Option ODBC_ADD_DSN.  
+ Im Dialogfeld wird eine Liste der installierten Treiber angezeigt. Wenn der Benutzer auf einen Treiber doppelklickt oder einen Treiber auswählt und auf **OK** klickt, ruft **sqlmanagedatasources** **ConfigDSN** in der Setup-DLL auf und übergibt ihm die Option ODBC_ADD_DSN.  
   
- Wenn der Benutzer eine Datenquelle auswählt und auf **Entfernen**klickt, fragt **sqlmanagedatasources** , ob der Benutzer die Datenquelle löschen möchte. Wenn der Benutzer auf **Ja**klickt, ruft **sqlmanagedatasources** **ConfigDSN** in der Setup-DLL mit der ODBC_REMOVE_DSN-Option auf.  
+ Wenn der Benutzer eine Datenquelle auswählt und auf **Entfernen** klickt, fragt **sqlmanagedatasources** , ob der Benutzer die Datenquelle löschen möchte. Wenn der Benutzer auf **Ja** klickt, ruft **sqlmanagedatasources** **ConfigDSN** in der Setup-DLL mit der ODBC_REMOVE_DSN-Option auf.  
   
  Das Dialogfeld **neue Datenquelle erstellen** wird verwendet, um eine Benutzerdaten Quelle, eine Systemdaten Quelle oder eine Datei Datenquelle hinzuzufügen oder zu löschen.  
   
@@ -111,14 +111,14 @@ BOOL SQLManageDataSources(
   
  ![Registerkarte "Nachverfolgung des ODBC-Datenquellen-Administrators"](../../../odbc/reference/syntax/media/ch23h.gif "Ch23h")  
   
- Wenn der Benutzer jetzt auf Ablauf **Verfolgung starten** klickt und dann auf **OK**klickt, ermöglicht **sqlmanagedatasources** die manuelle Ablauf Verfolgung für alle Anwendungen, die aktuell auf dem Computer ausgeführt werden.  
+ Wenn der Benutzer jetzt auf Ablauf **Verfolgung starten** klickt und dann auf **OK** klickt, ermöglicht **sqlmanagedatasources** die manuelle Ablauf Verfolgung für alle Anwendungen, die aktuell auf dem Computer ausgeführt werden.  
   
- Wenn der Benutzer den Namen einer Ablauf Verfolgungs Datei im Textfeld **Protokolldatei Pfad** angibt und dann auf **OK**klickt, legt **sqlmanagedatasources** das **Tracefile** -Schlüsselwort im [ODBC]-Abschnitt der Systeminformationen auf den angegebenen Namen fest.  
+ Wenn der Benutzer den Namen einer Ablauf Verfolgungs Datei im Textfeld **Protokolldatei Pfad** angibt und dann auf **OK** klickt, legt **sqlmanagedatasources** das **Tracefile** -Schlüsselwort im [ODBC]-Abschnitt der Systeminformationen auf den angegebenen Namen fest.  
   
 > [!IMPORTANT]  
 >  Die Unterstützung für Visual Studio Analyzer wurde ab Windows 8 entfernt (Visual Studio Analyzer war nur in früheren Versionen von Visual Studio enthalten.) Verwenden Sie für einen alternativen Mechanismus zur Problembehandlung die Auftrags Ablauf Verfolgung.  
   
- Wenn der Benutzer auf **Start Visual Studio Analyzer** und dann auf **OK**klickt, ist Visual Studio Analyzer aktiviert. Sie bleibt aktiviert, bis die Option zum **Abbrechen Visual Studio Analyzer** geklickt wird.  
+ Wenn der Benutzer auf **Start Visual Studio Analyzer** und dann auf **OK** klickt, ist Visual Studio Analyzer aktiviert. Sie bleibt aktiviert, bis die Option zum **Abbrechen Visual Studio Analyzer** geklickt wird.  
   
  Weitere Informationen zur Ablauf Verfolgung finden Sie unter Ablauf [Verfolgung](../../../odbc/reference/develop-app/tracing.md). Weitere Informationen zu den Schlüsselwörtern **Trace** und **Tracefile** finden Sie unter [ODBC-Unterschlüssel](../../../odbc/reference/install/odbc-subkey.md).  
   

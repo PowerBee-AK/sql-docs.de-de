@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergepublication
 - sp_helpmergepublication_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1042543ba82dcbd4bc7376acf6943a838506b6fa
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8001e98b207ca9493ff71b1f874b12b0d5227306
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549594"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160604"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,22 +44,22 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Argumente  
  [ @publication **=** ] **'**_Veröffentlichung_**'**  
- Der Name der Veröffentlichung. *Publication*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** , mit dem Informationen zu allen Mergeveröffentlichungen in der aktuellen Datenbank zurückgegeben werden.  
+ Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert **%** , mit dem Informationen zu allen Mergeveröffentlichungen in der aktuellen Datenbank zurückgegeben werden.  
   
- [ @found **=** ] **'***found***** Ausgabe ' gefunden.  
+ [ @found **=** ] **'** Ausgabe '_gefunden_** .  
  Ein Flag, das die Rückgabe von Zeilen angibt. " *found*" ist vom Datentyp **int** und ein Output-Parameter. der Standardwert ist NULL. **1** gibt an, dass die Veröffentlichung gefunden wurde. **0** gibt an, dass die Veröffentlichung nicht gefunden wurde.  
   
- [ @publication_id **=** ] **'***publication_id***** Ausgabe '  
+ [ @publication_id **=** ] **'**_publication_id_** Ausgabe '  
  Die Veröffentlichung-ID. *publication_id* ist vom Datentyp **uniqueidentifier** und ein Output-Parameter. der Standardwert ist NULL.  
   
- [ @reserved **=** ] **'***reserviert***'**  
+ [ @reserved **=** ] **'**_reserviert_*_'_*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*reserved* ist vom Datentyp **nvarchar (20)** und hat den Standardwert NULL.  
   
- [ @publisher **=** ] **'***Verleger***'**  
- Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+ [ @publisher **=** ] **'**_Verleger_*_'_*  
+ Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
- [ @publisher_db **=** ] **'***publisher_db***'**  
- Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+ [ @publisher_db **=** ] **'**_publisher_db_*_'_*  
+ Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -79,11 +79,11 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |snapshot_ready|**tinyint**|Gibt an, ob die Momentaufnahme dieser Veröffentlichung einsatzbereit ist.<br /><br /> **0** = Momentaufnahme kann verwendet werden.<br /><br /> **1** = Momentaufnahme ist nicht einsatzbereit.|  
 |publication_type|**int**|Typ der Veröffentlichung:<br /><br /> **0** = Momentaufnahme.<br /><br /> **1** = transaktional.<br /><br /> **2** = Merge.|  
 |pubid|**uniqueidentifier**|Eindeutiger Bezeichner dieser Veröffentlichung.|  
-|snapshot_jobid|**Binary (16)**|Auftrags-ID des Momentaufnahme-Agents. Wenn Sie den Eintrag für den Momentaufnahme Auftrag in der [sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) -Systemtabelle abrufen möchten, müssen Sie diesen Hexadezimalwert in **uniqueidentifier**konvertieren.|  
-|enabled_for_internet|**int**|Legt fest, ob die Veröffentlichung für das Internet aktiviert ist. Bei **1**werden die Synchronisierungs Dateien für die Veröffentlichung im Verzeichnis abgelegt `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` . Der Benutzer muss das FTP-Verzeichnis (File Transfer Protocol) erstellen. Wenn der Wert **0**ist, ist die Veröffentlichung nicht für den Internet Zugriff aktiviert.|  
+|snapshot_jobid|**Binary (16)**|Auftrags-ID des Momentaufnahme-Agents. Wenn Sie den Eintrag für den Momentaufnahme Auftrag in der [sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) -Systemtabelle abrufen möchten, müssen Sie diesen Hexadezimalwert in **uniqueidentifier** konvertieren.|  
+|enabled_for_internet|**int**|Legt fest, ob die Veröffentlichung für das Internet aktiviert ist. Bei **1** werden die Synchronisierungs Dateien für die Veröffentlichung im Verzeichnis abgelegt `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` . Der Benutzer muss das FTP-Verzeichnis (File Transfer Protocol) erstellen. Wenn der Wert **0** ist, ist die Veröffentlichung nicht für den Internet Zugriff aktiviert.|  
 |dynamic_filter|**int**|Gibt an, ob ein parametrisierter Zeilenfilter verwendet wird. **0** bedeutet, dass kein parametrisierter Zeilen Filter verwendet wird.|  
 |has_subscription|**bit**|Gibt an, ob die Veröffentlichung über Abonnements verfügt. **0** bedeutet, dass zurzeit keine Abonnements für diese Veröffentlichung vorhanden sind.|  
-|snapshot_in_default_folder|**bit**|Legt fest, ob die Momentaufnahmedateien im Standardordner gespeichert werden.<br /><br /> Wenn der Wert **1**ist, befinden sich die Momentaufnahme Dateien im Standardordner.<br /><br /> Wenn der Wert **0**ist, werden Momentaufnahme Dateien am alternativen Speicherort gespeichert, der durch **alt_snapshot_folder**angegeben wird. Alternative Speicherorte können sich auf einem anderen Server, auf einem Netzlaufwerk oder auf einem Wechselmedium (z. B. CD-ROM oder Wechseldatenträger) befinden. Momentaufnahmedateien lassen sich auch in einer FTP-Site speichern, um zu einem späteren Zeitpunkt vom Abonnenten abgerufen zu werden.<br /><br /> Hinweis: dieser Parameter kann "true" sein und noch über eine Position im **alt_snapshot_folder** -Parameter verfügen. Diese Kombination gibt an, dass die Momentaufnahmedateien sowohl an den Standardspeicherorten als auch an den alternativen Standorten gespeichert werden.|  
+|snapshot_in_default_folder|**bit**|Legt fest, ob die Momentaufnahmedateien im Standardordner gespeichert werden.<br /><br /> Wenn der Wert **1** ist, befinden sich die Momentaufnahme Dateien im Standardordner.<br /><br /> Wenn der Wert **0** ist, werden Momentaufnahme Dateien am alternativen Speicherort gespeichert, der durch **alt_snapshot_folder** angegeben wird. Alternative Speicherorte können sich auf einem anderen Server, auf einem Netzlaufwerk oder auf einem Wechselmedium (z. B. CD-ROM oder Wechseldatenträger) befinden. Momentaufnahmedateien lassen sich auch in einer FTP-Site speichern, um zu einem späteren Zeitpunkt vom Abonnenten abgerufen zu werden.<br /><br /> Hinweis: dieser Parameter kann "true" sein und noch über eine Position im **alt_snapshot_folder** -Parameter verfügen. Diese Kombination gibt an, dass die Momentaufnahmedateien sowohl an den Standardspeicherorten als auch an den alternativen Standorten gespeichert werden.|  
 |alt_snapshot_folder|**nvarchar(255)**|Gibt den Speicherort des anderen Ordners für die Momentaufnahme an.|  
 |pre_snapshot_script|**nvarchar(255)**|Gibt einen Zeiger auf eine **SQL** -Datei an, die der Merge-Agent vor einem der replizierten Objekt Skripts ausführt, wenn die Momentaufnahme auf einem Abonnenten angewendet wird.|  
 |post_snapshot_script|**nvarchar(255)**|Gibt einen Zeiger auf eine **SQL** -Datei an, die der Merge-Agent ausgeführt wird, nachdem alle anderen Skripts für replizierte Objekte und Daten während der erst Synchronisierung angewendet wurden.|  
@@ -99,8 +99,8 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |validate_subscriber_info|**nvarchar (500)**|Listet die Funktionen auf, die zum Abrufen der Abonnenteninformationen sowie zum Überprüfen der parametrisierten Zeilenfilterkriterien für den Abonnenten verwendet werden. Dies hilft dabei, zu überprüfen, ob die Informationen bei jedem Mergeprozess konsistent partitioniert werden.|  
 |backward_comp_level|**int**|Der Datenbank-Kompatibilitätsgrad. Folgende Werte sind möglich:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|Gibt an, ob die Veröffentlichungsinformationen in Active Directory veröffentlicht werden. Der Wert **0** bedeutet, dass die Veröffentlichungsinformationen aus Active Directory nicht verfügbar sind.<br /><br /> Dieser Parameter wurde als veraltet markiert und wird nur zum Sicherstellen der Abwärtskompatibilität von Skripts unterstützt. Sie können Active Directory nicht länger Veröffentlichungsinformationen hinzufügen.|  
-|max_concurrent_merge|**int**|Die Anzahl gleichzeitiger Mergeprozesse. Wenn der Wert **0**ist, gibt es keine Beschränkung für die Anzahl gleichzeitiger Mergeprozesse, die zu einem beliebigen Zeitpunkt ausgeführt werden.|  
-|max_concurrent_dynamic_snapshots|**int**|Die maximale Anzahl gleichzeitiger Sitzungen für eine Momentaufnahme gefilterter Daten, die für die Mergeveröffentlichung ausgeführt werden können. Wenn der Wert **0**ist, gibt es keine Beschränkung für die maximale Anzahl gleichzeitiger gefilterter Daten Momentaufnahme Sitzungen, die gleichzeitig für die Veröffentlichung ausgeführt werden können.|  
+|max_concurrent_merge|**int**|Die Anzahl gleichzeitiger Mergeprozesse. Wenn der Wert **0** ist, gibt es keine Beschränkung für die Anzahl gleichzeitiger Mergeprozesse, die zu einem beliebigen Zeitpunkt ausgeführt werden.|  
+|max_concurrent_dynamic_snapshots|**int**|Die maximale Anzahl gleichzeitiger Sitzungen für eine Momentaufnahme gefilterter Daten, die für die Mergeveröffentlichung ausgeführt werden können. Wenn der Wert **0** ist, gibt es keine Beschränkung für die maximale Anzahl gleichzeitiger gefilterter Daten Momentaufnahme Sitzungen, die gleichzeitig für die Veröffentlichung ausgeführt werden können.|  
 |use_partition_groups|**int**|Legt fest, ob vorausberechnete Partitionen verwendet werden. Der Wert **1** bedeutet, dass Voraus berechnete Partitionen verwendet werden.|  
 |num_of_articles|**int**|Anzahl der Artikel in der Veröffentlichung.|  
 |replicate_ddl|**int**|Gibt an, ob Schemaänderungen an veröffentlichten Tabellen repliziert werden. Der Wert **1** bedeutet, dass Schema Änderungen repliziert werden.|  
@@ -118,7 +118,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_helpmergepublication wird für die Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
