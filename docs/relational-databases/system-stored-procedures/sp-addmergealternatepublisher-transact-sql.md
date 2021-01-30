@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addmergealternatepublisher_TSQL
 - sp_addmergealternatepublisher
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e0589b82f3126819e1638d90c8e67dea7556aafe
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7c0caf60fb3b1323c24924f177ca4d8cdf1105ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548360"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202355"
 ---
 # <a name="sp_addmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,19 +46,19 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @publisher_db = ] 'publisher_db'` Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @alternate_publisher = ] 'alternate_synchronization_partner'` Der Name des alternativen Verlegers. *alternate_synchronization_partner* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @alternate_publisher = ] 'alternate_synchronization_partner'` Der Name des alternativen Verlegers. *alternate_synchronization_partner* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @alternate_publisher_db = ] 'alternate_publisher_db'` Der Name der Veröffentlichungs Datenbank auf dem alternativen Verleger. *alternate_publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'` Der Name der Veröffentlichungs Datenbank auf dem alternativen Verleger. *alternate_publisher_db* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @alternate_publication = ] 'alternate_synchronization_partner'` Der Name der Veröffentlichung auf dem alternativen Synchronisierungs Partner. *alternate_synchronization_partner* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @alternate_publication = ] 'alternate_synchronization_partner'` Der Name der Veröffentlichung auf dem alternativen Synchronisierungs Partner. *alternate_synchronization_partner* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @alternate_distributor = ] 'alternate_distributor'` Der Name des Verteilers für den alternativen Synchronisierungs Partner. *alternate_distributor* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @alternate_distributor = ] 'alternate_distributor'` Der Name des Verteilers für den alternativen Synchronisierungs Partner. *alternate_distributor* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 `[ @friendly_name = ] 'friendly_name'` Ein Anzeige Name, durch den die Zuordnung von Verleger, Veröffentlichung und Verteiler, aus denen ein alternativer Synchronisierungs Partner besteht, identifiziert werden kann. *friendly_name* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL.  
   
@@ -67,11 +67,11 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_addmergealternatepublisher** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addmergealternatepublisher**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addmergealternatepublisher** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_dropmergealternatepublisher &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropmergealternatepublisher-transact-sql.md)   

@@ -6,7 +6,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_repl_traninfo
 - dm_repl_traninfo
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: f8a0613d83cebfed56ba5202a6c3535ef31c8a84
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: e3c062d6a8aafffc9621a0932e38d9c190877b72
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098844"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203385"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "98098844"
 |**fsinfo_address**|**varbinary(8)**|Speicherinterne Adresse der zwischengespeicherten FILESTREAM-Informationsstruktur.|  
 |**begin_lsn**|**nvarchar (64)**|Protokollsequenznummer (Log Sequence Number, LSN) des Protokolleintrags für den Beginn der Transaktion.|  
 |**commit_lsn**|**nvarchar (64)**|LSN des Protokolldatensatz für den Commit der Transaktion.|  
-|**dbid**|**smallint**|Datenbank-ID|  
+|**DBID**|**smallint**|Datenbank-ID|  
 |**rows**|**int**|ID des replizierten Befehls in der Transaktion.|  
 |**xdesid für**|**nvarchar (64)**|Transaktions-ID|  
 |**artcache_table_address**|**varbinary(8)**|Speicherinterne Adresse der zwischengespeicherten Artikeltabellenstruktur, die zuletzt für diese Transaktion verwendet wurde.|  

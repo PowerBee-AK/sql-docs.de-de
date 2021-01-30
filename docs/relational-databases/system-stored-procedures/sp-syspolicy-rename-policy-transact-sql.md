@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_rename_policy_TSQL
 - sp_syspolicy_rename_policy
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 782128b1d41f94c63f4e9de22e618378c4ec6e6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 962e15744221175abd5732df7fe4e29d7b924ae0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481015"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211841"
 ---
 # <a name="sp_syspolicy_rename_policy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'name'` Der Name der Richtlinie, die Sie umbenennen möchten. *Name ist vom Datentyp* **vom Datentyp sysname**und muss angegeben werden, wenn *policy_id* NULL ist.  
+`[ @name = ] 'name'` Der Name der Richtlinie, die Sie umbenennen möchten. *Name ist vom Datentyp* **vom Datentyp sysname** und muss angegeben werden, wenn *policy_id* NULL ist.  
   
-`[ @policy_id = ] policy_id` Der Bezeichner für die Richtlinie, die Sie umbenennen möchten. *policy_id* ist vom *Datentyp* **int**und muss angegeben werden, wenn Name NULL ist.  
+`[ @policy_id = ] policy_id` Der Bezeichner für die Richtlinie, die Sie umbenennen möchten. *policy_id* ist vom *Datentyp* **int** und muss angegeben werden, wenn Name NULL ist.  
   
-`[ @new_name = ] 'new_name'` Der neue Name für die Richtlinie. *new_name* ist vom **Datentyp vom Datentyp sysname**und ist erforderlich. Darf nicht NULL und keine leere Zeichenfolge sein.  
+`[ @new_name = ] 'new_name'` Der neue Name für die Richtlinie. *new_name* ist vom **Datentyp vom Datentyp sysname** und ist erforderlich. Darf nicht NULL und keine leere Zeichenfolge sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_get_query_template
 - sp_get_query_template_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 97a6b25d2a0a4d927f060fe8d693cb478b7b2977
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 89e30950c072cbfe5737a65934155276bbf6a27d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543360"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204778"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,10 +52,10 @@ sp_get_query_template
  @parameters  
  Ist ein Ausgabeparameter vom Typ **nvarchar (max)**, der wie angegeben bereitgestellt wird, um ein Zeichenfolgenliteral der Parameternamen und Datentypen zu empfangen, die in parametrisiert wurden @templatetext .  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Der Parameter sp_get_query_template gibt in folgenden Situationen einen Fehler zurück:  
   
--   In *query_text*werden keine konstanten Literalwerte parametrisiert.  
+-   In *query_text* werden keine konstanten Literalwerte parametrisiert.  
   
 -   *query_text* ist NULL, keine Unicode-Zeichenfolge, syntaktisch ungültig oder kann nicht kompiliert werden.  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 840668495c620ca3cb7a403d3775238b12a52ec8
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: f9faf0901643b07420f8627d6afda4b9713d034a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809726"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201753"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Gespeicherte Prozeduren für räumliche Indizes: Argumente und Eigenschaften
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "91809726"
 `[ @xml_output = ] 'xml_output'` Ein Ausgabeparameter, der das Resultset in einem XML-Fragment zurückgibt. *xml_output* ist **XML** und hat keinen Standardwert.  
   
 ## <a name="properties"></a>Eigenschaften  
- Legen Sie ** \@ verboseoutput** = 0 so fest, dass Kerneigenschaften zurückgegeben werden, wie in der folgenden Tabelle dargestellt. ** \@ Verbo* Output** > 0, um alle Eigenschaften des räumlichen Indexes zurückzugeben.  
+ Legen Sie **\@ verboseoutput** = 0 so fest, dass Kerneigenschaften zurückgegeben werden, wie in der folgenden Tabelle dargestellt. **\@ Verbo* Output** > 0, um alle Eigenschaften des räumlichen Indexes zurückzugeben.  
   
  **Base_Table_Rows**  
  Anzahl der Zeilen in der Basistabelle. Der Wert ist " **bigint**".  
@@ -137,7 +137,7 @@ ms.locfileid: "91809726"
  Gibt an, ob das repräsentative Abfrage Beispiel außerhalb des umgebenden Felds des **Geometry** -Indexes und in der Stammzelle (Zelle der Ebene 0) liegt. Dies ist entweder 0 (nicht in Zelle der Ebene 0) oder 1. Befindet es sich in der Zelle der Ebene 0, ist der untersuchte Index nicht für das Abfragebeispiel geeignet. Dies ist eine Haupteigenschaft. Der Wert ist " **bigint**".  
   
  **Total_Number_Of_ObjectCells_In_Level0_In_Index**  
- Anzahl der Zellen Instanzen indizierter Objekte, die sich auf Ebene 0 (Stammzelle, außerhalb des umgebenden Felds für die **Geometrie**befinden) im Mosaik Prozess befinden. Dies ist eine Haupteigenschaft. Der Wert ist " **bigint**".  
+ Anzahl der Zellen Instanzen indizierter Objekte, die sich auf Ebene 0 (Stammzelle, außerhalb des umgebenden Felds für die **Geometrie** befinden) im Mosaik Prozess befinden. Dies ist eine Haupteigenschaft. Der Wert ist " **bigint**".  
   
  Bei **Geometry** -Indizes wird dies ausgelöst, wenn das Begrenzungsfeld des Indexes kleiner als die Daten Domäne ist. Eine große Anzahl von Objekten in Ebene 0 erfordert möglicherweise sekundäre Filter, wenn das Abfragefenster teilweise außerhalb des umgebenden Felds liegt und die Index Leistung verringert (z. b. **Total_Number_Of_ObjectCells_In_Level0_For_QuerySample** 1). Wenn das Abfragefenster innerhalb des umgebenden Felds liegt, kann eine hohe Anzahl an Objekten in Ebene 0 die Leistung des Indexes tatsächlich verbessern.  
   
@@ -301,7 +301,7 @@ ms.locfileid: "91809726"
 ## <a name="permissions"></a>Berechtigungen  
  Der Benutzer muss ein Mitglied der Datenbankrolle **public** sein. Erfordert die READ ACCESS-Berechtigung für den Server und das Objekt. Dies gilt für alle gespeicherten Prozeduren für Räumlichkeitsindizes.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Eigenschaften, die NULL-Werte enthalten sind, sind nicht in der zurückgegebenen Menge enthalten.  
   
 ## <a name="examples"></a>Beispiele  

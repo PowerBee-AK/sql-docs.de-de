@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_add_policy_category
 - sp_syspolicy_add_policy_category_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2722671523f14177a92084a4d896eec3ccdd6e2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f2c1cd70576342c14028c3bb313a7492bdd0391
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469159"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201255"
 ---
 # <a name="sp_syspolicy_add_policy_category-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'name'` Der Name der Richtlinien Kategorie. *Name ist vom Datentyp* **vom Datentyp sysname**und ist erforderlich. der *Name* darf nicht NULL oder eine leere Zeichenfolge sein.  
+`[ @name = ] 'name'` Der Name der Richtlinien Kategorie. *Name ist vom Datentyp* **vom Datentyp sysname** und ist erforderlich. der *Name* darf nicht NULL oder eine leere Zeichenfolge sein.  
   
 `[ @mandate_database_subscriptions = ] mandate_database_subscriptions` Bestimmt, ob das Daten Bank Abonnement für die Richtlinien Kategorie vorgeschrieben ist. *mandate_database_subscriptions* ist ein **Bit** -Wert, der Standardwert ist 1 (aktiviert).  
   
-`[ @policy_category_id = ] policy_category_id` Der Bezeichner für die Richtlinien Kategorie. *policy_category_id* ist vom Datentyp **int**und wird als Output zurückgegeben.  
+`[ @policy_category_id = ] policy_category_id` Der Bezeichner für die Richtlinien Kategorie. *policy_category_id* ist vom Datentyp **int** und wird als Output zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

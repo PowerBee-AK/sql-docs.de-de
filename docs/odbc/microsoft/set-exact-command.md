@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SET EXACT command [ODBC]
 ms.assetid: 9533d3e0-e7c1-49de-a3a3-0cc4373a91cb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6bae23ef0677061f92d0466564619e85d4ae1630
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34a22d320dbd099bd26db1b5396cc55a15a4b288
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466362"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203961"
 ---
 # <a name="set-exact-command"></a>SET EXACT-Befehl
 Gibt die Regeln für den Vergleich von zwei Zeichen folgen mit unterschiedlichen Längen an.  
@@ -66,5 +66,5 @@ SET EXACT ON | OFF
 |Trim ("___") = ""|Match|Match|Match|  
 |"" = Trim ("___")|Match|Match|Match|  
   
-## <a name="see-also"></a>Siehe auch  
- [Befehl SET ANSI](../../odbc/microsoft/set-ansi-command.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [SET ANSI-Befehl](../../odbc/microsoft/set-ansi-command.md)

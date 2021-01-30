@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - character data type [ODBC]
 - data conversions from C to SQL types [ODBC], character
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: be66188a-ebdb-4c9e-af72-c379886766fa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0ab8f1c0471c6e079f792aa40119f13cb31ca9ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c387c2063bea8f16c7ec5ec90aa0271830f3e5f9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500023"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212362"
 ---
 # <a name="c-to-sql-character"></a>C zu SQL: Zeichen
 Die Bezeichner für den ODBC-C-Datentyp der Zeichenfolge lauten:  
@@ -44,7 +44,7 @@ Die Bezeichner für den ODBC-C-Datentyp der Zeichenfolge lauten:
 |SQL_BINARY<br /><br /> SQL_VARBINARY<br /><br /> SQL_LONGVARBINARY|(Byte Länge der Daten)/2 <= Spalten Byte Länge<br /><br /> (Byte Länge der Daten)/2 > Spalten Byte Länge<br /><br /> Der Datenwert ist kein hexadezimaler Wert.|–<br /><br /> 22001<br /><br /> 22018|  
 |SQL_TYPE_DATE|Der Datenwert ist ein gültiges *ODBC-Date-Literal.*<br /><br /> Der Datenwert ist ein gültiger *ODBC-Timestamp-Literalwert*. Der Uhrzeitteil ist NULL.<br /><br /> Der Datenwert ist ein gültiger *ODBC-Timestamp-Literalwert*. Der Zeitanteil ist ungleich 0 (null) [a]<br /><br /> Der Datenwert ist kein gültiger *ODBC-Date-Literal* -oder *ODBC-Timestamp-Literalwert* .|–<br /><br /> –<br /><br /> 22008<br /><br /> 22018|  
 |SQL_TYPE_TIME|Der Datenwert ist ein gültiges *ODBC-Time-Literale* .<br /><br /> Der Datenwert ist ein gültiger *ODBC-Timestamp-Literalwert*. der Teil der Sekundenbruchteile ist 0 (null) [b]<br /><br /> Der Datenwert ist ein gültiger *ODBC-Timestamp-Literalwert*. der Teil für die Sekundenbruchteile ist nicht NULL [b]<br /><br /> Der Datenwert ist kein gültiges *ODBC-Time-Literale* -oder *ODBC-Timestamp-Literalzeichen* .|–<br /><br /> –<br /><br /> 22008<br /><br /> 22018|  
-|SQL_TYPE_TIMESTAMP|Der Datenwert ist ein gültiger *ODBC-Timestamp-Literalwert*. Teil der Sekundenbruchteile nicht abgeschnitten<br /><br /> Der Datenwert ist ein gültiger *ODBC-Timestamp-Literalwert*. Teil Bruchteile abgeschnitten<br /><br /> Der Datenwert ist ein gültiger *ODBC-Date-Literale*[c]<br /><br /> Der Datenwert ist ein gültiger *ODBC-Time-Literale*[d]<br /><br /> Der Datenwert ist keine gültige *ODBC-Date-Literale*, *ODBC-Time-Literale*oder *ODBC-Timestamp-Literale* .|–<br /><br /> 22008<br /><br /> –<br /><br /> –<br /><br /> 22018|  
+|SQL_TYPE_TIMESTAMP|Der Datenwert ist ein gültiger *ODBC-Timestamp-Literalwert*. Teil der Sekundenbruchteile nicht abgeschnitten<br /><br /> Der Datenwert ist ein gültiger *ODBC-Timestamp-Literalwert*. Teil Bruchteile abgeschnitten<br /><br /> Der Datenwert ist ein gültiger *ODBC-Date-Literale*[c]<br /><br /> Der Datenwert ist ein gültiger *ODBC-Time-Literale*[d]<br /><br /> Der Datenwert ist keine gültige *ODBC-Date-Literale*, *ODBC-Time-Literale* oder *ODBC-Timestamp-Literale* .|–<br /><br /> 22008<br /><br /> –<br /><br /> –<br /><br /> 22018|  
 |Alle SQL-Intervall Typen|Der Datenwert ist ein gültiger *Intervall Wert*. keine Kürzung erfolgt<br /><br /> Der Datenwert ist ein gültiger *Intervall Wert*. der Wert in einem der Felder wird abgeschnitten.<br /><br /> Der Datenwert ist kein gültiges intervallliterale.|–<br /><br /> 22015<br /><br /> 22018|  
   
  [a] der Uhrzeit Teil des Zeitstempels wird abgeschnitten.  
@@ -55,7 +55,7 @@ Die Bezeichner für den ODBC-C-Datentyp der Zeichenfolge lauten:
   
  [d] der Date-Teil des Zeitstempels wird auf das aktuelle Datum festgelegt.  
   
- [e] der Treiber bzw. die Datenquelle wartet effektiv, bis die gesamte Zeichenfolge empfangen wurde (auch wenn die Zeichendaten in Teilen durch Aufrufe von **SQLPutData**gesendet werden), bevor versucht wird, die Konvertierung auszuführen.  
+ [e] der Treiber bzw. die Datenquelle wartet effektiv, bis die gesamte Zeichenfolge empfangen wurde (auch wenn die Zeichendaten in Teilen durch Aufrufe von **SQLPutData** gesendet werden), bevor versucht wird, die Konvertierung auszuführen.  
   
  Wenn Zeichen-C-Daten in numerische Daten, Datums-, Uhrzeit-oder Zeitstempel-SQL-Daten konvertiert werden, werden führende und nachfolgende Leerzeichen ignoriert.  
   

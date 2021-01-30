@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_datatype_info_TSQL
 - sp_datatype_info
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff2af6626004412a028777634269c6dc13e4fa8c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 22d01167f9dbe1a268dc436efb506507e1fbe7f9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546130"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201301"
 ---
 # <a name="sp_datatype_info-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @data_type = ] data_type` Die Codenummer für den angegebenen Datentyp. Um eine Liste aller Datentypen abzurufen, lassen Sie diesen Parameter weg. *data_type* ist vom Datentyp **int**und hat den Standardwert 0.  
+`[ @data_type = ] data_type` Die Codenummer für den angegebenen Datentyp. Um eine Liste aller Datentypen abzurufen, lassen Sie diesen Parameter weg. *data_type* ist vom Datentyp **int** und hat den Standardwert 0.  
   
 `[ @ODBCVer = ] odbc_version` Die verwendete ODBC-Version. *odbc_version* ist vom Datentyp **tinyint**. der Standardwert ist 2.  
   
@@ -68,12 +68,12 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |MINIMUM_SCALE|**smallint**|Die minimalen Dezimalstellen des Datentyps bezüglich der Datenquelle. Wenn für einen Datentyp feste Dezimalstellen definiert wurden, enthalten die Spalten MINIMUM_SCALE und MAXIMUM_SCALE denselben Wert. NULL wird zurückgegeben, wenn Dezimalstellen auf den Datentyp nicht anwendbar sind.|  
 |MAXIMUM_SCALE|**smallint**|Die maximalen Dezimalstellen des Datentyps bezüglich der Datenquelle. Wenn die maximalen Dezimalstellen für die Datenquelle nicht separat definiert wurden und stattdessen definiert wurde, dass sie der maximalen Genauigkeit entsprechen, enthält diese Spalte denselben Wert wie die PRECISION-Spalte.|  
 |SQL_DATA_TYPE|**smallint**|Der Wert des SQL-Datentyps, wie er im TYPE-Feld des Deskriptors angezeigt wird. Diese Spalte ist mit Ausnahme der Datentypen **DateTime** und ANSI **Interval** identisch mit der Spalte data_type. Dieses Feld gibt immer einen Wert zurück.|  
-|SQL_DATETIME_SUB|**smallint**|der **DateTime** -oder ANSI- **Intervall** -Subcode, wenn der Wert von SQL_DATA_TYPE SQL_DATETIME oder SQL_INTERVAL ist. Bei anderen Datentypen als **DateTime** und ANSI **Interval**ist dieses Feld NULL.|  
+|SQL_DATETIME_SUB|**smallint**|der **DateTime** -oder ANSI- **Intervall** -Subcode, wenn der Wert von SQL_DATA_TYPE SQL_DATETIME oder SQL_INTERVAL ist. Bei anderen Datentypen als **DateTime** und ANSI **Interval** ist dieses Feld NULL.|  
 |NUM_PREC_RADIX|**int**|Die Anzahl der Bits oder Stellen für das Berechnen der höchsten Zahl, die eine Spalte enthalten kann. Wenn es sich um einen ungefähren numerischen Datentyp handelt, enthält diese Spalte den Wert 2 für mehrere Bits. Bei exakten numerischen Datentypen enthält diese Spalte den Wert 10 für mehrere Dezimalstellen. Andernfalls ist diese Spalte NULL. Aus der Kombination von Genauigkeit und Basis kann die Anwendung die höchste Zahl berechnen, die die Spalte enthalten kann.|  
-|INTERVAL_PRECISION|**smallint**|Wert der Intervall führenden Genauigkeit, *data_type* Wenn data_type **Intervall**ist. andernfalls NULL.|  
+|INTERVAL_PRECISION|**smallint**|Wert der Intervall führenden Genauigkeit,  Wenn data_type **Intervall** ist. andernfalls NULL.|  
 |USERTYPE|**smallint**|**usertype** -Wert aus der systypes-Tabelle.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_datatype_info entspricht sqlgettypeingefo in ODBC. Die zurückgegebenen Ergebnisse sind zuerst nach DATA_TYPE und dann nach der Übereinstimmung des Datentyps mit dem entsprechenden ODBC SQL-Datentyp geordnet.  
   
 ## <a name="permissions"></a>Berechtigungen  

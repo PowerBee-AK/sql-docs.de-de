@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addlogin
 - sp_addlogin_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 585461904b68f26d3ea71e255b24e9ed6d38786a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a85da6cb0e9f0d2a490c802e4d67f8096999f217
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474558"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202399"
 ---
 # <a name="sp_addlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,10 +53,10 @@ sp_addlogin [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>Argumente  
  [ @loginame =] '*Login*'  
- Der Name der Anmeldung. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+ Der Name der Anmeldung. *login* ist vom Datentyp **sysname** und hat keinen Standardwert.  
   
  [ @passwd =] '*Kennwort*'  
- Das Anmelde Kennwort. *Password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+ Das Anmelde Kennwort. *Password* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
@@ -65,7 +65,7 @@ sp_addlogin [ @loginame = ] 'login'
  Ist die Standarddatenbank des Anmeldenamens (die Datenbank, mit der der Anmeldename nach dem Anmelden zuerst verbunden wird). *Database* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **Master**.  
   
  [ @deflanguage =] '*Sprache*'  
- Die Standardsprache der Anmeldung. *language* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Language* nicht angegeben wird, wird die Standard *Sprache* des neuen Anmelde namens auf die aktuelle Standardsprache des Servers festgelegt.  
+ Die Standardsprache der Anmeldung. *language* ist vom Datentyp **sysname** und hat den Standardwert NULL. Wenn *Language* nicht angegeben wird, wird die Standard *Sprache* des neuen Anmelde namens auf die aktuelle Standardsprache des Servers festgelegt.  
   
  [ @sid =] '*sid*'  
  Die Sicherheits-ID (SID). *sid* ist vom Datentyp **varbinary (16)** und hat den Standardwert NULL. Wenn *sid* den Wert NULL hat, generiert das System eine sid für den neuen Anmelde Namen. Trotz der Verwendung eines **varbinary** -Datentyps müssen andere Werte als NULL genau 16 Byte lang sein und dürfen nicht bereits vorhanden sein. Die Angabe von *sid* ist beispielsweise nützlich, wenn Sie Skripts [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einem Server auf einen anderen übertragen oder die Anmelde Namen von einem Server auf einen anderen verschieben, und Sie möchten, dass die Anmeldungen auf verschiedenen Servern dieselbe SID haben.  
@@ -141,9 +141,9 @@ EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x
   
 ## <a name="see-also"></a>Weitere Informationen  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [sp_droplogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
+ [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [sp_revokelogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [xp_logininfo &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

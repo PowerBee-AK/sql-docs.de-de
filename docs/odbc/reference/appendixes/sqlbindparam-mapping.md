@@ -7,22 +7,22 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLBindparam function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLBindParam
 ms.assetid: 375f8f24-36de-4946-916e-c75abc6f070d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f998fd30716e479cb4dd0650af53c5a24483f2f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 62951dc5ae69e86eb5cbc2fba21407d63952e74b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456461"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202941"
 ---
 # <a name="sqlbindparam-mapping"></a>SQLBindParam-Zuordnung
-**SQLBindParam** kann nicht wirklich als veraltet markiert werden, da es in ODBC nie vorhanden war. Sie stellt jedoch weiterhin duplizierte Funktionen dar. der Treiber-Manager muss Sie exportieren, da Sie von ISO und geöffneten Gruppen kompatiblen Anwendungen verwendet werden. Da **SQLBindParameter** die gesamte Funktionalität von **SQLBindParam**enthält, wird **SQLBindParam** oberhalb von **SQLBindParameter** zugeordnet (wenn es sich beim zugrunde liegenden Treiber um einen ODBC *3. x* -Treiber handelt). Ein ODBC *3. x* -Treiber muss **SQLBindParam**nicht implementieren.  
+**SQLBindParam** kann nicht wirklich als veraltet markiert werden, da es in ODBC nie vorhanden war. Sie stellt jedoch weiterhin duplizierte Funktionen dar. der Treiber-Manager muss Sie exportieren, da Sie von ISO und geöffneten Gruppen kompatiblen Anwendungen verwendet werden. Da **SQLBindParameter** die gesamte Funktionalität von **SQLBindParam** enthält, wird **SQLBindParam** oberhalb von **SQLBindParameter** zugeordnet (wenn es sich beim zugrunde liegenden Treiber um einen ODBC *3. x* -Treiber handelt). Ein ODBC *3. x* -Treiber muss **SQLBindParam** nicht implementieren.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Wenn der folgende **SQLBindParam** -Befehl durchgeführt wird:  
@@ -40,4 +40,4 @@ SQLBindParameter(   StatementHandle,    ParameterNumber,    SQL_PARAM_INPUT,    
  Weitere Informationen finden Sie unter [ODBC 64-Bit-Informationen](../../../odbc/reference/odbc-64-bit-information.md), wenn Ihre Anwendung unter einem 64-Bit-Betriebssystem ausgeführt wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Zuordnung veralteter Funktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)
+ [Zuordnen veralteter Funktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)

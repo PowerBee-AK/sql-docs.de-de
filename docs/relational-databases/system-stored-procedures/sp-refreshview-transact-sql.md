@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_refreshview
 - sp_refreshview_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d7cd57443df571183381b6dc15bc8674920fef0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: da179448924381de2dddbf5613194c30df1f01bd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541142"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201263"
 ---
 # <a name="sp_refreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,12 +40,12 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @viewname = ] 'viewname'` Der Name der Ansicht. *viewName ist vom Datentyp* **nvarchar**und hat keinen Standardwert. *viewName* kann ein mehrteilige Bezeichner sein, kann jedoch nur auf Sichten in der aktuellen Datenbank verweisen.  
+`[ @viewname = ] 'viewname'` Der Name der Ansicht. *viewName ist vom Datentyp* **nvarchar** und hat keinen Standardwert. *viewName* kann ein mehrteilige Bezeichner sein, kann jedoch nur auf Sichten in der aktuellen Datenbank verweisen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn eine Sicht nicht mit SCHEMABINDING erstellt wird, sollten **sp_refreshview** ausgeführt werden, wenn Änderungen an den Objekten vorgenommen werden, die der Sicht zugrunde liegen, die sich auf die Definition der Sicht auswirken. Andernfalls liefert die Abfrage der Sicht möglicherweise unerwartete Ergebnisse.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -1,12 +1,12 @@
 ---
-title: sys. dm_db_rda_schema_update_status (Transact-SQL) | Microsoft-Dokumentation
-description: Erfahren Sie, wie sys. dm_db_rda_schema_update_status eine Zeile für jeden Schema Aktualisierungs Task für das Remote Datenarchiv der einzelnen Stretch-aktivierten Tabellen in der Datenbank enthält.
+title: sys.dm_db_rda_schema_update_status (Transact-SQL) | Microsoft-Dokumentation
+description: Erfahren Sie, wie sys.dm_db_rda_schema_update_status eine Zeile für jeden Schema Aktualisierungs Task für das Remote Datenarchiv der einzelnen Stretch-aktivierten Tabellen in der Datenbank enthält.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: stored-procedures
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_db_rda_schema_update_status
 - sys.dm_db_rda_schema_update_status_TSQL
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 313eb868a49507b96e31bcd1966165175bf96f0a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 955f06ba0a7ad991ffe979fc927dfabe6e5a8dd0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243788"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202416"
 ---
-# <a name="stretch-database---sysdm_db_rda_schema_update_status"></a>Stretch Database-sys. dm_db_rda_schema_update_status
+# <a name="stretch-database---sysdm_db_rda_schema_update_status"></a>Stretch Database sys.dm_db_rda_schema_update_status
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Enthält eine Zeile für jeden Schema Aktualisierungs Task für das Remote Datenarchiv der einzelnen Stretch-aktivierten Tabellen in der aktuellen Datenbank. Tasks werden durch ihre Aufgaben-IDs identifiziert.  

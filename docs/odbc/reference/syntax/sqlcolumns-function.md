@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLColumns
 apilocation:
@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d5fc96b275badf5eab68f78e863648c3a73eaab6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 51a72000e071d89fc3f189b00c6d8491db1e6e9f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448773"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201976"
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns-Funktion
 **Konformitäts**  
  Eingeführte Version: ODBC 1,0 Standards Compliance: Open Group  
   
  **Zusammenfassung**  
- **SQLColumns** gibt die Liste der Spaltennamen in angegebenen Tabellen zurück. Der Treiber gibt diese Informationen als Resultset für das angegebene *StatementHandle*zurück.  
+ **SQLColumns** gibt die Liste der Spaltennamen in angegebenen Tabellen zurück. Der Treiber gibt diese Informationen als Resultset für das angegebene *StatementHandle* zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -70,7 +70,7 @@ SQLRETURN SQLColumns(
 >  Wenn das SQL_ATTR_METADATA_ID-Anweisungs Attribut auf SQL_TRUE festgelegt ist, wird Schema *Name* als Bezeichner behandelt, und die Groß-/Kleinschreibung ist nicht signifikant. Wenn Sie SQL_FALSE ist, ist Schema *Name* ein Muster Wert Argument. Sie wird buchstäblich behandelt, und die Groß-/Kleinschreibung ist von Bedeutung.  
   
  *NameLength2*  
- Der Länge in Zeichen von * Schema*Name*.  
+ Der Länge in Zeichen von * Schema *Name*.  
   
  *TableName*  
  Der Zeichen folgen Suchmuster für Tabellennamen.  
@@ -90,24 +90,24 @@ SQLRETURN SQLColumns(
  *NameLength4*  
  Der Länge in Zeichen von **ColumnName*.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLColumns** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert abgerufen werden, indem **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_STMT und einem *handle* von *StatementHandle*aufgerufen wird. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die normalerweise von **SQLColumns** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
+ Wenn **SQLColumns** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert abgerufen werden, indem **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_STMT und einem *handle* von *StatementHandle* aufgerufen wird. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die normalerweise von **SQLColumns** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|Beschreibung|  
+|SQLSTATE|Fehler|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08S01|Kommunikations Verbindungsfehler|Die Kommunikationsverbindung zwischen dem Treiber und der Datenquelle, mit der der Treiber verbunden war, ist fehlgeschlagen, bevor die Funktion die Verarbeitung abgeschlossen hat.|  
-|24.000|Ungültiger Cursorstatus|Ein Cursor war auf dem *StatementHandle*geöffnet, und **SQLFetch** oder **SQLFetchScroll** wurde aufgerufen. Dieser Fehler wird vom Treiber-Manager zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** nicht SQL_NO_DATA zurückgegeben hat, und wird vom Treiber zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** SQL_NO_DATA zurückgegeben hat.<br /><br /> Ein Cursor war auf dem *StatementHandle* geöffnet, aber **SQLFetch** oder **SQLFetchScroll** wurde nicht aufgerufen.|  
+|24.000|Ungültiger Cursorstatus|Ein Cursor war auf dem *StatementHandle* geöffnet, und **SQLFetch** oder **SQLFetchScroll** wurde aufgerufen. Dieser Fehler wird vom Treiber-Manager zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** nicht SQL_NO_DATA zurückgegeben hat, und wird vom Treiber zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** SQL_NO_DATA zurückgegeben hat.<br /><br /> Ein Cursor war auf dem *StatementHandle* geöffnet, aber **SQLFetch** oder **SQLFetchScroll** wurde nicht aufgerufen.|  
 |40001|Serialisierungsfehler|Für die Transaktion wurde ein Rollback ausgeführt, weil ein Ressourcen Deadlock mit einer anderen Transaktion aufgetreten ist.|  
 |40003|Anweisungs Vervollständigung unbekannt|Bei der zugeordneten Verbindung ist während der Ausführung dieser Funktion ein Fehler aufgetreten, und der Status der Transaktion kann nicht bestimmt werden.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im *\* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
 |HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für " *StatementHandle*" aktiviert. Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für " *StatementHandle*" aufgerufen. Anschließend wurde die Funktion erneut für " *StatementHandle*" aufgerufen.<br /><br /> Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für das *StatementHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
-|HY009|Ungültige Verwendung des NULL-Zeigers|Das SQL_ATTR_METADATA_ID Statement-Attribut wurde auf SQL_TRUE festgelegt, das *CatalogName* -Argument war ein NULL-Zeiger, und der SQL_CATALOG_NAME *InfoType* gibt zurück, dass Katalognamen unterstützt werden.<br /><br /> (DM) das SQL_ATTR_METADATA_ID Statement-Attribut wurde auf SQL_TRUE festgelegt, *und das Schema*Name-, *TableName*-oder *ColumnName* -Argument war ein NULL-Zeiger.|  
-|HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das mit dem *StatementHandle*verknüpft ist. Diese asynchrone Funktion wurde noch ausgeführt, als die **SQLColumns** -Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für das *StatementHandle* aufgerufen und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für das *StatementHandle* aufgerufen und wird noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** wurde für das *StatementHandle* aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.|  
+|HY009|Ungültige Verwendung des NULL-Zeigers|Das SQL_ATTR_METADATA_ID Statement-Attribut wurde auf SQL_TRUE festgelegt, das *CatalogName* -Argument war ein NULL-Zeiger, und der SQL_CATALOG_NAME *InfoType* gibt zurück, dass Katalognamen unterstützt werden.<br /><br /> (DM) das SQL_ATTR_METADATA_ID Statement-Attribut wurde auf SQL_TRUE festgelegt, *und das Schema* Name-, *TableName*-oder *ColumnName* -Argument war ein NULL-Zeiger.|  
+|HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das mit dem *StatementHandle* verknüpft ist. Diese asynchrone Funktion wurde noch ausgeführt, als die **SQLColumns** -Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect** oder **SQLMoreResults** wurde für das *StatementHandle* aufgerufen und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für das *StatementHandle* aufgerufen und wird noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** oder **SQLSetPos** wurde für das *StatementHandle* aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.|  
 |HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
 |HY090|Ungültige Zeichen folgen-oder Pufferlänge|(DM) der Wert eines der namens Längen Argumente war kleiner als 0 (null), aber nicht gleich SQL_NTS.|  
 |||Der Wert eines der namens Längen Argumente hat den maximalen Längen Wert für den entsprechenden Katalog oder Namen überschritten. Die maximale Länge jedes Katalogs oder Namens kann durch Aufrufen von **SQLGetInfo** mit den *InfoType* -Werten erreicht werden. (Siehe "Kommentare")|  
@@ -120,7 +120,7 @@ SQLRETURN SQLColumns(
 |IM018|**Sqlcompleteasync** wurde nicht aufgerufen, um den vorherigen asynchronen Vorgang für dieses Handle abzuschließen.|Wenn der vorherige Funktionsaufruf für das Handle SQL_STILL_EXECUTING zurückgibt und der Benachrichtigungs Modus aktiviert ist, muss **sqlcompleteasync** für das Handle aufgerufen werden, um die Nachbearbeitung auszuführen und den Vorgang abzuschließen.|  
   
 ## <a name="comments"></a>Kommentare  
- Diese Funktion wird in der Regel vor der Anweisungs Ausführung verwendet, um Informationen über Spalten für eine Tabelle oder Tabellen aus dem Katalog der Datenquelle abzurufen. **SQLColumns** kann zum Abrufen von Daten für alle Typen von Elementen verwendet werden, die von **SQLTables**zurückgegeben werden. Zusätzlich zu den Basistabellen kann dies (aber nicht beschränkt auf) Sichten, Synonyme, Systemtabellen usw. enthalten. Im Gegensatz dazu beschreiben die Funktionen **SQLColAttribute** und **SQLDescribeCol** die Spalten in einem **Resultset, und die SQLNumResultCols** -Funktion gibt die Anzahl der Spalten in einem Resultset zurück. Weitere Informationen finden Sie unter [Verwenden von Katalogdaten](../../../odbc/reference/develop-app/uses-of-catalog-data.md).  
+ Diese Funktion wird in der Regel vor der Anweisungs Ausführung verwendet, um Informationen über Spalten für eine Tabelle oder Tabellen aus dem Katalog der Datenquelle abzurufen. **SQLColumns** kann zum Abrufen von Daten für alle Typen von Elementen verwendet werden, die von **SQLTables** zurückgegeben werden. Zusätzlich zu den Basistabellen kann dies (aber nicht beschränkt auf) Sichten, Synonyme, Systemtabellen usw. enthalten. Im Gegensatz dazu beschreiben die Funktionen **SQLColAttribute** und **SQLDescribeCol** die Spalten in einem **Resultset, und die SQLNumResultCols** -Funktion gibt die Anzahl der Spalten in einem Resultset zurück. Weitere Informationen finden Sie unter [Verwenden von Katalogdaten](../../../odbc/reference/develop-app/uses-of-catalog-data.md).  
   
 > [!NOTE]  
 >  Weitere Informationen über die allgemeine Verwendung, Argumente und zurückgegebene Daten von ODBC-Katalog Funktionen finden Sie unter [Katalog Funktionen](../../../odbc/reference/develop-app/catalog-functions.md).  
@@ -131,9 +131,9 @@ SQLRETURN SQLColumns(
 >  Wenn eine Anwendung mit einem ODBC 2 funktioniert. *x* -Treiber, es wird keine ORDINAL_POSITION Spalte im Resultset zurückgegeben. Dies hat zur Folge, dass Sie mit ODBC 2 arbeiten. *x* -Treiber: die Reihenfolge der Spalten in der von **SQLColumns** zurückgegebenen Spaltenliste ist nicht notwendigerweise identisch mit der Reihenfolge der Spalten, die zurückgegeben werden, wenn die Anwendung eine SELECT-Anweisung für alle Spalten in dieser Tabelle ausführt.  
   
 > [!NOTE]  
->  **SQLColumns** gibt möglicherweise nicht alle Spalten zurück. Beispielsweise gibt ein Treiber möglicherweise keine Informationen zu Pseudo Spalten zurück, wie z. b. Oracle ROWID. Anwendungen können beliebige gültige Spalten verwenden, unabhängig davon, ob Sie von **SQLColumns**zurückgegeben werden.  
+>  **SQLColumns** gibt möglicherweise nicht alle Spalten zurück. Beispielsweise gibt ein Treiber möglicherweise keine Informationen zu Pseudo Spalten zurück, wie z. b. Oracle ROWID. Anwendungen können beliebige gültige Spalten verwenden, unabhängig davon, ob Sie von **SQLColumns** zurückgegeben werden.  
 >   
->  Einige Spalten, die von **SQLStatistics** zurückgegeben werden können, werden von **SQLColumns**nicht zurückgegeben. **SQLColumns** gibt z. b. nicht die Spalten in einem Index zurück, der für einen Ausdruck oder Filter erstellt wurde, wie z. b. "Gehalt + Benefits" oder "TPT = 0012".  
+>  Einige Spalten, die von **SQLStatistics** zurückgegeben werden können, werden von **SQLColumns** nicht zurückgegeben. **SQLColumns** gibt z. b. nicht die Spalten in einem Index zurück, der für einen Ausdruck oder Filter erstellt wurde, wie z. b. "Gehalt + Benefits" oder "TPT = 0012".  
   
  Die Längen von varchar-Spalten werden in der Tabelle nicht angezeigt. die tatsächlichen Längen hängen von der Datenquelle ab. Zum Bestimmen der tatsächlichen Längen der Spalten TABLE_CAT, TABLE_SCHEM, TABLE_NAME und column_name kann eine Anwendung **SQLGetInfo** mit den Optionen SQL_MAX_CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN, SQL_MAX_TABLE_NAME_LEN und SQL_MAX_COLUMN_NAME_LEN aufrufen.  
   
@@ -167,7 +167,7 @@ SQLRETURN SQLColumns(
 
  In der folgenden Tabelle werden die Spalten im Resultset aufgelistet. Zusätzliche Spalten, die über die Spalte 18 (IS_NULLABLE) hinausgehen, können vom Treiber definiert werden. Eine Anwendung sollte Zugriff auf Treiber spezifische Spalten erhalten, indem Sie vom Ende des Resultsets abzählt, anstatt eine explizite Ordinalposition anzugeben. Weitere Informationen finden Sie unter [von Katalog Funktionen zurückgegebene Daten](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
-|Spaltenname|Column<br /><br /> number|Datentyp|Kommentare|  
+|Spaltenname|Spalte<br /><br /> Anzahl|Datentyp|Kommentare|  
 |-----------------|-----------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1,0)|1|Varchar|Katalog Name; NULL, wenn nicht auf die Datenquelle anwendbar. Wenn ein Treiber Kataloge für einige Tabellen unterstützt, aber nicht für andere, z. b. wenn der Treiber Daten von einem anderen DBMSs abruft, wird eine leere Zeichenfolge ("") für die Tabellen zurückgegeben, die über keine Kataloge verfügen.|  
 |TABLE_SCHEM (ODBC 1,0)|2|Varchar|Schema Name; NULL, wenn nicht auf die Datenquelle anwendbar. Wenn ein Treiber für einige Tabellen Schemas unterstützt, aber nicht für andere, z. b. wenn der Treiber Daten von einem anderen DBMSs abruft, wird eine leere Zeichenfolge ("") für Tabellen zurückgegeben, die keine Schemas aufweisen.|  
@@ -189,7 +189,7 @@ SQLRETURN SQLColumns(
 |IS_NULLABLE (ODBC 3,0)|18|Varchar|"No", wenn die Spalte keine Nullen enthält.<br /><br /> "Yes", wenn die Spalte NULL-Werten enthalten könnte.<br /><br /> Die Spalte gibt eine leere Zeichenfolge zurück, wenn die NULL-Zulässigkeit unbekannt ist.<br /><br /> Die NULL-Zulässigkeit wird gemäß den ISO-Regeln bestimmt. Ein DBMS nach ISO SQL kann keine leere Zeichenfolge zurückgeben.<br /><br /> Der für diese Spalte zurückgegebene Wert unterscheidet sich von dem für die Nullable-Spalte zurückgegebenen Wert. (Siehe die Beschreibung der Spalte, die NULL-Werte zulässt.)|  
   
 ## <a name="code-example"></a>Codebeispiel  
- Im folgenden Beispiel deklariert eine Anwendung Puffer für das von **SQLColumns**zurückgegebene Resultset. Es wird **SQLColumns** aufgerufen, um ein Resultset zurückzugeben, das jede Spalte in der Employee-Tabelle beschreibt. Anschließend wird **SQLBindCol** aufgerufen, um die Spalten im Resultset an die Puffer zu binden. Schließlich ruft die Anwendung jede Daten Zeile mit **SQLFetch** ab und verarbeitet sie.  
+ Im folgenden Beispiel deklariert eine Anwendung Puffer für das von **SQLColumns** zurückgegebene Resultset. Es wird **SQLColumns** aufgerufen, um ein Resultset zurückzugeben, das jede Spalte in der Employee-Tabelle beschreibt. Anschließend wird **SQLBindCol** aufgerufen, um die Spalten im Resultset an die Puffer zu binden. Schließlich ruft die Anwendung jede Daten Zeile mit **SQLFetch** ab und verarbeitet sie.  
   
 ```cpp  
 // SQLColumns_Function.cpp  
@@ -307,6 +307,6 @@ int main() {
 |Zurückgeben einer Liste von Tabellen in einer Datenquelle|[SQLTables-Funktion](../../../odbc/reference/syntax/sqltables-function.md)|  
 |Zurückgeben von Berechtigungen für eine Tabelle oder Tabellen|[SQLTablePrivileges-Funktion](../../../odbc/reference/syntax/sqltableprivileges-function.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

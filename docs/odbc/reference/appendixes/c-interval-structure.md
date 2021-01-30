@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - interval data type [ODBC], structure
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 89962558fdbd6f0de5b5e030fe504669d51c40be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e470d0e30864c953fa3937725bcd5597bf542f41
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88411206"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212439"
 ---
 # <a name="c-interval-structure"></a>C-Intervallstruktur
-Jeder der im Abschnitt [c-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) aufgelisteten Datentypen im c-Intervall verwendet die gleiche Struktur, um die Intervall Daten zu enthalten. Wenn **SQLFetch**, **SQLFetchScroll**oder **SQLGetData** aufgerufen wird, der Treiber gibt Daten in die SQL_INTERVAL_STRUCT Struktur zurück, verwendet den Wert, der von der Anwendung für die C-Datentypen (im Befehl **SQLBindCol**, **SQLGetData**oder **SQLBindParameter**) festgelegt wurde, um den Inhalt SQL_INTERVAL_STRUCT zu interpretieren, und füllt das *interval_type* Feld der Struktur mit dem Enumerationswert *, der dem* C-Typ entspricht. Beachten Sie, dass Treiber das *interval_type* Feld nicht lesen, um den Typ des Intervalls zu bestimmen. Sie rufen den Wert des SQL_DESC_CONCISE_TYPE deskriptorfelds ab. Wenn die Struktur für Parameterdaten verwendet wird, verwendet der Treiber den Wert, der von der Anwendung im SQL_DESC_CONCISE_TYPE-Feld des APD angegeben wird, um den Inhalt von SQL_INTERVAL_STRUCT zu interpretieren, auch wenn die Anwendung den Wert des *interval_type* Felds auf einen anderen Wert festlegt.  
+Jeder der im Abschnitt [c-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) aufgelisteten Datentypen im c-Intervall verwendet die gleiche Struktur, um die Intervall Daten zu enthalten. Wenn **SQLFetch**, **SQLFetchScroll** oder **SQLGetData** aufgerufen wird, der Treiber gibt Daten in die SQL_INTERVAL_STRUCT Struktur zurück, verwendet den Wert, der von der Anwendung für die C-Datentypen (im Befehl **SQLBindCol**, **SQLGetData** oder **SQLBindParameter**) festgelegt wurde, um den Inhalt SQL_INTERVAL_STRUCT zu interpretieren, und füllt das *interval_type* Feld der Struktur mit dem Enumerationswert *, der dem* C-Typ entspricht. Beachten Sie, dass Treiber das *interval_type* Feld nicht lesen, um den Typ des Intervalls zu bestimmen. Sie rufen den Wert des SQL_DESC_CONCISE_TYPE deskriptorfelds ab. Wenn die Struktur für Parameterdaten verwendet wird, verwendet der Treiber den Wert, der von der Anwendung im SQL_DESC_CONCISE_TYPE-Feld des APD angegeben wird, um den Inhalt von SQL_INTERVAL_STRUCT zu interpretieren, auch wenn die Anwendung den Wert des *interval_type* Felds auf einen anderen Wert festlegt.  
   
  Diese Struktur ist wie folgt definiert:  
   
@@ -70,4 +70,4 @@ typedef struct tagSQL_DAY_SECOND
 } SQL_DAY_SECOND_STRUCT;  
 ```  
   
- Das *interval_type* -Feld des SQL_INTERVAL_STRUCT gibt der Anwendung an, welche Struktur in der Union enthalten ist und welche Member der Struktur relevant sind. Das Feld *interval_sign* hat den Wert SQL_FALSE, wenn das führende Intervall nicht signiert ist. Wenn Sie SQL_TRUE, ist das führende Feld negativ. Der Wert im führenden Feld selbst ist unabhängig vom Wert *interval_sign*immer unsigniert. Das *interval_sign* Feld fungiert als Signier Bit.
+ Das *interval_type* -Feld des SQL_INTERVAL_STRUCT gibt der Anwendung an, welche Struktur in der Union enthalten ist und welche Member der Struktur relevant sind. Das Feld *interval_sign* hat den Wert SQL_FALSE, wenn das führende Intervall nicht signiert ist. Wenn Sie SQL_TRUE, ist das führende Feld negativ. Der Wert im führenden Feld selbst ist unabhängig vom Wert *interval_sign* immer unsigniert. Das *interval_sign* Feld fungiert als Signier Bit.

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_delete_policy_category_TSQL
 - sp_syspolicy_delete_policy_category
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e09d0d50-94d5-48fd-b284-445ddea6dfcd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fb0df2c440f1198dfe18d4615ab9e8962d93a37e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0f6812c255f48f346144d7c69609a76ca457391d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463980"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201223"
 ---
 # <a name="sp_syspolicy_delete_policy_category-transact-sql"></a>sp_syspolicy_delete_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +40,9 @@ sp_syspolicy_delete_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'name'` Der Name der Richtlinien Kategorie. *Name ist vom Datentyp* **vom Datentyp sysname**und muss angegeben werden, wenn *policy_category_id* NULL ist.  
+`[ @name = ] 'name'` Der Name der Richtlinien Kategorie. *Name ist vom Datentyp* **vom Datentyp sysname** und muss angegeben werden, wenn *policy_category_id* NULL ist.  
   
-`[ @policy_category_id = ] policy_category_id` Der Bezeichner für die Richtlinien Kategorie. *policy_category_id* ist vom *Datentyp* **int**und muss angegeben werden, wenn Name NULL ist.  
+`[ @policy_category_id = ] policy_category_id` Der Bezeichner für die Richtlinien Kategorie. *policy_category_id* ist vom *Datentyp* **int** und muss angegeben werden, wenn Name NULL ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -50,7 +50,7 @@ sp_syspolicy_delete_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ## <a name="remarks"></a>Bemerkungen  
  Sie müssen sp_syspolicy_delete_policy_category im Kontext der Systemdatenbank msdb ausführen.  
   
- Sie müssen einen Wert für *Name* oder für *policy_category_id*angeben. Keiner der Werte darf NULL sein. Um diese Werte abzurufen, fragen Sie die Systemsicht msdb.dbo.syspolicy_policy_categories ab.  
+ Sie müssen einen Wert für *Name* oder für *policy_category_id* angeben. Keiner der Werte darf NULL sein. Um diese Werte abzurufen, fragen Sie die Systemsicht msdb.dbo.syspolicy_policy_categories ab.  
   
  Um eine Richtlinienkategorie zu löschen, dürfen keine Richtlinien darauf verweisen.  
   

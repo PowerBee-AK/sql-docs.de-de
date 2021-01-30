@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_apply_job_to_targets
 - sp_apply_job_to_targets_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a164569a5a62e24dabe0d47839eaa084b32e2efa
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f9fdc4cffdbe21d1c6c502aa813db55e0444d696
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528934"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203236"
 ---
 # <a name="sp_apply_job_to_targets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,23 +43,23 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id` Die Auftrags-ID des Auftrags, der auf die angegebenen Zielserver oder Zielserver Gruppen angewendet werden soll. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die Auftrags-ID des Auftrags, der auf die angegebenen Zielserver oder Zielserver Gruppen angewendet werden soll. *job_id* ist vom Datentyp **uniqueidentifier** und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'` Der Name des Auftrags, der auf die angegebenen Zielserver oder Zielserver Gruppen angewendet werden soll. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags, der auf die angegebenen Zielserver oder Zielserver Gruppen angewendet werden soll. *job_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
 `[ @target_server_groups = ] 'target_server_groups'` Eine durch Trennzeichen getrennte Liste der Zielserver Gruppen, auf die der angegebene Auftrag angewendet werden soll. *target_server_groups* ist vom Datentyp **nvarchar (2048)** und hat den Standardwert NULL.  
   
-`[ @target_servers = ] 'target_servers'` Eine durch Trennzeichen getrennte Liste von Ziel Servern, auf die der angegebene Auftrag angewendet werden soll. *target_servers*ist vom Datentyp **nvarchar (2048)** und hat den Standardwert NULL.  
+`[ @target_servers = ] 'target_servers'` Eine durch Trennzeichen getrennte Liste von Ziel Servern, auf die der angegebene Auftrag angewendet werden soll. *target_servers* ist vom Datentyp **nvarchar (2048)** und hat den Standardwert NULL.  
   
-`[ @operation = ] 'operation'` Gibt an, ob der angegebene Auftrag auf die angegebenen Zielserver oder Zielserver Gruppen angewendet oder daraus entfernt werden soll. *Operation*ist vom Datentyp **varchar (7)**. der Standardwert ist Apply. Gültige Vorgänge sind **Apply** und **Remove**.  
+`[ @operation = ] 'operation'` Gibt an, ob der angegebene Auftrag auf die angegebenen Zielserver oder Zielserver Gruppen angewendet oder daraus entfernt werden soll. *Operation* ist vom Datentyp **varchar (7)**. der Standardwert ist Apply. Gültige Vorgänge sind **Apply** und **Remove**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_apply_job_to_targets** bietet eine einfache Möglichkeit zum anwenden (oder entfernen) eines Auftrags von mehreren Ziel Servern und ist eine Alternative zum Aufrufen von **sp_add_jobserver** (oder **sp_delete_jobserver**) für jeden erforderlichen Zielserver.  
   
 ## <a name="permissions"></a>Berechtigungen  

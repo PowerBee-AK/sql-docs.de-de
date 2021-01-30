@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: 1016db6e-9950-4ae2-a004-bd4171e27359
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6558dda3bf0cb87f3cdfc14b3beda0fc2c329557
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 4854c6e7e7b02b127cd8622ecb3c089485da5464
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094615"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203842"
 ---
 # <a name="sysexternal_data_sources-transact-sql"></a>sys.external_data_sources (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "98094615"
 |name|**sysname**|Der Name der externen Datenquelle.||  
 |location|**nvarchar(4000)**|Die Verbindungs Zeichenfolge, die das Protokoll, die IP-Adresse und den Port für die externe Datenquelle enthält.||  
 |type_desc|**nvarchar(255)**|Der als Zeichenfolge angezeigte Daten Quellentyp.|Hadoop, RDBMS, SHARD_MAP_MANAGER, remotedataarchivetypeer-DataSource|  
-|type|**tinyint**|Der als Zahl angezeigte Daten Quellentyp.|0-Hadoop<br /><br /> 1-RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3-remotedataarchivetypeer-DataSource|  
+|Typ|**tinyint**|Der als Zahl angezeigte Daten Quellentyp.|0-Hadoop<br /><br /> 1-RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3-remotedataarchivetypeer-DataSource|  
 |resource_manager_location|**nvarchar(4000)**|Für den Typ Hadoop, den IP-und Port Speicherort des Hadoop-Ressourcen-Managers. Diese wird zum Übermitteln eines Auftrags in einer Hadoop-Datenquelle verwendet.<br /><br /> NULL für andere Typen externer Datenquellen.||  
 |credential_id|**int**|Die Objekt-ID der Daten Bank weit gültigen Anmelde Informationen, die zum Herstellen einer Verbindung mit der externen Datenquelle verwendet werden.||  
 |database_name|**sysname**|Für den Typ RDBMS der Name der Remote Datenbank. Für Type, SHARD_MAP_MANAGER, der Name der shardzuordnungs-Manager-Datenbank. NULL für andere Typen externer Datenquellen.||  

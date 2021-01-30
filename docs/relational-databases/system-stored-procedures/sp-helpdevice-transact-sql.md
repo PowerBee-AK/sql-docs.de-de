@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdevice
 - sp_helpdevice_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ae8e3db950ceab576786340ca396b25d774cb774
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 95c63d822851d7d1ccf9493e3e0d4cc9beedd624
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89527836"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204740"
 ---
 # <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89527836"
   Meldet Informationen zu Microsoft® SQL Server™-Sicherungsmedien.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Es wird empfohlen, stattdessen die [sys. backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) -Katalog Sicht zu verwenden.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Es wird empfohlen, stattdessen die [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) Katalog Sicht zu verwenden.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,10 +59,10 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |**cntrltype**|**smallint**|Controllertyp des Mediums:<br /><br /> 2 = Datenträgermedium<br /><br /> 5 = Bandmedium|  
 |**size**|**int**|Mediengröße in Seiten von je 2 KB.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn *name* angegeben wird, zeigt **sp_helpdevice** Informationen zu dem angegebenen Sicherungsmedium an. Wenn *name* nicht angegeben wird, zeigt **sp_helpdevice** Informationen zu allen Sicherungsmedien in der **sys.backup_devices** -Katalogsicht an.  
   
- Sicherungsmedien werden dem System mithilfe von **sp_addumpdevice**hinzugefügt.  
+ Sicherungsmedien werden dem System mithilfe von **sp_addumpdevice** hinzugefügt.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addlinkedsrvlogin_TSQL
 - sp_addlinkedsrvlogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4658625065876f35e3eb892381be67226795584f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bcefbe0acef90deb488a1d95f162a4d94f60aa95
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548420"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202377"
 ---
 # <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,21 +44,21 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
   
 ## <a name="arguments"></a>Argumente  
  `[ @rmtsrvname = ] 'rmtsrvname'`  
- Der Name eines Verbindungsservers, für den die Anmeldenamenzuordnung gilt. *rmzrvname* ist vom Datentyp **vom Datentyp sysname**und hat keinen Standardwert.  
+ Der Name eines Verbindungsservers, für den die Anmeldenamenzuordnung gilt. *rmzrvname* ist vom Datentyp **vom Datentyp sysname** und hat keinen Standardwert.  
   
  `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
  Bestimmt, ob eine Verbindung mit *rmtrvname* hergestellt werden soll, indem die Identität lokaler Anmeldungen angenommen oder explizit ein Anmelde Name und ein Kennwort gesendet werden. Der-Datentyp ist vom Datentyp **varchar (** 8 **)** und hat den Standardwert true.  
   
- Der Wert true gibt an, dass Anmeldungen ihre eigenen Anmelde Informationen verwenden, um eine Verbindung mit *rmtrvname*herzustellen, wobei die Argumente *rmtuser* und *rmtpassword* ignoriert werden. FALSE gibt an, dass die Argumente *rmtuser* und *rmtpassword* verwendet werden, um eine Verbindung mit *rmzrvname* für die angegebene *loczuweisung*herzustellen. Wenn *rmtuser* und *rmtpassword* ebenfalls auf NULL festgelegt sind, wird kein Anmelde Name oder Kennwort verwendet, um eine Verbindung mit dem Verbindungs Server herzustellen.  
+ Der Wert true gibt an, dass Anmeldungen ihre eigenen Anmelde Informationen verwenden, um eine Verbindung mit *rmtrvname* herzustellen, wobei die Argumente *rmtuser* und *rmtpassword* ignoriert werden. FALSE gibt an, dass die Argumente *rmtuser* und *rmtpassword* verwendet werden, um eine Verbindung mit *rmzrvname* für die angegebene *loczuweisung* herzustellen. Wenn *rmtuser* und *rmtpassword* ebenfalls auf NULL festgelegt sind, wird kein Anmelde Name oder Kennwort verwendet, um eine Verbindung mit dem Verbindungs Server herzustellen.  
   
  `[ @locallogin = ] 'locallogin'`  
- Ein Anmeldename auf dem lokalen Server. *loczuweisung* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. NULL gibt an, dass dieser Eintrag für alle lokalen Anmeldungen gilt, die eine Verbindung mit *rmstirvname*herstellen. Wenn der Wert nicht NULL ist, kann *loczuweisung* ein- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Name oder ein Windows-Anmelde Name sein. Dem Windows-Anmeldenamen muss das Recht zum Zugreifen auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erteilt worden sein. Dies kann entweder direkt oder über die Mitgliedschaft in einer Windows-Gruppe erfolgen, der das Zugriffsrecht erteilt wurde.  
+ Ein Anmeldename auf dem lokalen Server. *loczuweisung* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. NULL gibt an, dass dieser Eintrag für alle lokalen Anmeldungen gilt, die eine Verbindung mit *rmstirvname* herstellen. Wenn der Wert nicht NULL ist, kann *loczuweisung* ein- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Name oder ein Windows-Anmelde Name sein. Dem Windows-Anmeldenamen muss das Recht zum Zugreifen auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erteilt worden sein. Dies kann entweder direkt oder über die Mitgliedschaft in einer Windows-Gruppe erfolgen, der das Zugriffsrecht erteilt wurde.  
   
  `[ @rmtuser = ] 'rmtuser'`  
- Der Remote Anmelde Name, der verwendet wird, um eine Verbindung mit *rmtrvname* herzustellen, wenn @useself false ist. Wenn der Remote Server eine Instanz von ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die keine Windows-Authentifizierung verwendet, ist *rmtuser* eine- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung. *rmtuser* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+ Der Remote Anmelde Name, der verwendet wird, um eine Verbindung mit *rmtrvname* herzustellen, wenn @useself false ist. Wenn der Remote Server eine Instanz von ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die keine Windows-Authentifizierung verwendet, ist *rmtuser* eine- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung. *rmtuser* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
  `[ @rmtpassword = ] 'rmtpassword'`  
- Das Kennwort, das mit *rmtuser*verknüpft ist. *rmtpassword* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+ Das Kennwort, das mit *rmtuser* verknüpft ist. *rmtpassword* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

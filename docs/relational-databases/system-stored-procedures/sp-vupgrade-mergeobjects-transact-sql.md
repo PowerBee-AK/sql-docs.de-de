@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_vupgrade_mergeobjects
 - sp_vupgrade_mergeobjects_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4df6f9a1f945de42836dd624010a313081955054
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 26e7405647b80d26c760bf88caf5e6aa786346ff
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538509"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201839"
 ---
 # <a name="sp_vupgrade_mergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,16 +46,16 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @login = ] 'login'` Der Anmelde Name des Systemadministrators, der beim Erstellen neuer Systemobjekte in der Verteilungs Datenbank verwendet werden soll. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. Dieser Parameter ist nicht erforderlich, wenn *security_mode* auf **1**festgelegt ist. Dies ist die Windows-Authentifizierung.  
+`[ @login = ] 'login'` Der Anmelde Name des Systemadministrators, der beim Erstellen neuer Systemobjekte in der Verteilungs Datenbank verwendet werden soll. *login* ist vom Datentyp **sysname** und hat den Standardwert NULL. Dieser Parameter ist nicht erforderlich, wenn *security_mode* auf **1** festgelegt ist. Dies ist die Windows-Authentifizierung.  
   
-`[ @password = ] 'password'` Das Kennwort des Systemadministrators, das beim Erstellen neuer Systemobjekte in der Verteilungs Datenbank verwendet werden soll. *Password* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **' '** (leere Zeichenfolge). Dieser Parameter ist nicht erforderlich, wenn *security_mode* auf **1**festgelegt ist. Dies ist die Windows-Authentifizierung.  
+`[ @password = ] 'password'` Das Kennwort des Systemadministrators, das beim Erstellen neuer Systemobjekte in der Verteilungs Datenbank verwendet werden soll. *Password* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **' '** (leere Zeichenfolge). Dieser Parameter ist nicht erforderlich, wenn *security_mode* auf **1** festgelegt ist. Dies ist die Windows-Authentifizierung.  
   
-`[ @security_mode = ] 'security_mode'` Der Anmelde Sicherheitsmodus, der beim Erstellen neuer Systemobjekte in der Verteilungs Datenbank verwendet werden soll. *security_mode* ist vom Typ **Bit** und hat den Standardwert **1**. Wenn der Wert **0**ist, wird die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung verwendet. Bei **1**wird die Windows-Authentifizierung verwendet. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] 'security_mode'` Der Anmelde Sicherheitsmodus, der beim Erstellen neuer Systemobjekte in der Verteilungs Datenbank verwendet werden soll. *security_mode* ist vom Typ **Bit** und hat den Standardwert **1**. Wenn der Wert **0** ist, wird die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung verwendet. Bei **1** wird die Windows-Authentifizierung verwendet. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_vupgrade_mergeobjects** wird nur für die Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

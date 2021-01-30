@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLFreeHandle
 apilocation:
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e90be541b73e0a5fefb7a082bad27f29c3a6d2a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 14c649c894250abdcac54010c0d18444d20b3baa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491271"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201571"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle-Funktion
 **Konformitäts**  
@@ -36,7 +36,7 @@ ms.locfileid: "88491271"
  **SQLFreeHandle** gibt Ressourcen frei, die einer bestimmten Umgebung, einer Verbindung, einer Anweisung oder einem Deskriptorhandle zugeordnet sind.  
   
 > [!NOTE]
->  Diese Funktion ist eine generische Funktion zum Freigeben von Handles. Sie ersetzt die ODBC 2,0-Funktionen **sqlfreeconnetct** (für die Freigabe eines Verbindungs Handles) und **sqlfreedenv** (zum Freigeben eines Umgebungs Handles). **Sqlfreeconnetct** und **sqlfreeev** sind in ODBC 3 *. x*als veraltet markiert. **SQLFreeHandle** ersetzt auch die ODBC 2,0-Funktion **SQLFreeStmt** (durch die SQL_DROP- *Option*) zum Freigeben eines Anweisungs Handles. Weitere Informationen finden Sie unter "comments". Weitere Informationen dazu, wie der Treiber-Manager diese Funktion zuordnet, wenn eine ODBC 3 *. x* -Anwendung mit einem ODBC 2 *. x* -Treiber arbeitet, finden Sie unterzuordnen [von Ersetzungs Funktionen für die Abwärtskompatibilität von Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
+>  Diese Funktion ist eine generische Funktion zum Freigeben von Handles. Sie ersetzt die ODBC 2,0-Funktionen **sqlfreeconnetct** (für die Freigabe eines Verbindungs Handles) und **sqlfreedenv** (zum Freigeben eines Umgebungs Handles). **Sqlfreeconnetct** und **sqlfreeev** sind in ODBC 3 *. x* als veraltet markiert. **SQLFreeHandle** ersetzt auch die ODBC 2,0-Funktion **SQLFreeStmt** (durch die SQL_DROP- *Option*) zum Freigeben eines Anweisungs Handles. Weitere Informationen finden Sie unter "comments". Weitere Informationen dazu, wie der Treiber-Manager diese Funktion zuordnet, wenn eine ODBC 3 *. x* -Anwendung mit einem ODBC 2 *. x* -Treiber arbeitet, finden Sie unterzuordnen [von Ersetzungs Funktionen für die Abwärtskompatibilität von Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,7 +49,7 @@ SQLRETURN SQLFreeHandle(
   
 ## <a name="arguments"></a>Argumente  
  *HandleType*  
- Der Der Typ des Handles, das von **SQLFreeHandle**freigegeben werden soll. Dies muss einer der folgenden Werte sein:  
+ Der Der Typ des Handles, das von **SQLFreeHandle** freigegeben werden soll. Dies muss einer der folgenden Werte sein:  
   
 -   SQL_HANDLE_DBC  
   
@@ -61,14 +61,14 @@ SQLRETURN SQLFreeHandle(
   
 -   SQL_HANDLE_STMT  
   
- SQL_HANDLE_DBC_INFO_TOKEN Handle wird nur vom Treiber-Manager und vom Treiber verwendet. Anwendungen sollten diesen Handlertyp nicht verwenden. Weitere Informationen zu SQL_HANDLE_DBC_INFO_TOKEN finden Sie unter [entwickeln von Verbindungs Pool Informationen in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
+ SQL_HANDLE_DBC_INFO_TOKEN Handle wird nur vom Treiber-Manager und vom Treiber verwendet. Anwendungen sollten diesen Handlertyp nicht verwenden. Weitere Informationen zu SQL_HANDLE_DBC_INFO_TOKEN finden Sie unter [entwickeln von Connection-Pool Awareness in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   
  Wenn " *shandtype* " keiner dieser Werte ist, gibt **SQLFreeHandle** SQL_INVALID_HANDLE zurück.  
   
  *Handle*  
  Der Das Handle, das freigegeben werden soll.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  SQL_SUCCESS, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
  Wenn **SQLFreeHandle** SQL_ERROR zurückgibt, ist das Handle noch gültig.  
@@ -76,11 +76,11 @@ SQLRETURN SQLFreeHandle(
 ## <a name="diagnostics"></a>Diagnose  
  Wenn **SQLFreeHandle** SQL_ERROR zurückgibt, kann ein zugeordneter SQLSTATE-Wert aus der Diagnosedaten Struktur für das Handle abgerufen werden, das von **SQLFreeHandle** freigegeben wurde. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die normalerweise von **SQLFreeHandle** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|Beschreibung|  
+|SQLSTATE|Fehler|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im *\* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
-|HY010|Funktions Sequenz Fehler|(DM) das *handlentypargument* wurde SQL_HANDLE_ENV, und mindestens eine Verbindung befand sich im zugeordneten oder verbundenen Zustand. **SQLDisconnect** und **SQLFreeHandle** mit dem *Typ* "SQL_HANDLE_DBC" müssen für jede Verbindung aufgerufen werden, bevor **SQLFreeHandle** mit dem *Typ* "SQL_HANDLE_ENV" aufgerufen wird.<br /><br /> (DM) das *HandlerType* -Argument wurde SQL_HANDLE_DBC, und die Funktion wurde aufgerufen, bevor **SQLDisconnect** für die Verbindung aufgerufen wurde.<br /><br /> (DM) das *handlentypargument* wurde SQL_HANDLE_DBC. Eine asynchron ausgeführte Funktion wurde mit *handle* aufgerufen, und die Funktion wurde noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) das *handlentypargument* wurde SQL_HANDLE_STMT. **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** wurde mit dem Anweisungs Handle aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.<br /><br /> (DM) das *handlentypargument* wurde SQL_HANDLE_STMT. Eine asynchron ausgeführte Funktion wurde für das Anweisungs Handle oder für das zugeordnete Verbindungs Handle aufgerufen, und die Funktion wurde noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) das *handlentypargument* wurde SQL_HANDLE_DESC. Für das zugeordnete Verbindungs Handle wurde eine asynchron ausgeführte Funktion aufgerufen. die Funktion wurde noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) alle neben geordneten Handles und anderen Ressourcen wurden nicht freigegeben, bevor **SQLFreeHandle** aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für eines der Anweisungs Handles aufgerufen, die mit dem *handle* verknüpft sind, und der *Tortyp* wurde auf SQL_HANDLE_STMT festgelegt, oder SQL_HANDLE_DESC zurückgegebene SQL_PARAM_DATA_AVAILABLE. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.|  
+|HY010|Funktions Sequenz Fehler|(DM) das *handlentypargument* wurde SQL_HANDLE_ENV, und mindestens eine Verbindung befand sich im zugeordneten oder verbundenen Zustand. **SQLDisconnect** und **SQLFreeHandle** mit dem *Typ* "SQL_HANDLE_DBC" müssen für jede Verbindung aufgerufen werden, bevor **SQLFreeHandle** mit dem *Typ* "SQL_HANDLE_ENV" aufgerufen wird.<br /><br /> (DM) das *HandlerType* -Argument wurde SQL_HANDLE_DBC, und die Funktion wurde aufgerufen, bevor **SQLDisconnect** für die Verbindung aufgerufen wurde.<br /><br /> (DM) das *handlentypargument* wurde SQL_HANDLE_DBC. Eine asynchron ausgeführte Funktion wurde mit *handle* aufgerufen, und die Funktion wurde noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) das *handlentypargument* wurde SQL_HANDLE_STMT. **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** oder **SQLSetPos** wurde mit dem Anweisungs Handle aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.<br /><br /> (DM) das *handlentypargument* wurde SQL_HANDLE_STMT. Eine asynchron ausgeführte Funktion wurde für das Anweisungs Handle oder für das zugeordnete Verbindungs Handle aufgerufen, und die Funktion wurde noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) das *handlentypargument* wurde SQL_HANDLE_DESC. Für das zugeordnete Verbindungs Handle wurde eine asynchron ausgeführte Funktion aufgerufen. die Funktion wurde noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) alle neben geordneten Handles und anderen Ressourcen wurden nicht freigegeben, bevor **SQLFreeHandle** aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect** oder **SQLMoreResults** wurde für eines der Anweisungs Handles aufgerufen, die mit dem *handle* verknüpft sind, und der *Tortyp* wurde auf SQL_HANDLE_STMT festgelegt, oder SQL_HANDLE_DESC zurückgegebene SQL_PARAM_DATA_AVAILABLE. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.|  
 |HY013|Speicher Verwaltungsfehler|Das ' *Lenker Type* '-Argument war SQL_HANDLE_STMT oder SQL_HANDLE_DESC, und der Funktions aufgerufene konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
 |HY017|Ungültige Verwendung eines automatisch zugeordneten Deskriptorhandles.|(DM) das *handle* -Argument wurde auf das Handle für einen automatisch zugeordneten Deskriptor festgelegt.|  
 |HY117|Die Verbindung wurde aufgrund eines unbekannten Transaktions Zustands angehalten. Nur Disconnect-und Read-Only-Funktionen sind zulässig.|(DM) Weitere Informationen zum angehaltenen Status finden Sie unter [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  
@@ -108,7 +108,7 @@ SQLRETURN SQLFreeHandle(
  Beachten Sie, dass **SQLDisconnect** alle in der Verbindung geöffneten Anweisungen und Deskriptoren automatisch löscht.  
   
 ## <a name="freeing-a-descriptor-handle"></a>Freigeben eines Deskriptorhandles  
- Ein **SQLFreeHandle** -Befehl mit einem *Handlertyp* von SQL_HANDLE_DESC gibt das Deskriptorhandle in *handle*frei. Der **SQLFreeHandle** -Befehl gibt keinen Speicher frei, der von der Anwendung belegt wird, auf die von einem Zeiger Feld (einschließlich SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR und SQL_DESC_OCTET_LENGTH_PTR) eines beliebigen deskriptordaten Satzes des *Handles*verwiesen werden kann. Der vom Treiber für Felder, die keine Zeiger Felder sind, zugeordnete Arbeitsspeicher wird freigegeben, wenn das Handle freigegeben wird. Wenn ein vom Benutzer zugeordnetes Deskriptorhandle freigegeben wird, werden alle Anweisungen, denen das freigegebene Handle zugeordnet wurde, auf die jeweiligen automatisch zugeordneten Deskriptorhandles zurückgesetzt.  
+ Ein **SQLFreeHandle** -Befehl mit einem *Handlertyp* von SQL_HANDLE_DESC gibt das Deskriptorhandle in *handle* frei. Der **SQLFreeHandle** -Befehl gibt keinen Speicher frei, der von der Anwendung belegt wird, auf die von einem Zeiger Feld (einschließlich SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR und SQL_DESC_OCTET_LENGTH_PTR) eines beliebigen deskriptordaten Satzes des *Handles* verwiesen werden kann. Der vom Treiber für Felder, die keine Zeiger Felder sind, zugeordnete Arbeitsspeicher wird freigegeben, wenn das Handle freigegeben wird. Wenn ein vom Benutzer zugeordnetes Deskriptorhandle freigegeben wird, werden alle Anweisungen, denen das freigegebene Handle zugeordnet wurde, auf die jeweiligen automatisch zugeordneten Deskriptorhandles zurückgesetzt.  
   
 > [!NOTE]
 >  ODBC 2 *. x* -Treiber unterstützen das Freigeben von Deskriptorhandles nicht, so wie Sie die Zuordnung von Deskriptorhandles nicht unterstützen.  
@@ -182,7 +182,7 @@ int main() {
 |Abbrechen der Anweisungs Verarbeitung|[Sqlcance functionl](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |Festlegen eines Cursor namens|[SQLSetCursorName-Funktion](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Header Dateien](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC-Beispielprogramm](../../../odbc/reference/sample-odbc-program.md)

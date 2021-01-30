@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cycle_errorlog_TSQL
 - sp_cycle_errorlog
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 433accd75ac9bf5c5f2e390aa1bcbf0a1c5e0a6e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b75b9e0c056a86a8ad67d1a739214a46f88533f3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549910"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203169"
 ---
 # <a name="sp_cycle_errorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_cycle_errorlog
  Keine  
   
 ## <a name="remarks"></a>Bemerkungen  
- Bei jedem Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird das aktuelle Fehlerprotokoll in **errorlog.1**umbenannt, **errorlog.1** wird in **errorlog.2**umbenannt, **errorlog.2** wird in **errorlog.3**umbenannt usw. Mit**sp_cycle_errorlog** können die Fehlerprotokolldateien durchlaufen werden, ohne den Server neu zu starten.  
+ Bei jedem Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird das aktuelle Fehlerprotokoll in **errorlog.1** umbenannt, **errorlog.1** wird in **errorlog.2** umbenannt, **errorlog.2** wird in **errorlog.3** umbenannt usw. Mit **sp_cycle_errorlog** können die Fehlerprotokolldateien durchlaufen werden, ohne den Server neu zu starten.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Die Ausführungsberechtigungen für **sp_cycle_errorlog** sind auf die Mitglieder der festen Serverrolle **sysadmin** beschränkt.  

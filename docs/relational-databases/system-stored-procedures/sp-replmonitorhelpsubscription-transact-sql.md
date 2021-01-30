@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replmonitorhelpsubscription_TSQL
 - sp_replmonitorhelpsubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dab0e5d4f8f655b0e3140878279a8abca090d262
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 898104516115207bd0cee45bf05f187922c13f6e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543113"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204370"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,11 +45,11 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'` Der Name des Verlegers, dessen Status überwacht wird. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn der Wert **null**ist, werden Informationen für alle Verleger zurückgegeben, die den Verteiler verwenden.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers, dessen Status überwacht wird. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn der Wert **null** ist, werden Informationen für alle Verleger zurückgegeben, die den Verteiler verwenden.  
   
-`[ @publisher_db = ] 'publisher_db'` Der Name der veröffentlichten Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Lautet der Wert NULL, werden Informationen für alle veröffentlichten Datenbanken auf dem Verleger zurückgegeben.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der veröffentlichten Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Lautet der Wert NULL, werden Informationen für alle veröffentlichten Datenbanken auf dem Verleger zurückgegeben.  
   
-`[ @publication = ] 'publication'` Der Name der zu überwachenden Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publication = ] 'publication'` Der Name der zu überwachenden Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 `[ @publication_type = ] publication_type` Gibt an, ob der Typ der Veröffentlichung ist. *publication_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
@@ -73,7 +73,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**6**|Gibt nur Abonnements zurück, für die zurzeit eine Synchronisierung im Gange ist.|  
 |**7**|Gibt nur Abonnements zurück, für die zurzeit keine Synchronisierung im Gange ist.|  
   
-`[ @topnum = ] topnum` Beschränkt das Resultset auf die angegebene Anzahl von Abonnements am Anfang der zurückgegebenen Daten. *topnum* ist vom Datentyp **int**und hat keinen Standardwert.  
+`[ @topnum = ] topnum` Beschränkt das Resultset auf die angegebene Anzahl von Abonnements am Anfang der zurückgegebenen Daten. *topnum* ist vom Datentyp **int** und hat keinen Standardwert.  
   
 `[ @exclude_anonymous = ] exclude_anonymous` Gibt an, ob anonyme Pullabonnements aus dem Resultset ausgeschlossen werden. *exclude_anonymous* ist vom Typ **Bit**. der Standardwert ist **0**. der Wert **1** bedeutet, dass anonyme Abonnements ausgeschlossen werden und der Wert **0** bedeutet, dass Sie eingeschlossen werden.  
   
@@ -117,13 +117,13 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_replmonitorhelpsubscription** wird bei allen Replikations Typen verwendet.  
   
- **sp_replmonitorhelpsubscription** ordnet das Resultset auf Grundlage des schwere Grads des Status des Abonnements an, das durch den Wert von *monitorrang*bestimmt wird. So werden z. B. Zeilen für alle Abonnements, die einen Fehlerzustand aufweisen, oberhalb der Zeilen für Abonnements einsortiert, die einen Warnungsstatus aufweisen.  
+ **sp_replmonitorhelpsubscription** ordnet das Resultset auf Grundlage des schwere Grads des Status des Abonnements an, das durch den Wert von *monitorrang* bestimmt wird. So werden z. B. Zeilen für alle Abonnements, die einen Fehlerzustand aufweisen, oberhalb der Zeilen für Abonnements einsortiert, die einen Warnungsstatus aufweisen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Daten Bank Rolle **db_owner** oder **replmonitor** in der Verteilungs Datenbank können **sp_replmonitorhelpsubscription**ausführen.  
+ Nur Mitglieder der festen Daten Bank Rolle **db_owner** oder **replmonitor** in der Verteilungs Datenbank können **sp_replmonitorhelpsubscription** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Programmgesteuertes Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

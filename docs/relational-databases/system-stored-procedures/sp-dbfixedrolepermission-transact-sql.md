@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dbfixedrolepermission
 - sp_dbfixedrolepermission_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a7abd42379d62d9a2c34adb50b7610494493b6c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 78f1381d05c5841ce48e395f8cc1cd477b820e01
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536611"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201282"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @rolename = ] 'role'` Der Name einer gültigen Fixed- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten Bank Rolle. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Role* nicht angegeben wird, werden die Berechtigungen für alle festgelegten Daten bankrollen angezeigt.  
+`[ @rolename = ] 'role'` Der Name einer gültigen Fixed- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten Bank Rolle. *role* ist vom Datentyp **sysname** und hat den Standardwert NULL. Wenn *Role* nicht angegeben wird, werden die Berechtigungen für alle festgelegten Daten bankrollen angezeigt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -55,8 +55,8 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |**DbFixedRole**|**sysname**|Name der festen Datenbankrolle|  
 |**Berechtigung**|**nvarchar (70)**|Mit **DbFixedRole** verknüpfte Berechtigungen|  
   
-## <a name="remarks"></a>Hinweise  
- Führen Sie **sp_helpdbfixedrole**aus, um eine Liste der fixierten Daten bankrollen anzuzeigen. In der folgenden Tabelle werden die festen Datenbankrollen angezeigt.  
+## <a name="remarks"></a>Bemerkungen  
+ Führen Sie **sp_helpdbfixedrole** aus, um eine Liste der fixierten Daten bankrollen anzuzeigen. In der folgenden Tabelle werden die festen Datenbankrollen angezeigt.  
   
 |Fixed-Daten Bank Rolle|BESCHREIBUNG|  
 |-------------------------|-----------------|  
@@ -70,7 +70,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |**db_denydatareader**|Datenbank-Verweigerungsdatenleser|  
 |**db_denydatawriter**|Datenbank-Verweigerungsdatenschreiber|  
   
- Mitglieder der Daten Bank Rolle **db_owner** verfügen über die Berechtigungen aller anderen Daten bankrollen. Führen Sie **sp_srvrolepermission**aus, um die Berechtigungen für Server Rollen anzuzeigen.  
+ Mitglieder der Daten Bank Rolle **db_owner** verfügen über die Berechtigungen aller anderen Daten bankrollen. Führen Sie **sp_srvrolepermission** aus, um die Berechtigungen für Server Rollen anzuzeigen.  
   
  Das Resultset enthält die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die ausgeführt werden können, sowie andere spezielle Aktivitäten, die von Mitgliedern der Datenbankrolle ausgeführt werden können.  
   

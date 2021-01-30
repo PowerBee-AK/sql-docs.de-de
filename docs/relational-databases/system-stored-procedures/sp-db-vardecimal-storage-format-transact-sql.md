@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_db_vardecimal_storage_format
 - sp_db_vardecimal_storage_format_TSQL
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c521931a96701101c7db2eac8027dc0223b53f3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: aad29b6722f748051f085f10a25a38b59e6ae424
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543559"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201285"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
 ## <a name="arguments"></a>Argumente  
  [ @dbname =] '*database_name*'  
- Der Name der Datenbank, für die das Speicherformat geändert werden soll. *database_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn der Datenbankname ausgelassen wird, wird der vardecimal-Speicherformatstatus aller Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben.  
+ Der Name der Datenbank, für die das Speicherformat geändert werden soll. *database_name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert. Wenn der Datenbankname ausgelassen wird, wird der vardecimal-Speicherformatstatus aller Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben.  
   
  [ @vardecimal_storage_format =] {' On ' | ' Aus "}"  
  Gibt an, ob das vardecimal-Speicherformat aktiviert ist. @vardecimal_storage_format kann ON oder OFF sein. Der-Parameter ist vom Datentyp **varchar (3)** und hat keinen Standardwert. Wenn ein Datenbankname angegeben ist, @vardecimal_storage_format jedoch ausgelassen wird, wird die aktuelle Einstellung der angegebenen Datenbank zurückgegeben. Dieses Argument hat keine Auswirkungen auf [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höhere Versionen.  
@@ -62,7 +62,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
  Wenn das @vardecimal_storage_format -Argument nicht angegeben wird, gibt den Spaltendaten Banknamen und den vardecimal-Status zurück.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_db_vardecimal_storage_format gibt den vardecimal-Status zurück, kann den vardecimal-Status aber nicht ändern.  
   
  Unter den folgenden Umständen treten für sp_db_vardecimal_storage_format Fehler auf:  

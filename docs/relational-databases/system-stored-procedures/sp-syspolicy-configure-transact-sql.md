@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_configure
 - sp_syspolicy_configure_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 820952e0829014efc3669759dabf5d1dfc208d91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abf343b9230e8eeef0ce95ca8e2667c20c714cb8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473581"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201247"
 ---
 # <a name="sp_syspolicy_configure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,9 +51,9 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   'LogOnSuccess' – Gibt an, ob die richtlinienbasierte Verwaltung erfolgreiche Richtlinienauswertungen protokolliert.  
   
-`[ @value = ] value` Der Wert, der dem angegebenen Wert für *Name*zugeordnet ist. der *Wert* ist **sql_variant**, und ist erforderlich.  
+`[ @value = ] value` Der Wert, der dem angegebenen Wert für *Name* zugeordnet ist. der *Wert* ist **sql_variant**, und ist erforderlich.  
   
--   Wenn Sie "aktiviert" für *Name*angeben, können Sie einen der folgenden Werte verwenden:  
+-   Wenn Sie "aktiviert" für *Name* angeben, können Sie einen der folgenden Werte verwenden:  
   
     -   0 = Deaktiviert die richtlinienbasierte Verwaltung.  
   

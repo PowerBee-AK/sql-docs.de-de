@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - transitioning states [ODBC], statement
 - state transitions [ODBC], statement
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3515b1d6aea4cab66bc01ee3d071727e6cb8f447
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7fb43bb8aa7ad9bd71906036a081dac4ec91c794
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386516"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202543"
 ---
 # <a name="statement-transitions"></a>Anweisungsübergänge
 ODBC-Anweisungen weisen die folgenden Zustände auf.  
   
-|Staat|Beschreibung|  
+|State|BESCHREIBUNG|  
 |-----------|-----------------|  
 |S0|Nicht zugewiesene Anweisung. (Der Verbindungsstatus muss C4, C5 oder C6 lauten. Weitere Informationen finden Sie unter [Verbindungs Übergänge](../../../odbc/reference/appendixes/connection-transitions.md).)|  
 |S1|Zugewiesene Anweisung.|  
@@ -33,12 +33,12 @@ ODBC-Anweisungen weisen die folgenden Zustände auf.
 |S3|Vorbereitete Anweisung. Ein (möglicherweise leeres) Resultset wird erstellt.|  
 |S4|Die Anweisung wurde ausgeführt, und es wurde kein Resultset erstellt.|  
 |S5|Die Anweisung wurde ausgeführt, und es wurde ein (möglicherweise leeres) Resultset erstellt. Der Cursor ist geöffnet und positioniert vor der ersten Zeile des Resultsets.|  
-|S6|Cursor, der mit **SQLFetch** oder **SQLFetchScroll**positioniert ist.|  
-|S7|Cursor mit **sqlextendecodfetch**positioniert.|  
+|S6|Cursor, der mit **SQLFetch** oder **SQLFetchScroll** positioniert ist.|  
+|S7|Cursor mit **sqlextendecodfetch** positioniert.|  
 |S8|Die Funktion benötigt Daten. **SQLParamData** wurde nicht aufgerufen.|  
 |S9|Die Funktion benötigt Daten. **SQLPutData** wurde nicht aufgerufen.|  
 |S10|Die Funktion benötigt Daten. **SQLPutData** wurde aufgerufen.|  
-|S11|Wird noch ausgeführt. Eine-Anweisung verbleibt in diesem Zustand, nachdem eine Funktion, die asynchron ausgeführt wird, SQL_STILL_EXECUTING zurückgibt. Eine-Anweisung befindet sich vorübergehend in diesem Zustand, während alle Funktionen, die ein Anweisungs Handle akzeptieren, ausgeführt werden. Der temporäre Wohnsitz in Bundesstaat wird in Zustands Tabellen mit Ausnahme der Statustabelle für **SQLCancel**nicht angezeigt. Während sich eine-Anweisung temporär im Bundesstaat S11 befindet, kann die Funktion durch Aufrufen von **SQLCancel** von einem anderen Thread abgebrochen werden.|  
+|S11|Wird noch ausgeführt. Eine-Anweisung verbleibt in diesem Zustand, nachdem eine Funktion, die asynchron ausgeführt wird, SQL_STILL_EXECUTING zurückgibt. Eine-Anweisung befindet sich vorübergehend in diesem Zustand, während alle Funktionen, die ein Anweisungs Handle akzeptieren, ausgeführt werden. Der temporäre Wohnsitz in Bundesstaat wird in Zustands Tabellen mit Ausnahme der Statustabelle für **SQLCancel** nicht angezeigt. Während sich eine-Anweisung temporär im Bundesstaat S11 befindet, kann die Funktion durch Aufrufen von **SQLCancel** von einem anderen Thread abgebrochen werden.|  
 |S12|Asynchrone Ausführung abgebrochen. In S12 muss eine Anwendung die abgebrochene Funktion so lange aufzurufen, bis Sie einen anderen Wert als SQL_STILL_EXECUTING zurückgibt. Die Funktion wurde nur erfolgreich abgebrochen, wenn die Funktion SQL_ERROR und SQLSTATE HY008 (Vorgang abgebrochen) zurückgibt. Wenn ein anderer Wert zurückgegeben wird, z. b. SQL_SUCCESS, ist der Abbruch Vorgang fehlgeschlagen, und die Funktion wird normal ausgeführt.|  
   
  Die Zustände S2 und S3 werden als vorbereitete Zustände bezeichnet, Zustände S5 bis S7 als Cursor Zustände, Status S8 bis S10 als benötigte Datenzustände und Bundesstaaten S11 und S12 als asynchrone Zustände. In jeder dieser Gruppen werden die Übergänge separat angezeigt, wenn Sie für jeden Status in der Gruppe unterschiedlich sind. in den meisten Fällen sind die Übergänge für jeden Status in jeder Gruppe identisch.  
@@ -62,7 +62,7 @@ ODBC-Anweisungen weisen die folgenden Zustände auf.
   
  [4] diese Zeile zeigt Übergänge an, wenn der *Handtyp* SQL_HANDLE_DESC wurde.  
   
- [5] das Aufrufen von **sqlbinchandle** mit *outputhandleptr* , das auf ein gültiges Handle verweist, überschreibt dieses Handle ohne Berücksichtigung der vorherigen Inhalte dieses Handles und kann zu Problemen mit ODBC-Treibern führen. Es ist eine falsche ODBC-Anwendungsprogrammierung zum doppelten Aufrufen von **sqlzuordchandle** mit der gleichen Anwendungsvariablen, die für * \* outputhandleptr* definiert ist, ohne **SQLFreeHandle** aufzurufen, um das Handle vor der erneuten Zuordnung freizugeben. Das Überschreiben von ODBC-Handles auf diese Weise kann zu inkonsistenten Verhalten oder Fehlern im Rahmen der ODBC-Treiber führen.  
+ [5] das Aufrufen von **sqlbinchandle** mit *outputhandleptr* , das auf ein gültiges Handle verweist, überschreibt dieses Handle ohne Berücksichtigung der vorherigen Inhalte dieses Handles und kann zu Problemen mit ODBC-Treibern führen. Es ist eine falsche ODBC-Anwendungsprogrammierung zum doppelten Aufrufen von **sqlzuordchandle** mit der gleichen Anwendungsvariablen, die für *\* outputhandleptr* definiert ist, ohne **SQLFreeHandle** aufzurufen, um das Handle vor der erneuten Zuordnung freizugeben. Das Überschreiben von ODBC-Handles auf diese Weise kann zu inkonsistenten Verhalten oder Fehlern im Rahmen der ODBC-Treiber führen.  
   
 ## <a name="sqlbindcol"></a>SQLBindCol  
   

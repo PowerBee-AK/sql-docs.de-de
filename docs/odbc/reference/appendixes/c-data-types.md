@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], C data types
 - C data types [ODBC], about C data types
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6dadd93f13418d520c4ab908ba0d9402d07c893a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5dbce167ea65daa030030bd32a909c5af3d06262
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421524"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212458"
 ---
 # <a name="c-data-types"></a>C-Datentypen
 ODBC C-Datentypen geben den Datentyp von c-Puffern an, die zum Speichern von Daten in der Anwendung verwendet werden.  
@@ -109,7 +109,7 @@ struct tagSQL_NUMERIC_STRUCT {
    SQLCHAR precision;  
    SQLSCHAR scale;  
    SQLCHAR sign[g];  
-   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
+   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
 } SQL_NUMERIC_STRUCT;  
 ```  
   
@@ -136,9 +136,9 @@ struct tagSQLGUID {
   
  [d] ODBC 3 *. x* -Anwendungen sollten SQL_C_VARBOOKMARK verwenden, nicht SQL_C_BOOKMARK. Wenn eine ODBC 3 *. x* -Anwendung mit einem ODBC 2 funktioniert. *x* -Treiber, der ODBC 3 *. x* -Treiber-Manager wird SQL_C_VARBOOKMARK SQL_C_BOOKMARK zugeordnet.  
   
- [e] eine Zahl wird im *Val* -Feld der SQL_NUMERIC_STRUCT Struktur als eine skalierte Ganzzahl im Little-Endian-Modus gespeichert (das äußteste Byte ist das am wenigsten signifikante Byte). Beispielsweise wird die Zahl 10,001 Basis 10 mit einer Skala von 4 auf eine ganze Zahl von 100010 skaliert. Da dies 186AA im Hexadezimal Format ist, lautet der Wert in SQL_NUMERIC_STRUCT "AA 86 01 00 00... 00 ", mit der Anzahl der Bytes, die vom SQL_MAX_NUMERIC_LEN **#define**definiert werden.  
+ [e] eine Zahl wird im *Val* -Feld der SQL_NUMERIC_STRUCT Struktur als eine skalierte Ganzzahl im Little-Endian-Modus gespeichert (das äußteste Byte ist das am wenigsten signifikante Byte). Beispielsweise wird die Zahl 10,001 Basis 10 mit einer Skala von 4 auf eine ganze Zahl von 100010 skaliert. Da dies 186AA im Hexadezimal Format ist, lautet der Wert in SQL_NUMERIC_STRUCT "AA 86 01 00 00... 00 ", mit der Anzahl der Bytes, die vom SQL_MAX_NUMERIC_LEN **#define** definiert werden.  
   
- Weitere Informationen zu **SQL_NUMERIC_STRUCT**finden Sie unter " [HOWTO: Abrufen numerischer Daten mit SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
+ Weitere Informationen zu **SQL_NUMERIC_STRUCT** finden Sie unter " [HOWTO: Abrufen numerischer Daten mit SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
   
  [f] die Genauigkeits-und Skalierungs Felder des SQL_C_NUMERIC Datentyps, der für die Eingabe aus einer Anwendung und für die Ausgabe des Treibers an die Anwendung analysiert wird. Wenn der Treiber einen numerischen Wert in den SQL_NUMERIC_STRUCT schreibt, verwendet er seinen eigenen treiberspezifischen Standardwert als Wert für das *Genauigkeits* Feld und verwendet den Wert im Feld SQL_DESC_SCALE des Anwendungs Deskriptors (standardmäßig 0) für das Feld *skalieren* . Eine Anwendung kann Ihre eigenen Werte für Genauigkeit und Skalierung bereitstellen, indem Sie die Felder SQL_DESC_PRECISION und SQL_DESC_SCALE des Anwendungs Deskriptors festlegt.  
   
@@ -146,7 +146,7 @@ struct tagSQLGUID {
   
  [h] _int64 von einigen Compilern möglicherweise nicht bereitgestellt.  
   
- [i] _SQL_C_BOOKMARK in ODBC 3 *. x*als veraltet markiert.  
+ [i] _SQL_C_BOOKMARK in ODBC 3 *. x* als veraltet markiert.  
   
  [j] _SQL_C_SHORT, SQL_C_LONG und SQL_C_TINYINT wurden in ODBC durch signierte und nicht signierte Typen ersetzt: SQL_C_SSHORT und SQL_C_USHORT, SQL_C_SLONG und SQL_C_ULONG sowie SQL_C_STINYINT und SQL_C_UTINYINT. Ein ODBC 3 *. x* -Treiber, der mit ODBC 2 funktionieren sollte. *x* -Anwendungen sollten SQL_C_SHORT, SQL_C_LONG und SQL_C_TINYINT unterstützen, denn wenn Sie aufgerufen werden, übergibt der Treiber-Manager Sie an den Treiber.  
   
@@ -154,7 +154,7 @@ struct tagSQLGUID {
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [64-Bit-Ganzzahl-Strukturen](../../../odbc/reference/appendixes/64-bit-integer-structures.md)  
+-   [64-Bit-Integerstrukturen](../../../odbc/reference/appendixes/64-bit-integer-structures.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [C-Datentypen in ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)

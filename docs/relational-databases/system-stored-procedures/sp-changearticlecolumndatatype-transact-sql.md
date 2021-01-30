@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changearticlecolumndatatype
 - sp_changearticlecolumndatatype_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e222ac8a81f42717ffba16a959e7e8cb6479286a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 34f3f1878fcae59601a6ac94ff8536f3d22d6ea5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541915"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203708"
 ---
 # <a name="sp_changearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,24 +48,24 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Oracle-Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Oracle-Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @article = ] 'article'` Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @article = ] 'article'` Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @column = ] 'column'` Der Name der Spalte, für die die Datentyp Zuordnung geändert werden soll. *Column* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @column = ] 'column'` Der Name der Spalte, für die die Datentyp Zuordnung geändert werden soll. *Column* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @type = ] 'type'` Der Name des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyps in der Ziel Spalte. *Type ist vom Datentyp* **vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @type = ] 'type'` Der Name des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyps in der Ziel Spalte. *Type ist vom Datentyp* **vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @length = ] length` Die Länge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyps in der Ziel Spalte. *length* ist vom Datentyp **bigint**und hat den Standardwert NULL.  
+`[ @length = ] length` Die Länge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyps in der Ziel Spalte. *length* ist vom Datentyp **bigint** und hat den Standardwert NULL.  
   
-`[ @precision = ] precision` Die Genauigkeit des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyps in der Ziel Spalte. die *Genauigkeit* ist vom Datentyp **bigint**und hat den Standardwert NULL.  
+`[ @precision = ] precision` Die Genauigkeit des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyps in der Ziel Spalte. die *Genauigkeit* ist vom Datentyp **bigint** und hat den Standardwert NULL.  
   
-`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **Sp_changearticlecolumndatatype** wird verwendet, um die standardmäßigen Datentyp Zuordnungen zwischen unterstützten Verleger Typen (Oracle und) zu überschreiben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Führen Sie [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)aus, um diese standardmäßigen Datentyp Zuordnungen anzuzeigen.  
   
  **sp_changearticlecolumndatatype** wird nur für Oracle-Verleger unterstützt. Das Ausführen dieser gespeicherten Prozedur für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Veröffentlichung führt zu einem Fehler.  
@@ -73,7 +73,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
  für jede Artikel Spalten Zuordnung, die geändert werden muss, muss **sp_changearticlecolumndatatype** ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_changearticlecolumndatatype**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_changearticlecolumndatatype** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
