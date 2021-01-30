@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Field::Status
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 11f59e99eab0a742a4d7618f7ac66cb486af2933
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b0ae4ed8f72dca085edd0c82220296d65795d6ac
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988721"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166465"
 ---
 # <a name="status-property-ado-field"></a>Status-Eigenschaft (ADO-Feld)
 Gibt den Status eines [Feld](./field-object.md) Objekts an.  
@@ -38,7 +38,7 @@ Gibt den Status eines [Feld](./field-object.md) Objekts an.
   
  Um die Leistung zu verbessern, werden Ergänzungen und Löschvorgänge für die [Fields](./fields-collection-ado.md) -Auflistungen des **Datensatz** -Objekts bis zum Aufruf der **Update** -Methode zwischengespeichert, und die Änderungen werden dann in einem optimistischen Batch Update vorgenommen. Wenn die **Update** -Methode nicht aufgerufen wird, wird der Server nicht aktualisiert. Wenn ein Update fehlschlägt, wird ein Fehler des OLE DB Anbieters (DB_E_ERRORSOCCURRED) zurückgegeben, und die **Status** -Eigenschaft gibt die kombinierten Werte des Vorgangs und des Fehler Status Codes an. Beispielsweise **adfieldpdinginsert oder adfieldpermissiondenied**. Mithilfe der Eigenschaft **Status** für jedes **Feld** können Sie feststellen, warum das **Feld** nicht hinzugefügt, geändert oder gelöscht wurde.  
   
- Viele Arten von Problemen, die beim Hinzufügen, ändern oder Löschen eines **Felds** auftreten, werden über die Eigenschaft **Status** gemeldet. Wenn der Benutzer z. b. ein **Feld**löscht, wird er aus der **Fields** -Auflistung zum Löschen markiert. Wenn bei der nachfolgenden **Aktualisierung** ein Fehler zurückgegeben wird, weil der Benutzer versucht hat, ein **Feld** zu löschen, für das Sie nicht über die erforderliche Berechtigung verfügen, hat das **Feld** den **Status** **adfieldpermissiondenied oder adfieldpdingdelete**. Durch Aufrufen der [CancelUpdate](./cancelupdate-method-ado.md) -Methode werden ursprüngliche Werte wieder hergestellt, und der **Status** wird auf **adFieldOK**festgelegt.  
+ Viele Arten von Problemen, die beim Hinzufügen, ändern oder Löschen eines **Felds** auftreten, werden über die Eigenschaft **Status** gemeldet. Wenn der Benutzer z. b. ein **Feld** löscht, wird er aus der **Fields** -Auflistung zum Löschen markiert. Wenn bei der nachfolgenden **Aktualisierung** ein Fehler zurückgegeben wird, weil der Benutzer versucht hat, ein **Feld** zu löschen, für das Sie nicht über die erforderliche Berechtigung verfügen, hat das **Feld** den **Status** **adfieldpermissiondenied oder adfieldpdingdelete**. Durch Aufrufen der [CancelUpdate](./cancelupdate-method-ado.md) -Methode werden ursprüngliche Werte wieder hergestellt, und der **Status** wird auf **adFieldOK** festgelegt.  
   
  Entsprechend gibt die **Update** -Methode möglicherweise einen Fehler zurück, da ein neues **Feld** hinzugefügt wurde und ein unzulässiger Wert angegeben wurde. In diesem Fall ist das neue **Feld** in der **Fields** -Auflistung enthalten und hat den Status **adfieldpdinginsert** und möglicherweise **adfieldcantcreate** (je nach Anbieter). Sie können einen geeigneten Wert für das neue **Feld** angeben und **Update** erneut abrufen.  
   

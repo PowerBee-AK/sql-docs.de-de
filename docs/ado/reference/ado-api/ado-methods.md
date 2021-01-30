@@ -7,32 +7,32 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13e126f070f188e47582227fabf4a1e37d6901a3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: dd98478cad7c13b2f4e6950586c1317c1d5d37dd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976371"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164907"
 ---
 # <a name="ado-methods"></a>ADO-Methoden
 
-|Methode|Beschreibung|  
+|Methode|BESCHREIBUNG|  
 |-|-|  
 |[AddNew](./addnew-method-ado.md)|Erstellt einen neuen Datensatz für ein Aktualisier bares **Recordset** -Objekt.|  
-|[Append](./append-method-ado.md) (Anfügen)|Fügt ein Objekt an eine Auflistung an. Wenn es sich bei der Auflistung um **Felder**handelt, kann ein neues **Feld** Objekt erstellt werden, bevor es an die Auflistung angefügt wird.|  
-|[AppendChunk](./appendchunk-method-ado.md)|Fügt Daten an ein großes Textfeld oder ein binäres **Datenfeld**oder an ein **Parameter** Objekt an.|  
+|[Append](./append-method-ado.md)|Fügt ein Objekt an eine Auflistung an. Wenn es sich bei der Auflistung um **Felder** handelt, kann ein neues **Feld** Objekt erstellt werden, bevor es an die Auflistung angefügt wird.|  
+|[AppendChunk](./appendchunk-method-ado.md)|Fügt Daten an ein großes Textfeld oder ein binäres **Datenfeld** oder an ein **Parameter** Objekt an.|  
 |[BeginTrans, CommitTrans und RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)|Verwaltet die Transaktionsverarbeitung innerhalb eines **Verbindungs** Objekts wie folgt:<br /><br /> **BeginTrans** -startet eine neue Transaktion.<br /><br /> **CommitTrans** -speichert alle Änderungen und beendet die aktuelle Transaktion. Möglicherweise wird auch eine neue Transaktion gestartet.<br /><br /> **RollbackTrans** -bricht alle Änderungen ab und beendet die aktuelle Transaktion. Möglicherweise wird auch eine neue Transaktion gestartet.|  
-|[Abbrechen](./cancel-method-ado.md)|Bricht die Ausführung eines ausstehenden asynchronen Methoden Aufrufes ab.|  
+|[Kündigen](./cancel-method-ado.md)|Bricht die Ausführung eines ausstehenden asynchronen Methoden Aufrufes ab.|  
 |[CancelBatch](./cancelbatch-method-ado.md)|Bricht ein ausstehendes Batch Update ab.|  
 |[CancelUpdate](./cancelupdate-method-ado.md)|Bricht vor dem Aufrufen der **Update** -Methode alle Änderungen ab, die an der aktuellen oder neuen Zeile eines **Recordset** -Objekts oder der **Fields** -Auflistung eines **Datensatz** -Objekts vorgenommen wurden.|  
-|[Clear](./clear-method-ado.md)|Entfernt alle **Fehler** Objekte aus der **Fehler** Auflistung.|  
+|[Clear](./clear-method-ado.md) (Deaktiviert)|Entfernt alle **Fehler** Objekte aus der **Fehler** Auflistung.|  
 |[Klonen](./clone-method-ado.md)|Erstellt ein doppeltes **Recordset** -Objekt aus einem vorhandenen **Recordset** -Objekt. Gibt optional an, dass der Klon schreibgeschützt ist.|  
 |[Schließen](./close-method-ado.md)|Schließt ein offenes Objekt und alle abhängigen Objekte.|  
 |[CompareBookmarks](./comparebookmarks-method-ado.md)|Vergleicht zwei Lesezeichen und gibt eine Angabe über das Verhältnis der entsprechenden Werte zurück.|  
@@ -48,7 +48,7 @@ ms.locfileid: "88976371"
 |[Suchen](./find-method-ado.md)|Durchsucht ein **Recordset** nach der Zeile, die die angegebenen Kriterien erfüllt.|  
 |[Leerung](./flush-method-ado.md)|Erzwingt den Inhalt des verbleibenden **Streams** im ADO-Puffer für das zugrunde liegende Objekt, dem der **Stream** zugeordnet ist.|  
 |[get_OLEDBCommand-Methode](./get-oledbcommand-method.md)|Gibt den zugrunde liegenden OLEDB-Befehl zurück, wobei zuerst alle Parameterinformationen weitergegeben werden, die für den ADO-Befehl an den OLEDB-Befehl festgelegt|  
-|[GetChildren](./getchildren-method-ado.md)|Gibt ein **Recordset** zurück, dessen Zeilen die Dateien und Unterverzeichnisse in dem von diesem **Datensatz**dargestellten Verzeichnis darstellen.|  
+|[GetChildren](./getchildren-method-ado.md)|Gibt ein **Recordset** zurück, dessen Zeilen die Dateien und Unterverzeichnisse in dem von diesem **Datensatz** dargestellten Verzeichnis darstellen.|  
 |[GetChunk](./getchunk-method-ado.md)|Gibt alle oder einen Teil von, den Inhalt eines großen **Textfelds** oder eines Binärdaten Feld Objekts zurück.|  
 |[GetDataProviderDSO-Methode](./getdataproviderdso-method.md)|Ruft das zugrunde liegende OLEDB-Datenquellen Objekt vom Shape-Anbieter ab.|  
 |[GetRows](./getrows-method-ado.md)|Ruft mehrere Datensätze eines **Recordset** -Objekts in ein Array ab.|  
@@ -74,7 +74,7 @@ ms.locfileid: "88976371"
 |[Seek](./seek-method.md)|Durchsucht den Index eines **Recordsets** , um die Zeile, die mit den angegebenen Werten übereinstimmt, schnell zu finden und die aktuelle Zeilen Position in diese Zeile zu ändern.|  
 |[-Betriebssystem](./seteos-method.md)|Legt die Position fest, die das Ende des Streams ist.|  
 |[SkipLine](./skipline-method.md)|Überspringt beim Lesen eines Textstreams eine gesamte Zeile.|  
-|[Ierende](./stat-method.md)|Ruft statistische Informationen zu einem geöffneten Stream ab.|  
+|[Stat](./stat-method.md)|Ruft statistische Informationen zu einem geöffneten Stream ab.|  
 |[Unterstützt](./supports-method.md)|Bestimmt, ob ein angegebenes **Recordsetobjekt** einen bestimmten Funktionstyp unterstützt.|  
 |[Aktualisieren](./update-method.md)|Speichert alle Änderungen, die Sie an der aktuellen Zeile eines **Recordset** -Objekts vornehmen, oder die **Fields** -Auflistung eines **Datensatz** -Objekts.|  
 |[Update Batch](./updatebatch-method.md)|Schreibt alle ausstehenden Batch Aktualisierungen auf den Datenträger.|  

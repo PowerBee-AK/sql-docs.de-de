@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::Move
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b394d64a9d1b1f403137e9875db83fdd82c2ac1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f870db346e384f4c131ec24bf6c15a5d15a009c1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990591"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167119"
 ---
 # <a name="move-method-ado"></a>Move-Methode (ADO)
 Verschiebt die Position des aktuellen Datensatzes in einem [Recordset](./recordset-object-ado.md) -Objekt.  
@@ -59,7 +59,7 @@ recordset.Move NumRecords, Start
  Wenn das **Recordset** -Objekt nur vorwärts ist, kann ein Benutzer ein *numrecords* -Argument weitergeben, das kleiner als NULL ist, vorausgesetzt, das Ziel liegt innerhalb des aktuellen Satzes zwischen gespeicherter Datensätze. Wenn beim **Verschiebungs Versuch die** aktuelle Daten Satz Position vor dem ersten zwischengespeicherten Datensatz in einen Datensatz verschoben wird, tritt ein Fehler auf. Daher können Sie einen Daten Satz Cache verwenden, der einen vollständigen Bildlauf für einen Anbieter unterstützt, der nur vorwärts Scrollen unterstützt. Da zwischengespeicherte Datensätze in den Arbeitsspeicher geladen werden, sollten Sie das Zwischenspeichern von mehr Datensätzen als notwendig vermeiden. Selbst wenn ein Forward-Only- **Recordsetobjekt** rückwärts Verschiebungen auf diese Weise unterstützt, wird beim Aufrufen der " [muveprevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) "-Methode für ein vorwärts **Recordset** -Objekt weiterhin ein Fehler generiert.  
   
 > [!NOTE]
->  Die Unterstützung für das rückwärts verschieben in ein vorwärts **Recordset** ist abhängig von Ihrem Anbieter nicht vorhersagbar. Wenn der aktuelle Datensatz nach dem letzten Datensatz im **Recordset**positioniert wurde, führt die rückwärts **Bewegung** möglicherweise nicht zur korrekten aktuellen Position.  
+>  Die Unterstützung für das rückwärts verschieben in ein vorwärts **Recordset** ist abhängig von Ihrem Anbieter nicht vorhersagbar. Wenn der aktuelle Datensatz nach dem letzten Datensatz im **Recordset** positioniert wurde, führt die rückwärts **Bewegung** möglicherweise nicht zur korrekten aktuellen Position.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](./recordset-object-ado.md)  

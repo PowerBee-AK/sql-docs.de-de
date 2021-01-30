@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b862f9f3a8479ad6d1eb68060be068e91a66c58
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5e666705f64897baa769dd453cbbb962c883fe0b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990741"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167189"
 ---
 # <a name="item-property-example-vb"></a>Item-Eigenschaft – Beispiel (VB)
-In diesem Beispiel wird veranschaulicht, wie die [Item](./item-property-ado.md) -Eigenschaft auf Member einer Auflistung zugreift. Im Beispiel wird die Tabelle " ***Authors*** " der ***Pubs*** -Datenbank mit einem parametrisierten Befehl geöffnet.  
+In diesem Beispiel wird veranschaulicht, wie die [Item](./item-property-ado.md) -Eigenschaft auf Member einer Auflistung zugreift. Im Beispiel wird die Tabelle ***Authors** _ der _*_Pubs_*_ -Datenbank mit einem parametrisierten Befehl geöffnet.  
   
  Auf den Parameter im Befehl, der für die Datenbank ausgegeben wird, wird von der [Parameter](./parameters-collection-ado.md) Auflistung des [Befehls](./command-object-ado.md) Objekts anhand des Indexes und namens zugegriffen. Auf die Felder des zurückgegebenen [Recordsets](./recordset-object-ado.md) wird dann von der [Fields](./fields-collection-ado.md) -Auflistung dieses Objekts nach Index und Name zugegriffen.  
   
@@ -63,7 +63,7 @@ Public Sub Main()
     Column(7) = "zip"  
     Column(8) = "contract"  
   
-    cmd.CommandText = "SELECT * FROM Authors WHERE state = ?"  
+    cmd.CommandText = "SELECT _ FROM Authors WHERE state = ?"  
     Set prm = cmd.CreateParameter("ItemXparm", adChar, adParamInput, 2, "CA")  
     cmd.Parameters.Append prm  
      ' set connection  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], identifiers
 - identifiers [ODBC], data types
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dce52118099ff4be572231e7f44f28a4cfca5ea7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0537c2b4f76814dfedf2750fa72ee0a13ed61175
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466220"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165349"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>Datentypbezeichner und Deskriptoren
 Die in den Abschnitten SQL- [Daten](../../../odbc/reference/appendixes/sql-data-types.md) Typen und [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md) weiter oben in diesem Anhang aufgeführten Datentypen sind "präzise" Datentypen: jeder Bezeichner verweist auf einen einzelnen Datentyp. Zwischen dem Bezeichner und dem Datentyp besteht eine eins-zu-eins-Entsprechung. Deskriptoren verwenden jedoch nicht in allen Fällen einen einzelnen Wert, um Datentypen zu identifizieren. In einigen Fällen verwenden Sie den Datentyp "Verbose" und einen typsubcode. Für alle Datentypen mit Ausnahme von DateTime-und interval-Datentypen ist der ausführliche Typbezeichner identisch mit dem präzisen Typbezeichner, und der Wert in SQL_DESC_DATETIME_INTERVAL_CODE gleich 0 (null) ist. Für DateTime-und interval-Datentypen wird jedoch ein ausführlicher Typ (SQL_DATETIME oder SQL_INTERVAL) in SQL_DESC_TYPE gespeichert, ein präziser Typ wird in SQL_DESC_CONCISE_TYPE gespeichert, und ein Subcode für jeden präzisen Typ wird in SQL_DESC_DATETIME_INTERVAL_CODE gespeichert. Das Festlegen eines dieser Felder wirkt sich auf die anderen Felder aus. Weitere Informationen zu diesen Feldern finden Sie in der Beschreibung der [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) -Funktion.  

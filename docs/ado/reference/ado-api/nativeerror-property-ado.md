@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Error::GetNativeError
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4acc35688367b9508c80c015999aa302a387a55c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b25d6c3ffd9563032df8743c60a5db1cd3f78b4e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990471"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167061"
 ---
 # <a name="nativeerror-property-ado"></a>NativeError-Eigenschaft (ADO)
 Gibt den anbieterspezifischen Fehlercode für ein bestimmtes [Fehler](./error-object.md) Objekt an.  

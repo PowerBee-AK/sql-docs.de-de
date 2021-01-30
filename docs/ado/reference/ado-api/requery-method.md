@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::Requery
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12f60b295d569119a356631dc445bd034916665a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 21056d0e8f8e488bc5b80541ea4c397b3340c453
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989551"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166654"
 ---
 # <a name="requery-method"></a>Requery-Methode
 Aktualisiert die Daten in einem [Recordset](./recordset-object-ado.md) -Objekt, indem die Abfrage erneut ausgeführt wird, auf der das Objekt basiert.  
@@ -39,7 +39,7 @@ recordset.Requery Options
  Optional. Eine Bitmaske, die die Werte [executeoptionenumum](./executeoptionenum.md) und [commandtypeenumeration](./commandtypeenum.md) enthält, die diesen Vorgang beeinflussen.  
   
 > [!NOTE]
->  Wenn *Optionen* auf **adAsyncExecute**festgelegt ist, wird dieser Vorgang asynchron ausgeführt, und ein [RecordsetChangeComplete](./willchangerecordset-and-recordsetchangecomplete-events-ado.md) -Ereignis wird ausgegeben, wenn es beendet wird. Die **executeopenenumum** -Werte **von adExecuteNoRecords** oder **adExecuteStream** sollten nicht mit der **Anforderung**verwendet werden.  
+>  Wenn *Optionen* auf **adAsyncExecute** festgelegt ist, wird dieser Vorgang asynchron ausgeführt, und ein [RecordsetChangeComplete](./willchangerecordset-and-recordsetchangecomplete-events-ado.md) -Ereignis wird ausgegeben, wenn es beendet wird. Die **executeopenenumum** -Werte **von adExecuteNoRecords** oder **adExecuteStream** sollten nicht mit der **Anforderung** verwendet werden.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **Requery** -Methode, um den gesamten Inhalt eines **Recordset** -Objekts aus der Datenquelle zu aktualisieren, indem Sie den ursprünglichen Befehl neu ausgeben und die Daten ein zweites Mal abrufen. Das Aufrufen dieser Methode entspricht dem Aufrufen der [Close](./close-method-ado.md) -Methode und der [Open](./open-method-ado-recordset.md) -Methode nacheinander. Wenn Sie den aktuellen Datensatz bearbeiten oder einen neuen Datensatz hinzufügen, tritt ein Fehler auf.  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Stream::raw_WriteText
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d38d493fb57e8147f882056d07514ba9f405ecf9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b4c05ab892ce442db5eefefddf3eb0796af5dec9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987721"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166247"
 ---
 # <a name="writetext-method"></a>WriteText-Methode
 Schreibt eine angegebene Text Zeichenfolge in ein Daten [Strom](./stream-object-ado.md) Objekt.  

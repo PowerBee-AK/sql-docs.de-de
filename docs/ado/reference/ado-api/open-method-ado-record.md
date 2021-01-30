@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Record::raw_Open
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1ad606821e423892d49feb49a0920c7aea9056aa
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cdac33c235e50abf35fbed670d872ca631403b5d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990341"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166983"
 ---
 # <a name="open-method-ado-record"></a>Open-Methode (ADO Record)
-Öffnet ein vorhandenes [Daten Satz](./record-object-ado.md) Objekt oder erstellt ein neues Element, das durch den **Datensatz**dargestellt wird, z. b. eine Datei oder ein Verzeichnis.  
+Öffnet ein vorhandenes [Daten Satz](./record-object-ado.md) Objekt oder erstellt ein neues Element, das durch den **Datensatz** dargestellt wird, z. b. eine Datei oder ein Verzeichnis.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,13 +48,13 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  Optional. Ein [recordkreateoptionsenum](./recordcreateoptionsenum.md) -Wert, der angibt, ob eine vorhandene Datei oder ein vorhandenes Verzeichnis geöffnet werden soll, oder ob eine neue Datei oder ein neues Verzeichnis erstellt werden soll. Der Standardwert ist " **adfailif NotExists**". Wenn der Standardwert festgelegt ist, wird der Zugriffsmodus aus der [Mode](./mode-property-ado.md) -Eigenschaft abgerufen. Dieser Parameter wird ignoriert, wenn der *Quell* Parameter keine URL enthält.  
   
  *Optionen*  
- Optional. Ein [recordopenoptionsenum](./recordopenoptionsenum.md) -Wert, der Optionen zum Öffnen des **Datensatzes**angibt. Der Standardwert ist " **adopendrecordunspezifiziert**". Diese Werte können kombiniert werden.  
+ Optional. Ein [recordopenoptionsenum](./recordopenoptionsenum.md) -Wert, der Optionen zum Öffnen des **Datensatzes** angibt. Der Standardwert ist " **adopendrecordunspezifiziert**". Diese Werte können kombiniert werden.  
   
  *UserName*  
- Optional. Ein **Zeichen** folgen Wert, der die Benutzer-ID enthält, die, falls erforderlich, den Zugriff auf die *Quelle*autorisiert.  
+ Optional. Ein **Zeichen** folgen Wert, der die Benutzer-ID enthält, die, falls erforderlich, den Zugriff auf die *Quelle* autorisiert.  
   
  *Kennwort*  
- Optional. Ein **Zeichen** folgen Wert, der das Kennwort enthält, das bei Bedarf den *Benutzernamen*überprüft.  
+ Optional. Ein **Zeichen** folgen Wert, der das Kennwort enthält, das bei Bedarf den *Benutzernamen* überprüft.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die *Quelle* kann Folgendes sein:  
@@ -63,7 +63,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 -   Ein **Daten Satz** Objekt. Ein **Daten Satz** Objekt, das aus einem anderen **Datensatz** geöffnet wird, Klonen das ursprüngliche **Datensatz** -Objekt.  
   
--   Ein **Command** -Objekt. Das geöffnete **Datensatz** -Objekt stellt die einzelne Zeile dar, die durch Ausführen des **Befehls**zurückgegeben wird. Wenn die Ergebnisse mehr als eine einzelne Zeile enthalten, wird der Inhalt der ersten Zeile in den Datensatz eingefügt, und der **Fehler** Auflistung kann ein Fehler hinzugefügt werden.  
+-   Ein **Command** -Objekt. Das geöffnete **Datensatz** -Objekt stellt die einzelne Zeile dar, die durch Ausführen des **Befehls** zurückgegeben wird. Wenn die Ergebnisse mehr als eine einzelne Zeile enthalten, wird der Inhalt der ersten Zeile in den Datensatz eingefügt, und der **Fehler** Auflistung kann ein Fehler hinzugefügt werden.  
   
 -   Eine SQL-SELECT-Anweisung. Das geöffnete **Datensatz** -Objekt stellt die einzelne Zeile dar, die durch das Ausführen des Inhalts der Zeichenfolge zurückgegeben wird. Wenn die Ergebnisse mehr als eine einzelne Zeile enthalten, wird der Inhalt der ersten Zeile in den Datensatz eingefügt, und der **Fehler** Auflistung kann ein Fehler hinzugefügt werden.  
   

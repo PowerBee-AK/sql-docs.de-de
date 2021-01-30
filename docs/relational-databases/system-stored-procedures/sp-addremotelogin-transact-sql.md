@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addremotelogin_TSQL
 - sp_addremotelogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: de4f54972fb4a749e6466a81fef88ae8630be698
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 13b935d91772d70d58b38f9f995341d81e04388f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464616"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165190"
 ---
 # <a name="sp_addremotelogin-transact-sql"></a>sp_addremotelogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,13 +46,13 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
   
 ## <a name="arguments"></a>Argumente  
  [ @remoteserver **=** ] **'**_Remote Server_**'**  
- Der Name des Remoteservers, für den der Remoteanmeldename gilt. *remoteserver* ist vom Datentyp **sysname**und hat keinen Standardwert. Wenn nur *Remote Server* angegeben ist, werden alle Benutzer von *Remote Server* vorhandenen Anmeldungen desselben Namens auf dem lokalen Server zugeordnet. Der Server muss dem lokalen Server bekannt sein. Dies wird mit sp_addserver hinzugefügt. Wenn Benutzer von *Remote Server* eine Verbindung mit dem lokalen Server herstellen, auf dem ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um eine remote gespeicherte Prozedur auszuführen, wird eine Verbindung mit der lokalen Anmeldung hergestellt, die ihrer eigenen Anmeldung auf dem *Remote Server*entspricht. *Remote Server* ist der Server, der den Remote Prozedur aufrufsvorgang initiiert.  
+ Der Name des Remoteservers, für den der Remoteanmeldename gilt. *remoteserver* ist vom Datentyp **sysname** und hat keinen Standardwert. Wenn nur *Remote Server* angegeben ist, werden alle Benutzer von *Remote Server* vorhandenen Anmeldungen desselben Namens auf dem lokalen Server zugeordnet. Der Server muss dem lokalen Server bekannt sein. Dies wird mit sp_addserver hinzugefügt. Wenn Benutzer von *Remote Server* eine Verbindung mit dem lokalen Server herstellen, auf dem ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um eine remote gespeicherte Prozedur auszuführen, wird eine Verbindung mit der lokalen Anmeldung hergestellt, die ihrer eigenen Anmeldung auf dem *Remote Server* entspricht. *Remote Server* ist der Server, der den Remote Prozedur aufrufsvorgang initiiert.  
   
  [ @loginame **=** ] **'**_Login_**'**  
- Die Anmelde-ID des Benutzers in der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. die *Anmeldung*muss bereits in der lokalen Instanz von vorhanden sein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Wenn *Login* angegeben wird, werden alle Benutzer von *Remote Server* diesem speziellen lokalen Anmelde Namen zugeordnet. Wenn Benutzer von *Remote Server* eine Verbindung mit der lokalen Instanz von herstellen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um eine remote gespeicherte Prozedur auszuführen, stellen Sie eine Verbindung als *Login*her.  
+ Die Anmelde-ID des Benutzers in der lokalen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* ist vom Datentyp **sysname** und hat den Standardwert NULL. die *Anmeldung* muss bereits in der lokalen Instanz von vorhanden sein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Wenn *Login* angegeben wird, werden alle Benutzer von *Remote Server* diesem speziellen lokalen Anmelde Namen zugeordnet. Wenn Benutzer von *Remote Server* eine Verbindung mit der lokalen Instanz von herstellen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um eine remote gespeicherte Prozedur auszuführen, stellen Sie eine Verbindung als *Login* her.  
   
  [ @remotename **=** ] **'**_remote_name_**'**  
- Die Anmelde-ID des Benutzers auf dem Remoteserver. *remote_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. auf dem *Remote Server*muss *remote_name* vorhanden sein. Wenn *remote_name* angegeben wird, wird der jeweilige Benutzer *remote_name* der *Anmeldung* auf dem lokalen Server zugeordnet. Wenn *remote_name* auf *Remote Server* eine Verbindung mit der lokalen Instanz von herstellt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um eine remote gespeicherte Prozedur auszuführen, wird die Verbindung als *Login*hergestellt. Die Anmelde-ID *remote_name* kann sich von der Anmelde-ID auf dem Remote Server, der *Anmeldung*, unterscheiden.  
+ Die Anmelde-ID des Benutzers auf dem Remoteserver. *remote_name* ist vom Datentyp **sysname** und hat den Standardwert NULL. auf dem *Remote Server* muss *remote_name* vorhanden sein. Wenn *remote_name* angegeben wird, wird der jeweilige Benutzer *remote_name* der *Anmeldung* auf dem lokalen Server zugeordnet. Wenn *remote_name* auf *Remote Server* eine Verbindung mit der lokalen Instanz von herstellt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um eine remote gespeicherte Prozedur auszuführen, wird die Verbindung als *Login* hergestellt. Die Anmelde-ID *remote_name* kann sich von der Anmelde-ID auf dem Remote Server, der *Anmeldung*, unterscheiden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -88,16 +88,16 @@ EXEC sp_addremotelogin 'ACCOUNTS', 'Albert';
 EXEC sp_addremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_dropremotelogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_grantlogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_helpremotelogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
  [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_remoteoption &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
- [sp_revokelogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

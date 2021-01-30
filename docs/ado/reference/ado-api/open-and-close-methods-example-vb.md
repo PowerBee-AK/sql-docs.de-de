@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1311d561-0e86-40f5-8cbc-ad8f13e626d1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 631afc8911c02dd58f819ffab0f162f952fddeec
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9b5b045800bd6998eea46ac3fb75ff7999f0b431
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990371"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167007"
 ---
 # <a name="open-and-close-methods-example-vb"></a>Open- und Close-Methode – Beispiel (VB)
 In diesem Beispiel werden die **Open** -und [Close](./close-method-ado.md) -Methode sowohl für [Recordset](./recordset-object-ado.md) -als auch für [Verbindungs](./connection-object-ado.md) Objekte verwendet, die geöffnet wurden.  

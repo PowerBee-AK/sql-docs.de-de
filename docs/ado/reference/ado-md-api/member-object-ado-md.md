@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Member
@@ -16,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 784dd3e842547c97f26107beaec67767363ce4ea
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 13831b47dc9c571d02971881626cc555610faf2f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986461"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164489"
 ---
 # <a name="member-object-ado-md"></a>Member-Objekt (ADO MD)
 Stellt einen Member einer Ebene in einem Cube, die untergeordneten Elemente eines Members einer Ebene oder einen Member einer Position entlang einer Achse eines Cellsets dar.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die **Eigenschaften eines Members unterscheiden sich** abhängig vom Kontext, in dem er verwendet wird. Ein **Member** einer [Ebene](./level-object-ado-md.md) in einer [CubeDef](./cubedef-object-ado-md.md) verfügt über eine [Children](./children-property-ado-md.md) -Eigenschaft **, die die Elemente auf der** nächst niedrigeren Ebene in der Hierarchie vom aktuellen **Member**zurückgibt. Bei einem **Member** einer [Position](./position-object-ado-md.md) **ist die Auflistung** der untergeordneten Elemente immer leer. Außerdem gilt die [Type](./type-property-ado-md.md) -Eigenschaft **nur für Elemente einer** **Ebene**.  
+ Die **Eigenschaften eines Members unterscheiden sich** abhängig vom Kontext, in dem er verwendet wird. Ein **Member** einer [Ebene](./level-object-ado-md.md) in einer [CubeDef](./cubedef-object-ado-md.md) verfügt über eine [Children](./children-property-ado-md.md) -Eigenschaft **, die die Elemente auf der** nächst niedrigeren Ebene in der Hierarchie vom aktuellen **Member** zurückgibt. Bei einem **Member** einer [Position](./position-object-ado-md.md) **ist die Auflistung** der untergeordneten Elemente immer leer. Außerdem gilt die [Type](./type-property-ado-md.md) -Eigenschaft **nur für Elemente einer** **Ebene**.  
   
- Ein **Member** der **Position** verfügt über zwei Eigenschaften, die für die Anzeige des [Cellsets](./cellset-object-ado-md.md)nützlich sind: [DrilledDown](./drilleddown-property-ado-md.md) und [parametrisameasprev](./parentsameasprev-property-ado-md.md). Ein Fehler tritt auf, wenn der Zugriff auf diese Eigenschaften über einen **Member** einer **Ebene**erfolgt.  
+ Ein **Member** der **Position** verfügt über zwei Eigenschaften, die für die Anzeige des [Cellsets](./cellset-object-ado-md.md)nützlich sind: [DrilledDown](./drilleddown-property-ado-md.md) und [parametrisameasprev](./parentsameasprev-property-ado-md.md). Ein Fehler tritt auf, wenn der Zugriff auf diese Eigenschaften über einen **Member** einer **Ebene** erfolgt.  
   
- Mit den Auflistungen und Eigenschaften eines **Member** -Objekts einer **Ebene**können Sie die folgenden Aktionen ausführen:  
+ Mit den Auflistungen und Eigenschaften eines **Member** -Objekts einer **Ebene** können Sie die folgenden Aktionen ausführen:  
   
 -   Identifizieren Sie den **Member** mit den Eigenschaften " [Name](./name-property-ado-md.md) " und " [UniqueName](./uniquename-property-ado-md.md) ".  
   
@@ -49,7 +49,7 @@ Stellt einen Member einer Ebene in einem Cube, die untergeordneten Elemente eine
   
 -   Verwenden Sie die standardmäßige ADO [Properties](../ado-api/properties-collection-ado.md) -Auflistung, um zusätzliche Informationen über das **Level** -Objekt zu erhalten.  
   
- Durch die Auflistungen und Eigenschaften **Member** eines Members einer **Position** auf einer [Achse](./axis-object-ado-md.md)können Sie folgende Aufgaben ausführen:  
+ Durch die Auflistungen und Eigenschaften  eines Members einer **Position** auf einer [Achse](./axis-object-ado-md.md)können Sie folgende Aufgaben ausführen:  
   
 -   Identifizieren Sie den **Member** mit den Eigenschaften " [Name](./name-property-ado-md.md) " und " [UniqueName](./uniquename-property-ado-md.md) ".  
   
@@ -61,20 +61,20 @@ Stellt einen Member einer Ebene in einem Cube, die untergeordneten Elemente eine
   
 -   Zählt **die untergeordneten** Elemente eines Members mit der [childCount](./childcount-property-ado-md.md) -Eigenschaft.  
   
--   Verwenden Sie die [DrilledDown](./drilleddown-property-ado-md.md) -Eigenschaft, um zu bestimmen, ob auf der **Achse** unmittelbar nach diesem **Member**mindestens ein untergeordnetes Element vorhanden ist.  
+-   Verwenden Sie die [DrilledDown](./drilleddown-property-ado-md.md) -Eigenschaft, um zu bestimmen, ob auf der **Achse** unmittelbar nach diesem **Member** mindestens ein untergeordnetes Element vorhanden ist.  
   
--   Verwenden Sie die Eigenschaft " [parametrisameasprev](./parentsameasprev-property-ado-md.md) ", um zu bestimmen, **ob das übergeordnete Element dieses Elements** mit dem übergeordneten Element des **unmittelbar vorangehenden**Members identisch ist.  
+-   Verwenden Sie die Eigenschaft " [parametrisameasprev](./parentsameasprev-property-ado-md.md) ", um zu bestimmen, **ob das übergeordnete Element dieses Elements** mit dem übergeordneten Element des **unmittelbar vorangehenden** Members identisch ist.  
   
 -   Verwenden Sie die standardmäßige ADO [Properties](../ado-api/properties-collection-ado.md) -Auflistung, um zusätzliche Informationen über das **Level** -Objekt zu erhalten.  
   
  Die **Properties** -Auflistung enthält vom Anbieter bereitgestellte Eigenschaften. In der folgenden Tabelle sind die verfügbaren Eigenschaften aufgeführt. Die tatsächliche Eigenschaften Liste kann je nach Implementierung des Anbieters abweichen. Eine ausführlichere Liste der verfügbaren Eigenschaften finden Sie in der Dokumentation für Ihren Anbieter.  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |CatalogName|Der Name des Katalogs, zu dem dieser Cube gehört.|  
 |Kinderkardinalität|Die Anzahl der untergeordneten Elemente des Elements.|  
 |CubeName|Der Name des Cubes.|  
-|Beschreibung|Eine aussagekräftige Beschreibung des Members.|  
+|BESCHREIBUNG|Eine aussagekräftige Beschreibung des Members.|  
 |Dimensionuniquename|Der eindeutige Name der [Dimension](./dimension-object-ado-md.md).|  
 |Hierarchyuniquename|Der eindeutige Name der Hierarchie.|  
 |LevelNumber|Der Abstand zwischen der Ebene und dem Stamm der Hierarchie.|  

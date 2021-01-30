@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLConfigDataSource
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8849ce5528380e4164a420227395bce5aa436eaa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ddcfac8f1f211884aa3f46db3f56a2762778ed92
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448743"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165339"
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource-Funktion
 **Konformitäts**  
@@ -74,13 +74,13 @@ BOOL SQLConfigDataSource(
  *lpszattribute*  
  Der Eine doppelt auf NULL endend beendete Liste von Attributen in Form von Schlüsselwort-Wert-Paaren. Weitere Informationen finden Sie unter [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  Die Funktion gibt true zurück, wenn Sie erfolgreich ist, andernfalls false. Wenn in den Systeminformationen kein Eintrag vorhanden ist, wenn diese Funktion aufgerufen wird, gibt die Funktion false zurück.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLConfigDataSource** "false" zurückgibt, kann ein zugeordneter " * \* pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die " * \* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **SQLConfigDataSource** "false" zurückgibt, kann ein zugeordneter " *\* pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror** abgerufen werden. In der folgenden Tabelle sind die " *\* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|Beschreibung|  
+|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
 |ODBC_ERROR_INVALID_HWND|Ungültiges Fenster handle.|Das *hwndParent* -Argument war ungültig oder NULL.|  
@@ -94,9 +94,9 @@ BOOL SQLConfigDataSource(
 ## <a name="comments"></a>Kommentare  
  **SQLConfigDataSource** verwendet den Wert von *lpszDriver* , um den vollständigen Pfad der Setup-DLL für den Treiber aus den Systeminformationen zu lesen. Die dll wird geladen, und **ConfigDSN** wird mit denselben Argumenten aufgerufen, die an Sie übermittelt wurden.  
   
- **SQLConfigDataSource** gibt false zurück, wenn die Setup-DLL nicht gefunden oder geladen werden kann oder wenn der Benutzer das Dialogfeld abbricht. Andernfalls wird der von **ConfigDSN**empfangene Status zurückgegeben.  
+ **SQLConfigDataSource** gibt false zurück, wenn die Setup-DLL nicht gefunden oder geladen werden kann oder wenn der Benutzer das Dialogfeld abbricht. Andernfalls wird der von **ConfigDSN** empfangene Status zurückgegeben.  
   
- **SQLConfigDataSource** ordnet die am häufigsten verwendeten *DSN-* Daten der Benutzer an, die am *häufigsten*angezeigt werden (ODBC_ADD_SYS_DSN ODBC_ADD_DSN, ODBC_CONFIG_SYS_DSN ODBC_CONFIG_DSN, und ODBC_REMOVE_SYS_DSN ODBC_REMOVE_DSN). Um Benutzer-und System-DSNs zu unterscheiden, legt **SQLConfigDataSource** den installerkonfigurationsmodus gemäß der folgenden Tabelle fest. Vor der Rückgabe setzt **SQLConfigDataSource** den Konfigurations Modus auf bothdsn zurück. **ConfigDSN** (implementiert von Treibern) sollte **sqlschreitedsndeini** und **sqlschreiteprivateprofilestring** aufrufen, um einen System-DSN zu unterstützen. Weitere Informationen finden Sie unter [ConfigDSN-Funktion](../../../odbc/reference/syntax/configdsn-function.md).  
+ **SQLConfigDataSource** ordnet die am häufigsten verwendeten *DSN-* Daten der Benutzer an, die am *häufigsten* angezeigt werden (ODBC_ADD_SYS_DSN ODBC_ADD_DSN, ODBC_CONFIG_SYS_DSN ODBC_CONFIG_DSN, und ODBC_REMOVE_SYS_DSN ODBC_REMOVE_DSN). Um Benutzer-und System-DSNs zu unterscheiden, legt **SQLConfigDataSource** den installerkonfigurationsmodus gemäß der folgenden Tabelle fest. Vor der Rückgabe setzt **SQLConfigDataSource** den Konfigurations Modus auf bothdsn zurück. **ConfigDSN** (implementiert von Treibern) sollte **sqlschreitedsndeini** und **sqlschreiteprivateprofilestring** aufrufen, um einen System-DSN zu unterstützen. Weitere Informationen finden Sie unter [ConfigDSN-Funktion](../../../odbc/reference/syntax/configdsn-function.md).  
   
 |*fRequest*|Konfigurations Modus|  
 |----------------|------------------------|  

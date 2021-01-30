@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b651d20173659052a6958b9ce561081f9aff9b3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3896ec0e36fb5416d97cf3e6e6ad8409843cae3a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975041"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164639"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>CompareBookmarks-Methode – Beispiel (VB)
 In diesem Beispiel wird die [CompareBookmarks](./comparebookmarks-method-ado.md) -Methode veranschaulicht. Der relative Wert von Lesezeichen wird nur selten benötigt, wenn ein bestimmtes Lesezeichen etwas Besonderes ist.  
   
- Legen Sie eine zufällige Zeile eines [Recordsets fest](./recordset-object-ado.md) , die von der ***Autoren*** Tabelle als Ziel für eine Suche abgeleitet ist. Zeigen Sie dann die Position der einzelnen Zeilen relativ zu diesem Ziel an.  
+ Legen Sie eine zufällige Zeile eines [Recordsets fest](./recordset-object-ado.md) , die aus der Tabelle ***Authors** _ als Ziel einer Suche abgeleitet ist. Zeigen Sie dann die Position der einzelnen Zeilen relativ zu diesem Ziel an.  
   
 ```  
 'BeginCompareBookmarksVB  
@@ -59,7 +59,7 @@ Public Sub Main()
   
      ' Open recordset as a static cursor type recordset  
     Set rstAuthors = New ADODB.Recordset  
-    strSQLAuthors = "SELECT * FROM Authors"  
+    strSQLAuthors = "SELECT _ FROM Authors"  
     rstAuthors.Open strSQLAuthors, Cnxn, adOpenStatic, adLockReadOnly, adCmdText  
   
     count = rstAuthors.RecordCount  

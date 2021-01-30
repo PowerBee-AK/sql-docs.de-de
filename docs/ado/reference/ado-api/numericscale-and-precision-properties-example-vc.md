@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/20/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fbca744c17ffd3dfa9b84b679e9efeaf0d27ad9a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cd954184f8ea2227427a5668968714e9c61dfe23
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990391"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167025"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale- und Precision-Eigenschaft – Beispiel (VC++)
-In diesem Beispiel werden die [NumericScale](./numericscale-property-ado.md) -Eigenschaft und die [Precision](./precision-property-ado.md) -Eigenschaft verwendet, um die numerische Skala und Genauigkeit der Felder in der Tabelle " ***Rabatte*** " der ***Pubs*** -Datenbank anzuzeigen.  
+In diesem Beispiel werden die [NumericScale](./numericscale-property-ado.md) -Eigenschaft und die [Precision](./precision-property-ado.md) -Eigenschaft verwendet, um die numerische Skala und Genauigkeit der Felder in der ***Rabatte** _-Tabelle der _ *_Pubs_**-Datenbank anzuzeigen.  
   
 ```cpp
 // BeginNumericScaleCpp.cpp  

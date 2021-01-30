@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLConfigDriver
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 04ee54bba13730504ed08cfc1307858edea56282
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abe28e8d870216cf090e57a93e0c75766db08231
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476156"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165324"
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver-Funktion
 **Konformitäts**  
@@ -69,7 +69,7 @@ BOOL SQLConfigDriver(
  Der Der Name des Treibers, der in den Systeminformationen registriert ist.  
   
  *lpszargs*  
- Der Eine NULL-terminierte Zeichenfolge, die Argumente für eine Treiber spezifische *fRequest*enthält.  
+ Der Eine NULL-terminierte Zeichenfolge, die Argumente für eine Treiber spezifische *fRequest* enthält.  
   
  *lpszmsg*  
  Ausgeben Eine auf NULL endenden Zeichenfolge, die eine Ausgabe Meldung vom Treiber Setup enthält.  
@@ -78,15 +78,15 @@ BOOL SQLConfigDriver(
  Der Länge von *lpszmsg.*  
   
  *pcbmsgout*  
- Ausgeben Die Gesamtanzahl der Bytes, die in " *lpszmsg*" zurückgegeben werden können. Wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *cbmsgmax*ist, wird die Ausgabe Nachricht in *lpszmsg* auf *cbmsgmax* abzüglich des NULL-Beendigungs Zeichens gekürzt. Das *pcbmsgout* -Argument kann ein NULL-Zeiger sein.  
+ Ausgeben Die Gesamtanzahl der Bytes, die in " *lpszmsg*" zurückgegeben werden können. Wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *cbmsgmax* ist, wird die Ausgabe Nachricht in *lpszmsg* auf *cbmsgmax* abzüglich des NULL-Beendigungs Zeichens gekürzt. Das *pcbmsgout* -Argument kann ein NULL-Zeiger sein.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  Die Funktion gibt true zurück, wenn Sie erfolgreich ist, andernfalls false.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **sqlconfigdriver** "false" zurückgibt, kann ein zugeordneter " * \* pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die " * \* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **sqlconfigdriver** "false" zurückgibt, kann ein zugeordneter " *\* pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror** abgerufen werden. In der folgenden Tabelle sind die " *\* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|Beschreibung|  
+|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|Ungültige Pufferlänge.|Das *lpszmsg* -Argument war ungültig.|  
@@ -101,15 +101,15 @@ BOOL SQLConfigDriver(
 ## <a name="comments"></a>Kommentare  
  **Sqlconfigdriver** ermöglicht es einer Anwendung, die **ConfigDriver** -Routine eines Treibers aufzurufen, ohne den Namen kennen zu müssen und die Treiber spezifische Setup-DLL zu laden. Diese Funktion wird von einem Setup Programm aufgerufen, nachdem die Treiber-Setup-DLL installiert wurde. Das aufrufende Programm sollte beachten, dass diese Funktion möglicherweise nicht für alle Treiber verfügbar ist. In einem solchen Fall sollte das aufrufenden Programm ohne Fehler fortgesetzt werden.  
   
-## <a name="driver-specific-options"></a>Treiber spezifische Optionen  
+## <a name="driver-specific-options"></a>Driver-Specific Optionen  
  Eine Anwendung kann mit dem *fRequest* -Argument Treiber spezifische Funktionen anfordern, die vom Treiber verfügbar gemacht werden. Die *häufigste* für die erste Option ist ODBC_CONFIG_DRIVER_MAX + 1, und zusätzliche Optionen werden von diesem Wert um 1 erhöht. Alle Argumente, die für diese Funktion für den Treiber erforderlich sind, sollten in einer mit NULL endenden Zeichenfolge bereitgestellt werden, die im *lpszargs* -Argument übergeben wird. Treiber, die diese Funktionalität bereitstellen, sollten eine Tabelle mit treiberspezifischen Optionen verwalten. Die Optionen sollten vollständig in der Treiber Dokumentation dokumentiert werden. Anwendungs Schreiber, die Treiber spezifische Optionen verwenden, sollten sich bewusst sein, dass die Anwendung durch diese Verwendung weniger interoperabel wird.  
   
 ## <a name="setting-connection-pooling-timeout"></a>Timeout für Verbindungs Pooling wird festgelegt  
- Timeout Eigenschaften für Verbindungspooling können festgelegt werden, wenn Sie die Konfiguration des Treibers festlegen. **Sqlconfigdriver** wird mit einer *Häufigkeit* von ODBC_CONFIG_DRIVER und *lpszargs* aufgerufen, die auf **CPTimeout**festgelegt sind. **CPTimeout** bestimmt den Zeitraum, in dem eine Verbindung im Verbindungspool verbleiben kann, ohne verwendet zu werden. Wenn das Timeout abläuft, wird die Verbindung geschlossen und aus dem Pool entfernt. Der Standardwert für das Timeout beträgt 60 Sekunden.  
+ Timeout Eigenschaften für Verbindungspooling können festgelegt werden, wenn Sie die Konfiguration des Treibers festlegen. **Sqlconfigdriver** wird mit einer *Häufigkeit* von ODBC_CONFIG_DRIVER und *lpszargs* aufgerufen, die auf **CPTimeout** festgelegt sind. **CPTimeout** bestimmt den Zeitraum, in dem eine Verbindung im Verbindungspool verbleiben kann, ohne verwendet zu werden. Wenn das Timeout abläuft, wird die Verbindung geschlossen und aus dem Pool entfernt. Der Standardwert für das Timeout beträgt 60 Sekunden.  
   
  Wenn **sqlconfigdriver** aufgerufen wird, wobei *fRequest* auf ODBC_INSTALL_DRIVER oder ODBC_REMOVE_DRIVER festgelegt ist, lädt der Treiber-Manager die entsprechende Treiber-Setup-DLL und ruft die **ConfigDriver** -Funktion auf. Wenn **sqlconfigdriver** mit dem ODBC_CONFIG_DRIVER am *häufigsten* aufgerufen wird, wird die gesamte Verarbeitung im ODBC-Installer ausgeführt, sodass die Treiber-Setup-DLL nicht geladen werden muss.  
   
-## <a name="messages"></a>Meldungen  
+## <a name="messages"></a>Nachrichten  
  Eine Treiber-Setup Routine kann eine Textnachricht als auf NULL endende Zeichen folgen im *lpszmsg* -Puffer an eine Anwendung senden. Die Nachricht wird von der **ConfigDriver** -Funktion auf *cbmsgmax* abzüglich des NULL-Beendigungs Zeichens gekürzt, wenn Sie größer oder gleich *cbmsgmax* -Zeichen ist.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  

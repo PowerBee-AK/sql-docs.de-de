@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - RecordChangeComplete
 - Recordset::WillChangeRecord
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e22e922a240643d499408dda3941fdf638a529ff
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0a713c39746db1d6a5317a4884ac0a2c5cbb23fc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987861"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166274"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord- und RecordChangeComplete-Ereignis (ADO)
 Das Ereignis **WillChangeRecord** wird aufgerufen, bevor ein oder mehrere Datensätze (Zeilen) in der [recordsetänderung](./recordset-object-ado.md) geändert werden. Das **RecordChangeComplete** -Ereignis wird aufgerufen, nachdem sich ein oder mehrere Datensätze geändert haben.  
@@ -39,13 +39,13 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>Parameter  
  *adReason*  
- Ein [eventreasonenumerationswert](./eventreasonenum.md) , der den Grund für dieses Ereignis angibt. Der Wert kann " **adrsnaddnew**", " **adrsndelete**", " **adrsnupdate**", " **adrsnundoupdate**", " **adrsnundoaddnew**", "adrsnundodelete" oder " **adrsnfirstchange**" lauten. **adRsnUndoDelete**  
+ Ein [eventreasonenumerationswert](./eventreasonenum.md) , der den Grund für dieses Ereignis angibt. Der Wert kann " **adrsnaddnew**", " **adrsndelete**", " **adrsnupdate**", " **adrsnundoupdate**", " **adrsnundoaddnew**", "adrsnundodelete" oder " **adrsnfirstchange**" lauten.   
   
  *cRecords*  
  Ein **Long** -Wert, der die Anzahl der geänderten Datensätze angibt (betroffen).  
   
  *pError*  
- Ein [Fehler](./error-object.md) Objekt. Es wird der Fehler beschrieben, der aufgetreten ist, wenn der Wert von *adStatus* **adstatuserrorsoccurrred**ist. Andernfalls ist es nicht festgelegt.  
+ Ein [Fehler](./error-object.md) Objekt. Es wird der Fehler beschrieben, der aufgetreten ist, wenn der Wert von *adStatus* **adstatuserrorsoccurrred** ist. Andernfalls ist es nicht festgelegt.  
   
  *adStatus*  
  Ein [eventstatusenum](./eventstatusenum.md) -Statuswert.  
@@ -64,7 +64,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
 ## <a name="remarks"></a>Bemerkungen  
  Ein **WillChangeRecord** - **oder RecordChangeComplete** -Ereignis kann aufgrund der folgenden **recordsetvorgänge** für das erste geänderte Feld in einer Zeile auftreten: [Update](./update-method.md), [Delete](./delete-method-ado-recordset.md), [CancelUpdate](./cancelupdate-method-ado.md), [AddNew](./addnew-method-ado.md), [UpdateBatch](./updatebatch-method.md)und [CancelBatch](./cancelbatch-method-ado.md). Der Wert des **Recordset** - [Cursor Typs](./cursortype-property-ado.md) bestimmt, welche Vorgänge bewirken, dass die Ereignisse auftreten.  
   
- Während des **WillChangeRecord** -Ereignisses wird die **Recordset** - [Filter](./filter-property.md) Eigenschaft auf **adFilterAffectedRecords**festgelegt. Diese Eigenschaft kann bei der Verarbeitung des Ereignisses nicht geändert werden.  
+ Während des **WillChangeRecord** -Ereignisses wird die **Recordset** - [Filter](./filter-property.md) Eigenschaft auf **adFilterAffectedRecords** festgelegt. Diese Eigenschaft kann bei der Verarbeitung des Ereignisses nicht geändert werden.  
   
  Sie müssen den **adStatus** -Parameter für jeden möglichen **adReason** -Wert auf **adStatusUnwantedEvent** festlegen, um die Ereignis Benachrichtigung für jedes Ereignis vollständig zu beenden, das einen **adReason** -Parameter enthält.  
   

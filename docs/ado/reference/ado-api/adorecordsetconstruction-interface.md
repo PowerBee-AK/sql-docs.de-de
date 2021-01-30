@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ADORecordsetConstruction
@@ -16,34 +16,34 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ecf8f8e12f8d12a3382e7b67b13e8bb12fb69ac9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d9be4f47033616f56177027bc83c4621cef57847
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976221"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164869"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction-Schnittstelle
-Die **adorecordsetconstruction** -Schnittstelle wird verwendet, um ein ADO- **Recordset** -Objekt aus einem OLE DB Rowsetobjekt in einer C/C++-Anwendung zu erstellen. **Rowset**  
+Die **adorecordsetconstruction** -Schnittstelle wird verwendet, um ein ADO- **Recordset** -Objekt aus einem OLE DB Rowsetobjekt in einer C/C++-Anwendung zu erstellen.   
   
  Diese Schnittstelle unterstützt die folgenden Eigenschaften:  
   
 ## <a name="properties"></a>Eigenschaften  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |-|-|  
 |[Kapitel](./chapter-property-ado.md)|Lesen/Schreiben<br />Ruft ein OLE DB **Kapitel** Objekt aus/für dieses ADO- **Recordset** -Objekt ab oder legt es fest.|  
 |[RowPosition](./rowposition-property-ado.md)|Lesen/Schreiben<br />Ruft ein OLE DB **RowPosition** -Objekt von/für dieses ADO- **Recordset** -Objekt ab oder legt es fest.|  
 |[Rowset](./rowset-property-ado.md)|Lesen/Schreiben<br />Ruft ein OLE DB Rowsetobjekt aus/für dieses ADO- **Recordset** -Objekt ab oder legt dieses **fest** .|  
   
 ## <a name="methods"></a>Methoden  
- Keine  
+ Keine.  
   
 ## <a name="events"></a>Ereignisse  
  Keine.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Wenn ein OLE DB **Rowset** Rowsetobjekt ( `pRowset` ) angegeben wird, wird die Erstellung eines ADO- **Recordset** -Objekts ( `adoRs` ) auf die folgenden drei grundlegenden Vorgänge festgelegt:  
+ Wenn ein OLE DB  Rowsetobjekt ( `pRowset` ) angegeben wird, wird die Erstellung eines ADO- **Recordset** -Objekts ( `adoRs` ) auf die folgenden drei grundlegenden Vorgänge festgelegt:  
   
 1.  Erstellen Sie ein ADO- **Recordset** -Objekt:  
   
@@ -72,7 +72,7 @@ Die **adorecordsetconstruction** -Schnittstelle wird verwendet, um ein ADO- **Re
   
  Sie können auch ein ADO- **Recordset** -Objekt aus einem OLE DB **Kapitel** oder einem **RowPosition** -Objekt erstellen.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  **Version:** ADO 2,0 und höher  
   
  **Bibliothek:** msado15.dll  

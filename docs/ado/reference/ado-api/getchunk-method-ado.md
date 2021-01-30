@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Field20::raw_GetChunk
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 196f41f7828be16c7c38b281edb85774569580a1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7d9e47713f3bd4d86f35cff2acac0255ed4ab5c7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88972911"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164579"
 ---
 # <a name="getchunk-method-ado"></a>GetChunk-Methode (ADO)
 Gibt alle oder einen Teil des Inhalts eines großen [Textfelds](./field-object.md) oder eines Binärdaten Feld Objekts zurück.  
@@ -35,7 +35,7 @@ variable = field.GetChunk(Size)
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt eine **Variante**zurück.  
+ Gibt eine **Variante** zurück.  
   
 #### <a name="parameters"></a>Parameter  
  *Größe*  
@@ -44,7 +44,7 @@ variable = field.GetChunk(Size)
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **GetChunk** -Methode für ein **Field** -Objekt, um einen Teil oder alle langen Binär-oder Zeichendaten abzurufen. In Situationen, in denen der System Arbeitsspeicher eingeschränkt ist, können Sie die **GetChunk** -Methode verwenden, um lange Werte in Teilen zu bearbeiten, anstatt sie vollständig zu verwenden.  
   
- Die Daten, die von einem **GetChunk** -Rückruf zurückgegeben werden, werden einer *Variablen*zugewiesen. Wenn die *Größe* größer ist als die verbleibenden Daten, gibt die **GetChunk** -Methode nur die verbleibenden Daten ohne Auffüll *Variable* mit leeren Leerzeichen zurück. Wenn das Feld leer ist, gibt die **GetChunk** -Methode einen NULL-Wert zurück.  
+ Die Daten, die von einem **GetChunk** -Rückruf zurückgegeben werden, werden einer *Variablen* zugewiesen. Wenn die *Größe* größer ist als die verbleibenden Daten, gibt die **GetChunk** -Methode nur die verbleibenden Daten ohne Auffüll *Variable* mit leeren Leerzeichen zurück. Wenn das Feld leer ist, gibt die **GetChunk** -Methode einen NULL-Wert zurück.  
   
  Jeder nachfolgende **GetChunk** -Befehl ruft Daten ab, von denen der vorherige **GetChunk** -Rückruf unterbrochen wurde. Wenn Sie jedoch Daten aus einem Feld abrufen und dann den Wert eines anderen Felds im aktuellen Datensatz festlegen oder lesen, geht ADO davon aus, dass Sie das Abrufen von Daten aus dem ersten Feld abgeschlossen haben. Wenn Sie die **GetChunk** -Methode erneut für das erste Feld aufrufen, interpretiert ADO den-Befehl als neuen **GetChunk** -Vorgang und beginnt mit dem Lesen vom Anfang der Daten. Durch den Zugriff auf Felder in anderen [Recordset](./recordset-object-ado.md) -Objekten, die keine Klone des ersten **Recordset** -Objekts sind, werden keine **GetChunk** -Vorgänge unterbrochen.  
   

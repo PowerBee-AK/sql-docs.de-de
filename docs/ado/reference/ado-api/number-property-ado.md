@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Error::Number
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a44c1a4902dbcd37089ee63c41db2b9a089c3aed
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 82206b827f505994cd151833e0bee4b1ff4ad7de
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990431"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167033"
 ---
 # <a name="number-property-ado"></a>Number-Eigenschaft (ADO)
 Gibt die Zahl an, durch die ein [Fehler](./error-object.md) Objekt eindeutig identifiziert wird.  

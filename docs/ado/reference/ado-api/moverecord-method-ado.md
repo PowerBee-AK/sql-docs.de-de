@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Record::MoveRecord
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3425326f9693d7c411f97f04ab5f87bba46578b4
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d55a2a2aacc281271789d2c456ea5bdc8de44499
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990511"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167077"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord-Methode (ADO)
 Verschiebt die durch einen [Datensatz](./record-object-ado.md) dargestellte Entität an einen anderen Speicherort.  
@@ -36,16 +36,16 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>Parameter  
  *Quelle*  
- Optional. Ein **Zeichen** folgen Wert, der eine URL enthält, die den zu verschoden **Datensatz** identifiziert. Wenn die *Quelle* weggelassen wird oder eine leere Zeichenfolge angibt, wird das durch diesen **Datensatz** dargestellte Objekt verschoben. Wenn der **Datensatz** z. b. eine Datei darstellt, wird der Inhalt der Datei an den Speicherort verschoben, der vom *Ziel*angegeben wird.  
+ Optional. Ein **Zeichen** folgen Wert, der eine URL enthält, die den zu verschoden **Datensatz** identifiziert. Wenn die *Quelle* weggelassen wird oder eine leere Zeichenfolge angibt, wird das durch diesen **Datensatz** dargestellte Objekt verschoben. Wenn der **Datensatz** z. b. eine Datei darstellt, wird der Inhalt der Datei an den Speicherort verschoben, der vom *Ziel* angegeben wird.  
   
  *Ziel*  
  Optional. Ein **Zeichen** folgen Wert, der eine URL enthält, die den Speicherort angibt, an den die *Quelle* verschoben wird.  
   
  *UserName*  
- Optional. Ein **Zeichen** folgen Wert, der die Benutzer-ID enthält, die bei Bedarf den Zugriff auf das *Ziel*autorisiert.  
+ Optional. Ein **Zeichen** folgen Wert, der die Benutzer-ID enthält, die bei Bedarf den Zugriff auf das *Ziel* autorisiert.  
   
  *Kennwort*  
- Optional. Eine **Zeichenfolge** , die das Kennwort enthält, das bei Bedarf den *Benutzernamen*überprüft.  
+ Optional. Eine **Zeichenfolge** , die das Kennwort enthält, das bei Bedarf den *Benutzernamen* überprüft.  
   
  *Optionen*  
  Optional. Ein Wert vom Typ "", dessen [Standardwert "](./moverecordoptionsenum.md) **admuveunspezifiziert**" ist. Gibt das Verhalten dieser Methode an.  
@@ -54,19 +54,19 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  Optional. Ein **boolescher** Wert, der angibt, dass dieser Vorgang bei " **true**" asynchron erfolgen soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein **Zeichen** folgen Wert. In der Regel wird der Wert des *Ziels* zurückgegeben. Der genaue zurückgegebene Wert ist jedoch vom Anbieter abhängig.  
+ Ein **String-Wert**. In der Regel wird der Wert des *Ziels* zurückgegeben. Der genaue zurückgegebene Wert ist jedoch vom Anbieter abhängig.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die Werte von *Quelle* und *Ziel* dürfen nicht identisch sein. Andernfalls tritt ein Laufzeitfehler auf. Mindestens der Server-, der Pfad-und der Ressourcen Name müssen unterschiedlich sein.  
   
- Bei Dateien, die mithilfe des Internet Publishing Anbieters verschoben werden, aktualisiert diese Methode alle Hypertext Links in Dateien, die verschoben werden, sofern nicht anders durch *Optionen*angegeben. Diese Methode schlägt fehl, wenn das *Ziel* ein vorhandenes Objekt (z. b. eine Datei oder ein Verzeichnis) identifiziert, es sei denn, **admuveüberschreibung** ist angegeben  
+ Bei Dateien, die mithilfe des Internet Publishing Anbieters verschoben werden, aktualisiert diese Methode alle Hypertext Links in Dateien, die verschoben werden, sofern nicht anders durch *Optionen* angegeben. Diese Methode schlägt fehl, wenn das *Ziel* ein vorhandenes Objekt (z. b. eine Datei oder ein Verzeichnis) identifiziert, es sei denn, **admuveüberschreibung** ist angegeben  
   
 > [!NOTE]
 >  Verwenden Sie die Option **admuveüberschreibung** mit Bedacht. Wenn Sie diese Option z. b. beim Verschieben einer Datei in ein Verzeichnis angeben, wird das Verzeichnis gelöscht und durch die Datei ersetzt.  
   
- Bestimmte Attribute des **Datensatz** -Objekts, z. b. die Eigenschaft " [parametriurl](./parenturl-property-ado.md) ", werden nach Abschluss dieses Vorgangs nicht aktualisiert. Aktualisieren Sie die Eigenschaften des **Daten Satz** Objekts, indem Sie den **Datensatz**schließen, und öffnen Sie ihn dann erneut mit der URL des Speicher Orts, an den die Datei oder das Verzeichnis verschoben wurde.  
+ Bestimmte Attribute des **Datensatz** -Objekts, z. b. die Eigenschaft " [parametriurl](./parenturl-property-ado.md) ", werden nach Abschluss dieses Vorgangs nicht aktualisiert. Aktualisieren Sie die Eigenschaften des **Daten Satz** Objekts, indem Sie den **Datensatz** schließen, und öffnen Sie ihn dann erneut mit der URL des Speicher Orts, an den die Datei oder das Verzeichnis verschoben wurde.  
   
- Wenn dieser **Datensatz** von einem [Recordset](./recordset-object-ado.md)abgerufen wurde, wird der neue Speicherort der verschostellten Datei oder des verschobenes Verzeichnisses nicht sofort in das **Recordset**reflektiert. Aktualisieren Sie das **Recordset** , indem Sie es schließen und erneut öffnen.  
+ Wenn dieser **Datensatz** von einem [Recordset](./recordset-object-ado.md)abgerufen wurde, wird der neue Speicherort der verschostellten Datei oder des verschobenes Verzeichnisses nicht sofort in das **Recordset** reflektiert. Aktualisieren Sie das **Recordset** , indem Sie es schließen und erneut öffnen.  
   
 > [!NOTE]
 >  URLs, die das http-Schema verwenden, rufen automatisch den [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung auf](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Weitere Informationen finden Sie unter [absolute und relative URLs](../../guide/data/absolute-and-relative-urls.md).  

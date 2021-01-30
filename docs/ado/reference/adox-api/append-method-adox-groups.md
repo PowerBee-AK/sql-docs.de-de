@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Groups::raw_Append
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5890ffa77884927574f10edeb0d2acc3a428185e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 859e3dea7f5dbdb84efd44aebc766eb2d195a7e3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985491"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164310"
 ---
 # <a name="append-method-adox-groups"></a>Append-Methode (ADOX-Gruppen)
 Fügt der [Gruppen](./groups-collection-adox.md) Auflistung ein neues [Gruppen](./group-object-adox.md) Objekt hinzu.  
@@ -35,7 +35,7 @@ Groups.Append Group
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Gruppieren*  
+ *Gruppe*  
  Das anzufügende **Gruppen** Objekt oder der Name der Gruppe, die erstellt und angefügt werden soll.  
   
 ## <a name="remarks"></a>Bemerkungen  
@@ -44,7 +44,7 @@ Groups.Append Group
  Wenn der Anbieter das Erstellen von Gruppen nicht unterstützt, tritt ein Fehler auf.  
   
 > [!NOTE]
->  Vor dem Anhängen eines **Group** -Objekts an die **Groups** -Auflistung eines **User** -Objekts muss bereits ein **Gruppen** Objekt mit demselben [Namen](./name-property-adox.md) wie das angefügte-Objekt in der **Groups** -Auflistung des **Katalogs**vorhanden sein.  
+>  Vor dem Anhängen eines **Group** -Objekts an die **Groups** -Auflistung eines **User** -Objekts muss bereits ein **Gruppen** Objekt mit demselben [Namen](./name-property-adox.md) wie das angefügte-Objekt in der **Groups** -Auflistung des **Katalogs** vorhanden sein.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Groups-Collection (ADOX)](./groups-collection-adox.md)  

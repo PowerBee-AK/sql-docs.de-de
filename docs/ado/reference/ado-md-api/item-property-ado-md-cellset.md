@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Item
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 997777e853a54ae56175b4b5795087e67079813b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6d2fe7bb3d13b988b7bc25b6d3f17a5b2ccf945a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986601"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164537"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item-Eigenschaft (ADO MD Cellset)
 Ruft eine Zelle aus einem [Cellset](./cellset-object-ado-md.md) mithilfe ihrer Koordinaten ab.  
@@ -57,9 +57,9 @@ Cellset.Item ( Positions )Cellset ( Positions )
   
  Das *Positions* Argument gibt an, welche Zelle zurückgegeben werden soll. Sie können die Zelle anhand der Ordinalposition oder der Position entlang jeder Achse angeben. Wenn Sie die Zelle auf jeder Achse nach Position angeben, können Sie den numerischen Wert der Position oder die Namen der Elemente für jede Position angeben.  
   
- Die Ordinalposition ist eine Zahl, die eine Zelle innerhalb des **Cellsets**eindeutig identifiziert. Konzeptionell werden Zellen in einem **Cellset** nummeriert, als ob das **Cellset** ein *p*-dimensionales Array wäre, wobei *p* für die Anzahl der Achsen steht. Die Zellen werden in zeilengerichteter Reihenfolge adressiert. Im folgenden finden Sie die Formel zum Berechnen der Ordinalzahl einer Zelle:  
+ Die Ordinalposition ist eine Zahl, die eine Zelle innerhalb des **Cellsets** eindeutig identifiziert. Konzeptionell werden Zellen in einem **Cellset** nummeriert, als ob das **Cellset** ein *p*-dimensionales Array wäre, wobei *p* für die Anzahl der Achsen steht. Die Zellen werden in zeilengerichteter Reihenfolge adressiert. Im folgenden finden Sie die Formel zum Berechnen der Ordinalzahl einer Zelle:  
   
- Wenn Elementnamen als Zeichen folgen an das **Element**weitergegeben werden, müssen die Member in aufsteigender Reihenfolge der numerischen Achsen Bezeichner aufgelistet werden. Innerhalb einer Achse müssen die Member in aufsteigender Reihenfolge der Dimensions Schachtelung aufgeführt werden, d. h., der Member der äußersten Dimension kommt zuerst an, gefolgt von Membern der inneren Dimensionen. Jede Dimension sollte durch eine separate Zeichenfolge dargestellt werden, und die Liste der Element Zeichenfolgen sollte durch Kommas getrennt werden.  
+ Wenn Elementnamen als Zeichen folgen an das **Element** weitergegeben werden, müssen die Member in aufsteigender Reihenfolge der numerischen Achsen Bezeichner aufgelistet werden. Innerhalb einer Achse müssen die Member in aufsteigender Reihenfolge der Dimensions Schachtelung aufgeführt werden, d. h., der Member der äußersten Dimension kommt zuerst an, gefolgt von Membern der inneren Dimensionen. Jede Dimension sollte durch eine separate Zeichenfolge dargestellt werden, und die Liste der Element Zeichenfolgen sollte durch Kommas getrennt werden.  
   
 > [!NOTE]
 >  Das Abrufen von Zellen nach Elementnamen wird vom Datenanbieter möglicherweise nicht unterstützt. Weitere Informationen finden Sie in der Dokumentation für Ihren Anbieter.  

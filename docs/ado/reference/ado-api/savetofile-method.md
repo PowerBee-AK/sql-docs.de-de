@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Stream::raw_SaveToFile
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6aa3269e73f9823eb47dddeb039b62e3affdd3c6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e52fe6b3b26a8bc4832952940c7e84c736f2da5e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989291"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166588"
 ---
 # <a name="savetofile-method"></a>SaveToFile-Methode
 Speichert den binären Inhalt eines [Streams](./stream-object-ado.md) in einer Datei.  
@@ -39,13 +39,13 @@ Stream.SaveToFile FileName, SaveOptions
  Ein **Zeichen** folgen Wert, der den voll qualifizierten Namen der Datei enthält, in der der Inhalt des **Streams** gespeichert wird. Sie können an einem beliebigen gültigen lokalen Speicherort oder an einem beliebigen Speicherort speichern, auf den Sie über einen UNC-Wert zugreifen können.  
   
  *SaveOptions*  
- Ein [saveoptionsenum](./saveoptionsenum.md) -Wert, der angibt, ob eine neue Datei von **savedefile**erstellt werden soll, wenn Sie nicht bereits vorhanden ist. Der Standardwert ist **adsavecreatenotexists**. Mit diesen Optionen können Sie angeben, dass ein Fehler auftritt, wenn die angegebene Datei nicht vorhanden ist. Sie können auch angeben, dass **savedefile** den aktuellen Inhalt einer vorhandenen Datei überschreibt.  
+ Ein [saveoptionsenum](./saveoptionsenum.md) -Wert, der angibt, ob eine neue Datei von **savedefile** erstellt werden soll, wenn Sie nicht bereits vorhanden ist. Der Standardwert ist **adsavecreatenotexists**. Mit diesen Optionen können Sie angeben, dass ein Fehler auftritt, wenn die angegebene Datei nicht vorhanden ist. Sie können auch angeben, dass **savedefile** den aktuellen Inhalt einer vorhandenen Datei überschreibt.  
   
 > [!NOTE]
 >  Wenn Sie eine vorhandene Datei überschreiben (wenn **adsavecreateüberschreit** festgelegt ist), werden alle Bytes aus der ursprünglichen vorhandenen Datei, die auf die neue [EOS](./eos-property.md)folgt, von **savedefile** abgeschnitten.  
   
 ## <a name="remarks"></a>Bemerkungen  
- **Savedefile** kann verwendet werden, um den Inhalt eines Daten **Strom** Objekts in eine lokale Datei zu kopieren. Der Inhalt oder die Eigenschaften des Daten **Strom** Objekts sind nicht geändert. Das **Stream** -Objekt muss vor dem Aufrufen von **SaveToFile**geöffnet sein.  
+ **Savedefile** kann verwendet werden, um den Inhalt eines Daten **Strom** Objekts in eine lokale Datei zu kopieren. Der Inhalt oder die Eigenschaften des Daten **Strom** Objekts sind nicht geändert. Das **Stream** -Objekt muss vor dem Aufrufen von **SaveToFile** geöffnet sein.  
   
  Mit dieser Methode wird die Zuordnung des Daten **Strom** Objekts zu seiner zugrunde liegenden Quelle nicht geändert. Das **Stream** -Objekt wird nach wie vor mit der ursprünglichen URL oder dem **Daten Satz** verknüpft, der beim Öffnen der Quelle war.  
   

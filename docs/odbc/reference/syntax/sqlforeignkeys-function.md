@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLForeignKeys
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 802153837d53c6886b44511fbdffe6efa6b83281
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12ed4d570ac635f2de0db8388a4f6f01efbb2608
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491303"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165312"
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys-Funktion
 **Konformitäts**  
@@ -70,7 +70,7 @@ SQLRETURN SQLForeignKeys(
  Wenn das SQL_ATTR_METADATA_ID-Anweisungs Attribut auf SQL_TRUE festgelegt ist, wird *PKCatalogName* als Bezeichner behandelt, und die Groß-/Kleinschreibung ist nicht signifikant. Wenn Sie SQL_FALSE ist, ist " *PKCatalogName* " ein normales Argument. Sie wird buchstäblich behandelt, und die Groß-/Kleinschreibung ist von Bedeutung. Weitere Informationen finden Sie unter [Argumente in Katalog Funktionen](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
  *NameLength1*  
- Der Länge von **PKCatalogName*in Zeichen.  
+ Der Länge von **PKCatalogName* in Zeichen.  
   
  *Pkschemaname*  
  Der Schema Name der Primärschlüssel Tabelle. Wenn ein Treiber für einige Tabellen Schemas unterstützt, aber nicht für andere, z. b. wenn der Treiber Daten von einem anderen DBMSs abruft, gibt eine leere Zeichenfolge ("") die Tabellen an, die keine Schemas aufweisen. " *Pkschemaname* " darf kein Zeichen folgen Suchmuster enthalten.  
@@ -78,7 +78,7 @@ SQLRETURN SQLForeignKeys(
  Wenn das SQL_ATTR_METADATA_ID-Anweisungs Attribut auf SQL_TRUE festgelegt ist, wird *pkschemaname* als Bezeichner behandelt, und die Groß-/Kleinschreibung ist nicht signifikant. Wenn Sie SQL_FALSE ist, ist " *pkschemaname* " ein normales Argument. Sie wird buchstäblich behandelt, und die Groß-/Kleinschreibung ist von Bedeutung.  
   
  *NameLength2*  
- Der Länge von **pkschemaname*in Zeichen.  
+ Der Länge von **pkschemaname* in Zeichen.  
   
  *PKTableName*  
  Der Name der Primärschlüssel Tabelle. " *PKTableName* " darf kein Muster für eine Zeichen folgen Suche enthalten.  
@@ -86,7 +86,7 @@ SQLRETURN SQLForeignKeys(
  Wenn das SQL_ATTR_METADATA_ID-Anweisungs Attribut auf SQL_TRUE festgelegt ist, wird *PKTableName* als Bezeichner behandelt, und die Groß-/Kleinschreibung ist nicht signifikant. Wenn Sie SQL_FALSE ist, ist " *PKTableName* " ein normales Argument. Sie wird buchstäblich behandelt, und die Groß-/Kleinschreibung ist von Bedeutung.  
   
  *NameLength3*  
- Der Länge von **PKTableName*in Zeichen.  
+ Der Länge von **PKTableName* in Zeichen.  
   
  *Parameter FKCatalogName*  
  Der Katalog Name der Fremdschlüssel Tabelle. Wenn ein Treiber Kataloge für einige Tabellen unterstützt, aber nicht für andere, z. b. wenn der Treiber Daten von einem anderen DBMSs abruft, gibt eine leere Zeichenfolge ("") die Tabellen an, die nicht über Kataloge verfügen. " *Skcatalogname* " darf kein Zeichen folgen Suchmuster enthalten.  
@@ -94,7 +94,7 @@ SQLRETURN SQLForeignKeys(
  Wenn das SQL_ATTR_METADATA_ID-Anweisungs Attribut auf SQL_TRUE festgelegt ist, wird *FKCatalogName* als Bezeichner behandelt, und die Groß-/Kleinschreibung ist nicht signifikant. Wenn Sie SQL_FALSE ist, ist " *skcatalogname* " ein normales Argument. Sie wird buchstäblich behandelt, und die Groß-/Kleinschreibung ist von Bedeutung.  
   
  *NameLength4*  
- Der Länge*von * "**" in Zeichen.  
+ Der Länge *von * "**" in Zeichen.  
   
  *Name des Datei namens*  
  Der Schema Name der Fremdschlüssel Tabelle. Wenn ein Treiber für einige Tabellen Schemas unterstützt, aber nicht für andere, z. b. wenn der Treiber Daten von einem anderen DBMSs abruft, gibt eine leere Zeichenfolge ("") die Tabellen an, die keine Schemas aufweisen. "File Schema *Name* " darf kein Zeichen folgen Suchmuster enthalten.  
@@ -102,7 +102,7 @@ SQLRETURN SQLForeignKeys(
  Wenn das SQL_ATTR_METADATA_ID-Anweisungs Attribut auf SQL_TRUE festgelegt ist, wird *fkschemaname* als Bezeichner behandelt, und die Groß-/Kleinschreibung ist nicht signifikant. Wenn Sie SQL_FALSE ist, ist "f. Schema *Name* " ein normales Argument. Sie wird buchstäblich behandelt, und die Groß-/Kleinschreibung ist von Bedeutung.  
   
  *NameLength5*  
- Der Länge von * File Schema*Name*in Zeichen.  
+ Der Länge von * File Schema *Name* in Zeichen.  
   
  *"File Name"*  
  Der Name der Fremdschlüssel Tabelle. " *Sktablename* " darf kein Zeichen folgen Suchmuster enthalten.  
@@ -110,26 +110,26 @@ SQLRETURN SQLForeignKeys(
  Wenn das SQL_ATTR_METADATA_ID-Anweisungs Attribut auf SQL_TRUE festgelegt ist, wird *FKTableName* als Bezeichner behandelt, und die Groß-/Kleinschreibung ist nicht signifikant. Wenn Sie SQL_FALSE ist, ist " *f* " ein normales Argument. Sie wird buchstäblich behandelt, und die Groß-/Kleinschreibung ist von Bedeutung.  
   
  *NameLength6*  
- Der Länge*von * "**" in Zeichen.  
+ Der Länge *von * "**" in Zeichen.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **sqlfremdnkeys** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Typ* SQL_HANDLE_STMT und einem *handle* von *StatementHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die normalerweise von **sqlfremdnkeys** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
+ Wenn **sqlfremdnkeys** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Typ* SQL_HANDLE_STMT und einem *handle* von *StatementHandle* abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die normalerweise von **sqlfremdnkeys** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|Beschreibung|  
+|SQLSTATE|Fehler|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08S01|Kommunikations Verbindungsfehler|Die Kommunikationsverbindung zwischen dem Treiber und der Datenquelle, mit der der Treiber verbunden war, ist fehlgeschlagen, bevor die Funktion die Verarbeitung abgeschlossen hat.|  
-|24.000|Ungültiger Cursorstatus|Ein Cursor war auf dem *StatementHandle*geöffnet, und **SQLFetch** oder **SQLFetchScroll** wurde aufgerufen. Dieser Fehler wird vom Treiber-Manager zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** nicht SQL_NO_DATA zurückgegeben hat, und wird vom Treiber zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** SQL_NO_DATA zurückgegeben hat.<br /><br /> Ein Cursor war auf dem *StatementHandle*geöffnet, aber **SQLFetch** oder **SQLFetchScroll** wurde nicht aufgerufen.|  
+|24.000|Ungültiger Cursorstatus|Ein Cursor war auf dem *StatementHandle* geöffnet, und **SQLFetch** oder **SQLFetchScroll** wurde aufgerufen. Dieser Fehler wird vom Treiber-Manager zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** nicht SQL_NO_DATA zurückgegeben hat, und wird vom Treiber zurückgegeben, wenn **SQLFetch** oder **SQLFetchScroll** SQL_NO_DATA zurückgegeben hat.<br /><br /> Ein Cursor war auf dem *StatementHandle* geöffnet, aber **SQLFetch** oder **SQLFetchScroll** wurde nicht aufgerufen.|  
 |40001|Serialisierungsfehler|Für die Transaktion wurde ein Rollback ausgeführt, weil ein Ressourcen Deadlock mit einer anderen Transaktion aufgetreten ist.|  
 |40003|Anweisungs Vervollständigung unbekannt|Bei der zugeordneten Verbindung ist während der Ausführung dieser Funktion ein Fehler aufgetreten, und der Status der Transaktion kann nicht bestimmt werden.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im *\* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
 |HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für " *StatementHandle*" aktiviert. Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für " *StatementHandle*" aufgerufen, und anschließend wurde die Funktion für " *StatementHandle*" erneut aufgerufen.<br /><br /> Die Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **SQLCancel** oder **sqlcancelhandle** für das *StatementHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
-|HY009|Ungültige Verwendung des NULL-Zeigers|(DM) die Argumente " *PKTableName* " und " *sktablename* " waren beide NULL-Zeiger.<br /><br /> Das SQL_ATTR_METADATA_ID Statement-Attribut wurde auf SQL_TRUE festgelegt, das *FKCatalogName* -Argument oder das *PKCatalogName* -Argument war ein NULL-Zeiger, und der SQL_CATALOG_NAME *InfoType* gibt zurück, dass Katalognamen unterstützt werden.<br /><br /> (DM) das SQL_ATTR_METADATA_ID Statement-Attribut wurde auf SQL_TRUE festgelegt, und das Argument *fkschemaname*, *pkschemaname*, *FKTableName*oder *PKTableName* war ein NULL-Zeiger.|  
-|HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das mit dem *StatementHandle*verknüpft ist. Diese asynchrone Funktion wurde noch ausgeführt, als die sqlfremdnkeys-Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für das *StatementHandle* aufgerufen und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für das *StatementHandle* aufgerufen und wird noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** wurde für das *StatementHandle* aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.|  
+|HY009|Ungültige Verwendung des NULL-Zeigers|(DM) die Argumente " *PKTableName* " und " *sktablename* " waren beide NULL-Zeiger.<br /><br /> Das SQL_ATTR_METADATA_ID Statement-Attribut wurde auf SQL_TRUE festgelegt, das *FKCatalogName* -Argument oder das *PKCatalogName* -Argument war ein NULL-Zeiger, und der SQL_CATALOG_NAME *InfoType* gibt zurück, dass Katalognamen unterstützt werden.<br /><br /> (DM) das SQL_ATTR_METADATA_ID Statement-Attribut wurde auf SQL_TRUE festgelegt, und das Argument *fkschemaname*, *pkschemaname*, *FKTableName* oder *PKTableName* war ein NULL-Zeiger.|  
+|HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das mit dem *StatementHandle* verknüpft ist. Diese asynchrone Funktion wurde noch ausgeführt, als die sqlfremdnkeys-Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect** oder **SQLMoreResults** wurde für das *StatementHandle* aufgerufen und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für das *StatementHandle* aufgerufen und wird noch ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** oder **SQLSetPos** wurde für das *StatementHandle* aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.|  
 |HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
 |HY090|Ungültige Zeichen folgen-oder Pufferlänge|(DM) der Wert eines der namens Längen Argumente war kleiner als 0 (null), aber nicht gleich SQL_NTS.|  
 |||Der Wert eines der namens Längen Argumente hat den maximalen Längen Wert für den entsprechenden Namen überschritten. (Siehe "Kommentare")|  
@@ -149,7 +149,7 @@ SQLRETURN SQLForeignKeys(
   
  Wenn \* *FKTableName* einen Tabellennamen enthält, gibt **sqlforeign nkeys** ein Resultset zurück, das alle Fremdschlüssel in der angegebenen Tabelle enthält, die auf Primärschlüssel in anderen Tabellen verweisen, und die Primärschlüssel in den anderen Tabellen, auf die Sie verweisen. Die Liste der Fremdschlüssel in der angegebenen Tabelle enthält keine Fremdschlüssel, die auf eindeutige Einschränkungen in anderen Tabellen verweisen.  
   
- Wenn sowohl \* *PKTableName* als auch \* *FKTableName* Tabellennamen enthalten, gibt **sqlforeign nkeys** die Fremdschlüssel in der in \* *FKTableName* angegebenen Tabelle zurück, die auf den Primärschlüssel der in **PKTableName*angegebenen Tabelle verweisen. Dabei sollte es sich höchstens um einen Schlüssel handeln.  
+ Wenn sowohl \* *PKTableName* als auch \* *FKTableName* Tabellennamen enthalten, gibt **sqlforeign nkeys** die Fremdschlüssel in der in \* *FKTableName* angegebenen Tabelle zurück, die auf den Primärschlüssel der in **PKTableName* angegebenen Tabelle verweisen. Dabei sollte es sich höchstens um einen Schlüssel handeln.  
   
 > [!NOTE]  
 >  Weitere Informationen über die allgemeine Verwendung, Argumente und zurückgegebene Daten von ODBC-Katalog Funktionen finden Sie unter [Katalog Funktionen](../../../odbc/reference/develop-app/catalog-functions.md).  
@@ -180,8 +180,8 @@ SQLRETURN SQLForeignKeys(
 |Fktable_name (ODBC 1,0)|7|Varchar not NULL|Name der Fremdschlüssel Tabelle.|  
 |FKCOLUMN_NAME (ODBC 1,0)|8|Varchar not NULL|Name der Fremdschlüssel Spalte. Der Treiber gibt eine leere Zeichenfolge für eine Spalte zurück, die über keinen Namen verfügt.|  
 |KEY_SEQ (ODBC 1,0)|9|Smallint nicht NULL|Spaltensequenznummer in Key (beginnend mit 1).|  
-|UPDATE_RULE (ODBC 1,0)|10|Smallint|Aktion, die auf den Fremdschlüssel angewendet werden soll, wenn der SQL-Vorgang **aktualisiert**wird. Kann einen der folgenden Werte aufweisen. (Die Tabelle, auf die verwiesen wird, ist die Tabelle mit dem Primärschlüssel; die verweisende Tabelle ist die Tabelle mit dem Fremdschlüssel.)<br /><br /> SQL_CASCADE: Wenn der Primärschlüssel der Tabelle, auf die verwiesen wird, aktualisiert wird, wird auch der Fremdschlüssel der verweisenden Tabelle aktualisiert.<br /><br /> SQL_NO_ACTION: Wenn ein Update des Primärschlüssels der Tabelle, auf die verwiesen wird, einen "verbleibenden Verweis" in der verweisenden Tabelle auslöst (d. h., Zeilen in der verweisenden Tabelle enthalten keine Entsprechungen in der Tabelle, auf die verwiesen wird), wird das Update abgelehnt. Wenn ein Update des fremd Schlüssels der verweisenden Tabelle einen Wert enthält, der nicht als Wert des Primärschlüssels der Tabelle, auf die verwiesen wird, vorhanden ist, wird das Update abgelehnt. (Diese Aktion ist identisch mit der SQL_RESTRICT Aktion in ODBC 2 *. x*.)<br /><br /> SQL_SET_NULL: Wenn eine oder mehrere Zeilen in der Tabelle, auf die verwiesen wird, so aktualisiert werden, dass eine oder mehrere Komponenten des Primärschlüssels geändert werden, werden die Komponenten des fremd Schlüssels in der verweisenden Tabelle, die den geänderten Komponenten des Primärschlüssels entsprechen, in allen übereinstimmenden Zeilen der verweisenden Tabelle auf NULL festgelegt.<br /><br /> SQL_SET_DEFAULT: Wenn eine oder mehrere Zeilen in der Tabelle, auf die verwiesen wird, so aktualisiert werden, dass eine oder mehrere Komponenten des Primärschlüssels geändert werden, werden die Komponenten des fremd Schlüssels in der verweisenden Tabelle, die den geänderten Komponenten des Primärschlüssels entsprechen, auf die entsprechenden Standardwerte in allen übereinstimmenden Zeilen der verweisenden Tabelle festgelegt.<br /><br /> NULL, wenn nicht auf die Datenquelle anwendbar.|  
-|DELETE_RULE (ODBC 1,0)|11|Smallint|Aktion, die auf den Fremdschlüssel angewendet werden soll, wenn der SQL-Vorgang **gelöscht**wird. Kann einen der folgenden Werte aufweisen. (Die Tabelle, auf die verwiesen wird, ist die Tabelle mit dem Primärschlüssel; die verweisende Tabelle ist die Tabelle mit dem Fremdschlüssel.)<br /><br /> SQL_CASCADE: Wenn eine Zeile in der Tabelle, auf die verwiesen wird, gelöscht wird, werden auch alle übereinstimmenden Zeilen in den verweisenden Tabellen gelöscht.<br /><br /> SQL_NO_ACTION: Wenn das Löschen einer Zeile in der Tabelle, auf die verwiesen wird, in der verweisenden Tabelle einen "verbleibenden Verweis" verursachen würde (d. h., Zeilen in der verweisenden Tabelle enthalten keine Entsprechungen in der Tabelle, auf die verwiesen wird), wird das Update abgelehnt. (Diese Aktion ist identisch mit der SQL_RESTRICT Aktion in ODBC 2 *. x*.)<br /><br /> SQL_SET_NULL: Wenn eine oder mehrere Zeilen in der Tabelle, auf die verwiesen wird, gelöscht werden, wird jede Komponente des fremd Schlüssels der verweisenden Tabelle in allen übereinstimmenden Zeilen der verweisenden Tabelle auf NULL festgelegt.<br /><br /> SQL_SET_DEFAULT: Wenn eine oder mehrere Zeilen in der Tabelle, auf die verwiesen wird, gelöscht werden, wird jede Komponente des fremd Schlüssels der verweisenden Tabelle auf den anwendbaren Standardwert in allen übereinstimmenden Zeilen der verweisenden Tabelle festgelegt.<br /><br /> NULL, wenn nicht auf die Datenquelle anwendbar.|  
+|UPDATE_RULE (ODBC 1,0)|10|Smallint|Aktion, die auf den Fremdschlüssel angewendet werden soll, wenn der SQL-Vorgang **aktualisiert** wird. Kann einen der folgenden Werte aufweisen. (Die Tabelle, auf die verwiesen wird, ist die Tabelle mit dem Primärschlüssel; die verweisende Tabelle ist die Tabelle mit dem Fremdschlüssel.)<br /><br /> SQL_CASCADE: Wenn der Primärschlüssel der Tabelle, auf die verwiesen wird, aktualisiert wird, wird auch der Fremdschlüssel der verweisenden Tabelle aktualisiert.<br /><br /> SQL_NO_ACTION: Wenn ein Update des Primärschlüssels der Tabelle, auf die verwiesen wird, einen "verbleibenden Verweis" in der verweisenden Tabelle auslöst (d. h., Zeilen in der verweisenden Tabelle enthalten keine Entsprechungen in der Tabelle, auf die verwiesen wird), wird das Update abgelehnt. Wenn ein Update des fremd Schlüssels der verweisenden Tabelle einen Wert enthält, der nicht als Wert des Primärschlüssels der Tabelle, auf die verwiesen wird, vorhanden ist, wird das Update abgelehnt. (Diese Aktion ist identisch mit der SQL_RESTRICT Aktion in ODBC 2 *. x*.)<br /><br /> SQL_SET_NULL: Wenn eine oder mehrere Zeilen in der Tabelle, auf die verwiesen wird, so aktualisiert werden, dass eine oder mehrere Komponenten des Primärschlüssels geändert werden, werden die Komponenten des fremd Schlüssels in der verweisenden Tabelle, die den geänderten Komponenten des Primärschlüssels entsprechen, in allen übereinstimmenden Zeilen der verweisenden Tabelle auf NULL festgelegt.<br /><br /> SQL_SET_DEFAULT: Wenn eine oder mehrere Zeilen in der Tabelle, auf die verwiesen wird, so aktualisiert werden, dass eine oder mehrere Komponenten des Primärschlüssels geändert werden, werden die Komponenten des fremd Schlüssels in der verweisenden Tabelle, die den geänderten Komponenten des Primärschlüssels entsprechen, auf die entsprechenden Standardwerte in allen übereinstimmenden Zeilen der verweisenden Tabelle festgelegt.<br /><br /> NULL, wenn nicht auf die Datenquelle anwendbar.|  
+|DELETE_RULE (ODBC 1,0)|11|Smallint|Aktion, die auf den Fremdschlüssel angewendet werden soll, wenn der SQL-Vorgang **gelöscht** wird. Kann einen der folgenden Werte aufweisen. (Die Tabelle, auf die verwiesen wird, ist die Tabelle mit dem Primärschlüssel; die verweisende Tabelle ist die Tabelle mit dem Fremdschlüssel.)<br /><br /> SQL_CASCADE: Wenn eine Zeile in der Tabelle, auf die verwiesen wird, gelöscht wird, werden auch alle übereinstimmenden Zeilen in den verweisenden Tabellen gelöscht.<br /><br /> SQL_NO_ACTION: Wenn das Löschen einer Zeile in der Tabelle, auf die verwiesen wird, in der verweisenden Tabelle einen "verbleibenden Verweis" verursachen würde (d. h., Zeilen in der verweisenden Tabelle enthalten keine Entsprechungen in der Tabelle, auf die verwiesen wird), wird das Update abgelehnt. (Diese Aktion ist identisch mit der SQL_RESTRICT Aktion in ODBC 2 *. x*.)<br /><br /> SQL_SET_NULL: Wenn eine oder mehrere Zeilen in der Tabelle, auf die verwiesen wird, gelöscht werden, wird jede Komponente des fremd Schlüssels der verweisenden Tabelle in allen übereinstimmenden Zeilen der verweisenden Tabelle auf NULL festgelegt.<br /><br /> SQL_SET_DEFAULT: Wenn eine oder mehrere Zeilen in der Tabelle, auf die verwiesen wird, gelöscht werden, wird jede Komponente des fremd Schlüssels der verweisenden Tabelle auf den anwendbaren Standardwert in allen übereinstimmenden Zeilen der verweisenden Tabelle festgelegt.<br /><br /> NULL, wenn nicht auf die Datenquelle anwendbar.|  
 |Fk_name (ODBC 2,0)|12|Varchar|Der Name des fremd Schlüssels. NULL, wenn nicht auf die Datenquelle anwendbar.|  
 |PK_NAME (ODBC 2,0)|13|Varchar|Name des Primärschlüssels. NULL, wenn nicht auf die Datenquelle anwendbar.|  
 |Verzögerung (ODBC 3,0)|14|Smallint|SQL_INITIALLY_DEFERRED, SQL_INITIALLY_IMMEDIATE SQL_NOT_DEFERRABLE.|  
@@ -330,6 +330,6 @@ SQLFreeStmt(hstmt, SQL_DROP);
 |Zurückgeben der Spalten eines Primärschlüssels|[SQLPrimaryKeys-Funktion](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|  
 |Zurückgeben von Tabellenstatistiken und Indizes|[SQLStatistics-Funktion](../../../odbc/reference/syntax/sqlstatistics-function.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

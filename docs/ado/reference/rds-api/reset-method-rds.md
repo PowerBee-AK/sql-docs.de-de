@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Reset method [ADO]
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fcebd112b389fe98b69b25852ef0504e88890261
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: b4d1fa7427fd4c55ea8c53702ef4ac6a4a68b9b8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724259"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166135"
 ---
 # <a name="reset-method-rds"></a>Reset-Methode (RDS)
 Führt die Sortierung oder den Filter für ein Client seitiges **Recordset** basierend auf den angegebenen Sortier-und Filtereigenschaften aus.  
@@ -44,7 +44,7 @@ DataControl.Reset(value)
 ## <a name="remarks"></a>Bemerkungen  
  Die Eigenschaften [SortColumn](./sortcolumn-property-rds.md), [SortDirection](./sortdirection-property-rds.md), [FilterValue](./filtervalue-property-rds.md), [Filterkriterium](./filtercriterion-property-rds.md)und [FilterColumn](./filtercolumn-property-rds.md) stellen Sortier-und Filterfunktionen für den Client seitigen Cache bereit. Die Sortierfunktion ordnet Datensätze nach Werten aus einer Spalte an. Die Filterfunktion zeigt eine Teilmenge der Datensätze basierend auf einem Suchkriterium an, während das vollständige [Recordset](../ado-api/recordset-object-ado.md) im Cache beibehalten wird. Die **Reset** -Methode führt die Kriterien aus und ersetzt das aktuelle **Recordset** durch ein Aktualisier bares **Recordset**.  
   
- Wenn Änderungen an den ursprünglichen Daten vorgenommen wurden, die noch nicht übermittelt wurden, tritt bei der **Reset** -Methode ein Fehler auf. Verwenden Sie zunächst die [SubmitChanges](./submitchanges-method-rds.md) -Methode, um Änderungen in einem Lese-/schreibrecordset zu speichern, und verwenden Sie dann die **Reset** -Methode, um die Datensätze zu sortieren oder zu filtern. **Recordset**  
+ Wenn Änderungen an den ursprünglichen Daten vorgenommen wurden, die noch nicht übermittelt wurden, tritt bei der **Reset** -Methode ein Fehler auf. Verwenden Sie zunächst die [SubmitChanges](./submitchanges-method-rds.md) -Methode, um Änderungen in einem Lese-/schreibrecordset zu speichern, und verwenden Sie dann die **Reset** -Methode, um die Datensätze zu sortieren oder zu filtern.   
   
  Wenn Sie mehr als einen Filter für das Rowset ausführen möchten, können Sie das optionale *boolesche* Argument mit der **Reset** -Methode verwenden. Dies wird anhand des folgenden Beispiels veranschaulicht:  
   

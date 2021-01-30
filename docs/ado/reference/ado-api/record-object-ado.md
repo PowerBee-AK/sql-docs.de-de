@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Record
@@ -16,22 +16,22 @@ helpviewer_keywords:
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6066d43bfa52d65ee133fd748f76fc651fac7379
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b6064030bd26ab6abb0bb003b2fcf26e72c4f24d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989861"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166745"
 ---
 # <a name="record-object-ado"></a>Record-Objekt (ADO)
 Stellt eine Zeile aus einem [Recordset](./recordset-object-ado.md) oder dem Datenanbieter oder ein Objekt dar, das von einem semistrukturierten Datenanbieter zurückgegeben wird, z. b. eine Datei oder ein Verzeichnis.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Ein **Datensatz** -Objekt stellt eine Daten Zeile dar und weist einige konzeptionelle Ähnlichkeiten mit einem einzeiligen **Recordset**auf. Abhängig von den Funktionen Ihres Anbieters können **Daten Satz** Objekte direkt von Ihrem Anbieter zurückgegeben werden, statt eines einzeiligen **Recordsets**, z. b. Wenn eine SQL-Abfrage ausgeführt wird, die nur eine Zeile auswählt. Oder ein **Datensatz** -Objekt kann direkt von einem **Recordset** -Objekt abgerufen werden. Oder Sie können einen **Datensatz** direkt von einem Anbieter an teilweise strukturierte Daten (z. b. den Microsoft Exchange OLE DB-Anbieter) zurückgeben.  
+ Ein **Datensatz** -Objekt stellt eine Daten Zeile dar und weist einige konzeptionelle Ähnlichkeiten mit einem einzeiligen **Recordset** auf. Abhängig von den Funktionen Ihres Anbieters können **Daten Satz** Objekte direkt von Ihrem Anbieter zurückgegeben werden, statt eines einzeiligen **Recordsets**, z. b. Wenn eine SQL-Abfrage ausgeführt wird, die nur eine Zeile auswählt. Oder ein **Datensatz** -Objekt kann direkt von einem **Recordset** -Objekt abgerufen werden. Oder Sie können einen **Datensatz** direkt von einem Anbieter an teilweise strukturierte Daten (z. b. den Microsoft Exchange OLE DB-Anbieter) zurückgeben.  
   
- Sie können die Felder, die dem **Daten Satz** Objekt zugeordnet sind, mithilfe der [Fields](./fields-collection-ado.md) -Auflistung für das **Datensatz** -Objekt anzeigen. ADO ermöglicht Objektwert Spalten einschließlich **Recordset**, **SAFEARRAY**und skalare Werte in der **Fields** -Auflistung von **Datensatz** -Objekten.  
+ Sie können die Felder, die dem **Daten Satz** Objekt zugeordnet sind, mithilfe der [Fields](./fields-collection-ado.md) -Auflistung für das **Datensatz** -Objekt anzeigen. ADO ermöglicht Objektwert Spalten einschließlich **Recordset**, **SAFEARRAY** und skalare Werte in der **Fields** -Auflistung von **Datensatz** -Objekten.  
   
- Wenn das **Datensatz** -Objekt eine Zeile in einem **Recordset**darstellt, ist es möglich, mit der [Source](./source-property-ado-record.md) -Eigenschaft zu diesem ursprünglichen **Recordset** zurückzukehren.  
+ Wenn das **Datensatz** -Objekt eine Zeile in einem **Recordset** darstellt, ist es möglich, mit der [Source](./source-property-ado-record.md) -Eigenschaft zu diesem ursprünglichen **Recordset** zurückzukehren.  
   
  Das **Datensatz** -Objekt kann auch von semistrukturierten Datenanbietern wie dem [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)verwendet werden, um Struktur strukturierte Namespaces zu modellieren. Jeder Knoten in der Struktur ist ein **Datensatz** -Objekt mit zugeordneten Spalten. Die Spalten können die Attribute dieses Knotens und andere relevante Informationen darstellen. Das **Datensatz** -Objekt kann sowohl einen Endknoten als auch einen nicht-Blattknoten in der Baumstruktur darstellen. Nicht Blattknoten haben andere Knoten als ihren Inhalt, aber Blattknoten haben keinen solchen Inhalt. Blattknoten enthalten in der Regel binäre Datenströme, und auch nicht Blattknoten können über einen standardmäßigen binären Stream verfügen. Eigenschaften für das **Datensatz** -Objekt identifizieren den Knotentyp.  
   
@@ -60,7 +60,7 @@ Stellt eine Zeile aus einem [Recordset](./recordset-object-ado.md) oder dem Date
   
 -   Gibt den aktuellen Status des **Datensatzes** mit der [State](./state-property-ado.md) -Eigenschaft an.  
   
--   Geben Sie den Typ des **Datensatzes**  -  *einfach*, Auflistung oder *strukturiertes Dokument* mit der [RecordType](./recordtype-property-ado.md)-Eigenschaft an. *collection*  
+-   Geben Sie den Typ des **Datensatzes**  -  *einfach*, Auflistung oder *strukturiertes Dokument* mit der [RecordType](./recordtype-property-ado.md)-Eigenschaft an.   
   
 -   Beenden Sie die Ausführung eines asynchronen Vorgangs mit der [Cancel](./cancel-method-ado.md) -Methode.  
   
