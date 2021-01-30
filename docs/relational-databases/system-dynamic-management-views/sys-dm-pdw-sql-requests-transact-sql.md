@@ -6,19 +6,19 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: 44e19609-902c-46cf-acdf-19ea75011365
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 360d6c5f5535b0e0702d1c7aede8721f27f88daf
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: fbb924edb6bd5d6b246ee986b7f600576a179a61
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482485"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99138816"
 ---
 # <a name="sysdm_pdw_sql_requests-transact-sql"></a>sys.dm_pdw_sql_requests (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "97482485"
 |total_elapsed_time|**int**|Stellt die Zeit in Millisekunden dar, die die Abfrage Verteilung ausgeführt wurde.|Größer oder gleich 0 (null). Entspricht dem Delta von start_time und end_time für abgeschlossene, fehlgeschlagene oder abgebrochene Abfrage Verteilungen.<br /><br /> Wenn total_elapsed_time den maximalen Wert für eine ganze Zahl überschreitet, ist total_elapsed_time weiterhin der Höchstwert. Mit dieser Bedingung wird die Warnung "der Höchstwert wurde überschritten" generiert.<br /><br /> Der maximale Wert in Millisekunden entspricht 24,8 Tagen.|  
 |row_count|**bigint**|Anzahl der von dieser Abfrage Verteilung geänderten oder gelesenen Zeilen.|-1 für Vorgänge, die keine Daten ändern oder zurückgeben, z. b. CREATE TABLE und DROP TABLE.|  
 |spid|**int**|Die Sitzungs-ID auf der SQL Server Instanz, die die Abfrage Verteilung ausgeführt hat.||  
-|command|**nvarchar(4000)**|Vollständiger Text des Befehls für diese Abfrage Verteilung.|Eine beliebige gültige Abfrage oder Anforderungs Zeichenfolge.|  
+|-Befehl.|**nvarchar(4000)**|Vollständiger Text des Befehls für diese Abfrage Verteilung.|Eine beliebige gültige Abfrage oder Anforderungs Zeichenfolge.|  
   
  Informationen über die maximale Anzahl von Zeilen, die in dieser Sicht beibehalten werden, finden Sie im Abschnitt "Metadaten" im Thema [Kapazitäts Limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   

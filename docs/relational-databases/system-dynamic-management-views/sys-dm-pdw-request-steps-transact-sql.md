@@ -6,19 +6,19 @@ ms.date: 08/28/2020
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 839a1d906fcd7b6a4a980a7381b4f5fcdcf10d5d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 08d39aff859ad993ec78fba73bfbad800945b461
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644038"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99139526"
 ---
 # <a name="sysdm_pdw_request_steps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "97644038"
 |total_elapsed_time|**int**|Gesamtzeit Spanne in Millisekunden, während der der Abfrage Schritt ausgeführt wurde.|Zwischen 0 und dem Unterschied zwischen end_time und start_time. 0 für Schritte in der Warteschlange.<br /><br /> Wenn total_elapsed_time den maximalen Wert für eine ganze Zahl überschreitet, ist total_elapsed_time weiterhin der Höchstwert. Mit dieser Bedingung wird die Warnung "der Höchstwert wurde überschritten" generiert.<br /><br /> Der maximale Wert in Millisekunden entspricht 24,8 Tagen.|  
 |row_count|**bigint**|Die Gesamtanzahl der von dieser Anforderung geänderten oder zurückgegebenen Zeilen.|Die Anzahl der Zeilen, auf die sich der Schritt ausgewirkt hat.  Größer oder gleich 0 (null) für Daten Vorgangs Schritte.  -1 für die Schritte, die nicht für Daten ausgeführt werden.|  
 |estimated_rows|**bigint**|Gesamtanzahl der Arbeits Zeilen, die während der Kompilierung der Abfrage berechnet wurden.|Die Anzahl der Zeilen, die durch den Schritt geschätzt werden.  Größer oder gleich 0 (null) für Daten Vorgangs Schritte.  -1 für die Schritte, die nicht für Daten ausgeführt werden.|  
-|command|**nvarchar(4000)**|Enthält den vollständigen Text des Befehls dieses Schritts.|Eine beliebige gültige Anforderungs Zeichenfolge für einen Schritt. NULL, wenn der Vorgang vom Typ MetaDataCreateOperation ist. Wird abgeschnitten, wenn mehr als 4000 Zeichen enthalten sind.|  
+|-Befehl.|**nvarchar(4000)**|Enthält den vollständigen Text des Befehls dieses Schritts.|Eine beliebige gültige Anforderungs Zeichenfolge für einen Schritt. NULL, wenn der Vorgang vom Typ MetaDataCreateOperation ist. Wird abgeschnitten, wenn mehr als 4000 Zeichen enthalten sind.|  
   
  Informationen über die maximale Anzahl von Zeilen, die in dieser Sicht beibehalten werden, finden Sie im Abschnitt maximale System Sicht Werte im Abschnitt "minimal-und Maximalwerte" in der [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] .  
   
