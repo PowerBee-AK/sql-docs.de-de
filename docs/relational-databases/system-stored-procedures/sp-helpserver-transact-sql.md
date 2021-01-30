@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpserver
 - sp_helpserver_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6dace48b51c971095b136190ab1094ea8db79984
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 83d212a6cfb817f3aa28c87ab0999d0488cec5e9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526581"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211920"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @server = ] 'server'` Gibt den Server an, über welche Informationen berichtet werden. Wenn *Server* nicht angegeben ist, meldet alle Server in **master.sys. Server**. *Server* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @server = ] 'server'` Gibt den Server an, über welche Informationen berichtet werden. Wenn *Server* nicht angegeben ist, meldet alle Server in **master.sys. Server**. *Server* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 `[ @optname = ] 'option'` Die Option, die den Server beschreibt. die Option ist vom Datentyp **varchar (** 35 **)**. der Standardwert ist NULL. die folgenden Werte sind *möglich* .  
   
@@ -60,7 +60,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**System**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Remote Sortierung verwenden**|Verwendet die Sortierung einer Remotespalte anstelle der des lokalen Servers.|  
   
-`[ @show_topology = ] 'show_topology'` Die Beziehung des angegebenen Servers zu anderen Servern. *show_topology* ist vom Datentyp **varchar (** 1 **)** und hat den Standardwert NULL. Wenn *show_topology* nicht gleich **t** ist oder NULL ist, gibt **sp_helpserver** die im Resultsets-Abschnitt aufgelisteten Spalten zurück. Wenn *show_topology* neben den in den Resultsets aufgelisteten Spalten gleich **t**ist, gibt **sp_helpserver** auch die **TopX** -und **topy** -Informationen zurück.  
+`[ @show_topology = ] 'show_topology'` Die Beziehung des angegebenen Servers zu anderen Servern. *show_topology* ist vom Datentyp **varchar (** 1 **)** und hat den Standardwert NULL. Wenn *show_topology* nicht gleich **t** ist oder NULL ist, gibt **sp_helpserver** die im Resultsets-Abschnitt aufgelisteten Spalten zurück. Wenn *show_topology* neben den in den Resultsets aufgelisteten Spalten gleich **t** ist, gibt **sp_helpserver** auch die **TopX** -und **topy** -Informationen zurück.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
@@ -77,7 +77,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**connect_timeout**|**int**|Der Timeout Wert für die Verbindung mit dem Verbindungs Server.|  
 |**query_timeout**|**int**|Timeoutwert für Abfragen auf einem Verbindungsserver.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Ein Server kann mehr als einen Status haben.  
   
 ## <a name="permissions"></a>Berechtigungen  

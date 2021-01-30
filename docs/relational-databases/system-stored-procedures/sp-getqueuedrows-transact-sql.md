@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_getqueuedrows_TSQL
 - sp_getqueuedrows
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8aae51ed8d3806fb32375ddebd6d09c1c6c37d1f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ad904065a8270266e7010ff49889d04a8625296f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548026"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183144"
 ---
 # <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +40,9 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @tablename = ] 'tablename'` Der Name der Tabelle. *TableName* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Die Tabelle muss Teil eines Abonnements in einer Warteschlange sein.  
+`[ @tablename = ] 'tablename'` Der Name der Tabelle. *TableName* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert. Die Tabelle muss Teil eines Abonnements in einer Warteschlange sein.  
   
-`[ @owner = ] 'owner'` Der Besitzer des Abonnements. *Owner* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @owner = ] 'owner'` Der Besitzer des Abonnements. *Owner* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 `[ @tranid = ] 'transaction_id'` Ermöglicht das Filtern der Ausgabe nach der Transaktions-ID. *TRANSACTION_ID* ist vom Datentyp **nvarchar (70)** und hat den Standardwert NULL. Falls angegeben, wird die Transaktions-ID angezeigt, die dem Befehl in der Warteschlange zugeordnet ist. Bei einem Wert von NULL werden alle Befehle in der Warteschlange angezeigt.  
   
@@ -56,16 +56,16 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 |-----------------|---------------|-----------------|  
 |**Aktion**|**nvarchar (10)**|Aktionstyp, der bei der Synchronisierung durchgeführt werden soll.<br /><br /> INS= Einfügen<br /><br /> DEL = Löschen<br /><br /> UPD = Aktualisieren|  
 |**Tranid**|**nvarchar (70)**|Die Transaktions-ID, unter der der Befehl ausgeführt wurde.|  
-|**table column1...n**||Der Wert für jede Spalte der Tabelle, die in *TableName*angegeben ist.|  
+|**table column1...n**||Der Wert für jede Spalte der Tabelle, die in *TableName* angegeben ist.|  
 |**msrepl_tran_version**|**uniqueidentifier**|Diese Spalte wird zum Nachverfolgen von Änderungen an replizierten Daten und für die Konflikterkennung auf dem Verleger verwendet. Diese Spalte wird automatisch der Tabelle hinzugefügt.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_getqueuedrows** wird auf Abonnenten verwendet, die am verzögertem Update über eine Warteschlange  
   
  **sp_getqueuedrows** ermittelt Zeilen einer bestimmten Tabelle in einer Abonnement Datenbank, die an einem verzögertem Update in der Warteschlange beteiligt waren, aber derzeit noch nicht vom Warteschlangen Lese-Agent aufgelöst wurden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- **sp_getqueuedrows** erfordert SELECT-Berechtigungen für die Tabelle, die in *TableName*angegeben ist.  
+ **sp_getqueuedrows** erfordert SELECT-Berechtigungen für die Tabelle, die in *TableName* angegeben ist.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   

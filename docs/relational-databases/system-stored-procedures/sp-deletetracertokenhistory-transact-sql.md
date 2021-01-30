@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_deletetracertokenhistory
 - sp_deletetracertokenhistory_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c08b5373109ab3ea6174aac190ed8fb7b04b2e0e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5bc5a6d5191f89d8b31b48939c83674bf0302e15
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543536"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178155"
 ---
 # <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 
@@ -47,7 +47,7 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 Der Name der Veröffentlichung, in die das Überwachungstoken eingefügt wurde. Der Datentyp ist vom Datentyp **vom Datentyp sysname**. Dieser Parameter ist erforderlich.
 
 `[ @tracer_id= ] tracer_id`  
-Die ID des zu löschenden Überwachungstokens. Der Datentyp ist " **int**". Der Standardwert ist *null*. Wenn der Wert *null*ist, werden alle Überwachungs Token gelöscht, die zur Veröffentlichung gehören.
+Die ID des zu löschenden Überwachungstokens. Der Datentyp ist " **int**". Der Standardwert ist *null*. Wenn der Wert *null* ist, werden alle Überwachungs Token gelöscht, die zur Veröffentlichung gehören.
 
 `[ @cutoff_date= ] cutoff_date`  
 Überwachungs Token, die vor diesem Datum in die Veröffentlichung eingefügt wurden, werden gelöscht. Der **Datentyp ist "DateTime**". Der Standardwert lautet *null*.
@@ -68,11 +68,11 @@ Der Name der Veröffentlichungsdatenbank. Der Datentyp ist vom Datentyp **vom Da
 
 **0** (Erfolg) oder **1** (Fehler)
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 **sp_deletetracertokenhistory** wird bei der Transaktions Replikation verwendet.  
 
-Wenn Sie beide Parameter *tracer_id* und *cutoff_date*angeben, tritt ein Fehler auf.
+Wenn Sie beide Parameter *tracer_id* und *cutoff_date* angeben, tritt ein Fehler auf.
 
 Wenn Sie **sp_deletetracertokenhistory** nicht zum Löschen von Überwachungs Token-Metadaten ausführen, werden die Informationen beim regelmäßigen geplanten Verlaufs Bereinigung gelöscht.
 
@@ -80,7 +80,7 @@ Wenn Sie **sp_deletetracertokenhistory** nicht zum Löschen von Überwachungs To
 
 ## <a name="permissions"></a>Berechtigungen
 
-Nur die folgenden Mitarbeiter verfügen über die Berechtigung, **sp_deletetracertokenhistory**auszuführen:
+Nur die folgenden Mitarbeiter verfügen über die Berechtigung, **sp_deletetracertokenhistory** auszuführen:
 
 - Mitglieder der **replmonitor** -Rollen in der Verteilungs Datenbank
 - Mitglieder der festen Server Rolle **sysadmin** .

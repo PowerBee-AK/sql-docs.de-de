@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpsubscription_TSQL
 - sp_helpsubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ff06497437017fd6771a7402c18d16a5ee6f94b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 73fc43bf20a9306d0224392d984b3f2bff74ec6f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543261"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192899"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,13 +43,13 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der zugeordneten Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und **%** hat den Standardwert, mit dem alle Abonnement Informationen für diesen Server zurückgegeben werden.  
+`[ @publication = ] 'publication'` Der Name der zugeordneten Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und **%** hat den Standardwert, mit dem alle Abonnement Informationen für diesen Server zurückgegeben werden.  
   
-`[ @article = ] 'article'` Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** , mit dem alle Abonnement Informationen für die ausgewählten Veröffentlichungen und Abonnenten zurückgegeben werden. Wenn **dies der Wert ist,** wird nur ein Eintrag für das vollständige Abonnement für eine Veröffentlichung zurückgegeben.  
+`[ @article = ] 'article'` Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert **%** , mit dem alle Abonnement Informationen für die ausgewählten Veröffentlichungen und Abonnenten zurückgegeben werden. Wenn **dies der Wert ist,** wird nur ein Eintrag für das vollständige Abonnement für eine Veröffentlichung zurückgegeben.  
   
-`[ @subscriber = ] 'subscriber'` Der Name des Abonnenten, auf dem Abonnement Informationen abgerufen werden sollen. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** , mit dem alle Abonnement Informationen für die ausgewählten Veröffentlichungen und Artikel zurückgegeben werden.  
+`[ @subscriber = ] 'subscriber'` Der Name des Abonnenten, auf dem Abonnement Informationen abgerufen werden sollen. *Subscriber* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert **%** , mit dem alle Abonnement Informationen für die ausgewählten Veröffentlichungen und Artikel zurückgegeben werden.  
   
-`[ @destination_db = ] 'destination_db'` Der Name der Zieldatenbank. *destination_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** .  
+`[ @destination_db = ] 'destination_db'` Der Name der Zieldatenbank. *destination_db* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert **%** .  
   
 `[ @found = ] 'found'OUTPUT` Ein Flag, das die Rückgabe von Zeilen angibt. " *found*" ist vom Datentyp **int** und ein Output-Parameter. der Standardwert ist 23456.  
   
@@ -78,10 +78,10 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**Aktualisierungs Modus**|**int**|**0** = schreibgeschützt<br /><br /> **1** = Abonnement mit sofortigem Update|  
 |**distribution job id**|**Binary (16)**|Auftrags-ID des Verteilungs-Agents.|  
 |**loopback_detection**|**bit**|Bestimmt, ob der Verteilungs-Agent Transaktionen des Abonnenten zurück an den Abonnenten sendet:<br /><br /> **0** = sendet zurück.<br /><br /> **1** = sendet nicht zurück.<br /><br /> Wird bei der bidirektionalen Transaktionsreplikation verwendet. Weitere Informationen finden Sie unter [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
-|**offload_enabled**|**bit**|Gibt an, ob festgelegt wurde, dass die Ausführung eines ausgelagerten Replikations-Agents auf dem Abonnenten ausgeführt wird.<br /><br /> Wenn der Wert **0**ist, wird der-Agent auf dem Verleger ausgeführt.<br /><br /> Wenn der Wert **1**ist, wird der-Agent auf dem Abonnenten ausgeführt.|  
+|**offload_enabled**|**bit**|Gibt an, ob festgelegt wurde, dass die Ausführung eines ausgelagerten Replikations-Agents auf dem Abonnenten ausgeführt wird.<br /><br /> Wenn der Wert **0** ist, wird der-Agent auf dem Verleger ausgeführt.<br /><br /> Wenn der Wert **1** ist, wird der-Agent auf dem Abonnenten ausgeführt.|  
 |**offload_server**|**sysname**|Name des Servers, der für die Aktivierung des Remote-Agents aktiviert ist. Wenn der Wert NULL ist, wird der aktuelle offload_server in [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) Tabelle aufgeführt.|  
 |**dts_package_name**|**sysname**|Gibt den Namen des DTS-Pakets (Data Transformation Services) an.|  
-|**dts_package_location**|**int**|Speicherort des DTS-Pakets, wenn dem Abonnement eines zugewiesen wurde. Wenn ein Paket vorhanden ist, gibt der Wert **0** den Speicherort des Pakets auf dem **Verteiler**an. Der Wert **1** gibt den **Abonnenten**an.|  
+|**dts_package_location**|**int**|Speicherort des DTS-Pakets, wenn dem Abonnement eines zugewiesen wurde. Wenn ein Paket vorhanden ist, gibt der Wert **0** den Speicherort des Pakets auf dem **Verteiler** an. Der Wert **1** gibt den **Abonnenten** an.|  
 |**subscriber_security_mode**|**smallint**|Der Sicherheitsmodus auf dem Abonnenten, wobei **1** die Windows-Authentifizierung und **0** die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung bedeutet.|  
 |**subscriber_login**|**sysname**|Der Anmeldename auf dem Abonnenten.|  
 |**subscriber_password**||Das tatsächliche Abonnentenkennwort wird nie zurückgegeben. Das Ergebnis wird durch eine "**&#42;&#42;&#42;&#42;&#42;&#42;**"-Zeichenfolge maskiert.|  
@@ -98,7 +98,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helpsubscription** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

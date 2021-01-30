@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_revoke_login_from_proxy_TSQL
 - sp_revoke_login_from_proxy
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 39857bce8c0fc50c1773709d70e7e477b669b282
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c95315de974558eaf82878d087af09d2ac8e81b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473847"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183073"
 ---
 # <a name="sp_revoke_login_from_proxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +45,9 @@ sp_revoke_login_from_proxy
 ## <a name="arguments"></a>Argumente  
 `[ @name = ] 'name'` Der Name der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung, Server Rolle oder **msdb** -Daten Bank Rolle, für die der Zugriff entfernt werden soll. *Name ist vom Datentyp* **nvarchar (256)** und hat keinen Standardwert.  
   
-`[ @proxy_id = ] id` Die ID des Proxys, für den der Zugriff entfernt werden soll. Es muss entweder eine *ID* oder eine *proxy_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. *id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @proxy_id = ] id` Die ID des Proxys, für den der Zugriff entfernt werden soll. Es muss entweder eine *ID* oder eine *proxy_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. *id* ist vom Datentyp **int** und hat den Standardwert NULL.  
   
-`[ @proxy_name = ] 'proxy_name'` Der Name des Proxys, für den der Zugriff entfernt werden soll. Es muss entweder eine *ID* oder eine *proxy_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @proxy_name = ] 'proxy_name'` Der Name des Proxys, für den der Zugriff entfernt werden soll. Es muss entweder eine *ID* oder eine *proxy_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

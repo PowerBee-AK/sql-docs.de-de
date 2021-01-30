@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_log_shipping_primary_database
 - sp_change_log_shipping_primary_database_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 070065ae6e621c5ea52bf4be50ac0cc99af089f3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1bcd150ff810f5a4a16deb09a7ea72956ccd681
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474497"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181360"
 ---
 # <a name="sp_change_log_shipping_primary_database-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,13 +51,13 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @database = ] 'database'` Der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @database = ] 'database'` Der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname** und hat keinen Standardwert.  
   
 `[ @backup_directory = ] 'backup_directory'` Der Pfad zum Sicherungsordner auf dem primären Server. *backup_directory* ist vom Datentyp **nvarchar (500)** und hat keinen Standardwert und darf nicht NULL sein.  
   
 `[ @backup_share = ] 'backup_share'` Der Netzwerkpfad zum Sicherungs Verzeichnis auf dem primären Server. *backup_share* ist vom Datentyp **nvarchar (500)** und hat keinen Standardwert und darf nicht NULL sein.  
   
-`[ @backup_retention_period = ] 'backup_retention_period'` Der Zeitraum (in Minuten), in dem die Protokoll Sicherungsdatei im Sicherungs Verzeichnis auf dem primären Server beibehalten werden soll. *backup_retention_period* ist vom Datentyp **int**und hat keinen Standardwert und darf nicht NULL sein.  
+`[ @backup_retention_period = ] 'backup_retention_period'` Der Zeitraum (in Minuten), in dem die Protokoll Sicherungsdatei im Sicherungs Verzeichnis auf dem primären Server beibehalten werden soll. *backup_retention_period* ist vom Datentyp **int** und hat keinen Standardwert und darf nicht NULL sein.  
   
 `[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Der Sicherheitsmodus, der zum Herstellen der Verbindung mit dem Überwachungs Server verwendet wird.  
   
@@ -130,7 +130,7 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [log_shipping_primary_databases &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   
   

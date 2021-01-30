@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_requestpeertopologyinfo
 - sp_requestpeertopologyinfo_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 15cd28bd-5a72-41fb-ae1b-726baaa6fad5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2c096777323df0bc2fd02360991df8d527c0dfb7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5cd33688e4a3d5ba5f1b849580f9c180a1ad4d98
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543095"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182046"
 ---
 # <a name="sp_requestpeertopologyinfo-transact-sql"></a>sp_requestpeertopologyinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,15 +40,15 @@ sp_requestpeertopologyinfo [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argumente  
  [ @publication =] '*Veröffentlichung*'  
- Der Name der Veröffentlichung, für die eine topologieübergreifende Statusanforderung ausgeführt werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+ Der Name der Veröffentlichung, für die eine topologieübergreifende Statusanforderung ausgeführt werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
  [ @request_id =] *request_id*  
- Die ID-Nummer, die der Topologiestatusanforderung zugewiesen wird. *request_id* ist vom Datentyp **int**und hat den Standardwert NULL. Diese ID kann von [sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)verwendet werden.  
+ Die ID-Nummer, die der Topologiestatusanforderung zugewiesen wird. *request_id* ist vom Datentyp **int** und hat den Standardwert NULL. Diese ID kann von [sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)verwendet werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_requestpeertopologyinfo wird in einer Peer-zu-Peer-Transaktionsreplikation verwendet. Führen Sie sp_requestpeertopologyinfo aus, bevor Sie [sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)ausführen. Diese Prozeduren werden vom Assistenten zum Konfigurieren der Peer-zu-Peer-Topologie verwendet, können jedoch auch direkt verwendet werden, wenn Sie Topologiedaten in einem XML-Format benötigen. Wenn Sie Tabellen Ergebnisse bevorzugen, Fragen Sie die [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) Systemtabelle ab.  
   
 ## <a name="permissions"></a>Berechtigungen  

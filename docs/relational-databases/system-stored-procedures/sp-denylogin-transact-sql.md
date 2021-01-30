@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_denylogin_TSQL
 - sp_denylogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9133a6ee523c27837da0209c57e620a13187bdd1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7006aaa4a8c7ddf0603264d1c241d09a8e327f5f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546186"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178093"
 ---
 # <a name="sp_denylogin-transact-sql"></a>sp_denylogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +43,13 @@ sp_denylogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @loginame = ] 'login_ '` Der Name eines Windows-Benutzers oder einer Windows-Gruppe. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @loginame = ] 'login_ '` Der Name eines Windows-Benutzers oder einer Windows-Gruppe. *login* ist vom Datentyp **sysname** und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="remarks"></a>Bemerkungen  
- **sp_denylogin** verweigert die Connect SQL-Berechtigung für den Prinzipal auf Serverebene, der dem angegebenen Windows-Benutzer oder der Windows-Gruppe zugeordnet ist. Ist der Serverprinzipal nicht vorhanden, wird er erstellt. Der neue Prinzipal wird in der Katalog Sicht [sys. server_principals &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) sichtbar.  
+ **sp_denylogin** verweigert die Connect SQL-Berechtigung für den Prinzipal auf Serverebene, der dem angegebenen Windows-Benutzer oder der Windows-Gruppe zugeordnet ist. Ist der Serverprinzipal nicht vorhanden, wird er erstellt. Der neue Prinzipal wird in der [sys.server_principals &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) -Katalog Sicht angezeigt.  
   
  **sp_denylogin** kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   

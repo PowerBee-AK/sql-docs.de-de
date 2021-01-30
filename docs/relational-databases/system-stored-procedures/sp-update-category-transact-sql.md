@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_category
 - sp_update_category_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 117f146c4ceea988d5817785494bf2af4dc11814
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c771e031254821562933cd2e7f4d9f51903edba6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542989"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184726"
 ---
 # <a name="sp_update_category-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,22 +43,22 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @class = ] 'class'` Die Klasse der zu aktualisierenden Kategorie. die *Klasse*ist vom Datentyp **varchar (8)** und hat keinen Standardwert. die folgenden Werte sind möglich:  
+`[ @class = ] 'class'` Die Klasse der zu aktualisierenden Kategorie. die *Klasse* ist vom Datentyp **varchar (8)** und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Warnung**|Aktualisiert eine Warnungskategorie.|  
+|**ALERT**|Aktualisiert eine Warnungskategorie.|  
 |**Auftrag**|Aktualisiert eine Auftragskategorie.|  
 |**KOM**|Aktualisiert eine Operatorkategorie.|  
   
-`[ @name = ] 'old_name'` Der aktuelle Name der Kategorie. *old_name*ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @name = ] 'old_name'` Der aktuelle Name der Kategorie. *old_name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @new_name = ] 'new_name'` Der neue Name für die Kategorie. *new_name*ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @new_name = ] 'new_name'` Der neue Name für die Kategorie. *new_name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_update_category** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  

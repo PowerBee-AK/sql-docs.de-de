@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - data_spaces
 - sys.data_spaces_TSQL
@@ -21,12 +21,12 @@ ms.assetid: f39d55fe-2c0f-472d-a77f-cebc6fea95b5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29de7e042334210b8ccf39706ad0f05e8b1f43e0
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 8d6225a241f06a5fd962bcb7d298bfa3e5d52e98
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096854"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182518"
 ---
 # <a name="sysdata_spaces-transact-sql"></a>sys.data_spaces (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "98096854"
 |-----------------|---------------|-----------------|  
 |name|**sysname**|Name des Datenspeicherplatzes, eindeutig innerhalb der Datenbank.|  
 |data_space_id|**int**|ID-Nummer des Datenspeicherplatzes, eindeutig innerhalb der Datenbank.|  
-|type|**char(2)**|Typ des Datenspeicherplatzes:<br /><br /> FG = Dateigruppe (Filegroup)<br /><br /> FD = FILESTREAM-Datendateigruppe<br /><br /> FX = speicheroptimierte Tabellendateigruppe<br /><br /> **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> PS = Partitionsschema (Partition scheme)|  
+|Typ|**char(2)**|Typ des Datenspeicherplatzes:<br /><br /> FG = Dateigruppe (Filegroup)<br /><br /> FD = FILESTREAM-Datendateigruppe<br /><br /> FX = speicheroptimierte Tabellendateigruppe<br /><br /> **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> PS = Partitionsschema (Partition scheme)|  
 |type_desc|**nvarchar(60)**|Beschreibung des Datenspeicherplatztyps:<br /><br /> FILESTREAM_DATA_FILEGROUP<br /><br /> MEMORY_OPTIMIZED_DATA_FILEGROUP<br /><br /> **Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> PARTITION_SCHEME<br /><br /> ROWS_FILEGROUP|  
 |is_default|**bit**|1 = Dies ist der Standard-Datenspeicherplatz. Dieser Standard-Datenspeicherplatz wird verwendet, wenn in einer CREATE TABLE- oder CREATE INDEX-Anweisung keine Dateigruppe und kein Partitionsschema angegeben ist.<br /><br /> 0 = Dies ist nicht der Standard-Datenspeicherplatz.|  
 |is_system|**bit**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> 1 = Der Datenbereich wird für Volltextindexfragmente verwendet.<br /><br /> 0 = Der Datenbereich wird nicht für Volltextindexfragmente verwendet.|  

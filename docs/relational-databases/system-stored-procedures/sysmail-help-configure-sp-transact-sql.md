@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_help_configure_sp
 - sysmail_help_configure_sp_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 53b893ffb155a8e8c1d737177f840347584b6a99
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 21ce11d37659561e172c11fb7b5a899193141166
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538410"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181971"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +40,13 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @parameter_name = ] 'parameter_name'` Der Name der abzurufenden Konfigurationseinstellung. Wenn angegeben, wird der Wert der Konfigurationseinstellung im ** \@ parameter_value** Output-Parameter zurückgegeben. Wenn keine ** \@ parameter_name** angegeben wird, gibt diese gespeicherte Prozedur ein Resultset zurück, das alle Datenbank-E-Mail Konfigurationseinstellungen in der-Instanz enthält.  
+`[ @parameter_name = ] 'parameter_name'` Der Name der abzurufenden Konfigurationseinstellung. Wenn angegeben, wird der Wert der Konfigurationseinstellung im **\@ parameter_value** Output-Parameter zurückgegeben. Wenn keine **\@ parameter_name** angegeben wird, gibt diese gespeicherte Prozedur ein Resultset zurück, das alle Datenbank-E-Mail Konfigurationseinstellungen in der-Instanz enthält.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Wenn keine ** \@ parameter_name** angegeben wird, gibt ein Resultset mit den folgenden Spalten zurück.  
+ Wenn keine **\@ parameter_name** angegeben wird, gibt ein Resultset mit den folgenden Spalten zurück.  
   
 | Spaltenname | Datentyp | BESCHREIBUNG |
 | ----------- | --------- | ----------- |
@@ -54,10 +54,10 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 |**angegebene paramValue**|**nvarchar(256)**|Der Wert des Konfigurationsparameters.|  
 |**description**|**nvarchar(256)**|Die Beschreibung des Konfigurationsparameters.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die gespeicherte Prozedur **sysmail_help_configure_sp** führt die aktuellen Konfigurationseinstellungen für Datenbank-E-Mail für die Instanz auf.  
   
- Wenn eine ** \@ parameter_name** angegeben wird, für ** \@ parameter_value**jedoch kein Ausgabeparameter bereitgestellt wird, erzeugt diese gespeicherte Prozedur keine Ausgabe.  
+ Wenn eine **\@ parameter_name** angegeben wird, für **\@ parameter_value** jedoch kein Ausgabeparameter bereitgestellt wird, erzeugt diese gespeicherte Prozedur keine Ausgabe.  
   
  Die gespeicherte Prozedur **sysmail_help_configure_sp** befindet sich in der **msdb** -Datenbank und im Besitz des **dbo** -Schemas. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen aufgerufen werden.  
   

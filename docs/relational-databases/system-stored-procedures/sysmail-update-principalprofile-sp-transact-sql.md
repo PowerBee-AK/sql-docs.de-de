@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_update_principalprofile_sp
 - sysmail_update_principalprofile_sp_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bba3f6ca7046825f4bdd13e062b67b554b636405
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 85bab8892a9459ee5de954596ffea2be2a5aed92
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492818"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181871"
 ---
 # <a name="sysmail_update_principalprofile_sp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +42,15 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @principal_id = ] principal_id` Die ID des Daten Bank Benutzers oder der Daten Bank Rolle in der **msdb** -Datenbank für die Zuordnung, die geändert werden soll. *principal_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *principal_id* oder *principal_name* angegeben werden.  
+`[ @principal_id = ] principal_id` Die ID des Daten Bank Benutzers oder der Daten Bank Rolle in der **msdb** -Datenbank für die Zuordnung, die geändert werden soll. *principal_id* ist vom Datentyp **int** und hat den Standardwert NULL. Es muss entweder *principal_id* oder *principal_name* angegeben werden.  
   
-`[ @principal_name = ] 'principal_name'` Der Name des Daten Bank Benutzers oder der Daten Bank Rolle in der **msdb** -Datenbank für die zu aktualisierenden Zuordnung. *principal_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es kann entweder *principal_id* oder *principal_name* angegeben werden.  
+`[ @principal_name = ] 'principal_name'` Der Name des Daten Bank Benutzers oder der Daten Bank Rolle in der **msdb** -Datenbank für die zu aktualisierenden Zuordnung. *principal_name* ist vom Datentyp **sysname** und hat den Standardwert NULL. Es kann entweder *principal_id* oder *principal_name* angegeben werden.  
   
-`[ @profile_id = ] profile_id` Die ID des Profils für die Zuordnung, die geändert werden soll. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
+`[ @profile_id = ] profile_id` Die ID des Profils für die Zuordnung, die geändert werden soll. *profile_id* ist vom Datentyp **int** und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
-`[ @profile_name = ] 'profile_name'` Der Name des Profils für die Zuordnung, die geändert werden soll. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
+`[ @profile_name = ] 'profile_name'` Der Name des Profils für die Zuordnung, die geändert werden soll. *profile_name* ist vom Datentyp **sysname** und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
-`[ @is_default = ] 'is_default'` Gibt an, ob dieses Profil das Standardprofil für den Datenbankbenutzer ist. Ein Datenbankbenutzer kann nur ein Standardprofil besitzen. *is_default* ist vom Datentyp **bit**und hat keinen Standardwert.  
+`[ @is_default = ] 'is_default'` Gibt an, ob dieses Profil das Standardprofil für den Datenbankbenutzer ist. Ein Datenbankbenutzer kann nur ein Standardprofil besitzen. *is_default* ist vom Datentyp **bit** und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -61,9 +61,9 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ## <a name="remarks"></a>Bemerkungen  
  Mit dieser gespeicherten Prozedur wird festgelegt, ob das angegebene Profil das Standardprofil für den Datenbankbenutzer ist. Ein Datenbankbenutzer kann nur ein privates Standardprofil besitzen.  
   
- Wenn der Prinzipalname für die Zuordnung auf **public** festgelegt ist oder die Prinzipal-ID für die Zuordnung den Wert **0**hat, wird das öffentliche Profil von dieser gespeicherten Prozedur geändert. Es kann nur ein öffentliches Standardprofil vorhanden sein.  
+ Wenn der Prinzipalname für die Zuordnung auf **public** festgelegt ist oder die Prinzipal-ID für die Zuordnung den Wert **0** hat, wird das öffentliche Profil von dieser gespeicherten Prozedur geändert. Es kann nur ein öffentliches Standardprofil vorhanden sein.  
   
- Wenn ** \@ is_default** den Wert "**1**" hat und der Prinzipal mehr als einem Profil zugeordnet ist, wird das angegebene Profil zum Standardprofil für den Prinzipal. Das zuvor als Standardprofil verwendete Profil ist dem Prinzipal weiter zugeordnet, es ist jedoch nicht mehr als Standardprofil festgelegt.  
+ Wenn **\@ is_default** den Wert "**1**" hat und der Prinzipal mehr als einem Profil zugeordnet ist, wird das angegebene Profil zum Standardprofil für den Prinzipal. Das zuvor als Standardprofil verwendete Profil ist dem Prinzipal weiter zugeordnet, es ist jedoch nicht mehr als Standardprofil festgelegt.  
   
  Die gespeicherte Prozedur **sysmail_update_principalprofile_sp** wird in der **msdb** -Datenbank gespeichert und befindet sich im Besitz des **dbo** -Schemas. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen ausgeführt werden.  
   

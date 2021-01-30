@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLRemoveDSNFromIni
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f49646881539d7c90c057633e7151b31cfe52b52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26bbcf3bf68dda172220323cb7d9b0dc39e3178d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499613"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192484"
 ---
 # <a name="sqlremovedsnfromini-function"></a>SQLRemoveDSNFromIni-Funktion
 **Konformitäts**  
@@ -39,20 +39,20 @@ ms.locfileid: "88499613"
 ```cpp  
   
 BOOL SQLRemoveDSNFromIni(  
-     LPCSTR   lpszDSN);  
+     LPCSTR   lpszDSN);  
 ```  
   
 ## <a name="arguments"></a>Argumente  
  *lpszdsn*  
  Der Der Name der zu entfernenden Datenquelle.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  Die-Funktion gibt true zurück, wenn die Datenquelle entfernt wird oder die Datenquelle nicht in der Odbc.ini-Datei gespeichert wurde. Wenn die Datenquelle nicht entfernt werden kann, wird false zurückgegeben.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **sqlremovedsnfromini** false zurückgibt, kann ein zugeordneter " * \* pferrorcode* "-Wert durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die " * \* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **sqlremovedsnfromini** false zurückgibt, kann ein zugeordneter " *\* pferrorcode* "-Wert durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die " *\* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|Beschreibung|  
+|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
 |ODBC_ERROR_INVALID_DSN|Ungültiger DSN|Das *lpszdsn* -Argument war ungültig.|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_help_profile_sp_TSQL
 - sysmail_help_profile_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bc055632d6d5e924a21fa4204d29dcfa31aaa8b0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 865e871463d8ce15ef08db2d6431634e6e6bc08c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541008"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181952"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +40,9 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @profile_id = ] profile_id` Die Profil-ID, für die Informationen zurückgegeben werden. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @profile_id = ] profile_id` Die Profil-ID, für die Informationen zurückgegeben werden. *profile_id* ist vom Datentyp **int** und hat den Standardwert NULL.  
   
-`[ @profile_name = ] 'profile_name'` Der Profilname, für den Informationen zurückgegeben werden sollen. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+`[ @profile_name = ] 'profile_name'` Der Profilname, für den Informationen zurückgegeben werden sollen. *profile_name* ist vom Datentyp **sysname** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -56,7 +56,7 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 |**name**|**sysname**|Der Profilname des Profils.|  
 |**description**|**nvarchar(256)**|Die Beschreibung des Profils.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn ein Profilname oder eine Profil-ID angegeben ist, gibt **sysmail_help_profile_sp** Informationen zu diesem Profil zurück. Andernfalls gibt **sysmail_help_profile_sp** Informationen zu jedem Profil in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz zurück.  
   
  Die gespeicherte Prozedur **sysmail_help_profile_sp** befindet sich in der **msdb** -Datenbank und im Besitz des **dbo** -Schemas. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen ausgeführt werden.  

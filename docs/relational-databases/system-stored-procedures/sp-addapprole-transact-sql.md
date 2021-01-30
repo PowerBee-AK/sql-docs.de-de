@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addapprole_TSQL
 - sp_addapprole
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fa68e8b0d965fae3a1c27f5ca2705bc003d7b616
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5a48cfb80bab8e9a754cbcb8186de8cb2955f096
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481548"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182852"
 ---
 # <a name="sp_addapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +43,11 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @rolename = ] 'role'` Der Name der neuen Anwendungs Rolle. *Role* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. die *Rolle* muss ein gültiger Bezeichner sein und darf nicht bereits in der aktuellen Datenbank vorhanden sein.  
+`[ @rolename = ] 'role'` Der Name der neuen Anwendungs Rolle. *Role* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert. die *Rolle* muss ein gültiger Bezeichner sein und darf nicht bereits in der aktuellen Datenbank vorhanden sein.  
   
  Namen von Anwendungsrollen können zwischen 1 und 128 Zeichen (Buchstaben, Sonderzeichen und Ziffern) enthalten. Rollennamen dürfen keinen umgekehrten Schrägstrich ( \\ ) und keinen NULL-Wert oder eine leere Zeichenfolge (' ') enthalten.  
   
-`[ @password = ] 'password'` Das Kennwort, das zum Aktivieren der Anwendungs Rolle erforderlich ist. *Password* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Das *Kennwort* darf nicht NULL sein.  
+`[ @password = ] 'password'` Das Kennwort, das zum Aktivieren der Anwendungs Rolle erforderlich ist. *Password* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert. Das *Kennwort* darf nicht NULL sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -61,14 +61,14 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
   
 -   Wenn bereits ein Schema mit dem gleichen Namen wie die Anwendungsrolle vorhanden ist, erzeugt die Prozedur einen Fehler.  
   
--   Die Kenn Wort Komplexität wird nicht von **sp_addapprole**geprüft. Von CREATE APPLICATION ROLE hingegen wird die Kennwortkomplexität überprüft.  
+-   Die Kenn Wort Komplexität wird nicht von **sp_addapprole** geprüft. Von CREATE APPLICATION ROLE hingegen wird die Kennwortkomplexität überprüft.  
   
  Das Parameter *Kennwort* wird als unidirektionaler Hash gespeichert.  
   
  Die gespeicherte Prozedur **sp_addapprole** kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   
 > [!IMPORTANT]  
->  Die Microsoft ODBC- **Verschlüsselungs** Option wird von **SqlClient**nicht unterstützt. Sofern möglich, sollten Benutzer zur Eingabe der Anmeldeinformationen für Anwendungsrollen zur Laufzeit aufgefordert werden. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Anmeldeinformationen persistent gespeichert werden müssen, sollten Sie sie mithilfe der CryptoAPI-Funktionen verschlüsseln.  
+>  Die Microsoft ODBC- **Verschlüsselungs** Option wird von **SqlClient** nicht unterstützt. Sofern möglich, sollten Benutzer zur Eingabe der Anmeldeinformationen für Anwendungsrollen zur Laufzeit aufgefordert werden. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Anmeldeinformationen persistent gespeichert werden müssen, sollten Sie sie mithilfe der CryptoAPI-Funktionen verschlüsseln.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER ANY APPLICATION ROLE-Berechtigung in der Datenbank. Ist nicht bereits ein Schema mit dem gleichen Namen und Besitzer wie die neue Rolle vorhanden, ist auch die CREATE SCHEMA-Berechtigung für die Datenbank erforderlich.  

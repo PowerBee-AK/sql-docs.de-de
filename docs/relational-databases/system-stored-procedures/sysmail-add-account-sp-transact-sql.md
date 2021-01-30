@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_add_account_sp
 - sysmail_add_account_sp_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 85625e9b8e5a3c1acf5bbc8152b90789f33665ff
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e5458a79b5cb44aef8f8a931051cc8346bf4e88f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551095"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178078"
 ---
 # <a name="sysmail_add_account_sp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,9 +52,9 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @account_name = ] 'account_name'` Der Name des hinzu zufügenden Kontos. *account_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @account_name = ] 'account_name'` Der Name des hinzu zufügenden Kontos. *account_name* ist vom Datentyp **sysname** und hat keinen Standardwert.  
   
-`[ @email_address = ] 'email_address'` Die e-Mail-Adresse, von der die Nachricht gesendet wird. Bei dieser Adresse muss es sich um eine Internet-E-Mail-Adresse handeln. *email_address* ist vom Datentyp **nvarchar (128)** und hat keinen Standardwert. Beispielsweise kann ein Konto für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den-Agent e-Mail von der Adresse **SQLAgent \@ Adventure-Works.com**senden.  
+`[ @email_address = ] 'email_address'` Die e-Mail-Adresse, von der die Nachricht gesendet wird. Bei dieser Adresse muss es sich um eine Internet-E-Mail-Adresse handeln. *email_address* ist vom Datentyp **nvarchar (128)** und hat keinen Standardwert. Beispielsweise kann ein Konto für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den-Agent e-Mail von der Adresse **SQLAgent \@ Adventure-Works.com** senden.  
   
 `[ @display_name = ] 'display_name'` Der Anzeige Name, der in e-Mail-Nachrichten von diesem Konto verwendet wird. *display_name* ist vom Datentyp **nvarchar (128)** und hat den Standardwert NULL. Beispielsweise kann ein Konto für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den-Agent den Namen **SQL Server-Agent automatisierten Mailer** in e-Mail-Nachrichten anzeigen.  
   
@@ -62,9 +62,9 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
   
 `[ @description = ] 'description'` Eine Beschreibung für das Konto. die *Beschreibung* ist vom Datentyp **nvarchar (256)** und hat den Standardwert NULL.  
   
-`[ @mailserver_name = ] 'server_name'` Der Name oder die IP-Adresse des SMTP-Mailservers, der für dieses Konto verwendet werden soll. Der Computer, auf dem ausgeführt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird, muss in der Lage sein, den *server_name* in eine IP-Adresse aufzulösen. *server_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @mailserver_name = ] 'server_name'` Der Name oder die IP-Adresse des SMTP-Mailservers, der für dieses Konto verwendet werden soll. Der Computer, auf dem ausgeführt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird, muss in der Lage sein, den *server_name* in eine IP-Adresse aufzulösen. *server_name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @mailserver_type = ] 'server_type'` Der Typ des e-Mail-Servers. *server_type* ist vom **Datentyp vom Datentyp sysname**und hat **den Standardwert ' SMTP '**.  
+`[ @mailserver_type = ] 'server_type'` Der Typ des e-Mail-Servers. *server_type* ist vom **Datentyp vom Datentyp sysname** und hat **den Standardwert ' SMTP '**.  
   
 `[ @port = ] port_number` Die Portnummer für den e-Mail-Server. *port_number* ist vom Datentyp **int**. der Standardwert ist 25.  
   
@@ -72,21 +72,21 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
   
 `[ @password = ] 'password'` Das Kennwort, das für die Anmeldung am e-Mail-Server verwendet werden soll. *Password* ist vom Datentyp **nvarchar (128)** und hat den Standardwert NULL. Ein Kennwort muss nur bereitgestellt werden, wenn ein Benutzername angegeben wird.  
   
-`[ @use_default_credentials = ] use_default_credentials` Gibt an, ob die e-Mail mithilfe der Anmelde Informationen von an den SMTP-Server gesendet werden soll [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . **use_default_credentials** ist vom Typ Bit. der Standardwert ist 0. Wenn dieser Parameter 1 ist, verwendet Datenbank-E-Mail die Anmeldeinformationen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Wenn dieser Parameter 0 ist, sendet Datenbank-E-Mail den Parameter ** \@ username** und ** \@ Password** , falls vorhanden, und sendet andernfalls eine e-Mail ohne ** \@ Benutzernamen** -und Kenn ** \@ Wort** Parameter.  
+`[ @use_default_credentials = ] use_default_credentials` Gibt an, ob die e-Mail mithilfe der Anmelde Informationen von an den SMTP-Server gesendet werden soll [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . **use_default_credentials** ist vom Typ Bit. der Standardwert ist 0. Wenn dieser Parameter 1 ist, verwendet Datenbank-E-Mail die Anmeldeinformationen von [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Wenn dieser Parameter 0 ist, sendet Datenbank-E-Mail den Parameter **\@ username** und **\@ Password** , falls vorhanden, und sendet andernfalls eine e-Mail ohne **\@ Benutzernamen** -und Kenn **\@ Wort** Parameter.  
   
 `[ @enable_ssl = ] enable_ssl` Gibt an, ob Datenbank-E-Mail die Kommunikation mit Secure Sockets Layer verschlüsselt. **Enable_ssl** ist vom Typ Bit. der Standardwert ist 0.  
   
-`[ @account_id = ] account_id OUTPUT` Gibt die Konto-ID für das neue Konto zurück. *account_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @account_id = ] account_id OUTPUT` Gibt die Konto-ID für das neue Konto zurück. *account_id* ist vom Datentyp **int** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- Datenbank-E-Mail stellt separate Parameter für ** \@ email_address**, ** \@ display_name**und ** \@ replyto_address**bereit. Der ** \@ email_address** -Parameter ist die Adresse, von der die Nachricht gesendet wird. Der ** \@ display_name** -Parameter ist der Name, der im Feld **from:** der e-Mail-Nachricht angezeigt wird. Der ** \@ replyto_address** -Parameter ist die Adresse, an die Antworten auf die e-Mail-Nachricht gesendet werden. Beispiel: Ein Konto, das für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet wird, soll E-Mail-Nachrichten von einer E-Mail-Adresse senden, die nur für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet wird. Nachrichten von dieser Adresse sollen über einen Anzeigenamen verfügen, sodass die Empfänger problemlos feststellen können, dass die Nachricht vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent gesendet wurde. Wenn ein Empfänger auf die Nachricht antwortet, soll die Antwort an den Datenbankadministrator und nicht an die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendete Adresse gesendet werden. In diesem Szenario verwendet das Konto **SqlAgent@Adventure-Works.com** als e-Mail-Adresse. Der Anzeige Name ist auf **SQL Server-Agent automatisierten Mailer**festgelegt. Das Konto verwendet **danw@Adventure-Works.com** als Antwort auf die Adresse, sodass Antworten auf Nachrichten, die von diesem Konto gesendet werden, an den Datenbankadministrator und nicht an die e-Mail-Adresse des Agents gesendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Durch die Bereitstellung unabhängiger Einstellungen für diese drei Parameter ermöglicht es Datenbank-E-Mail Ihnen, die Konfiguration von Nachrichten an Ihre Anforderungen anzupassen.  
+## <a name="remarks"></a>Bemerkungen  
+ Datenbank-E-Mail stellt separate Parameter für **\@ email_address**, **\@ display_name** und **\@ replyto_address** bereit. Der **\@ email_address** -Parameter ist die Adresse, von der die Nachricht gesendet wird. Der **\@ display_name** -Parameter ist der Name, der im Feld **from:** der e-Mail-Nachricht angezeigt wird. Der **\@ replyto_address** -Parameter ist die Adresse, an die Antworten auf die e-Mail-Nachricht gesendet werden. Beispiel: Ein Konto, das für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet wird, soll E-Mail-Nachrichten von einer E-Mail-Adresse senden, die nur für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet wird. Nachrichten von dieser Adresse sollen über einen Anzeigenamen verfügen, sodass die Empfänger problemlos feststellen können, dass die Nachricht vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent gesendet wurde. Wenn ein Empfänger auf die Nachricht antwortet, soll die Antwort an den Datenbankadministrator und nicht an die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendete Adresse gesendet werden. In diesem Szenario verwendet das Konto **SqlAgent@Adventure-Works.com** als e-Mail-Adresse. Der Anzeige Name ist auf **SQL Server-Agent automatisierten Mailer** festgelegt. Das Konto verwendet **danw@Adventure-Works.com** als Antwort auf die Adresse, sodass Antworten auf Nachrichten, die von diesem Konto gesendet werden, an den Datenbankadministrator und nicht an die e-Mail-Adresse des Agents gesendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Durch die Bereitstellung unabhängiger Einstellungen für diese drei Parameter ermöglicht es Datenbank-E-Mail Ihnen, die Konfiguration von Nachrichten an Ihre Anforderungen anzupassen.  
   
- Der ** \@ mailserver_type** -Parameter unterstützt den Wert **' SMTP '**.  
+ Der **\@ mailserver_type** -Parameter unterstützt den Wert **' SMTP '**.  
   
- Wenn ** \@ use_default_credentials** ist 1 e-Mail mithilfe der Anmelde Informationen von an den SMTP-Server gesendet [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Wenn ** \@ use_default_credentials** 0 ist und ein ** \@ Benutzername** und ein ** \@ Kennwort** für ein Konto angegeben werden, verwendet das Konto die SMTP-Authentifizierung. ** \@ Benutzername** und ** \@ Kennwort** sind die Anmelde Informationen, die das Konto für den SMTP-Server verwendet, nicht die Anmelde Informationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder das Netzwerk, in dem sich der Computer befindet.  
+ Wenn **\@ use_default_credentials** ist 1 e-Mail mithilfe der Anmelde Informationen von an den SMTP-Server gesendet [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Wenn **\@ use_default_credentials** 0 ist und ein **\@ Benutzername** und ein **\@ Kennwort** für ein Konto angegeben werden, verwendet das Konto die SMTP-Authentifizierung. **\@ Benutzername** und **\@ Kennwort** sind die Anmelde Informationen, die das Konto für den SMTP-Server verwendet, nicht die Anmelde Informationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder das Netzwerk, in dem sich der Computer befindet.  
   
  Die gespeicherte Prozedur **sysmail_add_account_sp** wird in der **msdb** -Datenbank gespeichert und befindet sich im Besitz des **dbo** -Schemas. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen ausgeführt werden.  
   

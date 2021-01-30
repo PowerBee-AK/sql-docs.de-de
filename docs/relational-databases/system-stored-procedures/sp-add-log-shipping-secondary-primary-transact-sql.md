@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_log_shipping_secondary_primary_TSQL
 - sp_add_log_shipping_secondary_primary
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e1123bfa1ce465989322c3b76a48da96c1fed7f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7675de9f5d3e322511af474fcf9495dad3e4454a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464629"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179777"
 ---
 # <a name="sp_add_log_shipping_secondary_primary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ sp_add_log_shipping_secondary_primary
 ## <a name="arguments"></a>Argumente  
 `[ @primary_server = ] 'primary_server'` Der Name der primären Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokoll Versand Konfiguration. *primary_server* ist vom Datentyp **sysname** und darf nicht NULL sein.  
   
-`[ @primary_database = ] 'primary_database'` Der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @primary_database = ] 'primary_database'` Der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname** und hat keinen Standardwert.  
   
 `[ @backup_source_directory = ] 'backup_source_directory'` Das Verzeichnis, in dem die Sicherungsdateien des Transaktions Protokolls vom primären Server gespeichert werden. *backup_source_directory* ist vom Datentyp **nvarchar(500)** und darf nicht NULL sein.  
   
@@ -68,7 +68,7 @@ sp_add_log_shipping_secondary_primary
   
 `[ @file_retention_period = ] 'file_retention_period'` Die Zeitspanne in Minuten, die eine Sicherungsdatei auf dem sekundären Server in dem vom-Parameter angegebenen Pfad aufbewahrt wird, @backup_destination_directory bevor Sie gelöscht wird. *history_retention_period* ist vom Datentyp **int**. Der Standardwert ist NULL. Der Wert 14420 wird verwendet, falls kein anderer Wert angegeben wird.  
   
-`[ @monitor_server = ] 'monitor_server'` Der Name des Überwachungs Servers. *Monitor_server* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert und darf nicht NULL sein.  
+`[ @monitor_server = ] 'monitor_server'` Der Name des Überwachungs Servers. *Monitor_server* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert und darf nicht NULL sein.  
   
 `[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Der Sicherheitsmodus, der zum Herstellen der Verbindung mit dem Überwachungs Server verwendet wird.  
   

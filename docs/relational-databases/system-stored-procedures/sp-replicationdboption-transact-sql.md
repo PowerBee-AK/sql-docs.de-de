@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replicationdboption_TSQL
 - sp_replicationdboption
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 65839ea899d001c42478e1eb3d1e54cad0f53f52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e56271516d9ef2df60e993cd73963d074b503d42
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485713"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211876"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,20 +42,20 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dbname = ] 'dbname'` Die Datenbank, für die die Replikations Datenbankoption festgelegt wird. *db_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @dbname = ] 'dbname'` Die Datenbank, für die die Replikations Datenbankoption festgelegt wird. *db_name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 `[ @optname = ] 'optname'` Die Replikations Datenbankoption, die aktiviert oder deaktiviert werden soll. *optname* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Zusammenführen der Veröffentlichung**|Die Datenbank kann für die Mergeveröffentlichung verwendet werden.|  
 |**veröffentlichen**|Die Datenbank kann für andere Veröffentlichungstypen verwendet werden.|  
 |**abonnieren**|Die Datenbank ist eine Abonnementdatenbank.|  
 |**sync with backup**|Die Datenbank ist für eine koordinierte Sicherung aktiviert. Weitere Informationen finden Sie unter [aktivieren koordinierter Sicherungen für die Transaktions Replikation &#40;Replikations Programmierung mit Transact-SQL-&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
-`[ @value = ] 'value'` Gibt an, ob die angegebene Replikations Datenbankoption aktiviert oder deaktiviert werden soll. *value* ist vom **Datentyp vom Datentyp sysname**und kann **true** oder **false**sein. Wenn dieser Wert " **false** " und " *optname* " eine **Mergeveröffentlichung**ist, werden die Abonnements für die veröffentlichte Datenbank des Merge ebenfalls gelöscht.  
+`[ @value = ] 'value'` Gibt an, ob die angegebene Replikations Datenbankoption aktiviert oder deaktiviert werden soll. *value* ist vom **Datentyp vom Datentyp sysname** und kann **true** oder **false** sein. Wenn dieser Wert " **false** " und " *optname* " eine **Mergeveröffentlichung** ist, werden die Abonnements für die veröffentlichte Datenbank des Merge ebenfalls gelöscht.  
   
-`[ @ignore_distributor = ] ignore_distributor` Gibt an, ob diese gespeicherte Prozedur ausgeführt wird, ohne eine Verbindung mit dem Verteiler herzustellen. *ignore_distributor* ist vom Typ **Bit**und hat den Standardwert **0**. Dies bedeutet, dass der Verteiler mit dem neuen Status der Veröffentlichungs Datenbank verbunden und aktualisiert werden soll. Der Wert **1** sollte nur angegeben werden, wenn auf den Verteiler nicht zugegriffen werden kann und **sp_replicationdboption** der zum Deaktivieren der Veröffentlichung verwendet wird.  
+`[ @ignore_distributor = ] ignore_distributor` Gibt an, ob diese gespeicherte Prozedur ausgeführt wird, ohne eine Verbindung mit dem Verteiler herzustellen. *ignore_distributor* ist vom Typ **Bit** und hat den Standardwert **0**. Dies bedeutet, dass der Verteiler mit dem neuen Status der Veröffentlichungs Datenbank verbunden und aktualisiert werden soll. Der Wert **1** sollte nur angegeben werden, wenn auf den Verteiler nicht zugegriffen werden kann und **sp_replicationdboption** der zum Deaktivieren der Veröffentlichung verwendet wird.  
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -70,7 +70,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  Das Veröffentlichen kann nur deaktiviert werden, wenn die Veröffentlichungsdatenbank online ist. Wenn für die Veröffentlichungsdatenbank eine Datenbankmomentaufnahme vorhanden ist, muss diese vor dem Deaktivieren des Veröffentlichens gelöscht werden. Eine Datenbankmomentaufnahme ist eine schreibgeschützte Offlinekopie einer Datenbank und steht nicht in Verbindung mit einer Replikationsmomentaufnahme. Weitere Informationen finden Sie unter [Datenbankmomentaufnahmen &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_replicationdboption**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_replicationdboption** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren der Veröffentlichung und der Verteilung](../../relational-databases/replication/configure-publishing-and-distribution.md)   

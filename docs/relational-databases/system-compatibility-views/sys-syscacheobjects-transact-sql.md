@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.syscacheobjects_TSQL
 - sys.syscacheobjects
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 4b33b97a5b3753d63e1df4759d26970cf6359ee2
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 4e3374c67917f3468bb9b31d73acd47544d07405
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097805"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180720"
 ---
 # <a name="syssyscacheobjects-transact-sql"></a>sys.syscacheobjects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "98097805"
 |**cacheobjtype**|**nvarchar (17)**|Typ des Objekts im Cache:<br /><br /> Kompilierter Plan<br /><br /> Ausführbarer Plan<br /><br /> Analysestruktur<br /><br /> Cursor<br /><br /> Erweiterte gespeicherte Prozedur|  
 |**objtype**|**nvarchar (8)**|Typ des Objekts:<br /><br /> Gespeicherte Prozedur<br /><br /> Vorbereitete Anweisung<br /><br /> Ad-hoc-Abfrage ([!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen, die als Sprachereignisse von den Hilfsprogrammen **sqlcmd** oder **osql** aus übermittelt wurden, im Gegensatz zu Remoteprozeduraufrufen)<br /><br /> ReplProc (Replikationsprozedur)<br /><br /> Trigger<br /><br /> Sicht<br /><br /> Standard<br /><br /> Benutzertabelle<br /><br /> Systemtabelle<br /><br /> Prüfen<br /><br /> Regel|  
 |**objid**|**int**|Einer der Hauptschlüssel zur Suche nach einem Objekt im Cache. Für Datenbankobjekte (Prozeduren, Sichten, Trigger usw.) ist dies die Objekt-ID, die in **sysobjects** gespeichert wird. Bei Cacheobjekten, wie Ad-hoc-SQL-Code oder vorbereiteter SQL-Code, ist **objid** ein intern generierter Wert.|  
-|**dbid**|**smallint**|ID der Datenbank, in der das Cacheobjekt kompiliert wurde.|  
+|**DBID**|**smallint**|ID der Datenbank, in der das Cacheobjekt kompiliert wurde.|  
 |**dbidexec**|**smallint**|Datenbank-ID, von der die Abfrage ausgeführt wird.<br /><br /> Bei den meisten Objekten besitzt **dbidexec** denselben Wert wie **dbid**.<br /><br /> Bei Systemsichten ist **dbidexec** die Datenbank-ID, von der die Abfrage ausgeführt wird.<br /><br /> Für Ad-hoc-Abfragen ist **dbidexec** 0. Dies bedeutet, dass **dbidexec** denselben Wert besitzt wie **dbid**.|  
 |**UID**|**smallint**|Bei Ad-hoc-Abfrageplänen und vorbereiteten Plänen zeigt diese ID den Ersteller des Plans an.<br /><br /> -2 = Der abgesendete Batch hängt nicht von der impliziten Namensauflösung ab und kann von verschiedenen Benutzern gemeinsam genutzt werden. Dies ist die bevorzugte Methode. Jeder andere Wert stellt den Benutzernamen des Benutzers dar, der die Abfrage in der Datenbank absendet.<br /><br /> Führt zu einem Überlauf oder gibt NULL zurück, wenn die Anzahl von Benutzern und Rollen 32.767 übersteigt.|  
 |**refcounts**|**int**|Anzahl von anderen Cacheobjekten, die auf dieses Cacheobjekt verweisen. Eine Anzahl von 1 ist die Basis.|  
