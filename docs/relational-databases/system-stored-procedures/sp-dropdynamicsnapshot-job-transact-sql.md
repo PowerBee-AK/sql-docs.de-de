@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropdynamicsnapshot_job_TSQL
 - sp_dropdynamicsnapshot_job
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 932ca55e93c039c918302cb52026dd5051cbb551
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 481ef137f8aa2eca0438cee08e571c3e21bddfe7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543468"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210040"
 ---
 # <a name="sp_dropdynamicsnapshot_job-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,25 +41,25 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung, aus der der Auftrag für die Momentaufnahme gefilterter Daten entfernt wird. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, aus der der Auftrag für die Momentaufnahme gefilterter Daten entfernt wird. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Der Name des Auftrags für die Momentaufnahme gefilterter Daten, der entfernt wird. *dynamic_snapshot_jobname*ist vom Datentyp sysname. wenn er nicht angegeben wird, werden standardmäßig alle Auftrags Namen verwendet, die *dynamic_snapshot_jobid*zugeordnet sind.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Der Name des Auftrags für die Momentaufnahme gefilterter Daten, der entfernt wird. *dynamic_snapshot_jobname* ist vom Datentyp sysname. wenn er nicht angegeben wird, werden standardmäßig alle Auftrags Namen verwendet, die *dynamic_snapshot_jobid* zugeordnet sind.  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` Ein Bezeichner für den Auftrag für die Momentaufnahme gefilterter Daten. *dynamic_snapshot_jobid*ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` Ein Bezeichner für den Auftrag für die Momentaufnahme gefilterter Daten. *dynamic_snapshot_jobid* ist vom Datentyp **uniqueidentifier** und hat den Standardwert NULL.  
   
 > [!IMPORTANT]  
->  Es können nur *dynamic_snapshot_jobid*oder *dynamic_snapshot_jobname* angegeben werden. Wenn für *dynamic_snapshot_jobid*oder *dynamic_snapshot_jobname*keine Werte angegeben werden, werden alle Aufträge für die dynamische Momentaufnahme für die Veröffentlichung entfernt.  
+>  Es können nur *dynamic_snapshot_jobid* oder *dynamic_snapshot_jobname* angegeben werden. Wenn für *dynamic_snapshot_jobid* oder *dynamic_snapshot_jobname* keine Werte angegeben werden, werden alle Aufträge für die dynamische Momentaufnahme für die Veröffentlichung entfernt.  
   
 `[ @ignore_distributor = ] ignore_distributor`*ignore_distributor* ist vom Typ **Bit**. der Standardwert ist **0**. Dieser Parameter kann verwendet werden, um einen Auftrag für eine dynamische Momentaufnahme zu löschen, ohne Cleanuptasks auf dem Verteiler auszuführen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_dropdynamicsnapshot** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_dropdynamicsnapshot**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_dropdynamicsnapshot** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_adddynamicsnapshot_job &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-adddynamicsnapshot-job-transact-sql.md)  

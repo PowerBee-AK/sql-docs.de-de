@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], guid
 - data conversions from C to SQL types [ODBC], guid
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9168b0b6-a828-4fef-b8cd-bdf439776f23
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3fca2ba20df65222eaf1ce6f4384f449a1524334
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 22b47fa414244d777ec686f146834f28adff4868
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499983"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210013"
 ---
 # <a name="c-to-sql-guid"></a>C zu SQL: GUID
 Der Bezeichner für den GUID ODBC-C-Datentyp lautet:  
@@ -41,4 +41,4 @@ Der Bezeichner für den GUID ODBC-C-Datentyp lautet:
   
  [a] alle hexadezimalen Werte sind als GUID gültig.  
   
- Der Treiber ignoriert den Längen-/indikatorenwert beim Umrechnen von Daten aus dem Datentyp GUID c und geht davon aus, dass die Größe des Daten Puffers der Größe des Datentyps GUID c entspricht. Der Wert für die Länge/den Indikator wird im *StrLen_Or_Ind* -Argument in **SQLPutData** und in dem Puffer übergeben, der mit dem *StrLen_or_IndPtr* -Argument in **SQLBindParameter**angegeben wird. Der Datenpuffer wird mit dem *DataPtr* -Argument in **SQLPutData** und dem *ParameterValuePtr* -Argument in **SQLBindParameter**angegeben.
+ Der Treiber ignoriert den Längen-/indikatorenwert beim Umrechnen von Daten aus dem Datentyp GUID c und geht davon aus, dass die Größe des Daten Puffers der Größe des Datentyps GUID c entspricht. Der Wert für die Länge/den Indikator wird im *StrLen_Or_Ind* -Argument in **SQLPutData** und in dem Puffer übergeben, der mit dem *StrLen_or_IndPtr* -Argument in **SQLBindParameter** angegeben wird. Der Datenpuffer wird mit dem *DataPtr* -Argument in **SQLPutData** und dem *ParameterValuePtr* -Argument in **SQLBindParameter** angegeben.

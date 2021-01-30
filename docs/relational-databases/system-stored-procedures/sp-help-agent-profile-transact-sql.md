@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_agent_profile
 - sp_help_agent_profile_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7bcb9de7480bf0aea92f585cfece47cf09545195
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8c335753621a90bbf9872a7786a6619cbd090249
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538854"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208948"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @agent_type = ] agent_type` Der Typ des Agents. *agent_type* ist vom Datentyp **int**und hat den Standardwert **0**. die folgenden Werte sind möglich:  
+`[ @agent_type = ] agent_type` Der Typ des Agents. *agent_type* ist vom Datentyp **int** und hat den Standardwert **0**. die folgenden Werte sind möglich:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -49,7 +49,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**4**|Merge-Agent|  
 |**9**|Warteschlangenlese-Agent|  
   
-`[ @profile_id = ] profile_id` Die ID des Profils, das angezeigt werden soll. *profile_id* ist vom Datentyp **int**und hat den Standardwert **-1**, mit dem alle Profile in der **MSagent_profiles** Tabelle zurückgegeben werden.  
+`[ @profile_id = ] profile_id` Die ID des Profils, das angezeigt werden soll. *profile_id* ist vom Datentyp **int** und hat den Standardwert **-1**, mit dem alle Profile in der **MSagent_profiles** Tabelle zurückgegeben werden.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -65,11 +65,11 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_help_agent_profile** wird bei allen Replikations Typen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **replmonitor** können **sp_help_agent_profile**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **replmonitor** können **sp_help_agent_profile** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Arbeiten mit Replikations-Agent-Profilen](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

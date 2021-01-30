@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helppublication_TSQL
 - sp_helppublication
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eee9206e8d8ed3d5012ca463fed490ea9d8a6b1c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e45091866308b3c674217e0582bb64da59d51f75
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535132"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210239"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -73,8 +73,8 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |snapshot_jobid|**Binary (16)**|ID für geplanten Task.|  
 |retention|**int**|Der Änderungsumfang (in Stunden), der für die angegebene Veröffentlichung eingespart werden soll.|  
 |has subscription|**bit**|Gibt an, ob die Veröffentlichung über aktive Abonnements verfügt. **1** bedeutet, dass die Veröffentlichung über aktive Abonnements verfügt und **0** bedeutet, dass die Veröffentlichung über keine Abonnements verfügt.|  
-|allow_queued_tran|**bit**|Gibt an, ob das Hinzufügen von Änderungen beim Abonnenten zu Warteschlangen, bis diese beim Verleger zugeordnet werden können, aktiviert wurde. Bei **0**werden Änderungen auf dem Abonnenten nicht in die Warteschlange eingereiht.|  
-|snapshot_in_defaultfolder|**bit**|Gibt an, ob Momentaufnahme Dateien im Standardordner gespeichert werden. Wenn der Wert **0**ist, wurden die Momentaufnahme Dateien am alternativen Speicherort gespeichert, der durch *alternate_snapshot_folder*angegeben wurde. Wenn der Wert **1**ist, befinden sich die Momentaufnahme Dateien im Standardordner.|  
+|allow_queued_tran|**bit**|Gibt an, ob das Hinzufügen von Änderungen beim Abonnenten zu Warteschlangen, bis diese beim Verleger zugeordnet werden können, aktiviert wurde. Bei **0** werden Änderungen auf dem Abonnenten nicht in die Warteschlange eingereiht.|  
+|snapshot_in_defaultfolder|**bit**|Gibt an, ob Momentaufnahme Dateien im Standardordner gespeichert werden. Wenn der Wert **0** ist, wurden die Momentaufnahme Dateien am alternativen Speicherort gespeichert, der durch *alternate_snapshot_folder* angegeben wurde. Wenn der Wert **1** ist, befinden sich die Momentaufnahme Dateien im Standardordner.|  
 |alt_snapshot_folder|**nvarchar(255)**|Gibt den Speicherort des anderen Ordners für die Momentaufnahme an.|  
 |pre_snapshot_script|**nvarchar(255)**|Gibt einen Zeiger auf einen Speicherort für **SQL** -Dateien an. Der Verteilungs-Agent führt das vor der Momentaufnahme ausgeführte Skript vor allen Skripts für replizierte Objekte aus, wenn die Momentaufnahme bei einem Abonnenten angewendet wird.|  
 |post_snapshot_script|**nvarchar(255)**|Gibt einen Zeiger auf einen Speicherort für **SQL** -Dateien an. Der Verteilungs-Agent führt das nach der Momentaufnahme ausgeführte Skript aus, nachdem alle anderen Skripts für replizierte Objekte und Daten während der Erstsynchronisierung angewendet wurden.|  
@@ -89,7 +89,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |conflict_retention|**int**|Gibt die Konfliktaufbewahrungsdauer in Tagen an.|  
 |conflict_policy|**int**|Gibt die Richtlinie zur Konfliktlösung an, die für die Option zur verzögerten Aktualisierung über eine Warteschlange verwendet wird. Einer der folgenden Werte ist möglich:<br /><br /> **1** = der Verleger gewinnt den Konflikt.<br /><br /> **2** = Abonnent gewinnt den Konflikt.<br /><br /> **3** = das Abonnement wird erneut initialisiert.|  
 |queue_type||Gibt an, welcher Wartenschlangentyp verwendet wird. Einer der folgenden Werte ist möglich:<br /><br /> **MSMQ** = verwendet [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing, um Transaktionen zu speichern.<br /><br /> **SQL** = wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen verwendet.<br /><br /> Hinweis: die Unterstützung für Message Queuing wurde eingestellt.|  
-|backward_comp_level||Der Datenbank-Kompatibilitätsgrad. Folgende Werte sind möglich:<br /><br /> **90**  =  90 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100**  =  100 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level||Der Datenbank-Kompatibilitätsgrad. Folgende Werte sind möglich:<br /><br />   =  90 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br />   =  100 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|Gibt an, ob die Veröffentlichung in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory veröffentlicht wird. Der Wert **1** gibt an, dass Sie veröffentlicht wird, und der Wert **0** gibt an, dass Sie nicht veröffentlicht wird.|  
 |allow_initialize_from_backup|**bit**|Gibt an, ob Abonnenten ein Abonnement für diese Veröffentlichung über eine Sicherung anstelle einer Anfangsmomentaufnahme initialisieren können. **1** bedeutet, dass Abonnements aus einer Sicherung initialisiert werden können, und **0** bedeutet, dass Sie nicht möglich sind. Weitere Informationen finden Sie unter [Initialisieren eines Transaktions Abonnements ohne Momentaufnahme](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) einen Transaktions Abonnenten ohne Momentaufnahme.|  
 |replicate_ddl|**int**|Gibt an, ob die Schema Replikation für die Veröffentlichung unterstützt wird. **1** gibt an, dass DDL-Anweisungen (Data Definition Language), die auf dem Verleger ausgeführt werden, repliziert werden, und **0** bedeutet, dass DDL-Anweisungen nicht repliziert werden Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
@@ -97,15 +97,15 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |publish_local_changes_only|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |enabled_for_het_sub|**int**|Gibt an, ob die Veröffentlichung Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten unterstützt. Der Wert **1** bedeutet, dass nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten unterstützt werden. Der Wert **0** bedeutet, dass nur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten unterstützt werden. Weitere Informationen finden Sie unter [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).|  
 |enabled_for_p2p_conflictdetection|**int**|Gibt an, ob der Verteilungs-Agent Konflikte für eine Veröffentlichung erkennt, die für die Peer-zu-Peer-Replikation aktiviert ist. Der Wert **1** bedeutet, dass Konflikte erkannt werden. Weitere Informationen finden Sie unter [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
-|originator_id|**int**|Gibt eine ID für einen Knoten in einer Peer-zu-Peer-Topologie an. Diese ID wird für die Konflikterkennung verwendet, wenn **enabled_for_p2p_conflictdetection** auf **1**festgelegt ist. Zum Anzeigen einer Liste der bereits verwendeten IDs fragen Sie die [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) -Systemtabelle ab.|  
-|p2p_continue_onconflict|**int**|Gibt an, ob der Verteilungs-Agent bei Erkennung eines Konflikts die Verarbeitung von Änderungen fortsetzt. Der Wert **1** bedeutet, dass der Agent die Verarbeitung von Änderungen fortsetzt.<br /><br /> ** \* \* Vorsicht \* : \* ** es wird empfohlen, dass Sie den Standardwert **0**verwenden. Wenn diese Option auf **1**festgelegt ist, versucht der Verteilungs-Agent, die Daten in der Topologie zusammenzuführen, indem die Konflikt verursachende Zeile von dem Knoten mit der höchsten Absender-ID angewendet wird. Bei dieser Methode ist keine Konvergenz garantiert. Sie sollten sicherstellen, dass die Topologie nach der Erkennung eines Konflikts konsistent ist. Weitere Informationen finden Sie im Abschnitt "Konfliktbehandlung" unter [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
+|originator_id|**int**|Gibt eine ID für einen Knoten in einer Peer-zu-Peer-Topologie an. Diese ID wird für die Konflikterkennung verwendet, wenn **enabled_for_p2p_conflictdetection** auf **1** festgelegt ist. Zum Anzeigen einer Liste der bereits verwendeten IDs fragen Sie die [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) -Systemtabelle ab.|  
+|p2p_continue_onconflict|**int**|Gibt an, ob der Verteilungs-Agent bei Erkennung eines Konflikts die Verarbeitung von Änderungen fortsetzt. Der Wert **1** bedeutet, dass der Agent die Verarbeitung von Änderungen fortsetzt.<br /><br /> **\* \* Vorsicht \* : \*** es wird empfohlen, dass Sie den Standardwert **0** verwenden. Wenn diese Option auf **1** festgelegt ist, versucht der Verteilungs-Agent, die Daten in der Topologie zusammenzuführen, indem die Konflikt verursachende Zeile von dem Knoten mit der höchsten Absender-ID angewendet wird. Bei dieser Methode ist keine Konvergenz garantiert. Sie sollten sicherstellen, dass die Topologie nach der Erkennung eines Konflikts konsistent ist. Weitere Informationen finden Sie im Abschnitt "Konfliktbehandlung" unter [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |allow_partition_switch|**int**|Gibt an, ob ALTER TABLE... Switch-Anweisungen können für die veröffentlichte Datenbank ausgeführt werden. Weitere Informationen finden Sie unter [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
-|replicate_partition_switch|**int**|Gibt an, ob ALTER TABLE... Switch-Anweisungen, die für die veröffentlichte Datenbank ausgeführt werden, sollten auf Abonnenten repliziert werden. Diese Option ist nur gültig, wenn *allow_partition_switch* auf **1**festgelegt ist.|  
+|replicate_partition_switch|**int**|Gibt an, ob ALTER TABLE... Switch-Anweisungen, die für die veröffentlichte Datenbank ausgeführt werden, sollten auf Abonnenten repliziert werden. Diese Option ist nur gültig, wenn *allow_partition_switch* auf **1** festgelegt ist.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_helppublication wird bei der Momentaufnahme- und Transaktionsreplikation verwendet.  
   
  sp_helppublication gibt Informationen zu allen Veröffentlichungen zurück, die sich im Besitz des Benutzers befinden, der diese Prozedur ausführt.  

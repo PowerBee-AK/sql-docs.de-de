@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_downloadlist_TSQL
 - sp_help_downloadlist
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2196e6fbbbd0089c7e65592bfc4ebfd17bb14239
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6f60b3da9c05d38b60573aa272c33a7cb6915116
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549730"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208920"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,9 +47,9 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id` Die ID des Auftrags, für den Informationen zurückgegeben werden sollen. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die ID des Auftrags, für den Informationen zurückgegeben werden sollen. *job_id* ist vom Datentyp **uniqueidentifier** und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'` Der Name des Auftrags. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags. *job_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
@@ -62,15 +62,15 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**DELETE**|Auftragsvorgang, mit dem ein gesamter Auftrag entfernt wird|  
 |**INSERT**|Auftragsvorgang, der einen gesamten Auftrag einfügt oder einen vorhandenen Auftrag aktualisiert. Dieser Vorgang schließt ggf. alle Auftragsschritte und Zeitpläne ein.|  
 |**RE-ENLIST**|Servervorgang, der bewirkt, dass der Zielserver die Eintragsinformationen, einschließlich des Abrufintervalls und der Zeitzone, erneut an die Multiserverdomäne sendet. Der Zielserver lädt auch die **MSXOperator** -Details erneut herunter.|  
-|**SET-POLL**|Servervorgang, der festlegt, in welchem Intervall (in Sekunden) die Zielserver die Multiserverdomäne abfragen. Wenn angegeben, wird der *Wert* als erforderlicher Intervall Wert interpretiert und kann ein Wert zwischen **10** und **28.800**sein.|  
+|**SET-POLL**|Servervorgang, der festlegt, in welchem Intervall (in Sekunden) die Zielserver die Multiserverdomäne abfragen. Wenn angegeben, wird der *Wert* als erforderlicher Intervall Wert interpretiert und kann ein Wert zwischen **10** und **28.800** sein.|  
 |**Begonnen**|Auftragsvorgang, der den Start der Auftragsausführung anfordert|  
 |**Anzuhalten**|Auftragsvorgang, der das Beenden der Auftragsausführung anfordert|  
 |**SYNC-TIME**|Servervorgang, der bewirkt, dass der Zielserver die Systemuhr mit der Multiserverdomäne synchronisiert. Dies ist ein kostenaufwendiger Vorgang und sollte deshalb nur selten und in begrenztem Umfang durchgeführt werden.|  
-|**UPDATE**|Auftrags Vorgang, bei dem nur die **sysjobs** -Informationen für einen Auftrag und nicht die Auftrags Schritte oder Zeitpläne aktualisiert werden. Wird automatisch von **sp_update_job**aufgerufen.|  
+|**UPDATE**|Auftrags Vorgang, bei dem nur die **sysjobs** -Informationen für einen Auftrag und nicht die Auftrags Schritte oder Zeitpläne aktualisiert werden. Wird automatisch von **sp_update_job** aufgerufen.|  
   
-`[ @object_type = ] 'object_type'` Der Objekttyp für den angegebenen Auftrag. *object_type* ist vom Datentyp **varchar (64)** und hat den Standardwert NULL. *object_type* kann entweder "Job" oder "Server" sein. Weitere Informationen zu gültigen *object_type*Werten finden Sie unter [sp_add_category &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+`[ @object_type = ] 'object_type'` Der Objekttyp für den angegebenen Auftrag. *object_type* ist vom Datentyp **varchar (64)** und hat den Standardwert NULL. *object_type* kann entweder "Job" oder "Server" sein. Weitere Informationen zu gültigen *object_type* Werten finden Sie unter [sp_add_category &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
-`[ @object_name = ] 'object_name'` Der Name des Objekts. *object_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *object_type* Auftrag ist, ist *object_name*der Auftrags Name. Wenn *object_type*Server ist, ist *object_name*der Servername.  
+`[ @object_name = ] 'object_name'` Der Name des Objekts. *object_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn *object_type* Auftrag ist, ist *object_name* der Auftrags Name. Wenn *object_type* Server ist, ist *object_name* der Servername.  
   
 `[ @target_server = ] 'target_server'` Der Name des Zielservers. *target_server* ist vom Datentyp **nvarchar (128)** und hat den Standardwert NULL.  
   
@@ -78,7 +78,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 `[ @status = ] status` Der Status des Auftrags. *Status* ist vom Datentyp **tinyint**. der Standardwert ist NULL.  
   
-`[ @date_posted = ] date_posted` Das Datum und die Uhrzeit, für die alle Einträge, die an oder nach dem angegebenen Datum und der angegebenen Uhrzeit vorgenommen werden, in das Resultset eingeschlossen werden sollen. *date_posted* ist vom **Datentyp DateTime**und hat den Standardwert NULL.  
+`[ @date_posted = ] date_posted` Das Datum und die Uhrzeit, für die alle Einträge, die an oder nach dem angegebenen Datum und der angegebenen Uhrzeit vorgenommen werden, in das Resultset eingeschlossen werden sollen. *date_posted* ist vom **Datentyp DateTime** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -91,7 +91,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**source_server**|**nvarchar(30)**|Computername des Servers, vom dem die Anweisung stammt. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7,0 ist dies immer der Computername des Master Servers (MSX).|  
 |**operation_code**|**nvarchar(4000)**|Vorgangscode für die Anweisung|  
 |**object_name**|**sysname**|Objekt, das von der Anweisung betroffen ist|  
-|**object_id**|**uniqueidentifier**|ID des Objekts, das von der Anweisung betroffen ist (**job_id** für ein Auftrags Objekt oder 0x00 für ein Server Objekt), oder ein Datenwert, der für die **operation_code**spezifisch ist.|  
+|**object_id**|**uniqueidentifier**|ID des Objekts, das von der Anweisung betroffen ist (**job_id** für ein Auftrags Objekt oder 0x00 für ein Server Objekt), oder ein Datenwert, der für die **operation_code** spezifisch ist.|  
 |**target_server**|**nvarchar(30)**|Zielserver, der diese Anweisung herunterladen soll|  
 |**error_message**|**nvarchar(1024)**|Gegebenenfalls Fehlermeldung vom Zielserver, falls beim Verarbeiten dieser Anweisung ein Problem aufgetreten ist.<br /><br /> Hinweis: jede Fehlermeldung blockiert alle weiteren Downloads durch den Zielserver.|  
 |**date_posted**|**datetime**|Datum, an dem die Anweisung für die Tabelle bereitgestellt wurde|  
@@ -99,7 +99,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**status**|**tinyint**|Status des Auftrags:<br /><br /> **0** = Noch nicht heruntergeladen<br /><br /> **1** = erfolgreich heruntergeladen.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Die Berechtigungen zum Ausführen dieser Prozedur werden standardmäßig Mitgliedern der festen Server Rolle **sysadmin** zugewiesen.  
+ Berechtigungen zur Ausführung dieser Prozedur erhalten standardmäßig Mitglieder der festen Serverrolle **sysadmin** .  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden Zeilen in der `sysdownloadlist`-Tabelle für den Auftrag `NightlyBackups` aufgelistet.  

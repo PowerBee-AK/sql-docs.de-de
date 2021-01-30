@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_setapprole
 - sp_setapprole_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0513878f65513e57a6e26bb52d8101ba6c5d672c
-ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
+ms.openlocfilehash: f34be78bc4d3f47ff2a11d0a6ed09c22c3670dca
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94570957"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209279"
 ---
 # <a name="sp_setapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
@@ -63,7 +63,7 @@ sp_setapprole [ @rolename = ] 'role',
   
 `[ @fCreateCookie = ] true | false` Gibt an, ob ein Cookie erstellt werden soll. **true** wird implizit in 1 konvertiert. **false** wird implizit in 0 konvertiert.  
   
-`[ @cookie = ] @cookie OUTPUT` Gibt einen Ausgabeparameter an, der das Cookie enthalten soll. Das Cookie wird nur generiert, wenn der Wert von " **\@ f** " den Wert " **true** " hat. **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` Gibt einen Ausgabeparameter an, der das Cookie enthalten soll. Das Cookie wird nur generiert, wenn der Wert von " **\@ f** " den Wert " **true**" hat. **varbinary(8000)**  
   
 > [!NOTE]  
 > Der **OUTPUT** -Cookieparameter für **sp_setapprole** ist zurzeit als **varbinary(8000)** dokumentiert, was der korrekten maximalen Länge entspricht. Die aktuelle Implementierung gibt jedoch **varbinary(50)** zurück. Anwendungen müssen weiterhin **varbinary(8000)** reservieren, damit die Anwendung weiterhin ordnungsgemäß ausgeführt wird, falls die Rückgabegröße des Cookies in einer zukünftigen Version erhöht wird.
@@ -72,7 +72,7 @@ sp_setapprole [ @rolename = ] 'role',
 
  0 (Erfolg) oder 1 (Fehler)  
   
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
  Eine durch **sp_setapprole** aktivierte Anwendungsrolle bleibt aktiv, bis der Benutzer die Serververbindung trennt oder bis er **sp_unsetapprole** ausführt. **sp_setapprole** können nur durch direkte [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen auf Ad-hoc-Ebene und nicht innerhalb einer anderen gespeicherten Prozedur, eines Auslösers oder innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   

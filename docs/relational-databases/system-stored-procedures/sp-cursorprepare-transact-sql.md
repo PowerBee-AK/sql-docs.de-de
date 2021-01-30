@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursor_prepare_TSQL
 - sp_cursor_prepare
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3418727f21a0132390a1c1334919b2be6dc36965
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: df4b0ff31a5b8a1723b6c8f130aeab9b32b03166
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539023"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209750"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  Definiert das Resultset des Cursors. Der *stmt* -Parameter ist erforderlich und erfordert einen der Eingabewerte **ntext**, **nchar** oder **nvarchar** .  
   
 > [!NOTE]  
->  Die Regeln zum Angeben des *stmt* -Werts sind identisch mit denen für sp_cursoropen, mit der Ausnahme, dass der *stmt* -Zeichen folgen Datentyp **ntext**lauten muss.  
+>  Die Regeln zum Angeben des *stmt* -Werts sind identisch mit denen für sp_cursoropen, mit der Ausnahme, dass der *stmt* -Zeichen folgen Datentyp **ntext** lauten muss.  
   
  *options*  
  Ein optionaler Parameter, der eine Beschreibung der Spalten im Cursorresultset zurückgibt. *Optionen* erfordern den folgenden **int** -Eingabe Wert.  
@@ -86,7 +86,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- Da der angeforderte Wert möglicherweise nicht für den von *stmt*definierten Cursor geeignet ist, dient dieser Parameter sowohl als Eingabe als auch als Ausgabe. In solchen Fällen weist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen passenden Wert zu.  
+ Da der angeforderte Wert möglicherweise nicht für den von *stmt* definierten Cursor geeignet ist, dient dieser Parameter sowohl als Eingabe als auch als Ausgabe. In solchen Fällen weist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen passenden Wert zu.  
   
  *ccopt*  
  Option für die Parallelitätssteuerung. *ccopt* ist ein optionaler Parameter, der einen der folgenden **int** -Eingabewerte erfordert.  
@@ -107,7 +107,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
   
  Wie bei *scrollpt* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann einen anderen Wert als den angeforderten zuweisen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Der RPC-Statusparameter entspricht einem der folgenden Werte:  
   
 |Wert|BESCHREIBUNG|  

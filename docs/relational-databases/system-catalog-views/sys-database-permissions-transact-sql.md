@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - database_permissions
 - sys.database_permissions_TSQL
@@ -21,12 +21,12 @@ ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0af3adae81e4f0bb9489e3534427dfe03efebf09
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a488dcf39ecf3ab0fa6e82264245d38f163f8ed6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475251"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209479"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "97475251"
 > [!IMPORTANT]  
 >  Berechtigungen auf Spaltenebene überschreiben Berechtigungen auf Objektebene in derselben Entität.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|Identifiziert die Klasse, für die die Berechtigung vorhanden ist.<br /><br /> 0 = Datenbank<br />1 = Objekt oder Spalte<br />3 = Schema<br />4 = Daten Bank Prinzipal<br />5 = Assembly- **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />6 = Typ<br />10 = XML-Schema Auflistung- <br />                      **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />15 = Nachrichtentyp: **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />16 = Dienstvertrag: **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />17 = Dienst: **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />18 = Remote Dienst Bindung: **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />19 = Route- **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />23 = voll Text Katalog- **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />24 = symmetrischer Schlüssel: **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />25 = Zertifikat- **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br />26 = asymmetrischer Schlüssel: **gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.|  
 |**class_desc**|**nvarchar(60)**|Beschreibung der Klasse, in der die Berechtigung vorhanden ist.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  

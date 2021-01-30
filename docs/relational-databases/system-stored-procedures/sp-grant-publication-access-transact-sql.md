@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_grant_publication_access_TSQL
 - sp_grant_publication_access
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 5078173bfdf8ea079c0fa553c64a6235b101cdc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bea8096d3d0d57b6044edc26bb5f64572487157
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469362"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208995"
 ---
 # <a name="sp_grant_publication_access-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
 
@@ -39,9 +39,9 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung, auf die zugegriffen werden soll. **'***Publication***'** ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, auf die zugegriffen werden soll. **'**_Publication_*_'_* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @login = ] 'login'` Die Anmelde-ID. **"***Login***"** ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @login = ] 'login'` Die Anmelde-ID. **"**_Login_*_"_* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -54,7 +54,7 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
  Diese gespeicherte Prozedur kann wiederholt aufgerufen werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_grant_publication_access**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_grant_publication_access** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_help_publication_access &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   

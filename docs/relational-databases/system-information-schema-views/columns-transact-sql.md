@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLUMNS
 - COLUMNS_TSQL
@@ -20,12 +20,12 @@ ms.assetid: bbf7ac4a-7444-4351-a590-a9f71e0bc495
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dd88dffcf5171250936c75ff56ee5948148adad
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 510409a417ff35edb932b0689f6cfb17967ce171
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478971"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210266"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "97478971"
   
  Zum Abrufen von Informationen aus diesen Sichten geben Sie den voll qualifizierten Namen **INFORMATION_SCHEMA**_.view_name_ an.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Tabellenqualifizierer|  
 |**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Der Name des Schemas, das die Tabelle enthält.<br /><br /> **&#42;&#42; wichtige &#42;&#42;** Verwenden Sie INFORMATION_SCHEMA Sichten nicht, um das Schema eines Objekts zu bestimmen. INFORMATION_SCHEMA Sichten stellen nur eine Teilmenge der Metadaten eines Objekts dar. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
@@ -60,7 +60,7 @@ ms.locfileid: "97478971"
 |**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Falls die Spalte Daten eines benutzerdefinierten Typs enthält, gibt diese Spalte den Namen des Schemas des benutzerdefinierten Datentyps zurück. Andernfalls wird NULL zurückgegeben.<br /><br /> **&#42;&#42; wichtige &#42;&#42;** Verwenden Sie INFORMATION_SCHEMA Sichten nicht, um das Schema eines Datentyps zu bestimmen. Die einzige zuverlässige Möglichkeit zum Finden des Schemas eines Typs besteht darin, die TYPEPROPERTY-Funktion zu verwenden.|  
 |**DOMAIN_NAME**|**nvarchar (** 128 **)**|Falls die Spalte Daten eines benutzerdefinierten Typs enthält, wird in dieser Spalte der Name des benutzerdefinierten Datentyps angezeigt. Andernfalls wird NULL zurückgegeben.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die **ORDINAL_POSITION** Spalte des **INFORMATION_SCHEMA. Die Spalten** Ansicht ist nicht mit dem Bitmuster von Spalten kompatibel, die von der COLUMNS_UPDATED-Funktion zurückgegeben werden. Wenn Sie ein Bitmuster abrufen möchten, das mit COLUMNS_UPDATED kompatibel ist, müssen Sie beim Abfragen der INFORMATION_SCHEMA auf die **ColumnID** -Eigenschaft der COLUMNPROPERTY-Systemfunktion verweisen **. Spalten** Ansicht. Beispiel:  
   
 ```  

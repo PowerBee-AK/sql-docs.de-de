@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_grantdbaccess
 - sp_grantdbaccess_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 0425c6f4108ae48dadcead271814d99c212e8a2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5a08a424a09d8f0178137b5a83bb64b44f5b0b04
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469360"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208984"
 ---
 # <a name="sp_grantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 
@@ -44,9 +44,9 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @loginame = ] 'login_ '` Der Name der Windows-Gruppe, Windows-Anmeldung oder-Anmeldung, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem neuen Datenbankbenutzer zugeordnet werden soll. Namen von Windows-Gruppen und Windows-Anmeldungen müssen mit einem Windows-Domänen Namen in der Form *Domänen* \\ *Anmeldung*qualifiziert werden, z. b. **London\JoeB**. Der Anmeldename darf noch keinem Benutzer in der Datenbank zugewiesen sein. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @loginame = ] 'login_ '` Der Name der Windows-Gruppe, Windows-Anmeldung oder-Anmeldung, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem neuen Datenbankbenutzer zugeordnet werden soll. Namen von Windows-Gruppen und Windows-Anmeldungen müssen mit einem Windows-Domänen Namen in der Form *Domänen* \\ *Anmeldung* qualifiziert werden, z. b. **London\JoeB**. Der Anmeldename darf noch keinem Benutzer in der Datenbank zugewiesen sein. *login* ist vom Datentyp **sysname** und hat keinen Standardwert.  
   
-``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` Der Name des neuen Daten Bank Benutzers. *name_in_db* ist eine OUTPUT-Variable vom Datentyp **sysname**. Der Standardwert ist NULL. Wenn dieses Argument nicht angegeben ist, wird *login* verwendet. Wenn die Angabe als Ausgabevariable mit dem Wert NULL angegeben ist, wird ** \@ name_in_db** auf *Login*festgelegt. *name_in_db* darf in der aktuellen Datenbank noch nicht vorhanden sein.  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` Der Name des neuen Daten Bank Benutzers. *name_in_db* ist eine OUTPUT-Variable vom Datentyp **sysname**. Der Standardwert ist NULL. Wenn dieses Argument nicht angegeben ist, wird *login* verwendet. Wenn die Angabe als Ausgabevariable mit dem Wert NULL angegeben ist, wird **\@ name_in_db** auf *Login* festgelegt. *name_in_db* darf in der aktuellen Datenbank noch nicht vorhanden sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -67,8 +67,8 @@ CREATE USER Lolan FOR LOGIN [Edmonds\LolanSo];
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
  [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

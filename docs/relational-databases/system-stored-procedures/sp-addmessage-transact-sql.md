@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addmessage
 - sp_addmessage_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 306fc9b2316d599380b3a6e781d4f8a1ef646626
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f9bdbbac913643bd0d44ba7e45b07c8bc3e09789
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89529177"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209381"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,12 +51,12 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
 `[ @lang = ] 'language'` Die Sprache für diese Nachricht. *Language* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Da mehrere Sprachen auf demselben Server installiert werden können, gibt *Sprache* die Sprache an, in der die einzelnen Nachrichten geschrieben werden. Wenn *Language* weggelassen wird, ist die Sprache die Standardsprache für die Sitzung.  
   
-`[ @with_log = ] { 'TRUE' | 'FALSE' }` Gibt an, ob die Nachricht bei Auftreten in das Windows-Anwendungsprotokoll geschrieben werden soll. ** \@ WITH_LOG** ist vom Datentyp **varchar (5)** und hat den Standardwert false. Bei TRUE wird der Fehler immer in das Windows-Anwendungsprotokoll geschrieben. Bei FALSE wird der Fehler nicht immer in das Windows-Anwendungsprotokoll geschrieben, sondern in Abhängigkeit davon, wie er ausgelöst wurde. Nur Mitglieder der **sysadmin** -Server Rolle können diese Option verwenden.  
+`[ @with_log = ] { 'TRUE' | 'FALSE' }` Gibt an, ob die Nachricht bei Auftreten in das Windows-Anwendungsprotokoll geschrieben werden soll. **\@ WITH_LOG** ist vom Datentyp **varchar (5)** und hat den Standardwert false. Bei TRUE wird der Fehler immer in das Windows-Anwendungsprotokoll geschrieben. Bei FALSE wird der Fehler nicht immer in das Windows-Anwendungsprotokoll geschrieben, sondern in Abhängigkeit davon, wie er ausgelöst wurde. Nur Mitglieder der **sysadmin** -Server Rolle können diese Option verwenden.  
   
 > [!NOTE]  
 >  Wenn eine Meldung in das Windows-Anwendungsprotokoll geschrieben wird, wird sie auch in die [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Fehlerprotokolldatei geschrieben.  
   
-`[ @replace = ] 'replace'` Bei Angabe als Zeichenfolge *ersetzen*wird eine vorhandene Fehlermeldung mit neuem Meldungs Text und Schweregrad überschrieben. *Replace* ist vom Datentyp **varchar (7)** und hat den Standardwert NULL. Diese Option muss angegeben werden, wenn *msg_id* bereits vorhanden ist. Wenn Sie eine US-englische Nachricht ersetzen, wird der Schweregrad für alle Nachrichten in allen anderen Sprachen ersetzt, die denselben *msg_id*haben.  
+`[ @replace = ] 'replace'` Bei Angabe als Zeichenfolge *ersetzen* wird eine vorhandene Fehlermeldung mit neuem Meldungs Text und Schweregrad überschrieben. *Replace* ist vom Datentyp **varchar (7)** und hat den Standardwert NULL. Diese Option muss angegeben werden, wenn *msg_id* bereits vorhanden ist. Wenn Sie eine US-englische Nachricht ersetzen, wird der Schweregrad für alle Nachrichten in allen anderen Sprachen ersetzt, die denselben *msg_id* haben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -81,7 +81,7 @@ Erfordert die Mitgliedschaft in den festen Server Rollen **sysadmin** oder **ser
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-defining-a-custom-message"></a>A. Definieren einer benutzerdefinierten Meldung  
- Im folgenden Beispiel wird **sys. Messages**eine benutzerdefinierte Meldung hinzugefügt.  
+ Im folgenden Beispiel wird **sys. Messages** eine benutzerdefinierte Meldung hinzugefügt.  
   
 ```  
 USE master;  

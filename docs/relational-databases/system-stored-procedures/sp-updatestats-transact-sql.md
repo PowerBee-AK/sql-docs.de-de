@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_updatestats_TSQL
 - sp_updatestats
@@ -19,12 +19,12 @@ ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f976f9be51d688833a09e5faaae42b8864ecc274
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0cfaffcf1df13da39a093043d84e28f4433d3a71
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482378"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209271"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,7 @@ sp_updatestats [ [ @resample = ] 'resample']
 ## <a name="arguments"></a>Argumente  
 `[ @resample = ] 'resample'` Gibt an, dass **sp_updatestats** die RESAMPLE-Option der [Update Statistics](../../t-sql/statements/update-statistics-transact-sql.md) -Anweisung verwendet. Wird **'resample'** nicht angegeben, aktualisiert **sp_updatestats** Statistiken mithilfe der Standardstichprobe. **resample** ist vom Datentyp **varchar(8)** . Der Standardwert ist NO.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_updatestats** `UPDATE STATISTICS` wird durch Angabe des- `ALL` Schlüssel Worts für alle benutzerdefinierten und internen Tabellen in der Datenbank ausgeführt. sp_updatestats zeigt Meldungen an, die auf den Fortschritt hinweisen. Nach Abschluss des Updates wird gemeldet, dass die Statistiken für alle Tabellen aktualisiert wurden.  
   
 **sp_updatestats** aktualisiert Statistiken für deaktivierte nicht gruppierte Indizes und aktualisiert keine Statistiken für deaktivierte gruppierte Indizes.  

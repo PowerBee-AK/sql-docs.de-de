@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdistpublisher_TSQL
 - sp_helpdistpublisher
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 129192de74a83232334437035599cffe24a910d8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 461a186656cbef0d1a83eecb2a3e58d63ab896ac
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543338"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209308"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,7 +51,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |**distribution_db**|**sysname**|Verteilungsdatenbank für den angegebenen Verleger.|  
 |**security_mode**|**int**|Sicherheitsmodus, der von Replikations-Agents für die Verbindung mit dem Verleger für Abonnements mit verzögertem Update über eine Warteschlange oder für die Verbindung mit einem Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger verwendet wird.<br /><br /> **0** -  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
 |**Anmel**|**sysname**|Anmeldename, der von Replikations-Agents für die Verbindung mit dem Verleger für Abonnements mit verzögertem Update über eine Warteschlange oder für die Verbindung mit einem Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger verwendet wird.|  
-|**password**|**nvarchar (524)**|Zurückgegebenes Kennwort (in einfacher verschlüsselter Form). Das Kennwort ist für andere Benutzer als **sysadmin**NULL.|  
+|**password**|**nvarchar (524)**|Zurückgegebenes Kennwort (in einfacher verschlüsselter Form). Das Kennwort ist für andere Benutzer als **sysadmin** NULL.|  
 |**active**|**bit**|Gibt an, ob ein Remoteverleger den lokalen Server als Verteiler verwendet:<br /><br /> **0** = Nein<br /><br /> **1** = Ja|  
 |**working_directory**|**nvarchar(255)**|Name des Arbeitsverzeichnisses.|  
 |**trusted**|**bit**|Gibt an, ob das Kennwort beim Herstellen der Verbindung des Verlegers mit dem Verteiler erforderlich ist. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen sollte dies immer **0**(null) zurückgeben, was bedeutet, dass das Kennwort erforderlich ist.|  
@@ -63,13 +63,13 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helpdistpublisher** wird bei allen Replikations Typen verwendet.  
   
  im Resultset werden bei nicht-**sysadmin** -Anmeldungen **sp_helpdistpublisher** weder die Anmelde Informationen des Verlegers noch das Kennwort angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Mitglieder der festen Server Rolle **sysadmin** können **sp_helpdistpublisher** für jeden Verleger ausführen, der den lokalen Server als Verteiler verwendet. Mitglieder der festen Daten Bank Rolle **db_owner** oder der **replmonitor** -Rolle in einer Verteilungs Datenbank können **sp_helpdistpublisher** für jeden Verleger ausführen, der diese Verteilungs Datenbank verwendet. Benutzer in der Veröffentlichungs Zugriffsliste für eine Veröffentlichung auf dem angegebenen *Verleger* können **sp_helpdistpublisher**ausführen. Wenn *Publisher* nicht angegeben wird, werden Informationen für alle Verleger zurückgegeben, für die der Benutzer Zugriffsberechtigung hat.  
+ Mitglieder der festen Server Rolle **sysadmin** können **sp_helpdistpublisher** für jeden Verleger ausführen, der den lokalen Server als Verteiler verwendet. Mitglieder der festen Daten Bank Rolle **db_owner** oder der **replmonitor** -Rolle in einer Verteilungs Datenbank können **sp_helpdistpublisher** für jeden Verleger ausführen, der diese Verteilungs Datenbank verwendet. Benutzer in der Veröffentlichungs Zugriffsliste für eine Veröffentlichung auf dem angegebenen *Verleger* können **sp_helpdistpublisher** ausführen. Wenn *Publisher* nicht angegeben wird, werden Informationen für alle Verleger zurückgegeben, für die der Benutzer Zugriffsberechtigung hat.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_unregister_custom_scripting_TSQL
 - sp_unregister_custom_scripting
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1bb9545e4a74fdf6831317ee31f36488e781239d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7dc5ff01b5dfb5742233dce8f89384edbc9db957
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547292"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209670"
 ---
 # <a name="sp_unregister_custom_scripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,18 +49,18 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 |**delete**|Registrierte benutzerdefinierte gespeicherte Prozedur oder Skript wird ausgeführt, wenn eine DELETE-Anweisung repliziert wird.|  
 |**custom_script**|Registrierte benutzerdefinierte gespeicherte Prozedur oder Skript wird am Ende des DDL-Triggers (Data Definition Language) ausgeführt.|  
   
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung, für die die benutzerdefinierte gespeicherte Prozedur oder das Skript entfernt wird. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, für die die benutzerdefinierte gespeicherte Prozedur oder das Skript entfernt wird. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @article = ] 'article'` Der Name des Artikels, für den die benutzerdefinierte gespeicherte Prozedur oder das Skript entfernt wird. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @article = ] 'article'` Der Name des Artikels, für den die benutzerdefinierte gespeicherte Prozedur oder das Skript entfernt wird. der *Artikel* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_unregister_custom_scripting** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** , der festen Daten Bank Rolle **db_owner** oder der festen Daten Bank Rolle **db_ddladmin** können **sp_unregister_custom_scripting**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** , der festen Daten Bank Rolle **db_owner** oder der festen Daten Bank Rolle **db_ddladmin** können **sp_unregister_custom_scripting** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_register_custom_scripting &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_agent_default
 - sp_help_agent_default_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9df854b8199d265dff29277baf6ed9fe443bc46b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a5c2d74b71dfc55f4654b566e314157895f743bf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538879"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208972"
 ---
 # <a name="sp_help_agent_default-transact-sql"></a>sp_help_agent_default (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,9 +39,9 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @profile_id = ] _profile_idOUTPUT` Die ID der Standardkonfiguration für den Agenttyp. *profile_id* ist vom Datentyp **int**und hat keinen Standardwert. *profile_id* ist auch ein Output-Parameter und gibt die ID der Standardkonfiguration für den Agenttyp zurück.  
+`[ @profile_id = ] _profile_idOUTPUT` Die ID der Standardkonfiguration für den Agenttyp. *profile_id* ist vom Datentyp **int** und hat keinen Standardwert. *profile_id* ist auch ein Output-Parameter und gibt die ID der Standardkonfiguration für den Agenttyp zurück.  
   
-`[ @agent_type = ] 'agent_type'` Der Typ des Agents. *agent_type* ist vom Datentyp **int**und hat keinen Standardwert. die folgenden Werte sind möglich:  
+`[ @agent_type = ] 'agent_type'` Der Typ des Agents. *agent_type* ist vom Datentyp **int** und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -54,11 +54,11 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_help_agent_default** wird bei allen Replikations Typen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **replmonitor** können **sp_help_agent_default**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **replmonitor** können **sp_help_agent_default** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

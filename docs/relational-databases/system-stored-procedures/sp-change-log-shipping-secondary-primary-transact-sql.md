@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_log_shipping_secondary_primary
 - sp_change_log_shipping_secondary_primary_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7b17019380bc65d1b3d2fcdb16352fe32477c6bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8352706512e71a5cba3a0b22befe2b7416d276bc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474494"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209349"
 ---
 # <a name="sp_change_log_shipping_secondary_primary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_change_log_shipping_secondary_primary
 ## <a name="arguments"></a>Argumente  
 `[ @primary_server = ] 'primary_server'` Der Name der primären Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokoll Versand Konfiguration. *primary_server* ist vom Datentyp **sysname** und darf nicht NULL sein.  
   
-`[ @primary_database = ] 'primary_database'` Der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @primary_database = ] 'primary_database'` Der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname** und hat keinen Standardwert.  
   
 `[ @backup_source_directory = ] 'backup_source_directory'` Das Verzeichnis, in dem die Sicherungsdateien des Transaktions Protokolls vom primären Server gespeichert werden. *backup_source_directory* ist vom Datentyp **nvarchar(500)** und darf nicht NULL sein.  
   

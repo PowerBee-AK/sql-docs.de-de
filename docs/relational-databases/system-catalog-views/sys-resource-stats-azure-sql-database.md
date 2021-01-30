@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 09/13/2018
 ms.service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - resource_stats
 - sys.resource_stats
@@ -20,12 +20,12 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 835fcabe9a247efb7cf280eb89a0baefd4076640
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 14785888953906f42b2196dc2cb06ca35cfc3a8b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97429124"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210024"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "97429124"
   
  Die folgende Tabelle beschreibt die verfügbaren Spalten bei einem Server mit der Version 12:  
   
-|Spalten|Datentyp|Beschreibung|  
+|Spalten|Datentyp|BESCHREIBUNG|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime**|Die UTC-Zeit, die den Beginn des fünfminütigen Berichts Intervalls angibt.|  
 |end_time|**datetime**|Die UTC-Zeit, die das Ende des fünfminütigen Berichts Intervalls angibt.|  
@@ -62,7 +62,7 @@ ms.locfileid: "97429124"
 ## <a name="permissions"></a>Berechtigungen  
  Alle Benutzerrollen, die berechtigt sind, eine Verbindung mit der virtuellen **master** -Datenbank herzustellen, haben Zugriff auf diese Sicht.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die von **sys.resource_stats** zurückgegebenen Daten werden als Prozentsatz der maximal zulässigen Grenzwerte für die Dienst Ebene/Leistungsstufe ausgedrückt, die Sie ausführen.  
   
  Wenn eine Datenbank Mitglied eines Pools für elastische Datenbanken ist, werden Ressourcen Statistiken, die als Prozentwerte dargestellt werden, als Prozentsatz der maximalen Beschränkung für die Datenbanken ausgedrückt, die in der Konfiguration des elastischen Pools festgelegt sind.  

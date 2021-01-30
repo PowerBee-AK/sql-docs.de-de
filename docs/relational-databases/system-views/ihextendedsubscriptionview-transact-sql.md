@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - IHextendedSubscriptionView_TSQL
 - IHextendedSubscriptionView
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: aca2ddea9625b5b2a40fea6ef27d6f218a71cda0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75498189c413aa89a81d2c0e8086c0f5cc37e1a0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485429"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208884"
 ---
 # <a name="ihextendedsubscriptionview-transact-sql"></a>IHextendedSubscriptionView (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88485429"
 |**status**|**tinyint**|Status des Abonnements:<br /><br /> **0** = inaktiv<br /><br /> **1** = abonniert<br /><br /> **2** = aktiv|  
 |**snapshot_seqno_flag**|**bit**|Gibt an, ob eine Momentaufnahmesequenznummer verwendet wird.|  
 |**independent_agent**|**bit**|Gibt an, ob eine eigenständige Verteilungs-Agent für diese Veröffentlichung vorhanden ist.<br /><br /> **0** = die Veröffentlichung verwendet einen freigegebenen Verteilungs-Agent, und jedes Paar aus Verleger Datenbank und Abonnenten Datenbank verfügt über einen einzelnen freigegebenen Agent.<br /><br /> **1** = für diese Veröffentlichung ist ein eigenständiger Verteilungs-Agent vorhanden.|  
-|**subscription_time**|**datetime**|Nur interne Verwendung.|  
+|**subscription_time**|**datetime**|Nur zur internen Verwendung.|  
 |**loopback_detection**|**bit**|Gilt für Abonnements, die Teil einer bidirektionalen Transaktionsreplikationstopologie sind. Bestimmt, ob der Verteilungs-Agent Transaktionen des Abonnenten zurück an den Abonnenten sendet:<br /><br /> **1** = sendet nicht zurück.<br /><br /> **0** = sendet zurück.|  
 |**agent_id**|**int**|Der eindeutige Bezeichner des Verteilungs-Agents.|  
 |**update_mode**|**tinyint**|Gibt den Typ des Updatemodus an, der wie folgt lauten kann:<br /><br /> **0** = schreibgeschützt.<br /><br /> **1** = sofortiges Update.<br /><br /> **2** = verzögertes Update über Message Queuing.<br /><br /> **3** = sofortiges Update mit verzögertem Update über eine Warteschlange als Failover mit Message Queuing.<br /><br /> **4** = verzögertes Update über eine Warteschlange SQL Server Warteschlange.<br /><br /> **5** = sofortiges Update mit verzögertem Update von verzögertem Update mithilfe SQL Server Warteschlange.|  

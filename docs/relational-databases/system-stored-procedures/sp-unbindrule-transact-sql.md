@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_unbindrule_TSQL
 - sp_unbindrule
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7ddf241acfb6e82e0cdd67315727017fb9965f77
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 42b652e2cc604465ac0db1d2c6f65739916c8684
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547331"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209677"
 ---
 # <a name="sp_unbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_unbindrule [ @objname = ] 'object_name'
 > [!NOTE]  
 >  *object_name* können eckige Klammern **[]** als Begrenzungs Bezeichner enthalten. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
   
-`[ @futureonly = ] 'futureonly_flag'` Wird nur beim Aufheben der Bindung einer Regel an einen Alias Datentyp verwendet. *futureonly_flag* ist vom Datentyp **varchar (15)** und hat den Standardwert NULL. Wenn *futureonly_flag* **futureonly**ist, verlieren vorhandene Spalten dieses Datentyps die angegebene Regel nicht.  
+`[ @futureonly = ] 'futureonly_flag'` Wird nur beim Aufheben der Bindung einer Regel an einen Alias Datentyp verwendet. *futureonly_flag* ist vom Datentyp **varchar (15)** und hat den Standardwert NULL. Wenn *futureonly_flag* **futureonly** ist, verlieren vorhandene Spalten dieses Datentyps die angegebene Regel nicht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

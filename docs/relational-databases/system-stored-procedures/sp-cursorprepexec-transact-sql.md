@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursorprepexec_TSQL
 - sp_cursorprepexec
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c77a02d7232acdd9dd2f109c6e7ae2d56121382e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b59597048ba7edc1102c3151d720e9bc6ff36942
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549919"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209700"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
   
 ## <a name="arguments"></a>Argumente  
  *vorbereitetes handle*  
- Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generierter vorbereiteter *handle* -Bezeichner. *vorbereitetes handle* ist erforderlich und gibt **int**zurück.  
+ Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generierter vorbereiteter *handle* -Bezeichner. *vorbereitetes handle* ist erforderlich und gibt **int** zurück.  
   
  *Cursor*  
  Der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generierte Cursorbezeichner. der *Cursor* ist ein erforderlicher Parameter, der für alle nachfolgenden Prozeduren angegeben werden muss, die auf diesen Cursor (z. b. sp_cursorfetch) reagieren.  
@@ -55,10 +55,10 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 >  Verwenden Sie eine **ntext** -Zeichenfolge als Eingabe Wert, wenn *stmt* parametrisiert und der *scrollopt* -PARAMETERIZED_STMT Wert aktiviert ist.  
   
  *statement*  
- Definiert das Resultset des Cursors. Der *Anweisungs* Parameter ist erforderlich und erfordert einen Eingabe Wert vom Typ **ntext**, **NCHAR**oder **nvarchar** .  
+ Definiert das Resultset des Cursors. Der *Anweisungs* Parameter ist erforderlich und erfordert einen Eingabe Wert vom Typ **ntext**, **NCHAR** oder **nvarchar** .  
   
 > [!NOTE]  
->  Die Regeln zum Angeben des stmt-Werts sind identisch mit denen für sp_cursoropen, mit der Ausnahme, dass der *stmt* -Zeichen folgen Datentyp **ntext**lauten muss.  
+>  Die Regeln zum Angeben des stmt-Werts sind identisch mit denen für sp_cursoropen, mit der Ausnahme, dass der *stmt* -Zeichen folgen Datentyp **ntext** lauten muss.  
   
  *options*  
  Ein optionaler Parameter, der eine Beschreibung der Spalten im Cursorresultset zurückgibt. * Optionen erfordern den folgenden **int** -Eingabe Wert.  

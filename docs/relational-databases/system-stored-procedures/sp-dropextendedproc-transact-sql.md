@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropextendedproc
 - sp_dropextendedproc_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 02d4287b2825401acd0eca532b3fad100fa32639
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bc877761f2e86ff63883c9f84ead94955044acbf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538969"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209333"
 ---
 # <a name="sp_dropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,14 +52,14 @@ sp_dropextendedproc [ @functname = ] 'procedure'
  Keine  
   
 ## <a name="remarks"></a>Bemerkungen  
- Beim Ausführen von **sp_dropextendedproc** wird der benutzerdefinierte Name der erweiterten gespeicherten Prozedur aus der [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) -Katalog Sicht gelöscht und der Eintrag aus der [sys. extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) -Katalog Sicht entfernt. Diese gespeicherte Prozedur kann nur in der **Master** -Datenbank ausgeführt werden.  
+ Beim Ausführen von **sp_dropextendedproc** wird der benutzerdefinierte Name der erweiterten gespeicherten Prozedur aus der [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) -Katalog Sicht gelöscht und der Eintrag aus der [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) -Katalog Sicht entfernt. Diese gespeicherte Prozedur kann nur in der **Master** -Datenbank ausgeführt werden.  
   
 **sp_dropextendedproc** löscht erweiterte gespeicherte System Prozeduren nicht. Stattdessen sollte der Systemadministrator die EXECUTE-Berechtigung für die erweiterte gespeicherte Prozedur der **Public** -Rolle verweigern.  
   
  **sp_dropextendedproc** kann nicht innerhalb einer Transaktion ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_dropextendedproc**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_dropextendedproc** ausführen.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die erweiterte gespeicherte Prozedur `xp_hello` gelöscht.  

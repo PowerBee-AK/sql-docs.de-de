@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_grantlogin_TSQL
 - sp_grantlogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: ddca7a999c1095bc1f6da91e62bd675c736dd96b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b234748fb8e3d5f2f68973b7ff5011c401ad2616
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447066"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208981"
 ---
 # <a name="sp_grantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
 
@@ -43,7 +43,7 @@ sp_grantlogin [@loginame=] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @loginame = ] 'login'` Der Name eines Windows-Benutzers oder einer Windows-Gruppe. Der Windows-Benutzer oder die Windows-Gruppe muss mit einem Windows-Domänen Namen in der Form " *Domäne* \\ *Benutzer*" qualifiziert werden, z. b. **London\JoeB**. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @loginame = ] 'login'` Der Name eines Windows-Benutzers oder einer Windows-Gruppe. Der Windows-Benutzer oder die Windows-Gruppe muss mit einem Windows-Domänen Namen in der Form " *Domäne* \\ *Benutzer*" qualifiziert werden, z. b. **London\JoeB**. *login* ist vom Datentyp **sysname** und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -64,8 +64,8 @@ CREATE LOGIN [Corporate\BobJ] FROM WINDOWS;
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Siehe auch  
+ [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

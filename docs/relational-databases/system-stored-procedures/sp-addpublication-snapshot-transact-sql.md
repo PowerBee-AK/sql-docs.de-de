@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addpublication_snapshot_TSQL
 - sp_addpublication_snapshot
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e59ad9f2fb37ac4bd8aecc18d126c397ec4f67d5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f7fb5fbea8a87d1bacb4a086825ecfe62b292f76
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541981"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209364"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -58,9 +58,9 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @frequency_type = ] frequency_type` Die Häufigkeit, mit der die Momentaufnahmen-Agent ausgeführt wird. *frequency_type* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
+`[ @frequency_type = ] frequency_type` Die Häufigkeit, mit der die Momentaufnahmen-Agent ausgeführt wird. *frequency_type* ist vom Datentyp **int** und kann einen der folgenden Werte aufweisen.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -72,7 +72,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**64**|Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent gestartet wird.|  
 |**128**|Ausführen, wenn sich der Computer im Leerlauf befindet|  
   
-`[ @frequency_interval = ] frequency_interval` Der Wert, der auf die von *frequency_type*festgelegte Häufigkeit angewendet werden soll. *frequency_interval* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
+`[ @frequency_interval = ] frequency_interval` Der Wert, der auf die von *frequency_type* festgelegte Häufigkeit angewendet werden soll. *frequency_interval* ist vom Datentyp **int** und kann einen der folgenden Werte aufweisen.  
   
 |Wert für frequency_type|Auswirkung auf frequency_interval|  
 |------------------------------|-----------------------------------|  
@@ -93,27 +93,27 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**4** (Standard)|Minute|  
 |**8**|Stunde|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Das Intervall für die *frequency_subday*. *frequency_subday_interval* ist vom Datentyp **int**und hat den Standardwert 5. Dies bedeutet alle 5 Minuten.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Das Intervall für die *frequency_subday*. *frequency_subday_interval* ist vom Datentyp **int** und hat den Standardwert 5. Dies bedeutet alle 5 Minuten.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` Das Datum, an dem die Momentaufnahmen-Agent ausgeführt wird. *frequency_relative_interval* ist vom Datentyp **int**und hat den Standardwert 1.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Das Datum, an dem die Momentaufnahmen-Agent ausgeführt wird. *frequency_relative_interval* ist vom Datentyp **int** und hat den Standardwert 1.  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Der von *frequency_type*verwendete Wiederholungs Faktor. *frequency_recurrence_factor* ist vom Datentyp **int**und hat den Standardwert 0.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Der von *frequency_type* verwendete Wiederholungs Faktor. *frequency_recurrence_factor* ist vom Datentyp **int** und hat den Standardwert 0.  
   
-`[ @active_start_date = ] active_start_date` Das Datum, an dem die Momentaufnahmen-Agent zum ersten Mal geplant ist, formatiert als YYYYMMDD. *active_start_date* ist vom Datentyp **int**und hat den Standardwert 0.  
+`[ @active_start_date = ] active_start_date` Das Datum, an dem die Momentaufnahmen-Agent zum ersten Mal geplant ist, formatiert als YYYYMMDD. *active_start_date* ist vom Datentyp **int** und hat den Standardwert 0.  
   
-`[ @active_end_date = ] active_end_date` Das Datum, an dem der Momentaufnahmen-Agent nicht mehr geplant ist, formatiert als YYYYMMDD. *active_end_date* ist vom Datentyp **int**und hat den Standardwert 99991231, was bedeutet, dass der 31. Dezember 9999.  
+`[ @active_end_date = ] active_end_date` Das Datum, an dem der Momentaufnahmen-Agent nicht mehr geplant ist, formatiert als YYYYMMDD. *active_end_date* ist vom Datentyp **int** und hat den Standardwert 99991231, was bedeutet, dass der 31. Dezember 9999.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Die Tageszeit, zu der die Momentaufnahmen-Agent zum ersten Mal geplant ist. dabei wird das Format HHMMSS verwendet. *active_start_time_of_day* ist vom Datentyp **int**und hat den Standardwert 0.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Die Tageszeit, zu der die Momentaufnahmen-Agent zum ersten Mal geplant ist. dabei wird das Format HHMMSS verwendet. *active_start_time_of_day* ist vom Datentyp **int** und hat den Standardwert 0.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Die Tageszeit, zu der die Momentaufnahmen-Agent nicht mehr geplant ist. dabei wird das Format HHMMSS verwendet. *active_end_time_of_day* ist vom Datentyp **int**und hat den Standardwert 235959, was bedeutet 11:59:59 Uhr. gemessen auf einem 24-Stunden-Format.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Die Tageszeit, zu der die Momentaufnahmen-Agent nicht mehr geplant ist. dabei wird das Format HHMMSS verwendet. *active_end_time_of_day* ist vom Datentyp **int** und hat den Standardwert 235959, was bedeutet 11:59:59 Uhr. gemessen auf einem 24-Stunden-Format.  
   
 `[ @snapshot_job_name = ] 'snapshot_agent_name'` Der Name eines vorhandenen Momentaufnahmen-Agent Auftrags namens, wenn ein vorhandener Auftrag verwendet wird. *snapshot_agent_name* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL. Dieser Parameter dient der internen Verwendung und sollte beim Erstellen einer neuen Veröffentlichung nicht angegeben werden. Wenn *snapshot_agent_name* angegeben wird, müssen *job_login* und *job_password* NULL sein.  
   
 `[ @publisher_security_mode = ] publisher_security_mode` Der Sicherheitsmodus, der vom Agent beim Herstellen einer Verbindung mit dem Verleger verwendet wird. *publisher_security_mode* ist vom Datentyp **smallint**. der Standardwert ist 1. **0** gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung an, und **1** gibt die Windows-Authentifizierung an. Für nicht--Verleger muss ein Wert von **0** angegeben werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @publisher_login = ] 'publisher_login'` Der Anmelde Name, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird. *publisher_login* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. *publisher_login* muss angegeben werden, wenn *publisher_security_mode* den Wert **0**hat. Wenn *publisher_login* NULL und *publisher_security_mode* 1 ist, wird das in *job_login* angegebene Konto verwendet, wenn **eine**Verbindung mit dem Verleger hergestellt wird.  
+`[ @publisher_login = ] 'publisher_login'` Der Anmelde Name, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird. *publisher_login* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. *publisher_login* muss angegeben werden, wenn *publisher_security_mode* den Wert **0** hat. Wenn *publisher_login* NULL und *publisher_security_mode* 1 ist, wird das in *job_login* angegebene Konto verwendet, wenn **eine** Verbindung mit dem Verleger hergestellt wird.  
   
-`[ @publisher_password = ] 'publisher_password'` Das Kennwort, das beim Herstellen einer Verbindung mit dem Verleger verwendet wird. *publisher_password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher_password = ] 'publisher_password'` Das Kennwort, das beim Herstellen einer Verbindung mit dem Verleger verwendet wird. *publisher_password* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!IMPORTANT]  
 >  Speichern Sie keine Authentifizierungsinformationen in Skriptdateien. Es wird empfohlen, Anmeldenamen und Kennwörter zur Laufzeit bereitzustellen, um die Sicherheit zu verbessern.  
@@ -123,12 +123,12 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 > [!NOTE]
 >  Bei nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verlegern muss es sich hierbei um denselben Anmelde Namen handeln, der in [sp_adddistpublisher &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)angegeben ist.  
   
-`[ @job_password = ] 'job_password'` Das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *job_password* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Sie müssen diesen Parameter angeben, wenn Sie einen neuen Auftrag des Momentaufnahme-Agents erstellen.  
+`[ @job_password = ] 'job_password'` Das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *job_password* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert. Sie müssen diesen Parameter angeben, wenn Sie einen neuen Auftrag des Momentaufnahme-Agents erstellen.  
   
 > [!IMPORTANT]  
 >  Speichern Sie keine Authentifizierungsinformationen in Skriptdateien. Es wird empfohlen, Anmeldenamen und Kennwörter zur Laufzeit bereitzustellen, um die Sicherheit zu verbessern.  
   
-`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  der *Verleger* sollte nicht verwendet werden, wenn ein Momentaufnahmen-Agent auf einem Verleger erstellt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -136,14 +136,14 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_addpublication_snapshot** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_AddTranPub](../../relational-databases/replication/codesnippet/tsql/sp-addpublication-snapsh_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addpublication_snapshot**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addpublication_snapshot** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   

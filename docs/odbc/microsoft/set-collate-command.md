@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - set collate command [ODBC]
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5ca796da60adf0c432b5bbd80065e58563664bc5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f6158f79c589e446c2b3c106a1d14fd58715714f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466382"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208650"
 ---
 # <a name="set-collate-command"></a>SET COLLATE-Befehl
 Gibt eine Sortierreihenfolge für Zeichenfelder in nachfolgenden Indizierungs-und Sortiervorgängen an.  
@@ -47,7 +47,7 @@ SET COLLATE TO cSequenceName
 |Uniqwt|Eindeutige Gewichtung|  
   
 > [!NOTE]  
->  Wenn Sie die Spanisch-Option angeben, ist *ch* ein einzelner Buchstabe, der zwischen *c* und *d*sortiert, und *ll* sortiert zwischen *l* und *m*.  
+>  Wenn Sie die Spanisch-Option angeben, ist *ch* ein einzelner Buchstabe, der zwischen *c* und *d* sortiert, und *ll* sortiert zwischen *l* und *m*.  
   
  Wenn Sie eine Sortierungs Sequenz Option als Literalzeichenfolge angeben, stellen Sie sicher, dass Sie die Option in Anführungszeichen einschließen:  
   
@@ -74,5 +74,5 @@ SET COLLATE TO cSequenceName
   
  Wenn z. b. ein Index erstellt wird, bei dem SET COLLATE auf General festgelegt ist und die Einstellung SET COLLATE später in Spanish geändert wird, behält der Index die allgemeine Sortierreihenfolge bei.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Einrichten von ODBC-Visual FoxPro (Dialogfeld)](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)
