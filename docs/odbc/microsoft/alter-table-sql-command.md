@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - alter table [ODBC]
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c72d03abff792ff103bf009cd12b718c74bd497d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 186647c40517c5ecf77a55e6bbc08155c98ffed9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483703"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205754"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE (SQL-Befehl)
 Ändert die Struktur einer Tabelle Programm gesteuert.  
@@ -152,13 +152,13 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  Entfernt die Validierungs Regel der Tabelle.  
   
  *EExpression3*-Tag hinzufügen *TagName2*  
- Fügt der Tabelle einen primären Index hinzu. *eExpression3* gibt den primär Index Schlüssel Ausdruck an, und *TagName2* gibt den Namen des primären Indextags an. Indextagnamen können bis zu 10 Zeichen enthalten. Wenn Tag *TagName2* ausgelassen und *eExpression3* ein einzelnes Feld ist, hat das primäre Indextag denselben Namen wie das in *eExpression3*angegebene Feld.  
+ Fügt der Tabelle einen primären Index hinzu. *eExpression3* gibt den primär Index Schlüssel Ausdruck an, und *TagName2* gibt den Namen des primären Indextags an. Indextagnamen können bis zu 10 Zeichen enthalten. Wenn Tag *TagName2* ausgelassen und *eExpression3* ein einzelnes Feld ist, hat das primäre Indextag denselben Namen wie das in *eExpression3* angegebene Feld.  
   
  Primärschlüssel löschen  
  Entfernt den primären Index und das zugehörige Indextag. Da eine Tabelle nur über einen Primärschlüssel verfügen kann, ist es nicht erforderlich, den Namen des Primärschlüssels anzugeben. Wenn Sie den primären Index entfernen, werden auch alle permanenten Beziehungen basierend auf dem Primärschlüssel gelöscht.  
   
- Eindeutige *eExpression4*hinzufügen [Tag *TagName3*]  
- Fügt der Tabelle einen Kandidaten Index hinzu. *eExpression4* gibt den Schlüssel Ausdruck für den Kandidaten Index an, und *TagName3* gibt den Namen des Kandidaten Index Tags an. Indextagnamen können bis zu 10 Zeichen enthalten. Wenn Sie Tag *TagName3* weglassen und *eExpression4* ein einzelnes Feld ist, hat das Kandidaten Indextag denselben Namen wie das in *eExpression4*angegebene Feld.  
+ Eindeutige *eExpression4* hinzufügen [Tag *TagName3*]  
+ Fügt der Tabelle einen Kandidaten Index hinzu. *eExpression4* gibt den Schlüssel Ausdruck für den Kandidaten Index an, und *TagName3* gibt den Namen des Kandidaten Index Tags an. Indextagnamen können bis zu 10 Zeichen enthalten. Wenn Sie Tag *TagName3* weglassen und *eExpression4* ein einzelnes Feld ist, hat das Kandidaten Indextag denselben Namen wie das in *eExpression4* angegebene Feld.  
   
  Löschen eines eindeutigen Tags *TagName4*  
  Entfernt den Kandidaten Index und das zugehörige Indextag. Da eine Tabelle über mehrere Kandidaten Schlüssel verfügen kann, müssen Sie den Namen des Kandidaten Index Tags angeben.  
@@ -167,12 +167,12 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  Fügt der Tabelle einen fremd Index (nonprimary) hinzu. *eExpression5* gibt den fremd Index Schlüssel Ausdruck an, und *TagName4* gibt den Namen des fremden Indextags an. Indextagnamen können bis zu 10 Zeichen enthalten.  
   
  Verweise *TableName2*[Tag *TagName5*]  
- Gibt die übergeordnete Tabelle an, mit der eine persistente Beziehung hergestellt wird. TagTagName5 *TagName5* einschließen, um eine Beziehung basierend auf einem vorhandenen Indextag für die übergeordnete Tabelle herzustellen. Indextagnamen können bis zu 10 Zeichen enthalten. Wenn Sie Tag *TagName5*weglassen, wird die Beziehung unter Verwendung des primären Indextags der übergeordneten Tabelle festgelegt.  
+ Gibt die übergeordnete Tabelle an, mit der eine persistente Beziehung hergestellt wird. TagTagName5  einschließen, um eine Beziehung basierend auf einem vorhandenen Indextag für die übergeordnete Tabelle herzustellen. Indextagnamen können bis zu 10 Zeichen enthalten. Wenn Sie Tag *TagName5* weglassen, wird die Beziehung unter Verwendung des primären Indextags der übergeordneten Tabelle festgelegt.  
   
  Drop Foreign Key-Tag *TagName6*[Speichern]  
- Löscht einen Fremdschlüssel, dessen Indextag *TagName6*ist. Wenn Sie "Speichern" weglassen, wird das Indextag aus dem strukturellen Index gelöscht. Fügen Sie Save ein, um das Löschen des Indextags aus dem strukturellen Index zu verhindern.  
+ Löscht einen Fremdschlüssel, dessen Indextag *TagName6* ist. Wenn Sie "Speichern" weglassen, wird das Indextag aus dem strukturellen Index gelöscht. Fügen Sie Save ein, um das Löschen des Indextags aus dem strukturellen Index zu verhindern.  
   
- Spalte *FieldName4*in *FieldName5* umbenennen  
+ Spalte *FieldName4* in *FieldName5* umbenennen  
  Ermöglicht es Ihnen, den Namen eines Felds in der Tabelle zu ändern. *FieldName4* gibt den Namen des Felds an, das umbenannt wird. *FieldName5* gibt den neuen Namen des Felds an.  
   
 > [!CAUTION]  
@@ -192,6 +192,6 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  Wenn sich die Tabelle, die Sie ändern, in einer Datenbank befindet, ist für ALTER TABLE-SQL eine exklusive Verwendung der Datenbank erforderlich. Wenn Sie eine Datenbank für die exklusive Verwendung öffnen möchten, schließen Sie exklusive in Open Database ein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE TABLE-SQL-Befehl](../../odbc/microsoft/create-table-sql-command.md)   
- [Befehl INDEX](../../odbc/microsoft/index-command.md)
+ [INDEX-Befehl](../../odbc/microsoft/index-command.md)

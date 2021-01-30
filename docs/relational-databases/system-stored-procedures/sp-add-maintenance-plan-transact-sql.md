@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_maintenance_plan
 - sp_add_maintenance_plan_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a26b25a4c6484363ede0435b58febf894f13481f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d24a6cae27d0baba9b88549e99fc7e477539f57d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474595"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208019"
 ---
 # <a name="sp_add_maintenance_plan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,17 +48,17 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ## <a name="arguments"></a>Argumente  
 `[ @plan_name = ] 'plan_name'` Gibt den Namen des Wartungsplans an, der hinzugefügt werden soll. *plan_name* ist vom Datentyp **varchar (128)**.  
   
- ** @plan_id = '** *plan_id* **'**  
+ **@plan_id = '** *plan_id* **'**  
  Gibt die ID des Wartungsplans an. *plan_id* ist vom Datentyp **uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="remarks"></a>Bemerkungen  
- **sp_add_maintenance_plan** müssen von der **msdb** -Datenbank aus ausgeführt werden, und es wird ein neuer, aber leerer Wartungsplan erstellt. Um eine oder mehrere Datenbanken hinzuzufügen und Sie einem Auftrag oder Aufträgen zuzuordnen, führen Sie **sp_add_maintenance_plan_db** und **sp_add_maintenance_plan_job**aus.  
+ **sp_add_maintenance_plan** müssen von der **msdb** -Datenbank aus ausgeführt werden, und es wird ein neuer, aber leerer Wartungsplan erstellt. Um eine oder mehrere Datenbanken hinzuzufügen und Sie einem Auftrag oder Aufträgen zuzuordnen, führen Sie **sp_add_maintenance_plan_db** und **sp_add_maintenance_plan_job** aus.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_add_maintenance_plan**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_add_maintenance_plan** ausführen.  
   
 ## <a name="examples"></a>Beispiele  
  Erstellen eines Wartungsplans namens Myplan.  

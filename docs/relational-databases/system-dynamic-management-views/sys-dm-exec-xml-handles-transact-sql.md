@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_exec_xml_handles
 - dm_exec_xml_handles_TSQL
@@ -21,12 +21,12 @@ ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
 author: pmasl
 ms.author: pelopes
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0433126f43a14aa12521c0a65cd1b4aca8441ac6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 3e8529f7626ffa25d86cbb73c704198082e32bcf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482661"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208053"
 ---
 # <a name="sysdm_exec_xml_handles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -48,7 +48,7 @@ dm_exec_xml_handles (session_id | 0 )
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|Sitzungs-ID der Sitzung, die dieses XML-Dokumenthandle verwaltet.|  
 |**document_id**|**int**|Von **sp_xml_preparedocument** zurückgegebene ID eines XML-Dokumenthandles.|  
@@ -63,7 +63,7 @@ dm_exec_xml_handles (session_id | 0 )
 |**row_count**|**bigint**|Die Anzahl von Zeilen, die von allen vorherigen OPENXML-Aufrufen für dieses Dokumenthandle zurückgegeben wurden.|  
 |**dormant_duration_ms**|**bigint**|Millisekunden seit dem letzten OPENXML-Aufruf. Falls OPENXML nicht aufgerufen wurde, werden die Millisekunden seit dem Aufruf von **sp_xml_preparedocument** zurückgegeben.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Lebensdauer von **sql_handle** -Werten, mit denen der SQL-Text abgerufen wird, in dem ein Aufruf von **sp_xml_preparedocument** ausgeführt wird, überdauert den zwischengespeicherten Plan, nach dem die Abfrage ausgeführt wird. Ist der Abfragetext nicht im Cache verfügbar, können die Daten nicht mithilfe der Informationen im Funktionsergebnis abgerufen werden. Dies kann eintreten, wenn Sie viele umfangreiche Batches ausführen.  
   
 ## <a name="permissions"></a>Berechtigungen  

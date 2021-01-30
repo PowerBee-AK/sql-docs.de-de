@@ -1,13 +1,13 @@
 ---
 description: 'C zu SQL: Tag-Uhrzeit-Intervalle'
-title: 'C zu SQL: Zeitintervalle | Microsoft-Dokumentation'
+title: 'C zu SQL: Day-Time Intervalle | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - day-time intervals [ODBC]
 - data conversions from C to SQL types [ODBC], day-time intervals
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aba5bb40a34f100cf33d5c07fb6e796b227904dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e207a7533a0f09360925f6123e8797bdabecc21b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499993"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207831"
 ---
 # <a name="c-to-sql-day-time-intervals"></a>C zu SQL: Tag-Uhrzeit-Intervalle
 Die Bezeichner für die ODBC-C-Datentypen für das Tag-Zeitintervall lauten wie folgt:  
@@ -61,7 +61,7 @@ Die Bezeichner für die ODBC-C-Datentypen für das Tag-Zeitintervall lauten wie 
   
  Die Standard Konvertierung eines Interval-C-Typs erfolgt in den entsprechenden SQL-Typ für den Tag-Zeit-Intervall.  
   
- Der Treiber ignoriert den Längen-/indikatorenwert beim Umrechnen von Daten aus dem Datentyp Interval c und geht davon aus, dass die Größe des Daten Puffers der Größe des Datentyps Interval c entspricht. Der Wert für die Länge/den Indikator wird im *StrLen_Or_Ind* -Argument in **SQLPutData** und in dem Puffer übergeben, der mit dem *StrLen_or_IndPtr* -Argument in **SQLBindParameter**angegeben wird. Der Datenpuffer wird mit dem *DataPtr* -Argument in **SQLPutData** und dem *ParameterValuePtr* -Argument in **SQLBindParameter**angegeben.  
+ Der Treiber ignoriert den Längen-/indikatorenwert beim Umrechnen von Daten aus dem Datentyp Interval c und geht davon aus, dass die Größe des Daten Puffers der Größe des Datentyps Interval c entspricht. Der Wert für die Länge/den Indikator wird im *StrLen_Or_Ind* -Argument in **SQLPutData** und in dem Puffer übergeben, der mit dem *StrLen_or_IndPtr* -Argument in **SQLBindParameter** angegeben wird. Der Datenpuffer wird mit dem *DataPtr* -Argument in **SQLPutData** und dem *ParameterValuePtr* -Argument in **SQLBindParameter** angegeben.  
   
  Im folgenden Beispiel wird veranschaulicht, wie die in der SQL_INTERVAL_STRUCT Struktur gespeicherten Intervall-C-Daten in eine Daten Bank Spalte gesendet werden. Die Intervall Struktur enthält ein DAY_TO_SECOND Intervall. Sie wird in einer Daten Bank Spalte vom Typ SQL_INTERVAL_DAY_TO_MINUTE gespeichert.  
   

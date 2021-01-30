@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_agent_parameter_TSQL
 - sp_change_agent_parameter
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6020788189dbd352b3a469809e0a95a85a6a5a5f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e8bfb83ad0b05f57d4be97838882288937ffbcc1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548265"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206593"
 ---
 # <a name="sp_change_agent_parameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,12 +38,12 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @profile_id = ] profile_id,` Die ID des Profils. *profile_id* ist vom Datentyp **int**und hat keinen Standardwert.  
+`[ @profile_id = ] profile_id,` Die ID des Profils. *profile_id* ist vom Datentyp **int** und hat keinen Standardwert.  
   
-`[ @parameter_name = ] 'parameter_name'` Der Name des Parameters. *parameter_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Bei Systemprofilen hängen die veränderbaren Parameter vom Typ der Momentaufnahme ab. Um herauszufinden, welcher Agenttyp diese *profile_id* darstellt, suchen Sie die Spalte *profile_id* in der Tabelle **MSagent_profiles** , und notieren Sie sich den Wert *agent_type* .  
+`[ @parameter_name = ] 'parameter_name'` Der Name des Parameters. *parameter_name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert. Bei Systemprofilen hängen die veränderbaren Parameter vom Typ der Momentaufnahme ab. Um herauszufinden, welcher Agenttyp diese *profile_id* darstellt, suchen Sie die Spalte *profile_id* in der Tabelle **MSagent_profiles** , und notieren Sie sich den Wert *agent_type* .  
   
 > [!NOTE]  
->  Wenn ein Parameter für eine bestimmte *agent_type*unterstützt, aber nicht im Agentprofil definiert wurde, wird ein Fehler zurückgegeben. Wenn Sie einem Agentprofil einen Parameter hinzufügen möchten, müssen Sie [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)ausführen.  
+>  Wenn ein Parameter für eine bestimmte *agent_type* unterstützt, aber nicht im Agentprofil definiert wurde, wird ein Fehler zurückgegeben. Wenn Sie einem Agentprofil einen Parameter hinzufügen möchten, müssen Sie [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)ausführen.  
   
  Bei einer Momentaufnahmen-Agent (*agent_type* = **1**), die im Profil definiert ist, können die folgenden Eigenschaften geändert werden:  
   
@@ -239,18 +239,18 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **SQLQueueMode**  
   
- Um zu sehen, welche Parameter für ein bestimmtes Profil definiert wurden, führen Sie **sp_help_agent_profile** aus, und notieren Sie sich die *profile_name* , die dem *profile_id*zugeordnet sind. Führen Sie mit dem entsprechenden *profile_id*als nächstes **sp_help_agent_parameters** mithilfe dieses *profile_id* aus, um die Parameter anzuzeigen, die dem Profil zugeordnet sind. Parameter können einem Profil hinzugefügt werden, indem [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)ausgeführt wird.  
+ Um zu sehen, welche Parameter für ein bestimmtes Profil definiert wurden, führen Sie **sp_help_agent_profile** aus, und notieren Sie sich die *profile_name* , die dem *profile_id* zugeordnet sind. Führen Sie mit dem entsprechenden *profile_id* als nächstes **sp_help_agent_parameters** mithilfe dieses *profile_id* aus, um die Parameter anzuzeigen, die dem Profil zugeordnet sind. Parameter können einem Profil hinzugefügt werden, indem [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)ausgeführt wird.  
   
 `[ @parameter_value = ] 'parameter_value'` Der neue Wert des-Parameters. *parameter_value* ist vom Datentyp **nvarchar (255)** und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_change_agent_parameter** wird bei allen Replikations Typen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_change_agent_parameter**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_change_agent_parameter** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Replikations-Agent-Profile](../../relational-databases/replication/agents/replication-agent-profiles.md)   

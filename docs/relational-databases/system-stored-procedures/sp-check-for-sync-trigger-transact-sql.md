@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - filter_TSQL
 - sp_check_for_sync_trigger
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ddd0563d0a58ec50fc43ed1ac78478068b553ab0
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: cb15d74c1ac4845b7ff60bd12983b922008b27c8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364847"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206571"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +40,13 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **@tabid =** ] ' *tabid* '  
+ [**@tabid =** ] '*tabid*'  
  Die Objekt-ID der Tabelle, die auf sofort aktualisierbare Trigger überprüft wird. *tabid* ist vom Datentyp **int** und hat keinen Standard.  
   
- [ **@trigger_op =** ] ' *trigger_output_parameters* ' Ausgabe  
+ [**@trigger_op =** ] '*trigger_output_parameters*' Ausgabe  
  Gibt an, ob der Ausgabeparameter den Typ von Trigger zurückgeben muss, mit dem er aufgerufen wird. *trigger_output_parameters* ist vom Typ **char (10)** . die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**ELine**|INSERT-Trigger|  
 |**Upd**|UPDATE-Trigger|  

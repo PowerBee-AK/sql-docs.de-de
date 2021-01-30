@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_log_file_recover_suspect_db_TSQL
 - sp_add_log_file_recover_suspect_db
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b67ebd25d3418392e4a6aa7986e3305ee6eae0ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ecde40e66d5754638872a12c79ca580b0b5f2982
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474588"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206740"
 ---
 # <a name="sp_add_log_file_recover_suspect_db-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dbName = ] 'database'` Der Name der Datenbank. *Database* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @dbName = ] 'database'` Der Name der Datenbank. *Database* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 `[ @name = ] 'logical_file_name'` Der Name, der in verwendet wird, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Wenn auf die Datei verwiesen wird. Der Name muss auf dem Server eindeutig sein. *logical_file_name* ist vom Datentyp **nvarchar (260)** und hat keinen Standardwert.  
   

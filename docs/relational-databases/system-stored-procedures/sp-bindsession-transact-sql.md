@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_bindsession
 - sp_bindsession_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 900f6383a4a285cac36262096a66e64603467c79
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 64f6b6b4134c5f29dea38d87e7d75e43910ca530
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548225"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206611"
 ---
 # <a name="sp_bindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ sp_bindsession { 'bind_token' | NULL }
   
 ## <a name="arguments"></a>Argumente  
  **"** *bind_token* **"**  
- Das Token, das die Transaktion identifiziert, die ursprünglich mithilfe von **sp_getbindtoken** oder der Open Data Services **srv_getbindtoken** -Funktion abgerufen wurde. *bind_token*ist vom Datentyp **varchar (255)**.  
+ Das Token, das die Transaktion identifiziert, die ursprünglich mithilfe von **sp_getbindtoken** oder der Open Data Services **srv_getbindtoken** -Funktion abgerufen wurde. *bind_token* ist vom Datentyp **varchar (255)**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -54,7 +54,7 @@ sp_bindsession { 'bind_token' | NULL }
   
  **sp_bindsession** ein Bindungs Token verwendet, um zwei oder mehr vorhandene Client Sitzungen zu binden. Diese Clientsitzungen müssen zu derselben Instanz vom [!INCLUDE[ssDE](../../includes/ssde-md.md)] gehören, von der der Bindungstoken erhalten wurde. Eine Sitzung ist ein Client, der einen Befehl ausführt. Gebundene Datenbanksitzungen verwenden einen Transaktions- und Sperrbereich gemeinsam.  
   
- Ein von einer Instanz vom [!INCLUDE[ssDE](../../includes/ssde-md.md)] ausgegebenes Bindungstoken kann nicht für eine Clientsitzung mit einer anderen Instanz verwendet werden, auch nicht bei DTC-Transaktionen. Ein Bindungstoken ist nur lokal innerhalb einer Instanz gültig und kann nicht auf mehreren Instanzen freigegeben werden. Zum Binden von Client Sitzungen auf eine andere Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] müssen Sie ein anderes Bindungs Token abrufen, indem Sie **sp_getbindtoken**ausführen.  
+ Ein von einer Instanz vom [!INCLUDE[ssDE](../../includes/ssde-md.md)] ausgegebenes Bindungstoken kann nicht für eine Clientsitzung mit einer anderen Instanz verwendet werden, auch nicht bei DTC-Transaktionen. Ein Bindungstoken ist nur lokal innerhalb einer Instanz gültig und kann nicht auf mehreren Instanzen freigegeben werden. Zum Binden von Client Sitzungen auf eine andere Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] müssen Sie ein anderes Bindungs Token abrufen, indem Sie **sp_getbindtoken** ausführen.  
   
  **sp_bindsession** schlägt mit einem Fehler fehl, wenn ein Token verwendet wird, das nicht aktiv ist.  
   
@@ -67,7 +67,7 @@ sp_bindsession { 'bind_token' | NULL }
  Im folgenden Beispiel wird das angegebene Bindungstoken an die aktuelle Sitzung gebunden.  
   
 > [!NOTE]  
->  Das Bindungs Token, das im Beispiel angezeigt wird, wurde durch Ausführen von **sp_getbindtoken** vor dem Ausführen **sp_bindsession**abgerufen.  
+>  Das Bindungs Token, das im Beispiel angezeigt wird, wurde durch Ausführen von **sp_getbindtoken** vor dem Ausführen **sp_bindsession** abgerufen.  
   
 ```  
 USE master;  

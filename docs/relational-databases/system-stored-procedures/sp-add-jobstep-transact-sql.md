@@ -5,7 +5,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_jobstep_TSQL
 - sp_add_jobstep
@@ -16,12 +16,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 03/15/2017
-ms.openlocfilehash: 8e4b24e5fcab13083c06f53868f462c3b45cc497
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 93d4818a1cffc14452bdf25bab8be6e1fc9a1a50
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753802"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206760"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
@@ -62,18 +62,18 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 ## <a name="arguments"></a>Argumente
 
-`[ @job_id = ] job_id` Die ID des Auftrags, dem der Schritt hinzugefügt werden soll. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.
+`[ @job_id = ] job_id` Die ID des Auftrags, dem der Schritt hinzugefügt werden soll. *job_id* ist vom Datentyp **uniqueidentifier** und hat den Standardwert NULL.
 
-`[ @job_name = ] 'job_name'` Der Name des Auftrags, dem der Schritt hinzugefügt werden soll. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.
+`[ @job_name = ] 'job_name'` Der Name des Auftrags, dem der Schritt hinzugefügt werden soll. *job_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.
 
 > [!NOTE]
 > Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.
 
-`[ @step_id = ] step_id` Die Sequenz-ID für den Auftrags Schritt. Schritt-IDs beginnen bei **1** und Inkrementen ohne Lücken. Wenn ein Schritt in eine vorhandene Sequenz eingefügt wird, werden die Sequenznummern automatisch angepasst. Wenn *step_id* nicht angegeben ist, wird ein Wert bereitgestellt. *step_id* ist vom Datentyp **int**und hat den Standardwert NULL.
+`[ @step_id = ] step_id` Die Sequenz-ID für den Auftrags Schritt. Schritt-IDs beginnen bei **1** und Inkrementen ohne Lücken. Wenn ein Schritt in eine vorhandene Sequenz eingefügt wird, werden die Sequenznummern automatisch angepasst. Wenn *step_id* nicht angegeben ist, wird ein Wert bereitgestellt. *step_id* ist vom Datentyp **int** und hat den Standardwert NULL.
 
-`[ @step_name = ] 'step_name'` Der Name des Schritts. *step_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.
+`[ @step_name = ] 'step_name'` Der Name des Schritts. *step_name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.
 
-`[ @subsystem = ] 'subsystem'` Das vom-Agent- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst zum Ausführen des *Befehls*verwendete Subsystem. *Subsystem* ist vom Datentyp **nvarchar (40)**. die folgenden Werte sind möglich:
+`[ @subsystem = ] 'subsystem'` Das vom-Agent- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst zum Ausführen des *Befehls* verwendete Subsystem. *Subsystem* ist vom Datentyp **nvarchar (40)**. die folgenden Werte sind möglich:
 
 |Wert|BESCHREIBUNG|
 |-----------|-----------------|
@@ -81,8 +81,8 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**CmdExec**'|Betriebssystembefehl oder ausführbares Programm|
 |"**Verteilung**"|Auftrag des Replikationsverteilungs-Agents|
 |"**Momentaufnahme**"|Auftrag des Replikationsmomentaufnahme-Agents|
-|"Protokoll**Leser**"|Auftrag des Replikationsprotokolllese-Agents|
-|"Zusammen**führen**"|Auftrag des Replikationsmerge-Agents|
+|"Protokoll **Leser**"|Auftrag des Replikationsprotokolllese-Agents|
+|"Zusammen **führen**"|Auftrag des Replikationsmerge-Agents|
 |'**Queuereader**'|Warteschlangenlese-Agent-Auftrag der Replikation|
 |'**ANALYSISQUERY**'|Analysis Services-Abfrage (MDX, DMX)|
 |'**ANALYSISCOMMAND**'|Analysis Services-Befehl (XMLA)|
@@ -90,7 +90,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |"**PowerShell**"|PowerShell-Skript|  
 |"**TQL**" (Standard)|[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung|
 
-`[ @command = ] 'command'` Die Befehle, die vom **SQLServerAgent** -Dienst über das *Subsystem*ausgeführt werden sollen. der *Befehl* ist vom Datentyp **nvarchar (max)** und hat den Standardwert NULL. Vom SQL Server-Agent wird eine Tokenersetzung bereitgestellt, die Ihnen beim Schreiben von Softwareprogrammen dieselbe Flexibilität wie Variablen bietet.
+`[ @command = ] 'command'` Die Befehle, die vom **SQLServerAgent** -Dienst über das *Subsystem* ausgeführt werden sollen. der *Befehl* ist vom Datentyp **nvarchar (max)** und hat den Standardwert NULL. Vom SQL Server-Agent wird eine Tokenersetzung bereitgestellt, die Ihnen beim Schreiben von Softwareprogrammen dieselbe Flexibilität wie Variablen bietet.
 
 > [!IMPORTANT]
 > Damit Auftragsschritte fehlerfrei ausgeführt werden können, müssen alle in Auftragsschritten verwendeten Token von einem Escapemakro begleitet werden. Darüber hinaus müssen Sie Tokennamen nun in runde Klammern einschließen und ein Dollarzeichen (`$`) an den Anfang der Tokensyntax setzen. Beispiel:
@@ -104,9 +104,9 @@ Weitere Informationen zu diesen Token und zum Aktualisieren der Auftrags Schritt
 >
 > Wenn Sie diese Token verwenden müssen, stellen Sie zuvor sicher, dass ausschließlich Mitglieder von vertrauenswürdigen Windows-Sicherheitsgruppen, wie der Administratorengruppe, über Schreibberechtigungen für das Ereignisprotokoll des Computers verfügen, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Klicken Sie dann zum Aktivieren dieser Token im Objekt-Explorer mit der rechten Maustaste auf **SQL Server-Agent** , wählen Sie **Eigenschaften**, und wählen Sie anschließend auf der Seite **Warnungssystem** die Option **Token für alle Auftragsantworten auf Warnungen ersetzen** aus.
 
-`[ @additional_parameters = ] 'parameters'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *Parameter* ist vom Typ **ntext**und hat den Standardwert NULL.
+`[ @additional_parameters = ] 'parameters'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *Parameter* ist vom Typ **ntext** und hat den Standardwert NULL.
 
-`[ @cmdexec_success_code = ] code` Der von einem **CmdExec** -Subsystembefehl zurückgegebene Wert, der angibt, dass der *Befehl* erfolgreich ausgeführt wurde. *Code* ist vom Datentyp **int**und hat den Standardwert **0**.
+`[ @cmdexec_success_code = ] code` Der von einem **CmdExec** -Subsystembefehl zurückgegebene Wert, der angibt, dass der *Befehl* erfolgreich ausgeführt wurde. *Code* ist vom Datentyp **int** und hat den Standardwert **0**.
 
 `[ @on_success_action = ] success_action` Die Aktion, die ausgeführt werden soll, wenn der Schritt erfolgreich ist. *success_action* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich:
   
@@ -117,7 +117,7 @@ Weitere Informationen zu diesen Token und zum Aktualisieren der Auftrags Schritt
 |**3**|Zum nächsten Schritt wechseln|  
 |**4**|Gehen Sie zu Schritt *on_success_step_id*|  
 
-`[ @on_success_step_id = ] success_step_id` Die ID des Schritts in diesem Auftrag, der ausgeführt werden soll, wenn der Schritt erfolgreich ist und *success_action* **4**ist. *success_step_id* ist vom Datentyp **int**und hat den Standardwert **0**.
+`[ @on_success_step_id = ] success_step_id` Die ID des Schritts in diesem Auftrag, der ausgeführt werden soll, wenn der Schritt erfolgreich ist und *success_action* **4** ist. *success_step_id* ist vom Datentyp **int** und hat den Standardwert **0**.
 
 `[ @on_fail_action = ] fail_action` Die Aktion, die ausgeführt werden soll, wenn der Schritt fehlschlägt. *fail_action* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich:
 
@@ -128,23 +128,23 @@ Weitere Informationen zu diesen Token und zum Aktualisieren der Auftrags Schritt
 |**3**|Zum nächsten Schritt wechseln|  
 |**4**|Gehen Sie zu Schritt *on_fail_step_id*|  
 
-`[ @on_fail_step_id = ] fail_step_id` Die ID des Schritts in diesem Auftrag, der ausgeführt werden soll, wenn der Schritt fehlschlägt und *fail_action* **4**ist. *fail_step_id* ist vom Datentyp **int**und hat den Standardwert **0**.  
+`[ @on_fail_step_id = ] fail_step_id` Die ID des Schritts in diesem Auftrag, der ausgeführt werden soll, wenn der Schritt fehlschlägt und *fail_action* **4** ist. *fail_step_id* ist vom Datentyp **int** und hat den Standardwert **0**.  
 
 `[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]der *Server* ist vom Datentyp **nvarchar (30)** und hat den Standardwert NULL.  
 
-`[ @database_name = ] 'database'` Der Name der Datenbank, in der ein Schritt ausgeführt werden soll [!INCLUDE[tsql](../../includes/tsql-md.md)] . *Database* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. in diesem Fall wird die **Master** -Datenbank verwendet. In eckige Klammern ([ ]) eingeschlossene Namen sind nicht zulässig. Bei einem ActiveX-Auftrags Schritt ist die *Datenbank* der Name der Skriptsprache, die in diesem Schritt verwendet wird.  
+`[ @database_name = ] 'database'` Der Name der Datenbank, in der ein Schritt ausgeführt werden soll [!INCLUDE[tsql](../../includes/tsql-md.md)] . *Database* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. in diesem Fall wird die **Master** -Datenbank verwendet. In eckige Klammern ([ ]) eingeschlossene Namen sind nicht zulässig. Bei einem ActiveX-Auftrags Schritt ist die *Datenbank* der Name der Skriptsprache, die in diesem Schritt verwendet wird.  
 
-`[ @database_user_name = ] 'user'` Der Name des Benutzerkontos, das beim Ausführen eines Schritts verwendet werden soll [!INCLUDE[tsql](../../includes/tsql-md.md)] . *User* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn der *Benutzer* NULL ist, wird der Schritt im Benutzer Kontext des Auftrags Besitzers in der *Datenbank*ausgeführt.  SQL Server-Agent schließt nur diesen Parameter ein, wenn der Auftragsbesitzer ein SQL Server sysadmin ist. In diesem Fall wird der angegebene Transact-SQL-Schritt im Kontext des angegebenen SQL Server-Benutzernamens ausgeführt. Wenn der Besitzer des Auftrags kein SQL Server sysadmin ist, wird der Transact-SQL-Schritt immer im Kontext des-Anmelde namens ausgeführt, der diesen Auftrag besitzt, und der- @database_user_name Parameter wird ignoriert.  
+`[ @database_user_name = ] 'user'` Der Name des Benutzerkontos, das beim Ausführen eines Schritts verwendet werden soll [!INCLUDE[tsql](../../includes/tsql-md.md)] . *User* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn der *Benutzer* NULL ist, wird der Schritt im Benutzer Kontext des Auftrags Besitzers in der *Datenbank* ausgeführt.  SQL Server-Agent schließt nur diesen Parameter ein, wenn der Auftragsbesitzer ein SQL Server sysadmin ist. In diesem Fall wird der angegebene Transact-SQL-Schritt im Kontext des angegebenen SQL Server-Benutzernamens ausgeführt. Wenn der Besitzer des Auftrags kein SQL Server sysadmin ist, wird der Transact-SQL-Schritt immer im Kontext des-Anmelde namens ausgeführt, der diesen Auftrag besitzt, und der- @database_user_name Parameter wird ignoriert.  
 
 `[ @retry_attempts = ] retry_attempts` Die Anzahl der zu verwendenden Wiederholungs Versuche, wenn dieser Schritt fehlschlägt. *retry_attempts* ist vom Datentyp **int**. der Standardwert ist **0**. Dies bedeutet, dass keine Wiederholungs Versuche unternommen werden.  
 
-`[ @retry_interval = ] retry_interval` Die Zeitspanne (in Minuten) zwischen den Wiederholungs versuchen. *retry_interval* ist vom Datentyp **int**. der Standardwert ist **0**, was ein Intervall von **0**Minuten angibt.  
+`[ @retry_interval = ] retry_interval` Die Zeitspanne (in Minuten) zwischen den Wiederholungs versuchen. *retry_interval* ist vom Datentyp **int**. der Standardwert ist **0**, was ein Intervall von **0** Minuten angibt.  
 
 `[ @os_run_priority = ] run_priority` Bleiben.
 
-`[ @output_file_name = ] 'file_name'` Der Name der Datei, in der die Ausgabe dieses Schritts gespeichert wird. *file_name* ist vom Datentyp **nvarchar (200)** und hat den Standardwert NULL. *file_name* können ein oder mehrere der unter *Befehl*aufgeführten Token enthalten. Dieser Parameter ist nur mit Befehlen gültig, die auf den- [!INCLUDE[tsql](../../includes/tsql-md.md)] , **CmdExec**-, **PowerShell**-,- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oder- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Subsystemen ausgeführt werden.  
+`[ @output_file_name = ] 'file_name'` Der Name der Datei, in der die Ausgabe dieses Schritts gespeichert wird. *file_name* ist vom Datentyp **nvarchar (200)** und hat den Standardwert NULL. *file_name* können ein oder mehrere der unter *Befehl* aufgeführten Token enthalten. Dieser Parameter ist nur mit Befehlen gültig, die auf den- [!INCLUDE[tsql](../../includes/tsql-md.md)] , **CmdExec**-, **PowerShell**-,- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oder- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Subsystemen ausgeführt werden.  
 
-`[ @flags = ] flags` Ist eine Option, die das Verhalten steuert. *Flags* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
+`[ @flags = ] flags` Ist eine Option, die das Verhalten steuert. *Flags* ist vom Datentyp **int** und kann einen der folgenden Werte aufweisen.  
 
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -156,9 +156,9 @@ Weitere Informationen zu diesen Token und zum Aktualisieren der Auftrags Schritt
 |**32**|Schreiben der gesamten Ausgabe in den Auftragsverlauf|  
 |**64**|Erstellen eines Windows-Ereignisses, das für den Cmd-Jobstep als Signal als Signal zum Abbruch verwendet werden soll|  
 
-`[ @proxy_id = ] proxy_id` Die ID-Nummer des Proxys, als der der Auftrags Schritt ausgeführt wird. *proxy_id* ist vom Datentyp **int**und hat den Standardwert NULL. Wenn keine *proxy_id* angegeben wird, kein *proxy_name* angegeben wird und keine *user_name* angegeben ist, wird der Auftrags Schritt als Dienst Konto für den- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ausgeführt.  
+`[ @proxy_id = ] proxy_id` Die ID-Nummer des Proxys, als der der Auftrags Schritt ausgeführt wird. *proxy_id* ist vom Datentyp **int** und hat den Standardwert NULL. Wenn keine *proxy_id* angegeben wird, kein *proxy_name* angegeben wird und keine *user_name* angegeben ist, wird der Auftrags Schritt als Dienst Konto für den- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ausgeführt.  
 
-`[ @proxy_name = ] 'proxy_name'` Der Name des Proxys, als der der Auftrags Schritt ausgeführt wird. *proxy_name* ist vom Datentyp **vom Datentyp sysname**und hat den Standardwert NULL. Wenn keine *proxy_id* angegeben wird, kein *proxy_name* angegeben wird und keine *user_name* angegeben ist, wird der Auftrags Schritt als Dienst Konto für den- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ausgeführt.  
+`[ @proxy_name = ] 'proxy_name'` Der Name des Proxys, als der der Auftrags Schritt ausgeführt wird. *proxy_name* ist vom Datentyp **vom Datentyp sysname** und hat den Standardwert NULL. Wenn keine *proxy_id* angegeben wird, kein *proxy_name* angegeben wird und keine *user_name* angegeben ist, wird der Auftrags Schritt als Dienst Konto für den- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ausgeführt.  
 
 ## <a name="return-code-values"></a>Rückgabecodewerte
 
@@ -176,7 +176,7 @@ SQL Server Management Studio bietet eine einfache grafische Möglichkeit zum Ver
 
 Standardmäßig wird ein Auftrags Schritt als Dienst Konto für den-Agent ausgeführt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es sei denn, es ist ein anderer Proxy angegeben. Das Konto muss Mitglied der festen Sicherheitsrolle **sysadmin** sein.
 
-Ein Proxy kann durch *proxy_name* oder *proxy_id*identifiziert werden.
+Ein Proxy kann durch *proxy_name* oder *proxy_id* identifiziert werden.
 
 ## <a name="permissions"></a>Berechtigungen
 

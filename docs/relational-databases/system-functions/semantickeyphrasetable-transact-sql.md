@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - semantickeyphrasetable
 - semantickeyphrasetable_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8026760d93132e3a18b51145bc1802e416bc0934
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05a3436512d37a2a18bbfd8e393385e01cb53bf8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464797"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207343"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,10 +57,10 @@ SEMANTICKEYPHRASETABLE
  **column_list**  
  Gibt mehrere durch Trennzeichen getrennte Spalten an, die in Klammern eingeschlossen sind. Für alle Spalten muss die semantische Indizierung aktiviert sein.  
   
- **\***  
+ **\** _  
  Gibt an, dass alle Spalten eingeschlossen werden, für die die semantische Indizierung aktiviert ist.  
   
- **source_key**  
+ _ *source_key**  
  Eindeutiger Schlüssel für die Zeile, um Ergebnisse für eine bestimmte Zeile anzufordern.  
   
  Der Schlüssel wird nach Möglichkeit implizit in den Typ des eindeutigen voll Text Schlüssels in der Quell Tabelle konvertiert. Der Schlüssel kann als Konstante oder Variable angegeben werden. Er kann jedoch kein Ausdruck oder das Ergebnis einer skalaren Unterabfrage sein. Wird "source_key" nicht angegeben, werden Ergebnisse für alle Zeilen zurückgegeben.  
@@ -68,12 +68,12 @@ SEMANTICKEYPHRASETABLE
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
  In der folgenden Tabelle werden die Schlüsselausdrücke beschrieben, die von dieser Rowset-Funktion zurückgegeben werden.  
   
-|Column_name|type|Beschreibung|  
+|Column_name|type|BESCHREIBUNG|  
 |------------------|----------|-----------------|  
 |**column_id**|**int**|Die ID der Spalte, aus der der aktuelle Schlüsselausdruck extrahiert und indiziert wurde.<br /><br /> Im Abschnitt über die COL_NAME-Funktion und COLUMNPROPERTY-Funktion finden Sie ausführliche Informationen zum Abrufen des Spaltennamens aus "column_id" und umgekehrt.|  
-|**document_key**|**\***<br /><br /> Dieser Schlüssel stimmt mit dem Typ des eindeutigen Schlüssels in der Quelltabelle überein.|Eindeutiger Schlüsselwert des Dokuments oder der Zeile, anhand dem der aktuelle Schlüsselausdruck indiziert wurde.|  
-|**Schlüssel Ausdruck**|**NVARCHAR**|Der Schlüsselausdruck in der durch "column_id" angegebenen Spalte, der dem durch "document_key" angegebenen Dokument zugeordnet ist.|  
-|**Endergebnis**|**Wirkliche**|Ein relativer Wert für diesen Schlüsselausdruck in der Beziehung mit allen anderen Schlüsselausdrücken im gleichen Dokument in der indizierten Spalte.<br /><br /> Der Wert ist eine Dezimalzahl im Bereich [0,0; 1,0], wobei ein höheres Ergebnis eine höhere Gewichtung und 1,0 ein perfektes Ergebnis darstellt.|  
+|**document_key**|**\** _<br /><br /> Dieser Schlüssel stimmt mit dem Typ des eindeutigen Schlüssels in der Quelltabelle überein.|Eindeutiger Schlüsselwert des Dokuments oder der Zeile, anhand dem der aktuelle Schlüsselausdruck indiziert wurde.|  
+|_ *Schlüssel Ausdruck**|**NVARCHAR**|Der Schlüsselausdruck in der durch "column_id" angegebenen Spalte, der dem durch "document_key" angegebenen Dokument zugeordnet ist.|  
+|**score**|**REAL**|Ein relativer Wert für diesen Schlüsselausdruck in der Beziehung mit allen anderen Schlüsselausdrücken im gleichen Dokument in der indizierten Spalte.<br /><br /> Der Wert ist eine Dezimalzahl im Bereich [0,0; 1,0], wobei ein höheres Ergebnis eine höhere Gewichtung und 1,0 ein perfektes Ergebnis darstellt.|  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Weitere Informationen finden Sie untersuchen von [Schlüssel Ausdrücken in Dokumenten mit der semantischen Suche](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md).  

@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SET REPROCESS command [ODBC]
 ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8daeebd38f295d437dc02c1c34126c30f6426b68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b45188db00eda553bb3443d791d889a4d8c31a77
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421824"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208595"
 ---
 # <a name="set-reprocess-command"></a>SET REPROCESS-Befehl
 Gibt an, wie oft oder wie lange eine Datei oder ein Datensatz nach einem erfolglosen Sperrversuch gesperrt werden soll.  
@@ -38,11 +38,11 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
   
  Wenn *nattempts* z. b. 30 ist, versucht Visual FoxPro einen Datensatz oder eine Datei bis zu 30-Mal zu sperren. Wenn Sie auch Sekunden einschließen (Set Reprocess to 30 seconds), versucht Visual FoxPro fortlaufend, einen Datensatz oder eine Datei für bis zu 30 Sekunden zu sperren.  
   
- Wenn eine On-Error-Routine wirksam ist und wenn versucht wird, den Datensatz oder die Datei zu sperren, wird die On Error-Routine ausgeführt. Wenn jedoch eine Funktion die Sperre versucht, wird eine On Error-Routine nicht ausgeführt, und die Funktion gibt false zurück (. F.).  
+ Wenn eine On-Error-Routine wirksam ist und wenn versucht wird, den Datensatz oder die Datei zu sperren, wird die On Error-Routine ausgeführt. Wenn jedoch eine Funktion die Sperre versucht, wird eine On Error-Routine nicht ausgeführt, und die Funktion gibt false (. F.) zurück.  
   
- Wenn eine On-Error-Routine nicht wirksam ist, versucht ein Befehl, den Datensatz oder die Datei zu sperren, und die Sperre kann nicht platziert werden. es wird ein Fehler generiert. Wenn eine Funktion versucht, die Sperre zu platzieren, wird die Warnung nicht angezeigt, und die Funktion gibt false zurück. F.).  
+ Wenn eine On-Error-Routine nicht wirksam ist, versucht ein Befehl, den Datensatz oder die Datei zu sperren, und die Sperre kann nicht platziert werden. es wird ein Fehler generiert. Wenn eine Funktion versucht, die Sperre zu platzieren, wird die Warnung nicht angezeigt, und die Funktion gibt false (. F.) zurück.  
   
- Wenn *nattempts* den Wert 0 (Standardwert) hat und Sie einen Befehl oder eine Funktion ausgeben, der versucht, einen Datensatz oder eine Datei zu sperren, versucht Visual FoxPro unbegrenzt, den Datensatz oder die Datei zu sperren. Wenn der Datensatz oder die Datei für das Sperren verfügbar ist, während Sie warten, wird die Sperre abgelegt und die Systemmeldung gelöscht. Wenn eine Funktion versucht hat, die Sperre zu platzieren, gibt die Funktion true zurück. T.).  
+ Wenn *nattempts* den Wert 0 (Standardwert) hat und Sie einen Befehl oder eine Funktion ausgeben, der versucht, einen Datensatz oder eine Datei zu sperren, versucht Visual FoxPro unbegrenzt, den Datensatz oder die Datei zu sperren. Wenn der Datensatz oder die Datei für das Sperren verfügbar ist, während Sie warten, wird die Sperre abgelegt und die Systemmeldung gelöscht. Wenn eine Funktion versucht hat, die Sperre zu platzieren, gibt die Funktion true (. T.) zurück.  
   
  Wenn eine On-Error-Routine wirksam ist und ein Befehl versucht, den Datensatz oder die Datei zu sperren, hat die On Error-Routine Vorrang vor zusätzlichen versuchen, den Datensatz oder die Datei zu sperren. Die On Error-Routine wird sofort ausgeführt. Visual FoxPro versucht nicht, zusätzliche Daten Satz-oder Dateisperren zu übernehmen, und die Systemmeldung wird nicht angezeigt.  
   

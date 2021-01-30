@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_generate_wrapper_function (Transact-SQL)
-title: sys. sp_cdc_generate_wrapper_function (Transact-SQL) | Microsoft-Dokumentation
+title: sys.sp_cdc_generate_wrapper_function (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_generate_wrapper_function_TSQL
 - sp_cdc_generate_wrapper_function
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 069c0cb5eab377d0c2cd4bc92b68d7071f56681a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9f6dc9038b4f23b7e38e69555ceed06fab90ba92
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540474"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205981"
 ---
 # <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ sys.sp_cdc_generate_wrapper_function
 |**function_name**|**nvarchar (145)**|Name der generierten Funktion.|  
 |**create_script**|**nvarchar(max)**|Das Skript, mit dem die Wrapperfunktion der Aufzeichnungsinstanz erstellt wird.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Das Skript zur Erstellung der Wrapperfunktion für eine Abfrage aller Änderungen für eine Aufzeichnungsinstanz wird immer generiert. Wenn die Aufzeichnungsinstanz Abfragen für Nettoänderungen unterstützt, wird auch das Skript zur Generierung einer Wrapperfunktion für diese Abfrage generiert1.  
   
 ## <a name="examples"></a>Beispiele  

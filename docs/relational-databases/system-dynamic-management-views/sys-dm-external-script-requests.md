@@ -6,7 +6,7 @@ ms.date: 06/26/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_external_script_requests
 - sys.dm_external_script_requests_TSQL
@@ -21,12 +21,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: 972e9527db2eaa546210ccc54528d0ce60197b4c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ca4cfdd348d04ab0332653fa6851107ffa5f16d1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482681"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207119"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -36,7 +36,7 @@ Gibt eine Zeile für jedes aktive Workerkonto zurück, das ein externes Skript a
 > [!NOTE]
 > Diese dynamische Verwaltungs Sicht (Dynamic Management View, DMV) ist nur verfügbar, wenn Sie die Funktion installiert und aktiviert haben, die die Ausführung externer Skripts unterstützt. Weitere Informationen finden Sie unter [Machine Learning Services (r, python) in SQL Server 2017 und](../../machine-learning/sql-server-machine-learning-services.md)höher, [R Services in SQL Server 2016](../../machine-learning/r/sql-server-r-services.md)und [Machine Learning Services in Azure SQL verwaltete Instanz](/azure/azure-sql/managed-instance/machine-learning-services-overview).  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |external_script_request_id|**eindeutiger Bezeichner**|Die ID des Prozesses, der die externe Skriptanforderung gesendet hat. Dies entspricht der Prozess-ID, die von der SQL-Instanz empfangen wurde.|  
 |language|**nvarchar**|Schlüsselwort, das einer unterstützten Skriptsprache entspricht. |  
@@ -50,7 +50,7 @@ Gibt eine Zeile für jedes aktive Workerkonto zurück, das ein externes Skript a
 > [!NOTE]
 > Benutzer, die externe Skripts ausführen, müssen über die zusätzliche Berechtigung verfügen `EXECUTE ANY EXTERNAL SCRIPT` . Diese DMV kann jedoch von Administratoren ohne diese Berechtigung verwendet werden. 
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
 
 Diese Sicht kann über die Skriptsprachen-ID gefiltert werden.
 
@@ -80,7 +80,7 @@ external_script_request_id  |language  |degree_of_parallelism  |external_user_na
 ---------|---------|---------|---------
 183EE6FC-7399-4318-AA2E-7A6C68E435A8     |     R    |      1   |  MSSQLSERVER01
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 + [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
 + [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41; (Dynamische Verwaltungssichten und Funktionen im Zusammenhang mit der Ausführung (Transact-SQL))](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  

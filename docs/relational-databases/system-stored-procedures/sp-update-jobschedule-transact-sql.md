@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_jobschedule_TSQL
 - sp_update_jobschedule
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4df02594-4cd1-49a9-8d97-37c44e4d5423
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cf9a58d3be772fc9fa65cdf61ee6a326410314a1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d75398c9caa77430947248472f0a6c625def901f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534780"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207967"
 ---
 # <a name="sp_update_jobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "89534780"
 > [!IMPORTANT]
 >  Weitere Informationen zur Syntax, die in früheren Versionen von Microsoft SQL Server verwendet wurde, finden Sie unter Transact-SQL referencefor Microsoft SQL Server 2000 *.*  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Auftragszeitpläne können jetzt unabhängig von Aufträgen verwaltet werden. Verwenden Sie **sp_update_schedule**, um einen Zeitplan zu aktualisieren.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
+ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
   
 -   **SQLAgentUserRole**  
   

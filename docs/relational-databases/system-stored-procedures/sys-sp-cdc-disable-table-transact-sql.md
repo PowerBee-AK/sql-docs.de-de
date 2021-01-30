@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_disable_table (Transact-SQL)
-title: sys. sp_cdc_disable_table (Transact-SQL) | Microsoft-Dokumentation
+title: sys.sp_cdc_disable_table (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_cdc_disable_table
 - sp_cdc_disable_table
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f0819c156cdc3e836028915d89a8d9100eef17c6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 53984d18923cef297e267374045f0f4cb4364419
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541144"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206020"
 ---
 # <a name="syssp_cdc_disable_table-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,11 +47,11 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @source_schema = ] 'source\_schema'` Der Name des Schemas, in dem die Quell Tabelle enthalten ist. *source_schema* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert und darf nicht NULL sein.  
+`[ @source_schema = ] 'source\_schema'` Der Name des Schemas, in dem die Quell Tabelle enthalten ist. *source_schema* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert und darf nicht NULL sein.  
   
  *source_schema* muss in der aktuellen Datenbank vorhanden sein.  
   
-`[ @source_name = ] 'source\_name'` Der Name der Quell Tabelle, aus der Change Data Capture deaktiviert werden soll. *source_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert und darf nicht NULL sein.  
+`[ @source_name = ] 'source\_name'` Der Name der Quell Tabelle, aus der Change Data Capture deaktiviert werden soll. *source_name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert und darf nicht NULL sein.  
   
  *source_name* muss in der aktuellen Datenbank vorhanden sein.  
   
@@ -66,7 +66,7 @@ sys.sp_cdc_disable_table
  Keine  
   
 ## <a name="remarks"></a>Bemerkungen  
- **sys. sp_cdc_disable_table** löscht die Change Data Capture Änderungs Tabelle und die Systemfunktionen, die der angegebenen Quell Tabelle und der Aufzeichnungs Instanz zugeordnet sind. Dadurch werden alle Zeilen, die der angegebenen Aufzeichnungs Instanz zugeordnet sind, aus den Change Data Capture Systemtabellen gelöscht, und die **is_tracked_by_cdc** Spalte für den Tabelleneintrag in der [sys. Tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) -Katalog Sicht wird auf 0 festgelegt.  
+ **sys.sp_cdc_disable_table** löscht die Change Data Capture Änderungs Tabelle und die Systemfunktionen, die der angegebenen Quell Tabelle und der Aufzeichnungs Instanz zugeordnet sind. Dadurch werden alle Zeilen, die der angegebenen Aufzeichnungs Instanz zugeordnet sind, aus den Change Data Capture Systemtabellen gelöscht, und die **is_tracked_by_cdc** Spalte für den Tabelleneintrag in der [sys. Tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) -Katalog Sicht wird auf 0 festgelegt.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **db_owner** Fixed-Daten Bank Rolle.  

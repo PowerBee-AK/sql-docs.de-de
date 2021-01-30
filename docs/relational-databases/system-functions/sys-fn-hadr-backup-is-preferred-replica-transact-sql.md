@@ -1,13 +1,13 @@
 ---
-description: sys. fn_hadr_backup_is_preferred_replica (Transact-SQL)
-title: sys. fn_hadr_backup_is_preferred_replica (Transact-SQL) | Microsoft-Dokumentation
+description: sys.fn_hadr_backup_is_preferred_replica (Transact-SQL)
+title: sys.fn_hadr_backup_is_preferred_replica (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.fn_hadr_backup_is_preferred_replica_TSQL
 - sys.fn_hadr_backup_is_preferred_replica
@@ -22,14 +22,14 @@ helpviewer_keywords:
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ce16f8300546c77114a27706a7b7ed32806f98ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 009e237b8d7ac7d100100969cf9f8a75bbad1195
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427812"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206040"
 ---
-# <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys. fn_hadr_backup_is_preferred_replica (Transact-SQL)
+# <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys.fn_hadr_backup_is_preferred_replica (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Dient zum Ermitteln, ob das aktuelle Replikat das bevorzugte Sicherungsreplikat ist.  
@@ -47,7 +47,7 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
  "*dbname*"  
  Der Name der zu sichernden Datenbank. *dbname* ist vom Typ sysname.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  Gibt den Datentyp **bool**: 1 zurück, wenn sich die Datenbank auf der aktuellen Instanz auf dem bevorzugten Replikat befindet, andernfalls 0.  
   
 ## <a name="remarks"></a>Bemerkungen  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLCreateDataSource
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb65e0906e7b69666dd04824f9c4d0819837d2b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: feca3e6c135e4dba441a20b1fa458f990b437fde
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461212"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206107"
 ---
 # <a name="sqlcreatedatasource-function"></a>SQLCreateDataSource-Funktion
 **Konformitäts**  
@@ -50,13 +50,13 @@ BOOL SQLCreateDataSource(
  *lpszds*  
  Der Der Name der Datenquelle. *lpszds* können ein NULL-Zeiger oder eine leere Zeichenfolge sein.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  **Sqlkreatedatasource** gibt true zurück, wenn die Datenquelle erstellt wird. Andernfalls wird false zurückgegeben.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLCreateDataSource** "false" zurückgibt, kann ein zugeordneter " * \* pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die " * \* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **SQLCreateDataSource** "false" zurückgibt, kann ein zugeordneter " *\* pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror** abgerufen werden. In der folgenden Tabelle sind die " *\* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|Beschreibung|  
+|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
 |ODBC_ERROR_INVALID_HWND|Ungültiges Fenster handle.|Das *HWND* -Argument war ungültig oder NULL.|  
@@ -92,7 +92,7 @@ BOOL SQLCreateDataSource(
   
  Der Standardwert für die Option **diese Verbindung überprüfen** ist true. Diese Standardeinstellung gilt unabhängig davon, ob diese Assistenten Seite aktiviert ist. Wenn auf **OK** geklickt wird, werden die im Textfeld angegebene Zeichenfolge und der Wert **dieser Verbindungs Option überprüfen** zwischengespeichert. (Wenn auf die Schaltfläche **Schließen** oder **Abbrechen** geklickt wird, gehen alle neu eingegebenen treiberspezifischen Informationen verloren, da die im Textfeld angegebene Zeichenfolge und der Wert **dieser Verbindungs Option überprüfen** nicht zwischengespeichert werden.)  
   
- Wenn auf der ersten Seite des Assistenten die Option **Datei Datenquelle** ausgewählt wurde, dann wird der Benutzer aufgefordert, einen Dateinamen einzugeben, nachdem ein Treiber ausgewählt und die Schlüsselwort Werte auf der Seite erweiterter Assistent eingegeben wurden. Klicken Sie auf **Durchsuchen** , um einen Dateinamen zu suchen. in diesem Fall wird das Standardverzeichnis im Feld durch **Suchen** durch eine Kombination aus dem Pfad angegeben, der von commonfiledir in HKEY_LOCAL_MACHINE \Software\Microsoft\Windows\CurrentVersion und "odbc\datasources" angegeben wird. (Wenn commonfiledir "c:\Programme\Gemeinsame Dateien" war, lautet das Standardverzeichnis "c:\Programme\Gemeinsame Dateien\ODBC\Data Sources".)  
+ Wenn auf der ersten Seite des Assistenten die Option **Datei Datenquelle** ausgewählt wurde, dann wird der Benutzer aufgefordert, einen Dateinamen einzugeben, nachdem ein Treiber ausgewählt und die Schlüsselwort Werte auf der Seite erweiterter Assistent eingegeben wurden. Klicken Sie auf **Durchsuchen** , um einen Dateinamen zu suchen. in diesem Fall wird das Standardverzeichnis im Feld durch **Suchen** durch eine Kombination aus dem Pfad angegeben, der von commonfiledir in HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion und "odbc\datasources" angegeben wird. (Wenn commonfiledir "c:\Programme\Gemeinsame Dateien" war, lautet das Standardverzeichnis "c:\Programme\Gemeinsame Dateien\ODBC\Data Sources".)  
   
  Wenn ein Dateiname eingegeben und **dann auf weiter** geklickt wird, wird der eingegebene Dateiname auf Gültigkeit der Standardregeln für die Datei Benennung des Betriebssystems überprüft. Wenn der Dateiname ungültig ist, wird der Benutzer im Feld Fehlermeldung darüber informiert, dass ein ungültiger Dateiname eingegeben wurde. Nachdem der Benutzer das Meldungs Feld bestätigt hat, wird der Fokus auf die Seite des Assistenten zurückgegeben, in der der Dateiname eingegeben wurde. Wenn der Dateiname gültig ist, wird eine Assistenten Seite mit den ausgewählten Schlüsselwort-Wert-Paaren zur Überprüfung angezeigt, wie in der folgenden Abbildung dargestellt.  
   
@@ -104,9 +104,9 @@ BOOL SQLCreateDataSource(
   
  Wenn der Benutzer die Erstellung des DSN fortsetzt, wird dieser Vorgang fortgesetzt, als ob die Option **diese Verbindung überprüfen** auf false festgelegt ist. Wenn der Benutzer das Abbrechen auswählt, wird false für **sqlkreatedatasource** mit dem Fehlercode ODBC_ERROR_CREATE_DSN_FAILED zurückgegeben.  
   
- Wenn die **Datei Datenquelle** als Daten Quellentyp ausgewählt wurde und die Option **diese Verbindung überprüfen** auf false festgelegt ist, wird ein Datei-DSN mit dem **Treiber** Schlüsselwort und der benutzerdefinierten Verbindungs Zeichenfolge (sofern vorhanden) von der erweiterten Assistenten Seite erstellt. Wenn die Dateierstellung erfolgreich war, wird für **sqlkreatedatasource**der Wert true zurückgegeben. Wenn die Dateierstellung nicht erfolgreich war, wird der Benutzer im Fehlermeldungs Feld mit dem Fehler benachrichtigt, der vom Betriebssystem zurückgegeben wurde. "False" wird für " **sqlkreatedatasource** " mit dem Fehlercode "ODBC_ERROR_CREATE_DSN_FAILED" zurückgegeben. Weitere Informationen zu Datei Datenquellen finden Sie unter [Herstellen einer Verbindung mithilfe von Datei Datenquellen](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)oder unter [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Wenn die **Datei Datenquelle** als Daten Quellentyp ausgewählt wurde und die Option **diese Verbindung überprüfen** auf false festgelegt ist, wird ein Datei-DSN mit dem **Treiber** Schlüsselwort und der benutzerdefinierten Verbindungs Zeichenfolge (sofern vorhanden) von der erweiterten Assistenten Seite erstellt. Wenn die Dateierstellung erfolgreich war, wird für **sqlkreatedatasource** der Wert true zurückgegeben. Wenn die Dateierstellung nicht erfolgreich war, wird der Benutzer im Fehlermeldungs Feld mit dem Fehler benachrichtigt, der vom Betriebssystem zurückgegeben wurde. "False" wird für " **sqlkreatedatasource** " mit dem Fehlercode "ODBC_ERROR_CREATE_DSN_FAILED" zurückgegeben. Weitere Informationen zu Datei Datenquellen finden Sie unter [Herstellen einer Verbindung mithilfe von Datei Datenquellen](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)oder unter [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
- Wenn eine **Benutzer** -oder **System Datenquelle** als Daten Quellentyp ausgewählt wurde, wird **ConfigDSN** in der Treiber Setup Bibliothek mit dem ODBC_ADD_DSN *fRequest*aufgerufen. Weitere Informationen finden Sie unter [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
+ Wenn eine **Benutzer** -oder **System Datenquelle** als Daten Quellentyp ausgewählt wurde, wird **ConfigDSN** in der Treiber Setup Bibliothek mit dem ODBC_ADD_DSN *fRequest* aufgerufen. Weitere Informationen finden Sie unter [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   

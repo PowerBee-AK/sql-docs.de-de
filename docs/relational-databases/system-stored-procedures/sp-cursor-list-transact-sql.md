@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursor_list
 - sp_cursor_list_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dca9473813bf8e4324f1b7de6fb1a30c38a21148
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3a60d447d7072c6386faef08d1dd7398f906064d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536639"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205186"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @cursor_return =] *cursor_variable_name*Ausgabe  
- Der Name einer deklarierten Cursorvariablen. *cursor_variable_name* ist vom Typ **Cursor**und hat keinen Standardwert. Bei dem Cursor handelt es sich um einen scrollfähigen, dynamischen, schreibgeschützten Cursor.  
+ [ @cursor_return =] *cursor_variable_name* Ausgabe  
+ Der Name einer deklarierten Cursorvariablen. *cursor_variable_name* ist vom Typ **Cursor** und hat keinen Standardwert. Bei dem Cursor handelt es sich um einen scrollfähigen, dynamischen, schreibgeschützten Cursor.  
   
  [ @cursor_scope =] *cursor_scope*  
- Gibt die Ebene der Cursor an, die gemeldet werden sollen. *cursor_scope* ist vom Datentyp **int**und hat keinen Standardwert. die folgenden Werte sind möglich:  
+ Gibt die Ebene der Cursor an, die gemeldet werden sollen. *cursor_scope* ist vom Datentyp **int** und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -79,7 +79,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |last_operation|**smallint**|Der zuletzt ausgeführte Vorgang für den Cursor:<br /><br /> 0 = Für den Cursor wurden keine Vorgänge ausgeführt.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = einfügen<br /><br /> 4 = UPDATE<br /><br /> 5 = löschen<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Ein eindeutiger Wert für den Cursor innerhalb des Serverbereichs.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_cursor_list erstellt eine Liste der aktuellen Servercursor, die für die Verbindung geöffnet sind, und beschreibt die globalen Cursorattribute, wie z. B. die Scrolloptionen und die Aktualisierbarkeit des Cursors. sp_cursor_list listet die folgenden Cursor auf:  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)]-Servercursor.  

@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_clr_appdomains
 - sys.dm_clr_appdomains
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: ae934fc3b9d8f7664e2542450ee1456298548c85
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7579a0648bbc5eee90512bb70dfd667728b56834
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097766"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208108"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

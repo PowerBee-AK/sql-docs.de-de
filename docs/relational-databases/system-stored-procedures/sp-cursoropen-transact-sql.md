@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursoropen
 - sp_cursoropen_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2942c06e5d63c0be25a05cd34e871447a29e7d6d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1e8e4025a31c92ec001bcb45bee4f8d26f3dc24e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543583"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206274"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ sp_cursoropen cursor OUTPUT, stmt
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- Aufgrund der Möglichkeit, dass der angeforderte Wert nicht für den von *stmt*definierten Cursor geeignet ist, dient dieser Parameter sowohl als Eingabe als auch als Ausgabe. In solchen Fällen weist SQL Server einen passenden Wert zu.  
+ Aufgrund der Möglichkeit, dass der angeforderte Wert nicht für den von *stmt* definierten Cursor geeignet ist, dient dieser Parameter sowohl als Eingabe als auch als Ausgabe. In solchen Fällen weist SQL Server einen passenden Wert zu.  
   
  *ccopt*  
  Option für die Parallelitätssteuerung. *ccopt* ist ein optionaler Parameter, der einen der folgenden **int** -Eingabewerte erfordert.  
@@ -148,7 +148,7 @@ sp_cursoropen cursor OUTPUT, stmt
 > [!NOTE]  
 >  Wenn die sp_cursoropen Prozedur erfolgreich ausgeführt wird, werden die RPC-Rückgabe Parameter und ein Resultset mit TDS-Spalten Formatinformationen (0xa0 & 0xA1-Meldungen) gesendet. Andernfalls wird mindestens eine TDS-Fehlermeldung gesendet. In beiden Fällen werden keine Zeilendaten zurückgegeben, *und die Anzahl* der abgeschlossenen Nachrichten ist 0 (null). Wenn Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Version vor 7.0 verwenden, werden 0xa0 und 0xa1 (Standard für SELECT-Anweisungen) zusammen mit den Tokendatenströmen 0xa5 und 0xa4 zurückgegeben. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 verwenden, wird 0x81 (Standard für SELECT-Anweisungen) zusammen mit den Tokendatenströmen 0xa5 und 0xa4 zurückgegeben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="stmt-parameter"></a>stmt-Parameter  
  Wenn *stmt* die Ausführung einer gespeicherten Prozedur angibt, können die Eingabeparameter entweder als Konstanten als Teil der *stmt* -Zeichenfolge definiert oder als *boundparam* -Argumente angegeben werden. Deklarierte Variablen können auf diese Weise als gebundene Parameter übergeben werden.  

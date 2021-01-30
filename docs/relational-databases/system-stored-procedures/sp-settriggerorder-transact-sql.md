@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_settriggerorder
 - sp_settriggerorder_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d8ef1360e35d084703a4f86590ade57be6a4c24
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f7977873f4b2887b736ffc16f5592340f5b87dee
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468301"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207363"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,11 +55,11 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |-----------|-----------------|  
 |**First**|Trigger wird zuerst ausgelöst|  
 |**Last**|Trigger wird zuletzt ausgelöst|  
-|**Keine**|Trigger wird in nicht definierter Reihenfolge ausgelöst|  
+|**None**|Trigger wird in nicht definierter Reihenfolge ausgelöst|  
   
 `[ @stmttype = ] 'statement_type'` Gibt die SQL-Anweisung an, die den-Triggern auslöst. *statement_type* ist vom Datentyp **varchar (50)** und kann Einfüge-, Aktualisierungs-, Lösch-, Anmelde-oder beliebige [!INCLUDE[tsql](../../includes/tsql-md.md)] in [DDL-Ereignissen](../../relational-databases/triggers/ddl-events.md)aufgeführte Anweisungs Ereignisse sein Ereignisgruppen können nicht angegeben werden.  
   
- Ein-Auslösers kann als **erster** oder **Letzter** -für einen Anweisungstyp festgelegt werden, nachdem dieser als ein-auslösertyp definiert wurde. Beispielsweise kann der  Auslösewert TR1 **zuerst** für INSERT in der Tabelle **T1** festgelegt werden, wenn **TR1** als INSERT-Vorgang definiert ist. [!INCLUDE[ssDE](../../includes/ssde-md.md)]Gibt einen Fehler zurück, wenn **TR1**, der nur als INSERT-Vorgang definiert wurde, als **First**-oder **Last**-Wert für eine Update-Anweisung festgelegt wird. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
+ Ein-Auslösers kann als **erster** oder **Letzter** -für einen Anweisungstyp festgelegt werden, nachdem dieser als ein-auslösertyp definiert wurde. Beispielsweise kann der  Auslösewert TR1 **zuerst** für INSERT in der Tabelle **T1** festgelegt werden, wenn **TR1** als INSERT-Vorgang definiert ist. [!INCLUDE[ssDE](../../includes/ssde-md.md)]Gibt einen Fehler zurück, wenn **TR1**, der nur als INSERT-Vorgang definiert wurde, als **First**-oder **Last**-Wert für eine Update-Anweisung festgelegt wird. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.  
   
  **\@ Namespace =** { **' Database '**  |  **' Server '** | Normal  
  Wenn *Triggername* ein DDL-Trigger ist, gibt der **\@ Namespace** an, ob *Triggername* mit dem Daten Bankbereich oder dem Serverbereich erstellt wurde. Wenn *Triggername* ein LOGON-Trigger ist, muss der Server angegeben werden. Weitere Informationen zum DDL-Triggerbereich finden Sie unter [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md). Wenn nicht angegeben, oder wenn NULL angegeben wird, ist *Triggername* ein DML-Trigger.  
@@ -69,7 +69,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="dml-triggers"></a>DML-Trigger  
  Für jede Anweisung in einer einzelnen Tabelle können nur ein **erster** und ein **Letzter** Auslösung vorhanden sein.  

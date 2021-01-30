@@ -6,26 +6,26 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 86565d3e15002cc38e02ecaeb455d52aa9ec64a7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c4c6e3ce34f1fbd73bf046b9fdeb178d82878f6f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464621"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207840"
 ---
 # <a name="syspdw_nodes_partitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Enthält eine Zeile für jede Partition aller Tabellen und die meisten Index Typen in einer [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Datenbank. Alle Tabellen und Indizes enthalten mindestens eine Partition, unabhängig davon, ob Sie explizit partitioniert sind.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |partition_id|**bigint**|Die ID der Partition. Ist innerhalb einer Datenbank eindeutig.|  
 |object_id|**int**|Die ID des Objekts, zu dem diese Partition gehört. Jede Tabelle oder Sicht besteht aus mindestens einer Partition.|  

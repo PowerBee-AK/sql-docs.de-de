@@ -1,13 +1,13 @@
 ---
-description: managed_backup. fn_get_health_status (Transact-SQL)
-title: managed_backup. fn_get_health_status (Transact-SQL) | Microsoft-Dokumentation
+description: managed_backup managed_backup.fn_get_health_status (Transact-SQL)
+title: managed_backup managed_backup.fn_get_health_status (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_get_health_status_TSQL
 - smart_admin.fn_get_health_status_TSQL
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4aa10efc95af42c7793fb37b49a72061353b0ee0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b139114cb7be4094c652f1fbf69313d4f7f1f2db
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419554"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207400"
 ---
-# <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup. fn_get_health_status (Transact-SQL)
+# <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup managed_backup.fn_get_health_status (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Gibt eine Tabelle mit keiner, einer oder mehreren Zeilen der aggregierten Anzahl der Fehler zurück, die durch erweiterte Ereignisse während eines bestimmten Zeitraums gemeldet wurden.  
@@ -53,7 +53,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |number_of_storage_connectivity_errors|INT|Anzahl der Verbindungsfehler, wenn das Programm eine Verbindung mit dem Azure Storage-Konto herstellt.|  
 |number_of_sql_errors|INT|Die Anzahl der Fehler, die zurückgegeben werden, wenn das Programm eine Verbindung mit der SQL Server Engine herstellt.|  

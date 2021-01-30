@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_subscription_properties_TSQL
 - sp_change_subscription_properties
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad4761fdbac615ad453741a0b01d410ca3b5d572
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ed6615b10487744ae5ac5c0775627bea97e29c66
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528728"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208293"
 ---
 # <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,11 +43,11 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 `[ @property = ] 'property'` Die Eigenschaft, die geändert werden soll. *Property* ist vom **Datentyp vom Datentyp sysname**.  
   
@@ -59,7 +59,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |-----------|----------------------|  
 |**0**|Transaktionsreplikation|  
 |**1**|Momentaufnahme|  
-|**2**|Zusammenführen|  
+|**2**|Merge|  
 |NULL (Standard)|Die Replikation bestimmt den Veröffentlichungstyp. Da die gespeicherte Prozedur mehrere Tabellen durchsuchen muss, ist diese Option langsamer, als wenn der genaue Veröffentlichungstyp angegeben wird.|  
   
  Diese Tabelle beschreibt die Eigenschaften von Artikeln und die Werte für diese Eigenschaften.  
@@ -103,7 +103,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_change_subscription_properties** wird bei allen Replikations Typen verwendet.  
   
  **sp_change_subscription_properties** wird für Pullabonnements verwendet.  
@@ -111,7 +111,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
  Bei Oracle-Verlegern wird der Wert von *publisher_db* ignoriert, da Oracle nur eine Datenbank pro Instanz des Servers zulässt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_change_subscription_properties**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_change_subscription_properties** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern der Eigenschaften von Pullabonnements](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   

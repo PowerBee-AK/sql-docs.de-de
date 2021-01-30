@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmergepullsubscription
 - sp_dropmergepullsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 20f8fb9eea5be15a3957c9ca430b81cf52a89709
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6d0ee785012033001e9c458749eecc7921ef3fe3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538949"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208232"
 ---
 # <a name="sp_dropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,27 +41,27 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter ist erforderlich. Geben Sie den Wert **alle** an, um Abonnements für alle Veröffentlichungen zu entfernen.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Dieser Parameter ist erforderlich. Geben Sie den Wert **alle** an, um Abonnements für alle Veröffentlichungen zu entfernen.  
   
-`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter ist erforderlich.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Dieser Parameter ist erforderlich.  
   
-`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter ist erforderlich.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Dieser Parameter ist erforderlich.  
   
 `[ @reserved = ] 'reserved'` Ist für die zukünftige Verwendung reserviert. *reserved* ist vom Typ **Bit**. der Standardwert ist **0**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_dropmergepullsubscription** wird bei der Mergereplikation verwendet.  
   
- **sp_dropmergepullsubscription** löscht die Merge-Agent für dieses Mergepullabonnement, obwohl der Merge-Agent nicht in **sp_addmergepullsubscription**erstellt wird.  
+ **sp_dropmergepullsubscription** löscht die Merge-Agent für dieses Mergepullabonnement, obwohl der Merge-Agent nicht in **sp_addmergepullsubscription** erstellt wird.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_dropmergepullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepullsubscrip_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der Benutzer, der das Mergepullabonnement erstellt hat, können **sp_dropmergepullsubscription**ausführen. Die **db_owner** festgelegte Daten Bank Rolle kann nur **sp_dropmergepullsubscription** ausgeführt werden, wenn der Benutzer, der das Mergepullabonnement erstellt hat, zu dieser Rolle gehört.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der Benutzer, der das Mergepullabonnement erstellt hat, können **sp_dropmergepullsubscription** ausführen. Die **db_owner** festgelegte Daten Bank Rolle kann nur **sp_dropmergepullsubscription** ausgeführt werden, wenn der Benutzer, der das Mergepullabonnement erstellt hat, zu dieser Rolle gehört.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Löschen eines Pullabonnements](../../relational-databases/replication/delete-a-pull-subscription.md)   

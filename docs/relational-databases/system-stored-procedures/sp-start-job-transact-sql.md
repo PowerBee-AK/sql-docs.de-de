@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_start_job
 - sp_start_job_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4e7a86d9ea25b4d9ae412b922cc6f36ddce27c20
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 09da744c09bd822ae01166722812141a05e13ed1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545940"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207283"
 ---
 # <a name="sp_start_job-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,15 +46,15 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_name = ] 'job_name'` Der Name des Auftrags, der gestartet werden soll. Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags, der gestartet werden soll. Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. *job_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @job_id = ] job_id` Die ID des Auftrags, der gestartet werden soll. Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die ID des Auftrags, der gestartet werden soll. Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden. *job_id* ist vom Datentyp **uniqueidentifier** und hat den Standardwert NULL.  
   
 `[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 `[ @server_name = ] 'server_name'` Der Zielserver, auf dem der Auftrag gestartet werden soll. *server_name* ist vom Datentyp **nvarchar (128)** und hat den Standardwert NULL. *server_name* muss einer der Zielserver sein, auf die der Auftrag zurzeit abzielt.  
   
-`[ @step_name = ] 'step_name'` Der Name des Schritts, bei dem mit der Ausführung des Auftrags begonnen werden soll. Gilt nur für lokale Aufträge. *step_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @step_name = ] 'step_name'` Der Name des Schritts, bei dem mit der Ausführung des Auftrags begonnen werden soll. Gilt nur für lokale Aufträge. *step_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 `[ @output_flag = ] output_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -68,7 +68,7 @@ sp_start_job
  Diese gespeicherte Prozedur wird in der **msdb** -Datenbank gespeichert.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
+ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
   
 -   **SQLAgentUserRole**  
   

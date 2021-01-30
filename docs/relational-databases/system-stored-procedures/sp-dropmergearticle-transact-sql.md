@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmergearticle
 - sp_dropmergearticle_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7c91fe7b1cc57630565fae398fc8cbc798df314a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 58759010972cd8bed8f32f909d0b326f8b964a13
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536519"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208271"
 ---
 # <a name="sp_dropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,15 +44,15 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung, aus der ein Artikel gelöscht werden soll. *Publication*ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, aus der ein Artikel gelöscht werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @article = ] 'article'` Der Name des Artikels, der aus der angegebenen Veröffentlichung gelöscht werden soll. der *Artikel*ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn **alle**, werden alle vorhandenen Artikel in der angegebenen Mergeveröffentlichung entfernt. Auch wenn der *Artikel* voll **ständig**ist, muss die Veröffentlichung getrennt vom Artikel abgelegt werden.  
+`[ @article = ] 'article'` Der Name des Artikels, der aus der angegebenen Veröffentlichung gelöscht werden soll. der *Artikel* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert. Wenn **alle**, werden alle vorhandenen Artikel in der angegebenen Mergeveröffentlichung entfernt. Auch wenn der *Artikel* voll **ständig** ist, muss die Veröffentlichung getrennt vom Artikel abgelegt werden.  
   
 `[ @ignore_distributor = ] ignore_distributor` Gibt an, ob diese gespeicherte Prozedur ausgeführt wird, ohne eine Verbindung mit dem Verteiler herzustellen. *ignore_distributor* ist vom Typ **Bit**. der Standardwert ist **0**.  
   
 `[ @reserved = ] reserved` Ist für die zukünftige Verwendung reserviert. *reserved* ist vom Datentyp **nvarchar (20)** und hat den Standardwert NULL.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig zu erklären. *force_invalidate_snapshot* ist ein **Bit**und hat den Standardwert **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig zu erklären. *force_invalidate_snapshot* ist ein **Bit** und hat den Standardwert **0**.  
   
  der Wert **0** gibt an, dass Änderungen am Mergeartikel nicht bewirken, dass die Momentaufnahme ungültig wird.  
   
@@ -69,13 +69,13 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_dropmergearticle** wird bei der Mergereplikation verwendet. Weitere Informationen zum [Löschen von Artikeln finden Sie unter Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
  Durch das Ausführen **sp_dropmergearticle** zum Löschen eines Artikels aus einer Veröffentlichung wird das Objekt nicht aus der Veröffentlichungs Datenbank oder dem entsprechenden Objekt aus der Abonnement Datenbank entfernt. Verwenden Sie `DROP <object>`, um diese Objekte bei Bedarf manuell zu entfernen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_dropmergearticle**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_dropmergearticle** ausführen.  
   
 ## <a name="example"></a>Beispiel  
   

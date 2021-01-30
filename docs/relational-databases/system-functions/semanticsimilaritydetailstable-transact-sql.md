@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - semanticsimilaritydetailstable
 - semanticsimilaritydetailstable_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fa94a6c16eaaf2548b3c0375d43848d5e03a7f12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f26754f935338d586ebe958df9f49f99c189c414
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474579"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207326"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,10 +72,10 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
  In der folgenden Tabelle werden die Schlüsselausdrücke beschrieben, die von dieser Rowset-Funktion zurückgegeben werden.  
   
-|Column_name|type|Beschreibung|  
+|Column_name|type|BESCHREIBUNG|  
 |------------------|----------|-----------------|  
 |**Schlüssel Ausdruck**|**NVARCHAR**|Der Schlüsselausdruck, der zur Ähnlichkeit zwischen Quelldokument und übereinstimmendem Dokument beiträgt.|  
-|**Endergebnis**|**Wirkliche**|Ein relativer Wert für diesen Schlüsselausdruck in der Beziehung mit allen anderen Schlüsselausdrücken, die in den beiden Dokumenten ähnlich sind.<br /><br /> Der Wert ist eine Dezimalzahl im Bereich [0,0; 1,0], wobei ein höheres Ergebnis eine höhere Gewichtung und 1,0 ein perfektes Ergebnis darstellt.|  
+|**score**|**REAL**|Ein relativer Wert für diesen Schlüsselausdruck in der Beziehung mit allen anderen Schlüsselausdrücken, die in den beiden Dokumenten ähnlich sind.<br /><br /> Der Wert ist eine Dezimalzahl im Bereich [0,0; 1,0], wobei ein höheres Ergebnis eine höhere Gewichtung und 1,0 ein perfektes Ergebnis darstellt.|  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Weitere Informationen finden Sie untersuchen von [ähnlichen und verwandten Dokumenten mit der semantischen Suche](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  

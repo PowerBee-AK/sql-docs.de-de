@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_notification_TSQL
 - sp_add_notification
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0c009cd32cf3fdd92fbb638a00d5f1f4a024a1b8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f09a5638e55ee6bd8e0dfd6e07defc92b0ed365d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493536"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208012"
 ---
 # <a name="sp_add_notification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,17 +41,17 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @alert_name = ] 'alert'` Die Warnung für diese Benachrichtigung. *Alert* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @alert_name = ] 'alert'` Die Warnung für diese Benachrichtigung. *Alert* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @operator_name = ] 'operator'` Der Operator, der benachrichtigt werden soll, wenn die Warnung auftritt. *Operator* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @operator_name = ] 'operator'` Der Operator, der benachrichtigt werden soll, wenn die Warnung auftritt. *Operator* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @notification_method = ] notification_method` Die Methode, mit der der Operator benachrichtigt wird. *notification_method* ist vom Datentyp **tinyint**und hat keinen Standardwert. *notification_method* können einen oder mehrere dieser Werte in Kombination mit einem logischen **or** -Operator aufweisen.  
+`[ @notification_method = ] notification_method` Die Methode, mit der der Operator benachrichtigt wird. *notification_method* ist vom Datentyp **tinyint** und hat keinen Standardwert. *notification_method* können einen oder mehrere dieser Werte in Kombination mit einem logischen **or** -Operator aufweisen.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|E-Mail|  
 |**2**|Pager|  
-|**4**|**NET SEND**|  
+|**4**|**net send**|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -69,7 +69,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  Wenn beim Senden einer E-Mail- oder Pagerbenachrichtigung ein Fehler auftritt, wird der Fehler im Fehlerprotokoll des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Diensts aufgezeichnet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_add_notification**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_add_notification** ausführen.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine E-Mail-Benachrichtigung für die angegebene Warnung (`Test Alert`) hinzugefügt.  
@@ -87,7 +87,7 @@ EXEC dbo.sp_add_notification
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [sp_delete_notification &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_help_notification &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
  [sp_update_notification &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   

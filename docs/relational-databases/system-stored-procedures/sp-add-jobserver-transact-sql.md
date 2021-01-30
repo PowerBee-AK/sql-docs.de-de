@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_jobserver
 - sp_add_jobserver_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2a99fedcccc076fd12cbc64a4500b39ca7b6d5d3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 015e8c1cc727b14d58d49be16643f0d6324bf0dd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539166"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206749"
 ---
 # <a name="sp_add_jobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id` Die ID des Auftrags. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die ID des Auftrags. *job_id* ist vom Datentyp **uniqueidentifier** und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'` Der Name des Auftrags. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags. *job_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
@@ -57,12 +57,12 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  Keine  
   
 ## <a name="remarks"></a>Bemerkungen  
- ** \@ automatic_post** ist in **sp_add_jobserver**vorhanden, wird aber nicht unter Argumente aufgeführt. ** \@ automatic_post** ist für die interne Verwendung reserviert.  
+ **\@ automatic_post** ist in **sp_add_jobserver** vorhanden, wird aber nicht unter Argumente aufgeführt. **\@ automatic_post** ist für die interne Verwendung reserviert.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
+ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
   
 -   **SQLAgentUserRole**  
   

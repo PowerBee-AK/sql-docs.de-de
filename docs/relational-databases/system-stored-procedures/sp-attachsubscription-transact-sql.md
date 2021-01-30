@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_attachsubscription
 - sp_attachsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 25a617eeac0926e6bcb80f99125603072ee34be8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a7357d6a37472d9d530dfcf3ecfe3c9bddfffd58
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539149"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206633"
 ---
 # <a name="sp_attachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,46 +54,46 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dbname = ] 'dbname'` Die Zeichenfolge, die die Ziel-Abonnement Datenbank anhand des Namens angibt. *dbname* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @dbname = ] 'dbname'` Die Zeichenfolge, die die Ziel-Abonnement Datenbank anhand des Namens angibt. *dbname* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 `[ @filename = ] 'filename'` Der Name und der physische Speicherort der primären MDF-Datei (**Master** Data File). *Dateiname ist vom Datentyp* **nvarchar (260)** und hat keinen Standardwert.  
   
-`[ @subscriber_security_mode = ] 'subscriber_security_mode'` Der Sicherheitsmodus des Abonnenten, der bei der Synchronisierung zum Herstellen einer Verbindung mit einem Abonnenten verwendet wird. *subscriber_security_mode* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @subscriber_security_mode = ] 'subscriber_security_mode'` Der Sicherheitsmodus des Abonnenten, der bei der Synchronisierung zum Herstellen einer Verbindung mit einem Abonnenten verwendet wird. *subscriber_security_mode* ist vom Datentyp **int** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Die Windows-Authentifizierung muss verwendet werden. Wenn *subscriber_security_mode* nicht **1** (Windows-Authentifizierung) ist, wird ein Fehler zurückgegeben.  
   
-`[ @subscriber_login = ] 'subscriber_login'` Der Anmelde Name des Abonnenten, der bei der Synchronisierung zum Herstellen einer Verbindung mit einem Abonnenten verwendet wird. *subscriber_login* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @subscriber_login = ] 'subscriber_login'` Der Anmelde Name des Abonnenten, der bei der Synchronisierung zum Herstellen einer Verbindung mit einem Abonnenten verwendet wird. *subscriber_login* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird nur aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Wenn *subscriber_security_mode* nicht **1** ist und *subscriber_login* angegeben ist, wird ein Fehler zurückgegeben.  
   
-`[ @subscriber_password = ] 'subscriber_password'` Das Kennwort des Abonnenten. *subscriber_password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @subscriber_password = ] 'subscriber_password'` Das Kennwort des Abonnenten. *subscriber_password* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Dieser Parameter wurde als veraltet markiert und wird nur aus Gründen der Abwärtskompatibilität von Skripts beibehalten. Wenn *subscriber_security_mode* nicht **1** ist und *subscriber_password* angegeben ist, wird ein Fehler zurückgegeben.  
   
-`[ @distributor_security_mode = ] distributor_security_mode` Der Sicherheitsmodus, der beim Synchronisieren zum Herstellen einer Verbindung mit einem Verteiler verwendet wird. *distributor_security_mode* ist vom Datentyp **int**und hat den Standardwert **0**. **0** gibt die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung an. **1** gibt die Windows-Authentifizierung an. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @distributor_security_mode = ] distributor_security_mode` Der Sicherheitsmodus, der beim Synchronisieren zum Herstellen einer Verbindung mit einem Verteiler verwendet wird. *distributor_security_mode* ist vom Datentyp **int** und hat den Standardwert **0**. **0** gibt die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung an. **1** gibt die Windows-Authentifizierung an. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @distributor_login = ] 'distributor_login'` Der Verteiler Anmelde Name, der beim Synchronisieren zum Herstellen einer Verbindung mit einem Verteiler verwendet wird. *distributor_login* ist erforderlich, wenn *distributor_security_mode* auf **0**festgelegt ist. *distributor_login* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @distributor_login = ] 'distributor_login'` Der Verteiler Anmelde Name, der beim Synchronisieren zum Herstellen einer Verbindung mit einem Verteiler verwendet wird. *distributor_login* ist erforderlich, wenn *distributor_security_mode* auf **0** festgelegt ist. *distributor_login* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @distributor_password = ] 'distributor_password'` Das Verteiler Kennwort. *distributor_password* ist erforderlich, wenn *distributor_security_mode* auf **0**festgelegt ist. *distributor_password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Der Wert von *distributor_password* muss kleiner als 120 Unicode-Zeichen sein.  
+`[ @distributor_password = ] 'distributor_password'` Das Verteiler Kennwort. *distributor_password* ist erforderlich, wenn *distributor_security_mode* auf **0** festgelegt ist. *distributor_password* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Der Wert von *distributor_password* muss kleiner als 120 Unicode-Zeichen sein.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie kein leeres Kennwort. Verwenden Sie ein sicheres Kennwort. Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
   
-`[ @publisher_security_mode = ] publisher_security_mode` Der Sicherheitsmodus, der beim Synchronisieren zum Herstellen einer Verbindung mit einem Verleger verwendet wird. *publisher_security_mode* ist vom Datentyp **int**und hat den Standardwert **1**. Bei **0**wird die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung angegeben. Wenn der **1**ist, wird die Windows-Authentifizierung angegeben. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode` Der Sicherheitsmodus, der beim Synchronisieren zum Herstellen einer Verbindung mit einem Verleger verwendet wird. *publisher_security_mode* ist vom Datentyp **int** und hat den Standardwert **1**. Bei **0** wird die- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung angegeben. Wenn der **1** ist, wird die Windows-Authentifizierung angegeben. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @publisher_login = ] 'publisher_login'` Der Anmelde Name, der beim Synchronisieren zum Herstellen einer Verbindung mit einem Verleger verwendet wird. *publisher_login* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher_login = ] 'publisher_login'` Der Anmelde Name, der beim Synchronisieren zum Herstellen einer Verbindung mit einem Verleger verwendet wird. *publisher_login* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @publisher_password = ] 'publisher_password'` Das Kennwort, das beim Herstellen einer Verbindung mit dem Verleger verwendet wird. *publisher_password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Der Wert von *publisher_password* muss kleiner als 120 Unicode-Zeichen sein.  
+`[ @publisher_password = ] 'publisher_password'` Das Kennwort, das beim Herstellen einer Verbindung mit dem Verleger verwendet wird. *publisher_password* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Der Wert von *publisher_password* muss kleiner als 120 Unicode-Zeichen sein.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie kein leeres Kennwort. Verwenden Sie ein sicheres Kennwort. Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
   
 `[ @job_login = ] 'job_login'` Der Anmelde Name für das Windows-Konto, unter dem der Agent ausgeführt wird. *job_login* ist vom Datentyp **nvarchar (257)** und hat keinen Standardwert. Das Windows-Konto wird stets für Agent-Verbindungen mit dem Verteiler verwendet.  
   
-`[ @job_password = ] 'job_password'` Das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *job_password* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Der Wert von *job_password* muss kleiner als 120 Unicode-Zeichen sein.  
+`[ @job_password = ] 'job_password'` Das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *job_password* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert. Der Wert von *job_password* muss kleiner als 120 Unicode-Zeichen sein.  
   
 > [!IMPORTANT]  
 >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
@@ -106,13 +106,13 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_attachsubscription** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
  Ein Abonnement kann nicht an die Veröffentlichung angefügt werden, wenn die Aufbewahrungsdauer der Veröffentlichung abgelaufen ist. Wenn ein Abonnement mit einer abgelaufenen Aufbewahrungsdauer angegeben wird, tritt ein Fehler auf, wenn das Abonnement angefügt wird oder wenn es erstmalig synchronisiert wird. Veröffentlichungen mit einer Beibehaltungs Dauer von **0** (nie ablaufen) werden ignoriert.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_attachsubscription**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_attachsubscription** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

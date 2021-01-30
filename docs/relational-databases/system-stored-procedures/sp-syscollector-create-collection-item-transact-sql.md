@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_create_collection_item
 - sp_syscollector_create_collection_item_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a99c9adb21d6c9b09d4e1e29ad845253ba3c9b19
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e58f8407c152be375099e9eb70e3fe63d0100e67
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538529"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207033"
 ---
 # <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ sp_syscollector_create_collection_item
  der *Name* muss eindeutig sein. Wenn Sie eine Liste der aktuellen Namen von Sammelelementen abrufen möchten, fragen Sie die syscollector_collection_items-Systemsicht ab.  
   
  [ @frequency =] *Häufigkeit*  
- Mithilfe dieses Parameters wird angegeben (in Sekunden), wie häufig Daten durch dieses Sammelelement aufgezeichnet werden. *Frequency* ist vom Datentyp **int**und hat den Standardwert 5. Der minimale Wert, der angegeben werden kann, ist 5 Sekunden.  
+ Mithilfe dieses Parameters wird angegeben (in Sekunden), wie häufig Daten durch dieses Sammelelement aufgezeichnet werden. *Frequency* ist vom Datentyp **int** und hat den Standardwert 5. Der minimale Wert, der angegeben werden kann, ist 5 Sekunden.  
   
  Wenn der Sammlungssatz auf den Modus ohne Zwischenspeicherung festgelegt ist, wird die Häufigkeit ignoriert, da dieser Modus bewirkt, dass sowohl die Datensammlung als auch der Datenupload dem Zeitplan entsprechend stattfinden, der für den Sammlungssatz angegeben wurde. Um den Sammlungs Modus des Sammlungs Satzes anzuzeigen, Fragen Sie die [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) Systemsicht ab.  
   
@@ -72,7 +72,7 @@ sp_syscollector_create_collection_item
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_syscollector_create_collection_item muss im Kontext der msdb-Systemdatenbank ausgeführt werden.  
   
  Der Sammlungssatz, dem das Sammelelement hinzugefügt wird, muss beendet werden, bevor das Sammelelement erstellt wird. Systemsammlungssätzen können keine Sammelelemente hinzugefügt werden.  

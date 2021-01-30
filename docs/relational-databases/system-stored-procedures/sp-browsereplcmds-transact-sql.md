@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_browsereplcmds_TSQL
 - sp_browsereplcmds
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 39fafe6f0e36d0c88ebb74285e8c8206977f73bd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f798dcb9689221d9a8ef1964d4237a1fe649a4c5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548232"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206628"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,17 +49,17 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 `[ @xact_seqno_end = ] 'xact_seqno_end'` Gibt die höchste genaue Sequenznummer an, die zurückgegeben werden soll. *xact_seqno_end* ist vom Typ **NCHAR (22)**. der Standardwert ist 0xFFFFFFFFFFFFFFFFFFFF.  
   
-`[ @originator_id = ] 'originator_id'` Gibt an, ob Befehle mit dem angegebenen *originator_id* zurückgegeben werden. *originator_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @originator_id = ] 'originator_id'` Gibt an, ob Befehle mit dem angegebenen *originator_id* zurückgegeben werden. *originator_id* ist vom Datentyp **int** und hat den Standardwert NULL.  
   
-`[ @publisher_database_id = ] 'publisher_database_id'` Gibt an, ob Befehle mit dem angegebenen *publisher_database_id* zurückgegeben werden. *publisher_database_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @publisher_database_id = ] 'publisher_database_id'` Gibt an, ob Befehle mit dem angegebenen *publisher_database_id* zurückgegeben werden. *publisher_database_id* ist vom Datentyp **int** und hat den Standardwert NULL.  
   
-`[ @article_id = ] 'article_id'` Gibt an, ob Befehle mit dem angegebenen *article_id* zurückgegeben werden. *article_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @article_id = ] 'article_id'` Gibt an, ob Befehle mit dem angegebenen *article_id* zurückgegeben werden. *article_id* ist vom Datentyp **int** und hat den Standardwert NULL.  
   
-`[ @command_id = ] command_id` Der Speicherort des Befehls in [MSrepl_commands &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) decodiert werden. *command_id* ist vom Datentyp **int**und hat den Standardwert NULL. Wenn angegeben, müssen auch alle anderen Parameter angegeben werden, und *xact_seqno_start*müssen mit *xact_seqno_end*identisch sein.  
+`[ @command_id = ] command_id` Der Speicherort des Befehls in [MSrepl_commands &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) decodiert werden. *command_id* ist vom Datentyp **int** und hat den Standardwert NULL. Wenn angegeben, müssen auch alle anderen Parameter angegeben werden, und *xact_seqno_start* müssen mit *xact_seqno_end* identisch sein.  
   
-`[ @agent_id = ] agent_id` Gibt an, dass nur Befehle für einen bestimmten Replikations-Agent zurückgegeben werden. *agent_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @agent_id = ] agent_id` Gibt an, dass nur Befehle für einen bestimmten Replikations-Agent zurückgegeben werden. *agent_id* ist vom Datentyp **int** und hat den Standardwert NULL.  
   
-`[ @compatibility_level = ] compatibility_level` Die Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , auf der die *COMPATIBILITY_LEVEL* **int**ist, mit dem Standardwert 9 Millionen.  
+`[ @compatibility_level = ] compatibility_level` Die Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , auf der die *COMPATIBILITY_LEVEL* **int** ist, mit dem Standardwert 9 Millionen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -74,7 +74,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**article_id**|**int**|ID des Artikels.|  
 |**type**|**int**|Der Typ des Befehls.|  
 |**partial_command**|**bit**|Zeigt an, ob dies ein Teilbefehl ist.|  
-|**hashkey**|**int**|Nur interne Verwendung.|  
+|**hashkey**|**int**|Nur zur internen Verwendung.|  
 |**originator_publication_id**|**int**|ID der Veröffentlichung, von der die Transaktion stammt|  
 |**originator_db_version**|**int**|Version der Datenbank, von der die Transaktion stammt|  
 |**originator_lsn**|**varbinary(16)**|Identifiziert die Protokollfolgenummer (LSN, Log Sequence Number) für den Befehl in der ursprünglichen Veröffentlichung Wird in der Peer-zu-Peer-Transaktions Replikation verwendet.|  
@@ -83,11 +83,11 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
  Lange Befehle können auf mehrere Zeilen des Resultsets aufgeteilt werden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_browsereplcmds** wird bei der Transaktions Replikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder Mitglieder der festen Daten bankrollen **db_owner** oder **replmonitor** in der Verteilungs Datenbank können **sp_browsereplcmds**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder Mitglieder der festen Daten bankrollen **db_owner** oder **replmonitor** in der Verteilungs Datenbank können **sp_browsereplcmds** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   

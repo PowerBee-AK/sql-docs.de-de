@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addsubscriber_schedule_TSQL
 - sp_addsubscriber_schedule
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9f62a88f7bc1bd3cf60c2d15fe71c3d1b6e571ff
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e95e55157e4ab8f96fd1b715b08c2c2e377cf8e3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536790"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207067"
 ---
 # <a name="sp_addsubscriber_schedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -72,7 +72,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**64** (Standard)|Autostart|  
 |**128**|Wiederholt|  
   
-`[ @frequency_interval = ] frequency_interval` Der Wert, der auf die von *frequency_type*festgelegte Häufigkeit angewendet werden soll. *frequency_interval* ist vom Datentyp **int**und hat den Standardwert **1**.  
+`[ @frequency_interval = ] frequency_interval` Der Wert, der auf die von *frequency_type* festgelegte Häufigkeit angewendet werden soll. *frequency_interval* ist vom Datentyp **int** und hat den Standardwert **1**.  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` Das Datum der Verteilungs-Agent. Dieser Parameter wird verwendet, wenn *frequency_type* auf **32** (monatlich, relativ) festgelegt ist. *frequency_relative_interval* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
@@ -82,9 +82,9 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**2**|Sekunde|  
 |**4**|Third|  
 |**8**|Vierter|  
-|**16**|Last (Letzter)|  
+|**16**|Letzter|  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Der von *frequency_type*verwendete Wiederholungs Faktor. *frequency_recurrence_factor* ist vom Datentyp **int**und hat den Standardwert **0**.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Der von *frequency_type* verwendete Wiederholungs Faktor. *frequency_recurrence_factor* ist vom Datentyp **int** und hat den Standardwert **0**.  
   
 `[ @frequency_subday = ] frequency_subday` Gibt an, wie oft innerhalb des definierten Zeitraums neu geplant werden soll. *frequency_subday* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
@@ -95,17 +95,17 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**4** (Standard)|Minute|  
 |**8**|Stunde|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Das Intervall für die *frequency_subday*. *frequency_subday_interval* ist vom Datentyp **int**und hat den Standardwert **5**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Das Intervall für die *frequency_subday*. *frequency_subday_interval* ist vom Datentyp **int** und hat den Standardwert **5**.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Die Tageszeit, zu der die Verteilungs-Agent zum ersten Mal geplant ist. dabei wird das Format HHMMSS verwendet. *active_start_time_of_day* ist vom Datentyp **int**und hat den Standardwert **0**.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Die Tageszeit, zu der die Verteilungs-Agent zum ersten Mal geplant ist. dabei wird das Format HHMMSS verwendet. *active_start_time_of_day* ist vom Datentyp **int** und hat den Standardwert **0**.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Die Tageszeit, zu der die Verteilungs-Agent nicht mehr geplant ist. dabei wird das Format HHMMSS verwendet. *active_end_time_of_day*ist vom Datentyp **int**und hat den Standardwert 235959, was bedeutet 11:59:59 Uhr. gemessen auf einem 24-Stunden-Format.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Die Tageszeit, zu der die Verteilungs-Agent nicht mehr geplant ist. dabei wird das Format HHMMSS verwendet. *active_end_time_of_day* ist vom Datentyp **int** und hat den Standardwert 235959, was bedeutet 11:59:59 Uhr. gemessen auf einem 24-Stunden-Format.  
   
-`[ @active_start_date = ] active_start_date` Das Datum, an dem die Verteilungs-Agent zum ersten Mal geplant ist, formatiert als YYYYMMDD. *active_start_date* ist vom Datentyp **int**und hat den Standardwert **0**.  
+`[ @active_start_date = ] active_start_date` Das Datum, an dem die Verteilungs-Agent zum ersten Mal geplant ist, formatiert als YYYYMMDD. *active_start_date* ist vom Datentyp **int** und hat den Standardwert **0**.  
   
-`[ @active_end_date = ] active_end_date` Das Datum, an dem der Verteilungs-Agent nicht mehr geplant ist, formatiert als YYYYMMDD. *active_end_date* ist vom Datentyp **int**und hat den Standardwert 99991231, was bedeutet, dass der 31. Dezember 9999.  
+`[ @active_end_date = ] active_end_date` Das Datum, an dem der Verteilungs-Agent nicht mehr geplant ist, formatiert als YYYYMMDD. *active_end_date* ist vom Datentyp **int** und hat den Standardwert 99991231, was bedeutet, dass der 31. Dezember 9999.  
   
-`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  der *Verleger* darf nicht für einen Verleger angegeben werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -113,11 +113,11 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_addsubscriber_schedule** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_addsubscriber_schedule**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_addsubscriber_schedule** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_changesubscriber_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   

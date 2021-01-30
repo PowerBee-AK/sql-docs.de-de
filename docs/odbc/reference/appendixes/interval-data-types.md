@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - second intervals [ODBC]
 - data types [ODBC], interval data types
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5b54996c2f2897e47e05088b1985d190acafaad3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41418b59d61b184717c4a3654491154221b9a791
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429672"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207142"
 ---
 # <a name="interval-data-types"></a>Intervalldatentypen
 Ein Intervall wird als Differenz zwischen zwei Datums-und Uhrzeiten definiert. Intervalle werden auf eine von zwei Arten ausgedrückt. Eine ist ein *Jahr-Monat-* Intervall, das Intervalle in Bezug auf Jahre und eine ganzzahlige Anzahl von Monaten ausdrückt. Bei der anderen handelt es sich um ein *Zeit* Intervall, das Intervalle in Form von Tagen, Minuten und Sekunden ausdrückt. Diese beiden Arten von Intervallen sind unterschiedlich und können nicht gemischt werden, da Monate eine unterschiedliche Anzahl von Tagen aufweisen können.  
@@ -42,30 +42,30 @@ Ein Intervall wird als Differenz zwischen zwei Datums-und Uhrzeiten definiert. I
   
  Es gibt 13-Intervall-SQL-Datentypen und 13 Interval C-Datentypen. Jeder Datentyp der Interval-C-Datentypen verwendet die gleiche Struktur, SQL_INTERVAL_STRUCT, um die Intervall Daten zu enthalten. (Weitere Informationen finden Sie im nächsten Abschnitt, [C Interval Structure](../../../odbc/reference/appendixes/c-interval-structure.md).) Weitere Informationen zu den SQL-Datentypen finden Sie unter [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md). Weitere Informationen zu den c-Datentypen finden Sie unter [c-Datentypen](../../../odbc/reference/appendixes/c-data-types.md).  
   
-|Typbezeichner|Class|Beschreibung|  
+|Typbezeichner|Class|BESCHREIBUNG|  
 |---------------------|-----------|-----------------|  
-|MONTH|Jahr-Monat|Anzahl von Monaten zwischen zwei Datumsangaben.|  
-|YEAR|Jahr-Monat|Anzahl von Jahren zwischen zwei Datumsangaben.|  
-|YEAR_TO_MONTH|Jahr-Monat|Anzahl von Jahren und Monaten zwischen zwei Datumsangaben.|  
-|DAY|Tag-Uhrzeit|Anzahl von Tagen zwischen zwei Datumsangaben.|  
-|HOUR|Tag-Uhrzeit|Anzahl der Stunden zwischen zwei Datums-und Uhrzeitangaben.|  
-|MINUTE|Tag-Uhrzeit|Anzahl der Minuten zwischen zwei Datums-/Uhrzeitangaben.|  
-|SECOND|Tag-Uhrzeit|Anzahl von Sekunden zwischen zwei Datums-/Uhrzeitangaben.|  
-|DAY_TO_HOUR|Tag-Uhrzeit|Anzahl der Tage/Stunden zwischen zwei Datums-und Uhrzeitangaben.|  
-|DAY_TO_MINUTE|Tag-Uhrzeit|Anzahl der Tage/Stunden/Minuten zwischen zwei Datums-und Uhrzeitangaben.|  
-|DAY_TO_SECOND|Tag-Uhrzeit|Anzahl der Tage/Stunden/Minuten/Sekunden zwischen zwei Datums-und Uhrzeitangaben.|  
-|HOUR_TO_MINUTE|Tag-Uhrzeit|Anzahl von Stunden/Minuten zwischen zwei Datums-/Uhrzeitangaben.|  
-|HOUR_TO_SECOND|Tag-Uhrzeit|Anzahl von Stunden/Minuten/Sekunden zwischen zwei Datums-und Uhrzeitangaben.|  
-|MINUTE_TO_SECOND|Tag-Uhrzeit|Anzahl der Minuten/Sekunden zwischen zwei Datums-/Uhrzeitangaben.|  
+|MONTH|Year-Month|Anzahl von Monaten zwischen zwei Datumsangaben.|  
+|YEAR|Year-Month|Anzahl von Jahren zwischen zwei Datumsangaben.|  
+|YEAR_TO_MONTH|Year-Month|Anzahl von Jahren und Monaten zwischen zwei Datumsangaben.|  
+|DAY|Day-Time|Anzahl von Tagen zwischen zwei Datumsangaben.|  
+|HOUR|Day-Time|Anzahl der Stunden zwischen zwei Datums-und Uhrzeitangaben.|  
+|MINUTE|Day-Time|Anzahl der Minuten zwischen zwei Datums-/Uhrzeitangaben.|  
+|SECOND|Day-Time|Anzahl von Sekunden zwischen zwei Datums-/Uhrzeitangaben.|  
+|DAY_TO_HOUR|Day-Time|Anzahl der Tage/Stunden zwischen zwei Datums-und Uhrzeitangaben.|  
+|DAY_TO_MINUTE|Day-Time|Anzahl der Tage/Stunden/Minuten zwischen zwei Datums-und Uhrzeitangaben.|  
+|DAY_TO_SECOND|Day-Time|Anzahl der Tage/Stunden/Minuten/Sekunden zwischen zwei Datums-und Uhrzeitangaben.|  
+|HOUR_TO_MINUTE|Day-Time|Anzahl von Stunden/Minuten zwischen zwei Datums-/Uhrzeitangaben.|  
+|HOUR_TO_SECOND|Day-Time|Anzahl von Stunden/Minuten/Sekunden zwischen zwei Datums-und Uhrzeitangaben.|  
+|MINUTE_TO_SECOND|Day-Time|Anzahl der Minuten/Sekunden zwischen zwei Datums-/Uhrzeitangaben.|  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   
--   [C-Intervall-Struktur](../../../odbc/reference/appendixes/c-interval-structure.md)  
+-   [C-Intervallstruktur](../../../odbc/reference/appendixes/c-interval-structure.md)  
   
--   [Datentypgenauigkeit Intervall](../../../odbc/reference/appendixes/interval-data-type-precision.md)  
+-   [Genauigkeit des Datentyps „Intervall“](../../../odbc/reference/appendixes/interval-data-type-precision.md)  
   
--   [Datentyplänge Intervall](../../../odbc/reference/appendixes/interval-data-type-length.md)  
+-   [Länge des Datentyps „Intervall“](../../../odbc/reference/appendixes/interval-data-type-length.md)  
   
--   [Intervall-Literale](../../../odbc/reference/appendixes/interval-literals.md)  
+-   [Intervallliterale](../../../odbc/reference/appendixes/interval-literals.md)  
   
--   [Overriding Default Leading and Seconds Precision for Interval Data Types (Überschreiben von standardmäßigen anführender Präzision und Genauigkeit in Sekunden für Intervalldatentypen)](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)
+-   [Überschreiben der Standardwerte für die Genauigkeit des führenden Intervallfelds und die Sekundengenauigkeit für Intervalldatentypen](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md)

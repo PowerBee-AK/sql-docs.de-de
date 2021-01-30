@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_log_shipping_primary_database
 - sp_add_log_shipping_primary_database_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ed823f2b6564593388893db74866931bc1c0c93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c967127366c935b42ac33158982c6734114b2d8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464659"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206715"
 ---
 # <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,9 +64,9 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 `[ @backup_job_name = ] 'backup_job_name'` Der Name des SQL Server-Agent Auftrags auf dem primären Server, der die Sicherung in den Sicherungsordner kopiert. *backup_job_name* ist vom **Datentyp vom Datentyp sysname** und darf nicht NULL sein.  
   
-`[ @backup_retention_period = ] backup_retention_period` Der Zeitraum (in Minuten), in dem die Protokoll Sicherungsdatei im Sicherungs Verzeichnis auf dem primären Server beibehalten werden soll. *backup_retention_period* ist vom Datentyp **int**und hat keinen Standardwert und darf nicht NULL sein.  
+`[ @backup_retention_period = ] backup_retention_period` Der Zeitraum (in Minuten), in dem die Protokoll Sicherungsdatei im Sicherungs Verzeichnis auf dem primären Server beibehalten werden soll. *backup_retention_period* ist vom Datentyp **int** und hat keinen Standardwert und darf nicht NULL sein.  
   
-`[ @monitor_server = ] 'monitor_server'` Der Name des Überwachungs Servers. *Monitor_server* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert und darf nicht NULL sein.  
+`[ @monitor_server = ] 'monitor_server'` Der Name des Überwachungs Servers. *Monitor_server* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert und darf nicht NULL sein.  
   
 `[ @monitor_server_security_mode = ] monitor_server_security_mode` Der Sicherheitsmodus, der zum Herstellen der Verbindung mit dem Überwachungs Server verwendet wird.  
   
@@ -80,7 +80,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 `[ @backup_threshold = ] backup_threshold` Die Zeitspanne (in Minuten) nach der letzten Sicherung, bevor ein *threshold_alert* Fehler ausgelöst wird. *backup_threshold* ist vom Datentyp **int**, der Standardwert ist 60 Minuten.  
   
-`[ @threshold_alert = ] threshold_alert` Die Warnung, die ausgelöst werden soll, wenn der Sicherungs Schwellenwert überschritten wird. *threshold_alert* ist vom Datentyp **int**und hat den Standardwert 14.420.  
+`[ @threshold_alert = ] threshold_alert` Die Warnung, die ausgelöst werden soll, wenn der Sicherungs Schwellenwert überschritten wird. *threshold_alert* ist vom Datentyp **int** und hat den Standardwert 14.420.  
   
 `[ @threshold_alert_enabled = ] threshold_alert_enabled` Gibt an, ob eine Warnung ausgelöst wird, wenn *backup_threshold* überschritten wird. Der Standardwert null (0) bedeutet, dass die Warnung deaktiviert ist und nicht ausgelöst wird. *threshold_alert_enabled* ist **Bit**.  
   

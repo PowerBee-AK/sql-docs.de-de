@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_showpendingchanges
 - sp_showpendingchanges_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 78b4901fc70299373044ce0720403031992e37a4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ac2c44e836a56c6fa503b6144e99761294ab473a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547392"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207307"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,11 +44,11 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @destination_server = ] 'destination_server'` Der Name des Servers, auf den die replizierten Änderungen angewendet werden. *destination_server* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @destination_server = ] 'destination_server'` Der Name des Servers, auf den die replizierten Änderungen angewendet werden. *destination_server* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn die *Veröffentlichung* angegeben wird, werden die Ergebnisse nur auf die angegebene Veröffentlichung beschränkt.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn die *Veröffentlichung* angegeben wird, werden die Ergebnisse nur auf die angegebene Veröffentlichung beschränkt.  
   
-`[ @article = ] 'article'` Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn der *Artikel* angegeben wird, sind die Ergebnisse nur auf den angegebenen Artikel beschränkt.  
+`[ @article = ] 'article'` Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn der *Artikel* angegeben wird, sind die Ergebnisse nur auf den angegebenen Artikel beschränkt.  
   
 `[ @show_rows = ] 'show_rows'` Gibt an, ob das Resultset spezifischere Informationen zu ausstehenden Änderungen enthält. der Standardwert ist **0**. Wenn ein Wert von **1** angegeben wird, enthält das Resultset die Spalten is_delete und ROWGUID.  
   
@@ -69,7 +69,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_showpendingchanges wird für die Mergereplikation verwendet.  
   
  sp_showpendingchanges wird für die Problembehandlung der Mergereplikation verwendet.  

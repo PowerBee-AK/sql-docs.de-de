@@ -4,7 +4,7 @@ title: sys.server_resource_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/28/2018
 ms.service: sql-database
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - resource_stats
 - sys.resource_stats
@@ -19,12 +19,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current
-ms.openlocfilehash: 8a913c3bf4f01828fcf75df1e3c69dca9149e2de
-ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
+ms.openlocfilehash: e1fe6592c4962499d5f02f1f076f49eb05402d54
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98241821"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206832"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -44,7 +44,7 @@ Die **sys.server_resource_stats** Ansicht hat abhängig von der Version der Azur
 |resource_name|nvarchar(128)|Der Name der Ressource.|
 |sku|nvarchar(128)|Verwaltete Instanz Dienst Ebene der-Instanz. Folgende Werte sind möglich: <br><ul><li>Universell</li></ul><ul><li>Unternehmenskritisch</li></ul>|
 |hardware_generation|nvarchar(128)|Bezeichner der Hardware Generierung: z. b. Gen 4 oder Gen 5|
-|virtual_core_count|int|Stellt die Anzahl virtueller Kerne pro Instanz (8, 16 oder 24 in Public Preview) dar.|
+|virtual_core_count|INT|Stellt die Anzahl virtueller Kerne pro Instanz (8, 16 oder 24 in Public Preview) dar.|
 |avg_cpu_percent|Dezimalzahl (5, 2)|Durchschnittliche Compute-Auslastung als Prozentsatz des Limits der verwaltete Instanz Dienst Ebene, die von der Instanz verwendet wird. Sie wird als Summe der CPU-Zeit aller Ressourcenpools für alle Datenbanken in der Instanz und dividiert durch die verfügbare CPU-Zeit für diese Ebene im angegebenen Intervall berechnet.|
 |reserved_storage_mb|BIGINT|Reservierter Speicher pro Instanz (Menge an Speicherplatz, den der Kunde für die verwaltete Instanz gekauft hat)|
 |storage_space_used_mb|Decimal (18, 2)|Speicher, der von allen Datenbankdateien in einer verwalteten Instanz verwendet wird (einschließlich Benutzer-und System Datenbanken)|

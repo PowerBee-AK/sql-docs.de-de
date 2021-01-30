@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changereplicationserverpasswords_TSQL
 - sp_changereplicationserverpasswords
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0d0e07afbf3837768ac2b57e3dfaa7d0c8c0d0af
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e301e37f252a81cf4e7c2634f291bc61bc2979c1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481473"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207050"
 ---
 # <a name="sp_changereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @login_type = ] login_type` Der Authentifizierungstyp für die angegebenen Anmelde Informationen. *LOGIN_TYPE* ist vom Datentyp **tinyint**und hat keinen Standardwert.  
+`[ @login_type = ] login_type` Der Authentifizierungstyp für die angegebenen Anmelde Informationen. *LOGIN_TYPE* ist vom Datentyp **tinyint** und hat keinen Standardwert.  
   
  **1** = integrierte Windows-Authentifizierung  
   
@@ -49,14 +49,14 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
 `[ @login = ] 'login'` Der Name des Windows-Kontos oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Name, der geändert wird. *Login* ist vom Datentyp **nvarchar (257)** und hat keinen Standardwert.  
   
-`[ @password = ] 'password'` Das neue Kennwort, das für den angegebenen *Anmelde*Namen gespeichert werden soll. *Password* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @password = ] 'password'` Das neue Kennwort, das für den angegebenen *Anmelde* Namen gespeichert werden soll. *Password* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 > [!NOTE]  
 >  Nachdem Sie ein Replikationskennwort geändert haben, müssen Sie jeden Agent, der dieses Kennwort verwendet, beenden und neu starten, damit die Änderung für diesen Agent in Kraft tritt.  
   
 `[ @server = ] 'server'` Die Server Verbindung, für die das gespeicherte Kennwort geändert wird. der *Server* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Verleih**|Alle Agentverbindungen zum Verteiler|  
 |**publisher**|Alle Agentverbindungen zum Verleger|  
@@ -70,7 +70,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
  **sp_changereplicationserverpasswords** wird bei allen Replikations Typen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_changereplicationserverpasswords**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_changereplicationserverpasswords** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  

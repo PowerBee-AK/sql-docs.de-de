@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addscriptexec
 - sp_addscriptexec_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 81d3b8ac9e8eda12ed27099fed5623d0fd3da489
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6349479d4f3ce3097771516640b0eec258e32f5b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536760"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207161"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 `[ @scriptfile = ] 'scriptfile'` Der vollständige Pfad zur SQL-Skriptdatei. *scriptfile ist vom Datentyp* **nvarchar (4000)** und hat keinen Standardwert.  
   
@@ -51,7 +51,7 @@ sp_addscriptexec [ @publication = ] publication
   
  **1** = der Agent setzt das Skript fort und ignoriert den Fehler.  
   
-`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  der *Verleger* sollte beim Veröffentlichen von einem Verleger nicht verwendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -64,11 +64,11 @@ sp_addscriptexec [ @publication = ] publication
   
  **sp_addscriptexec** wird nicht für die Momentaufnahme Replikation verwendet.  
   
- Um **sp_addscriptexec**verwenden zu können, muss das- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst Konto über Lese-und Schreibberechtigungen für den Momentaufnahme Speicherort und Leseberechtigungen für den Speicherort verfügen, an dem Skripts gespeichert werden.  
+ Um **sp_addscriptexec** verwenden zu können, muss das- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst Konto über Lese-und Schreibberechtigungen für den Momentaufnahme Speicherort und Leseberechtigungen für den Speicherort verfügen, an dem Skripts gespeichert werden.  
   
  Das [Hilfsprogramm sqlcmd](../../tools/sqlcmd-utility.md) wird zum Ausführen des Skripts auf dem Abonnenten verwendet, und das Skript wird in dem Sicherheitskontext ausgeführt, der vom Verteilungs-Agent oder Merge-Agent verwendet wird, wenn eine Verbindung mit der Abonnement Datenbank hergestellt wird. Wenn der Agent auf einer früheren Version von ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wird das [Hilfsprogramm osql](../../tools/osql-utility.md) anstelle von [sqlcmd](../../tools/sqlcmd-utility.md)verwendet.  
   
- **sp_addscriptexec** ist hilfreich beim Anwenden von Skripts auf Abonnenten und verwendet [sqlcmd](../../tools/sqlcmd-utility.md) , um den Inhalt des Skripts auf den Abonnenten anzuwenden. Da Abonnentenkonfigurationen variieren können, verursachen Skripts, die vor der Bereitstellung auf dem Verleger getestet werden, möglicherweise dennoch Fehler auf einem Abonnenten. *SkipError* bietet die Möglichkeit, die Verteilungs-Agent oder Merge-Agent Fehler zu ignorieren und fortzufahren. Verwenden Sie [sqlcmd](../../tools/sqlcmd-utility.md) , um Skripts vor dem Ausführen **sp_addscriptexec**zu testen.  
+ **sp_addscriptexec** ist hilfreich beim Anwenden von Skripts auf Abonnenten und verwendet [sqlcmd](../../tools/sqlcmd-utility.md) , um den Inhalt des Skripts auf den Abonnenten anzuwenden. Da Abonnentenkonfigurationen variieren können, verursachen Skripts, die vor der Bereitstellung auf dem Verleger getestet werden, möglicherweise dennoch Fehler auf einem Abonnenten. *SkipError* bietet die Möglichkeit, die Verteilungs-Agent oder Merge-Agent Fehler zu ignorieren und fortzufahren. Verwenden Sie [sqlcmd](../../tools/sqlcmd-utility.md) , um Skripts vor dem Ausführen **sp_addscriptexec** zu testen.  
   
 > [!NOTE]  
 >  Ausgelassene Fehler werden aus Referenzgründen weiterhin im Verlauf des Agents protokolliert.  
@@ -76,7 +76,7 @@ sp_addscriptexec [ @publication = ] publication
  Die Verwendung von **sp_addscriptexec** zum Bereitstellen einer Skriptdatei für Veröffentlichungen per FTP für die Momentaufnahme Übermittlung wird nur für Abonnenten unterstützt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addscriptexec**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addscriptexec** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Ausführen von Skripts während der Synchronisierung &#40;Replikations&#41;Programmierung mit Transact-SQL ](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   

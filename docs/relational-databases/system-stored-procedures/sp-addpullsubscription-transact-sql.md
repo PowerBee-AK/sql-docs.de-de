@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addpullsubscription
 - sp_addpullsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8e5c15e1892f6640e8fddbcc0b89898ffce4f6b2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c119173ba184ef8fe3a03c59e90965650bb9c35c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549961"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206678"
 ---
 # <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,18 +45,18 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
 
 > [!NOTE]
 > Der Server Name kann als angegeben werden `<Hostname>,<PortNumber>` . Möglicherweise müssen Sie die Portnummer für die Verbindung angeben, wenn SQL Server unter Linux oder Windows mit einem benutzerdefinierten Port bereitgestellt wird und der-Browser Dienst deaktiviert ist.
   
-`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. *publisher_db* wird von Oracle-Verlegern ignoriert.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. *publisher_db* wird von Oracle-Verlegern ignoriert.  
   
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @independent_agent = ] 'independent_agent'` Gibt an, ob eine eigenständige Verteilungs-Agent für diese Veröffentlichung vorhanden ist. *independent_agent* ist vom Datentyp **nvarchar (5)** und hat den Standardwert true. **True**gibt an, dass eine eigenständige Verteilungs-Agent für diese Veröffentlichung vorhanden ist. Wenn der Wert **false**ist, gibt es für jedes Paar aus Verleger Datenbank und Abonnenten Datenbank eine Verteilungs-Agent. *independent_agent* ist eine Eigenschaft der Veröffentlichung und muss hier denselben Wert wie auf dem Verleger haben.  
+`[ @independent_agent = ] 'independent_agent'` Gibt an, ob eine eigenständige Verteilungs-Agent für diese Veröffentlichung vorhanden ist. *independent_agent* ist vom Datentyp **nvarchar (5)** und hat den Standardwert true. **True** gibt an, dass eine eigenständige Verteilungs-Agent für diese Veröffentlichung vorhanden ist. Wenn der Wert **false** ist, gibt es für jedes Paar aus Verleger Datenbank und Abonnenten Datenbank eine Verteilungs-Agent. *independent_agent* ist eine Eigenschaft der Veröffentlichung und muss hier denselben Wert wie auf dem Verleger haben.  
   
-`[ @subscription_type = ] 'subscription_type'` Der Abonnementtyp. *subscription_type* ist vom Datentyp **nvarchar (9)** und hat den Standardwert **Anonymous**. Sie müssen den Wert **Pull** für *subscription_type*angeben, es sei denn, Sie möchten ein Abonnement erstellen, ohne das Abonnement auf dem Verleger zu registrieren. In diesem Fall müssen Sie den Wert **Anonym**angeben. Dies ist notwendig für Fälle, in denen Sie während der Abonnementkonfiguration keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindung mit dem Verleger herstellen können.  
+`[ @subscription_type = ] 'subscription_type'` Der Abonnementtyp. *subscription_type* ist vom Datentyp **nvarchar (9)** und hat den Standardwert **Anonymous**. Sie müssen den Wert **Pull** für *subscription_type* angeben, es sei denn, Sie möchten ein Abonnement erstellen, ohne das Abonnement auf dem Verleger zu registrieren. In diesem Fall müssen Sie den Wert **Anonym** angeben. Dies ist notwendig für Fälle, in denen Sie während der Abonnementkonfiguration keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verbindung mit dem Verleger herstellen können.  
   
 `[ @description = ] 'description'` Die Beschreibung der Veröffentlichung. die *Beschreibung* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL.  
   
@@ -75,7 +75,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_addpullsubscription** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
 > [!IMPORTANT]  
@@ -87,7 +87,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addpullsubscription-t_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addpullsubscription**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addpullsubscription** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   

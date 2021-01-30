@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changeqreader_agent_TSQL
 - sp_changeqreader_agent
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 08e7e0571cab57d50da670495af95709482899a3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 83be24af54593c4630284e07cf9464899d2b5cfd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543681"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207057"
 ---
 # <a name="sp_changeqreader_agent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,14 +42,14 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ## <a name="arguments"></a>Argumente  
 `[ @job_login = ] 'job_login'` Der Anmelde Name für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, unter dem der Agent ausgeführt wird. *job_login* ist vom Datentyp **nvarchar (257)** und hat den Standardwert NULL.  
   
-`[ @job_password = ] 'job_password'` Das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *job_password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_password = ] 'job_password'` Das Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird. *job_password* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 `[ @frompublisher = ] frompublisher` Gibt an, ob die Prozedur auf dem Verleger ausgeführt wird. *frompublisher* ist vom Typ Bit und hat den Standardwert **0**. Der Wert **1** bedeutet, dass die Prozedur auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_changeqreader_agent** wird bei der Transaktions Replikation verwendet.  
   
  **sp_changeqreader_agent** wird verwendet, um das Windows-Konto zu ändern, unter dem ein Warteschlangen Lese-Agent ausgeführt wird. Sie können das Kennwort für einen vorhandenen Windows-Anmeldenamen ändern oder einen neuen Windows-Anmeldenamen und ein neues Kennwort angeben.  
@@ -57,7 +57,7 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
  Nach dem Ändern des Anmeldenamens oder Kennworts eines Agents müssen Sie den Agent beenden und neu starten, damit die Änderungen in Kraft treten.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_changeqreader_agent**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_changeqreader_agent** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

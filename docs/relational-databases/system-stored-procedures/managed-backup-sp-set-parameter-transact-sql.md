@@ -1,13 +1,13 @@
 ---
-description: managed_backup. sp_set_parameter (Transact-SQL)
-title: managed_backup. sp_set_parameter (Transact-SQL) | Microsoft-Dokumentation
+description: managed_backup managed_backup.sp_set_parameter (Transact-SQL)
+title: managed_backup managed_backup.sp_set_parameter (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_set_parameter_TSQL
 - sp_set_parameter
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dfb0a9ddbdec9ebe94dd3bda4307a5fdf31e1c29
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a1f8722dd358a09103f3e75fd294eedb00019a01
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546272"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205276"
 ---
-# <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup. sp_set_parameter (Transact-SQL)
+# <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup managed_backup.sp_set_parameter (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Legt den Wert des angegebenen Smart Admin-Systemparameters fest.  
@@ -48,7 +48,7 @@ EXEC managed_backup.sp_set_parameter
   
 ##  <a name="arguments"></a><a name="Arguments"></a>Argumente  
  @parameter_name  
- Der Name des Parameters, dessen Wert festgelegt werden soll. @parameter_name ist vom Datentyp nvarchar (128). Die verfügbaren Parameternamen lauten **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **fileretentiondebug XEvent**und **storageoperationdebug-Ereignis**.  
+ Der Name des Parameters, dessen Wert festgelegt werden soll. @parameter_name ist vom Datentyp nvarchar (128). Die verfügbaren Parameternamen lauten **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **fileretentiondebug XEvent** und **storageoperationdebug-Ereignis**.  
   
  @parameter_value  
  Der Wert des Parameters, der festgelegt werden soll. @parameter der Wert ist nvarchar (128).  Im Folgenden sind die zulässigen Parametername/Parameterwert-Paare aufgeführt:  
@@ -66,7 +66,7 @@ EXEC managed_backup.sp_set_parameter
 ## <a name="return-code-value"></a>Rückgabecodewert  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="best-practices"></a>Bewährte Methoden  
+## <a name="best-practices"></a>Empfehlungen  
  Optionaler Abschnitt, der bewährte Methoden beschreibt, die der Benutzer beim Ausführen der Anweisung oder Routine befolgen sollte.  
   
 ## <a name="security"></a>Sicherheit  

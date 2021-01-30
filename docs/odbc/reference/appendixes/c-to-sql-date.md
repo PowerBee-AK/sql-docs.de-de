@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - date data type [ODBC]
 - converting data from c to SQL types [ODBC], date
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f9d8bed4b16ee1c63134cdb9e1ae0b8303b0deb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a0724309642b8a6dc640b6159715927544d74733
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500003"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207844"
 ---
 # <a name="c-to-sql-date"></a>C zu SQL: Datum
 Der Bezeichner für den ODBC-C-Datentyp "Date" lautet:  
@@ -42,4 +42,4 @@ Der Bezeichner für den ODBC-C-Datentyp "Date" lautet:
   
  Wenn date C-Daten in Zeichen-SQL-Daten konvertiert werden, liegen die resultierenden Zeichendaten im Format "*JJJJ* - *mm* - *DD*".  
   
- Der Treiber ignoriert den Längen-/indikatorenwert beim Umrechnen von Daten aus dem Datentyp Date c und geht davon aus, dass die Größe des Daten Puffers der Größe des Datentyps date c entspricht. Der Wert für die Länge/den Indikator wird im *StrLen_Or_Ind* -Argument in **SQLPutData** und in dem Puffer übergeben, der mit dem *StrLen_or_IndPtr* -Argument in **SQLBindParameter**angegeben wird. Der Datenpuffer wird mit dem *DataPtr* -Argument in **SQLPutData** und dem *ParameterValuePtr* -Argument in **SQLBindParameter**angegeben.
+ Der Treiber ignoriert den Längen-/indikatorenwert beim Umrechnen von Daten aus dem Datentyp Date c und geht davon aus, dass die Größe des Daten Puffers der Größe des Datentyps date c entspricht. Der Wert für die Länge/den Indikator wird im *StrLen_Or_Ind* -Argument in **SQLPutData** und in dem Puffer übergeben, der mit dem *StrLen_or_IndPtr* -Argument in **SQLBindParameter** angegeben wird. Der Datenpuffer wird mit dem *DataPtr* -Argument in **SQLPutData** und dem *ParameterValuePtr* -Argument in **SQLBindParameter** angegeben.

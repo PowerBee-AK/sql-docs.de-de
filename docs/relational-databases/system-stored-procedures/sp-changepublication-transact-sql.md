@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changepublication
 - sp_changepublication_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6e29fade73adba6cb82b6d4ac22cae122d4c60cd
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: a0e183d97b17936d5d7e1b414c2d492910a8a8b3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98169443"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207077"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +50,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  Diese Tabelle beschreibt die änderbaren Eigenschaften der Veröffentlichung sowie die Einschränkungen für die Werte dieser Eigenschaften.  
   
-|Eigenschaft|Wert|Beschreibung|  
+|Eigenschaft|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Anonyme Abonnements können für die angegebene Veröffentlichung erstellt werden, und *immediate_sync* muss ebenfalls den Wert " **true**" aufweisen. Kann für Peer-zu-Peer-Veröffentlichungen nicht geändert werden.|  
 ||**false**|Anonyme Abonnements können für die Veröffentlichung nicht erstellt werden. Kann für Peer-zu-Peer-Veröffentlichungen nicht geändert werden.|  

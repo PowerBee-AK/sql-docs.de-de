@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - precision [ODBC], interval data types
@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 138cb4cae21b1c1fc0fd742cefac1b6f3a3e5978
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 103b19e43f4ba0cea160bfd53aa178404adfe781
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483275"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208536"
 ---
 # <a name="interval-data-type-precision"></a>Genauigkeit des Datentyps „Intervall“
 Die Genauigkeit eines Interval-Datentyps umfasst Intervall führende Genauigkeit, Intervall Genauigkeit und Sekunden Genauigkeit.  
   
  Das führende Feld eines Intervalls ist eine numerische Zahl mit Vorzeichen. Die maximale Anzahl von Ziffern für das führende Feld wird durch eine Menge mit der Bezeichnung " *Intervall-Spitzen Genauigkeit* " bestimmt, die Teil der Datentyp Deklaration ist. Die Deklaration: Interval Hour (5) bis Minute hat z. b. eine Intervall führende Genauigkeit von 5. das Stunden Feld kann Werte von-99999 bis 99999 annehmen. Die angegebene Intervall Genauigkeit ist im SQL_DESC_DATETIME_INTERVAL_PRECISION-Feld des deskriptordaten Satzes enthalten.  
   
- Die Liste der Felder, aus denen ein Intervall Datentyp besteht, wird als *Intervall Genauigkeit*bezeichnet. Es handelt sich hierbei nicht um einen numerischen Wert, da der Begriff "Precision" möglicherweise impliziert. Beispielsweise ist die Intervall Genauigkeit des typintervalls Day to Second der listentag, Hour, Minute, Second. Es ist kein Deskriptorfeld vorhanden, das diesen Wert enthält. die Genauigkeit des Intervalls kann immer durch den Datentyp interval bestimmt werden.  
+ Die Liste der Felder, aus denen ein Intervall Datentyp besteht, wird als *Intervall Genauigkeit* bezeichnet. Es handelt sich hierbei nicht um einen numerischen Wert, da der Begriff "Precision" möglicherweise impliziert. Beispielsweise ist die Intervall Genauigkeit des typintervalls Day to Second der listentag, Hour, Minute, Second. Es ist kein Deskriptorfeld vorhanden, das diesen Wert enthält. die Genauigkeit des Intervalls kann immer durch den Datentyp interval bestimmt werden.  
   
  Jeder Intervall Datentyp mit einem zweiten Feld hat eine *Genauigkeit von Sekunden*. Dies ist die Anzahl der Dezimalstellen, die im Bruchteil des Sekunden Werts zulässig sind. Dies unterscheidet sich von anderen Datentypen, wobei Genauigkeit die Anzahl der Ziffern vor dem Dezimaltrennzeichen angibt. Die Sekunden Genauigkeit eines Interval-Datentyps ist die Anzahl der Ziffern nach dem Dezimaltrennzeichen. Wenn beispielsweise die Sekunden Genauigkeit auf 6 festgelegt ist, wird die Zahl 123456 im Bruchfeld als. 123456 interpretiert, und die Zahl 1230 wird als. 001230 interpretiert. Bei anderen Datentypen wird dies als Skalierung bezeichnet. Die Genauigkeit der Intervall Sekunden ist im SQL_DESC_PRECISION-Feld des Deskriptors enthalten. Wenn die Genauigkeit der Komponente für Sekundenbruchteile des SQL-Intervall Werts größer ist als die in der c-Intervall Struktur enthaltene Genauigkeit, wird der Treiber definiert, ob der Wert für die Sekundenbruchteile im SQL-Intervall beim Konvertieren in die c-Intervall Struktur gerundet oder abgeschnitten wird.  
   

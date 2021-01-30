@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_log_shipping_secondary_database
 - sp_add_log_shipping_secondary_database_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 384884e2b2b076b20cb9c679c3494a7c292f77a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d13a58428c4fefe2cc19668de22e604f721d0a96
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464660"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206708"
 ---
 # <a name="sp_add_log_shipping_secondary_database-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,11 +54,11 @@ sp_add_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @secondary_database = ] 'secondary_database'` Der Name der sekundären Datenbank. *secondary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @secondary_database = ] 'secondary_database'` Der Name der sekundären Datenbank. *secondary_database* ist vom Datentyp **sysname** und hat keinen Standardwert.  
   
 `[ @primary_server = ] 'primary_server'` Der Name der primären Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokoll Versand Konfiguration. *primary_server* ist vom Datentyp **sysname** und darf nicht NULL sein.  
   
-`[ @primary_database = ] 'primary_database'` Der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @primary_database = ] 'primary_database'` Der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname** und hat keinen Standardwert.  
   
 `[ @restore_delay = ] 'restore_delay'` Die Zeitspanne in Minuten, die der sekundäre Server wartet, bevor er eine bestimmte Sicherungsdatei wiederherstellt. *restore_delay* ist vom Datentyp **int** und kann nicht NULL sein. Der Standardwert ist 0.  
   
@@ -82,7 +82,7 @@ sp_add_log_shipping_secondary_database
   
 `[ @restore_threshold = ] 'restore_threshold'` Die zulässige Anzahl von Minuten zwischen Wiederherstellungs Vorgängen, bevor eine Warnung generiert wird. *restore_threshold* ist vom Datentyp **int** und kann nicht NULL sein.  
   
-`[ @threshold_alert = ] 'threshold_alert'` Die Warnung, die ausgelöst werden soll, wenn der Sicherungs Schwellenwert überschritten wird. *threshold_alert* ist vom Datentyp **int**und hat den Standardwert 14.420.  
+`[ @threshold_alert = ] 'threshold_alert'` Die Warnung, die ausgelöst werden soll, wenn der Sicherungs Schwellenwert überschritten wird. *threshold_alert* ist vom Datentyp **int** und hat den Standardwert 14.420.  
   
 `[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Gibt an, ob eine Warnung ausgelöst wird, wenn *backup_threshold* überschritten wird. Der Standardwert 1 bedeutet, dass die Warnung ausgelöst wird. *threshold_alert_enabled* ist **Bit**.  
   

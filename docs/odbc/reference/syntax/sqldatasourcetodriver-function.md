@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLDataSourceToDriver
 apilocation:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 80a9f74f7711e252b1ee947a5ece7088c1a9aa04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 20e4a4cf601990f014655f3c067e9304cc5f4388
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461172"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206089"
 ---
 # <a name="sqldatasourcetodriver-function"></a>SQLDataSourceToDriver-Funktion
-**Sqldatasourceto Driver** supportstranslations für ODBC-Treiber. Diese Funktion wird nicht von ODBC-fähigen Anwendungen aufgerufen. Anwendungen fordern Übersetzungen über **SQLSetConnectAttr**an. Der Treiber, der dem in **SQLSetConnectAttr** angegebenen *connectionHandle* zugeordnet ist, ruft die angegebene DLL auf, um Übersetzungen für alle Daten zu übertragen, die von der Datenquelle an den Treiber fließen. In der ODBC-Initialisierungsdatei kann eine standardmäßige Übersetzungs-DLL angegeben werden.  
+**Sqldatasourceto Driver** supportstranslations für ODBC-Treiber. Diese Funktion wird nicht von ODBC-fähigen Anwendungen aufgerufen. Anwendungen fordern Übersetzungen über **SQLSetConnectAttr** an. Der Treiber, der dem in **SQLSetConnectAttr** angegebenen *connectionHandle* zugeordnet ist, ruft die angegebene DLL auf, um Übersetzungen für alle Daten zu übertragen, die von der Datenquelle an den Treiber fließen. In der ODBC-Initialisierungsdatei kann eine standardmäßige Übersetzungs-DLL angegeben werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -70,9 +70,9 @@ BOOL SQLDataSourceToDriver(
  Der Länge von *rgbvalueout*.  
   
  *pcbvalueout*  
- Ausgeben Die Gesamtanzahl der Bytes (mit Ausnahme des NULL-Beendigungs Byte), die in *rgbvalueout*zurückgegeben werden können.  
+ Ausgeben Die Gesamtanzahl der Bytes (mit Ausnahme des NULL-Beendigungs Byte), die in *rgbvalueout* zurückgegeben werden können.  
   
- Für Zeichen-oder Binärdaten, wenn diese größer oder gleich *cbvalueoutmax*ist, werden die Daten in *rgbvalueout* auf *cbvalueoutmax* Bytes gekürzt.  
+ Für Zeichen-oder Binärdaten, wenn diese größer oder gleich *cbvalueoutmax* ist, werden die Daten in *rgbvalueout* auf *cbvalueoutmax* Bytes gekürzt.  
   
  Für alle anderen Datentypen wird der Wert von *cbvalueoutmax* ignoriert, und die Übersetzungs-DLL geht davon aus, dass die Größe von *rgbvalueout* die Größe des Standard-C-Datentyps des SQL-Datentyps ist, der mit " *ssqltype*" angegeben wird.  
   
@@ -85,9 +85,9 @@ BOOL SQLDataSourceToDriver(
  Der Länge von *szErrorMsg*.  
   
  *pcberrormsg*  
- Ausgeben Ein Zeiger auf die Gesamtzahl der Bytes (mit Ausnahme des NULL-Beendigungs Byte), die in *szErrorMsg*zurückgegeben werden können. Wenn dieser Wert größer oder gleich *cberrormsg*ist, werden die Daten in *szErrorMsg* auf *cberrormsgmax* abzüglich des NULL-Beendigungs Zeichens gekürzt. Das *pcberrormsg* -Argument kann ein NULL-Zeiger sein.  
+ Ausgeben Ein Zeiger auf die Gesamtzahl der Bytes (mit Ausnahme des NULL-Beendigungs Byte), die in *szErrorMsg* zurückgegeben werden können. Wenn dieser Wert größer oder gleich *cberrormsg* ist, werden die Daten in *szErrorMsg* auf *cberrormsgmax* abzüglich des NULL-Beendigungs Zeichens gekürzt. Das *pcberrormsg* -Argument kann ein NULL-Zeiger sein.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  TRUE, wenn die Übersetzung erfolgreich war, false, wenn die Übersetzung fehlgeschlagen ist.  
   
 ## <a name="comments"></a>Kommentare  
@@ -95,11 +95,11 @@ BOOL SQLDataSourceToDriver(
   
  Der Wert von *fOption* wird auf den Wert von *vParam* festgelegt, der durch Aufrufen von **SQLSetConnectAttr** mit dem SQL_ATTR_TRANSLATE_OPTION-Attribut angegeben wird. Dabei handelt es sich um einen 32-Bit-Wert, der für eine bestimmte Übersetzungs-DLL eine bestimmte Bedeutung hat. Beispielsweise kann eine bestimmte Zeichensatz Übersetzung angegeben werden.  
   
- Wenn derselbe Puffer für *rgbvaluein* und *rgbvalueout*angegeben wird, wird die Übersetzung der Daten im Puffer direkt ausgeführt.  
+ Wenn derselbe Puffer für *rgbvaluein* und *rgbvalueout* angegeben wird, wird die Übersetzung der Daten im Puffer direkt ausgeführt.  
   
- Obwohl *cbvaluein*, *cbvalueoutmax*und *pcbvalueout* den Typ SDWORD haben, unterstützt **sqldatasourcededriver** nicht notwendigerweise große Zeiger.  
+ Obwohl *cbvaluein*, *cbvalueoutmax* und *pcbvalueout* den Typ SDWORD haben, unterstützt **sqldatasourcededriver** nicht notwendigerweise große Zeiger.  
   
- Wenn **sqldatasourcetdriver** false zurückgibt, ist möglicherweise während der Übersetzung ein Abschneiden der Daten aufgetreten. Wenn *pcbvalueout* (die Anzahl der verfügbaren Bytes im Ausgabepuffer) größer als *cbvalueoutmax* (die Länge des Ausgabepuffers) ist, ist ein Abschneiden aufgetreten. Der Treiber muss feststellen, ob das Abschneiden akzeptabel ist. Wenn keine abkürzen erfolgt ist, hat **sqldatasourceto Driver** aufgrund eines anderen Fehlers false zurückgegeben. In beiden Fällen wird eine bestimmte Fehlermeldung in *szErrorMsg*zurückgegeben.  
+ Wenn **sqldatasourcetdriver** false zurückgibt, ist möglicherweise während der Übersetzung ein Abschneiden der Daten aufgetreten. Wenn *pcbvalueout* (die Anzahl der verfügbaren Bytes im Ausgabepuffer) größer als *cbvalueoutmax* (die Länge des Ausgabepuffers) ist, ist ein Abschneiden aufgetreten. Der Treiber muss feststellen, ob das Abschneiden akzeptabel ist. Wenn keine abkürzen erfolgt ist, hat **sqldatasourceto Driver** aufgrund eines anderen Fehlers false zurückgegeben. In beiden Fällen wird eine bestimmte Fehlermeldung in *szErrorMsg* zurückgegeben.  
   
  Weitere Informationen zum Übersetzen von Daten finden Sie unter [Translation DLLs](../../../odbc/reference/develop-app/translation-dlls.md).  
   
