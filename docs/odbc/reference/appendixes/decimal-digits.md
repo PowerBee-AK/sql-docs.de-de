@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - size of data types [ODBC]
 - decimal digits of data types [ODBC]
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0c56d0d4cdd4c40c2174085d80618bbcc58af14e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7a4d37601891c26ce4d59a9bfd788ce1c702ce5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456617"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194912"
 ---
 # <a name="decimal-digits"></a>Dezimalstellen
 Die *Dezimal* stellen der Datentypen decimal und numeric werden als maximale Anzahl von Ziffern rechts vom Dezimaltrennzeichen oder der Skala der Daten definiert. Für ungefähre Spalten oder Parameter für Gleit Komma Zahlen ist die Skala nicht definiert, da die Anzahl der Ziffern rechts vom Dezimaltrennzeichen nicht korrigiert ist. Für DateTime-oder Interval-Daten, die eine Sekunden Komponente enthalten, werden die Dezimalziffern als die Anzahl der Ziffern rechts vom Dezimaltrennzeichen in der Komponente seconds der Daten definiert.  
   
- Bei den Datentypen SQL_DECIMAL und SQL_NUMERIC ist die maximale Skalierung in der Regel mit der maximalen Genauigkeit identisch. Einige Datenquellen erzwingen jedoch ein separates Limit für die maximale Skalierung. Um die minimale und maximale Skalierung zu ermitteln, die für einen Datentyp zulässig ist, ruft eine Anwendung **SQLGetTypeInfo**auf.  
+ Bei den Datentypen SQL_DECIMAL und SQL_NUMERIC ist die maximale Skalierung in der Regel mit der maximalen Genauigkeit identisch. Einige Datenquellen erzwingen jedoch ein separates Limit für die maximale Skalierung. Um die minimale und maximale Skalierung zu ermitteln, die für einen Datentyp zulässig ist, ruft eine Anwendung **SQLGetTypeInfo** auf.  
   
  Die Dezimalstellen, die für jeden präzisen SQL-Datentyp definiert sind, sind in der folgenden Tabelle aufgeführt.  
   

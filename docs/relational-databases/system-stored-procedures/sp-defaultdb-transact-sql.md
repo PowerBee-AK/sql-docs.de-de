@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_defaultdb_TSQL
 - sp_defaultdb
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7289868e32e26c6902f00d0c7e542b599b6978fd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a4c644fed26ea2ce80f0f827eb7b3b0f6b000d66
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549890"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196082"
 ---
 # <a name="sp_defaultdb-transact-sql"></a>sp_defaultdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @loginame = ] 'login'` Der Anmelde Name. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. der *Anmelde* Name kann eine vorhandene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung oder ein Windows-Benutzer oder eine Windows-Gruppe sein. Falls für den Windows-Benutzer bzw. die Gruppe kein Anmeldename in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorhanden ist, wird er automatisch hinzugefügt.  
+`[ @loginame = ] 'login'` Der Anmelde Name. *login* ist vom Datentyp **sysname** und hat keinen Standardwert. der *Anmelde* Name kann eine vorhandene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung oder ein Windows-Benutzer oder eine Windows-Gruppe sein. Falls für den Windows-Benutzer bzw. die Gruppe kein Anmeldename in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorhanden ist, wird er automatisch hinzugefügt.  
   
-`[ @defdb = ] 'database'` Der Name der neuen Standarddatenbank. *Database* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. die *Datenbank* muss bereits vorhanden sein.  
+`[ @defdb = ] 'database'` Der Name der neuen Standarddatenbank. *Database* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert. die *Datenbank* muss bereits vorhanden sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_os_threads_TSQL
 - sys.dm_os_threads
@@ -21,12 +21,12 @@ ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0163e4176202f4bfe8b55ecca0fe4812ec5d26b
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 91c0b28d2b30cc7e7d5f11eed8fe25f4c4907198
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096497"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193789"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,8 +51,8 @@ ms.locfileid: "98096497"
 |stack_bytes_committed|**int**|Anzahl von Bytes, für die im Stapel ein Commit ausgeführt wurde.|  
 |stack_bytes_used|**int**|Anzahl von Bytes, die aktiv im Thread verwendet werden.|  
 |affinity|**bigint**|CPU-Maske, in der dieser Thread ausgeführt wird. Dies hängt von dem Wert ab, der von der **Alter Server Configuration Set Process-Affinitäts** Anweisung konfiguriert wurde. Kann sich bei weicher Affinität vom Zeitplanungsmodul unterscheiden.|  
-|Priority|**int**|Prioritätswert dieses Threads.|  
-|Locale|**int**|Zwischengespeicherter Gebietsschemabezeichner (LCID) für den Thread.|  
+|Priorität|**int**|Prioritätswert dieses Threads.|  
+|Gebietsschema|**int**|Zwischengespeicherter Gebietsschemabezeichner (LCID) für den Thread.|  
 |Token|**varbinary(8)**|Zwischengespeichertes Identitätswechsel-Tokenhandle für den Thread.|  
 |is_impersonating|**int**|Gibt an, ob dieser Thread den Win32-Identitätswechsel verwendet.<br /><br /> 1 = Der Thread verwendet Sicherheitsanmeldeinformationen, die von der Standardeinstellung des Prozesses abweichen. Dieser Wert gibt an, dass der Thread die Identität einer Entität annimmt, die nicht mit der Entität übereinstimmt, die den Prozess erstellt hat.|  
 |is_waiting_on_loader_lock|**int**|Betriebssystemstatus, der angibt, ob der Thread in der Loadersperre wartet.|  

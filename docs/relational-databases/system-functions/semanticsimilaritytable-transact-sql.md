@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - semanticsimilaritytable
 - semanticsimilaritytable_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4866c5002fce3540014b9ad0c94ccd7b20a0e235
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 532ec509de094db343406b6cb0f9f0cca924a724
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397276"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194558"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,10 +57,10 @@ SEMANTICSIMILARITYTABLE
  **column_list**  
  Gibt mehrere durch Trennzeichen getrennte Spalten an, die in Klammern eingeschlossen sind. Für alle Spalten muss die semantische Indizierung aktiviert sein.  
   
- **\***  
+ **\** _  
  Gibt an, dass alle Spalten eingeschlossen werden, für die die semantische Indizierung aktiviert ist.  
   
- **source_key**  
+ _ *source_key**  
  Eindeutiger Schlüssel für die Zeile, um Ergebnisse für eine bestimmte Zeile anzufordern.  
   
  Der Schlüssel wird nach Möglichkeit implizit in den Typ des eindeutigen voll Text Schlüssels in der Quell Tabelle konvertiert. Der Schlüssel kann als Konstante oder Variable angegeben werden. Er kann jedoch kein Ausdruck oder das Ergebnis einer skalaren Unterabfrage sein.  
@@ -70,12 +70,12 @@ SEMANTICSIMILARITYTABLE
   
  Passende Dokumente werden auf der Basis einzelner Spalten zurückgegeben, wenn Ergebnisse aus mehr als einer Spalte angefordert werden.  
   
-|Column_name|type|Beschreibung|  
+|Column_name|type|BESCHREIBUNG|  
 |------------------|----------|-----------------|  
 |**source_column_id**|**int**|ID der Spalte, aus der ein Quelldokument zum Suchen von ähnlichen Dokumenten verwendet wurde.<br /><br /> Im Abschnitt über die COL_NAME-Funktion und COLUMNPROPERTY-Funktion finden Sie ausführliche Informationen zum Abrufen des Spaltennamens aus "column_id" und umgekehrt.|  
 |**matched_column_id**|**int**|ID der Spalte, in der ein ähnliches Dokument gefunden wurde.<br /><br /> Im Abschnitt über die COL_NAME-Funktion und COLUMNPROPERTY-Funktion finden Sie ausführliche Informationen zum Abrufen des Spaltennamens aus "column_id" und umgekehrt.|  
-|**matched_document_key**|**\***<br /><br /> Dieser Schlüssel stimmt mit dem Typ des eindeutigen Schlüssels in der Quelltabelle überein.|Eindeutiger Schlüsselwert für die Volltext- und semantische Extraktion des Dokuments oder der Zeile, das bzw. die Ähnlichkeit mit dem angegebenen Dokument in der Abfrage aufweist.|  
-|**Endergebnis**|**Wirkliche**|Ein relativer Ähnlichkeitswert für dieses Dokument bezogen auf alle anderen ähnlichen Dokumente.<br /><br /> Der Wert ist eine Dezimalzahl im Bereich [0,0; 1,0], wobei ein höheres Ergebnis eine höhere Übereinstimmung und 1,0 ein perfektes Ergebnis darstellt.|  
+|**matched_document_key**|**\** _<br /><br /> Dieser Schlüssel stimmt mit dem Typ des eindeutigen Schlüssels in der Quelltabelle überein.|Eindeutiger Schlüsselwert für die Volltext- und semantische Extraktion des Dokuments oder der Zeile, das bzw. die Ähnlichkeit mit dem angegebenen Dokument in der Abfrage aufweist.|  
+|_ *Score**|**REAL**|Ein relativer Ähnlichkeitswert für dieses Dokument bezogen auf alle anderen ähnlichen Dokumente.<br /><br /> Der Wert ist eine Dezimalzahl im Bereich [0,0; 1,0], wobei ein höheres Ergebnis eine höhere Übereinstimmung und 1,0 ein perfektes Ergebnis darstellt.|  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Weitere Informationen finden Sie untersuchen von [ähnlichen und verwandten Dokumenten mit der semantischen Suche](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  

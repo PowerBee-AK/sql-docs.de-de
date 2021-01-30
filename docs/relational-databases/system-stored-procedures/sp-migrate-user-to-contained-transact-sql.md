@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_migrate_user_to_contained
 - sp_migrate_user_to_contained_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: edabb8a59a672c3ebfe04a799df7901b402fb5b3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 81450361252fcdc2d02a9d9e118839db3c5af64c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543187"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195489"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89543187"
   Konvertiert einen Datenbankbenutzer, der mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen verknüpft ist, in den Benutzer einer enthaltenen Datenbank mit Kennwort. In einer eigenständigen Datenbank können Sie mit diesem Verfahren Abhängigkeiten für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernen, in der die Datenbank installiert ist. **sp_migrate_user_to_contained** trennt den Benutzer vom ursprünglichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Namen, damit Einstellungen wie Kennwort und Standardsprache für die eigenständige Datenbank separat verwaltet werden können. **sp_migrate_user_to_contained** kann verwendet werden, bevor die enthaltene Datenbank in eine andere Instanz von verschoben wird [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , um Abhängigkeiten von den aktuellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instanzanmeldungen auszuschließen.  
   
 > [!NOTE]
-> Seien Sie vorsichtig, wenn Sie **sp_migrate_user_to_contained**verwenden, da Sie den Effekt nicht umkehren können. Diese Prozedur wird nur in einer eigenständigen Datenbank verwendet. Weitere Informationen finden Sie unter [Contained Databases](../../relational-databases/databases/contained-databases.md).  
+> Seien Sie vorsichtig, wenn Sie **sp_migrate_user_to_contained** verwenden, da Sie den Effekt nicht umkehren können. Diese Prozedur wird nur in einer eigenständigen Datenbank verwendet. Weitere Informationen finden Sie unter [Contained Databases](../../relational-databases/databases/contained-databases.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,13 +43,13 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [** @username =** ] **N '***Benutzer***'**  
- Der Name eines Benutzers in der aktuellen eigenständigen Datenbank, der mit einem authentifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen verknüpft ist. Der Wert ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **null**.  
+ [**@username =** ] **N '**_Benutzer_*_'_*  
+ Der Name eines Benutzers in der aktuellen eigenständigen Datenbank, der mit einem authentifizierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen verknüpft ist. Der Wert ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert **null**.  
   
- [** @rename =** ] **N '***copy_login_name***'**  |  **N '***keep_name***'**  
+ [**@rename =** ] **N '**_copy_login_name_*_'_*  |  **N '**_keep_name_*_'_*  
  Wenn ein Datenbankbenutzer, der auf einem Anmelde Namen basiert, einen anderen Benutzernamen als den Anmelde Namen hat, verwenden Sie *keep_name* , um den Datenbankbenutzer Namen während der Migration beizubehalten. Verwenden Sie *copy_login_name* , um den neuen eigenständigen Datenbankbenutzer mit dem Namen der Anmeldung anstelle des Benutzers zu erstellen. Wenn der Benutzername eines Datenbankbenutzers dem Anmeldenamen entspricht, wird mit beiden Optionen der Benutzer der enthaltenen Datenbank erstellt, ohne den Namen zu ändern.  
   
- [** @disablelogin =** ] **N '***disable_login***'**  |  **N '***do_not_disable_login***'**  
+ [**@disablelogin =** ] **N '**_disable_login_*_'_*  |  **N '**_do_not_disable_login_*_'_*  
  *disable_login* deaktiviert den Anmelde Namen in der Master-Datenbank. Um eine Verbindung herzustellen, wenn die Anmeldung deaktiviert ist, muss die Verbindung den Namen der eigenständigen Datenbank als **anfangs Katalog** als Teil der Verbindungs Zeichenfolge bereitstellen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  

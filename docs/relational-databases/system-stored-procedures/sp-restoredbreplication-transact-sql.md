@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_restoredbreplication
 - sp_restoredbreplication_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b64a39661fdceefade15d605ccc8e1c083ede0e6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 841a162c9619344fa297951277642f306d8539ed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541549"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194377"
 ---
 # <a name="sp_restoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,10 +42,10 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
   
 ## <a name="arguments"></a>Argumente  
 `[ @srv_orig = ] 'original_server_name'`  
- Der Name des Servers, auf dem die Sicherung erstellt wurde. *original_server_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+ Der Name des Servers, auf dem die Sicherung erstellt wurde. *original_server_name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 `[ @db_orig = ] 'original_database_name'`  
- Name der Datenbank, die gesichert wurde. *original_database_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+ Name der Datenbank, die gesichert wurde. *original_database_name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 `[ @keep_replication = ] keep_replication`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -56,11 +56,11 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_restoredbreplication** wird bei allen Replikations Typen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder **dbcreator** oder des **dbo** -Datenbankschemas können **sp_restoredbreplication**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder **dbcreator** oder des **dbo** -Datenbankschemas können **sp_restoredbreplication** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

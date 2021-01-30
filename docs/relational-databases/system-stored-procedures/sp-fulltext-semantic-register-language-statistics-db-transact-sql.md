@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_fulltext_semantic_register_language_statistics_db
 - sp_fulltext_semantic_register_language_statistics_db_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: deb1973dcff95f79d70ca3f458c38208db3b1f47
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dba0092fdad469c7ce8d762cfd16efcf5f75d6ef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548036"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193547"
 ---
 # <a name="sp_fulltext_semantic_register_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,13 +44,13 @@ GO
   
 ##  <a name="arguments"></a><a name="Arguments"></a>Argumente  
  [ @dbname =] '*database_name*'  
- Ist der Name der semantischen Sprachstatistikdatenbank, die für die aktuelle Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]registriert werden soll. Die Datenbank muss bereits angefügt sein. *database_name* ist vom Datentyp **sysname**und kann nicht NULL sein.  
+ Ist der Name der semantischen Sprachstatistikdatenbank, die für die aktuelle Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]registriert werden soll. Die Datenbank muss bereits angefügt sein. *database_name* ist vom Datentyp **sysname** und kann nicht NULL sein.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-set"></a>Resultset  
- Keine  
+ Keine.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Die semantische Sprachstatistikdatenbank enthält sprachbezogene Statistiken, die für die semantische Verarbeitung von Textinhalt erforderlich sind.  
@@ -74,7 +74,7 @@ GO
  Weitere Informationen finden Sie unter [Installieren und Konfigurieren der semantischen Suche](../../relational-databases/search/install-and-configure-semantic-search.md).  
   
 ## <a name="metadata"></a>Metadaten  
- Informationen über die Semantic Language Statistics Datenbank, die auf einer Instanz von installiert ist, erhalten Sie, indem Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Katalog Sicht [sys. fulltext_semantic_language_statistics_database &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)Abfragen.  
+ Informationen über die Semantic Language Statistics Datenbank, die auf einer Instanz von installiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist, können Sie der-Katalog Sicht [sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)Abfragen.  
   
 ## <a name="security"></a>Sicherheit  
   
@@ -82,7 +82,7 @@ GO
  Erfordert CONTROL SERVER-Berechtigungen.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird gezeigt, wie die semantische Sprachstatistikdatenbank durch den Aufruf von **sp_fulltext_semantic_register_language_statistics_db**registriert wird.  
+ Im folgenden Beispiel wird gezeigt, wie die semantische Sprachstatistikdatenbank durch den Aufruf von **sp_fulltext_semantic_register_language_statistics_db** registriert wird.  
   
 ```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = 'semanticsDb';  

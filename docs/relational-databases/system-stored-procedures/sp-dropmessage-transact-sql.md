@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmessage_TSQL
 - sp_dropmessage
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb4480908dc508fb82e591b2a9dbab448f951961
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 41971224ec830b1fbc17fdc8f754d7ae99e8731e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536507"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197639"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @msgnum = ] message_number` Die Nachrichten-Nummer, die gelöscht werden soll. *message_number* muss eine benutzerdefinierte Nachricht mit einer Nachrichtennummer größer als 50000 sein. *message_number* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @msgnum = ] message_number` Die Nachrichten-Nummer, die gelöscht werden soll. *message_number* muss eine benutzerdefinierte Nachricht mit einer Nachrichtennummer größer als 50000 sein. *message_number* ist vom Datentyp **int** und hat den Standardwert NULL.  
   
-`[ @lang = ] 'language'` Die Sprache der zu löschenden Nachricht. Wenn **all** angegeben wird, werden alle Sprachversionen von *message_number* gelöscht. *language* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+`[ @lang = ] 'language'` Die Sprache der zu löschenden Nachricht. Wenn **all** angegeben wird, werden alle Sprachversionen von *message_number* gelöscht. *language* ist vom Datentyp **sysname** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -54,13 +54,13 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in den festen Serverrollen **sysadmin** und **serveradmin** .  
   
-## <a name="remarks"></a>Hinweise  
- Solange nicht **all** für *language*angegeben wird, müssen alle lokalisierten Versionen der Nachricht gelöscht werden, bevor die englische Version (USA) der Nachricht gelöscht werden kann.  
+## <a name="remarks"></a>Bemerkungen  
+ Solange nicht **all** für *language* angegeben wird, müssen alle lokalisierten Versionen der Nachricht gelöscht werden, bevor die englische Version (USA) der Nachricht gelöscht werden kann.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-dropping-a-user-defined-message"></a>A. Löschen einer benutzerdefinierten Meldung  
- Im folgenden Beispiel wird eine benutzerdefinierte Meldung (Nummer `50001`) aus **sys.messages**gelöscht.  
+ Im folgenden Beispiel wird eine benutzerdefinierte Meldung (Nummer `50001`) aus **sys.messages** gelöscht.  
   
 ```  
 USE master;  

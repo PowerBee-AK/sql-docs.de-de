@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.database_firewall_rules_TSQL
 - database_firewall_rules_TSQL
@@ -20,17 +20,17 @@ ms.assetid: 2e821593-3b9f-43d6-a99b-1ceffe177faf
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 244c4245c81e264ea82c5434f8788b3960700641
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6e09c2043494b2d01adb3781b7b3c4336a3b9a1d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475211"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195882"
 ---
 # <a name="sysdatabase_firewall_rules-azure-sql-database"></a>sys.database_firewall_rules (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  Gibt Informationen zu den Firewalleinstellungen auf Datenbankebene zurück, die Ihrem zugeordnet sind [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . Firewalleinstellungen auf Datenbankebene sind besonders nützlich, wenn eigenständige Datenbankbenutzer verwendet werden. Weitere Informationen finden Sie unter [Eigenständige Datenbankbenutzer – machen Sie Ihre Datenbank portabel](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+  Gibt Informationen zu den Firewalleinstellungen auf Datenbankebene zurück, die Ihrem zugeordnet sind [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . Firewalleinstellungen auf Datenbankebene sind besonders nützlich, wenn eigenständige Datenbankbenutzer verwendet werden. Weitere Informationen finden Sie unter [Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
  Die `sys.database_firewall_rules` -Sicht enthält die folgenden Spalten:  
   
@@ -43,7 +43,7 @@ ms.locfileid: "97475211"
 |create_date|**DateTime**|UTC-Datum und -Uhrzeit der Erstellung der Firewalleinstellung auf Datenbankebene.|  
 |modify_date|**DateTime**|UTC-Datum und -Uhrzeit der letzten Änderung der Firewalleinstellung auf Datenbankebene.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie [sys.firewall_rules (Azure SQL-Datenbank)](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md), um Informationen zu den Firewalleinstellungen auf Serverebene zurückzugeben, die mit Ihrem Microsoft Azure SQL-Datenbank verknüpft sind.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_showrowreplicainfo_TSQL
 - sp_showrowreplicainfo
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5a46fd42c9caa69e808635fc9dcc5125403697a6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f2a66e8e6123adef864ca2beadef31cd4a9cbffe
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543035"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193486"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +41,11 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @ownername = ] 'ownername'` Der Name des Tabellen Besitzers. "Besitzer *Name* " ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter ist hilfreich für differenzierte Tabellen, wenn eine Datenbank mehrere Tabellen mit dem gleichen Namen enthält, aber jede Tabelle einen unterschiedlichen Besitzer aufweist.  
+`[ @ownername = ] 'ownername'` Der Name des Tabellen Besitzers. "Besitzer *Name* " ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Dieser Parameter ist hilfreich für differenzierte Tabellen, wenn eine Datenbank mehrere Tabellen mit dem gleichen Namen enthält, aber jede Tabelle einen unterschiedlichen Besitzer aufweist.  
   
-`[ @tablename = ] 'tablename'` Der Name der Tabelle, die die Zeile enthält, für die die Informationen zurückgegeben werden. *TableName* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @tablename = ] 'tablename'` Der Name der Tabelle, die die Zeile enthält, für die die Informationen zurückgegeben werden. *TableName* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @rowguid = ] rowguid` Ist der eindeutige Bezeichner der Zeile. *ROWGUID* ist vom Datentyp **uniqueidentifier**und hat keinen Standardwert.  
+`[ @rowguid = ] rowguid` Ist der eindeutige Bezeichner der Zeile. *ROWGUID* ist vom Datentyp **uniqueidentifier** und hat keinen Standardwert.  
   
 `[ @show = ] 'show'` Bestimmt die Menge der Informationen, die im Resultset zurückgegeben werden sollen. *Show* ist vom Datentyp **nvarchar (20)** . der Standardwert ist Both. Wenn **Row**, werden nur Zeilen Versionsinformationen zurückgegeben. Wenn **Spalten**, werden nur Spalten Versionsinformationen zurückgegeben. Wenn **beides**, werden sowohl Zeilen-als auch Spalten Informationen zurückgegeben.  
   
@@ -75,7 +75,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ## <a name="result-set-for-both"></a>Resultset für beide  
  Wenn **der Wert für** " *anzeigen*" ausgewählt ist, werden die Resultsets für Zeilen und Spalten zurückgegeben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_showrowreplicainfo** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

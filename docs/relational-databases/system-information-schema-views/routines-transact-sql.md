@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - ROUTINES_TSQL
 - ROUTINES
@@ -20,12 +20,12 @@ ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d83c5ef33d9d1a050b531ef1b4a5ee2dc60d4e9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 25ea15fd105733e04dd571dc925df394b1520d47
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472841"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192088"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "97472841"
 > [!NOTE]  
 >  Die ROUTINE_DEFINITION-Spalte enthält die Quellanweisungen, die die Funktion oder die gespeicherte Prozedur erstellt haben. Diese Quellanweisungen enthalten wahrscheinlich eingebettete Wagenrücklaufzeichen. Wenn Sie diese Spalte an eine Anwendung zurückgeben, die die Ergebnisse in einem Textformat anzeigt, beeinflussen die eingebetteten Wagenrücklaufzeichen in den Ergebnissen von ROUTINE_DEFINITION möglicherweise die Formatierung des gesamten Resultsets. Wenn Sie die ROUTINE_DEFINITION-Spalte auswählen, müssen Sie aufgrund der eingebetteten Wagenrücklaufzeichen eine Anpassung vornehmen, indem Sie beispielsweise das Resultset in ein Raster oder die ROUTINE_DEFINITION-Spalte in ein eigenes Textfeld zurückgeben.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar (** 128 **)**|Spezifischer Name des Katalogs. Dieser Name ist derselbe wie für ROUTINE_CATALOG.|  
 |SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Spezifischer Name des Schemas.<br /><br /> Wichtig verwenden Sie keine INFORMATION_SCHEMA Sichten, um das Schema eines Objekts zu bestimmen. **\* \* \* \*** INFORMATION_SCHEMA Sichten stellen nur eine Teilmenge der Metadaten eines Objekts dar. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  

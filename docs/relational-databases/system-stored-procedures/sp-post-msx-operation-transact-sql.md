@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_post_msx_operation
 - sp_post_msx_operation_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 304eef1c0e707ecb77fb8d13d5e2b524eb9e9e00
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: be9ef622f686044800f634837819b4cba92821a6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545988"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196034"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,23 +46,23 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @operation = ] 'operation'` Der Typ des Vorgangs für den übermittelten Vorgang. *Operation*ist vom Datentyp **varchar (64)** und hat keinen Standardwert. Gültige Vorgänge sind von *object_type*abhängig.  
+`[ @operation = ] 'operation'` Der Typ des Vorgangs für den übermittelten Vorgang. *Operation* ist vom Datentyp **varchar (64)** und hat keinen Standardwert. Gültige Vorgänge sind von *object_type* abhängig.  
   
 |Objekttyp|Vorgang|  
 |-----------------|---------------|  
-|**Auftrag**|INSERT<br /><br /> UPDATE<br /><br /> Delete<br /><br /> Start<br /><br /> STOP|  
+|**Auftrag**|INSERT<br /><br /> UPDATE<br /><br /> Delete<br /><br /> START<br /><br /> STOP|  
 |**Servers**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**Vereinbaren**|INSERT<br /><br /> UPDATE<br /><br /> Delete|  
   
-`[ @object_type = ] 'object'` Der Typ des Objekts, für das ein Vorgang gepostet werden soll. Gültige Typen sind **Job**, **Server**und **Schedule**. *Objekt* ist vom Datentyp **varchar (64)**. der Standardwert ist **Job**.  
+`[ @object_type = ] 'object'` Der Typ des Objekts, für das ein Vorgang gepostet werden soll. Gültige Typen sind **Job**, **Server** und **Schedule**. *Objekt* ist vom Datentyp **varchar (64)**. der Standardwert ist **Job**.  
   
-`[ @job_id = ] job_id` Die ID des Auftrags, auf den der Vorgang angewendet wird. *job_id* ist vom Datentyp **uniqueidentifier**und hat keinen Standardwert. **0x00** zeigt alle Aufträge an. Wenn *Object* **Server**ist, ist *job_id*nicht erforderlich.  
+`[ @job_id = ] job_id` Die ID des Auftrags, auf den der Vorgang angewendet wird. *job_id* ist vom Datentyp **uniqueidentifier** und hat keinen Standardwert. **0x00** zeigt alle Aufträge an. Wenn *Object* **Server** ist, ist *job_id* nicht erforderlich.  
   
 `[ @specific_target_server = ] 'target_server'` Der Name des Zielservers, für den der angegebene Vorgang gilt. Wenn *job_id* angegeben ist, aber *target_server* nicht angegeben ist, werden die Vorgänge für alle Auftrags Server des Auftrags gesendet. *target_server* ist vom Datentyp **nvarchar (30)** und hat den Standardwert NULL.  
   
 `[ @value = ] value` Das Abruf Intervall in Sekunden. *value* ist vom Datentyp **int**. Der Standardwert ist NULL. Geben Sie diesen Parameter nur an, wenn der *Vorgang* " **set-** Abruf" ist  
   
-`[ @schedule_uid = ] schedule_uid` Der eindeutige Bezeichner für den Zeitplan, auf den der Vorgang angewendet wird. *schedule_uid* ist vom Datentyp **uniqueidentifier**und hat keinen Standardwert.  
+`[ @schedule_uid = ] schedule_uid` Der eindeutige Bezeichner für den Zeitplan, auf den der Vorgang angewendet wird. *schedule_uid* ist vom Datentyp **uniqueidentifier** und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -73,7 +73,7 @@ sp_post_msx_operation
 ## <a name="remarks"></a>Bemerkungen  
  **sp_post_msx_operation** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
- **sp_post_msx_operation** kann immer sicher aufgerufen werden, da zuerst festgelegt wird, ob es sich bei dem aktuellen Server um einen Multiserver-Microsoft SQL Server Agent handelt. ist dies der Fall, ist das *Objekt*ein Multiserverauftrag.  
+ **sp_post_msx_operation** kann immer sicher aufgerufen werden, da zuerst festgelegt wird, ob es sich bei dem aktuellen Server um einen Multiserver-Microsoft SQL Server Agent handelt. ist dies der Fall, ist das *Objekt* ein Multiserverauftrag.  
   
  Nachdem ein Vorgang gepostet wurde, wird er in der **sysdownloadlist** -Tabelle angezeigt. Wenn ein Auftrag erstellt und bereitgestellt wurde, müssen nachfolgende Änderungen an diesem Auftrag auch an die Zielserver (TSX) übermittelt werden. Dies erreichen Sie auch mithilfe der Downloadliste.  
   

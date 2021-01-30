@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_schedule
 - sp_help_schedule_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e6dbddc56d00732495bce71b7c05c79f76adb20
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 24a0d594e02fad844d651933bab8d89bc9d35bb2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538814"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193530"
 ---
 # <a name="sp_help_schedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,13 +44,13 @@ sp_help_schedule
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @schedule_id = ] id` Der Bezeichner des aufzulistenden Zeitplans. *schedule_name* ist vom Datentyp **int**und hat keinen Standardwert. Es können entweder *schedule_id* oder *schedule_name* angegeben werden.  
+`[ @schedule_id = ] id` Der Bezeichner des aufzulistenden Zeitplans. *schedule_name* ist vom Datentyp **int** und hat keinen Standardwert. Es können entweder *schedule_id* oder *schedule_name* angegeben werden.  
   
-`[ @schedule_name = ] 'schedule_name'` Der Name des Zeitplans, der aufgelistet werden soll. *schedule_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Es können entweder *schedule_id* oder *schedule_name* angegeben werden.  
+`[ @schedule_name = ] 'schedule_name'` Der Name des Zeitplans, der aufgelistet werden soll. *schedule_name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert. Es können entweder *schedule_id* oder *schedule_name* angegeben werden.  
   
-`[ @attached_schedules_only = ] attached_schedules_only ]` Gibt an, ob nur Zeitpläne angezeigt werden sollen, an die ein Auftrag angefügt ist. *attached_schedules_only* ist vom Typ **Bit**. der Standardwert ist **0**. Wenn *attached_schedules_only* **0**ist, werden alle Zeitpläne angezeigt. Wenn *attached_schedules_only* **1**ist, enthält das Resultset nur Zeitpläne, die an einen Auftrag angefügt sind.  
+`[ @attached_schedules_only = ] attached_schedules_only ]` Gibt an, ob nur Zeitpläne angezeigt werden sollen, an die ein Auftrag angefügt ist. *attached_schedules_only* ist vom Typ **Bit**. der Standardwert ist **0**. Wenn *attached_schedules_only* **0** ist, werden alle Zeitpläne angezeigt. Wenn *attached_schedules_only* **1** ist, enthält das Resultset nur Zeitpläne, die an einen Auftrag angefügt sind.  
   
-`[ @include_description = ] include_description` Gibt an, ob Beschreibungen in das Resultset eingeschlossen werden sollen. *include_description* ist vom Typ **Bit**. der Standardwert ist **0**. Wenn *include_description* **0**ist, enthält die *schedule_description* Spalte des Resultsets einen Platzhalter. Wenn *include_description* **1**ist, wird die Beschreibung des Zeitplans in das Resultset eingeschlossen.  
+`[ @include_description = ] include_description` Gibt an, ob Beschreibungen in das Resultset eingeschlossen werden sollen. *include_description* ist vom Typ **Bit**. der Standardwert ist **0**. Wenn *include_description* **0** ist, enthält die *schedule_description* Spalte des Resultsets einen Platzhalter. Wenn *include_description* **1** ist, wird die Beschreibung des Zeitplans in das Resultset eingeschlossen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -65,7 +65,7 @@ sp_help_schedule
 |**schedule_name**|**sysname**|Name des Zeitplans.|  
 |**enabled**|**int**|Gibt an, ob der Zeitplan aktiviert (**1**) oder nicht aktiviert (**0**) ist.|  
 |**freq_type**|**int**|Der Wert, der angibt, wann der Auftrag ausgeführt werden soll.<br /><br /> **1** = einmal<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ zum **freq_interval**<br /><br /> **64** = ausführen, wenn der SQLServerAgent-Dienst gestartet wird.|  
-|**freq_interval**|**int**|Tage, an denen der Auftrag ausgeführt wird. Der Wert hängt vom Wert **freq_type**ab. Weitere Informationen finden Sie unter [sp_add_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_interval**|**int**|Tage, an denen der Auftrag ausgeführt wird. Der Wert hängt vom Wert **freq_type** ab. Weitere Informationen finden Sie unter [sp_add_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_type**|**int**|Einheiten für **freq_subday_interval**. Weitere Informationen finden Sie unter [sp_add_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_interval**|**int**|Anzahl der **freq_subday_type** Zeiträume zwischen den einzelnen Ausführungen des Auftrags. Weitere Informationen finden Sie unter [sp_add_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_relative_interval**|**int**|Das Vorkommen des **freq_interval** eines geplanten Auftrags in jedem Monat. Weitere Informationen finden Sie unter [sp_add_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
@@ -78,11 +78,11 @@ sp_help_schedule
 |**schedule_description**|**nvarchar(4000)**|Eine Beschreibung des Zeitplans in englischer Sprache (falls angefordert).|  
 |**job_count**|**int**|Gibt die Anzahl von Aufträgen zurück, die auf diesen Zeitplan verweisen.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn keine Parameter angegeben werden, werden in **sp_help_schedule** Informationen zu allen Zeitplänen in der-Instanz aufgelistet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
+ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
   
 -   **SQLAgentUserRole**  
   

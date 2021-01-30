@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 7dee462b6b4a66b61d790bb06673d36f0907ef73
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 1b16d1da947970652be4879880ce1cfccf7ca796
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099698"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196210"
 ---
 # <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>CDC.fn_cdc_get_net_changes_ &lt; capture_instance &gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  *<row_filter_option>* :: = {all | all with mask | all with Merge}  
  Eine Option, die den Inhalt der Metadatenspalten sowie die im Resultset zurückgegebenen Zeilen bestimmt. Eine der folgenden Optionen ist möglich:  
   
- alle  
+ all  
  Gibt die LSN der letzten Änderung an der Zeile und den Vorgang zurück, der zum Anwenden der Zeile in den Metadatenspalten __ $ start_lsn und $Operation erforderlich ist \_ \_ . Die Spalte \_ \_ $Update _Mask ist immer NULL.  
   
  all with mask  

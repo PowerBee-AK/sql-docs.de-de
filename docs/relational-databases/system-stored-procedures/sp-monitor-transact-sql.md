@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_monitor_TSQL
 - sp_monitor
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f214abb7b20c42ec62f1bc35d85222e0033798d1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f046c3e6fe81c7dac489fcdd88237ecb2d3747d0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544753"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195464"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,10 +60,10 @@ sp_monitor
 |**total_errors**|Die Anzahl von Fehlern, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Lesen und Schreiben festgestellt wurden.|  
 |**connections**|Die Anzahl von Anmeldungen oder versuchten Anmeldungen an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden mithilfe einer Reihe von Funktionen quantitative Angaben über die ausgeführten Vorgänge gespeichert. Beim Ausführen **sp_monitor** werden die aktuellen Werte angezeigt, die von diesen Funktionen zurückgegeben werden, und es wird angezeigt, wie stark Sie sich seit der letzten Ausführung der Prozedur geändert haben.  
   
- Für jede Spalte wird die Statistik im Format *Number*(*Number*)-*Number*% oder *Number*(*Number*) ausgegeben. Die erste *Zahl* bezieht sich auf die Anzahl von Sekunden (für **CPU_BUSY**, **IO_BUSY**und **Leerlauf**) oder die Gesamtzahl (für die anderen Variablen) seit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Neustart von. Die *Zahl* in Klammern bezieht sich auf die Anzahl der Sekunden oder die Gesamtzahl seit dem letzten Ausführen **sp_monitor** . Der Prozentsatz ist der Prozentsatz der Zeit seit dem letzten Ausführen **sp_monitor** . Wenn der Bericht z. b. **CPU_BUSY** als 4250 (215)-68% anzeigt, ist die CPU ausgelastet, 4250 Sekunden seit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] letzten Start, 215 Sekunden seit der letzten Betriebs **sp_monitor** und 68 Prozent der Gesamtzeit seit dem letzten Ausführen **sp_monitor** .  
+ Für jede Spalte wird die Statistik im Format *Number*(*Number*)-*Number*% oder *Number*(*Number*) ausgegeben. Die erste *Zahl* bezieht sich auf die Anzahl von Sekunden (für **CPU_BUSY**, **IO_BUSY** und **Leerlauf**) oder die Gesamtzahl (für die anderen Variablen) seit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Neustart von. Die *Zahl* in Klammern bezieht sich auf die Anzahl der Sekunden oder die Gesamtzahl seit dem letzten Ausführen **sp_monitor** . Der Prozentsatz ist der Prozentsatz der Zeit seit dem letzten Ausführen **sp_monitor** . Wenn der Bericht z. b. **CPU_BUSY** als 4250 (215)-68% anzeigt, ist die CPU ausgelastet, 4250 Sekunden seit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] letzten Start, 215 Sekunden seit der letzten Betriebs **sp_monitor** und 68 Prozent der Gesamtzeit seit dem letzten Ausführen **sp_monitor** .  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  

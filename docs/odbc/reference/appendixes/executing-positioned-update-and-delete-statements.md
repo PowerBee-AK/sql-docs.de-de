@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - positioned deletes [ODBC]
 - cursor library [ODBC], positioned update or delete
@@ -16,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e2e11843085f28ceeec965e079bb2942968d15b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d10b2e5c625a222e8e09a5e783291ce613a492b1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466197"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194827"
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>Ausführen einer positionierten Aktualisierung und von DELETE-Anweisungen
 > [!IMPORTANT]  
 >  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
   
- Nachdem eine Anwendung einen Datenblock mit **SQLFetchScroll**abgerufen hat, kann Sie die Daten im-Block aktualisieren oder löschen. Um ein positioniertes Update oder DELETE auszuführen, führt die Anwendung Folgendes aus:  
+ Nachdem eine Anwendung einen Datenblock mit **SQLFetchScroll** abgerufen hat, kann Sie die Daten im-Block aktualisieren oder löschen. Um ein positioniertes Update oder DELETE auszuführen, führt die Anwendung Folgendes aus:  
   
 1.  Ruft **SQLSetPos** auf, um den Cursor in der Zeile zu positionieren, die aktualisiert oder gelöscht werden soll.  
   
 2.  Erstellt eine positionierte UPDATE-oder DELETE-Anweisung mit der folgenden Syntax:  
   
-     **UPDATE** *Tabellennamen* aktualisieren  
+      *Tabellennamen* aktualisieren  
   
      **Festlegen** des *Spalten Bezeichners* **=** {*Expression* &#124; **null**}  
   

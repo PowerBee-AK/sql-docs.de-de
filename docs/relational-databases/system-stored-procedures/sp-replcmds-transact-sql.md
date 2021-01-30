@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replcmds_TSQL
 - sp_replcmds
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec1209e23885026c4f64994d5b0605e36e6fde5d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d8d61544e171e102c04f829ab7c302048c930d21
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538600"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193521"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,12 +57,12 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**command_type**|**int**|Der Typ des Befehls.|  
 |**originator_srvname**|**sysname**|Server, von dem die Transaktion stammt|  
 |**originator_db**|**sysname**|Datenbank, von der die Transaktion stammt|  
-|**pkHash**|**int**|Nur interne Verwendung.|  
+|**pkHash**|**int**|Nur zur internen Verwendung.|  
 |**originator_publication_id**|**int**|ID der Veröffentlichung, von der die Transaktion stammt|  
 |**originator_db_version**|**int**|Version der Datenbank, von der die Transaktion stammt|  
 |**originator_lsn**|**varbinary(16)**|Identifiziert die Protokollfolgenummer (LSN, Log Sequence Number) für den Befehl in der ursprünglichen Veröffentlichung|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_replcmds** wird vom Protokoll Leseprozess bei der Transaktions Replikation verwendet.  
   
  Bei der Replikation wird der erste Client, der **sp_replcmds** innerhalb einer bestimmten Datenbank ausführt, als Protokoll Leser behandelt.  
@@ -72,12 +72,12 @@ sp_replcmds [ @maxtrans = ] maxtrans
 > [!NOTE]  
 >  Da der Tabellenname in der Quelldatenbank durch den Besitzernamen qualifiziert wird, muss es sich bei dem Tabellenbesitzer in der Zieldatenbank um den gleichen Besitzernamen handeln.  
   
- Clients, die versuchen, **sp_replcmds** innerhalb derselben Datenbank auszuführen, erhalten den Fehler 18752, bis der erste Client die Verbindung trennt. Nachdem der erste Client die Verbindung getrennt hat, kann ein anderer Client **sp_replcmds**ausführen und zum neuen Protokoll Leser werden.  
+ Clients, die versuchen, **sp_replcmds** innerhalb derselben Datenbank auszuführen, erhalten den Fehler 18752, bis der erste Client die Verbindung trennt. Nachdem der erste Client die Verbindung getrennt hat, kann ein anderer Client **sp_replcmds** ausführen und zum neuen Protokoll Leser werden.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Wenn sp_replcmds einen Textbefehl nicht replizieren kann, wird im-Fehlerprotokoll und im Windows-Anwendungsprotokoll eine Warnmeldung mit der Nummer 18759 hinzugefügt, [!INCLUDE[msCoName](../../includes/msconame-md.md)] da der Text Zeiger nicht in der gleichen Transaktion abgerufen wurde. **sp_replcmds**  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Wenn sp_replcmds einen Textbefehl nicht replizieren kann, wird im-Fehlerprotokoll und im Windows-Anwendungsprotokoll eine Warnmeldung mit der Nummer 18759 hinzugefügt, [!INCLUDE[msCoName](../../includes/msconame-md.md)] da der Text Zeiger nicht in der gleichen Transaktion abgerufen wurde.   
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_replcmds**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_replcmds** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Fehlermeldungen](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   

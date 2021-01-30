@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLGetDiagField
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 92043f5deb505d60ebe168a9c219c4d37a304ed5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 733933691297f22934fe59e0c337dfd6093ddd3b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461025"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194185"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField-Funktion
 
@@ -63,10 +63,10 @@ SQLRETURN SQLGetDiagField(
   
 -   SQL_HANDLE_STMT  
   
- SQL_HANDLE_DBC_INFO_TOKEN Handle wird nur vom Treiber-Manager und vom Treiber verwendet. Anwendungen sollten diesen Handlertyp nicht verwenden. Weitere Informationen zu SQL_HANDLE_DBC_INFO_TOKEN finden Sie unter [entwickeln von Verbindungs Pool Informationen in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
+ SQL_HANDLE_DBC_INFO_TOKEN Handle wird nur vom Treiber-Manager und vom Treiber verwendet. Anwendungen sollten diesen Handlertyp nicht verwenden. Weitere Informationen zu SQL_HANDLE_DBC_INFO_TOKEN finden Sie unter [entwickeln von Connection-Pool Awareness in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   
  *Handle*  
- Der Ein Handle für die Diagnosedaten Struktur des Typs, der durch den *Handlertyp*angegeben wird. Wenn " *Lenker Type* " SQL_HANDLE_ENV ist, kann *handle* entweder ein frei Gegebenes oder ein nicht gemeinsam genutztes Umgebungs Handle sein.  
+ Der Ein Handle für die Diagnosedaten Struktur des Typs, der durch den *Handlertyp* angegeben wird. Wenn " *Lenker Type* " SQL_HANDLE_ENV ist, kann *handle* entweder ein frei Gegebenes oder ein nicht gemeinsam genutztes Umgebungs Handle sein.  
   
  *RecNumber*  
  Der Gibt den Statusdaten Satz an, von dem die Anwendung Informationen sucht. Status Datensätze sind von 1 nummeriert. Wenn das *DiagIdentifier* -Argument ein beliebiges Feld des Diagnose Headers angibt, wird " *RecNumber* " ignoriert. Wenn dies nicht der Fall ist, sollte der Wert größer als 0 sein.  
@@ -75,27 +75,27 @@ SQLRETURN SQLGetDiagField(
  Der Gibt das Feld der Diagnose an, dessen Wert zurückgegeben werden soll. Weitere Informationen finden Sie im Abschnitt "*DiagIdentifier* -Argument" in "comments".  
   
  *Diaginfoptr*  
- Ausgeben Zeiger auf einen Puffer, in den die Diagnoseinformationen zurückgegeben werden sollen. Der Datentyp hängt vom Wert von *DiagIdentifier*ab. Wenn *diaginfoptr* ein ganzzahliger Typ ist, sollten Anwendungen einen Puffer von SQLULEN verwenden und den Wert vor dem Aufrufen dieser Funktion auf 0 initialisieren, da einige Treiber möglicherweise nur den unteren 32-Bit-oder 16-Bit-Wert eines Puffers schreiben und das Bit höherer Ordnung unverändert lassen.  
+ Ausgeben Zeiger auf einen Puffer, in den die Diagnoseinformationen zurückgegeben werden sollen. Der Datentyp hängt vom Wert von *DiagIdentifier* ab. Wenn *diaginfoptr* ein ganzzahliger Typ ist, sollten Anwendungen einen Puffer von SQLULEN verwenden und den Wert vor dem Aufrufen dieser Funktion auf 0 initialisieren, da einige Treiber möglicherweise nur den unteren 32-Bit-oder 16-Bit-Wert eines Puffers schreiben und das Bit höherer Ordnung unverändert lassen.  
   
- Wenn *diaginfoptr* gleich NULL ist, gibt *stringlengthptr* weiterhin die Gesamtzahl der Bytes (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten) zurück, die im Puffer zurückgegeben werden können, auf den *diaginfoptr*zeigt.  
+ Wenn *diaginfoptr* gleich NULL ist, gibt *stringlengthptr* weiterhin die Gesamtzahl der Bytes (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten) zurück, die im Puffer zurückgegeben werden können, auf den *diaginfoptr* zeigt.  
   
  *BufferLength*  
- Der Wenn *DiagIdentifier* eine ODBC-definierte Diagnose ist und *diaginfoptr* auf eine Zeichenfolge oder einen binären Puffer zeigt, sollte dieses Argument die Länge von \* *diaginfoptr*sein. Wenn *DiagIdentifier* ein ODBC-definiertes Feld und \* *diaginfoptr* eine ganze Zahl ist, wird *BufferLength* ignoriert. Wenn der Wert in * \* diaginfoptr* eine Unicode-Zeichenfolge ist (beim Aufrufen von **sqlgetdiagfieldw**), muss das *BufferLength* -Argument eine gerade Zahl sein.  
+ Der Wenn *DiagIdentifier* eine ODBC-definierte Diagnose ist und *diaginfoptr* auf eine Zeichenfolge oder einen binären Puffer zeigt, sollte dieses Argument die Länge von \* *diaginfoptr* sein. Wenn *DiagIdentifier* ein ODBC-definiertes Feld und \* *diaginfoptr* eine ganze Zahl ist, wird *BufferLength* ignoriert. Wenn der Wert in *\* diaginfoptr* eine Unicode-Zeichenfolge ist (beim Aufrufen von **sqlgetdiagfieldw**), muss das *BufferLength* -Argument eine gerade Zahl sein.  
   
  Wenn *DiagIdentifier* ein Treiber definiertes Feld ist, gibt die Anwendung die Art des Felds für den Treiber-Manager an, indem das *BufferLength* -Argument festgelegt wird. *BufferLength* kann die folgenden Werte aufweisen:  
   
 -   Wenn *diaginfoptr* ein Zeiger auf eine Zeichenfolge ist, entspricht *BufferLength* der Länge der Zeichenfolge oder SQL_NTS.  
   
--   Wenn *diaginfoptr* ein Zeiger auf einen binären Puffer ist, platziert die Anwendung das Ergebnis des SQL_LEN_BINARY_ATTR (*length*)-Makros in *BufferLength*. Dadurch wird ein negativer Wert in *BufferLength*platziert.  
+-   Wenn *diaginfoptr* ein Zeiger auf einen binären Puffer ist, platziert die Anwendung das Ergebnis des SQL_LEN_BINARY_ATTR (*length*)-Makros in *BufferLength*. Dadurch wird ein negativer Wert in *BufferLength* platziert.  
   
 -   Wenn *diaginfoptr* ein Zeiger auf einen anderen Wert als eine Zeichenfolge oder Binär Zeichenfolge ist, sollte *BufferLength* den Wert SQL_IS_POINTER.  
   
--   Wenn * \* diaginfoptr* einen Datentyp mit fester Länge enthält, wird *BufferLength* nach Bedarf SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT oder SQL_IS_USMALLINT.  
+-   Wenn *\* diaginfoptr* einen Datentyp mit fester Länge enthält, wird *BufferLength* nach Bedarf SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT oder SQL_IS_USMALLINT.  
   
  *Stringlengthptr*  
- Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Bytes (ausgenommen der Anzahl der Bytes, die für das NULL-Terminierungs Zeichen erforderlich sind) zurückgegeben werden soll, die in \* *diaginfoptr*für Zeichendaten zurückgegeben werden können. Wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *BufferLength*ist, wird der Text in \* *diaginfoptr* auf *BufferLength* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
+ Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Bytes (ausgenommen der Anzahl der Bytes, die für das NULL-Terminierungs Zeichen erforderlich sind) zurückgegeben werden soll, die in \* *diaginfoptr* für Zeichendaten zurückgegeben werden können. Wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *BufferLength* ist, wird der Text in \* *diaginfoptr* auf *BufferLength* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE oder SQL_NO_DATA.  
   
 ## <a name="diagnostics"></a>Diagnose  
@@ -103,7 +103,7 @@ SQLRETURN SQLGetDiagField(
   
 -   SQL_SUCCESS: die Funktion hat erfolgreich Diagnoseinformationen zurückgegeben.  
   
--   SQL_SUCCESS_WITH_INFO: \* *diaginfoptr* war zu klein, um das angeforderte Diagnose Feld zu speichern. Daher wurden die Daten im Feld "Diagnose" abgeschnitten. Um zu ermitteln, ob ein Abschneiden aufgetreten ist, muss die Anwendung *BufferLength* mit der tatsächlichen Anzahl der verfügbaren Bytes vergleichen, die in **stringlengthptr*geschrieben wird.  
+-   SQL_SUCCESS_WITH_INFO: \* *diaginfoptr* war zu klein, um das angeforderte Diagnose Feld zu speichern. Daher wurden die Daten im Feld "Diagnose" abgeschnitten. Um zu ermitteln, ob ein Abschneiden aufgetreten ist, muss die Anwendung *BufferLength* mit der tatsächlichen Anzahl der verfügbaren Bytes vergleichen, die in **stringlengthptr* geschrieben wird.  
   
 -   SQL_INVALID_HANDLE: das Handle, das von " *Lenker Type* " und " *handle* " angegeben wird, war kein gültiges Handle.  
   
@@ -119,20 +119,20 @@ SQLRETURN SQLGetDiagField(
   
     -   Bei Verwendung der asynchronen Benachrichtigung war der asynchrone Vorgang für das Handle nicht beendet.  
   
--   SQL_NO_DATA: *die Anzahl der* Diagnosedaten Sätze, die für das in handle angegebene Handle vorhanden waren, war größer als die Anzahl der Diagnosedaten Sätze *.* Die Funktion gibt auch SQL_NO_DATA für jede positive *remenge* zurück, wenn keine Diagnosedaten Sätze für das *handle*vorhanden sind.  
+-   SQL_NO_DATA: *die Anzahl der* Diagnosedaten Sätze, die für das in handle angegebene Handle vorhanden waren, war größer als die Anzahl der Diagnosedaten Sätze *.* Die Funktion gibt auch SQL_NO_DATA für jede positive *remenge* zurück, wenn keine Diagnosedaten Sätze für das *handle* vorhanden sind.  
   
 ## <a name="comments"></a>Kommentare  
  Eine Anwendung ruft normalerweise **SQLGetDiagField** auf, um eines der drei Ziele zu erreichen:  
   
 1.  Zum Abrufen spezifischer Fehler-oder Warnungs Informationen, wenn ein Funktions aufrufSQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgegeben wurde (oder SQL_NEED_DATA für die **sqlbrowseconnetct** -Funktion).  
   
-2.  So bestimmen Sie die Anzahl der Zeilen in der Datenquelle, die beim Einfügen aufgetreten sind DELETE-oder Update-Vorgänge wurden durch einen aufrufsvorgang von **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** (aus dem Feld SQL_DIAG_ROW_COUNT-Header) oder durchgeführt, um die Anzahl der Zeilen zu bestimmen, die im aktuellen geöffneten Cursor vorhanden sind, wenn der Treiber diese Informationen (aus dem SQL_DIAG_CURSOR_ROW_COUNT Header Feld) bereitstellen kann.  
+2.  So bestimmen Sie die Anzahl der Zeilen in der Datenquelle, die beim Einfügen aufgetreten sind DELETE-oder Update-Vorgänge wurden durch einen aufrufsvorgang von **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** oder **SQLSetPos** (aus dem Feld SQL_DIAG_ROW_COUNT-Header) oder durchgeführt, um die Anzahl der Zeilen zu bestimmen, die im aktuellen geöffneten Cursor vorhanden sind, wenn der Treiber diese Informationen (aus dem SQL_DIAG_CURSOR_ROW_COUNT Header Feld) bereitstellen kann.  
   
 3.  , Um zu bestimmen, welche Funktion durch einen-Befehl von **SQLExecDirect** oder **SQLExecute** (aus den Header Feldern SQL_DIAG_DYNAMIC_FUNCTION und SQL_DIAG_DYNAMIC_FUNCTION_CODE) ausgeführt wurde.  
   
- Jede ODBC-Funktion kann bei jedem Aufruf NULL oder mehr Diagnosedaten Sätze veröffentlichen, sodass eine Anwendung **SQLGetDiagField** nach jedem ODBC-Funktionsaufruf aufrufen kann. Es gibt keine Beschränkung für die Anzahl der Diagnosedaten Sätze, die zu einem beliebigen Zeitpunkt gespeichert werden können. **SQLGetDiagField** ruft nur die Diagnoseinformationen ab, die zuletzt der im *handle* -Argument angegebenen Diagnosedaten Struktur zugeordnet sind. Wenn die Anwendung eine andere ODBC-Funktion als **SQLGetDiagField** oder **SQLGetDiagRec**aufruft, gehen alle Diagnoseinformationen eines vorherigen Aufrufs mit dem gleichen handle verloren.  
+ Jede ODBC-Funktion kann bei jedem Aufruf NULL oder mehr Diagnosedaten Sätze veröffentlichen, sodass eine Anwendung **SQLGetDiagField** nach jedem ODBC-Funktionsaufruf aufrufen kann. Es gibt keine Beschränkung für die Anzahl der Diagnosedaten Sätze, die zu einem beliebigen Zeitpunkt gespeichert werden können. **SQLGetDiagField** ruft nur die Diagnoseinformationen ab, die zuletzt der im *handle* -Argument angegebenen Diagnosedaten Struktur zugeordnet sind. Wenn die Anwendung eine andere ODBC-Funktion als **SQLGetDiagField** oder **SQLGetDiagRec** aufruft, gehen alle Diagnoseinformationen eines vorherigen Aufrufs mit dem gleichen handle verloren.  
   
- Eine Anwendung kann alle Diagnosedaten Sätze durch Erhöhen der *RecNumber*Scannen, sofern **SQLGetDiagField** SQL_SUCCESS zurückgibt. Die Anzahl der Statusdaten Sätze wird im Feld SQL_DIAG_NUMBER Header angezeigt. Aufrufe von **SQLGetDiagField** sind nicht destruktiv für die Header-und Daten Satz Felder. Die Anwendung kann **SQLGetDiagField** später erneut aufrufen, um ein Feld aus einem Datensatz abzurufen, sofern eine andere Funktion als die Diagnosefunktionen nicht in der Zwischenzeit aufgerufen wurde, die Datensätze im gleichen handle veröffentlichen würde.  
+ Eine Anwendung kann alle Diagnosedaten Sätze durch Erhöhen der *RecNumber* Scannen, sofern **SQLGetDiagField** SQL_SUCCESS zurückgibt. Die Anzahl der Statusdaten Sätze wird im Feld SQL_DIAG_NUMBER Header angezeigt. Aufrufe von **SQLGetDiagField** sind nicht destruktiv für die Header-und Daten Satz Felder. Die Anwendung kann **SQLGetDiagField** später erneut aufrufen, um ein Feld aus einem Datensatz abzurufen, sofern eine andere Funktion als die Diagnosefunktionen nicht in der Zwischenzeit aufgerufen wurde, die Datensätze im gleichen handle veröffentlichen würde.  
   
  Eine Anwendung kann **SQLGetDiagField** aufrufen, um ein beliebiges Diagnose Feld zu einem beliebigen Zeitpunkt zurückzugeben, mit Ausnahme von SQL_DIAG_CURSOR_ROW_COUNT oder SQL_DIAG_ROW_COUNT, die SQL_ERROR zurückgibt, wenn *handle* kein Anweisungs Handle ist. Wenn ein anderes Diagnose Feld nicht definiert ist, wird beim Aufrufen von **SQLGetDiagField** SQL_SUCCESS (sofern keine andere Diagnose gefunden wird) zurückgegeben, und für das Feld wird ein nicht definierter Wert zurückgegeben.  
   
@@ -141,7 +141,7 @@ SQLRETURN SQLGetDiagField(
  Wenn eine andere API aufgerufen wird, als die, die asynchron ausgeführt wird, wird HY010 "Function Sequence Error" generiert. Der Fehler Daten Satz kann jedoch erst abgerufen werden, wenn der asynchrone Vorgang abgeschlossen ist.  
   
 ## <a name="handletype-argument"></a>Lenker-Typargument  
- Jedem Handlertyp können Diagnoseinformationen zugeordnet werden. Das " *Lenker Type* "-Argument gibt den Handle-Typ des *Handles*an.  
+ Jedem Handlertyp können Diagnoseinformationen zugeordnet werden. Das " *Lenker Type* "-Argument gibt den Handle-Typ des *Handles* an.  
   
  Einige Header-und Daten Satz Felder können für die Umgebungs-, Verbindungs-, Anweisungs-und Deskriptorhandles nicht zurückgegeben werden. Die Handles, für die ein Feld nicht anwendbar ist, werden in den Abschnitten "Header Felder" und "Datensatz-Felder" aufgeführt.  
   
@@ -161,19 +161,19 @@ SQLRETURN SQLGetDiagField(
 ## <a name="header-fields"></a>Header Felder  
  Die Header Felder, die in der folgenden Tabelle aufgeführt sind, können in das *DiagIdentifier* -Argument eingefügt werden.  
   
-|DiagIdentifier|Rückgabetyp|Rückgabe|  
+|DiagIdentifier|Rückgabetyp|Gibt zurück|  
 |--------------------|-----------------|-------------|  
-|SQL_DIAG_CURSOR_ROW_COUNT|SQLLEN|Dieses Feld enthält die Anzahl der Zeilen im Cursor. Die Semantik ist abhängig von den **SQLGetInfo** -Informationstypen SQL_DYNAMIC_CURSOR_ATTRIBUTES2, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2, SQL_KEYSET_CURSOR_ATTRIBUTES2 und SQL_STATIC_CURSOR_ATTRIBUTES2, die angeben, welche Zeilen Anzahl für jeden Cursortyp (in den SQL_CA2_CRC_EXACT-und SQL_CA2_CRC_APPROXIMATE Bits) verfügbar ist.<br /><br /> Der Inhalt dieses Felds wird nur für Anweisungs Handles und nur nach dem Aufruf von **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** definiert. Durch den Aufruf von **SQLGetDiagField** mit einem *DiagIdentifier* von SQL_DIAG_CURSOR_ROW_COUNT auf anderen als einem Anweisungs Handle wird SQL_ERROR zurückgegeben.|  
-|SQL_DIAG_DYNAMIC_FUNCTION|SQLCHAR|Dies ist eine Zeichenfolge, die die SQL-Anweisung beschreibt, die die zugrunde liegende Funktion ausgeführt hat. (Weitere Informationen finden Sie unter "Werte der dynamischen Funktionsfelder" weiter unten in diesem Abschnitt für bestimmte Werte). Der Inhalt dieses Felds wird nur für Anweisungs Handles und nur nach einem-Befehl von **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults**definiert. Durch den Aufruf von **SQLGetDiagField** mit einem *DiagIdentifier* von SQL_DIAG_DYNAMIC_FUNCTION auf anderen als einem Anweisungs Handle wird SQL_ERROR zurückgegeben. Der Wert dieses Felds ist vor einem-Befehl von **SQLExecute** oder **SQLExecDirect**nicht definiert.|  
-|SQL_DIAG_DYNAMIC_FUNCTION_CODE|SQLINTEGER|Dies ist ein numerischer Code, der die von der zugrunde liegenden Funktion ausgeführte SQL-Anweisung beschreibt. (Weitere Informationen finden Sie unter "Werte der dynamischen Funktionsfelder" weiter unten in diesem Abschnitt für einen bestimmten Wert.) Der Inhalt dieses Felds wird nur für Anweisungs Handles und nur nach einem-Befehl von **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults**definiert. Durch den Aufruf von **SQLGetDiagField** mit einem *DiagIdentifier* von SQL_DIAG_DYNAMIC_FUNCTION_CODE auf anderen als einem Anweisungs Handle wird SQL_ERROR zurückgegeben. Der Wert dieses Felds ist vor einem-Befehl von **SQLExecute** oder **SQLExecDirect**nicht definiert.|  
+|SQL_DIAG_CURSOR_ROW_COUNT|SQLLEN|Dieses Feld enthält die Anzahl der Zeilen im Cursor. Die Semantik ist abhängig von den **SQLGetInfo** -Informationstypen SQL_DYNAMIC_CURSOR_ATTRIBUTES2, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2, SQL_KEYSET_CURSOR_ATTRIBUTES2 und SQL_STATIC_CURSOR_ATTRIBUTES2, die angeben, welche Zeilen Anzahl für jeden Cursortyp (in den SQL_CA2_CRC_EXACT-und SQL_CA2_CRC_APPROXIMATE Bits) verfügbar ist.<br /><br /> Der Inhalt dieses Felds wird nur für Anweisungs Handles und nur nach dem Aufruf von **SQLExecute**, **SQLExecDirect** oder **SQLMoreResults** definiert. Durch den Aufruf von **SQLGetDiagField** mit einem *DiagIdentifier* von SQL_DIAG_CURSOR_ROW_COUNT auf anderen als einem Anweisungs Handle wird SQL_ERROR zurückgegeben.|  
+|SQL_DIAG_DYNAMIC_FUNCTION|SQLCHAR|Dies ist eine Zeichenfolge, die die SQL-Anweisung beschreibt, die die zugrunde liegende Funktion ausgeführt hat. (Weitere Informationen finden Sie unter "Werte der dynamischen Funktionsfelder" weiter unten in diesem Abschnitt für bestimmte Werte). Der Inhalt dieses Felds wird nur für Anweisungs Handles und nur nach einem-Befehl von **SQLExecute**, **SQLExecDirect** oder **SQLMoreResults** definiert. Durch den Aufruf von **SQLGetDiagField** mit einem *DiagIdentifier* von SQL_DIAG_DYNAMIC_FUNCTION auf anderen als einem Anweisungs Handle wird SQL_ERROR zurückgegeben. Der Wert dieses Felds ist vor einem-Befehl von **SQLExecute** oder **SQLExecDirect** nicht definiert.|  
+|SQL_DIAG_DYNAMIC_FUNCTION_CODE|SQLINTEGER|Dies ist ein numerischer Code, der die von der zugrunde liegenden Funktion ausgeführte SQL-Anweisung beschreibt. (Weitere Informationen finden Sie unter "Werte der dynamischen Funktionsfelder" weiter unten in diesem Abschnitt für einen bestimmten Wert.) Der Inhalt dieses Felds wird nur für Anweisungs Handles und nur nach einem-Befehl von **SQLExecute**, **SQLExecDirect** oder **SQLMoreResults** definiert. Durch den Aufruf von **SQLGetDiagField** mit einem *DiagIdentifier* von SQL_DIAG_DYNAMIC_FUNCTION_CODE auf anderen als einem Anweisungs Handle wird SQL_ERROR zurückgegeben. Der Wert dieses Felds ist vor einem-Befehl von **SQLExecute** oder **SQLExecDirect** nicht definiert.|  
 |SQL_DIAG_NUMBER|SQLINTEGER|Die Anzahl der für das angegebene Handle verfügbaren Statusdaten Sätze.|  
-|SQL_DIAG_RETURNCODE|SQLRETURN|Rückgabecode, der von der Funktion zurückgegeben wird. Eine Liste der Rückgabecodes finden Sie unter [Rückgabecodes](../../../odbc/reference/develop-app/return-codes-odbc.md). Der Treiber muss SQL_DIAG_RETURNCODE nicht implementieren; Sie wird immer vom Treiber-Manager implementiert. Wenn für das *handle*noch keine Funktion aufgerufen wurde, werden SQL_SUCCESS für SQL_DIAG_RETURNCODE zurückgegeben.|  
-|SQL_DIAG_ROW_COUNT|SQLLEN|Die Anzahl der Zeilen, die von einem INSERT-, DELETE-oder Update-Vorgang betroffen sind, der von **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos**ausgeführt wird. Es ist Treiber definiert, nachdem eine *Cursor Spezifikation* ausgeführt wurde. Der Inhalt dieses Felds wird nur für Anweisungs Handles definiert. Durch den Aufruf von **SQLGetDiagField** mit einem *DiagIdentifier* von SQL_DIAG_ROW_COUNT auf anderen als einem Anweisungs Handle wird SQL_ERROR zurückgegeben. Die Daten in diesem Feld werden ebenfalls im *rowzählenptr* -Argument von **SQLRowCount**zurückgegeben. Die Daten in diesem Feld werden nach jedem nicht-Diagnose Funktions Aufrufwert zurückgesetzt, während die von **SQLRowCount** zurückgegebene Zeilen Anzahl gleich bleibt, bis die Anweisung auf den vorbereiteten oder zugewiesenen Zustand zurückgesetzt wird.|  
+|SQL_DIAG_RETURNCODE|SQLRETURN|Rückgabecode, der von der Funktion zurückgegeben wird. Eine Liste der Rückgabecodes finden Sie unter [Rückgabecodes](../../../odbc/reference/develop-app/return-codes-odbc.md). Der Treiber muss SQL_DIAG_RETURNCODE nicht implementieren; Sie wird immer vom Treiber-Manager implementiert. Wenn für das *handle* noch keine Funktion aufgerufen wurde, werden SQL_SUCCESS für SQL_DIAG_RETURNCODE zurückgegeben.|  
+|SQL_DIAG_ROW_COUNT|SQLLEN|Die Anzahl der Zeilen, die von einem INSERT-, DELETE-oder Update-Vorgang betroffen sind, der von **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** oder **SQLSetPos** ausgeführt wird. Es ist Treiber definiert, nachdem eine *Cursor Spezifikation* ausgeführt wurde. Der Inhalt dieses Felds wird nur für Anweisungs Handles definiert. Durch den Aufruf von **SQLGetDiagField** mit einem *DiagIdentifier* von SQL_DIAG_ROW_COUNT auf anderen als einem Anweisungs Handle wird SQL_ERROR zurückgegeben. Die Daten in diesem Feld werden ebenfalls im *rowzählenptr* -Argument von **SQLRowCount** zurückgegeben. Die Daten in diesem Feld werden nach jedem nicht-Diagnose Funktions Aufrufwert zurückgesetzt, während die von **SQLRowCount** zurückgegebene Zeilen Anzahl gleich bleibt, bis die Anweisung auf den vorbereiteten oder zugewiesenen Zustand zurückgesetzt wird.|  
   
 ## <a name="record-fields"></a>Daten Satz Felder  
  Die in der folgenden Tabelle aufgeführten Daten Satz Felder können im *DiagIdentifier* -Argument enthalten sein.  
   
-|DiagIdentifier|Rückgabetyp|Rückgabe|  
+|DiagIdentifier|Rückgabetyp|Gibt zurück|  
 |--------------------|-----------------|-------------|  
 |SQL_DIAG_CLASS_ORIGIN|SQLCHAR|Eine Zeichenfolge, die das Dokument angibt, das den Klassen Teil des SQLSTATE-Werts in diesem Datensatz definiert. Der zugehörige Wert ist "ISO 9075" für alle Sqlstates, die von der Open Group-und ISO-Schnittstelle auf der Rufebene definiert werden Bei ODBC-spezifischen Sqlstates (alle, deren SQLSTATE-Klasse "im" ist) lautet der Wert "ODBC 3,0".|  
 |SQL_DIAG_COLUMN_NUMBER|SQLINTEGER|Wenn das SQL_DIAG_ROW_NUMBER Feld eine gültige Zeilennummer in einem Rowset oder einer Gruppe von Parametern ist, enthält dieses Feld den Wert, der die Spaltennummer im Resultset darstellt, oder die Parameter Nummer in der Gruppe von Parametern. Ergebnissatz-Spalten Nummern beginnen immer bei 1; Wenn sich dieser Statusdaten Satz auf eine Lesezeichen Spalte bezieht, kann das Feld den Wert 0 (null) aufweisen. Die Parameter Nummern beginnen bei 1. Der Wert SQL_NO_COLUMN_NUMBER, wenn der Statusdaten Satz keiner Spaltennummer oder Parameter Nummer zugeordnet ist. Wenn der Treiber die Spaltennummer oder die Parameter Nummer nicht ermitteln kann, mit der dieser Datensatz verknüpft ist, enthält dieses Feld den Wert SQL_COLUMN_NUMBER_UNKNOWN.<br /><br /> Der Inhalt dieses Felds wird nur für Anweisungs Handles definiert.|  
@@ -186,7 +186,7 @@ SQLRETURN SQLGetDiagField(
 |SQL_DIAG_SUBCLASS_ORIGIN|SQLCHAR|Eine Zeichenfolge mit dem gleichen Format und den gültigen Werten wie SQL_DIAG_CLASS_ORIGIN, die den definierenden Teil des Unterklassen Teils des SQLSTATE-Codes angibt. Die ODBC-spezifischen Sqlstates, für die "ODBC 3,0" zurückgegeben wird, umfassen Folgendes:<br /><br /> 01s00, 01s01, 01s02, 01s06, 01s07, 07s01, 08s01, 21s01, 21s02, 25s01, 25s02, 25s03, 42s01, 42s02, 42s11, 42s12, 42s21, 42s22, HY095, HY097, HY098, HY099, HY100, HY101, HY105, HY107, HY109, HY110, HY111, HYT00, HYT01, IM001, IM002, IM003, IM004, IM005, IM006, IM007, IM008, IM010, IM011, IM012.|  
   
 ## <a name="values-of-the-dynamic-function-fields"></a>Werte der dynamischen Funktionsfelder  
- In der folgenden Tabelle werden die Werte SQL_DIAG_DYNAMIC_FUNCTION und SQL_DIAG_DYNAMIC_FUNCTION_CODE beschrieben, die für jeden Typ der SQL-Anweisung gelten, die durch einen-Befehl von **SQLExecute** oder **SQLExecDirect**ausgeführt wird. Der Treiber kann den aufgelisteten Treiber definierte Werte hinzufügen.  
+ In der folgenden Tabelle werden die Werte SQL_DIAG_DYNAMIC_FUNCTION und SQL_DIAG_DYNAMIC_FUNCTION_CODE beschrieben, die für jeden Typ der SQL-Anweisung gelten, die durch einen-Befehl von **SQLExecute** oder **SQLExecDirect** ausgeführt wird. Der Treiber kann den aufgelisteten Treiber definierte Werte hinzufügen.  
   
 |SQL-Anweisung<br /><br /> richteten|Wert von <br /><br /> SQL_DIAG_DYNAMIC_FUNCTION|Wert von <br /><br /> SQL_DIAG_DYNAMIC_FUNCTION_CODE|  
 |--------------------------------|-----------------------------------------------|-----------------------------------------------------|  
@@ -219,7 +219,7 @@ SQLRETURN SQLGetDiagField(
 |*Übersetzungs Definition*|"Create Translation"|SQL_DIAG_CREATE_TRANSLATION|  
 |*Update-Anweisungs positioniert*|"Cursor für dynamisches Update"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
 |*Update-Anweisung wurde durchsucht*|"Update where"|SQL_DIAG_UPDATE_WHERE|  
-|Unknown|*leere Zeichenfolge*|SQL_DIAG_UNKNOWN_STATEMENT|  
+|Unbekannt|*leere Zeichenfolge*|SQL_DIAG_UNKNOWN_STATEMENT|  
 
 <!--
 These two malformed table rows were fixed by educated GUESS only.
@@ -259,7 +259,7 @@ n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
 -   Für alle Datensätze, die bestimmte Zeilen betreffen, werden Datensätze nach dem Wert im Feld SQL_DIAG_ROW_NUMBER sortiert. Alle Fehler und Warnungen der ersten betroffenen Zeile werden aufgelistet, und es werden alle Fehler und Warnungen der nächsten Zeile angezeigt usw.  
   
 > [!NOTE]
->  Der ODBC 3 *. x* -Treiber-Manager sortiert keine Statusdaten Sätze in der Diagnose Warteschlange, wenn SQLSTATE 01s01 (Fehler in Zeile) von ODBC 2 zurückgegeben wird *. der x* -Treiber oder, wenn SQLSTATE 01s01 (Fehler in Zeile) von einem ODBC 3 *. x* -Treiber zurückgegeben wird, wenn **SQLExtendedFetch** aufgerufen wird, oder wenn **SQLSetPos** für einen Cursor aufgerufen wird, der mit **SQLExtendedFetch**positioniert wurde.  
+>  Der ODBC 3 *. x* -Treiber-Manager sortiert keine Statusdaten Sätze in der Diagnose Warteschlange, wenn SQLSTATE 01s01 (Fehler in Zeile) von ODBC 2 zurückgegeben wird *. der x* -Treiber oder, wenn SQLSTATE 01s01 (Fehler in Zeile) von einem ODBC 3 *. x* -Treiber zurückgegeben wird, wenn **SQLExtendedFetch** aufgerufen wird, oder wenn **SQLSetPos** für einen Cursor aufgerufen wird, der mit **SQLExtendedFetch** positioniert wurde.  
   
  Innerhalb jeder Zeile oder für alle Datensätze, die keiner Zeile entsprechen oder für die die Zeilennummer unbekannt ist, oder für alle Datensätze mit einer Zeilennummer, die SQL_NO_ROW_NUMBER entspricht, wird der erste aufgeführte Datensatz mithilfe eines Satzes von Sortierregeln bestimmt. Nach dem ersten Datensatz ist die Reihenfolge der anderen Datensätze, die sich auf eine Zeile auswirken, nicht definiert. Eine Anwendung kann nicht davon ausgehen, dass vor Warnungen nach dem ersten Datensatz Fehler auftreten. Anwendungen sollten die gesamte Diagnosedaten Struktur Scannen, um umfassende Informationen über einen erfolglosen Funktions aufzurufen.  
   
@@ -281,6 +281,6 @@ n-definition*|"CREATE DOMAIN"|SQL_DIAG_CREATE_DOMAIN|
 |---------------------------|---------|  
 |Abrufen mehrerer Felder einer Diagnosedaten Struktur|[SQLGetDiagRec-Funktion](sqlgetdiagrec-function.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_gettopologyinfo_TSQL
 - sp_gettopologyinfo
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8bbe8a06-a4aa-4219-8402-12db6a4682c6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0649d6f57ea5bb6f7a12c74e7dbec98053f2ea96
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e6762b60612523b8150b791c3fcef19a82079968
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549767"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197658"
 ---
 # <a name="sp_gettopologyinfo-transact-sql"></a>sp_gettopologyinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ sp_gettopologyinfo [ @request_id = ] request_id
   
 ## <a name="arguments"></a>Argumente  
  [ @request_id =] *request_id*  
- Die ID einer Topologiestatusanforderung. *request_id* ist vom Datentyp **int**und hat den Standardwert NULL. Verwenden Sie zum Abrufen einer ID den @request_id Output-Parameter aus [sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md) , oder Fragen Sie die [Mspeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md) Systemtabelle ab.  
+ Die ID einer Topologiestatusanforderung. *request_id* ist vom Datentyp **int** und hat den Standardwert NULL. Verwenden Sie zum Abrufen einer ID den @request_id Output-Parameter aus [sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md) , oder Fragen Sie die [Mspeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md) Systemtabelle ab.  
   
 ## <a name="result-sets"></a>Resultsets  
  sp_gettopologyinfo gibt ein Resultset zurück, das aus einer einzelnen XML-Spalte besteht. Die Daten in der XML-Spalte sind identisch mit den Daten in der [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) -Systemtabelle.  
@@ -47,7 +47,7 @@ sp_gettopologyinfo [ @request_id = ] request_id
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_gettopologyinfo wird in der Peer-zu-Peer-Transaktionsreplikation verwendet. Führen Sie [sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md) aus, bevor Sie sp_gettopologyinfo ausführen. Diese Prozeduren werden vom Assistenten zum Konfigurieren der Peer-zu-Peer-Topologie verwendet, können jedoch auch direkt verwendet werden, wenn Sie Topologiedaten in einem XML-Format benötigen. Wenn Sie Tabellen Ergebnisse bevorzugen, Fragen Sie die [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) Systemtabelle ab.  
   
 ## <a name="permissions"></a>Berechtigungen  
