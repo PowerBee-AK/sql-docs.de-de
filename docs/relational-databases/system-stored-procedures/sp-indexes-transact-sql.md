@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_indexes_TSQL
 - sp_indexes
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 133a7fb36ff65444853c1bdeb44fdefabe4aab4f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f11b9a32c05450dbe97c9130d774e4d92226fcdb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547891"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198510"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,22 +46,22 @@ sp_indexes [ @table_server = ] 'table_server'
   
 ## <a name="arguments"></a>Argumente  
  [ @table_server =] '*table_server*'  
- Der Name eines Verbindungsservers, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, und für den Tabelleninformationen angefordert werden. *table_server* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+ Der Name eines Verbindungsservers, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, und für den Tabelleninformationen angefordert werden. *table_server* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
  [ @table_name =] '*table_name*'  
- Der Name der Remotetabelle, für die Indexinformationen bereitzustellen sind. *table_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn der Wert NULL festgelegt ist, werden alle Tabellen in der angegebenen Datenbank zurückgegeben.  
+ Der Name der Remotetabelle, für die Indexinformationen bereitzustellen sind. *table_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn der Wert NULL festgelegt ist, werden alle Tabellen in der angegebenen Datenbank zurückgegeben.  
   
  [ @table_schema =] '*TABLE_SCHEMA*'  
- Gibt das Tabellenschema an. In der Umgebung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht dies dem Tabellenbesitzer. *TABLE_SCHEMA* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+ Gibt das Tabellenschema an. In der Umgebung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht dies dem Tabellenbesitzer. *TABLE_SCHEMA* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
  [ @table_catalog =] '*table_db*'  
- Der Name der Datenbank, in der sich *table_name* befindet. *table_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn der Wert NULL ist, *table_db* standardmäßig auf **Master**.  
+ Der Name der Datenbank, in der sich *table_name* befindet. *table_db* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn der Wert NULL ist, *table_db* standardmäßig auf **Master**.  
   
  [ @index_name =] '*index_name*'  
- Der Name des Indexes, für den Informationen angefordert werden. *Index* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+ Der Name des Indexes, für den Informationen angefordert werden. *Index* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
  [ @is_unique =] '*is_unique*'  
- Der Typ des Indexes, für den Informationen zurückgegeben werden sollen. *is_unique* ist vom Typ **Bit**und hat den Standardwert NULL. die folgenden Werte sind möglich:  
+ Der Typ des Indexes, für den Informationen zurückgegeben werden sollen. *is_unique* ist vom Typ **Bit** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  

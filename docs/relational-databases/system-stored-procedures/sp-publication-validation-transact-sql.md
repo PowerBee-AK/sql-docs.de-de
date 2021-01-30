@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_publication_validation
 - sp_publication_validation_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dccdb0f168b7b1e113a38c64a111e35e5bf62d77
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7e785892f73b45b6e5f6f20944c9c15ee88e8f63
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534992"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199579"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 `[ @rowcount_only = ] 'rowcount_only'` Gibt an, ob nur die Zeilen Anzahl für die Tabelle zurückgegeben werden soll. *rowcount_only* ist vom Datentyp **smallint** und kann einen der folgenden Werte aufweisen.  
   
@@ -57,12 +57,12 @@ sp_publication_validation [ @publication = ] 'publication'
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|Führt eine vollständige Zählung mit COUNT(*) durch.|  
-|**1**|Führt eine schnelle Anzahl von **sysindexes. Rows**aus. Das zählen von Zeilen in [sys.sysIndizes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) ist wesentlich schneller als das zählen der Zeilen in der eigentlichen Tabelle. Da [sys.sysIndizes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) jedoch verzögert aktualisiert werden, ist die Zeilen Anzahl möglicherweise nicht korrekt.|  
+|**1**|Führt eine schnelle Anzahl von **sysindexes. Rows** aus. Das zählen von Zeilen in [sys.sysIndizes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) ist wesentlich schneller als das zählen der Zeilen in der eigentlichen Tabelle. Da [sys.sysIndizes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) jedoch verzögert aktualisiert werden, ist die Zeilen Anzahl möglicherweise nicht korrekt.|  
 |**2** (Standardwert)|Führt eine bedingte schnelle Zählung durch, indem zunächst versucht wird, die schnelle Methode anzuwenden. Ergeben sich mit der schnellen Methode Unterschiede, wird die Methode für die vollständige Zählung verwendet. Wenn *expected_rowcount* NULL ist und die gespeicherte Prozedur verwendet wird, um den Wert zu erhalten, wird immer eine vollständige Anzahl (*) verwendet.|  
   
-`[ @shutdown_agent = ] 'shutdown_agent'` Gibt an, ob der Verteilungs-Agent sofort nach Abschluss der Überprüfung heruntergefahren werden soll. *shutdown_agent* ist vom Typ **Bit**. der Standardwert ist **0**. Bei **0**wird der Replikations-Agent nicht heruntergefahren. Wenn der Wert **1**ist, wird der Replikations-Agent nach der Überprüfung des letzten Artikels heruntergefahren.  
+`[ @shutdown_agent = ] 'shutdown_agent'` Gibt an, ob der Verteilungs-Agent sofort nach Abschluss der Überprüfung heruntergefahren werden soll. *shutdown_agent* ist vom Typ **Bit**. der Standardwert ist **0**. Bei **0** wird der Replikations-Agent nicht heruntergefahren. Wenn der Wert **1** ist, wird der Replikations-Agent nach der Überprüfung des letzten Artikels heruntergefahren.  
   
-`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  der *Verleger* sollte nicht verwendet werden, wenn die Überprüfung auf einem Verleger angefordert wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -70,7 +70,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_publication_validation** wird bei der Transaktions Replikation verwendet.  
   
  **sp_publication_validation** können jederzeit aufgerufen werden, nachdem die Artikel, die der Veröffentlichung zugeordnet sind, aktiviert wurden. Die Prozedur kann (einmalig) manuell ausgeführt werden oder als Bestandteil eines regelmäßig geplanten Auftrags, der die Daten überprüft.  
@@ -78,7 +78,7 @@ sp_publication_validation [ @publication = ] 'publication'
  Wenn Ihre Anwendung Abonnenten mit sofortigem Update hat, können **sp_publication_validation** falsche Fehler erkennen. **sp_publication_validation** berechnet zuerst die Zeilen Anzahl oder Prüfsumme auf dem Verleger und dann auf dem Abonnenten. Da der sofort aktualisierbare Trigger ein Update vom Abonnenten zum Verleger möglicherweise weitergibt, nachdem die Zeilenanzahl oder Prüfsumme am Verleger vollständig berechnet wurde, aber bevor die Zeilenanzahl oder Prüfsumme am Abonnenten vollständig berechnet ist, können sich die Werte möglicherweise ändern. Um sicherzustellen, dass die Werte auf dem Abonnenten und auf dem Verleger sich nicht ändern, während eine Veröffentlichung überprüft wird, müssen Sie den MS DTC-Dienst (Microsoft Distributed Transaction Coordinator) auf dem Verleger für die Zeit der Überprüfung beenden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_publication_validation**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_publication_validation** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Überprüfen von Daten auf dem Abonnenten](../../relational-databases/replication/validate-data-at-the-subscriber.md)   

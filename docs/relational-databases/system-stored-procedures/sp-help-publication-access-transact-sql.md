@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_publication_access
 - sp_help_publication_access_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 38ef2fe7710d4716d9b544086f29333c96384bf6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b33b79c6e632eef28feaa5fa8b3f605018b09953
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535234"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199600"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,9 +41,9 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung, auf die zugegriffen werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, auf die zugegriffen werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @return_granted = ] 'return_granted'` Die Anmelde-ID. *return_granted* ist vom Typ **Bit**und hat den Standardwert 1. Wenn **0** angegeben und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die-Authentifizierung verwendet wird, werden die verfügbaren Anmeldungen, die auf dem Verleger, aber nicht auf dem Verteiler angezeigt werden, zurückgegeben. Wenn **0** angegeben ist und die Windows-Authentifizierung verwendet wird, werden die Anmeldungen zurückgegeben, denen der Zugriff auf dem Verleger oder dem Verteiler nicht ausdrücklich verweigert wird.  
+`[ @return_granted = ] 'return_granted'` Die Anmelde-ID. *return_granted* ist vom Typ **Bit** und hat den Standardwert 1. Wenn **0** angegeben und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die-Authentifizierung verwendet wird, werden die verfügbaren Anmeldungen, die auf dem Verleger, aber nicht auf dem Verteiler angezeigt werden, zurückgegeben. Wenn **0** angegeben ist und die Windows-Authentifizierung verwendet wird, werden die Anmeldungen zurückgegeben, denen der Zugriff auf dem Verleger oder dem Verteiler nicht ausdrücklich verweigert wird.  
   
 `[ @login = ] 'login'` Die Standard-Sicherheits Anmelde-ID. *Login* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **%** .  
   
@@ -64,13 +64,13 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_help_publication_access** wird bei allen Replikations Typen verwendet.  
   
- Wenn sowohl **Isntname** als auch **Isntgroup** im Resultset den Wert **0**haben, wird davon ausgegangen, dass die Anmeldung eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung ist.  
+ Wenn sowohl **Isntname** als auch **Isntgroup** im Resultset den Wert **0** haben, wird davon ausgegangen, dass die Anmeldung eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung ist.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_help_publication_access**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_help_publication_access** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_grant_publication_access &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   

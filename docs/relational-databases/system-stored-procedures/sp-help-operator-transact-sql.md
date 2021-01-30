@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_operator
 - sp_help_operator_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2cbf7c84c22998b5ee7e43fadad6a42cf02d17b8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 03346efcec8571ed6bf586a09a6da3631da28dc4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535380"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199669"
 ---
 # <a name="sp_help_operator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sp_help_operator
 ## <a name="arguments"></a>Argumente  
 `[ @operator_name = ] 'operator_name'` Der Name des Operators. *operator_name* ist vom **Datentyp vom Datentyp sysname**. Wenn *operator_name* nicht angegeben wird, werden Informationen zu allen Operatoren zurückgegeben.  
   
-`[ @operator_id = ] operator_id` Die ID des Operators, für den Informationen angefordert werden. *operator_id*ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @operator_id = ] operator_id` Die ID des Operators, für den Informationen angefordert werden. *operator_id* ist vom Datentyp **int** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Es muss entweder *operator_id* oder *operator_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
@@ -78,11 +78,11 @@ sp_help_operator
 |**last_netsend_time**|**int**|Uhrzeit, zu der der Operator zuletzt per Netzwerk-Popupnachricht benachrichtigt wurde.|  
 |**category_name**|**sysname**|Name der Operatorkategorie, zu der dieser Operator gehört.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_help_operator** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
+ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
   
 -   **SQLAgentUserRole**  
   
@@ -104,7 +104,7 @@ EXEC dbo.sp_help_operator
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [sp_add_operator &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_update_operator &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   

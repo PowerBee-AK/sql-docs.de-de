@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_delete_policy_execution_history
 - sp_syspolicy_delete_policy_execution_history_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 99a17425f74b1ae2f5db7c4a6002e27ca7780f21
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 221a295d5c1bcf3b5f8890bca991edc6675e67af
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485622"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201218"
 ---
 # <a name="sp_syspolicy_delete_policy_execution_history-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @policy_id = ] policy_id` Der Bezeichner der Richtlinie, für die Sie den Ausführungs Verlauf löschen möchten. *policy_id* ist vom Datentyp **int**und ist erforderlich. Kann den Wert NULL haben.  
+`[ @policy_id = ] policy_id` Der Bezeichner der Richtlinie, für die Sie den Ausführungs Verlauf löschen möchten. *policy_id* ist vom Datentyp **int** und ist erforderlich. Kann den Wert NULL haben.  
   
-`[ @oldest_date = ] 'oldest_date'` Ist das älteste Datum, für das Sie den Richtlinien Ausführungs Verlauf beibehalten möchten. Alle Ausführungsverläufe, die vor diesem Datum liegen, werden gelöscht. *oldest_date* ist vom **Datentyp DateTime**und ist erforderlich. Kann den Wert NULL haben.  
+`[ @oldest_date = ] 'oldest_date'` Ist das älteste Datum, für das Sie den Richtlinien Ausführungs Verlauf beibehalten möchten. Alle Ausführungsverläufe, die vor diesem Datum liegen, werden gelöscht. *oldest_date* ist vom **Datentyp DateTime** und ist erforderlich. Kann den Wert NULL haben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -51,7 +51,7 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ## <a name="remarks"></a>Bemerkungen  
  Sie müssen sp_syspolicy_delete_policy_execution_history im Kontext der Systemdatenbank msdb ausführen.  
   
- Sie können die folgende Abfrage verwenden, um Werte für *policy_id*abzurufen und Datumsangaben zum Ausführungs Verlauf anzuzeigen:  
+ Sie können die folgende Abfrage verwenden, um Werte für *policy_id* abzurufen und Datumsangaben zum Ausführungs Verlauf anzuzeigen:  
   
 ```  
 SELECT a.name AS N'policy_name', b.policy_id, b.start_date, b.end_date  
@@ -62,11 +62,11 @@ ON a.policy_id = b.policy_id
   
  Das folgende Verhalten wird angewendet, wenn Sie für einen oder beide Werte NULL angeben:  
   
--   Um den gesamten Richtlinien Ausführungs Verlauf zu löschen, geben Sie für *policy_id* und für *oldest_date*NULL an.  
+-   Um den gesamten Richtlinien Ausführungs Verlauf zu löschen, geben Sie für *policy_id* und für *oldest_date* NULL an.  
   
--   Um den gesamten Richtlinien Ausführungs Verlauf für eine bestimmte Richtlinie zu löschen, geben Sie einen Richtlinien Bezeichner für *policy_id*an, und geben Sie NULL als *oldest_date*an.  
+-   Um den gesamten Richtlinien Ausführungs Verlauf für eine bestimmte Richtlinie zu löschen, geben Sie einen Richtlinien Bezeichner für *policy_id* an, und geben Sie NULL als *oldest_date* an.  
   
--   Um den Richtlinien Ausführungs Verlauf für alle Richtlinien vor einem bestimmten Datum zu löschen, geben Sie für *policy_id*NULL an, und geben Sie ein Datum für *oldest_date*an.  
+-   Um den Richtlinien Ausführungs Verlauf für alle Richtlinien vor einem bestimmten Datum zu löschen, geben Sie für *policy_id* NULL an, und geben Sie ein Datum für *oldest_date* an.  
   
  Um den Richtlinienausführungsverlauf zu archivieren, können Sie im Objekt-Explorer das Protokoll zum Richtlinienverlauf öffnen und den Ausführungsverlauf in eine Datei exportieren. Erweitern Sie zum Zugreifen auf das Richtlinien Verlaufs Protokoll **Verwaltung**, klicken Sie mit der rechten Maustaste auf **Richtlinien Verwaltung**, und klicken Sie dann auf **Verlauf anzeigen**.  
   
@@ -86,7 +86,7 @@ EXEC msdb.dbo.sp_syspolicy_delete_policy_execution_history @policy_id = 7
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Prozeduren der Richtlinien basierten Verwaltung &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_set_config_history_retention &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
  [sp_syspolicy_purge_history &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-purge-history-transact-sql.md)  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_notification
 - sp_help_notification_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cce6fd1c7645857019399dae9934c8b730e14f77
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d37d091fdb380f0a08f3f0064f2ce408f439eee8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536146"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199983"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,17 +45,17 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @object_type = ] 'object_type'` Der Typ der Informationen, die zurückgegeben werden sollen. *object_type*ist vom Typ **char (9)** und hat keinen Standardwert. *object_type* kann eine Warnung sein, in der die Warnungen aufgelistet werden, die dem angegebenen Operator Namen oder den Operatoren zugewiesen*sind, die* die für den angegebenen Warnungs Namen verantwortlichen Operatoren auflistet *.*  
+`[ @object_type = ] 'object_type'` Der Typ der Informationen, die zurückgegeben werden sollen. *object_type* ist vom Typ **char (9)** und hat keinen Standardwert. *object_type* kann eine Warnung sein, in der die Warnungen aufgelistet werden, die dem angegebenen Operator Namen oder den Operatoren zugewiesen *sind, die* die für den angegebenen Warnungs Namen verantwortlichen Operatoren auflistet *.*  
   
-`[ @name = ] 'name'` Ein Operator Name (wenn *object_type* ist Operatoren) oder ein Warnungs Name (wenn *object_type* Warnungen ist). *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @name = ] 'name'` Ein Operator Name (wenn *object_type* ist Operatoren) oder ein Warnungs Name (wenn *object_type* Warnungen ist). *Name ist vom Datentyp* **vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @enum_type = ] 'enum_type'` Die *object_type*Informationen, die zurückgegeben werden. *enum_type* ist in den meisten Fällen tatsächlich. *enum_type*ist vom Typ **char (10)** und hat keinen Standardwert. die folgenden Werte sind möglich:  
+`[ @enum_type = ] 'enum_type'` Die *object_type* Informationen, die zurückgegeben werden. *enum_type* ist in den meisten Fällen tatsächlich. *enum_type* ist vom Typ **char (10)** und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|ACTUAL|Listet nur die *object_types* auf, die dem *Namen*zugeordnet sind.|  
-|ALL|Listet alle*object_types* auf, einschließlich derjenigen, die nicht mit dem *Namen*verknüpft sind.|  
-|TARGET|Listet nur die *object_types* auf, die mit dem angegebenen *target_name*übereinstimmen, unabhängig von der Zuordnung mit dem*Namen*.|  
+|ACTUAL|Listet nur die *object_types* auf, die dem *Namen* zugeordnet sind.|  
+|ALL|Listet alle *object_types* auf, einschließlich derjenigen, die nicht mit dem *Namen* verknüpft sind.|  
+|TARGET|Listet nur die *object_types* auf, die mit dem angegebenen *target_name* übereinstimmen, unabhängig von der Zuordnung mit dem *Namen*.|  
   
 `[ @notification_method = ] notification_method` Ein numerischer Wert, der die zurück zugebende Benachrichtigungs Methoden Spalten bestimmt. *notification_method* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich:  
   
@@ -66,13 +66,13 @@ sp_help_notification
 |**4**|Nettsend: gibt nur die **use_netsend** Spalte zurück.|  
 |**7**|Alle: Alle Spalten werden zurückgegeben.|  
   
-`[ @target_name = ] 'target_name'` Ein Warnungs Name, nach dem gesucht werden soll (wenn *object_type* Warnungen ist), oder ein Operator Name, nach dem gesucht werden soll (wenn *object_type* Operator ist). *target_name* ist nur erforderlich, wenn *enum_type* Ziel ist. *target_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @target_name = ] 'target_name'` Ein Warnungs Name, nach dem gesucht werden soll (wenn *object_type* Warnungen ist), oder ein Operator Name, nach dem gesucht werden soll (wenn *object_type* Operator ist). *target_name* ist nur erforderlich, wenn *enum_type* Ziel ist. *target_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 ## <a name="return-code-valves"></a>Rückgabe Code Ventile  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
- Wenn *object_type* **Warnungen**sind, listet das Resultset alle Warnungen für einen bestimmten Operator auf.  
+ Wenn *object_type* **Warnungen** sind, listet das Resultset alle Warnungen für einen bestimmten Operator auf.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -85,7 +85,7 @@ sp_help_notification
 |**has_pager**|**int**|Anzahl von Pagerbenachrichtigungen, die für diese Warnung gesendet wurden.|  
 |**has_netsend**|**int**|Anzahl der für diese Warnung gesendeten **net send** -Benachrichtigungen.|  
   
- Wenn **object_type** **Operator**ist, listet das Resultset alle Operatoren für eine bestimmte Warnung auf.  
+ Wenn **object_type** **Operator** ist, listet das Resultset alle Operatoren für eine bestimmte Warnung auf.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -98,7 +98,7 @@ sp_help_notification
 |**has_pager**|**int**|Operator besitzt eine Pageradresse:<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
 |**has_netsend**|**int**|Für den Operator wurde eine net send-Benachrichtigung konfiguriert.<br /><br /> **1** = Ja<br /><br /> **0** = Nein|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Diese gespeicherte Prozedur muss von der **msdb** -Datenbank aus ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  

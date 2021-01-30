@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_adjustpublisheridentityrange_TSQL
 - sp_adjustpublisheridentityrange
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cdb8f12f5c5ff3c3c01f5d7cd18827b2fec0e9c8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5855ffeceff68c10e0eac2089a95d2b0184cd327
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541978"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198350"
 ---
 # <a name="sp_adjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,24 +40,24 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung, in der neue Identitäts Bereiche neu zugewiesen werden. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, in der neue Identitäts Bereiche neu zugewiesen werden. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @table_name = ] 'table_name'` Der Name der Tabelle, in der neue Identitäts Bereiche erneut zugeordnet werden. *table_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @table_name = ] 'table_name'` Der Name der Tabelle, in der neue Identitäts Bereiche erneut zugeordnet werden. *table_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @table_owner = ] 'table_owner'` Der Besitzer der Tabelle auf dem Verleger. *TABLE_OWNER* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *TABLE_OWNER* nicht angegeben ist, wird der Name des aktuellen Benutzers verwendet.  
+`[ @table_owner = ] 'table_owner'` Der Besitzer der Tabelle auf dem Verleger. *TABLE_OWNER* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn *TABLE_OWNER* nicht angegeben ist, wird der Name des aktuellen Benutzers verwendet.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_adjustpublisheridentityrange** wird bei allen Replikations Typen verwendet.  
   
  Für eine Veröffentlichung mit aktiviertem automatischem Identitätsbereich ist der Verteilungs- oder Merge-Agent für die automatische Anpassung des Identitätsbereichs in einer Veröffentlichung auf der Basis des Schwellenwerts verantwortlich. Wenn jedoch aus irgendeinem Grund die Verteilungs-Agent oder Merge-Agent nicht innerhalb eines bestimmten Zeitraums ausgeführt wurden und die Identitäts Bereichs Ressource stark bis zum Schwellenwert verbraucht wurde, können Benutzer **sp_adjustpublisheridentityrange** aufzurufen, um einen neuen Wertebereich für einen Verleger zuzuordnen.  
   
- Beim Ausführen **sp_adjustpublisheridentityrange**muss entweder die *Veröffentlichung* oder die *table_name* angegeben werden. Wenn beide oder keiner der Parameter angegeben wird, wird ein Fehler zurückgegeben.  
+ Beim Ausführen **sp_adjustpublisheridentityrange** muss entweder die *Veröffentlichung* oder die *table_name* angegeben werden. Wenn beide oder keiner der Parameter angegeben wird, wird ein Fehler zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_adjustpublisheridentityrange**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_adjustpublisheridentityrange** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Replizieren von Identitäts Spalten](../../relational-databases/replication/publish/replicate-identity-columns.md)   

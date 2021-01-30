@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: wiassaf
 ms.technology: performance
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_exec_query_optimizer_memory_gateways_TSQL
 - dm_exec_query_optimizer_memory_gateways
@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a87f08bd2992d752b57af9519d351c198cb4d78b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6ff3adb52a968957faead5453e266ec733df38f4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477231"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198529"
 ---
 # <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 
@@ -33,7 +33,7 @@ ms.locfileid: "97477231"
 
 Gibt den aktuellen Status von Ressourcen Semaphoren zurück, die zur Drosselung der gleichzeitigen Abfrageoptimierung verwendet werden.
 
-|Spalte|Typ|Beschreibung|  
+|Spalte|Typ|BESCHREIBUNG|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|Ressourcenpool-ID unter Resource Governor|  
 |**name**|**sysname**|Name der Kompilierungs Gate (kleines Gateway, mittleres Gateway, großes Gateway)|
@@ -51,7 +51,7 @@ SQL Server erfordert die View Server State-Berechtigung auf dem Server.
 Azure SQL-Datenbank erfordert die VIEW DATABASE STATE-Berechtigung in der Datenbank.
 
 
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
 SQL Server verwendet einen mehrstufigen gatewayansatz, um die Anzahl zulässiger gleichzeitiger Kompilierungen zu drosseln.  Es werden drei Gateways verwendet, einschließlich klein, Mittel und groß. Gateways helfen, die Erschöpfung der Gesamtspeicher Ressourcen durch größere Kompilierungs Arbeitsspeicher-Consumer zu vermeiden.
 
 Wartet auf ein gatewayergebnis bei verzögerter Kompilierung. Zusätzlich zu den Verzögerungen bei der Kompilierung verfügen drosselte Anforderungen über eine zugeordnete RESOURCE_SEMAPHORE_QUERY_COMPILE Wartetyp Akkumulation. Der RESOURCE_SEMAPHORE_QUERY_COMPILE Wartetyp weist möglicherweise darauf hin, dass Abfragen eine große Menge an Arbeitsspeicher für die Kompilierung verwenden und dass der Arbeitsspeicher erschöpft ist, oder ob ausreichend Arbeitsspeicher verfügbar ist, aber die verfügbaren Einheiten in einem bestimmten Gateway sind erschöpft. Die Ausgabe von **sys.dm_exec_query_optimizer_memory_gateways** kann zur Problembehandlung bei Szenarien verwendet werden, in denen nicht genügend Arbeitsspeicher zum Kompilieren eines Abfrage Ausführungs Plans vorhanden war.  

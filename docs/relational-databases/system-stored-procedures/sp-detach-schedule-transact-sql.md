@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_detach_schedule
 - sp_detach_schedule_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 38b63370a0bf4cbfff2206cf5043f71dc9f1667f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 513287fadf671cc645ffa210e96f56615e237983
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549830"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200750"
 ---
 # <a name="sp_detach_schedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,21 +43,21 @@ sp_detach_schedule
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id` Die ID des Auftrags, aus dem der Zeitplan entfernt werden soll. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die ID des Auftrags, aus dem der Zeitplan entfernt werden soll. *job_id* ist vom Datentyp **uniqueidentifier** und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'` Der Name des Auftrags, aus dem der Zeitplan entfernt werden soll. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags, aus dem der Zeitplan entfernt werden soll. *job_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
-`[ @schedule_id = ] schedule_id` Die Zeitplan-ID des Zeitplans, der aus dem Auftrag entfernt werden soll. *schedule_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @schedule_id = ] schedule_id` Die Zeitplan-ID des Zeitplans, der aus dem Auftrag entfernt werden soll. *schedule_id* ist vom Datentyp **int** und hat den Standardwert NULL.  
   
-`[ @schedule_name = ] 'schedule_name'` Der Name des Zeitplans, der aus dem Auftrag entfernt werden soll. *schedule_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @schedule_name = ] 'schedule_name'` Der Name des Zeitplans, der aus dem Auftrag entfernt werden soll. *schedule_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Es muss entweder *schedule_id* oder *schedule_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` Gibt an, ob nicht verwendete Auftrags Zeitpläne gelöscht werden sollen. *delete_unused_schedule* ist vom Typ **Bit**. der Standardwert ist **0**. Dies bedeutet, dass alle Zeitpläne beibehalten werden, auch wenn keine Aufträge auf Sie verweisen. Wenn der Wert auf **1**festgelegt ist, werden nicht verwendete Auftrags Zeitpläne gelöscht, wenn keine Aufträge darauf verweisen.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` Gibt an, ob nicht verwendete Auftrags Zeitpläne gelöscht werden sollen. *delete_unused_schedule* ist vom Typ **Bit**. der Standardwert ist **0**. Dies bedeutet, dass alle Zeitpläne beibehalten werden, auch wenn keine Aufträge auf Sie verweisen. Wenn der Wert auf **1** festgelegt ist, werden nicht verwendete Auftrags Zeitpläne gelöscht, wenn keine Aufträge darauf verweisen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -66,7 +66,7 @@ sp_detach_schedule
  Keine  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
+ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
   
 -   **SQLAgentUserRole**  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_peerconflictdetection
 - sp_help_peerconflictdetection_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 960d2a58e01fcb2352fe68d60564534d43d4faf3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 90cd963b22cffd11c400f18a91f2badefff2e799
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89527697"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199605"
 ---
 # <a name="sp_help_peerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argumente  
  [ @publication =] '*Veröffentlichung*'  
- Der Name der Veröffentlichung, für die Informationen zurückgegeben werden sollen. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+ Der Name der Veröffentlichung, für die Informationen zurückgegeben werden sollen. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
  [ @timeout =] *Timeout*  
  Gibt den Zeitraum in Sekunden an, nachdem für die Prozedur ein Timeout eintritt, während auf die Antwort von jedem Knoten in der Topologie gewartet wird. Wenn die Topologie einen schreibgeschützten Abonnenten enthält, ist die Angabe eines Timeoutwerts nicht gültig. Schreibgeschützte Abonnenten reagieren nie auf einen Aufruf von dieser Prozedur. *Timeout* ist vom Datentyp **int**. der Standardwert ist 60.  
@@ -57,7 +57,7 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_help_peerconflictdetection wird in der Peer-zu-Peer-Transaktionsreplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

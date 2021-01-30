@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQL data types [ODBC]
 - SQL data types [ODBC], about SQL data types
@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8209463c3c316a5bd2e45a2d7b08eb65b3cb113d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e15771f52af0830f07f135453d08f4355a3fae8f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483153"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199869"
 ---
 # <a name="sql-data-types"></a>SQL-Datentypen
-Jedes DBMS definiert seine eigenen SQL-Typen. Jeder ODBC-Treiber macht nur die SQL-Datentypen verfügbar, die das zugehörige DBMS definiert. Informationen dazu, wie ein Treiber DBMS-SQL-Typen den ODBC-definierten SQL-typbezeichgern zuordnet und wie ein Treiber DBMS-SQL-Typen eigenen treiberspezifischen SQL-typbezeichatoren zuordnet, wird durch einen **SQLGetTypeInfo-Befehl**zurückgegeben. Ein Treiber gibt auch die SQL-Datentypen zurück, wenn die Datentypen von Spalten und Parametern durch Aufrufe von **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **sqlprocedurecolrens**und **SQLSpecialColumns**beschrieben werden.  
+Jedes DBMS definiert seine eigenen SQL-Typen. Jeder ODBC-Treiber macht nur die SQL-Datentypen verfügbar, die das zugehörige DBMS definiert. Informationen dazu, wie ein Treiber DBMS-SQL-Typen den ODBC-definierten SQL-typbezeichgern zuordnet und wie ein Treiber DBMS-SQL-Typen eigenen treiberspezifischen SQL-typbezeichatoren zuordnet, wird durch einen **SQLGetTypeInfo-Befehl** zurückgegeben. Ein Treiber gibt auch die SQL-Datentypen zurück, wenn die Datentypen von Spalten und Parametern durch Aufrufe von **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **sqlprocedurecolrens** und **SQLSpecialColumns** beschrieben werden.  
   
 > [!NOTE]  
 >  Die SQL-Datentypen sind in den SQL_DESC_ Felder CONCISE_TYPE, SQL_DESC_TYPE und SQL_DESC_DATETIME_INTERVAL_CODE der Implementierungs Deskriptoren enthalten. Die Eigenschaften der SQL-Datentypen sind in den Feldern SQL_DESC_PRECISION, SQL_DESC_SCALE, SQL_DESC_LENGTH und SQL_DESC_OCTET_LENGTH der Implementierungs Deskriptoren enthalten. Weitere Informationen finden Sie unter [Datentyp Bezeichner und Deskriptoren](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) weiter unten in diesem Anhang.  
   
- Ein bestimmter Treiber und eine Datenquelle unterstützen nicht notwendigerweise alle SQL-Datentypen, die in diesem Anhang definiert sind. Die Unterstützung eines Treibers für SQL-Datentypen hängt von der Ebene von SQL-92 ab, der der Treiber entspricht. Um die vom Treiber unterstützte Ebene der SQL-92-Grammatik zu ermitteln, ruft eine Anwendung **SQLGetInfo** mit dem SQL_SQL_CONFORMANCE Informationstyp auf. Darüber hinaus können ein bestimmter Treiber und eine Datenquelle zusätzliche, Treiber spezifische SQL-Datentypen unterstützen. Um zu ermitteln, welche Datentypen ein Treiber unterstützt, ruft eine Anwendung **SQLGetTypeInfo**auf. Informationen zu treiberspezifischen SQL-Datentypen finden Sie in der Dokumentation des Treibers. Informationen zu den Datentypen in einer bestimmten Datenquelle finden Sie in der Dokumentation für diese Datenquelle.  
+ Ein bestimmter Treiber und eine Datenquelle unterstützen nicht notwendigerweise alle SQL-Datentypen, die in diesem Anhang definiert sind. Die Unterstützung eines Treibers für SQL-Datentypen hängt von der Ebene von SQL-92 ab, der der Treiber entspricht. Um die vom Treiber unterstützte Ebene der SQL-92-Grammatik zu ermitteln, ruft eine Anwendung **SQLGetInfo** mit dem SQL_SQL_CONFORMANCE Informationstyp auf. Darüber hinaus können ein bestimmter Treiber und eine Datenquelle zusätzliche, Treiber spezifische SQL-Datentypen unterstützen. Um zu ermitteln, welche Datentypen ein Treiber unterstützt, ruft eine Anwendung **SQLGetTypeInfo** auf. Informationen zu treiberspezifischen SQL-Datentypen finden Sie in der Dokumentation des Treibers. Informationen zu den Datentypen in einer bestimmten Datenquelle finden Sie in der Dokumentation für diese Datenquelle.  
   
 > [!IMPORTANT]  
 >  Die Tabellen in diesem Anhang sind nur Richtlinien und zeigen in der Regel verwendete Namen, Bereiche und Grenzwerte für SQL-Datentypen an. Eine bestimmte Datenquelle unterstützt möglicherweise nur einige der aufgelisteten Datentypen, und die Merkmale der unterstützten Datentypen können sich von den aufgelisteten Datentypen unterscheiden.  
@@ -76,17 +76,17 @@ Jedes DBMS definiert seine eigenen SQL-Typen. Jeder ODBC-Treiber macht nur die S
 |SQL_INTERVAL_MINUTE_TO_SECOND [7]|Intervall Minute (*p*) bis Sekunde (*q*)|Anzahl der Minuten/Sekunden zwischen zwei Datums-/Uhrzeitangaben; *p* ist die Genauigkeit der Intervall Spitze, und *q* ist die Genauigkeit in Sekundenbruchteilen.|  
 |SQL_GUID|GUID|GUID mit fester Länge.|  
   
- [1] Dies ist der Wert, der in der DATA_TYPE-Spalte durch einen **SQLGetTypeInfo-Befehl**zurückgegeben wird.  
+ [1] Dies ist der Wert, der in der DATA_TYPE-Spalte durch einen **SQLGetTypeInfo-Befehl** zurückgegeben wird.  
   
- [2] Dies ist der Wert, der in der Spalte "Name" und "Create parameams" durch einen **SQLGetTypeInfo-Befehl**zurückgegeben wird. In der Spalte Name wird die Bezeichnung (z. b. Char) zurückgegeben, während die Spalte Create parameams eine durch Trennzeichen getrennte Liste von Erstellungs Parametern (z. b. Genauigkeit, Skala und Länge) zurückgibt.  
+ [2] Dies ist der Wert, der in der Spalte "Name" und "Create parameams" durch einen **SQLGetTypeInfo-Befehl** zurückgegeben wird. In der Spalte Name wird die Bezeichnung (z. b. Char) zurückgegeben, während die Spalte Create parameams eine durch Trennzeichen getrennte Liste von Erstellungs Parametern (z. b. Genauigkeit, Skala und Länge) zurückgibt.  
   
  [3] eine Anwendung verwendet **SQLGetTypeInfo** oder **SQLColAttribute** , um zu bestimmen, ob ein bestimmter Datentyp oder eine bestimmte Spalte in einem Resultset nicht signiert ist.  
   
- [4] SQL_DECIMAL-und SQL_NUMERIC-Datentypen unterscheiden sich nur hinsichtlich ihrer Genauigkeit. Die Genauigkeit einer Dezimalzahl (*p*,*s*) ist eine Implementierungs definierte Dezimal Genauigkeit, die nicht kleiner als *p*ist, wohingegen die Genauigkeit eines numerischen Werts (*p*,*s*) exakt gleich *p*ist.  
+ [4] SQL_DECIMAL-und SQL_NUMERIC-Datentypen unterscheiden sich nur hinsichtlich ihrer Genauigkeit. Die Genauigkeit einer Dezimalzahl (*p*,*s*) ist eine Implementierungs definierte Dezimal Genauigkeit, die nicht kleiner als *p* ist, wohingegen die Genauigkeit eines numerischen Werts (*p*,*s*) exakt gleich *p* ist.  
   
  [5] abhängig von der Implementierung kann die Genauigkeit von SQL_FLOAT entweder 24 oder 53 sein: Wenn es 24 ist, ist der SQL_FLOAT Datentyp identisch mit SQL_REAL. Wenn der Wert 53 ist, ist der SQL_FLOAT-Datentyp mit SQL_DOUBLE identisch.  
   
- [6] in ODBC *3. x*sind die SQL Date-, Time-und Zeitstempel-Datentypen SQL_TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP. in ODBC *2. x*sind die Datentypen SQL_DATE, SQL_TIME und SQL_TIMESTAMP.  
+ [6] in ODBC *3. x* sind die SQL Date-, Time-und Zeitstempel-Datentypen SQL_TYPE_DATE, SQL_TYPE_TIME und SQL_TYPE_TIMESTAMP. in ODBC *2. x* sind die Datentypen SQL_DATE, SQL_TIME und SQL_TIMESTAMP.  
   
  [7] Weitere Informationen zu den Intervall-SQL-Datentypen finden Sie im Abschnitt [interval-Datentypen](../../../odbc/reference/appendixes/interval-data-types.md) weiter unten in diesem Anhang.  
   
@@ -96,4 +96,4 @@ Jedes DBMS definiert seine eigenen SQL-Typen. Jeder ODBC-Treiber macht nur die S
   
  Dieser Abschnitt enthält das folgende Beispiel.  
   
--   [Example SQLGetTypeInfo Result Set (Beispielergebnis des SQLGetTypeInfo-Resultsets)](../../../odbc/reference/appendixes/example-sqlgettypeinfo-result-set.md)
+-   [SQLGetTypeInfo-Resultset – Beispiel](../../../odbc/reference/appendixes/example-sqlgettypeinfo-result-set.md)

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_configure_peerconflictdetection_TSQL
 - sp_configure_peerconflictdetection
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 80ce8df6158ca3c0f7cd37fc045c7bd5987e2e0f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 58e583191ba0c18824715664162f89a7911c466a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546185"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198708"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argumente  
  [ @publication =] '*Veröffentlichung*'  
- Der Name der Veröffentlichung, für die die Konflikterkennung konfiguriert werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+ Der Name der Veröffentlichung, für die die Konflikterkennung konfiguriert werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
  [ @action =] '*Action*'  
  Gibt an, ob die Konflikterkennung für eine Veröffentlichung aktiviert oder deaktiviert werden soll. *Action* ist vom Datentyp **nvarchar (5)**. die folgenden Werte sind möglich:  
@@ -58,7 +58,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 |NULL (Standard)||  
   
  [ @originator_id =] *originator_id*  
- Gibt eine ID für einen Knoten in einer Peer-zu-Peer-Topologie an. *originator_id* ist vom Datentyp **int**und hat den Standardwert NULL. Diese ID wird für die Konflikterkennung verwendet, wenn *Action* auf **enable**festgelegt ist. Geben Sie eine positive ID ungleich 0 an, die in der Topologie noch nicht verwendet wurde. Zum Anzeigen einer Liste der bereits verwendeten IDs fragen Sie die [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) -Systemtabelle ab.  
+ Gibt eine ID für einen Knoten in einer Peer-zu-Peer-Topologie an. *originator_id* ist vom Datentyp **int** und hat den Standardwert NULL. Diese ID wird für die Konflikterkennung verwendet, wenn *Action* auf **enable** festgelegt ist. Geben Sie eine positive ID ungleich 0 an, die in der Topologie noch nicht verwendet wurde. Zum Anzeigen einer Liste der bereits verwendeten IDs fragen Sie die [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) -Systemtabelle ab.  
   
  [ @conflict_retention =] *conflict_retention*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -78,7 +78,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_configure_peerconflictdetection wird in der Peer-zu-Peer-Transaktionsreplikation verwendet. Zur Verwendung der Konflikterkennung müssen auf allen Knoten oder höhere Versionen ausgeführt werden, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und die Erkennung muss für alle Knoten aktiviert sein.  
   
 ## <a name="permissions"></a>Berechtigungen  

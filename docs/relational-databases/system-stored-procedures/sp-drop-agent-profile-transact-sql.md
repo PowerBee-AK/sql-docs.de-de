@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_drop_agent_profile
 - sp_drop_agent_profile_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b884f9ef-ae89-4cbc-a917-532c3ff6ed41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6a3864e61e681ad6465295b1fb43011e8d9f9b19
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9efca5d523d0da05896d1377c16f604ff82a98fd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549813"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200733"
 ---
 # <a name="sp_drop_agent_profile-transact-sql"></a>sp_drop_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,18 +38,18 @@ sp_drop_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @profile_id = ] profile_id` Die ID des Profils, das gelöscht werden soll. *profile_id* ist vom Datentyp **int**und hat keinen Standardwert.  
+`[ @profile_id = ] profile_id` Die ID des Profils, das gelöscht werden soll. *profile_id* ist vom Datentyp **int** und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_drop_agent_profile** wird bei allen Replikations Typen verwendet.  
   
  Die Parameter des angegebenen Profils werden auch aus der **MSagent_parameters** Tabelle gelöscht.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_drop_agent_profile**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_drop_agent_profile** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_add_agent_profile &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   

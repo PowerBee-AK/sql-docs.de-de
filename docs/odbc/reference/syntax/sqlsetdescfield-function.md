@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLSetDescField
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2c21d3a21e863d62a3cc8d685e81c6e3265c1551
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd48da2caec1acba5cfe775a2baa1efaaf886aab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421134"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200966"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField-Funktion
 
@@ -57,10 +57,10 @@ SQLRETURN SQLSetDescField(
  Der Gibt das Feld des Deskriptors an, dessen Wert festgelegt werden soll. Weitere Informationen finden Sie unter "*fieldidentifier* -Argument" im Abschnitt "comments".  
   
  *ValuePtr*  
- Der Zeiger auf einen Puffer, der die Deskriptorinformationen enthält, oder ein ganzzahliger Wert. Der Datentyp hängt vom Wert von *fieldidentifier*ab. Wenn *ValuePtr* ein ganzzahliger Wert ist, kann er je nach Wert des *fieldidentifier* -Arguments als 8 Bytes (sqllen), 4 Bytes (SQLINTEGER) oder 2 Bytes (SQLSMALLINT) betrachtet werden.  
+ Der Zeiger auf einen Puffer, der die Deskriptorinformationen enthält, oder ein ganzzahliger Wert. Der Datentyp hängt vom Wert von *fieldidentifier* ab. Wenn *ValuePtr* ein ganzzahliger Wert ist, kann er je nach Wert des *fieldidentifier* -Arguments als 8 Bytes (sqllen), 4 Bytes (SQLINTEGER) oder 2 Bytes (SQLSMALLINT) betrachtet werden.  
   
  *BufferLength*  
- Der Wenn *fieldidentifier* ein ODBC-definiertes Feld ist und *ValuePtr* auf eine Zeichenfolge oder einen binären Puffer zeigt, sollte dieses Argument die Länge von **ValuePtr*aufweisen. Für Zeichen folgen Daten sollte dieses Argument die Anzahl der Bytes in der Zeichenfolge enthalten.  
+ Der Wenn *fieldidentifier* ein ODBC-definiertes Feld ist und *ValuePtr* auf eine Zeichenfolge oder einen binären Puffer zeigt, sollte dieses Argument die Länge von **ValuePtr* aufweisen. Für Zeichen folgen Daten sollte dieses Argument die Anzahl der Bytes in der Zeichenfolge enthalten.  
   
  Wenn *fieldidentifier* ein ODBC-definiertes Feld und *ValuePtr* eine ganze Zahl ist, wird *BufferLength* ignoriert.  
   
@@ -68,34 +68,34 @@ SQLRETURN SQLSetDescField(
   
 -   Wenn *ValuePtr* ein Zeiger auf eine Zeichenfolge ist, entspricht *BufferLength* der Länge der Zeichenfolge oder SQL_NTS.  
   
--   Wenn *ValuePtr* ein Zeiger auf einen binären Puffer ist, platziert die Anwendung das Ergebnis des Makros SQL_LEN_BINARY_ATTR (*length*) in *BufferLength*. Dadurch wird ein negativer Wert in *BufferLength*platziert.  
+-   Wenn *ValuePtr* ein Zeiger auf einen binären Puffer ist, platziert die Anwendung das Ergebnis des Makros SQL_LEN_BINARY_ATTR (*length*) in *BufferLength*. Dadurch wird ein negativer Wert in *BufferLength* platziert.  
   
 -   Wenn *ValuePtr* ein Zeiger auf einen anderen Wert als eine Zeichenfolge oder eine binäre Zeichenfolge ist, sollte *BufferLength* den Wert SQL_IS_POINTER.  
   
 -   Wenn *ValuePtr* einen Wert mit fester Länge enthält, ist *BufferLength* entweder SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT oder SQL_IS_USMALLINT.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLSetDescField** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert abgerufen werden, indem **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_DESC und einem *handle* von *descriptorhandle*aufgerufen wird. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **SQLSetDescField** häufig zurückgegeben und im Kontext dieser Funktion erläutert werden. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
+ Wenn **SQLSetDescField** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert abgerufen werden, indem **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_DESC und einem *handle* von *descriptorhandle* aufgerufen wird. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **SQLSetDescField** häufig zurückgegeben und im Kontext dieser Funktion erläutert werden. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|Beschreibung|  
+|SQLSTATE|Fehler|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01s02 entsprechen|Optionswert geändert|Der Treiber hat den in * \* ValuePtr* angegebenen Wert (wenn *ValuePtr* ein Zeiger war) oder den Wert in *ValuePtr* (wenn *ValuePtr* ein ganzzahliger Wert war) nicht unterstützt, oder * \* ValuePtr* war aufgrund von Implementierungs Arbeitsbedingungen ungültig, sodass der Treiber einen ähnlichen Wert ersetzt hat. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|07009|Ungültiger deskriptorindex.|Das *fieldidentifier* -Argument war ein Daten Satz Feld, das " *RecNumber* "-Argument war "0", und das *Deskriptorhandle* -Argument wies auf ein IPD-handle hin.<br /><br /> Das *RecNumber* -Argument war kleiner als 0, und das *Deskriptorhandle* -Argument hat auf einen ARD oder eine APD verwiesen.<br /><br /> Das Argument " *RecNumber* " war größer als die maximale Anzahl von Spalten oder Parametern, die von der Datenquelle unterstützt werden können, und das *Deskriptorhandle* -Argument wies auf eine APD oder einen ARD hin.<br /><br /> (DM) das *fieldidentifier* -Argument wurde SQL_DESC_COUNT, und das * \* ValuePtr* -Argument war kleiner als 0 (null).<br /><br /> Das *RecNumber* -Argument war gleich 0, und das *Deskriptorhandle* -Argument hat auf eine implizit zugeordnete APD verwiesen. (Dieser Fehler tritt nicht bei einem explizit zugeordneten Anwendungs Deskriptor auf, da nicht bekannt ist, ob es sich bei einem explizit zugeordneten Anwendungs Deskriptor um eine APD oder einen ARD handelt, bis die Ausführungszeit erfolgt.)|  
+|01s02 entsprechen|Optionswert geändert|Der Treiber hat den in *\* ValuePtr* angegebenen Wert (wenn *ValuePtr* ein Zeiger war) oder den Wert in *ValuePtr* (wenn *ValuePtr* ein ganzzahliger Wert war) nicht unterstützt, oder *\* ValuePtr* war aufgrund von Implementierungs Arbeitsbedingungen ungültig, sodass der Treiber einen ähnlichen Wert ersetzt hat. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|07009|Ungültiger deskriptorindex.|Das *fieldidentifier* -Argument war ein Daten Satz Feld, das " *RecNumber* "-Argument war "0", und das *Deskriptorhandle* -Argument wies auf ein IPD-handle hin.<br /><br /> Das *RecNumber* -Argument war kleiner als 0, und das *Deskriptorhandle* -Argument hat auf einen ARD oder eine APD verwiesen.<br /><br /> Das Argument " *RecNumber* " war größer als die maximale Anzahl von Spalten oder Parametern, die von der Datenquelle unterstützt werden können, und das *Deskriptorhandle* -Argument wies auf eine APD oder einen ARD hin.<br /><br /> (DM) das *fieldidentifier* -Argument wurde SQL_DESC_COUNT, und das *\* ValuePtr* -Argument war kleiner als 0 (null).<br /><br /> Das *RecNumber* -Argument war gleich 0, und das *Deskriptorhandle* -Argument hat auf eine implizit zugeordnete APD verwiesen. (Dieser Fehler tritt nicht bei einem explizit zugeordneten Anwendungs Deskriptor auf, da nicht bekannt ist, ob es sich bei einem explizit zugeordneten Anwendungs Deskriptor um eine APD oder einen ARD handelt, bis die Ausführungszeit erfolgt.)|  
 |08S01|Kommunikations Verbindungsfehler|Die Kommunikationsverbindung zwischen dem Treiber und der Datenquelle, mit der der Treiber verbunden war, ist fehlgeschlagen, bevor die Funktion die Verarbeitung abgeschlossen hat.|  
 |22001|Zeichen folgen Daten, rechts abgeschnitten|Das *fieldidentifier* -Argument wurde SQL_DESC_NAME, und das *BufferLength* -Argument war ein Wert, der größer als SQL_MAX_IDENTIFIER_LEN ist.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im *\* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
-|HY010|Funktions Sequenz Fehler|(DM) das *Deskriptorhandle* wurde mit einem *StatementHandle* verknüpft, für das eine asynchron ausgeführte Funktion (nicht diese) aufgerufen wurde und noch ausgeführt wurde, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** wurde für das *StatementHandle* aufgerufen, dem das *Deskriptorhandle* zugeordnet und SQL_NEED_DATA zurückgegeben wurde. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das dem *Deskriptorhandle*zugeordnet ist. Diese asynchrone Funktion wurde noch ausgeführt, als die **SQLSetDescField** -Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für eines der Anweisungs Handles aufgerufen, die dem *Deskriptorhandle* zugeordnet sind, und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.|  
+|HY010|Funktions Sequenz Fehler|(DM) das *Deskriptorhandle* wurde mit einem *StatementHandle* verknüpft, für das eine asynchron ausgeführte Funktion (nicht diese) aufgerufen wurde und noch ausgeführt wurde, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** oder **SQLSetPos** wurde für das *StatementHandle* aufgerufen, dem das *Deskriptorhandle* zugeordnet und SQL_NEED_DATA zurückgegeben wurde. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das dem *Deskriptorhandle* zugeordnet ist. Diese asynchrone Funktion wurde noch ausgeführt, als die **SQLSetDescField** -Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect** oder **SQLMoreResults** wurde für eines der Anweisungs Handles aufgerufen, die dem *Deskriptorhandle* zugeordnet sind, und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.|  
 |HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
 |HY016|Ein Implementierungs Zeilen Deskriptor kann nicht geändert werden.|Das *Deskriptorhandle* -Argument wurde mit IRD verknüpft, und das *fieldidentifier* -Argument war nicht SQL_DESC_ARRAY_STATUS_PTR oder SQL_DESC_ROWS_PROCESSED_PTR.|  
 |HY021|Inkonsistente Deskriptorinformationen|Die Felder "SQL_DESC_TYPE" und "SQL_DESC_DATETIME_INTERVAL_CODE" bilden keinen gültigen ODBC-SQL-Typ oder einen gültigen treiberspezifischen SQL-Typ (für IPDS) oder einen gültigen ODBC-C-Typ (für APDS oder ARDs).<br /><br /> Während einer Konsistenzprüfung überprüfte Deskriptorinformationen waren nicht konsistent. (Weitere Informationen finden Sie unter "Konsistenzprüfung" in **sqlsetdebug**.)|  
-|HY090|Ungültige Zeichen folgen-oder Pufferlänge|(DM) * \* ValuePtr* ist eine Zeichenfolge, und *BufferLength* war kleiner als 0 (null), war aber nicht gleich SQL_NTS.<br /><br /> (DM) der Treiber war ein ODBC 2 *. x* -Treiber, der Deskriptor war eine ARD, das *ColumnNumber* -Argument wurde auf 0 festgelegt, und der für das Argument *BufferLength* angegebene Wert war nicht gleich 4.|  
+|HY090|Ungültige Zeichen folgen-oder Pufferlänge|(DM) *\* ValuePtr* ist eine Zeichenfolge, und *BufferLength* war kleiner als 0 (null), war aber nicht gleich SQL_NTS.<br /><br /> (DM) der Treiber war ein ODBC 2 *. x* -Treiber, der Deskriptor war eine ARD, das *ColumnNumber* -Argument wurde auf 0 festgelegt, und der für das Argument *BufferLength* angegebene Wert war nicht gleich 4.|  
 |HY091|Ungültiger Deskriptorfeldbezeichner.|Der für das *fieldidentifier* -Argument angegebene Wert war kein ODBC-definiertes Feld und war kein durch die Implementierung definierter Wert.<br /><br /> Das *fieldidentifier* -Argument war für das *Deskriptorhandle* -Argument ungültig.<br /><br /> Das *fieldidentifier* -Argument war ein Schreib geschütztes, ODBC-definiertes Feld.|  
-|HY092|Ungültiger Attribut/Options Bezeichner|Der Wert in * \* ValuePtr* war für das *fieldidentifier* -Argument ungültig.<br /><br /> Das *fieldidentifier* -Argument wurde SQL_DESC_UNNAMED, und *ValuePtr* war SQL_NAMED.|  
+|HY092|Ungültiger Attribut/Options Bezeichner|Der Wert in *\* ValuePtr* war für das *fieldidentifier* -Argument ungültig.<br /><br /> Das *fieldidentifier* -Argument wurde SQL_DESC_UNNAMED, und *ValuePtr* war SQL_NAMED.|  
 |HY105|Ungültiger Parametertyp|(DM) der für das SQL_DESC_PARAMETER_TYPE Feld angegebene Wert war ungültig. (Weitere Informationen finden Sie im Abschnitt "*inputoutputtype* -Argument" in **SQLBindParameter**.)|  
 |HY117|Die Verbindung wurde aufgrund eines unbekannten Transaktions Zustands angehalten. Nur Disconnect-und Read-Only-Funktionen sind zulässig.|(DM) Weitere Informationen zum angehaltenen Status finden Sie unter [What es New in ODBC 3,8](../../../odbc/reference/what-s-new-in-odbc-3-8.md).|  
 |HYT01|Verbindungs Timeout abgelaufen|Der Verbindungs Timeout Zeitraum ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Der Timeout Zeitraum für die Verbindung wird über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT festgelegt.|  
@@ -109,11 +109,11 @@ SQLRETURN SQLSetDescField(
   
  Andere Funktionen können aufgerufen werden, um mehrere Deskriptorfelder mit einem einzigen Aufruf der-Funktion festzulegen. Die **SQLSetDescRec** -Funktion legt eine Vielzahl von Feldern fest, die den Datentyp und den Puffer beeinflussen, die an eine Spalte oder einen Parameter gebunden sind (die Felder SQL_DESC_TYPE, SQL_DESC_DATETIME_INTERVAL_CODE, SQL_DESC_OCTET_LENGTH, SQL_DESC_PRECISION, SQL_DESC_SCALE, SQL_DESC_DATA_PTR, SQL_DESC_OCTET_LENGTH_PTR und SQL_DESC_INDICATOR_PTR). **SQLBindCol** oder **SQLBindParameter** kann verwendet werden, um eine umfassende Spezifikation für die Bindung einer Spalte oder eines Parameters zu erstellen. Diese Funktionen legen eine bestimmte Gruppe von Deskriptorfeldern mit einem Funktions aufzurufen fest.  
   
- **SQLSetDescField** kann aufgerufen werden, um die Bindungs Puffer durch Hinzufügen eines Offsets zu den Bindungs Zeigern (SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR oder SQL_DESC_OCTET_LENGTH_PTR) zu ändern. Dadurch werden die Bindungs Puffer geändert, ohne dass **SQLBindCol** oder **SQLBindParameter**aufgerufen wird. Dadurch kann eine Anwendung SQL_DESC_DATA_PTR ändern, ohne andere Felder, z. b. SQL_DESC_DATA_TYPE, ändern zu müssen.  
+ **SQLSetDescField** kann aufgerufen werden, um die Bindungs Puffer durch Hinzufügen eines Offsets zu den Bindungs Zeigern (SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR oder SQL_DESC_OCTET_LENGTH_PTR) zu ändern. Dadurch werden die Bindungs Puffer geändert, ohne dass **SQLBindCol** oder **SQLBindParameter** aufgerufen wird. Dadurch kann eine Anwendung SQL_DESC_DATA_PTR ändern, ohne andere Felder, z. b. SQL_DESC_DATA_TYPE, ändern zu müssen.  
   
  Wenn eine Anwendung **SQLSetDescField** aufruft, um ein anderes Feld als SQL_DESC_COUNT oder die verzögerten Felder SQL_DESC_DATA_PTR, SQL_DESC_OCTET_LENGTH_PTR oder SQL_DESC_INDICATOR_PTR festzulegen, wird der Datensatz nicht mehr gebunden.  
   
- Deskriptorheader-Felder werden durch Aufrufen von **SQLSetDescField** mit dem entsprechenden *fieldidentifier*festgelegt. Viele Header Felder sind ebenfalls Anweisungs Attribute, sodass Sie auch durch einen-Befehl von **SQLSetStmtAttr**festgelegt werden können. Dies ermöglicht es Anwendungen, ein Deskriptorfeld festzulegen, ohne zuerst ein Deskriptorhandle zu erhalten. Wenn **SQLSetDescField** aufgerufen wird, um ein Header Feld festzulegen, wird das *RecNumber* -Argument ignoriert.  
+ Deskriptorheader-Felder werden durch Aufrufen von **SQLSetDescField** mit dem entsprechenden *fieldidentifier* festgelegt. Viele Header Felder sind ebenfalls Anweisungs Attribute, sodass Sie auch durch einen-Befehl von **SQLSetStmtAttr** festgelegt werden können. Dies ermöglicht es Anwendungen, ein Deskriptorfeld festzulegen, ohne zuerst ein Deskriptorhandle zu erhalten. Wenn **SQLSetDescField** aufgerufen wird, um ein Header Feld festzulegen, wird das *RecNumber* -Argument ignoriert.  
   
  Zum Festlegen von Lesezeichen Feldern wird eine *Zahl* von 0 verwendet.  
   
@@ -121,7 +121,7 @@ SQLRETURN SQLSetDescField(
 >  Das Anweisungs Attribut SQL_ATTR_USE_BOOKMARKS sollte vor dem Aufrufen von **SQLSetDescField** immer festgelegt werden, um Lesezeichen Felder festzulegen. Dies ist zwar nicht zwingend erforderlich, wird jedoch dringend empfohlen.  
   
 ## <a name="sequence-of-setting-descriptor-fields"></a>Sequenz der Einstellungs Deskriptorfelder  
- Wenn Sie Deskriptorfelder durch Aufrufen von **SQLSetDescField**festlegen, muss die Anwendung einer bestimmten Sequenz folgen:  
+ Wenn Sie Deskriptorfelder durch Aufrufen von **SQLSetDescField** festlegen, muss die Anwendung einer bestimmten Sequenz folgen:  
   
 1.  Die Anwendung muss zuerst das Feld "SQL_DESC_TYPE", "SQL_DESC_CONCISE_TYPE" oder "SQL_DESC_DATETIME_INTERVAL_CODE" festlegen.  
   
@@ -136,7 +136,7 @@ SQLRETURN SQLSetDescField(
   
  Einige Deskriptorfelder sind für mindestens einen der deskriptortypen ("ARDs", "unds", "APDS" und "IPDS") definiert. Wenn ein Feld für einen Deskriptortyp nicht definiert ist, wird es von keiner der Funktionen benötigt, die diesen Deskriptor verwenden.  
   
- Die Felder, auf die von **SQLGetDescField** zugegriffen werden kann, können nicht notwendigerweise von **SQLSetDescField**festgelegt werden. Felder, die von **SQLSetDescField** festgelegt werden können, sind in den folgenden Tabellen aufgeführt.  
+ Die Felder, auf die von **SQLGetDescField** zugegriffen werden kann, können nicht notwendigerweise von **SQLSetDescField** festgelegt werden. Felder, die von **SQLSetDescField** festgelegt werden können, sind in den folgenden Tabellen aufgeführt.  
   
  Die Initialisierung der Header Felder wird in der folgenden Tabelle beschrieben.  
   
@@ -193,7 +193,7 @@ SQLRETURN SQLSetDescField(
   
  [1] diese Felder werden nur definiert, wenn die IPD automatisch vom Treiber ausgefüllt wird. Wenn dies nicht der Fall ist, sind Sie nicht definiert. Wenn eine Anwendung versucht, diese Felder festzulegen, wird SQLSTATE HY091 (Ungültiger Deskriptorfeldbezeichner) zurückgegeben.  
   
- [2] das SQL_DESC_DATA_PTR Feld in der IPD kann festgelegt werden, um eine Konsistenzprüfung zu erzwingen. Bei einem nachfolgenden Aufrufen von **SQLGetDescField** oder **SQLGetDescRec**muss der Treiber nicht den Wert zurückgeben, auf den SQL_DESC_DATA_PTR festgelegt wurde.  
+ [2] das SQL_DESC_DATA_PTR Feld in der IPD kann festgelegt werden, um eine Konsistenzprüfung zu erzwingen. Bei einem nachfolgenden Aufrufen von **SQLGetDescField** oder **SQLGetDescRec** muss der Treiber nicht den Wert zurückgeben, auf den SQL_DESC_DATA_PTR festgelegt wurde.  
   
 ## <a name="fieldidentifier-argument"></a>Fieldidentifier-Argument  
  Das *fieldidentifier* -Argument gibt das festzulegende Deskriptorfeld an. Ein Deskriptor enthält den *deskriptorheader,* der aus den Header Feldern besteht, die im nächsten Abschnitt "Header Felder" beschrieben werden, sowie aus null oder mehr *deskriptordaten Sätzen,* bestehend aus den im Abschnitt nach dem Abschnitt "Header Felder" beschriebenen Daten Satz Feldern.  
@@ -221,7 +221,7 @@ SQLRETURN SQLSetDescField(
 > [!CAUTION]  
 >  Das Treiber Verhalten ist nicht definiert, wenn die Anwendung die Elemente des Zeilen Status Arrays festlegt, auf das das SQL_DESC_ARRAY_STATUS_PTR-Feld von IRD zeigt.  
   
- Das Array wird anfänglich durch einen-Aufrufs von **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**oder **SQLSetPos**aufgefüllt. Wenn der-Befehl SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO nicht zurückgegeben hat, ist der Inhalt des Arrays, auf das von diesem Feld verwiesen wird, nicht definiert. Die Elemente im Array können die folgenden Werte enthalten:  
+ Das Array wird anfänglich durch einen-Aufrufs von **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll** oder **SQLSetPos** aufgefüllt. Wenn der-Befehl SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO nicht zurückgegeben hat, ist der Inhalt des Arrays, auf das von diesem Feld verwiesen wird, nicht definiert. Die Elemente im Array können die folgenden Werte enthalten:  
   
 -   SQL_ROW_SUCCESS: die Zeile wurde erfolgreich abgerufen und seit dem letzten Abruf nicht geändert.  
   
@@ -233,7 +233,7 @@ SQLRETURN SQLSetDescField(
   
 -   SQL_ROW_DELETED: die Zeile wurde gelöscht, seit Sie zuletzt abgerufen wurde.  
   
--   SQL_ROW_ADDED: die Zeile wurde von **SQLBulkOperations**eingefügt. Wenn die Zeile erneut abgerufen wird, lautet der Status SQL_ROW_SUCCESS.  
+-   SQL_ROW_ADDED: die Zeile wurde von **SQLBulkOperations** eingefügt. Wenn die Zeile erneut abgerufen wird, lautet der Status SQL_ROW_SUCCESS.  
   
 -   SQL_ROW_NOROW: das Rowset hat das Ende des Resultsets überlappen, und es wurde keine Zeile zurückgegeben, die diesem Element des Zeilen Status Arrays entsprach.  
   
@@ -241,7 +241,7 @@ SQLRETURN SQLSetDescField(
   
  Das SQL_DESC_ARRAY_STATUS_PTR-Feld des IRD ist erst gültig, nachdem SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO zurückgegeben wurde. Wenn es sich bei dem Rückgabecode nicht um einen der folgenden handelt, ist der Speicherort, auf den SQL_DESC_ROWS_PROCESSED_PTR verweist, nicht definiert.  
   
- In der IPD zeigt dieses Header Feld auf ein Parameter Status Array, das Statusinformationen für jeden Satz von Parameterwerten enthält, nachdem **SQLExecute** oder **SQLExecDirect**aufgerufen wurde. Wenn der-Befehl **SQLExecute** oder **SQLExecDirect** nicht SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO zurückgegeben hat, ist der Inhalt des Arrays, auf das dieses Feld verweist, nicht definiert. Die Anwendung muss ein Array von sqlusmallints zuordnen und dieses Feld so festlegen, dass es auf das Array verweist. Der Treiber füllt das Array auf, es sei denn, das SQL_DESC_ARRAY_STATUS_PTR Feld ist auf einen NULL-Zeiger festgelegt. in diesem Fall werden keine Status Werte generiert, und das Array wird nicht aufgefüllt. Die Elemente im Array können die folgenden Werte enthalten:  
+ In der IPD zeigt dieses Header Feld auf ein Parameter Status Array, das Statusinformationen für jeden Satz von Parameterwerten enthält, nachdem **SQLExecute** oder **SQLExecDirect** aufgerufen wurde. Wenn der-Befehl **SQLExecute** oder **SQLExecDirect** nicht SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO zurückgegeben hat, ist der Inhalt des Arrays, auf das dieses Feld verweist, nicht definiert. Die Anwendung muss ein Array von sqlusmallints zuordnen und dieses Feld so festlegen, dass es auf das Array verweist. Der Treiber füllt das Array auf, es sei denn, das SQL_DESC_ARRAY_STATUS_PTR Feld ist auf einen NULL-Zeiger festgelegt. in diesem Fall werden keine Status Werte generiert, und das Array wird nicht aufgefüllt. Die Elemente im Array können die folgenden Werte enthalten:  
   
 -   SQL_PARAM_SUCCESS: die SQL-Anweisung wurde für diesen Parametersatz erfolgreich ausgeführt.  
   
@@ -257,9 +257,9 @@ SQLRETURN SQLSetDescField(
   
  In der ARD zeigt dieses Header Feld auf ein Zeilen Vorgangs Array von Werten, die von der Anwendung festgelegt werden können, um anzugeben, ob diese Zeile für **SQLSetPos** -Vorgänge ignoriert werden soll. Die Elemente im Array können die folgenden Werte enthalten:  
   
--   SQL_ROW_PROCEED: die Zeile wird mithilfe von **SQLSetPos**in den Massen Vorgang eingeschlossen. (Diese Einstellung garantiert nicht, dass der Vorgang in der Zeile erfolgt. Wenn in der Zeile der Status SQL_ROW_ERROR im Status Array "IRD" angezeigt wird, ist der Treiber möglicherweise nicht in der Lage, den Vorgang in der Zeile auszuführen.)  
+-   SQL_ROW_PROCEED: die Zeile wird mithilfe von **SQLSetPos** in den Massen Vorgang eingeschlossen. (Diese Einstellung garantiert nicht, dass der Vorgang in der Zeile erfolgt. Wenn in der Zeile der Status SQL_ROW_ERROR im Status Array "IRD" angezeigt wird, ist der Treiber möglicherweise nicht in der Lage, den Vorgang in der Zeile auszuführen.)  
   
--   SQL_ROW_IGNORE: die Zeile wird mithilfe von **SQLSetPos**vom Massen Vorgang ausgeschlossen.  
+-   SQL_ROW_IGNORE: die Zeile wird mithilfe von **SQLSetPos** vom Massen Vorgang ausgeschlossen.  
   
  Wenn keine Elemente des Arrays festgelegt sind, werden alle Zeilen in den Massen Vorgang eingeschlossen. Wenn der Wert im SQL_DESC_ARRAY_STATUS_PTR-Feld der ARD ein NULL-Zeiger ist, werden alle Zeilen in den Massen Vorgang eingeschlossen. die Interpretation ist identisch mit dem Zeiger, der auf ein gültiges Array zeigt, und alle Elemente des Arrays wurden SQL_ROW_PROCEED. Wenn ein Element im Array auf SQL_ROW_IGNORE festgelegt ist, wird der Wert im Zeilen Status Array für die ignorierte Zeile nicht geändert.  
   
@@ -293,20 +293,20 @@ SQLRETURN SQLSetDescField(
   
  Um die spaltenweise Bindung für Spalten auszuwählen, wird dieses Feld auf SQL_BIND_BY_COLUMN (Standard) festgelegt.  
   
- Dieses Feld in der ARD kann auch durch Aufrufen von **SQLSetStmtAttr** mit dem SQL_ATTR_ROW_BIND_TYPE- *Attribut*festgelegt werden.  
+ Dieses Feld in der ARD kann auch durch Aufrufen von **SQLSetStmtAttr** mit dem SQL_ATTR_ROW_BIND_TYPE- *Attribut* festgelegt werden.  
   
  In APDS gibt dieses Feld die Bindungs Ausrichtung an, die für dynamische Parameter verwendet werden soll.  
   
  Um die spaltenweise Bindung für Parameter auszuwählen, wird dieses Feld auf SQL_BIND_BY_COLUMN (Standard) festgelegt.  
   
- Dieses Feld in der APD kann auch durch Aufrufen von **SQLSetStmtAttr** mit dem SQL_ATTR_PARAM_BIND_TYPE- *Attribut*festgelegt werden.  
+ Dieses Feld in der APD kann auch durch Aufrufen von **SQLSetStmtAttr** mit dem SQL_ATTR_PARAM_BIND_TYPE- *Attribut* festgelegt werden.  
   
  **SQL_DESC_COUNT [alle]**  
  Dieses SQLSMALLINT-Header Feld gibt den 1-basierten Index des mit der höchsten Zahl nummerierten Datensatzes an, der Daten enthält. Wenn der Treiber die Datenstruktur für den Deskriptor festlegt, muss er auch das SQL_DESC_COUNT Feld festlegen, um anzuzeigen, wie viele Datensätze wichtig sind. Wenn eine Anwendung eine Instanz dieser Datenstruktur reserviert, muss nicht angegeben werden, für wie viele Datensätze Platz reserviert werden soll. Wenn die Anwendung den Inhalt der Datensätze angibt, führt der Treiber alle erforderlichen Maßnahmen aus, um sicherzustellen, dass das Deskriptorhandle auf eine Datenstruktur der angemessenen Größe verweist.  
   
  SQL_DESC_COUNT ist nicht für alle Datenspalten, die gebunden sind (wenn das Feld in einer ARD ist), oder für alle Parameter, die gebunden sind (wenn das Feld in einer APD ist), aber die Nummer des mit der höchsten nummerierten Datensatzes. Wenn die Bindung der höchsten nummerierten Spalte oder des Parameters aufgehoben wird, wird SQL_DESC_COUNT in die Nummer der nächsthöheren Spalte oder des nächsthöheren Parameters geändert. Wenn eine Spalte oder ein Parameter mit einer Zahl, die kleiner ist als die Nummer der höchsten nummerierten Spalte ist SQL_DESC_COUNT, nicht gebunden ist (durch Aufrufen von **SQLBindCol** mit dem *targetvalueptr* -Argument, das auf einen NULL-Zeiger festgelegt ist, oder **SQLBindParameter** , bei dem das *ParameterValuePtr* -Argument auf einen NULL-Zeiger festgelegt ist), Wenn zusätzliche Spalten oder Parameter mit Zahlen gebunden werden, die größer als der mit der höchsten Zahl nummerierte Datensatz sind, der Daten enthält, erhöht der Treiber automatisch den Wert im Feld SQL_DESC_COUNT. Wenn alle Spalten aufgehoben werden, indem **SQLFreeStmt** mit der Option SQL_UNBIND aufgerufen wird, werden die SQL_DESC_COUNT Felder in der Datei "ARD" und "IRD" auf "0" festgelegt. Wenn **SQLFreeStmt** mit der Option SQL_RESET_PARAMS aufgerufen wird, werden die SQL_DESC_COUNT Felder in APD und IPD auf 0 festgelegt.  
   
- Der Wert in SQL_DESC_COUNT kann explizit durch eine Anwendung durch Aufrufen von **SQLSetDescField**festgelegt werden. Wenn der Wert in SQL_DESC_COUNT explizit verringert wird, werden alle Datensätze mit Zahlen, die größer sind als der neue Wert in SQL_DESC_COUNT, tatsächlich entfernt. Wenn der Wert in SQL_DESC_COUNT explizit auf 0 festgelegt ist und sich das Feld in einer ARD befindet, werden alle Datenpuffer außer einer gebundenen Lesezeichen Spalte freigegeben.  
+ Der Wert in SQL_DESC_COUNT kann explizit durch eine Anwendung durch Aufrufen von **SQLSetDescField** festgelegt werden. Wenn der Wert in SQL_DESC_COUNT explizit verringert wird, werden alle Datensätze mit Zahlen, die größer sind als der neue Wert in SQL_DESC_COUNT, tatsächlich entfernt. Wenn der Wert in SQL_DESC_COUNT explizit auf 0 festgelegt ist und sich das Feld in einer ARD befindet, werden alle Datenpuffer außer einer gebundenen Lesezeichen Spalte freigegeben.  
   
  Die Anzahl der Datensätze in diesem Feld einer ARD enthält keine gebundene Lesezeichen Spalte. Die Bindung einer Lesezeichen Spalte kann nur aufgehoben werden, indem das SQL_DESC_DATA_PTR-Feld auf einen NULL-Zeiger festgelegt wird.  
   
@@ -315,7 +315,7 @@ SQLRETURN SQLSetDescField(
   
  In einer IPD zeigt dieses SQLUINTEGER *-Header Feld auf einen Puffer, der die Anzahl der verarbeiteten Parametersätze enthält, einschließlich der Fehler Sätze. Wenn dies ein NULL-Zeiger ist, wird keine Zahl zurückgegeben.  
   
- SQL_DESC_ROWS_PROCESSED_PTR ist nur gültig, nachdem SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO nach einem **SQLFetch** -oder **SQLFetchScroll** -Befehl (bei einem IRD-Feld) oder **SQLExecute**, **SQLExecDirect**oder **SQLParamData** (für ein IPD-Feld) zurückgegeben wurde. Wenn der aufzurufende-Puffer, auf den dieses Feld zeigt, nicht SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO zurückgibt, ist der Inhalt des Puffers nicht definiert, es sei denn, er gibt SQL_NO_DATA zurück. in diesem Fall wird der Wert im Puffer auf 0 festgelegt.  
+ SQL_DESC_ROWS_PROCESSED_PTR ist nur gültig, nachdem SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO nach einem **SQLFetch** -oder **SQLFetchScroll** -Befehl (bei einem IRD-Feld) oder **SQLExecute**, **SQLExecDirect** oder **SQLParamData** (für ein IPD-Feld) zurückgegeben wurde. Wenn der aufzurufende-Puffer, auf den dieses Feld zeigt, nicht SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO zurückgibt, ist der Inhalt des Puffers nicht definiert, es sei denn, er gibt SQL_NO_DATA zurück. in diesem Fall wird der Wert im Puffer auf 0 festgelegt.  
   
  Dieses Feld in der ARD kann auch durch Aufrufen von **SQLSetStmtAttr** mit dem SQL_ATTR_ROWS_FETCHED_PTR-Attribut festgelegt werden. Dieses Feld in der APD kann auch durch Aufrufen von **SQLSetStmtAttr** mit dem SQL_ATTR_PARAMS_PROCESSED_PTR-Attribut festgelegt werden.  
   
@@ -342,7 +342,7 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_CONCISE_TYPE [alle]**  
  Dieses SQLSMALLINT-Header Feld gibt den präzisen Datentyp für alle Datentypen an, einschließlich der DateTime-und interval-Datentypen.  
   
- Die Werte in den Feldern SQL_DESC_CONCISE_TYPE, SQL_DESC_TYPE und SQL_DESC_DATETIME_INTERVAL_CODE sind voneinander abhängig. Jedes Mal, wenn eines der Felder festgelegt ist, muss das andere ebenfalls festgelegt werden. SQL_DESC_CONCISE_TYPE können durch einen **SQLBindCol** -oder **SQLBindParameter**-oder SQLSetDescField-Befehl festgelegt werden. **SQLSetDescField** SQL_DESC_TYPE können durch einen **SQLSetDescField** -oder **SQLSetDescRec**-Befehl festgelegt werden.  
+ Die Werte in den Feldern SQL_DESC_CONCISE_TYPE, SQL_DESC_TYPE und SQL_DESC_DATETIME_INTERVAL_CODE sind voneinander abhängig. Jedes Mal, wenn eines der Felder festgelegt ist, muss das andere ebenfalls festgelegt werden. SQL_DESC_CONCISE_TYPE können durch einen **SQLBindCol** -oder **SQLBindParameter**-oder SQLSetDescField-Befehl festgelegt werden.  SQL_DESC_TYPE können durch einen **SQLSetDescField** -oder **SQLSetDescRec**-Befehl festgelegt werden.  
   
  Wenn SQL_DESC_CONCISE_TYPE auf einen präzisen Datentyp festgelegt ist, der kein Intervall-oder DateTime-Datentyp ist, wird das SQL_DESC_TYPE Feld auf denselben Wert festgelegt, und das SQL_DESC_DATETIME_INTERVAL_CODE Feld ist auf 0 festgelegt.  
   
@@ -416,7 +416,7 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_LENGTH [alle]**  
  Dieses SQLULEN-Daten Satz Feld ist entweder die maximale oder die tatsächliche Länge einer Zeichenfolge in Zeichen oder ein binärer Datentyp in Bytes. Dies ist die maximale Länge für einen Datentyp mit fester Länge oder die tatsächliche Länge für einen Datentyp mit variabler Länge. Der Wert schließt immer das NULL-Terminierungs Zeichen aus, das die Zeichenfolge beendet. Bei Werten, deren Typ "SQL_TYPE_DATE", "SQL_TYPE_TIME", "SQL_TYPE_TIMESTAMP" oder einem der SQL-Intervall Datentypen ist, enthält dieses Feld die Länge in Zeichen der Zeichen folgen Darstellung des DateTime-oder Interval-Werts.  
   
- Der Wert in diesem Feld kann sich von dem Wert für "length" unterscheiden, wie er in ODBC 2 *. x*definiert ist. Weitere Informationen finden Sie unter [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
+ Der Wert in diesem Feld kann sich von dem Wert für "length" unterscheiden, wie er in ODBC 2 *. x* definiert ist. Weitere Informationen finden Sie unter [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
  **SQL_DESC_LITERAL_PREFIX [unds]**  
  Dieses schreibgeschützte SQLCHAR *-Datensatz-Feld enthält die Zeichen oder Zeichen, die der Treiber als Präfix für ein literaldieses Datentyps erkennt. Diese Variable enthält eine leere Zeichenfolge für einen Datentyp, für den kein literalpräfix anwendbar ist.  
@@ -462,7 +462,7 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_PRECISION [alle]**  
  Dieses SQLSMALLINT-Daten Satz Feld enthält die Anzahl der Ziffern für einen exakten numerischen Typ, die Anzahl der Bits in der Mantisse (binäre Genauigkeit) für einen ungefähren numerischen Typ oder die Anzahl der Ziffern in der Komponente für Sekundenbruchteile für den SQL_TYPE_TIME-, SQL_TYPE_TIMESTAMP-oder SQL_INTERVAL_SECOND-Datentyp. Dieses Feld ist für alle anderen Datentypen nicht definiert.  
   
- Der Wert in diesem Feld kann sich von dem Wert für "Genauigkeit" unterscheiden, wie er in ODBC 2 *. x*definiert ist. Weitere Informationen finden Sie unter [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
+ Der Wert in diesem Feld kann sich von dem Wert für "Genauigkeit" unterscheiden, wie er in ODBC 2 *. x* definiert ist. Weitere Informationen finden Sie unter [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
  **SQL_DESC_ROWVER [Implementierungs Deskriptoren]**  
  Dieses sqlsmallintrecord-Feld gibt an, ob eine Spalte automatisch durch das DBMS geändert wird, wenn eine Zeile aktualisiert wird (z. b. eine Spalte vom Typ "timestamp" in SQL Server). Der Wert dieses Daten Satz Felds ist auf SQL_TRUE festgelegt, wenn es sich bei der Spalte um eine Spalte für die Zeilen Versionsverwaltung handelt, und SQL_FALSE andernfalls. Dieses Spalten Attribut ähnelt dem Aufrufen von **SQLSpecialColumns** mit dem IdentifierType SQL_ROWVER, um zu bestimmen, ob eine Spalte automatisch aktualisiert wird.  
@@ -470,7 +470,7 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_SCALE [alle]**  
  Dieses SQLSMALLINT-Daten Satz Feld enthält die definierte Skala für die Datentypen decimal und numeric. Das Feld ist für alle anderen Datentypen nicht definiert.  
   
- Der Wert in diesem Feld kann sich von dem Wert für "Scale" unterscheiden, wie er in ODBC 2 *. x*definiert ist. Weitere Informationen finden Sie unter [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
+ Der Wert in diesem Feld kann sich von dem Wert für "Scale" unterscheiden, wie er in ODBC 2 *. x* definiert ist. Weitere Informationen finden Sie unter [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
  **SQL_DESC_SCHEMA_NAME [unds]**  
  Dieses schreibgeschützte SQLCHAR *-Datensatz-Feld enthält den Schema Namen der Basistabelle, die die Spalte enthält. Der Rückgabewert ist Treiber abhängig, wenn die Spalte ein Ausdruck ist, oder wenn die Spalte Teil einer Sicht ist. Wenn die Datenquelle keine Schemas unterstützt oder der Schema Name nicht bestimmt werden kann, enthält diese Variable eine leere Zeichenfolge.  
@@ -482,7 +482,7 @@ SQLRETURN SQLSetDescField(
   
 -   SQL_PRED_CHAR, wenn die Spalte in einer **Where** -Klausel verwendet werden kann, jedoch nur mit dem **like** -Prädikat. (Dies entspricht dem SQL_LIKE_ONLY Wert in ODBC 2 *. x*.)  
   
--   SQL_PRED_BASIC, wenn die Spalte in einer **Where** -Klausel mit allen Vergleichs Operatoren mit Ausnahme von **like**verwendet werden kann. (Dies entspricht dem SQL_EXCEPT_LIKE Wert in ODBC 2 *. x*.)  
+-   SQL_PRED_BASIC, wenn die Spalte in einer **Where** -Klausel mit allen Vergleichs Operatoren mit Ausnahme von **like** verwendet werden kann. (Dies entspricht dem SQL_EXCEPT_LIKE Wert in ODBC 2 *. x*.)  
   
 -   SQL_PRED_SEARCHABLE, wenn die Spalte in einer **Where** -Klausel mit einem beliebigen Vergleichs Operator verwendet werden kann.  
   
@@ -494,7 +494,7 @@ SQLRETURN SQLSetDescField(
   
  Wenn dieses Feld SQL_DATETIME oder SQL_INTERVAL enthält, muss das SQL_DESC_DATETIME_INTERVAL_CODE Feld den entsprechenden Subcode für den präzisen Typ enthalten. Für datetime-Datentypen enthält SQL_DESC_TYPE SQL_DATETIME, und das Feld SQL_DESC_DATETIME_INTERVAL_CODE enthält einen Subcode für den spezifischen DateTime-Datentyp. Für Intervall Datentypen enthält SQL_DESC_TYPE SQL_INTERVAL, und das Feld SQL_DESC_DATETIME_INTERVAL_CODE enthält einen Subcode für den spezifischen Interval-Datentyp.  
   
- Die Werte in den Feldern SQL_DESC_TYPE und SQL_DESC_CONCISE_TYPE sind voneinander abhängig. Jedes Mal, wenn eines der Felder festgelegt ist, muss das andere ebenfalls festgelegt werden. SQL_DESC_TYPE können durch einen **SQLSetDescField** -oder **SQLSetDescRec**-Befehl festgelegt werden. SQL_DESC_CONCISE_TYPE können durch einen **SQLBindCol** -oder **SQLBindParameter**-oder SQLSetDescField-Befehl festgelegt werden. **SQLSetDescField**  
+ Die Werte in den Feldern SQL_DESC_TYPE und SQL_DESC_CONCISE_TYPE sind voneinander abhängig. Jedes Mal, wenn eines der Felder festgelegt ist, muss das andere ebenfalls festgelegt werden. SQL_DESC_TYPE können durch einen **SQLSetDescField** -oder **SQLSetDescRec**-Befehl festgelegt werden. SQL_DESC_CONCISE_TYPE können durch einen **SQLBindCol** -oder **SQLBindParameter**-oder SQLSetDescField-Befehl festgelegt werden.   
   
  Wenn SQL_DESC_TYPE auf einen präzisen Datentyp festgelegt ist, der kein Intervall-oder DateTime-Datentyp ist, wird das SQL_DESC_CONCISE_TYPE Feld auf denselben Wert festgelegt, und das SQL_DESC_DATETIME_INTERVAL_CODE Feld ist auf 0 festgelegt.  
   
@@ -510,7 +510,7 @@ SQLRETURN SQLSetDescField(
 |SQL_FLOAT SQL_C_FLOAT|SQL_DESC_PRECISION auf die von der Implementierung definierte Standardgenauigkeit für SQL_FLOAT festgelegt ist.|  
 |SQL_INTERVAL|Wenn SQL_DESC_DATETIME_INTERVAL_CODE auf einen Interval-Datentyp festgelegt ist, wird SQL_DESC_DATETIME_INTERVAL_PRECISION auf 2 festgelegt (die standardmäßige Intervall führende Genauigkeit). Wenn das Intervall eine Sekunden Komponente aufweist, wird SQL_DESC_PRECISION auf 6 festgelegt (die Standardgenauigkeit in Sekunden).|  
   
- Wenn eine Anwendung **SQLSetDescField** aufruft, um Felder eines Deskriptors festzulegen, anstatt **SQLSetDescRec**aufzurufen, muss die Anwendung zuerst den Datentyp deklarieren. Wenn dies der Fall ist, werden die anderen Felder, die in der vorherigen Tabelle angegeben sind, implizit festgelegt. Wenn einer der Werte implizit festgelegt ist, kann die Anwendung **SQLSetDescField** oder **SQLSetDescRec** aufrufen, um den unzulässigen Wert explizit festzulegen.  
+ Wenn eine Anwendung **SQLSetDescField** aufruft, um Felder eines Deskriptors festzulegen, anstatt **SQLSetDescRec** aufzurufen, muss die Anwendung zuerst den Datentyp deklarieren. Wenn dies der Fall ist, werden die anderen Felder, die in der vorherigen Tabelle angegeben sind, implizit festgelegt. Wenn einer der Werte implizit festgelegt ist, kann die Anwendung **SQLSetDescField** oder **SQLSetDescRec** aufrufen, um den unzulässigen Wert explizit festzulegen.  
   
  **SQL_DESC_TYPE_NAME [Implementierungs Deskriptoren]**  
  Dieses schreibgeschützte SQLCHAR *-Datensatz-Feld enthält den von der Datenquelle abhängigen Typnamen (z. b. "char", "varchar" usw.). Wenn der Datentyp Name unbekannt ist, enthält diese Variable eine leere Zeichenfolge.  
@@ -547,6 +547,6 @@ SQLRETURN SQLSetDescField(
 |Mehrere Deskriptorfelder werden abgerufen.|[SQLGetDescRec-Funktion](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
 |Festlegen mehrerer Deskriptorfelder|[SQLSetDescRec-Funktion](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-Header Dateien](../../../odbc/reference/install/odbc-header-files.md)   
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)

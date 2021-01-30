@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_targetserver
 - sp_delete_targetserver_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2d63729408641dee965fb15be81343b87f721377
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2f9e77a548e32e32c41d7ed6b45621ac5f4a2594
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548153"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199147"
 ---
 # <a name="sp_delete_targetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,9 +44,9 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ## <a name="arguments"></a>Argumente  
 `[ @server_name = ] 'server'` Der Name des Servers, der als verfügbarer Zielserver entfernt werden soll. der *Server* ist vom Datentyp **nvarchar (30)** und hat keinen Standardwert.  
   
-`[ @clear_downloadlist = ] clear_downloadlist` Gibt an, ob die Download Liste für den Zielserver gelöscht werden soll. *clear_downloadlist* ist vom Typ **Bit**und hat den Standardwert **1**. Wenn *clear_downloadlist* **1**ist, löscht die Prozedur die Download Liste für den Server, bevor der Server gelöscht wird. Wenn *clear_downloadlist* **0**ist, wird die Download Liste nicht gelöscht.  
+`[ @clear_downloadlist = ] clear_downloadlist` Gibt an, ob die Download Liste für den Zielserver gelöscht werden soll. *clear_downloadlist* ist vom Typ **Bit** und hat den Standardwert **1**. Wenn *clear_downloadlist* **1** ist, löscht die Prozedur die Download Liste für den Server, bevor der Server gelöscht wird. Wenn *clear_downloadlist* **0** ist, wird die Download Liste nicht gelöscht.  
   
-`[ @post_defection = ] post_defection` Gibt an, ob eine Mängel Anweisung auf dem Zielserver gepostet werden soll. *post_defection* ist vom Typ **Bit**und hat den Standardwert 1. Wenn *post_defection* **1**ist, sendet die Prozedur eine Mängel Anweisung an den Zielserver, bevor der Server gelöscht wird. Wenn *post_defection* **0**ist, stellt die Prozedur keine Fehler Anweisung auf dem Zielserver bereit.  
+`[ @post_defection = ] post_defection` Gibt an, ob eine Mängel Anweisung auf dem Zielserver gepostet werden soll. *post_defection* ist vom Typ **Bit** und hat den Standardwert 1. Wenn *post_defection* **1** ist, sendet die Prozedur eine Mängel Anweisung an den Zielserver, bevor der Server gelöscht wird. Wenn *post_defection* **0** ist, stellt die Prozedur keine Fehler Anweisung auf dem Zielserver bereit.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -72,7 +72,7 @@ EXEC dbo.sp_delete_targetserver
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [sp_help_targetserver &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
  [sp_msx_defect &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

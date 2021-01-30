@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_databases_TSQL
 - sp_databases
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 90fbcbf710f1779ad011163641aa61b14b33c65b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e324cb4660302517daee36072e9b835abc455baf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549893"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200324"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,10 +50,10 @@ sp_databases
 |**DATABASE_SIZE**|**int**|Die Größe der Datenbank in Kilobyte.|  
 |**HINWEISE**|**varchar (254)**|Im [!INCLUDE[ssDE](../../includes/ssde-md.md)]gibt dieses Feld immer NULL zurück.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die zurückgegebenen Datenbanknamen können als Parameter für die USE-Anweisung verwendet werden, um den aktuellen Datenbankkontext zu ändern.  
   
- Für**sp_databases** gibt es in Open Database Connectivity (ODBC) keine Entsprechung.  
+ Für **sp_databases** gibt es in Open Database Connectivity (ODBC) keine Entsprechung.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Berechtigung CREATE DATABASE oder ALTER ANY DATABASE oder VIEW ANY DEFINITION sowie die Zugriffsberechtigung für die Datenbank. Die VIEW ANY DEFINITION-Berechtigung darf nicht verweigert worden sein.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_job_TSQL
 - sp_help_job
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5c0b2f0845c98f4b5fa403bd98b87718afd0fb26
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 32ffb85143cf448742831071bee7d4b94a25ec57
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549691"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200153"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,9 +53,9 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id` Die Auftrags-ID. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die Auftrags-ID. *job_id* ist vom Datentyp **uniqueidentifier** und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'` Der Name des Auftrags. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags. *job_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Zum Anzeigen eines bestimmten Auftrags muss entweder *job_id* oder *job_name* angegeben werden.  Lassen Sie sowohl *job_id* als auch *job_name* aus, um Informationen zu allen Aufträgen zurückzugeben.
@@ -72,15 +72,15 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_type = ] 'job_type'` Der Typ der Aufträge, die in den Bericht eingeschlossen werden sollen. *job_type* ist vom Datentyp **varchar (12)** und hat den Standardwert NULL. *job_type* kann " **local** " oder " **MultiServer**" sein.  
   
-`[ @owner_login_name = ] 'login_name'` Der Anmelde Name des Besitzers des Auftrags. *login_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @owner_login_name = ] 'login_name'` Der Anmelde Name des Besitzers des Auftrags. *login_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 `[ @subsystem = ] 'subsystem'` Der Name des Subsystems. *Subsystem* ist vom Datentyp **nvarchar (40)** und hat den Standardwert NULL.  
   
-`[ @category_name = ] 'category'` Der Name der Kategorie. *Category* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @category_name = ] 'category'` Der Name der Kategorie. *Category* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 `[ @enabled = ] enabled` Eine Zahl, die angibt, ob Informationen für aktivierte oder deaktivierte Aufträge angezeigt werden. *aktiviert* ist vom Datentyp **tinyint**. der Standardwert ist NULL. **1** gibt aktivierte Aufträge an, und **0** gibt deaktivierte Aufträge an.  
   
-`[ @execution_status = ] status` Der Ausführungs Status für die Aufträge. der *Status* ist vom Datentyp **int**und hat den Standardwert NULL. die folgenden Werte sind möglich:  
+`[ @execution_status = ] status` Der Ausführungs Status für die Aufträge. der *Status* ist vom Datentyp **int** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -92,11 +92,11 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Unterbrochen|  
 |**7**|Abschlussaktionen werden ausgeführt|  
   
-`[ @date_comparator = ] 'date_comparison'` Der Vergleichs Operator, der in Vergleichen von *Date_Created* und *date_modified*verwendet werden soll. *date_comparison* ist vom Typ **char (1)** und kann =, sein \<, or > .  
+`[ @date_comparator = ] 'date_comparison'` Der Vergleichs Operator, der in Vergleichen von *Date_Created* und *date_modified* verwendet werden soll. *date_comparison* ist vom Typ **char (1)** und kann =, sein \<, or > .  
   
-`[ @date_created = ] date_created` Das Datum, an dem der Auftrag erstellt wurde. *Date_Created*ist vom **Datentyp DateTime**und hat den Standardwert NULL.  
+`[ @date_created = ] date_created` Das Datum, an dem der Auftrag erstellt wurde. *Date_Created* ist vom **Datentyp DateTime** und hat den Standardwert NULL.  
   
-`[ @date_last_modified = ] date_modified` Das Datum, an dem der Auftrag zuletzt geändert wurde. *date_modified* ist vom **Datentyp DateTime**und hat den Standardwert NULL.  
+`[ @date_last_modified = ] date_modified` Das Datum, an dem der Auftrag zuletzt geändert wurde. *date_modified* ist vom **Datentyp DateTime** und hat den Standardwert NULL.  
   
 `[ @description = ] 'description_pattern'` Die Beschreibung des Auftrags. *description_pattern* ist vom Datentyp **nvarchar (512)** und hat den Standardwert NULL. *description_pattern* können die SQL Server Platzhalter Zeichen für den Musterabgleich einschließen.  
   
@@ -115,7 +115,7 @@ sp_help_job { [ @job_id = ] job_id
 |**description**|**nvarchar(512)**|Die Beschreibung des Auftrags.|  
 |**start_step_id**|**int**|ID des Schrittes in dem Auftrag, bei dem die Ausführung beginnen soll.|  
 |**category**|**sysname**|Auftragskategorie|  
-|**Eigentor**|**sysname**|Auftragsbesitzer|  
+|**owner**|**sysname**|Auftragsbesitzer|  
 |**notify_level_eventlog**|**int**|**Bitmaske** , die anzeigt, unter welchen Umständen ein Benachrichtigungs Ereignis im Microsoft Windows-Anwendungsprotokoll protokolliert werden soll. Einer der folgenden Werte ist möglich:<br /><br /> **0** = Nie<br /><br /> **1** = bei erfolgreicher Auftragsausführung<br /><br /> **2** = Bei Fehlschlagen des Auftrags<br /><br /> **3** = Immer, wenn der Auftrag abgeschlossen ist (unabhängig vom Ergebnis des Auftrags)|  
 |**notify_level_email**|**int**|**Bitmaske** , die anzeigt, unter welchen Umständen bei Abschluss eines Auftrags eine Benachrichtigungs-e-Mail gesendet werden soll Mögliche Werte sind die gleichen wie für **notify_level_eventlog**.|  
 |**notify_level_netsend**|**int**|**Bitmaske** , die anzeigt, unter welchen Umständen bei Abschluss eines Auftrags eine Netzwerk Meldung gesendet werden soll. Mögliche Werte sind die gleichen wie für **notify_level_eventlog**.|  
@@ -154,9 +154,9 @@ sp_help_job { [ @job_id = ] job_id
 |**flags**|**nvarchar(4000)**|**Bitmaske** der Werte, die das Schritt Verhalten steuern.|  
 |**cmdexec_success_code**|**int**|Bei einem **CmdExec** -Schritt ist dies der Prozessexitcode eines erfolgreichen Befehls.|  
 |**on_success_action**|**nvarchar(4000)**|Mögliche Aktionen, wenn der Schritt erfolgreich durchgeführt wird:<br /><br /> **1** = beenden mit Erfolg.<br /><br /> **2** = beenden mit Fehler.<br /><br /> **3** = fahren Sie mit dem nächsten Schritt fort.<br /><br /> **4** = gehe zu Schritt.|  
-|**on_success_step_id**|**int**|Wenn **on_success_action** **4**ist, gibt dies den nächsten Schritt an, der ausgeführt werden soll.|  
+|**on_success_step_id**|**int**|Wenn **on_success_action** **4** ist, gibt dies den nächsten Schritt an, der ausgeführt werden soll.|  
 |**on_fail_action**|**nvarchar(4000)**|Auszuführende Aktion, wenn der Schritt einen Fehler erzeugt. Werte sind identisch mit denen für **on_success_action**.|  
-|**on_fail_step_id**|**int**|Wenn **on_fail_action** **4**ist, gibt dies den nächsten Schritt an, der ausgeführt werden soll.|  
+|**on_fail_step_id**|**int**|Wenn **on_fail_action** **4** ist, gibt dies den nächsten Schritt an, der ausgeführt werden soll.|  
 |**server**|**sysname**|Reserviert.|  
 |**database_name**|**sysname**|Für einen [!INCLUDE[tsql](../../includes/tsql-md.md)] Schritt ist dies die Datenbank, in der der Befehl ausgeführt wird.|  
 |**database_user_name**|**sysname**|Für einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Schritt ist dies der Datenbank-Benutzerkontext, in dem der Befehl ausgeführt wird.|  
@@ -179,7 +179,7 @@ sp_help_job { [ @job_id = ] job_id
 |**schedule_name**|**sysname**|Name des Zeitplans (eindeutig nur für diesen Auftrag)|  
 |**enabled**|**int**|Gibt an, ob der Zeitplan aktiv (**1**) oder nicht (**0**) ist.|  
 |**freq_type**|**int**|Zeigt an, wann der Auftrag ausgeführt werden soll:<br /><br /> **1** = einmal<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ zum **freq_interval**<br /><br /> **64** = ausführen, wenn der **SQLServerAgent** -Dienst gestartet wird.|  
-|**freq_interval**|**int**|Tage, an denen der Auftrag ausgeführt wird. Der Wert hängt vom Wert **freq_type**ab. Weitere Informationen finden Sie unter [sp_add_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
+|**freq_interval**|**int**|Tage, an denen der Auftrag ausgeführt wird. Der Wert hängt vom Wert **freq_type** ab. Weitere Informationen finden Sie unter [sp_add_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_subday_type**|**Int**|Einheiten für **freq_subday_interval**. Weitere Informationen finden Sie unter [sp_add_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_subday_interval**|**int**|Anzahl der **freq_subday_type** Zeiträume zwischen den einzelnen Ausführungen des Auftrags. Weitere Informationen finden Sie unter [sp_add_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
 |**freq_relative_interval**|**int**|Das Vorkommen des **freq_interval** eines geplanten Auftrags in jedem Monat. Weitere Informationen finden Sie unter [sp_add_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)|  
@@ -210,7 +210,7 @@ sp_help_job { [ @job_id = ] job_id
 |**last_outcome_message**|**nvarchar(1024)**|Ergebnismeldung des Auftrags bei der letzten Ausführung auf diesem Zielserver|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
+ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
   
 -   **SQLAgentUserRole**  
   
@@ -220,7 +220,7 @@ sp_help_job { [ @job_id = ] job_id
   
  Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Mitglieder von **SQLAgentUserRole** können nur Aufträge anzeigen, deren Besitzer Sie sind. Mitglieder von **sysadmin**, **SQLAgentReaderRole**und **SQLAgentOperatorRole** können alle lokalen und Multiserveraufträge anzeigen.  
+ Mitglieder von **SQLAgentUserRole** können nur Aufträge anzeigen, deren Besitzer Sie sind. Mitglieder von **sysadmin**, **SQLAgentReaderRole** und **SQLAgentOperatorRole** können alle lokalen und Multiserveraufträge anzeigen.  
   
 ## <a name="examples"></a>Beispiele  
   
