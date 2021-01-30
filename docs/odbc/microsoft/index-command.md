@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - index command [ODBC]
 ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec9ed3c0ec0e91f3c4fd3a0019c8ac463a8620c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ac225132e2d89f1edd4baab012b2383cd508588
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449522"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183398"
 ---
 # <a name="index-command"></a>INDEX-Befehl
 Erstellt eine Indexdatei zum Anzeigen und Zugreifen auf Tabellendaten Sätze in einer logischen Reihenfolge.  
@@ -49,7 +49,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
  An *idxfilename*  
  Erstellt eine IDX-Indexdatei. Der Indexdatei wird die standardmäßige Erweiterung. idx zugewiesen.  
   
- *Tagname*des Tags [von *cdxfilename*]  
+ *Tagname* des Tags [von *cdxfilename*]  
  Erstellt eine Verbund Indexdatei. Eine Verbund Indexdatei ist eine einzelne Indexdatei, die aus einer beliebigen Anzahl von separaten Tags (Indexeinträge) besteht. Jedes Tag wird anhand seines eindeutigen Tagnamens identifiziert. Tagnamen müssen mit einem Buchstaben oder einem Unterstrich beginnen und können aus einer beliebigen Kombination von bis zu 10 Buchstaben, Ziffern oder Unterstrichen bestehen. Die Anzahl der Tags in einer Verbund Indexdatei wird nur durch den verfügbaren Arbeitsspeicher und Speicherplatz beschränkt.  
   
  Zusammengesetzte Indexdateien mit mehreren Eintrags sind immer kompakt. Beim Erstellen einer Verbund Indexdatei ist das Einschließen von Compact nicht erforderlich. Namen von Verbund Indexdateien erhalten die Erweiterung ". CDX".  
@@ -58,7 +58,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
   
  **Struktur zusammengesetzter Index Dateien** Sie können eine Struktur zusammengesetzte Indexdatei mit *Tagname Tagname* erstellen, indem Sie die optionale der *cdxfilename* -Klausel ausschließen. Eine Struktur zusammengesetzter Indexdatei hat immer denselben Basis Namen wie die Tabelle und wird automatisch geöffnet, wenn die Tabelle geöffnet wird.  
   
- **Nicht strukturelle Verbund Index Dateien** Sie können eine nicht strukturelle Verbund Indexdatei erstellen, indem Sie *cdxfilename* nach *Tagname*des Tags einschließen. Anders als bei einer strukturellen Verbund Indexdatei muss eine nicht strukturell zusammengesetzte Indexdatei explizit mit der verwendeten Index Klausel geöffnet werden.  
+ **Nicht strukturelle Verbund Index Dateien** Sie können eine nicht strukturelle Verbund Indexdatei erstellen, indem Sie *cdxfilename* nach *Tagname* des Tags einschließen. Anders als bei einer strukturellen Verbund Indexdatei muss eine nicht strukturell zusammengesetzte Indexdatei explizit mit der verwendeten Index Klausel geöffnet werden.  
   
  Wenn bereits eine Verbund Indexdatei erstellt und geöffnet wurde, wird bei der Ausgabe von Index mit *Tagname* des Tags der Verbund Indexdatei ein Tag hinzugefügt.  
   
@@ -120,4 +120,4 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
  [ALTER TABLE-SQL-Befehl](../../odbc/microsoft/alter-table-sql-command.md)   
  [Befehl zum Löschen von Tags](../../odbc/microsoft/delete-tag-command.md)   
  [Befehl "COLLATE festlegen"](../../odbc/microsoft/set-collate-command.md)   
- [Befehl SET UNIQUE](../../odbc/microsoft/set-unique-command.md)
+ [SET UNIQUE-Befehl](../../odbc/microsoft/set-unique-command.md)

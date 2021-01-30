@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - SortColumn property [RDS]
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 62187b1643c315099d40d0bdd878699fcfc0065c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: edbfa8f6c4dbb1296e9bf86aed43148bb7b12ec2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724227"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168780"
 ---
 # <a name="sortcolumn-property-rds"></a>SortColumn-Eigenschaft (RDS)
 Gibt an, in welcher Spalte die Datensätze sortiert werden sollen.  
@@ -44,7 +44,7 @@ DataControl.SortColumn = String
 ## <a name="remarks"></a>Bemerkungen  
  Die Eigenschaften **SortColumn**, [SortDirection](./sortdirection-property-rds.md), [FilterValue](./filtervalue-property-rds.md), [Filterkriterium](./filtercriterion-property-rds.md)und [FilterColumn](./filtercolumn-property-rds.md) stellen Sortier-und Filterfunktionen für den Client seitigen Cache bereit. Die Sortierfunktion ordnet Datensätze nach Werten aus einer Spalte an. Die Filterfunktion zeigt eine Teilmenge der Datensätze basierend auf den Suchkriterien an, während das vollständige [Recordset](../ado-api/recordset-object-ado.md) im Cache beibehalten wird. Die [Reset](./reset-method-rds.md) -Methode führt die Kriterien aus und ersetzt das aktuelle **Recordset** durch ein Aktualisier bares **Recordset**.  
   
- Um nach einem **Recordset**zu sortieren, müssen Sie zunächst alle ausstehenden Änderungen speichern. Wenn Sie das RDS verwenden **. DataControl**, Sie können die [SubmitChanges](./submitchanges-method-rds.md) -Methode verwenden. Beispielsweise, wenn Ihr **RDS. DataControl** hat den Namen ADC1, der Code ist `ADC1.SubmitChanges` . Wenn Sie ein ADO- **Recordset**verwenden, können Sie die zugehörige [UpdateBatch](../ado-api/updatebatch-method.md) -Methode verwenden. Die Verwendung von **UpdateBatch** ist die empfohlene Methode für **Recordset** -Objekte [, die mit der Methode](./createrecordset-method-rds.md) "-Methode" erstellt werden. Der Code könnte z `myRS.UpdateBatch` . b. oder lauten `ADC1.Recordset.UpdateBatch` .  
+ Um nach einem **Recordset** zu sortieren, müssen Sie zunächst alle ausstehenden Änderungen speichern. Wenn Sie das RDS verwenden **. DataControl**, Sie können die [SubmitChanges](./submitchanges-method-rds.md) -Methode verwenden. Beispielsweise, wenn Ihr **RDS. DataControl** hat den Namen ADC1, der Code ist `ADC1.SubmitChanges` . Wenn Sie ein ADO- **Recordset** verwenden, können Sie die zugehörige [UpdateBatch](../ado-api/updatebatch-method.md) -Methode verwenden. Die Verwendung von **UpdateBatch** ist die empfohlene Methode für **Recordset** -Objekte [, die mit der Methode](./createrecordset-method-rds.md) "-Methode" erstellt werden. Der Code könnte z `myRS.UpdateBatch` . b. oder lauten `ADC1.Recordset.UpdateBatch` .  
   
 ## <a name="applies-to"></a>Gilt für  
  [DataControl-Objekt (RDS)](./datacontrol-object-rds.md)  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropdistributor
 - sp_dropdistributor_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2477b0a95fb74b26ecf8294baf2ce48a9fd32d12
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f7a08c3f8cd035db38533f9b7fd56aaa34c39399
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543479"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205151"
 ---
 # <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,31 +41,31 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="arguments"></a>Argumente  
 `[ @no_checks = ] no_checks` Gibt an, ob nach abhängigen Objekten gesucht werden soll, bevor der Verteiler gelöscht wird. *no_checks* ist vom Typ **Bit**. der Standardwert ist 0.  
   
- Wenn der Wert **0**ist, wird **sp_dropdistributor** überprüft, um sicherzustellen, dass alle Veröffentlichungs-und Verteilungs Objekte zusätzlich zum Verteiler gelöscht wurden.  
+ Wenn der Wert **0** ist, wird **sp_dropdistributor** überprüft, um sicherzustellen, dass alle Veröffentlichungs-und Verteilungs Objekte zusätzlich zum Verteiler gelöscht wurden.  
   
- Bei **1**werden von **sp_dropdistributor** alle Veröffentlichungs-und Verteilungs Objekte gelöscht, bevor der Verteiler deinstalliert wird.  
+ Bei **1** werden von **sp_dropdistributor** alle Veröffentlichungs-und Verteilungs Objekte gelöscht, bevor der Verteiler deinstalliert wird.  
   
 `[ @ignore_distributor = ] ignore_distributor` Gibt an, ob diese gespeicherte Prozedur ausgeführt wird, ohne eine Verbindung mit dem Verteiler herzustellen. *ignore_distributor* ist vom Typ **Bit**. der Standardwert ist **0**.  
   
- Bei **0**wird **sp_dropdistributor** eine Verbindung mit dem Verteiler hergestellt und alle Replikations Objekte entfernt. Wenn **sp_dropdistributor** keine Verbindung mit dem Verteiler herstellen kann, schlägt die gespeicherte Prozedur fehl.  
+ Bei **0** wird **sp_dropdistributor** eine Verbindung mit dem Verteiler hergestellt und alle Replikations Objekte entfernt. Wenn **sp_dropdistributor** keine Verbindung mit dem Verteiler herstellen kann, schlägt die gespeicherte Prozedur fehl.  
   
- Wenn der Wert **1**ist, wird keine Verbindung mit dem Verteiler hergestellt, und die Replikations Objekte werden nicht entfernt. Diese Möglichkeit wird verwendet, wenn der Verteiler deinstalliert wird oder dauerhaft offline ist. Die Objekte für diesen Verleger werden auf dem Verteiler nicht entfernt, bis der Verteiler zu einem späteren Zeitpunkt neu installiert wird.  
+ Wenn der Wert **1** ist, wird keine Verbindung mit dem Verteiler hergestellt, und die Replikations Objekte werden nicht entfernt. Diese Möglichkeit wird verwendet, wenn der Verteiler deinstalliert wird oder dauerhaft offline ist. Die Objekte für diesen Verleger werden auf dem Verteiler nicht entfernt, bis der Verteiler zu einem späteren Zeitpunkt neu installiert wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_dropdistributor** wird bei allen Replikations Typen verwendet.  
   
- Wenn andere Verleger-oder Verteilungs Objekte auf dem Server vorhanden sind, schlägt **sp_dropdistributor** fehl, es sei denn, ** \@ no_checks** ist auf **1**festgelegt.  
+ Wenn andere Verleger-oder Verteilungs Objekte auf dem Server vorhanden sind, schlägt **sp_dropdistributor** fehl, es sei denn, **\@ no_checks** ist auf **1** festgelegt.  
   
- Diese gespeicherte Prozedur muss ausgeführt werden, nachdem die Verteilungs Datenbank durch Ausführen von **sp_dropdistributiondb**gelöscht wurde.  
+ Diese gespeicherte Prozedur muss ausgeführt werden, nachdem die Verteilungs Datenbank durch Ausführen von **sp_dropdistributiondb** gelöscht wurde.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributor-trans_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_dropdistributor**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_dropdistributor** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Deaktivieren der Veröffentlichung und Verteilung](../../relational-databases/replication/disable-publishing-and-distribution.md)   

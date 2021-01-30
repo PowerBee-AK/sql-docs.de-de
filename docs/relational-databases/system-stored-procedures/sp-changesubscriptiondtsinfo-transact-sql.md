@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changesubscriptiondtsinfo
 - sp_changesubscriptiondtsinfo_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7dfb8781e2ba00bae96efff0d2e1dea385196a38
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 63762571085653afea03470cfc1e453a85e8adad
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543658"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194417"
 ---
 # <a name="sp_changesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,25 +41,25 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id` Die Auftrags-ID des Verteilungs-Agent für das Pushabonnement. *job_id* ist vom Datentyp **varbinary (16)** und hat keinen Standardwert. Führen Sie **sp_helpsubscription** oder **sp_helppullsubscription**aus, um die Verteilungs Auftrags-ID zu ermitteln.  
+`[ @job_id = ] job_id` Die Auftrags-ID des Verteilungs-Agent für das Pushabonnement. *job_id* ist vom Datentyp **varbinary (16)** und hat keinen Standardwert. Führen Sie **sp_helpsubscription** oder **sp_helppullsubscription** aus, um die Verteilungs Auftrags-ID zu ermitteln.  
   
-`[ @dts_package_name = ] 'dts_package_name'` Gibt den Namen des DTS-Pakets an. *dts_package_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn Sie z. b. ein Paket mit dem Namen **DTSPub_Package**angeben möchten, geben Sie an `@dts_package_name = N'DTSPub_Package'` .  
+`[ @dts_package_name = ] 'dts_package_name'` Gibt den Namen des DTS-Pakets an. *dts_package_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn Sie z. b. ein Paket mit dem Namen **DTSPub_Package** angeben möchten, geben Sie an `@dts_package_name = N'DTSPub_Package'` .  
   
 `[ @dts_package_password = ] 'dts_package_password'` Gibt das Kennwort für das Paket an. *dts_package_password* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL, der angibt, dass die Kenn Wort Eigenschaft unverändert bleiben soll.  
   
 > [!NOTE]  
 >  Ein DTS-Paket muss über ein Kennwort verfügen.  
   
-`[ @dts_package_location = ] 'dts_package_location'` Gibt den Speicherort des Pakets an. *dts_package_location* ist vom Datentyp **nvarchar (12)** und hat den Standardwert NULL, womit angegeben wird, dass der Paket Speicherort unverändert bleiben soll. Der Speicherort des Pakets kann in **Verteiler** oder **Abonnent**geändert werden.  
+`[ @dts_package_location = ] 'dts_package_location'` Gibt den Speicherort des Pakets an. *dts_package_location* ist vom Datentyp **nvarchar (12)** und hat den Standardwert NULL, womit angegeben wird, dass der Paket Speicherort unverändert bleiben soll. Der Speicherort des Pakets kann in **Verteiler** oder **Abonnent** geändert werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_changesubscriptiondtsinfo** wird für die Momentaufnahme-und Transaktions Replikation verwendet, bei denen es sich nur um Pushabonnements handelt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** , der festen Daten Bank Rolle **db_owner** oder der Ersteller des Abonnements können **sp_changesubscriptiondtsinfo**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** , der festen Daten Bank Rolle **db_owner** oder der Ersteller des Abonnements können **sp_changesubscriptiondtsinfo** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

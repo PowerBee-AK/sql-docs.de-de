@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_create_collection_set_TSQL
 - sp_syscollector_create_collection_set
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5c2f62ec06ebda9c7c22ec381f4b9b5a3011cc4f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: de9ee3331621df81739a9f808bbd63ab42c52491
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547359"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205080"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,15 +72,15 @@ sp_syscollector_create_collection_set
   
 `[ @days_until_expiration = ] days_until_expiration` Gibt an, wie viele Tage die gesammelten Daten im Verwaltungs Data Warehouse gespeichert werden. *days_until_expiration* ist vom Datentyp **smallint** und hat den Standardwert 730 (zwei Jahre). *days_until_expiration* muss 0 oder eine positive ganze Zahl sein.  
   
-`[ @proxy_id = ] proxy_id` Ist der eindeutige Bezeichner für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proxy Konto des-Agents. *proxy_id* ist vom Datentyp **int** und hat den Standardwert NULL. Wenn angegeben, muss *proxy_name* NULL sein. Fragen Sie die sysproxies-Systemtabelle ab, um *proxy_id*abzurufen. Die feste Datenbankrolle dc_admin muss über die Berechtigung für den Zugriff auf den Proxy verfügen. Weitere Informationen finden Sie unter [Erstellen eines SQL Server-Agent Proxys](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
+`[ @proxy_id = ] proxy_id` Ist der eindeutige Bezeichner für ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proxy Konto des-Agents. *proxy_id* ist vom Datentyp **int** und hat den Standardwert NULL. Wenn angegeben, muss *proxy_name* NULL sein. Fragen Sie die sysproxies-Systemtabelle ab, um *proxy_id* abzurufen. Die feste Datenbankrolle dc_admin muss über die Berechtigung für den Zugriff auf den Proxy verfügen. Weitere Informationen finden Sie unter [Erstellen eines SQL Server-Agent Proxys](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
-`[ @proxy_name = ] 'proxy_name'` Der Name des Proxy Kontos. *proxy_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn angegeben, muss *proxy_id* NULL sein. Fragen Sie die sysproxies-Systemtabelle ab, um *proxy_name*abzurufen.  
+`[ @proxy_name = ] 'proxy_name'` Der Name des Proxy Kontos. *proxy_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn angegeben, muss *proxy_id* NULL sein. Fragen Sie die sysproxies-Systemtabelle ab, um *proxy_name* abzurufen.  
   
-`[ @schedule_uid = ] 'schedule_uid'` Der GUID, der auf einen Zeitplan zeigt. *schedule_uid* ist vom Datentyp **uniqueidentifier** und hat den Standardwert NULL. Wenn angegeben, muss *schedule_name* NULL sein. Fragen Sie die syszeitpläne-Systemtabelle ab, um *schedule_uid*abzurufen.  
+`[ @schedule_uid = ] 'schedule_uid'` Der GUID, der auf einen Zeitplan zeigt. *schedule_uid* ist vom Datentyp **uniqueidentifier** und hat den Standardwert NULL. Wenn angegeben, muss *schedule_name* NULL sein. Fragen Sie die syszeitpläne-Systemtabelle ab, um *schedule_uid* abzurufen.  
   
  Wenn *collection_mode* auf 0 festgelegt ist, muss *schedule_uid* oder *schedule_name* angegeben werden. Wenn *collection_mode* auf 1 festgelegt ist, wird *schedule_uid* oder *schedule_name* ignoriert, wenn angegeben.  
   
-`[ @schedule_name = ] 'schedule_name'` Der Name des Zeitplans. *schedule_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn angegeben, muss *schedule_uid* NULL sein. Fragen Sie die syszeitpläne-Systemtabelle ab, um *schedule_name*abzurufen.  
+`[ @schedule_name = ] 'schedule_name'` Der Name des Zeitplans. *schedule_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn angegeben, muss *schedule_uid* NULL sein. Fragen Sie die syszeitpläne-Systemtabelle ab, um *schedule_name* abzurufen.  
   
 `[ @logging_level = ] logging_level` Der Protokolliergrad. *LOGGING_LEVEL* ist vom Datentyp **smallint** und hat einen der folgenden Werte:  
   
@@ -113,7 +113,7 @@ sp_syscollector_create_collection_set
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_syscollector_create_collection_set muss im Kontext der msdb-Systemdatenbank ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88d21354042ccccae5e165823fa738fa071db3e5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f3030af273aa317677bec5c975bbfe27d7bc248f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88972881"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167308"
 ---
 # <a name="find-method-example-vb"></a>Find-Methode – Beispiel (VB)
 In diesem Beispiel wird die [Find](./find-method-ado.md) -Methode des [Recordset](./recordset-object-ado.md) -Objekts verwendet, um die Anzahl von Geschäfts Titeln in der ***Pubs*** -Datenbank zu suchen und zu zählen. Im Beispiel wird davon ausgegangen, dass der zugrunde liegende Anbieter keine ähnliche Funktionalität unterstützt.  

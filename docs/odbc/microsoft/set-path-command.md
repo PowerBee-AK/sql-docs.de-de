@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SET PATH command [ODBC]
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 36131e53d1a10d8af3e7ca226768a9c08a14ba77
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a97ac5a074116fcaad0477625ea683226abaf76e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421834"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203928"
 ---
 # <a name="set-path-command"></a>SET PATH-Befehl
 Gibt einen Pfad für Datei suchen an. Treiber spezifische Informationen finden Sie in den hinweisen.  
@@ -44,7 +44,7 @@ SET PATH TO [Path]
   
 -   Katalog Funktionen wie [SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md) und [SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) ignorieren den neuen Pfad und verweisen weiterhin auf den von der Datenquelle in [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md) oder [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)angegebenen Pfad.  
   
--   Befehle wie SELECT, INSERT, Update, DELETE und CREATE TABLE ignorieren den neuen Pfad und verweisen weiterhin auf den von der Datenquelle in **SQLPrepare** oder **SQLExecDirect**angegebenen Pfad.  
+-   Befehle wie SELECT, INSERT, Update, DELETE und CREATE TABLE ignorieren den neuen Pfad und verweisen weiterhin auf den von der Datenquelle in **SQLPrepare** oder **SQLExecDirect** angegebenen Pfad.  
   
  Wenn Sie Set Path in einer gespeicherten Prozedur ausgeben und den Pfad nicht wieder auf den ursprünglichen Zustand zurücksetzen, wird der neue Pfad von anderen Verbindungen mit der Datenbank verwendet (da Set Path nicht auf Daten Sitzungen beschränkt ist).  
   

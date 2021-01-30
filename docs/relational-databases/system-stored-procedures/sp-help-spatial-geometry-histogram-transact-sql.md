@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_spatial_geometry_histogram
 - sp_help_spatial_geometry_histogram_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d875178db938e92aa60e3396cee2242d6a54e3f7
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 75609570d3c021b350fc06cbaf35f32dee4bd8ba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810213"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183606"
 ---
 # <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,26 +47,26 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="arguments"></a>Argumente  
 `[ @tabname = ] 'tabname'` Der qualifizierte oder nicht qualifizierte Name der Tabelle, für die der räumliche Index angegeben wurde.  
   
- Anführungszeichen sind nur dann erforderlich, wenn eine qualifizierte Tabelle angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. *tabname* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+ Anführungszeichen sind nur dann erforderlich, wenn eine qualifizierte Tabelle angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. *tabname* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @colname = ] 'colname'` Der Name der angegebenen räumlichen Spalte. *ColName* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @colname = ] 'colname'` Der Name der angegebenen räumlichen Spalte. *ColName* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @resolution = ] 'resolution'` Die Auflösung des umgebenden Felds. Werte zwischen 10 und 5000 sind gültig. *Auflösung* ist vom Datentyp **tinyint**und hat keinen Standardwert.  
+`[ @resolution = ] 'resolution'` Die Auflösung des umgebenden Felds. Werte zwischen 10 und 5000 sind gültig. *Auflösung* ist vom Datentyp **tinyint** und hat keinen Standardwert.  
   
-`[ @xmin = ] 'xmin'` Ist die X-minimale Eigenschaft für das umgebende Feld. *xmin* ist vom Datentyp **float**und hat keinen Standardwert.  
+`[ @xmin = ] 'xmin'` Ist die X-minimale Eigenschaft für das umgebende Feld. *xmin* ist vom Datentyp **float** und hat keinen Standardwert.  
   
-`[ @ymin = ] 'ymin'` Die Y-minimale Eigenschaft für das umgebende Feld. *ymin* ist vom Datentyp **float**und hat keinen Standardwert.  
+`[ @ymin = ] 'ymin'` Die Y-minimale Eigenschaft für das umgebende Feld. *ymin* ist vom Datentyp **float** und hat keinen Standardwert.  
   
-`[ @xmax = ] 'xmax'` Ist die X-Maximum-Eigenschaft des Begrenzungs Rahmens. *xmax* ist vom Datentyp **float**und hat keinen Standardwert.  
+`[ @xmax = ] 'xmax'` Ist die X-Maximum-Eigenschaft des Begrenzungs Rahmens. *xmax* ist vom Datentyp **float** und hat keinen Standardwert.  
   
-`[ @ymax = ] 'ymax'` Ist die maximale Y-Eigenschaft für das umgebende Feld. *ymax* ist vom Datentyp **float**und hat keinen Standardwert.  
+`[ @ymax = ] 'ymax'` Ist die maximale Y-Eigenschaft für das umgebende Feld. *ymax* ist vom Datentyp **float** und hat keinen Standardwert.  
   
-`[ @sample = ] 'sample'` Der Prozentsatz der verwendeten Tabelle. Gültige Werte sind 0 bis 100. *Sample* ist ein **float**-Wert. Der Standardwert ist 100.  
+`[ @sample = ] 'sample'` Der Prozentsatz der verwendeten Tabelle. Gültige Werte sind 0 bis 100. *Sample* ist ein **float**-Wert. Der Standardwert ist 100.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Tabellenwert wird zurückgegeben. In der folgenden Tabelle wird der Spalteninhalt der Tabelle beschrieben.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Stellt die eindeutige ID jeder Zelle dar, beginnend mit 1.|  
 |**Kern**|**geometry**|Ist ein rechteckiges Polygon, das die einzelnen Zellen darstellt. Die Zellenform ist mit der für die räumliche Indizierung verwendeten Zellenform identisch.|  
@@ -75,7 +75,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Berechtigungen  
  Der Benutzer muss ein Mitglied der Datenbankrolle **public** sein. Erfordert die READ ACCESS-Berechtigung für den Server und das Objekt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Auf der räumlichen SSMS-Registerkarte wird eine grafische Darstellung der Ergebnisse angezeigt. Sie können die Ergebnisse für das räumliche Fenster abfragen, um die ungefähre Anzahl von Ergebniselementen abzurufen. Objekte in der Tabelle decken möglicherweise mehrere Zellen ab, daher ist die Summe der Zellen möglicherweise größer als die Anzahl der tatsächlichen Objekte.  
   
  Eine zusätzliche Zeile mit der Anzahl der Objekte, die sich außerhalb des Begrenzungsrahmens befinden oder den Rahmen des Begrenzungsrahmens berühren, kann dem Resultset hinzugefügt werden. Der **CellID** dieser Zeile ist 0, und die **Zelle** dieser Zeile enthält eine **LineString** , die das umgebende Feld darstellt. Diese Zeile stellt den gesamten Bereich außerhalb des Begrenzungsrahmens dar.  

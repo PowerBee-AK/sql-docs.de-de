@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_db_uncontained_entities
 - dm_db_uncontained_entities_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 54b087c98071ea550fcdff630a93d8049188ea91
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 4bf535b136c8de41a54a6de6c75d0e22794a3448
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099900"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204791"
 ---
 # <a name="sysdm_db_uncontained_entities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "98099900"
   
 ||||  
 |-|-|-|  
-|**Spaltenname**|**Typ**|**Beschreibung**|  
+|**Spaltenname**|**Type**|**Beschreibung**|  
 |*class*|**int**|1 = Objekt oder Spalte (einschließlich Modulen, XPs, Sichten, Synonymen und Tabellen).<br /><br /> 4 = Daten Bank Prinzipal<br /><br /> 5 = Assembly<br /><br /> 6 = Typ<br /><br /> 7 = Index (Volltextindex)<br /><br /> 12 = DDL-Daten Bank Auslösung<br /><br /> 19 = Route<br /><br /> 30 = Überwachungsspezifikation|  
 |*class_desc*|**nvarchar(120)**|Klassenbeschreibung der Entitätsklasse. Eine der folgenden, um der-Klasse zu entsprechen:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **Stadtverordneten**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **Seeweg**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|Die ID der Entität.<br /><br /> Wenn *Class* = 1, dann object_id<br /><br /> Wenn *Class* = 4, dann sys. database_principals. principal_id.<br /><br /> Wenn *Class* = 5, dann sys.Assemblies.assembly_id.<br /><br /> Wenn *Class* = 6, dann sys.types.user_type_id.<br /><br /> Wenn *Class* = 7, dann sys.Indexes.index_id.<br /><br /> Wenn *Class* = 12, dann sys.Triggers.object_id.<br /><br /> Wenn *Class* = 19, dann sys.routes.route_id.<br /><br /> Wenn *Class* = 30, dann sys. database_audit_specifications database_audit_specifications.database_specification_id.|  

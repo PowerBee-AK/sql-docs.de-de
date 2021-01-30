@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::Filter
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2519fdf691cc0f982f16a3aa77fdb66036bd86e8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7366ba67d36049f1c5df701bc633d76f56bb9af5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973001"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167332"
 ---
 # <a name="filter-property"></a>Filter-Eigenschaft
 Gibt einen Filter für Daten in einem [Recordset](./recordset-object-ado.md)an.  
@@ -42,11 +42,11 @@ Verwenden Sie die **Filter** -Eigenschaft, um Datensätze in einem **Recordset**
   
 Die Kriterienzeichenfolge besteht aus Klauseln in der Form *FieldName-Operator-Value* (z `"LastName = 'Smith'"` . b.). Sie können Verbund Klauseln erstellen, indem Sie einzelne Klauseln mit **and** (z. b. `"LastName = 'Smith' AND FirstName = 'John'"` ) oder **or** (z. b `"LastName = 'Smith' OR LastName = 'Jones'"` .) verketten. Verwenden Sie für Kriterienzeichenfolgen die folgenden Richtlinien:
 
--   Der *Feldname* muss ein gültiger Feldname aus dem **Recordset**sein. Wenn der Feldname Leerzeichen enthält, müssen Sie den Namen in eckigen Klammern einschließen.  
+-   Der *Feldname* muss ein gültiger Feldname aus dem **Recordset** sein. Wenn der Feldname Leerzeichen enthält, müssen Sie den Namen in eckigen Klammern einschließen.  
   
 -   Der Operator muss eine der folgenden sein: \<, > , \<=, > =,  <>, = oder **like**.  
   
--   Value ist der Wert, mit dem Sie die Feldwerte vergleichen (z. b. "Smith", #8/24/95 #, 12,345 oder $50,00). Verwenden Sie einfache Anführungszeichen mit Zeichen folgen und Nummern Zeichen (#) mit Datumsangaben. Für Zahlen können Sie Dezimaltrennzeichen, Dollarzeichen und wissenschaftliche Schreibweise verwenden. Wenn der Operator **like**ist, kann der Wert Platzhalter verwenden. Nur das Sternchen (*) und das Prozentzeichen (%) Platzhalter sind zulässig, und Sie müssen das letzte Zeichen in der Zeichenfolge sein. Wert darf nicht NULL sein.  
+-   Value ist der Wert, mit dem Sie die Feldwerte vergleichen (z. b. "Smith", #8/24/95 #, 12,345 oder $50,00). Verwenden Sie einfache Anführungszeichen mit Zeichen folgen und Nummern Zeichen (#) mit Datumsangaben. Für Zahlen können Sie Dezimaltrennzeichen, Dollarzeichen und wissenschaftliche Schreibweise verwenden. Wenn der Operator **like** ist, kann der Wert Platzhalter verwenden. Nur das Sternchen (*) und das Prozentzeichen (%) Platzhalter sind zulässig, und Sie müssen das letzte Zeichen in der Zeichenfolge sein. Wert darf nicht NULL sein.  
   
 > [!NOTE]
 >  Wenn Sie einfache Anführungszeichen (') in den Filter Wert einschließen möchten, verwenden Sie zwei einfache Anführungszeichen, um eine zu repräsentieren. Wenn Sie z. b. nach "o" filtern möchten, sollte die Kriterienzeichenfolge lauten `"col1 = 'O''Malley'"` . Um einfache Anführungszeichen sowohl am Anfang als auch am Ende des Filter Werts einzuschließen, müssen Sie die Zeichenfolge mit Zeichen Zeichen (#) einschließen. Wenn Sie z. b. nach ' 1 ' filtern möchten, sollte die Kriterienzeichenfolge lauten `"col1 = #'1'#"` .  
@@ -57,7 +57,7 @@ Die Kriterienzeichenfolge besteht aus Klauseln in der Form *FieldName-Operator-V
 -   Stattdessen erstellen Sie diesen Filter als  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   In einer **like** -Klausel können Sie am Anfang und am Ende des Musters einen Platzhalter verwenden. Sie können z. B. `LastName Like '*mit*'` verwenden. Oder mit **like** können Sie einen Platzhalter nur am Ende des Musters verwenden. Beispielsweise `LastName Like 'Smit*'`.  
+-   In einer **like** -Klausel können Sie am Anfang und am Ende des Musters einen Platzhalter verwenden. Sie können z. B. `LastName Like '*mit*'` verwenden. Oder mit **like** können Sie einen Platzhalter nur am Ende des Musters verwenden. Beispiel: `LastName Like 'Smit*'`.  
   
  Die Filter Konstanten vereinfachen das Auflösen einzelner Daten Satz Konflikte im Batch Aktualisierungs Modus, da Sie z. b. nur die Datensätze anzeigen können, die während des letzten [UpdateBatch-Methoden](./updatebatch-method.md) Aufrufes aufgetreten sind.  
   
@@ -76,7 +76,7 @@ Diese Konfiguration erzeugt den Fehler zur Laufzeit. `rs.Filter = "C=2"`Das Anwe
 
 Eine Erläuterung der Bookmark-Werte, aus denen Sie ein Array erstellen können, das mit der Filter-Eigenschaft verwendet werden kann, finden Sie unter der Eigenschaft " [Bookmark Property (ADO)](./bookmark-property-ado.md) ".
 
-Nur Filter in Form von Kriterienzeichenfolgen beeinflussen den Inhalt eines permanenten **Recordsets**. Ein Beispiel für eine Kriterienzeichenfolge ist `OrderDate > '12/31/1999'` . Filter, die mit einem Array von Lesezeichen erstellt wurden oder einen Wert aus dem **filtergroupum**verwenden, wirken sich nicht auf den Inhalt des beibehaltenen **Recordsets**aus. Diese Regeln gelten für Recordsets, die entweder mit Client seitigen oder serverseitigen Cursorn erstellt wurden.
+Nur Filter in Form von Kriterienzeichenfolgen beeinflussen den Inhalt eines permanenten **Recordsets**. Ein Beispiel für eine Kriterienzeichenfolge ist `OrderDate > '12/31/1999'` . Filter, die mit einem Array von Lesezeichen erstellt wurden oder einen Wert aus dem **filtergroupum** verwenden, wirken sich nicht auf den Inhalt des beibehaltenen **Recordsets** aus. Diese Regeln gelten für Recordsets, die entweder mit Client seitigen oder serverseitigen Cursorn erstellt wurden.
   
 > [!NOTE]
 >  Wenn Sie das Flag adfilterbatdingrecords auf ein gefiltertes und geändertes **Recordset** im Batch Aktualisierungs Modus anwenden, ist das resultierende **Recordset** leer, wenn die Filterung auf dem Schlüsselfeld einer eingebundenen Tabelle basiert und die Änderungen an den Schlüssel Feldwerten vorgenommen wurden. Das resultierende **Recordset** ist nicht leer, wenn eine der folgenden Aussagen zutrifft:  
@@ -89,13 +89,13 @@ Nur Filter in Form von Kriterienzeichenfolgen beeinflussen den Inhalt eines perm
   
 -   An Feldern in einer mehrfach Schlüssel Tabelle wurden Änderungen vorgenommen.  
   
-In der folgenden Tabelle werden die Auswirkungen von **adfilterpdingrecords** in verschiedenen Kombinationen aus Filtern und Änderungen zusammengefasst. In der linken Spalte werden die möglichen Änderungen angezeigt. Es können Änderungen an jedem der nicht-Schlüsselfelder, im Schlüsselfeld in einer eingebundenen Tabelle oder in einem der Schlüsselfelder in einer mehrfach Schlüssel Tabelle vorgenommen werden. Die obere Zeile zeigt das Filter Kriterium an. Das Filtern kann auf einem der nicht-Schlüsselfelder, dem Schlüsselfeld in einer eingebundenen Tabelle oder einem der Schlüsselfelder in einer mehrfach Schlüssel Tabelle basieren. Die sich überschneidenden Zellen zeigen die Ergebnisse an. Ein **+** Pluszeichen bedeutet, dass das Anwenden von **adfilterpdingrecords** ein nicht leeres **Recordset**ergibt. Ein **-** Minuszeichen bedeutet ein leeres **Recordset**.  
+In der folgenden Tabelle werden die Auswirkungen von **adfilterpdingrecords** in verschiedenen Kombinationen aus Filtern und Änderungen zusammengefasst. In der linken Spalte werden die möglichen Änderungen angezeigt. Es können Änderungen an jedem der nicht-Schlüsselfelder, im Schlüsselfeld in einer eingebundenen Tabelle oder in einem der Schlüsselfelder in einer mehrfach Schlüssel Tabelle vorgenommen werden. Die obere Zeile zeigt das Filter Kriterium an. Das Filtern kann auf einem der nicht-Schlüsselfelder, dem Schlüsselfeld in einer eingebundenen Tabelle oder einem der Schlüsselfelder in einer mehrfach Schlüssel Tabelle basieren. Die sich überschneidenden Zellen zeigen die Ergebnisse an. Ein **+** Pluszeichen bedeutet, dass das Anwenden von **adfilterpdingrecords** ein nicht leeres **Recordset** ergibt. Ein **-** Minuszeichen bedeutet ein leeres **Recordset**.  
   
 |Nation|Nicht Schlüssel|Einzelner Schlüssel|Mehrere Schlüssel|
 |-|--------------|----------------|-------------------|
 |**Nicht Schlüssel**|+|+|+|
-|**Einzelner Schlüssel**|+|-|–|
-|**Mehrere Schlüssel**|+|–|+|
+|**Einzelner Schlüssel**|+|-|N/V|
+|**Mehrere Schlüssel**|+|N/V|+|
 |||||
   
 ## <a name="applies-to"></a>Gilt für
@@ -107,4 +107,4 @@ In der folgenden Tabelle werden die Auswirkungen von **adfilterpdingrecords** in
 [Filter-und RecordCount-Eigenschaften (Beispiel) (VB)](./filter-and-recordcount-properties-example-vb.md) 
  [Filter-und RecordCount-Eigenschaften (Beispiel) (VC + +)](./filter-and-recordcount-properties-example-vc.md) 
  [Clear-Methode (ADO)](./clear-method-ado.md) 
- [Optimieren von Eigenschaften-Dynamic (ADO)](./optimize-property-dynamic-ado.md)
+ [Optimieren der Property-Dynamic (ADO)](./optimize-property-dynamic-ado.md)

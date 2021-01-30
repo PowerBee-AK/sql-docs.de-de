@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - explicit data type conversion functions [ODBC]
 - data type conversion functions [ODBC]
@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: da897469d26cd0403dc023cfcd3f3e03bfceeba4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 927c911b839e7aa07b087edb0fb3b457d0825b6c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466187"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194814"
 ---
 # <a name="explicit-data-type-conversion-function"></a>Explizite Datentyp-Konvertierungsfunktion
 Eine explizite Datentyp Konvertierung wird in Bezug auf SQL-Datentyp Definitionen angegeben.  
   
- Die ODBC-Syntax für die explizite Datentyp-Konvertierungs Funktion schränkt Konvertierungen nicht ein. Die Gültigkeit spezifischer Konvertierungen eines Datentyps in einen anderen Datentyp wird von jeder treiberspezifischen Implementierung bestimmt. Der Treiber lehnt beim Konvertieren der ODBC-Syntax in die native Syntax diese Konvertierungen ab, die in der ODBC-Syntax zulässig sind, aber nicht von der Datenquelle unterstützt werden. Die ODBC-Funktion **SQLGetInfo**mit den Konvertierungsoptionen (z. b. SQL_CONVERT_BIGINT, SQL_CONVERT_BINARY, SQL_CONVERT_INTERVAL_YEAR_MONTH usw.) bietet eine Möglichkeit, von Konvertierungen zu Fragen, die von der Datenquelle unterstützt werden.  
+ Die ODBC-Syntax für die explizite Datentyp-Konvertierungs Funktion schränkt Konvertierungen nicht ein. Die Gültigkeit spezifischer Konvertierungen eines Datentyps in einen anderen Datentyp wird von jeder treiberspezifischen Implementierung bestimmt. Der Treiber lehnt beim Konvertieren der ODBC-Syntax in die native Syntax diese Konvertierungen ab, die in der ODBC-Syntax zulässig sind, aber nicht von der Datenquelle unterstützt werden. Die ODBC-Funktion **SQLGetInfo** mit den Konvertierungsoptionen (z. b. SQL_CONVERT_BIGINT, SQL_CONVERT_BINARY, SQL_CONVERT_INTERVAL_YEAR_MONTH usw.) bietet eine Möglichkeit, von Konvertierungen zu Fragen, die von der Datenquelle unterstützt werden.  
   
  Die **Convert** -Funktion hat folgendes Format:  
   
  **Konvertieren (** _value_exp_ _data_type_**)**  
   
- Die-Funktion gibt den von *value_exp* angegebenen Wert zurück, der in den angegebenen *data_type*konvertiert wurde, wobei *data_type* eines der folgenden Schlüsselwörter ist:  
+ Die-Funktion gibt den von *value_exp* angegebenen Wert zurück, der in den angegebenen *data_type* konvertiert wurde, wobei *data_type* eines der folgenden Schlüsselwörter ist:  
 
 :::row:::
     :::column:::

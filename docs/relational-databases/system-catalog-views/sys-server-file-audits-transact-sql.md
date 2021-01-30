@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - server_file_audits_TSQL
 - sys.server_file_audits_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: b72b618559f02fed01e1760168f72ea4a12065ae
-ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
+ms.openlocfilehash: 01cc8c02293c7e1ff5c26af7a9c3fbc579746d51
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98151287"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193817"
 ---
 # <a name="sysserver_file_audits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "98151287"
 |create_date|**datetime**|Das UTC-Datum, an dem die Dateiüberwachung erstellt wurde.|  
 |modify_date|**DataTime**|Das UTC-Datum, an dem die Dateiüberwachung zuletzt geändert wurde.|  
 |principal_id|**int**|Die ID des Besitzers der Überwachung, wie sie auf dem Server registriert wurde.|  
-|type|**char(2)**|Überwachungstyp:<br /><br /> SL = NT-Sicherheits Ereignisprotokoll<br /><br /> Al = NT-Anwendungs Ereignisprotokoll<br /><br /> FL = Datei im Dateisystem|  
+|Typ|**char(2)**|Überwachungstyp:<br /><br /> SL = NT-Sicherheits Ereignisprotokoll<br /><br /> Al = NT-Anwendungs Ereignisprotokoll<br /><br /> FL = Datei im Dateisystem|  
 |type_desc|**nvarchar(60)**|Beschreibung des Überwachungstyps.|  
 |on_failure|**tinyint**|Bei Fehlerbedingung:<br /><br /> 0 = Weiter<br /><br /> 1 = Serverinstanz herunterfahren<br /><br /> 2 = Fehler bei Vorgang|  
 |on_failure_desc|**nvarchar(60)**|Bei einem Fehler schreiben Sie folgendermaßen einen Aktionseintrag:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  
@@ -59,7 +59,7 @@ ms.locfileid: "98151287"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

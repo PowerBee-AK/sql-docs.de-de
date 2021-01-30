@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changearticle
 - sp_changearticle_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2eb11859c0d0e4552324b0a3d7d5e005f9bd89b7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 22d64091d206161546856e7186958ab60217bcc2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548230"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203740"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,9 +44,9 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung, die den Artikel enthält. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, die den Artikel enthält. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @article = ] 'article'` Der Name des Artikels, dessen-Eigenschaft geändert werden soll. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @article = ] 'article'` Der Name des Artikels, dessen-Eigenschaft geändert werden soll. der *Artikel* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 `[ @property = ] 'property'` Eine zu ändernde Artikel Eigenschaft. die *Eigenschaft* ist vom Datentyp **nvarchar (100)**.  
   
@@ -63,13 +63,13 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_table**||Die neue Zieltabelle.|  
 |**destination_owner**||Name des Besitzers des Zielobjekts.|  
 |**filter**||Die neue gespeicherte Prozedur, mit der die Tabelle gefiltert werden soll (horizontales Filtern). Die Standardeinstellung ist NULL. Kann bei der Peer-zu-Peer-Replikation für Veröffentlichungen nicht geändert werden.|  
-|**fire_triggers_on_snapshot**|**true**|Replizierte Benutzertrigger werden ausgeführt, wenn die Anfangsmomentaufnahme angewendet wird.<br /><br /> Hinweis: Wenn Trigger repliziert werden sollen, muss der Bitmasken Wert *schema_option* den Wert **0x100**enthalten.|  
+|**fire_triggers_on_snapshot**|**true**|Replizierte Benutzertrigger werden ausgeführt, wenn die Anfangsmomentaufnahme angewendet wird.<br /><br /> Hinweis: Wenn Trigger repliziert werden sollen, muss der Bitmasken Wert *schema_option* den Wert **0x100** enthalten.|  
 ||**false**|Replizierte Benutzertrigger werden nicht ausgeführt, wenn die Anfangsmomentaufnahme angewendet wird.|  
 |**identity_range**||Steuert die Größe der zugeordneten Identitätsbereiche, die am Abonnent zugeordnet wurden. Wird für die Peer-zu-Peer-Replikation nicht unterstützt.|  
 |**ins_cmd**||Die auszuführende INSERT-Anweisung; andernfalls wird die Operation aus dem Protokoll hergeleitet.|  
 |**pre_creation_cmd**||Ein Vorabbefehl, mit dem die Zieltabelle entfernt, gelöscht oder abgeschnitten werden kann, bevor die Synchronisierung angewendet wird.|  
 ||**keine**|Verwendet keinen Befehl.|  
-||**Dropdown**|Entfernt die Zieltabelle.|  
+||**drop**|Entfernt die Zieltabelle.|  
 ||**delete**|Löscht die Zieltabelle.|  
 ||**truncate**|Schneidet die Zieltabelle ab.|  
 |**pub_identity_range**||Steuert die Größe der zugeordneten Identitätsbereiche, die am Abonnent zugeordnet wurden. Wird für die Peer-zu-Peer-Replikation nicht unterstützt.|  
@@ -78,7 +78,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x01**|Generiert die Objekterstellung (CREATE TABLE, CREATE PROCEDURE usw.).|  
 ||**0x02**|Generiert die gespeicherten Prozeduren, die Änderungen für den Artikel weitergeben (falls definiert).|  
 ||**0x04**|Die Skripterstellung für Identitätsspalten erfolgt mithilfe der IDENTITY-Eigenschaft.|  
-||**0x08**|Replizieren von **Zeitstempel** -Spalten. Wenn nicht festgelegt, werden **Zeitstempel** -Spalten als **Binärdateien**repliziert.|  
+||**0x08**|Replizieren von **Zeitstempel** -Spalten. Wenn nicht festgelegt, werden **Zeitstempel** -Spalten als **Binärdateien** repliziert.|  
 ||**0x10**|Generiert einen entsprechenden gruppierten Index.|  
 ||**0x20**|Konvertiert benutzerdefinierte Datentypen (UDT) auf dem Abonnenten in Basisdatentypen. Diese Option kann nicht verwendet werden, wenn eine CHECK- oder DEFAULT-Einschränkung für eine UDT-Spalte vorhanden ist, wenn eine UDT-Spalte Teil des Primärschlüssels ist oder wenn eine berechnete Spalte auf eine UDT-Spalte verweist. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
 ||**0x40**|Generiert entsprechende nicht gruppierte Indizes.|  
@@ -108,7 +108,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x40000000**|Berechtigungen für die Replikation.|  
 ||**0x80000000**|Der Versuch, Abhängigkeiten für Objekte zu löschen, die nicht Teil der Veröffentlichung sind.|  
 ||**0x100000000**|Verwenden Sie diese Option, um das FILESTREAM-Attribut zu replizieren, wenn es für **varbinary (max)** -Spalten angegeben wird. Geben Sie diese Option nicht an, wenn Sie Tabellen auf [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Abonnenten replizieren. Das Replizieren von Tabellen mit FILESTREAM-Spalten auf [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Abonnenten wird unabhängig davon, wie diese Schema Option festgelegt ist, nicht unterstützt.<br /><br /> Siehe Verwandte Option **0x800000000**.|  
-||**0x200000000**|Konvertiert Datums-und Uhrzeit Datentypen (**Date**, **time**, **DateTimeOffset**und **datetime2**), die in eingeführt wurden, in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Datentypen, die in früheren Versionen von unterstützt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+||**0x200000000**|Konvertiert Datums-und Uhrzeit Datentypen (**Date**, **time**, **DateTimeOffset** und **datetime2**), die in eingeführt wurden, in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Datentypen, die in früheren Versionen von unterstützt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 ||**0x400000000**|Repliziert die Komprimierungsoption für Daten und Indizes. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 ||**0x800000000**|Legen Sie diese Option fest, um FILESTREAM-Daten in einer eigenen Dateigruppe auf dem Abonnenten zu speichern. Wenn diese Option nicht festgelegt wird, werden FILESTREAM-Daten in der Standarddateigruppe gespeichert. Bei der Replikation werden keine Dateigruppen erstellt. Daher müssen Sie beim Festlegen dieser Option die Dateigruppe erstellen, bevor Sie die Momentaufnahme auf dem Abonnenten anwenden. Weitere Informationen zum Erstellen von Objekten vor dem Anwenden der Momentaufnahme finden Sie unter [Ausführen von Skripts vor und nach dem Anwenden der](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)Momentaufnahme.<br /><br /> Siehe Verwandte Option **0x100000000**.|  
 ||**0x1000000000**|Konvertiert Common Language Runtime (CLR) benutzerdefinierten Typen (UDTs), die größer als 8000 Bytes sind, in **varbinary (max)** , sodass Spalten vom Typ UDT auf Abonnenten repliziert werden können, auf denen ausgeführt wird [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .|  
@@ -158,7 +158,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Weitere Informationen zu den Eigenschaften, bei deren Änderung die erneute Initialisierung aller vorhandenen Abonnements erforderlich ist, finden Sie im Abschnitt "Hinweise".  
   
-`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  der *Verleger* sollte nicht verwendet werden, wenn Artikeleigenschaften auf einem Verleger geändert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -166,10 +166,10 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_changearticle** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
- Wenn ein Artikel zu einer Veröffentlichung gehört, die die Peer-zu-Peer-Transaktions Replikation unterstützt, können Sie nur die Eigenschaften **Description**, **ins_cmd**, **upd_cmd**und **del_cmd** ändern.  
+ Wenn ein Artikel zu einer Veröffentlichung gehört, die die Peer-zu-Peer-Transaktions Replikation unterstützt, können Sie nur die Eigenschaften **Description**, **ins_cmd**, **upd_cmd** und **del_cmd** ändern.  
   
  Das Ändern der folgenden Eigenschaften erfordert, dass eine neue Momentaufnahme generiert wird, und Sie müssen den Wert **1** für den *force_invalidate_snapshot* -Parameter angeben:  
   
@@ -206,7 +206,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  Innerhalb einer vorhandenen Veröffentlichung können Sie mit **sp_changearticle** einen Artikel ändern, ohne die gesamte Veröffentlichung löschen und neu erstellen zu müssen.  
   
 > [!NOTE]  
->  Wenn der Wert *schema_option*geändert wird, führt das System kein bitweises Update aus. Dies bedeutet, dass beim Festlegen von *schema_option* mithilfe **sp_changearticle**möglicherweise vorhandene Biteinstellungen ausgeschaltet werden. Um die vorhandenen Einstellungen beizubehalten, führen Sie [| (Bitweises OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) zwischen dem Wert, den Sie festlegen, und dem aktuellen Wert von *schema_option*, der durch Ausführen [sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)bestimmt werden kann.  
+>  Wenn der Wert *schema_option* geändert wird, führt das System kein bitweises Update aus. Dies bedeutet, dass beim Festlegen von *schema_option* mithilfe **sp_changearticle** möglicherweise vorhandene Biteinstellungen ausgeschaltet werden. Um die vorhandenen Einstellungen beizubehalten, führen Sie [| (Bitweises OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) zwischen dem Wert, den Sie festlegen, und dem aktuellen Wert von *schema_option*, der durch Ausführen [sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)bestimmt werden kann.  
   
 ## <a name="valid-schema-options"></a>Valid Schema Options  
  In der folgenden Tabelle werden die zulässigen Werte von *schema_option* basierend auf dem Replikationstyp (oben dargestellt) und dem Artikeltyp beschrieben (in der ersten Spalte angezeigt).  
@@ -217,15 +217,15 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**logbased manualfilter**|Alle Optionen|Alle Optionen, aber **0x02**|  
 |**logbased manualview**|Alle Optionen|Alle Optionen, aber **0x02**|  
 |**indexed view logbased**|Alle Optionen|Alle Optionen, aber **0x02**|  
-|**indexed view logbased manualfilter **|Alle Optionen|Alle Optionen, aber **0x02**|  
+|**indexed view logbased manualfilter**|Alle Optionen|Alle Optionen, aber **0x02**|  
 |**indexed view logbased manualview**|Alle Optionen|Alle Optionen, aber **0x02**|  
 |**indexed view logbase manualboth**|Alle Optionen|Alle Optionen, aber **0x02**|  
-|**proc exec**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**und **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**und **0x80000000**|  
-|**serializable proc exec**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**und **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**und **0x80000000**|  
-|**proc schema only**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**und **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**und **0x80000000**|  
-|**view schema only**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**und **0x80000000**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**und **0x80000000**|  
-|**func schema only**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**und **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**und **0x80000000**|  
-|**indexed view schema only**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**und **0x80000000**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**und **0x80000000**|  
+|**proc exec**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000** und **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000** und **0x80000000**|  
+|**serializable proc exec**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000** und **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000** und **0x80000000**|  
+|**proc schema only**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000** und **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000** und **0x80000000**|  
+|**view schema only**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000** und **0x80000000**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000** und **0x80000000**|  
+|**func schema only**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000** und **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000** und **0x80000000**|  
+|**indexed view schema only**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000** und **0x80000000**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000** und **0x80000000**|  
   
 > [!NOTE]
 >  Bei Veröffentlichungen mit verzögertem Update über eine Warteschlange muss der *schema_option* Wert **0x80** aktiviert werden. Die unterstützten *schema_option* Werte für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Veröffentlichungen sind: **0x01**, **0x02**, **0x10**, **0x40**, **0x80**, **0x1000** und **0x4000**.  
@@ -234,7 +234,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_changearticle**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_changearticle** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern von Artikeleigenschaften](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   

@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - RDS properties [ADO]
 - properties [ADO], RDS
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75124c0fc8d7a0c3c0bb0ea491c84c3673339108
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 6bf9a232f2dadfc562cd6e7e183858c3a7f64e9c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724351"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168824"
 ---
 # <a name="rds-properties"></a>RDS-Eigenschaften
 > [!IMPORTANT]
@@ -33,12 +33,12 @@ ms.locfileid: "91724351"
 |[FilterColumn (RDS)](./filtercolumn-property-rds.md)|Gibt die Spalte an, für die die Filterkriterien ausgewertet werden sollen.|  
 |[Filter Kriterium (RDS)](./filtercriterion-property-rds.md)|Gibt den Auswertungs Operator an, der im Filter Wert verwendet werden soll.|  
 |[FilterValue (RDS)](./filtervalue-property-rds.md)|Gibt den Wert an, mit dem Datensätze gefiltert werden.|  
-|[Handler (RDS)](./handler-property-rds.md)|Gibt den Namen eines serverseitigen Anpassungsprogramms (*Handler*) an, das die Funktionalität von **RDSServer. DataFactory**erweitert, sowie alle Parameter, die vom *Handler*verwendet werden.|  
+|[Handler (RDS)](./handler-property-rds.md)|Gibt den Namen eines serverseitigen Anpassungsprogramms (*Handler*) an, das die Funktionalität von **RDSServer. DataFactory** erweitert, sowie alle Parameter, die vom *Handler* verwendet werden.|  
 |[InternetTimeout (RDS)](./internettimeout-property-rds.md)|Gibt die Anzahl der Millisekunden an, die gewartet wird, bevor ein Timeout für eine Anforderung eintritt.|  
 |["Read ystate" (RDS)](./readystate-property-rds.md)|Gibt den Fortschritt eines **DataControl** -Objekts beim Abrufen von Daten in das **Recordset** -Objekt an.|  
 |[Recordset und SourceRecordset (RDS)](./recordset-sourcerecordset-properties-rds.md)|Gibt das **Recordsetobjekt** an, das von einem benutzerdefinierten Geschäftsobjekt zurückgegeben wurde.|  
 |[Server (RDS)](./server-property-rds.md)|Gibt den Namen des Internetinformationsdienste (IIS) und das Kommunikationsprotokoll an.|  
 |[SortColumn (RDS)](./sortcolumn-property-rds.md)|Gibt an, in welcher Spalte die Datensätze sortiert werden sollen.|  
 |[SortDirection (RDS)](./sortdirection-property-rds.md)|Gibt an, ob eine Sortierreihenfolge aufsteigend oder absteigend ist|  
-|[SQL (RDS)](./sql-property.md)|Gibt die Abfrage **Zeichenfolge**an, mit der das Recordset abgerufen wird.|  
+|[SQL (RDS)](./sql-property.md)|Gibt die Abfrage **Zeichenfolge** an, mit der das Recordset abgerufen wird.|  
 |[URL (RDS)](./url-property-rds.md)|Gibt eine Zeichenfolge an, die eine relative oder absolute URL enthält.|

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::CursorType
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5401b5b5b9e91b6b851f70d2d3a7e19f5e5d7a82
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 703c89fb8f5e1479e09162429ac93fa43c66e0be
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974321"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167614"
 ---
 # <a name="cursortype-property-ado"></a>CursorType-Eigenschaft (ADO)
 Gibt den Typ des Cursors an, der in einem [Recordset](./recordset-object-ado.md) -Objekt verwendet wird.  
@@ -32,9 +32,9 @@ Gibt den Typ des Cursors an, der in einem [Recordset](./recordset-object-ado.md)
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **CursorType** -Eigenschaft, um den Typ des Cursors anzugeben, der beim Öffnen des **Recordset** -Objekts verwendet werden soll.  
   
- Nur eine Einstellung von **adOpenStatic** wird unterstützt, wenn die [Cursor Location](./cursorlocation-property-ado.md) -Eigenschaft auf **adUseClient**festgelegt ist. Wenn ein nicht unterstützter Wert festgelegt ist, wird kein Fehler ausgegeben. Stattdessen wird der nächste unterstützte **Cursor Type** verwendet.  
+ Nur eine Einstellung von **adOpenStatic** wird unterstützt, wenn die [Cursor Location](./cursorlocation-property-ado.md) -Eigenschaft auf **adUseClient** festgelegt ist. Wenn ein nicht unterstützter Wert festgelegt ist, wird kein Fehler ausgegeben. Stattdessen wird der nächste unterstützte **Cursor Type** verwendet.  
   
- Wenn ein Anbieter den angeforderten Cursortyp nicht unterstützt, kann er einen anderen Cursortyp zurückgeben. Die **CursorType** -Eigenschaft ändert sich entsprechend dem tatsächlich verwendeten Cursortyp, wenn das [Recordset](./recordset-object-ado.md) -Objekt geöffnet ist. Verwenden Sie die [unterstützte](./supports-method.md) Methode, um bestimmte Funktionen des zurückgegebenen Cursors zu überprüfen. Nachdem Sie das **Recordset**geschlossen haben, wird die ursprüngliche Einstellung der **Cursor Type** -Eigenschaft wieder hergestellt.  
+ Wenn ein Anbieter den angeforderten Cursortyp nicht unterstützt, kann er einen anderen Cursortyp zurückgeben. Die **CursorType** -Eigenschaft ändert sich entsprechend dem tatsächlich verwendeten Cursortyp, wenn das [Recordset](./recordset-object-ado.md) -Objekt geöffnet ist. Verwenden Sie die [unterstützte](./supports-method.md) Methode, um bestimmte Funktionen des zurückgegebenen Cursors zu überprüfen. Nachdem Sie das **Recordset** geschlossen haben, wird die ursprüngliche Einstellung der **Cursor Type** -Eigenschaft wieder hergestellt.  
   
  Das folgende Diagramm zeigt die Anbieter Funktionalität (identifiziert durch **unterstützt** Methoden Konstanten), die für jeden Cursortyp erforderlich ist.  
   

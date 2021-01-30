@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLEndTran
 apilocation:
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fea27beb03c19dd9499175678ecfdcb7759a73f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2961cab7c061583f68387e29ed564efc16916870
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461130"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195595"
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran-Funktion
 **Konformitäts**  
@@ -53,20 +53,20 @@ SQLRETURN SQLEndTran(
  Der Handle-Typbezeichner. Enthält entweder SQL_HANDLE_ENV (wenn *handle* ein Umgebungs Handle ist) oder SQL_HANDLE_DBC (wenn *handle* ein Verbindungs Handle ist).  
   
  *Handle*  
- Der Das Handle des Typs, der durch den *Handlertyp*angegeben wird und den Bereich der Transaktion angibt. Weitere Informationen finden Sie unter "Kommentare".  
+ Der Das Handle des Typs, der durch den *Handlertyp* angegeben wird und den Bereich der Transaktion angibt. Weitere Informationen finden Sie unter "Kommentare".  
   
  *CompletionType*  
  Der Einer der folgenden beiden Werte:  
   
  SQL_COMMIT SQL_ROLLBACK  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE oder SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLEndTran** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem entsprechenden *Handlertyp und handle*abgerufen werden. *HandleType* In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **SQLEndTran** häufig zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
+ Wenn **SQLEndTran** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem entsprechenden *Handlertyp und handle* abgerufen werden.  In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **SQLEndTran** häufig zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|Beschreibung|  
+|SQLSTATE|Fehler|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |08003|Verbindung nicht geöffnet|(DM) der *Handlertyp* wurde SQL_HANDLE_DBC, und das *handle* befand sich nicht in einem verbundenen Zustand.|  
@@ -76,10 +76,10 @@ SQLRETURN SQLEndTran(
 |25s03|Für Transaktion wird ein Rollback ausgeführt|Der Treiber war nicht in der Lage zu garantieren, dass alle Arbeiten in der globalen Transaktion atomarisch abgeschlossen werden konnten, und für alle Aufgaben in der Transaktion, die im *handle* aktiv war, wurde ein Rollback ausgeführt.|  
 |40001|Serialisierungsfehler|Für die Transaktion wurde aufgrund eines Ressourcen Deadlocks mit einer anderen Transaktion ein Rollback ausgeführt.|  
 |40002|Verletzung der Integritäts Einschränkung|Der *CompletionType* wurde SQL_COMMIT, und die Verpflichtung von Änderungen verursachte eine Verletzung der Integritäts Einschränkung. Folglich wurde für die Transaktion ein Rollback ausgeführt.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* szmessagetext* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im *\* szmessagetext* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
-|HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für *connectionHandle*aktiviert. Die Funktion wurde aufgerufen, und bevor die Ausführung der [sqlcancelhandle-Funktion](../../../odbc/reference/syntax/sqlcancelhandle-function.md) abgeschlossen wurde, wurde die Funktion " *connectionHandle*" aufgerufen. Anschließend wurde die Funktion für *connectionHandle*erneut aufgerufen.<br /><br /> Die-Funktion wurde aufgerufen, und vor der Ausführung von **sqlcancelhandle** wurde für *connectionHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
-|HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für ein Anweisungs Handle aufgerufen, das dem *connectionHandle* zugeordnet ist und beim Aufrufen von **SQLEndTran** noch ausgeführt wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für *connectionHandle* aufgerufen und ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** wurde für ein Anweisungs Handle aufgerufen, das dem *connectionHandle* zugeordnet ist, und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für das *handle* mit dem auf SQL_HANDLE_DBC festgelegten *andlertyp* aufgerufen und beim Aufrufen dieser Funktion noch ausgeführt.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für eines der Anweisungs Handles aufgerufen, die dem *handle* zugeordnet sind, und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.|  
+|HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für *connectionHandle* aktiviert. Die Funktion wurde aufgerufen, und bevor die Ausführung der [sqlcancelhandle-Funktion](../../../odbc/reference/syntax/sqlcancelhandle-function.md) abgeschlossen wurde, wurde die Funktion " *connectionHandle*" aufgerufen. Anschließend wurde die Funktion für *connectionHandle* erneut aufgerufen.<br /><br /> Die-Funktion wurde aufgerufen, und vor der Ausführung von **sqlcancelhandle** wurde für *connectionHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
+|HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion wurde für ein Anweisungs Handle aufgerufen, das dem *connectionHandle* zugeordnet ist und beim Aufrufen von **SQLEndTran** noch ausgeführt wurde.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für *connectionHandle* aufgerufen und ausgeführt, als diese Funktion aufgerufen wurde.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations** oder **SQLSetPos** wurde für ein Anweisungs Handle aufgerufen, das dem *connectionHandle* zugeordnet ist, und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.<br /><br /> (DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für das *handle* mit dem auf SQL_HANDLE_DBC festgelegten *andlertyp* aufgerufen und beim Aufrufen dieser Funktion noch ausgeführt.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect** oder **SQLMoreResults** wurde für eines der Anweisungs Handles aufgerufen, die dem *handle* zugeordnet sind, und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.|  
 |HY012|Ungültiger Transaktions Vorgangs Code.|(DM) der für das Argument *CompletionType* angegebene Wert war weder SQL_COMMIT noch SQL_ROLLBACK.|  
 |HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
 |HY092|Ungültiger Attribut/Options Bezeichner|(DM) der für den *Argumenttyp* des Arguments angegebene Wert war weder SQL_HANDLE_ENV noch SQL_HANDLE_DBC.|  
@@ -92,7 +92,7 @@ SQLRETURN SQLEndTran(
 |IM018|**Sqlcompleteasync** wurde nicht aufgerufen, um den vorherigen asynchronen Vorgang für dieses Handle abzuschließen.|Wenn der vorherige Funktionsaufruf für das Handle SQL_STILL_EXECUTING zurückgibt und der Benachrichtigungs Modus aktiviert ist, muss **sqlcompleteasync** für das Handle aufgerufen werden, um die Nachbearbeitung auszuführen und den Vorgang abzuschließen.|  
   
 ## <a name="comments"></a>Kommentare  
- Für ODBC 3. *x* -Treiber: Wenn der *Handlertyp* SQL_HANDLE_ENV und *handle* ein gültiges Umgebungs Handle ist, ruft der Treiber-Manager **SQLEndTran** in jedem Treiber auf, der der Umgebung zugeordnet ist. Das *handle* -Argument für den-Treiber ist das Umgebungs Handle des Treibers. Für ODBC 2. *x* -Treiber: Wenn der *Handlertyp* SQL_HANDLE_ENV und *handle* ein gültiges Umgebungs Handle ist und mehrere Verbindungen in einem verbundenen Zustand in dieser Umgebung vorhanden sind, ruft der Treiber-Manager **SQLTransact** im Treiber einmal für jede Verbindung in einem verbundenen Zustand in dieser Umgebung auf. Das *handle* -Argument in jedem-Rückruf ist das Handle der Verbindung. In jedem Fall versucht der Treiber, einen Commit oder Rollback für Transaktionen auszuführen, abhängig vom Wert von *CompletionType*für alle Verbindungen, die sich in dieser Umgebung in einem verbundenen Zustand befinden. Nicht aktive Verbindungen wirken sich nicht auf die Transaktion aus.  
+ Für ODBC 3. *x* -Treiber: Wenn der *Handlertyp* SQL_HANDLE_ENV und *handle* ein gültiges Umgebungs Handle ist, ruft der Treiber-Manager **SQLEndTran** in jedem Treiber auf, der der Umgebung zugeordnet ist. Das *handle* -Argument für den-Treiber ist das Umgebungs Handle des Treibers. Für ODBC 2. *x* -Treiber: Wenn der *Handlertyp* SQL_HANDLE_ENV und *handle* ein gültiges Umgebungs Handle ist und mehrere Verbindungen in einem verbundenen Zustand in dieser Umgebung vorhanden sind, ruft der Treiber-Manager **SQLTransact** im Treiber einmal für jede Verbindung in einem verbundenen Zustand in dieser Umgebung auf. Das *handle* -Argument in jedem-Rückruf ist das Handle der Verbindung. In jedem Fall versucht der Treiber, einen Commit oder Rollback für Transaktionen auszuführen, abhängig vom Wert von *CompletionType* für alle Verbindungen, die sich in dieser Umgebung in einem verbundenen Zustand befinden. Nicht aktive Verbindungen wirken sich nicht auf die Transaktion aus.  
   
 > [!NOTE]  
 >  **SQLEndTran** kann nicht zum Commit oder Rollback von Transaktionen in einer freigegebenen Umgebung verwendet werden. SQLState HY092 (Ungültiger Attribut-/Optionsbezeichner) wird zurückgegeben, wenn **SQLEndTran** aufgerufen wird, wobei *handle* entweder auf das Handle einer freigegebenen Umgebung oder auf das Handle einer Verbindung in einer freigegebenen Umgebung festgelegt ist.  
@@ -110,7 +110,7 @@ SQLRETURN SQLEndTran(
   
  Wenn die SQL_CURSOR_ROLLBACK_BEHAVIOR oder SQL_CURSOR_COMMIT_BEHAVIOR Wert SQL_CB_DELETE entspricht, werden alle geöffneten Cursor für alle der Verbindung zugeordneten Anweisungen von **SQLEndTran** geschlossen und gelöscht. alle ausstehenden Ergebnisse werden verworfen. **SQLEndTran** verlässt jede Anweisung, die in einem zugeordneten (nicht vorbereiteten) Zustand vorhanden ist. die Anwendung kann Sie für nachfolgende SQL-Anforderungen wieder verwenden oder **SQLFreeStmt** oder **SQLFreeHandle** mit dem *Typ* "SQL_HANDLE_STMT" zum deren zuweisen aufzurufen.  
   
- Wenn die SQL_CURSOR_ROLLBACK_BEHAVIOR oder SQL_CURSOR_COMMIT_BEHAVIOR Wert SQL_CB_CLOSE entspricht, schließt **SQLEndTran** alle geöffneten Cursor für alle Anweisungen, die der Verbindung zugeordnet sind. **SQLEndTran** verlässt jede Anweisung, die in einem vorbereiteten Zustand vorhanden ist. die Anwendung kann für eine Anweisung, die der Verbindung zugeordnet ist, **SQLExecute** aufrufen, ohne zuerst **SQLPrepare**aufzurufen.  
+ Wenn die SQL_CURSOR_ROLLBACK_BEHAVIOR oder SQL_CURSOR_COMMIT_BEHAVIOR Wert SQL_CB_CLOSE entspricht, schließt **SQLEndTran** alle geöffneten Cursor für alle Anweisungen, die der Verbindung zugeordnet sind. **SQLEndTran** verlässt jede Anweisung, die in einem vorbereiteten Zustand vorhanden ist. die Anwendung kann für eine Anweisung, die der Verbindung zugeordnet ist, **SQLExecute** aufrufen, ohne zuerst **SQLPrepare** aufzurufen.  
   
  Wenn die SQL_CURSOR_ROLLBACK_BEHAVIOR oder SQL_CURSOR_COMMIT_BEHAVIOR Wert SQL_CB_PRESERVE entspricht, wirkt sich **SQLEndTran** nicht auf geöffnete Cursor aus, die der Verbindung zugeordnet sind. Cursor verbleiben in der Zeile, auf die Sie vor dem **SQLEndTran**-Befehl verwiesen haben.  
   
@@ -125,11 +125,11 @@ SQLRETURN SQLEndTran(
   
  Wenn alle der folgenden Bedingungen zutreffen, wird die Verbindung in den Status "angehalten" versetzt:  
   
--   Der Treiber gibt SQL_ERROR aus **SQLEndTran**zurück.  
+-   Der Treiber gibt SQL_ERROR aus **SQLEndTran** zurück.  
   
 -   Der Treiber ist ODBC, Version 3,8 oder höher.  
   
--   Die Anwendungs Version ist 3,8 oder höher. oder die neu kompilierte ODBC 2. x-oder 3. x-Anwendung bricht die **SQLEndTran** -Funktion erfolgreich über **sqlcancelhandle**ab.  
+-   Die Anwendungs Version ist 3,8 oder höher. oder die neu kompilierte ODBC 2. x-oder 3. x-Anwendung bricht die **SQLEndTran** -Funktion erfolgreich über **sqlcancelhandle** ab.  
   
 -   Der Treiber hat eine der folgenden Meldungen nicht zurückgegeben, die bestätigen, dass die Transaktion nicht abgeschlossen wurde:  
   
@@ -154,7 +154,7 @@ SQLRETURN SQLEndTran(
 |Freigeben eines Handles|[SQLFreeHandle-Funktion](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |Freigeben eines Anweisungs Handles|[SQLFreeStmt-Funktion](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Header Dateien](../../../odbc/reference/install/odbc-header-files.md)   
- [Asynchrone Ausführung (Abruf Methode)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)
+ [Asynchrone Ausführung (Abrufmethode)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

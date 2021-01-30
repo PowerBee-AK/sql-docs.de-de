@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_get_captured_columns
 - sys.sp_cdc_get_captured_columns
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9f19017dd72dc51f2fd79010b85c251c3c64ed22
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 90476faf2182ad92259d85dd97cc900153ec53c4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91811051"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205965"
 ---
 # <a name="syssp_cdc_get_captured_columns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ sys.sp_cdc_get_captured_columns
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|Name des Quelltabellenschemas.|  
 |source_table|**sysname**|Name der Quelltabelle.|  
@@ -70,7 +70,7 @@ sys.sp_cdc_get_captured_columns
 |numeric_scale|**int**|Dezimalstellen der Spalte, wenn sie auf numerischen Werten basiert; andernfalls NULL.|  
 |datetime_precision|**smallint**|Genauigkeit der Spalte, wenn sie auf datetime-Werten basiert; andernfalls NULL.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie sys.sp_cdc_get_captured_columns, um Spalten Informationen zu den aufgezeichneten Spalten abzurufen, die durch Abfragen der Aufzeichnungs Instanz-Abfragefunktionen [CDC.fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) oder [CDC.fn_cdc_get_net_changes_ ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance>zurückgegeben werden. Die Spaltennamen, IDs und Position bleiben während der Lebensdauer der Aufzeichnungsinstanz konstant. Nur die Spaltendatentypen ändern sich, wenn sich der Datentyp der zugrunde liegenden Quellspalte in der nachverfolgten Tabelle ändert. Spalten, die zu einer Quelltabelle hinzugefügt oder aus dieser gelöscht werden, wirken sich nicht auf die aufgezeichneten Spalten der vorhandenen Aufzeichnungsinstanzen aus.  
   
  Verwenden Sie [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) , um Informationen zu DDL-Anweisungen (Data Definition Language) zu erhalten, die auf eine Quell Tabelle angewendet werden. Alle DDL-Änderungen, die die Struktur einer nachverfolgten Quellspalte geändert haben, werden im Resultset zurückgegeben.  

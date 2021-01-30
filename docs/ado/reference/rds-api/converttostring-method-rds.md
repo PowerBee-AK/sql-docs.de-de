@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - ConvertToString method [ADO]
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec87fd4bc4495874aae88b3051081e30dda9bbb9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4edcebbfdee8a9a1411189786593c129ee32771c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722426"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169033"
 ---
 # <a name="converttostring-method-rds"></a>ConvertToString-Methode (RDS)
 Konvertiert ein [Recordset](../ado-api/recordset-object-ado.md) in eine MIME-Zeichenfolge, die die Recordsetdaten darstellt.  
@@ -46,7 +46,7 @@ DataFactory.ConvertToString(Recordset)
   
  **ConvertToString** lädt zuerst das **Recordset** in die Cursor Dienst Tabellen und generiert dann einen Stream im MIME-Format.  
   
- Auf dem Client kann der Remote Data Service die MIME-Zeichenfolge zurück in ein voll funktionsfähiges **Recordset**konvertieren. Es eignet sich gut für die Verarbeitung von weniger als 400 Daten Zeilen mit einer Breite von höchstens 1024 Byte pro Zeile. Sie sollten nicht zum Streamen von BLOB-Daten und großen Resultsets über HTTP verwendet werden. Für die Zeichenfolge wird keine Netzwerk Komprimierung durchgeführt, sodass sehr große Datasets im Vergleich zu dem vom Remote Datendienst als systemeigenen Transportprotokoll formatierten und vom Remote Datendienst bereitgestellten Format viel Zeit in Anspruch nehmen.  
+ Auf dem Client kann der Remote Data Service die MIME-Zeichenfolge zurück in ein voll funktionsfähiges **Recordset** konvertieren. Es eignet sich gut für die Verarbeitung von weniger als 400 Daten Zeilen mit einer Breite von höchstens 1024 Byte pro Zeile. Sie sollten nicht zum Streamen von BLOB-Daten und großen Resultsets über HTTP verwendet werden. Für die Zeichenfolge wird keine Netzwerk Komprimierung durchgeführt, sodass sehr große Datasets im Vergleich zu dem vom Remote Datendienst als systemeigenen Transportprotokoll formatierten und vom Remote Datendienst bereitgestellten Format viel Zeit in Anspruch nehmen.  
   
 > [!NOTE]
 >  Wenn Sie Active Server Seiten verwenden, um die resultierende MIME-Zeichenfolge in eine Client-HTML-Seite einzubetten, beachten Sie, dass Versionen von VBScript vor Version 2,0 die Größe der Zeichenfolge auf 32 KB begrenzen. Wenn dieser Grenzwert überschritten wird, wird ein Fehler zurückgegeben. Behalten Sie den Abfrage Bereich relativ gering, wenn Sie MIME-Einbettungen über ASP-Dateien verwenden. Um dieses Problem zu beheben, laden Sie die neueste Version von VBScript von der Microsoft Windows Script Technologies-Website herunter.  

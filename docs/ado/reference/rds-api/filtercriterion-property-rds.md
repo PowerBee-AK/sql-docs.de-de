@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - FilterCriterion property [RDS]
 ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cddb12986577b52e78f14773d4275a4cf8e54086
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 2bb91a09167b10a7b5b1f969e2d0775f6ced31a4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722185"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168936"
 ---
 # <a name="filtercriterion-property-rds"></a>FilterCriterion-Eigenschaft (RDS)
 Gibt den Auswertungs Operator an, der im Filter Wert verwendet werden soll.  
@@ -42,9 +42,9 @@ DataControl.FilterCriterion = String
  Ein **Zeichen** folgen Wert, der den Auswertungs Operator des [FilterValue](./filtervalue-property-rds.md) zu den Datensätzen angibt. Kann eine der folgenden sein: <, \<=, > , >=, = oder <>.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die Eigenschaften [SortColumn](./sortcolumn-property-rds.md), [SortDirection](./sortdirection-property-rds.md), [FilterValue](./filtervalue-property-rds.md), **Filterkriterium**und [FilterColumn](./filtercolumn-property-rds.md) stellen Sortier-und Filterfunktionen für den Client seitigen Cache bereit. Die Sortierfunktion ordnet Datensätze nach Werten aus einer Spalte an. Die Filterfunktion zeigt eine Teilmenge der Datensätze basierend auf den Suchkriterien an, während das vollständige [Recordset](../ado-api/recordset-object-ado.md) im Cache beibehalten wird. Die [Reset](./reset-method-rds.md) -Methode führt die Kriterien aus und ersetzt das aktuelle **Recordset** durch ein Aktualisier bares **Recordset**.  
+ Die Eigenschaften [SortColumn](./sortcolumn-property-rds.md), [SortDirection](./sortdirection-property-rds.md), [FilterValue](./filtervalue-property-rds.md), **Filterkriterium** und [FilterColumn](./filtercolumn-property-rds.md) stellen Sortier-und Filterfunktionen für den Client seitigen Cache bereit. Die Sortierfunktion ordnet Datensätze nach Werten aus einer Spalte an. Die Filterfunktion zeigt eine Teilmenge der Datensätze basierend auf den Suchkriterien an, während das vollständige [Recordset](../ado-api/recordset-object-ado.md) im Cache beibehalten wird. Die [Reset](./reset-method-rds.md) -Methode führt die Kriterien aus und ersetzt das aktuelle **Recordset** durch ein Aktualisier bares **Recordset**.  
   
- Der Operator "! =" ist für **Filterkriterium**ungültig. Verwenden Sie stattdessen "<>".  
+ Der Operator "! =" ist für **Filterkriterium** ungültig. Verwenden Sie stattdessen "<>".  
   
  Wenn die Filter-und Sortierungs Eigenschaften festgelegt sind und Sie die **Reset** -Methode aufzurufen, wird das Rowset zuerst gefiltert und dann sortiert. Bei aufsteigenden Sortierungen sind die NULL-Werte ganz oben. bei absteigenden Sortierungen befinden sich NULL-Werte unten (aufsteigend ist Standardverhalten).  
   

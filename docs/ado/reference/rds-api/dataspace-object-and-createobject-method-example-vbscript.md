@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc2887f46996450dc9d809439226dbef6cf76e97
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a56ee89a176910e33d15464fec57c82788563f1f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720961"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168979"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>DataSpace-Objekt und CreateObject-Methode – Beispiel (VBScript)
 > [!IMPORTANT]
@@ -133,7 +133,7 @@ The <i>Query</i> Method of the RDSServer.DataFactory is used to bring back a Rec
   
  Im folgenden Beispiel wird gezeigt, wie Sie mit **der Methode "** -Methode" eine Instanz eines benutzerdefinierten Geschäftsobjekts (vbbusobj. VbBusObjCls) erstellen. Außerdem wird die Skripterstellung für die Active Server Seiten verwendet, um den Webserver Namen zu identifizieren.  
   
- Um das komplette Beispiel anzuzeigen, öffnen Sie die Auswahl der Beispielanwendungen. Wählen Sie in der Spalte **Client Ebene** **in Internet Explorer die Option VBScript aus**. Wählen Sie in der Spalte **mittlere Ebene** die Option **benutzerdefiniertes Visual Basic Geschäftsobjekt**aus.  
+ Um das komplette Beispiel anzuzeigen, öffnen Sie die Auswahl der Beispielanwendungen. Wählen Sie in der Spalte **Client Ebene** **in Internet Explorer die Option VBScript aus**. Wählen Sie in der Spalte **mittlere Ebene** die Option **benutzerdefiniertes Visual Basic Geschäftsobjekt** aus.  
   
 > [!NOTE]
 >  Wenn Sie eine Verbindung mit einem Datenquellen Anbieter herstellen, der die Windows-Authentifizierung unterstützt, sollten Sie in der Verbindungs Zeichenfolge **Trusted_Connection = yes** oder **Integrated Security = SSPI** anstelle von Benutzer-ID und Kennwort angeben.  

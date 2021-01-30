@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6cd6742bea404f3ed1ec6515d3579260701dbee7
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 27a98245b27d5c30f2bcc762318f86a358ef16b4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975851"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167839"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF-, EOF- und Bookmark-Eigenschaft – Beispiel (VB)
 In diesem Beispiel werden die Eigenschaften [BOF](./bof-eof-properties-ado.md) und [EOF](./bof-eof-properties-ado.md) verwendet, um eine Meldung anzuzeigen, wenn ein Benutzer versucht, nach dem ersten oder letzten Datensatz eines [Recordsets](./recordset-object-ado.md)zu wechseln. Er verwendet die [Bookmark](./bookmark-property-ado.md) -Eigenschaft, damit der Benutzer einen Datensatz in einem **Recordset** markieren und später zurückkehren kann.  
@@ -130,7 +130,7 @@ End Sub
 'EndBOFVB  
 ```  
   
- In diesem Beispiel werden die **Lesezeichen** -und [Filter](./filter-property.md) Eigenschaften verwendet, um eine begrenzte Ansicht des **Recordsets**zu erstellen. Der Zugriff ist nur auf Datensätze möglich.  
+ In diesem Beispiel werden die **Lesezeichen** -und [Filter](./filter-property.md) Eigenschaften verwendet, um eine begrenzte Ansicht des **Recordsets** zu erstellen. Der Zugriff ist nur auf Datensätze möglich.  
   
 ```  
 Attribute VB_Name = "BOF"  
