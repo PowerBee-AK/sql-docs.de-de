@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dcb81dbe0fc719b2bb31c08a0799e4bc5084519a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 2e5ad157ffccc07ba0b64064122f7f0e55ccd422
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720786"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163809"
 ---
 # <a name="execute-method-rds"></a>Execute-Methode (RDS)
 Führt die Anforderung aus und erstellt ein ADO-Recordset für die Verwendung in ADO 2,5 und höher.  
@@ -57,23 +57,23 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *lExecuteOptions*  
  Eine Bitmaske der Ausführungs Optionen:  
   
- 1 =*Schreib* geschützt das Recordset wird mithilfe von **adlockread only**geöffnet.  
+ 1 =*Schreib* geschützt das Recordset wird mithilfe von **adlockread only** geöffnet.  
   
- 2 =*nobatch* das Recordset wird mithilfe von **adlockoptimistisch**geöffnet.  
+ 2 =*nobatch* das Recordset wird mithilfe von **adlockoptimistisch** geöffnet.  
   
- 4 =*allparaminfoist* der Aufrufer stellt sicher, dass Parameterinformationen für alle Parameter in *pparameters*angegeben werden.  
+ 4 =*allparaminfoist* der Aufrufer stellt sicher, dass Parameterinformationen für alle Parameter in *pparameters* angegeben werden.  
   
  8 =*GetInfo* -Parameterinformationen für die Abfrage werden vom OLE DB Anbieter abgerufen und im *pparameters* -Parameter zurückgegeben. Die Abfrage wird nicht ausgeführt, und es wird kein Recordset zurückgegeben.  
   
  16 =*gethiddencolumns* das Recordset wird mithilfe von **adlockbatchoptimier** geöffnet, und alle verborgenen Spalten werden in das Recordset eingeschlossen.  
   
- Schreibgeschützt, *nobatch* und *gethiddencolumns* sind Optionen, *die sich gegen*seitig ausschließen. Es wird jedoch kein Fehler generiert, wenn mehr als ein Wert festgelegt wird. Wenn mehrere Optionen festgelegt sind, hat *gethiddencolumns* Vorrang vor allen anderen, gefolgt *von "* schreibgeschützt". Wenn keine Optionen angegeben werden, wird das Recordset standardmäßig mithilfe von **adlockbatchoptimier** geöffnet, und verborgene Spalten sind nicht im Recordset enthalten.  
+ Schreibgeschützt, *nobatch* und *gethiddencolumns* sind Optionen, *die sich gegen* seitig ausschließen. Es wird jedoch kein Fehler generiert, wenn mehr als ein Wert festgelegt wird. Wenn mehrere Optionen festgelegt sind, hat *gethiddencolumns* Vorrang vor allen anderen, gefolgt *von "* schreibgeschützt". Wenn keine Optionen angegeben werden, wird das Recordset standardmäßig mithilfe von **adlockbatchoptimier** geöffnet, und verborgene Spalten sind nicht im Recordset enthalten.  
   
  *pParameters*  
- Eine **Variante** , die ein sicheres Array von Parameter Definitionen enthält. Wenn die *GetInfo* -Option in *lexecuteoptions*angegeben wurde, wird dieser Parameter verwendet, um die Parameter Definitionen zurückzugeben, die vom OLE DB Anbieter abgerufen werden. Andernfalls kann dieser Parameter leer sein.  
+ Eine **Variante** , die ein sicheres Array von Parameter Definitionen enthält. Wenn die *GetInfo* -Option in *lexecuteoptions* angegeben wurde, wird dieser Parameter verwendet, um die Parameter Definitionen zurückzugeben, die vom OLE DB Anbieter abgerufen werden. Andernfalls kann dieser Parameter leer sein.  
   
  *lcid*  
- Die LCID, die verwendet wird, um Fehler zu erstellen, die in *pinformation*zurückgegeben werden.  
+ Die LCID, die verwendet wird, um Fehler zu erstellen, die in *pinformation* zurückgegeben werden.  
   
  *pInformation*  
  Ein Zeiger auf Informationen, die von Execute zurückgegeben werden. Wenn der Wert NULL ist, werden keine Fehlerinformationen zurückgegeben.  

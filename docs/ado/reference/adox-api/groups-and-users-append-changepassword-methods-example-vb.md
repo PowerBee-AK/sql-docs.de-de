@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c9426757-9cdd-4a95-b506-d3d011569109
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 824cf44560335152ac6079c4ff61f2177368447c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6864d99294ebd68b07c41b69bca6e18f479a4935
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984381"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164238"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vb"></a>Append- und ChangePassword-Methoden für Gruppen und Benutzer – Beispiel (VB)
-In diesem Beispiel werden die [Append](./append-method-adox-groups.md) -Methode von [Gruppen](./groups-collection-adox.md)sowie die [Append](./append-method-adox-users.md) -Methode von [Benutzern](./users-collection-adox.md) veranschaulicht, indem dem System eine neue [Gruppe](./group-object-adox.md) und ein neuer [Benutzer](./user-object-adox.md) hinzugefügt werden. Die neue **Gruppe** wird an die **Groups** -Auflistung des neuen **Benutzers**angehängt. Folglich wird der neue **Benutzer** der **Gruppe**hinzugefügt. Außerdem wird die [ChangePassword](./changepassword-method-adox.md) -Methode verwendet, um das **Benutzer** Kennwort anzugeben.  
+In diesem Beispiel werden die [Append](./append-method-adox-groups.md) -Methode von [Gruppen](./groups-collection-adox.md)sowie die [Append](./append-method-adox-users.md) -Methode von [Benutzern](./users-collection-adox.md) veranschaulicht, indem dem System eine neue [Gruppe](./group-object-adox.md) und ein neuer [Benutzer](./user-object-adox.md) hinzugefügt werden. Die neue **Gruppe** wird an die **Groups** -Auflistung des neuen **Benutzers** angehängt. Folglich wird der neue **Benutzer** der **Gruppe** hinzugefügt. Außerdem wird die [ChangePassword](./changepassword-method-adox.md) -Methode verwendet, um das **Benutzer** Kennwort anzugeben.  
   
 > [!NOTE]
 >  Wenn Sie eine Verbindung mit einem Datenquellen Anbieter herstellen, der die Windows-Authentifizierung unterstützt, sollten Sie in der Verbindungs Zeichenfolge **Trusted_Connection = yes** oder **Integrated Security = SSPI** anstelle von Benutzer-ID und Kennwort angeben.  

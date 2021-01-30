@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::AddNew
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4695d1cf70328adad910d5b2b34e6b346b8049a4
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4aedf124f13374c5756519b86a60c1164c0df046
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976801"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161738"
 ---
 # <a name="addnew-method-ado"></a>AddNew-Methode (ADO)
 Erstellt einen neuen Datensatz für ein Aktualisier bares [Recordset](./recordset-object-ado.md) -Objekt.  
@@ -47,7 +47,7 @@ recordset.AddNew FieldList, Values
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **AddNew** -Methode, um einen neuen Datensatz zu erstellen und zu initialisieren. Verwenden Sie die Methode [unterstützt](./supports-method.md) mit **adAddNew** (ein [Cursor](./cursoroptionenum.md) Wert), um zu überprüfen, ob dem aktuellen **Recordset** -Objektdaten Sätze hinzugefügt werden können.  
   
- Nachdem Sie die **AddNew** -Methode aufgerufen haben, wird der neue Datensatz zum aktuellen Datensatz und bleibt nach dem Abrufen der [Update](./update-method.md) -Methode aktuell. Da der neue Datensatz an das **Recordset**angehängt wird, wird ein **MoveNext** -Befehl nach dem Update nach dem Ende des **Recordsets**verschoben, sodass **EOF** true ist. Wenn das **Recordset** -Objekt keine Lesezeichen unterstützt, können Sie möglicherweise nicht mehr auf den neuen Datensatz zugreifen, wenn Sie zu einem anderen Datensatz wechseln. Abhängig vom Cursortyp müssen Sie möglicherweise die [Requery](./requery-method.md) -Methode aufzurufen, um den neuen Datensatz zugänglich zu machen.  
+ Nachdem Sie die **AddNew** -Methode aufgerufen haben, wird der neue Datensatz zum aktuellen Datensatz und bleibt nach dem Abrufen der [Update](./update-method.md) -Methode aktuell. Da der neue Datensatz an das **Recordset** angehängt wird, wird ein **MoveNext** -Befehl nach dem Update nach dem Ende des **Recordsets** verschoben, sodass **EOF** true ist. Wenn das **Recordset** -Objekt keine Lesezeichen unterstützt, können Sie möglicherweise nicht mehr auf den neuen Datensatz zugreifen, wenn Sie zu einem anderen Datensatz wechseln. Abhängig vom Cursortyp müssen Sie möglicherweise die [Requery](./requery-method.md) -Methode aufzurufen, um den neuen Datensatz zugänglich zu machen.  
   
  Wenn Sie beim Bearbeiten des aktuellen Datensatzes oder beim Hinzufügen eines neuen Datensatzes **AddNew** aufrufen, ruft ADO die **Update** -Methode auf, um alle Änderungen zu speichern und dann den neuen Datensatz zu erstellen.  
   
@@ -55,7 +55,7 @@ recordset.AddNew FieldList, Values
   
  Im *sofortigen Update Modus* (in dem der Anbieter Änderungen in die zugrunde liegende Datenquelle schreibt, nachdem Sie die **Update** -Methode aufgerufen haben), wird durch Aufrufen der **AddNew** -Methode ohne Argumente die [EditMode](./editmode-property.md) -Eigenschaft auf **adEditAdd** (ein [EditModeEnum](./editmodeenum.md) -Wert) festgelegt. Der Anbieter speichert alle Feldwert Änderungen lokal zwischen. Durch Aufrufen der **Update** -Methode wird der neue Datensatz in der Datenbank bereitgestellt, und die **EditMode** -Eigenschaft wird auf " **adEditNone** " ( **EditModeEnum** -Wert) zurückgesetzt. Wenn Sie die Argumente *FieldList* und *Values* übergeben, sendet ADO den neuen Datensatz sofort an die Datenbank (kein **Update** -Befehl erforderlich); der **EditMode** -Eigenschafts Wert ändert sich nicht (**adEditNone**).  
   
- Im *Batch Aktualisierungs Modus* (in dem der Anbieter mehrere Änderungen zwischenspeichert und Sie nur dann in die zugrunde liegende Datenquelle schreibt, wenn Sie die [UpdateBatch](./updatebatch-method.md) -Methode aufrufen), wird durch Aufrufen der **AddNew** -Methode ohne Argumente die **EditMode** -Eigenschaft auf **adEditAdd**festgelegt. Der Anbieter speichert alle Feldwert Änderungen lokal zwischen. Durch den Aufruf der **Update** -Methode wird der neue Datensatz dem aktuellen **Recordset**hinzugefügt, aber der Anbieter sendet die Änderungen nicht an die zugrunde liegende Datenbank oder setzt **EditMode** auf **adEditNone**zurück, bis Sie die **UpdateBatch** -Methode aufrufen. Wenn Sie die Argumente *FieldList* und *Values* übergeben, sendet ADO den neuen Datensatz zum Speichern in einem Cache an den Anbieter und legt **EditMode** auf **adEditAdd**; fest. Sie müssen die **UpdateBatch** -Methode aufrufen, um den neuen Datensatz in der zugrunde liegenden Datenbank zu veröffentlichen.  
+ Im *Batch Aktualisierungs Modus* (in dem der Anbieter mehrere Änderungen zwischenspeichert und Sie nur dann in die zugrunde liegende Datenquelle schreibt, wenn Sie die [UpdateBatch](./updatebatch-method.md) -Methode aufrufen), wird durch Aufrufen der **AddNew** -Methode ohne Argumente die **EditMode** -Eigenschaft auf **adEditAdd** festgelegt. Der Anbieter speichert alle Feldwert Änderungen lokal zwischen. Durch den Aufruf der **Update** -Methode wird der neue Datensatz dem aktuellen **Recordset** hinzugefügt, aber der Anbieter sendet die Änderungen nicht an die zugrunde liegende Datenbank oder setzt **EditMode** auf **adEditNone** zurück, bis Sie die **UpdateBatch** -Methode aufrufen. Wenn Sie die Argumente *FieldList* und *Values* übergeben, sendet ADO den neuen Datensatz zum Speichern in einem Cache an den Anbieter und legt **EditMode** auf **adEditAdd**; fest. Sie müssen die **UpdateBatch** -Methode aufrufen, um den neuen Datensatz in der zugrunde liegenden Datenbank zu veröffentlichen.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird gezeigt, wie die AddNew-Methode mit der Liste der Felder und Werte verwendet wird, um zu erfahren, wie Sie die Feldliste und Werteliste als Arrays einschließen.  

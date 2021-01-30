@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - FilterValue property [ADO]
 ms.assetid: 28f17186-b842-4cf9-b320-a9bb941c481b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f2731f86983f6e2c61f5626970e4fbbb3f09590
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: af9276f641a3a9c419cc0dc49595bcddc049336e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720671"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163768"
 ---
 # <a name="filtervalue-property-rds"></a>FilterValue-Eigenschaft (RDS)
 Gibt den Wert an, mit dem Datensätze gefiltert werden.  

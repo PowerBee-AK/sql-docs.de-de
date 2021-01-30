@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - DataControl::CreateRecordset
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad1c9b0f36922f29ce015fd459a1be3e788e07f5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4a88898c884cbaf0a9c82a882b15ef48c1e3e3a8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721201"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163857"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset-Methode (RDS)
 Erstellt ein leeres, nicht verbundenes [Recordset](../ado-api/recordset-object-ado.md).  
@@ -47,7 +47,7 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  Ein **Variant** -Array von Attributen, das jede Spalte im erstellten **Recordset** definiert. Jede Spaltendefinition enthält ein Array von vier erforderlichen Attributen und ein optionales Attribut.  
   
-|attribute|BESCHREIBUNG|  
+|Attribut|BESCHREIBUNG|  
 |---------------|-----------------|  
 |Name|Der Name des Spalten Headers.|  
 |type|Ganzzahliger Wert des Datentyps.|  
@@ -55,7 +55,7 @@ object.CreateRecordset(ColumnInfos)
 |NULL-Zulässigkeit|Boolescher Wert.|  
 |Skalieren (optional)|Dieses optionale Attribut definiert die Skala für numerische Felder. Wenn dieser Wert nicht angegeben wird, werden numerische Werte auf drei Dezimalstellen abgeschnitten. Die Genauigkeit ist nicht betroffen, aber die Anzahl der Ziffern nach dem Dezimaltrennzeichen wird auf drei gekürzt.|  
   
- Der Satz von Spalten Arrays wird dann in ein Array gruppiert, das das **Recordset**definiert.  
+ Der Satz von Spalten Arrays wird dann in ein Array gruppiert, das das **Recordset** definiert.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Das serverseitige Geschäftsobjekt kann das resultierende **Recordset** mit Daten aus einem nicht OLE DB Datenanbieter auffüllen, z. b. eine Betriebssystem Datei mit Kurs Anführungszeichen.  
@@ -66,7 +66,7 @@ object.CreateRecordset(ColumnInfos)
   
  Für einige der Variablen Datentypen kann der Typ in den Typ umgewandelt werden, der in der Ersetzungs Spalte angegeben ist. Die Ersetzungen werden erst angezeigt, nachdem das **Recordset** erstellt und gefüllt wurde. Anschließend können Sie ggf. den tatsächlichen Datentyp überprüfen.  
   
-|Länge|Konstant|Number|Substitution|  
+|Länge|Konstante|Zahl|Substitution|  
 |------------|--------------|------------|------------------|  
 |Fest|**adTinyInt**|16||  
 |Fest|**adSmallInt**|2||  

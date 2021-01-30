@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_update_collection_item
 - sp_syscollector_update_collection_item_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2dc7d6967f4bfa7aa1c22f4cfa5c55e06127455b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f21ca6f68eed789756a7dbf57f79afe194d40dab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534859"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161913"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,12 +54,12 @@ sp_syscollector_update_collection_item
  Der Name des Sammelelements. *Name ist vom Datentyp* **vom Datentyp sysname** und hat den Standardwert NULL. der *Name* muss einen Wert haben, wenn *collection_item_id* NULL ist.  
   
  [ @new_name =] '*new_name*'  
- Der neue Name für das Sammelelement. *new_name* ist vom **Datentyp vom Datentyp sysname**und kann, wenn verwendet, keine leere Zeichenfolge sein.  
+ Der neue Name für das Sammelelement. *new_name* ist vom **Datentyp vom Datentyp sysname** und kann, wenn verwendet, keine leere Zeichenfolge sein.  
   
  *new_name* muss eindeutig sein. Wenn Sie eine Liste der aktuellen Namen von Sammelelementen abrufen möchten, fragen Sie die syscollector_collection_items-Systemsicht ab.  
   
  [ @frequency =] *Häufigkeit*  
- Die Häufigkeit (in Sekunden), mit der Daten durch dieses Sammelelement aufgezeichnet werden. *Frequency* ist vom Datentyp **int**und hat den Standardwert 5. der Minimalwert, der angegeben werden kann.  
+ Die Häufigkeit (in Sekunden), mit der Daten durch dieses Sammelelement aufgezeichnet werden. *Frequency* ist vom Datentyp **int** und hat den Standardwert 5. der Minimalwert, der angegeben werden kann.  
   
  [ @parameters =] '*Parameter*'  
  Die Eingabeparameter für das Sammelelement. *Parameter* ist vom Typ **XML** und hat den Standardwert NULL. Das *Parameter* Schema muss dem Parameter Schema des Sammler Typs entsprechen.  
@@ -67,7 +67,7 @@ sp_syscollector_update_collection_item
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder 1 (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn der Sammlungssatz auf den Modus ohne Zwischenspeicherung festgelegt ist, werden Änderungen der Häufigkeit ignoriert, da dieser Modus bewirkt, dass sowohl die Datensammlung als auch der Datenupload dem Zeitplan entsprechend stattfinden, der für den Sammlungssatz angegeben wurde. Zum Anzeigen des Status des Sammlungssatzes führen Sie die folgende Abfrage aus. Ersetzen Sie `<collection_item_id>` durch die ID des zu aktualisierenden Sammelelements.  
   
 ```  

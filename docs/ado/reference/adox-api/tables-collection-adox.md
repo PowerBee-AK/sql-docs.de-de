@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Catalog::Tables
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b6d580dd6f56f78947ff1a881db1bff28c3e2b8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e30bb754332d52f02d2857dc80d572e227e819ed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983261"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164010"
 ---
 # <a name="tables-collection-adox"></a>Tables-Collection (ADOX)
 Enthält alle [Tabellen](./table-object-adox.md) Objekte eines Katalogs.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die [Append](./append-method-adox-tables.md) -Methode für eine **Tabellen** Sammlung ist für ADOX eindeutig. Sie haben folgende Möglichkeiten:  
+ Die [Append](./append-method-adox-tables.md) -Methode für eine **Tabellen** Sammlung ist für ADOX eindeutig. Ihre Möglichkeiten:  
   
 -   Fügen Sie der Auflistung mithilfe der **Append** -Methode eine neue Tabelle hinzu.  
   
- Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Sie haben folgende Möglichkeiten:  
+ Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Ihre Möglichkeiten:  
   
 -   Greifen Sie mit der [Item](../ado-api/item-property-ado.md) -Eigenschaft auf eine Tabelle in der-Auflistung zu.  
   

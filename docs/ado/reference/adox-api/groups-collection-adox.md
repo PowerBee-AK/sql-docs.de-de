@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Groups
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9624a30970e5a6f6a0186d2cb9e2390c98968d9e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e0cbcc0941c3c2c7158d15bc73f07e4b835db4f3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984371"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164230"
 ---
 # <a name="groups-collection-adox"></a>Groups-Collection (ADOX)
 Enthält alle gespeicherten [Gruppen](./group-object-adox.md) Objekte eines Katalogs oder Benutzers.  
@@ -31,11 +31,11 @@ Enthält alle gespeicherten [Gruppen](./group-object-adox.md) Objekte eines Kata
 ## <a name="remarks"></a>Bemerkungen  
  Die **Groups** -Sammlung eines [Katalogs](./catalog-object-adox.md) stellt alle Gruppenkonten des Katalogs dar. Die **Groups** -Sammlung für einen [Benutzer](./user-object-adox.md) stellt nur die Gruppe dar, zu der der Benutzer gehört.  
   
- Die [Append](./append-method-adox-groups.md) -Methode für eine **Groups** -Sammlung ist für ADOX eindeutig. Sie haben folgende Möglichkeiten:  
+ Die [Append](./append-method-adox-groups.md) -Methode für eine **Groups** -Sammlung ist für ADOX eindeutig. Ihre Möglichkeiten:  
   
 -   Fügen Sie der Sammlung mithilfe der **Append** -Methode eine neue Sicherheitsgruppe hinzu.  
   
- Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Sie haben folgende Möglichkeiten:  
+ Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Ihre Möglichkeiten:  
   
 -   Greifen Sie mit der [Item](../ado-api/item-property-ado.md) -Eigenschaft auf eine Gruppe in der Auflistung zu.  
   
@@ -46,7 +46,7 @@ Enthält alle gespeicherten [Gruppen](./group-object-adox.md) Objekte eines Kata
 -   Aktualisieren Sie die Objekte in der Auflistung, um das aktuelle Datenbankschema mit der [Refresh](../ado-api/refresh-method-ado.md) -Methode widerzuspiegeln.  
   
 > [!NOTE]
->  Vor dem Anhängen eines **Group** -Objekts an die **Groups** -Auflistung eines **User** -Objekts muss bereits ein **Gruppen** Objekt mit demselben [Namen](./name-property-adox.md) wie das angefügte-Objekt in der **Groups** -Auflistung des **Katalogs**vorhanden sein.  
+>  Vor dem Anhängen eines **Group** -Objekts an die **Groups** -Auflistung eines **User** -Objekts muss bereits ein **Gruppen** Objekt mit demselben [Namen](./name-property-adox.md) wie das angefügte-Objekt in der **Groups** -Auflistung des **Katalogs** vorhanden sein.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   

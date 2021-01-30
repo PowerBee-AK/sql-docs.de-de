@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae158d217437184be4ead71beeb2d2404248396f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5fa625a75bbcadffb37064c04adc7ebd57a48994
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722436"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163872"
 ---
 # <a name="createobject-method-rds"></a>CreateObject-Methode (RDS)
 Erstellt den Proxy für das Ziel Geschäftsobjekt und gibt einen Zeiger darauf zurück. Der Proxy verpackt und Marshalls Daten zum serverseitigen Stub für die Kommunikation mit dem Geschäftsobjekt, um Anforderungen und Daten über das Internet zu senden. Für in-Process-Komponenten Objekte werden keine Proxys verwendet. es wird lediglich ein Zeiger auf das-Objekt bereitgestellt.  
@@ -39,7 +39,7 @@ Erstellt den Proxy für das Ziel Geschäftsobjekt und gibt einen Zeiger darauf z
   
 ## <a name="parameters"></a>Parameter  
  *Object*  
- Eine Objekt Variable, die ein Objekt ergibt, bei dem es sich um den in *ProgID*angegebenen Typ handelt.  
+ Eine Objekt Variable, die ein Objekt ergibt, bei dem es sich um den in *ProgID* angegebenen Typ handelt.  
   
  *DataSpace*  
  Eine Objekt Variable, die einen [RDS darstellt. DataSpace](./dataspace-object-rds.md) -Objekt, das verwendet wird, um eine Instanz des neuen-Objekts zu erstellen.  

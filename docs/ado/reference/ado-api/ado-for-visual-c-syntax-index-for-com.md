@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 dev_langs:
 - C++
@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4d55b901708076ff49d35b15d35b14d80376a44
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e4e707145ce3724706a813afc886b3438a51e3e9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976401"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161619"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO für Visual C++ – Syntaxindex für COM
 Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz, die auf Microsoft Visual C++ basiert.  
   
- Wenn Sie die **#Import** -Direktive in der Anwendung verwenden, wird eine Header Datei generiert, mit der Sie Syntax ähnlich der von Microsoft Visual Basic verwenden können. Eigenschaftsnamen in der Form **get_**_propertyName_ und **Put_**_propertyName_ können so behandelt werden, als wären Sie einfach als *propertyName*deklariert worden. Eine Eigenschaft kann dann wie ein Datenmember anstatt einer Funktion behandelt werden.  
+ Wenn Sie die **#Import** -Direktive in der Anwendung verwenden, wird eine Header Datei generiert, mit der Sie Syntax ähnlich der von Microsoft Visual Basic verwenden können. Eigenschaftsnamen in der Form **get_**_propertyName_ und **Put_**_propertyName_ können so behandelt werden, als wären Sie einfach als *propertyName* deklariert worden. Eine Eigenschaft kann dann wie ein Datenmember anstatt einer Funktion behandelt werden.  
   
- Alle Methoden, Eigenschaften und Ereignisse sind Funktionen, die ein **HRESULT**zurückgeben, das Sie testen können, um zu ermitteln, ob die Funktion erfolgreich ausgeführt wurde.  
+ Alle Methoden, Eigenschaften und Ereignisse sind Funktionen, die ein **HRESULT** zurückgeben, das Sie testen können, um zu ermitteln, ob die Funktion erfolgreich ausgeführt wurde.  
   
  Die Methoden-und Eigenschafts Syntax in Visual C++ ist für die folgenden Elemente aufgeführt:  
   

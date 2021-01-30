@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f8815ce6d607de39861f56bdcecca6c37e9dcc6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 757679e99f9f4de7b7c1c96abf367ad5df5daee1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722160"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163753"
 ---
 # <a name="handler-property-example-vc"></a>Handler-Eigenschaft – Beispiel (VC++)
 > [!IMPORTANT]
@@ -38,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- Der Code sieht wie folgt aus. Der Befehl, der der [SQL](./sql-property.md) -Eigenschaft zugewiesen ist, entspricht dem ***AuthorById*** -Bezeichner und ruft eine Zeile für den Autor Michael \ Leary ab. Obwohl die [Connect](./connect-property-rds.md) -Eigenschaft im Code die Northwind-Datenquelle angibt, wird diese Datenquelle vom Msdfmap.ini *Connect* -Abschnitt überschrieben. Die **DataControl** -Objekt [Recordset](./recordset-sourcerecordset-properties-rds.md) -Eigenschaft wird einem getrennten [Recordset](../ado-api/recordset-object-ado.md) -Objekt ausschließlich als Codierungs Zweck zugewiesen.  
+ Der Code sieht wie folgt aus. Der Befehl, der der [SQL](./sql-property.md) -Eigenschaft zugewiesen ist, entspricht dem Bezeichner ***AuthorById** _ und ruft eine Zeile für den Autor Michael \ Leary ab. Obwohl die [Connect](./connect-property-rds.md) -Eigenschaft in Ihrem Code die Northwind-Datenquelle angibt, wird diese Datenquelle durch den Abschnitt Msdfmap.ini _Connect * überschrieben. Die **DataControl** -Objekt [Recordset](./recordset-sourcerecordset-properties-rds.md) -Eigenschaft wird einem getrennten [Recordset](../ado-api/recordset-object-ado.md) -Objekt ausschließlich als Codierungs Zweck zugewiesen.  
   
 ```  
 // BeginHandlerCpp.cpp  

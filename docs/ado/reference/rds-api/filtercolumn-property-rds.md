@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - FilterColumn property [ADO]
 ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f4fa38c64a353f6250bc400bf5ed7fc6bf46b95c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 3b9b7633eef05c6060068124310d77b13b2fa86a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722227"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163778"
 ---
 # <a name="filtercolumn-property-rds"></a>FilterColumn-Eigenschaft (RDS)
 Gibt die Spalte an, für die die Filterkriterien ausgewertet werden sollen.  

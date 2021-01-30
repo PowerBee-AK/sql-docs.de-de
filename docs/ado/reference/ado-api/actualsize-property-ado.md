@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Field20::ActualSize
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6684c03c94d26b8c8f6366ac41ccd1b331016426
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 929d787d0d412a405f0df8d3a2377ae8a1493586
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976901"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161784"
 ---
 # <a name="actualsize-property-ado"></a>ActualSize-Eigenschaft (ADO)
 Gibt die tatsächliche Länge des Werts eines Felds in Bytes an.  
@@ -30,7 +30,7 @@ Gibt die tatsächliche Länge des Werts eines Felds in Bytes an.
  Gibt einen **Long** -Wert zurück.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Verwenden Sie die **ActualSize** -Eigenschaft, um die tatsächliche Länge des Werts eines [Feld](./field-object.md) Objekts zurückzugeben. Die **ActualSize** -Eigenschaft ist für alle Felder schreibgeschützt. Wenn ADO die Länge des **Feld** Objekt Werts nicht ermitteln kann, gibt die **ActualSize** -Eigenschaft **adunknown**zurück.  
+ Verwenden Sie die **ActualSize** -Eigenschaft, um die tatsächliche Länge des Werts eines [Feld](./field-object.md) Objekts zurückzugeben. Die **ActualSize** -Eigenschaft ist für alle Felder schreibgeschützt. Wenn ADO die Länge des **Feld** Objekt Werts nicht ermitteln kann, gibt die **ActualSize** -Eigenschaft **adunknown** zurück.  
   
  Die Eigenschaften **ActualSize** und [DefinedSize](./definedsize-property.md) sind unterschiedlich, wie im folgenden Beispiel gezeigt. Ein **Feld** Objekt mit einem deklarierten Typ von **adVarChar** und eine maximale Länge von 50 Zeichen gibt einen **DefinedSize** -Eigenschafts Wert von 50 zurück, aber der Rückgabewert der **ActualSize** -Eigenschaft ist die Länge der Daten, die im Feld für den aktuellen Datensatz gespeichert sind. **Felder** mit einer **DefinedSize** größer als 255 Bytes werden als Spalten variabler Länge behandelt.  
   

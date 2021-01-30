@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f622c194e1eb6d9b19d529d57219d9424507caa
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 95b072f7a28cfc8c2722dd48ba73f021997a45e0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983661"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164105"
 ---
 # <a name="primarykey-and-unique-properties-example-vc"></a>PrimaryKey- und Unique-Eigenschaften – Beispiel (VC++)
 In diesem Beispiel werden die [PrimaryKey](./primarykey-property-adox.md) -und die [Unique](./unique-property-adox.md) -Eigenschaften eines [Indexes](./index-object-adox.md)veranschaulicht. Der Code erstellt eine neue Tabelle mit zwei Spalten. Die Eigenschaften **PrimaryKey** und **Unique** werden verwendet, um eine Spalte als Primärschlüssel festzulegen, für den doppelte Werte nicht zulässig sind.  
