@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset::MoveComplete
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 27d86dc84960399be6b5738f72c69430c6834c7e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 46c28cd74fcf7a580d6695e21cd1e5e2750f0519
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987761"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166258"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove- und MoveComplete-Ereignis (ADO)
 Das Ereignis " **WillMove** " wird aufgerufen, bevor die aktuelle Position im [Recordset](./recordset-object-ado.md)durch einen ausstehenden Vorgang geändert wird. Das Ereignis " **muvecomplete** " wird aufgerufen, nachdem sich die aktuelle Position im **Recordset** geändert hat.  
@@ -43,7 +43,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
  Ein [eventreasonenumerationswert](./eventreasonenum.md) , der den Grund für dieses Ereignis angibt. Der Wert kann " **adrsnmovefirst**", " **adrsnmovelast**", " **adrsnmovenext**", " **adrsnmoveprevious**", " **adrsnmove**" oder " **adrsnrequery**" lauten.  
   
  *pError*  
- Ein [Fehler](./error-object.md) Objekt. Es wird der Fehler beschrieben, der aufgetreten ist, wenn der Wert von *adStatus* **adstatuserrorsoccurrred**ist. Andernfalls ist der-Parameter nicht festgelegt.  
+ Ein [Fehler](./error-object.md) Objekt. Es wird der Fehler beschrieben, der aufgetreten ist, wenn der Wert von *adStatus* **adstatuserrorsoccurrred** ist. Andernfalls ist der-Parameter nicht festgelegt.  
   
  *adStatus*  
  Ein [eventstatusenum](./eventstatusenum.md) -Statuswert.  

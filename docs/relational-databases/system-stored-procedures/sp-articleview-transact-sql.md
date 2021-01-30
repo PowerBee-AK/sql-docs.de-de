@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_articleview
 - sp_articleview_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e2d0efe52bb7f187ebfc981008610be81bc9528e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 014ccf37727534d16fa5b16bc280da5b76dfb76e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528727"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203194"
 ---
 # <a name="sp_articleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,15 +47,15 @@ sp_articleview [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung, die den Artikel enthält. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, die den Artikel enthält. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @article = ] 'article'` Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @article = ] 'article'` Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 `[ @view_name = ] 'view_name'` Der Name der Sicht, die den veröffentlichten Artikel definiert. *view_name* ist vom Datentyp **nvarchar (386)** und hat den Standardwert NULL.  
   
-`[ @filter_clause = ] 'filter_clause'` Eine Einschränkungs Klausel (WHERE), die einen horizontalen Filter definiert. Wenn Sie die Einschränkungsklausel eingeben, lassen Sie das Schlüsselwort WHERE weg. *filter_clause* ist vom Typ **ntext**und hat den Standardwert NULL.  
+`[ @filter_clause = ] 'filter_clause'` Eine Einschränkungs Klausel (WHERE), die einen horizontalen Filter definiert. Wenn Sie die Einschränkungsklausel eingeben, lassen Sie das Schlüsselwort WHERE weg. *filter_clause* ist vom Typ **ntext** und hat den Standardwert NULL.  
   
-`[ @change_active = ] change_active` Ermöglicht das Ändern von Spalten in Veröffentlichungen, die über Abonnements verfügen. *change_active* ist vom Datentyp **int**und hat den Standardwert **0**. Wenn der Wert **0**ist, werden die Spalten nicht geändert. Wenn der Wert **1**ist, können Sichten für aktive Artikel mit Abonnements erstellt oder neu erstellt werden.  
+`[ @change_active = ] change_active` Ermöglicht das Ändern von Spalten in Veröffentlichungen, die über Abonnements verfügen. *change_active* ist vom Datentyp **int** und hat den Standardwert **0**. Wenn der Wert **0** ist, werden die Spalten nicht geändert. Wenn der Wert **1** ist, können Sichten für aktive Artikel mit Abonnements erstellt oder neu erstellt werden.  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *force_invalidate_snapshot* ist ein **Bit**, der Standardwert ist **0**.  
   
@@ -69,7 +69,7 @@ sp_articleview [ @publication = ] 'publication'
   
  der Wert **1** gibt an, dass das vorhandene Abonnement durch Änderungen am Artikel erneut initialisiert wird, und erteilt die Berechtigung für die erneute Initialisierung des Abonnements.  
   
-`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  der *Verleger* sollte beim Veröffentlichen von einem Verleger nicht verwendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -85,24 +85,24 @@ sp_articleview [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- **sp_articleview** erstellt die Sicht, die den veröffentlichten Artikel definiert, und fügt die ID dieser Sicht in die Spalte **sync_objid** der Tabelle [sysarticles &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) ein und fügt den Text der Einschränkungs Klausel in die Spalte **filter_clause** ein. Wenn alle Spalten repliziert werden und keine **filter_clause**vorhanden ist, wird der **sync_objid** in der [sysarticles-&#40;Transact-SQL-&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) Tabelle auf die ID der Basistabelle festgelegt, und die Verwendung **sp_articleview** ist nicht erforderlich.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_articleview** erstellt die Sicht, die den veröffentlichten Artikel definiert, und fügt die ID dieser Sicht in die Spalte **sync_objid** der Tabelle [sysarticles &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) ein und fügt den Text der Einschränkungs Klausel in die Spalte **filter_clause** ein. Wenn alle Spalten repliziert werden und keine **filter_clause** vorhanden ist, wird der **sync_objid** in der [sysarticles-&#40;Transact-SQL-&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) Tabelle auf die ID der Basistabelle festgelegt, und die Verwendung **sp_articleview** ist nicht erforderlich.  
   
  Führen Sie zum Veröffentlichen einer vertikal gefilterten Tabelle (d. h. zum Filtern von Spalten) zuerst **sp_addarticle** ohne *sync_object* Parameter aus, führen Sie [sp_articlecolumn &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) einmal für jede zu replizierende Spalte aus (definieren Sie den vertikalen Filter), und führen Sie dann **sp_articleview** aus, um die Sicht zu erstellen, die den veröffentlichten Artikel definiert.  
   
- Zum Veröffentlichen einer horizontal gefilterten Tabelle (d. h. zum Filtern von Zeilen) führen Sie [sp_addarticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) ohne *Filter* Parameter aus. Führen Sie [sp_articlefilter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)aus, und geben Sie alle Parameter einschließlich *filter_clause*an. Führen Sie dann **sp_articleview**aus, und geben Sie alle Parameter an, einschließlich der identischen *filter_clause*.  
+ Zum Veröffentlichen einer horizontal gefilterten Tabelle (d. h. zum Filtern von Zeilen) führen Sie [sp_addarticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) ohne *Filter* Parameter aus. Führen Sie [sp_articlefilter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)aus, und geben Sie alle Parameter einschließlich *filter_clause* an. Führen Sie dann **sp_articleview** aus, und geben Sie alle Parameter an, einschließlich der identischen *filter_clause*.  
   
- Zum Veröffentlichen einer vertikalen und horizontal gefilterten Tabelle führen Sie [sp_addarticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) ohne *sync_object* -oder *Filter* Parameter aus. Führen Sie [sp_articlecolumn &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) einmal für jede zu replizierende Spalte aus, und führen Sie dann [sp_articlefilter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) und **sp_articleview**aus.  
+ Zum Veröffentlichen einer vertikalen und horizontal gefilterten Tabelle führen Sie [sp_addarticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) ohne *sync_object* -oder *Filter* Parameter aus. Führen Sie [sp_articlecolumn &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) einmal für jede zu replizierende Spalte aus, und führen Sie dann [sp_articlefilter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) und **sp_articleview** aus.  
   
- Wenn der Artikel bereits eine Ansicht enthält, in der der veröffentlichte Artikel definiert ist, löscht **sp_articleview** die vorhandene Sicht und erstellt automatisch eine neue Sicht. Wenn die Ansicht manuell erstellt wurde (**geben** Sie [sysarticles ein, &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) **5**ist), wird die vorhandene Sicht nicht gelöscht.  
+ Wenn der Artikel bereits eine Ansicht enthält, in der der veröffentlichte Artikel definiert ist, löscht **sp_articleview** die vorhandene Sicht und erstellt automatisch eine neue Sicht. Wenn die Ansicht manuell erstellt wurde (**geben** Sie [sysarticles ein, &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) **5** ist), wird die vorhandene Sicht nicht gelöscht.  
   
- Wenn Sie eine benutzerdefinierte gespeicherte Filter Prozedur und eine Ansicht erstellen, die den veröffentlichten Artikel manuell definiert, führen Sie **sp_articleview**nicht aus. Stellen Sie diese stattdessen als *Filter* und *sync_object* Parameter für [sp_addarticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)zusammen mit dem entsprechenden *Typwert* bereit.  
+ Wenn Sie eine benutzerdefinierte gespeicherte Filter Prozedur und eine Ansicht erstellen, die den veröffentlichten Artikel manuell definiert, führen Sie **sp_articleview** nicht aus. Stellen Sie diese stattdessen als *Filter* und *sync_object* Parameter für [sp_addarticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)zusammen mit dem entsprechenden *Typwert* bereit.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articleview-transact-_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_articleview**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_articleview** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   

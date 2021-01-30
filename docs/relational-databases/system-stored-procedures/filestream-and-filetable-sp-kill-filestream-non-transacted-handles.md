@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_kill_filestream_non_transacted_handles_TSQL
 - sp_kill_filestream_non_transacted_handles
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ba045dc68e5e032478d26caaa7790ed357f4e087
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dd3ba3d653b8f1626f89c7bb979580c666dd830a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550024"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165237"
 ---
 # <a name="sp_kill_filestream_non_transacted_handles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,15 +45,15 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
  Sie können NULL für den Wert von *table_name* übergeben, um alle geöffneten nicht transaktionalen Handles für alle filetables in der aktuellen Datenbank zu schließen. Der Standardwert ist NULL.  
   
  *handle_id*  
- Die optionale ID des einzelnen Handles, der geschlossen werden soll. Sie können die *handle_id* aus der dynamischen Verwaltungs Sicht [sys. dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) erhalten. Jede ID ist in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz eindeutig. Wenn Sie *handle_id*angeben, müssen Sie auch einen Wert für *table_name*angeben.  
+ Die optionale ID des einzelnen Handles, der geschlossen werden soll. Sie können die *handle_id* aus der [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) dynamischen Verwaltungs Sicht erhalten. Jede ID ist in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz eindeutig. Wenn Sie *handle_id* angeben, müssen Sie auch einen Wert für *table_name* angeben.  
   
- Sie können NULL für den Wert von *handle_id* übergeben, um alle geöffneten nicht transaktionalen Handles für die FILETABLE zu schließen, die von *table_name*angegeben wird. Der Standardwert ist NULL.  
+ Sie können NULL für den Wert von *handle_id* übergeben, um alle geöffneten nicht transaktionalen Handles für die FILETABLE zu schließen, die von *table_name* angegeben wird. Der Standardwert ist NULL.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-set"></a>Resultset  
- Keine  
+ Keine.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Der *handle_id* , der für **sp_kill_filestream_non_transacted_handles** erforderlich ist, bezieht sich nicht auf die session_id oder Arbeitseinheit, die in anderen **Kill** -Befehlen verwendet wird.  
@@ -61,12 +61,12 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
  Weitere Informationen finden Sie unter [Verwalten von FileTables](../../relational-databases/blob/manage-filetables.md).  
   
 ## <a name="metadata"></a>Metadaten  
- Um Informationen über geöffnete nicht transaktionale Datei Handles zu erhalten, Fragen Sie die dynamische Verwaltungs Sicht [sys. dm_filestream_non_transacted_handles &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)ab.  
+ Um Informationen über geöffnete nicht transaktionale Datei Handles zu erhalten, Fragen Sie die dynamische Verwaltungs Sicht [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)ab.  
   
 ## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
- Sie müssen über die **View Database State** -Berechtigung verfügen, um Datei Handles aus der dynamischen Verwaltungs Sicht **sys. dm_FILESTREAM_non_transacted_handles** zu erhalten und **sp_kill_filestream_non_transacted_handles**auszuführen.  
+ Sie müssen über die Berechtigung **View Database State** verfügen, um Datei Handles aus der dynamischen Verwaltungs Sicht **sys.dm_FILESTREAM_non_transacted_handles** und **sp_kill_filestream_non_transacted_handles** ausführen zu können.  
   
 ## <a name="examples"></a>Beispiele  
  In den folgenden Beispielen wird gezeigt, wie **sp_kill_filestream_non_transacted_handles** aufgerufen wird, um nicht transaktionale Datei Handles für FILETABLE-Daten zu schließen.  

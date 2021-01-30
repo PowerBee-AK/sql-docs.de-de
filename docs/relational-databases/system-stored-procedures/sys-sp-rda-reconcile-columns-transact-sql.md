@@ -1,12 +1,12 @@
 ---
-title: sys. sp_rda_reconcile_columns (Transact-SQL) | Microsoft-Dokumentation
-description: Erfahren Sie mehr über sys. sp_rda_reconcile_columns. Verwenden Sie diese gespeicherte Prozedur, um Spalten in Azure-Remote Tabellen und Stretch-aktivierten SQL Server Tabellen abzustimmen.
+title: sys.sp_rda_reconcile_columns (Transact-SQL) | Microsoft-Dokumentation
+description: Erfahren Sie mehr über sys.sp_rda_reconcile_columns. Verwenden Sie diese gespeicherte Prozedur, um Spalten in Azure-Remote Tabellen und Stretch-aktivierten SQL Server Tabellen abzustimmen.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: stored-procedures
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_rda_reconcile_columns
 - sys.sp_rda_reconcile_columns_TSQL
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1788e373c8bab330182df9338e447946cda87bd3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8eb33cbb1fd2975d96a727f6a7fde457c9827cc8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538442"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211773"
 ---
-# <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys. sp_rda_reconcile_columns (Transact-SQL)
+# <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys.sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Gibt die Spalten in der Azure-Remote Tabelle mit den Spalten in der Stretch-aktivierten SQL Server Tabelle aus.  
@@ -45,16 +45,16 @@ sp_rda_reconcile_columns @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- \@objname = '* \@ objname*'  
+ \@objname = '*\@ objname*'  
  Der Name der SQL Server Tabelle, für die Stretch aktiviert ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder >0 (Fehler)  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert db_owner Berechtigungen.  
+ Erfordert db_owner-Berechtigungen.  
    
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn die Azure-Remotetabelle Spalten enthält, die in der Stretch-fähigen SQL Server-Tabelle nicht mehr vorhanden sind, verhindern diese zusätzlichen Spalten nicht die normale Funktionsweise von Stretch Database. Sie können die zusätzlichen Spalten optional manuell entfernen.  
   
 ## <a name="example"></a>Beispiel  

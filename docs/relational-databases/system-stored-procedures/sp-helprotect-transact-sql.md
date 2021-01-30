@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helprotect
 - sp_helprotect_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fff150e26e7342beda98b2eb362e1fbb310cdab0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f64ca2d34d11811bec87c1e4e378b424065299c4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538728"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211926"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89538728"
   Gibt einen Bericht mit Informationen zu den Benutzerberechtigungen für ein Objekt oder zu Anweisungsberechtigungen in der aktuellen Datenbank zurück.  
   
 > [!IMPORTANT]  
->  **sp_helprotect** gibt keine Informationen zu Sicherungs fähigen Elementen zurück, die in eingeführt wurden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Verwenden Sie stattdessen [sys. database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) und [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) .  
+>  **sp_helprotect** gibt keine Informationen zu Sicherungs fähigen Elementen zurück, die in eingeführt wurden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Verwenden Sie stattdessen [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) und [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) .  
   
  Berechtigungen, die immer festen Serverrollen oder Datenbankrollen zugewiesen sind, werden nicht aufgeführt. Anmeldenamen oder Benutzer, die Berechtigungen auf Grundlage ihrer Rollenmitgliedschaft erhalten, sind nicht enthalten.  
   
@@ -48,15 +48,15 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'object_statement'` Der Name des Objekts in der aktuellen Datenbank oder eine-Anweisung, die über die Berechtigungen zum Melden verfügt. *object_statement* ist vom Datentyp **nvarchar (776)** und hat den Standardwert NULL, womit alle Objekt-und Anweisungs Berechtigungen zurückgegeben werden. Handelt es sich um ein Objekt (Tabelle, Sicht, gespeicherte Prozedur oder erweiterte gespeicherte Prozedur), muss dieses ein gültiges Objekt in der aktuellen Datenbank sein. Der Objektname kann einen Besitzer Qualifizierer im Formular _Besitzer_enthalten **.** - _Objekt_.  
+`[ @name = ] 'object_statement'` Der Name des Objekts in der aktuellen Datenbank oder eine-Anweisung, die über die Berechtigungen zum Melden verfügt. *object_statement* ist vom Datentyp **nvarchar (776)** und hat den Standardwert NULL, womit alle Objekt-und Anweisungs Berechtigungen zurückgegeben werden. Handelt es sich um ein Objekt (Tabelle, Sicht, gespeicherte Prozedur oder erweiterte gespeicherte Prozedur), muss dieses ein gültiges Objekt in der aktuellen Datenbank sein. Der Objektname kann einen Besitzer Qualifizierer im Formular _Besitzer_ enthalten **.** - _Objekt_.  
   
  Wenn *object_statement* eine-Anweisung ist, kann es sich um eine CREATE-Anweisung handeln.  
   
-`[ @username = ] 'security_account'` Der Name des Prinzipals, für den Berechtigungen zurückgegeben werden. *security_account* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL, womit alle Prinzipale in der aktuellen Datenbank zurückgegeben werden. *security_account* muss in der aktuellen Datenbank vorhanden sein.  
+`[ @username = ] 'security_account'` Der Name des Prinzipals, für den Berechtigungen zurückgegeben werden. *security_account* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL, womit alle Prinzipale in der aktuellen Datenbank zurückgegeben werden. *security_account* muss in der aktuellen Datenbank vorhanden sein.  
   
-`[ @grantorname = ] 'grantor'` Der Name des Prinzipals, der Berechtigungen erteilt hat. der *GRANTOR* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL, der alle Informationen zu Berechtigungen zurückgibt, die von einem Prinzipal in der Datenbank gewährt werden.  
+`[ @grantorname = ] 'grantor'` Der Name des Prinzipals, der Berechtigungen erteilt hat. der *GRANTOR* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL, der alle Informationen zu Berechtigungen zurückgibt, die von einem Prinzipal in der Datenbank gewährt werden.  
   
-`[ @permissionarea = ] 'type'` Eine Zeichenfolge, die angibt, ob Objekt Berechtigungen (Zeichenfolge **o**), Anweisungs Berechtigungen (Zeichenfolge **s**) oder beides (**OS**) angezeigt werden sollen. *Type ist vom Datentyp* **varchar (10)** und hat den Standardwert **OS**. *Type* kann eine beliebige Kombination aus **o** und **s**sein, mit oder ohne Kommas oder Leerzeichen zwischen **o** und **s**.  
+`[ @permissionarea = ] 'type'` Eine Zeichenfolge, die angibt, ob Objekt Berechtigungen (Zeichenfolge **o**), Anweisungs Berechtigungen (Zeichenfolge **s**) oder beides (**OS**) angezeigt werden sollen. *Type ist vom Datentyp* **varchar (10)** und hat den Standardwert **OS**. *Type* kann eine beliebige Kombination aus **o** und **s** sein, mit oder ohne Kommas oder Leerzeichen zwischen **o** und **s**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -73,7 +73,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |**Aktion**|**nvarchar(60)**|Der Name der Berechtigung. Gültige Berechtigungsanweisungen richten sich nach dem Objekttyp.|  
 |**Spalte**|**sysname**|Berechtigungstyp:<br /><br /> All = Berechtigung gilt für alle aktuellen Spalten des Objekts.<br /><br /> New = Berechtigung gilt für alle neuen Spalten, die später (mithilfe der ALTER-Anweisung) für das Objekt geändert werden.<br /><br /> All+New = Kombination aus All und New.<br /><br /> Gibt einen Punkt zurück, wenn der Berechtigungstyp nicht für Spalten gilt.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Alle Parameter in der folgenden Prozedur sind optional. Wenn Sie `sp_helprotect` ohne Parameter ausführen, werden alle Berechtigungen angezeigt, die in der aktuellen Datenbank erteilt oder verweigert wurden.  
   
  Wenn einige, aber nicht alle Parameter angegeben werden, verwenden Sie benannte Parameter zum Identifizieren des entsprechenden Parameters oder aber `NULL` als Platzhalter. Führen Sie z. B. folgende Zeile aus, um alle Berechtigungen für den Datenbankbesitzer (`dbo`) auszugeben, der der Berechtigende (GRANTOR) ist:  

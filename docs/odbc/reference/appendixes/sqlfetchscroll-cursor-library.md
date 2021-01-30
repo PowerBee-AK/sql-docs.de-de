@@ -7,28 +7,28 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLFetchScroll function [ODBC], Cursor Library
 ms.assetid: 4417e57c-31dd-475e-8fe9-eab00a459c80
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9783e2e0e7e5030aef0173a67cf8a4eac416242f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 719504a6e1e412439314ee6971cf41e05805f592
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461652"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202843"
 ---
 # <a name="sqlfetchscroll-cursor-library"></a>SQLFetchScroll (Cursorbibliothek)
 > [!IMPORTANT]  
 >  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
   
- In diesem Thema wird die Verwendung der **SQLFetchScroll** -Funktion in der Cursor Bibliothek erläutert. Allgemeine Informationen zu **SQLFetchScroll**finden Sie unter [SQLFetchScroll-Funktion](../../../odbc/reference/syntax/sqlfetchscroll-function.md).  
+ In diesem Thema wird die Verwendung der **SQLFetchScroll** -Funktion in der Cursor Bibliothek erläutert. Allgemeine Informationen zu **SQLFetchScroll** finden Sie unter [SQLFetchScroll-Funktion](../../../odbc/reference/syntax/sqlfetchscroll-function.md).  
   
  Die Cursor Bibliothek implementiert **SQLFetchScroll** durch wiederholtes Aufrufen von **SQLFetch** im Treiber. Die Daten, die Sie aus dem Treiber abruft, werden auf die von der Anwendung bereitgestellten rowsetpuffer übertragen. Außerdem werden die Daten im Arbeitsspeicher und in den Datenträger Dateien zwischengespeichert. Wenn eine Anwendung ein neues Rowset anfordert, ruft die Cursor Bibliothek Sie nach Bedarf vom Treiber ab (wenn Sie noch nicht abgerufen wurde) oder den Cache (wenn Sie zuvor abgerufen wurde). Schließlich behält die Cursor Bibliothek den Status der zwischengespeicherten Daten bei und gibt diese Informationen an die Anwendung im Zeilen Status Array zurück.  
   
- Wenn die Cursor Bibliothek verwendet wird, können Aufrufe von **SQLFetchScroll** nicht mit Aufrufen von **SQLFetch** oder **SQLExtendedFetch**gemischt werden.  
+ Wenn die Cursor Bibliothek verwendet wird, können Aufrufe von **SQLFetchScroll** nicht mit Aufrufen von **SQLFetch** oder **SQLExtendedFetch** gemischt werden.  
   
  Wenn die Cursor Bibliothek verwendet wird, werden Aufrufe von **SQLFetchScroll** sowohl für ODBC 2 unterstützt. *x* und für ODBC 3. *x* -Treiber.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "88461652"
   
 -   Die Daten im Resultset werden möglicherweise von der Datenquelle für die Cursor Bibliothek gesperrt und sind daher für andere Benutzer nicht verfügbar.  
   
- Nachdem die Cursor Bibliothek eine Zeile mit Daten zwischengespeichert hat, kann Sie keine Änderungen an dieser Zeile in der zugrunde liegenden Datenquelle erkennen (mit Ausnahme von positionierten Updates und Lösch Vorgängen, die für den Cache des gleichen Cursors ausgeführt werden). Dies liegt daran, dass die Cursor Bibliothek bei Aufrufen von **SQLFetchScroll**niemals Daten aus der Datenquelle wiederholt. Stattdessen werden Daten aus dem Cache wiederholt.  
+ Nachdem die Cursor Bibliothek eine Zeile mit Daten zwischengespeichert hat, kann Sie keine Änderungen an dieser Zeile in der zugrunde liegenden Datenquelle erkennen (mit Ausnahme von positionierten Updates und Lösch Vorgängen, die für den Cache des gleichen Cursors ausgeführt werden). Dies liegt daran, dass die Cursor Bibliothek bei Aufrufen von **SQLFetchScroll** niemals Daten aus der Datenquelle wiederholt. Stattdessen werden Daten aus dem Cache wiederholt.  
   
 ## <a name="scrolling"></a>Scrollen  
  Die Cursor Bibliothek unterstützt die folgenden Abruf Typen in **SQLFetchScroll**.  
@@ -75,10 +75,10 @@ ms.locfileid: "88461652"
   
 4.  Legt den Wert für die Fehler Zeile im Zeilen Status Array auf SQL_ROW_ERROR fest.  
   
- Nachdem die Cursor Bibliothek in der Implementierung von **SQLFetchScroll**mehrmals **SQLFetch** aufgerufen hat, werden alle Fehler oder Warnungen, die von einem der Aufrufe an **SQLFetch** zurückgegeben werden, in einem Diagnosedaten Satz gespeichert und können durch einen Aufruf von **SQLGetDiagRec**abgerufen werden. Wenn die Daten abgeschnitten wurden, als Sie abgerufen wurden, befinden sich die abgeschnittene Daten jetzt im Cache der Cursor Bibliothek. Nachfolgende Aufrufe von **SQLFetchScroll** , um zu einer Zeile mit abschneidenden Daten zu scrollen, geben die abgeschnittene Daten zurück, und es wird keine Warnung ausgelöst, da die Daten aus dem Cache der Cursor Bibliothek abgerufen werden. Um die Länge der zurückgegebenen Daten nachzuverfolgen, damit festgestellt werden kann, ob die in einem Puffer zurückgegebenen Daten abgeschnitten wurden, sollte eine Anwendung den Längen-/indikatorenpuffer binden.  
+ Nachdem die Cursor Bibliothek in der Implementierung von **SQLFetchScroll** mehrmals **SQLFetch** aufgerufen hat, werden alle Fehler oder Warnungen, die von einem der Aufrufe an **SQLFetch** zurückgegeben werden, in einem Diagnosedaten Satz gespeichert und können durch einen Aufruf von **SQLGetDiagRec** abgerufen werden. Wenn die Daten abgeschnitten wurden, als Sie abgerufen wurden, befinden sich die abgeschnittene Daten jetzt im Cache der Cursor Bibliothek. Nachfolgende Aufrufe von **SQLFetchScroll** , um zu einer Zeile mit abschneidenden Daten zu scrollen, geben die abgeschnittene Daten zurück, und es wird keine Warnung ausgelöst, da die Daten aus dem Cache der Cursor Bibliothek abgerufen werden. Um die Länge der zurückgegebenen Daten nachzuverfolgen, damit festgestellt werden kann, ob die in einem Puffer zurückgegebenen Daten abgeschnitten wurden, sollte eine Anwendung den Längen-/indikatorenpuffer binden.  
   
 ## <a name="bookmark-operations"></a>Lesezeichen Vorgänge  
- Die Cursor Bibliothek unterstützt das Aufrufen von **SQLFetchScroll** mit der *FetchOrientation* -SQL_FETCH_BOOKMARK. Es unterstützt auch das Angeben eines Offsets im *FetchOffset* -Argument, das im Lesezeichen Vorgang verwendet werden kann. Dies ist der einzige Lesezeichen Vorgang, den die Cursor Bibliothek unterstützt. Das Aufrufen von **SQLBulkOperations**wird von der Cursor Bibliothek nicht unterstützt.  
+ Die Cursor Bibliothek unterstützt das Aufrufen von **SQLFetchScroll** mit der *FetchOrientation* -SQL_FETCH_BOOKMARK. Es unterstützt auch das Angeben eines Offsets im *FetchOffset* -Argument, das im Lesezeichen Vorgang verwendet werden kann. Dies ist der einzige Lesezeichen Vorgang, den die Cursor Bibliothek unterstützt. Das Aufrufen von **SQLBulkOperations** wird von der Cursor Bibliothek nicht unterstützt.  
   
  Wenn die Anwendung das SQL_ATTR_USE_BOOKMARKS-Anweisungs Attribut festgelegt und an die Lesezeichen Spalte gebunden hat, generiert die Cursor Bibliothek ein Lesezeichen mit fester Länge und gibt Sie an die Anwendung zurück. Die Cursor Bibliothek erstellt und verwaltet die verwendeten Lesezeichen. Lesezeichen, die in der Datenquelle beibehalten werden, werden nicht verwendet. Wenn **SQLFetchScroll** aufgerufen wird, um einen Datenblock abzurufen, der bereits aus der Datenquelle abgerufen wurde, werden die Daten aus dem Cursor-Bibliotheks Cache abgerufen. Folglich muss das Lesezeichen, das in einem-Befehl von **SQLFetchScroll** mit der *FetchOrientation* -SQL_FETCH_BOOKMARK verwendet wird, von der Cursor Bibliothek erstellt und verwaltet werden.  
   

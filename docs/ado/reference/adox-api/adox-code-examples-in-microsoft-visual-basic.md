@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 32c78e82e72826b1d440a8c150d1d9e771d811e6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 67461118fb6c9d336902418cf95ae3cd97b6a90b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985761"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164354"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>ADOX-Codebeispiele in Microsoft Visual Basic
 Diese Themen enthalten Beispielcode, der Ihnen das Verständnis der Verwendung von ADOX erleichtert. Alle Codebeispiele werden mithilfe von Microsoft Visual Basic geschrieben.  
@@ -94,7 +94,7 @@ Diese Themen enthalten Beispielcode, der Ihnen das Verständnis der Verwendung v
   
 -   [Table Type-Eigenschaft, Connection Close-Methode, example (VB)](./connection-close-method-table-type-property-example-vb.md)  
   
-## <a name="collections"></a>Auflistungen  
+## <a name="collections"></a>Sammlungen  
   
 -   [Parameters-Collection, Command-Eigenschaft – Beispiel (VB)](./parameters-collection-command-property-example-vb.md)  
   

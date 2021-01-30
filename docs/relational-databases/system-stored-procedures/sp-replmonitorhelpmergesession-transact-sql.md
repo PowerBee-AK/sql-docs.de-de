@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replmonitorhelpmergesession_TSQL
 - sp_replmonitorhelpmergesession
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9544a1d11efbd3d956821784257619bb45b7a5cc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d81a500eccbc8d969e9e0ef957ae4db09616d768
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526080"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211888"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -60,11 +60,11 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**1** (Standard)|Agentsitzungen mit einem Neuversuch oder erfolgreichem Abschluss.|  
 |**0**|Agentsitzungen mit einem Fehlerergebnis.|  
   
-`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter wird verwendet, wenn **sp_replmonitorhelpmergesession** auf dem Abonnenten ausgeführt wird.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Dieser Parameter wird verwendet, wenn **sp_replmonitorhelpmergesession** auf dem Abonnenten ausgeführt wird.  
   
-`[ @publisher_db = ] 'publisher_db'` Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter wird verwendet, wenn **sp_replmonitorhelpmergesession** auf dem Abonnenten ausgeführt wird.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Dieser Parameter wird verwendet, wenn **sp_replmonitorhelpmergesession** auf dem Abonnenten ausgeführt wird.  
   
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter wird verwendet, wenn **sp_replmonitorhelpmergesession** auf dem Abonnenten ausgeführt wird.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Dieser Parameter wird verwendet, wenn **sp_replmonitorhelpmergesession** auf dem Abonnenten ausgeführt wird.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -87,13 +87,13 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_replmonitorhelpmergesession** wird zum Überwachen der Mergereplikation verwendet.  
   
  Bei der Ausführung auf dem Abonnenten werden von **sp_replmonitorhelpmergesession** nur Informationen zu den letzten fünf Merge-Agent Sitzungen zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Daten Bank Rolle **db_owner** oder **replmonitor** in der Verteilungs Datenbank auf dem Verteiler oder der Abonnement Datenbank auf dem Abonnenten können **sp_replmonitorhelpmergesession**ausführen.  
+ Nur Mitglieder der festen Daten Bank Rolle **db_owner** oder **replmonitor** in der Verteilungs Datenbank auf dem Verteiler oder der Abonnement Datenbank auf dem Abonnenten können **sp_replmonitorhelpmergesession** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Programmgesteuertes Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

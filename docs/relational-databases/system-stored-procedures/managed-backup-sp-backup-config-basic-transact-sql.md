@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_backup_config_basic_TSQL
 - sp_backup_config_basic
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 428dff3f22b5a924f7a208a988334c14ece752a3
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 0ef304af8088ee35aeb19022f5d7f6cf539f554d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753733"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193593"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -66,7 +66,7 @@ EXEC managed_backup.sp_backup_config_basic
  Der Name der SQL-Anmelde Informationen, die für die Authentifizierung beim Azure Storage-Konto verwendet werden. @credentail_name ist vom **Datentyp sysname**. Wenn angegeben, wird die Sicherung in einem seitenblob gespeichert. Wenn dieser Parameter NULL ist, wird die Sicherung als blockblob gespeichert. Die Sicherung im seitenblob ist veraltet. Daher wird empfohlen, die neue blockblob-Sicherungsfunktion zu verwenden. Bei Verwendung zum Ändern der [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]-Konfiguration ist dieser Parameter optional. Wenn kein Wert angegeben ist, werden die vorhandenen Konfigurationswerte beibehalten.  
   
 > [!WARNING]
->  Der ** \@ credential_name** -Parameter wird zurzeit nicht unterstützt. Es wird nur eine Sicherung in blockblob unterstützt, für die dieser Parameter NULL sein muss.  
+>  Der **\@ credential_name** -Parameter wird zurzeit nicht unterstützt. Es wird nur eine Sicherung in blockblob unterstützt, für die dieser Parameter NULL sein muss.  
   
 ## <a name="return-code-value"></a>Rückgabecodewert  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

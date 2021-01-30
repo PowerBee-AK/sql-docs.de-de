@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergefilter
 - sp_helpmergefilter_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: faa3b2922f8d73875b5213603b980560d69465ff
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 862f23713da4bcd611310149b509e34658766006
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526883"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179236"
 ---
 # <a name="sp_helpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +40,11 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @article = ] 'article'` Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert, mit dem **%** die Namen aller Artikel zurückgegeben werden.  
+`[ @article = ] 'article'` Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert, mit dem **%** die Namen aller Artikel zurückgegeben werden.  
   
-`[ @filtername = ] 'filtername'` Der Name des Filters, über den Informationen zurückgegeben werden sollen. *Filter Name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** , der Informationen zu allen Filtern zurückgibt, die für den Artikel oder die Veröffentlichung definiert sind.  
+`[ @filtername = ] 'filtername'` Der Name des Filters, über den Informationen zurückgegeben werden sollen. *Filter Name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert **%** , der Informationen zu allen Filtern zurückgibt, die für den Artikel oder die Veröffentlichung definiert sind.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -65,11 +65,11 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helpmergefilter** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** und der festen Daten Bank Rolle **db_owner** können **sp_helpmergefilter**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** und der festen Daten Bank Rolle **db_owner** können **sp_helpmergefilter** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   

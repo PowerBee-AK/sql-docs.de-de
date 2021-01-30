@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_setnetname
 - sp_setnetname_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 71584754f3b175201623a222feae6722f39809ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f84120579d3eae3b2755eaab89eff137af6190db
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543069"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193501"
 ---
 # <a name="sp_setnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>Argumente  
- ** @server = '** *Server* **'**  
- Der Name des Remoteservers, wie er in der vom Benutzer codierten Syntax für den Aufruf einer remote gespeicherten Prozedur angesprochen wird. Für die Verwendung dieses *Servers*muss bereits genau eine Zeile in **sys. Servers** vorhanden sein. *server* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+ **@server = '** *Server* **'**  
+ Der Name des Remoteservers, wie er in der vom Benutzer codierten Syntax für den Aufruf einer remote gespeicherten Prozedur angesprochen wird. Für die Verwendung dieses *Servers* muss bereits genau eine Zeile in **sys. Servers** vorhanden sein. *server* ist vom Datentyp **sysname** und hat keinen Standardwert.  
   
- ** @netname = '** *network_name* **'**  
- Der Netzwerkname des Computers, an den Aufrufe remote gespeicherter Prozeduren gesendet werden. *network_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+ **@netname = '** *network_name* **'**  
+ Der Netzwerkname des Computers, an den Aufrufe remote gespeicherter Prozeduren gesendet werden. *network_name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
  Dieser Name muss mit dem Namen des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Computernamens übereinstimmen und kann Zeichen enthalten, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Bezeichnern nicht zulässig sind.  
   

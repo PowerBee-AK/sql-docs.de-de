@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff23c57ae3ecf25e7328d304f9716ad24f2aba7e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ecf73bd3708fc33d8ada106dcaa4fb6e1f0b5503
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989740"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166693"
 ---
 # <a name="recordset-object-ado"></a>Recordset-Objekt (ADO)
 Stellt den gesamten Satz von Datensätzen aus einer Basistabelle oder die Ergebnisse eines ausgeführten Befehls dar. Das **Recordset** -Objekt bezieht sich jederzeit auf einen einzelnen Datensatz innerhalb des Satzes als aktuellen Datensatz.  
@@ -37,19 +37,19 @@ Stellt den gesamten Satz von Datensätzen aus einer Basistabelle oder die Ergebn
   
 -   **Keysetcursor** Verhält sich wie ein dynamischer Cursor, mit der Ausnahme, dass Sie keine Datensätze anzeigen können, die andere Benutzer hinzufügen, und den Zugriff auf Datensätze, die andere Benutzer löschen, verhindern. Datenänderungen von anderen Benutzern bleiben weiterhin sichtbar. Er unterstützt immer Lesezeichen und ermöglicht daher alle Arten von Verschiebungen durch das **Recordset**.  
   
--   **Statischer Cursor** Bietet eine statische Kopie eines Satzes von Datensätzen, die Sie zum Suchen von Daten oder Generieren von Berichten verwenden können. erlaubt Lesezeichen immer und ermöglicht daher alle Arten von Verschiebungen durch das **Recordset**. Ergänzungen, Änderungen oder Löschungen anderer Benutzer sind nicht sichtbar. Dies ist der einzige Typ von Cursor, der zulässig ist, wenn Sie ein **Recordset** Client seitiges Recordsetobjekt öffnen.  
+-   **Statischer Cursor** Bietet eine statische Kopie eines Satzes von Datensätzen, die Sie zum Suchen von Daten oder Generieren von Berichten verwenden können. erlaubt Lesezeichen immer und ermöglicht daher alle Arten von Verschiebungen durch das **Recordset**. Ergänzungen, Änderungen oder Löschungen anderer Benutzer sind nicht sichtbar. Dies ist der einzige Typ von Cursor, der zulässig ist, wenn Sie ein  Client seitiges Recordsetobjekt öffnen.  
   
--   **Vorwärts Cursor** Ermöglicht Ihnen nur den Bildlauf vorwärts durch das **Recordset**. Ergänzungen, Änderungen oder Löschungen anderer Benutzer sind nicht sichtbar. Dies verbessert die Leistung in Situationen, in denen Sie nur einen einzigen Durchlauf durch ein **Recordset**machen müssen.  
+-   **Vorwärts Cursor** Ermöglicht Ihnen nur den Bildlauf vorwärts durch das **Recordset**. Ergänzungen, Änderungen oder Löschungen anderer Benutzer sind nicht sichtbar. Dies verbessert die Leistung in Situationen, in denen Sie nur einen einzigen Durchlauf durch ein **Recordset** machen müssen.  
   
  Legen Sie die [CursorType](./cursortype-property-ado.md) -Eigenschaft vor dem Öffnen des **Recordsets** fest, um den Cursortyp auszuwählen, oder übergeben Sie ein *CursorType* -Argument mit der [Open](./open-method-ado-recordset.md) -Methode. Einige Anbieter unterstützen nicht alle Cursor Typen. Überprüfen Sie die Dokumentation für den Anbieter. Wenn Sie keinen Cursortyp angeben, öffnet ADO standardmäßig einen Vorwärts Cursor.  
   
- Wenn die [Cursor Location](./cursorlocation-property-ado.md) -Eigenschaft auf **adUseClient** festgelegt ist, um ein **Recordset**zu öffnen, ist die **UnderlyingValue** -Eigenschaft für [Feld](./field-object.md) Objekte im zurückgegebenen **Recordset** -Objekt nicht verfügbar. Wenn Sie mit einigen Anbietern (z. b. dem Microsoft ODBC-Anbieter für OLE DB in Verbindung mit Microsoft SQL Server) verwendet werden, können Sie Recordset-Objekte unabhängig von einem zuvor definierten [Verbindungs](./connection-object-ado.md) Objekt erstellen, indem Sie eine Verbindungs **Zeichenfolge** mit der **Open** -Methode übergeben. ADO erstellt weiterhin ein [Verbindungs](./connection-object-ado.md) Objekt, weist dieses Objekt jedoch nicht einer Objektvariablen zu. Wenn Sie jedoch mehrere **Recordset** -Objekte über die gleiche Verbindung öffnen, sollten Sie explizit ein **Verbindungs** Objekt erstellen und öffnen. Dadurch wird das **Verbindungs** Objekt einer Objektvariablen zugewiesen. Wenn Sie diese Objekt Variable beim Öffnen der **Recordset** -Objekte nicht verwenden, erstellt ADO ein neues **Verbindungs** Objekt für jedes neue Recordset, auch wenn Sie dieselbe Verbindungs **Zeichenfolge**übergeben.  
+ Wenn die [Cursor Location](./cursorlocation-property-ado.md) -Eigenschaft auf **adUseClient** festgelegt ist, um ein **Recordset** zu öffnen, ist die **UnderlyingValue** -Eigenschaft für [Feld](./field-object.md) Objekte im zurückgegebenen **Recordset** -Objekt nicht verfügbar. Wenn Sie mit einigen Anbietern (z. b. dem Microsoft ODBC-Anbieter für OLE DB in Verbindung mit Microsoft SQL Server) verwendet werden, können Sie Recordset-Objekte unabhängig von einem zuvor definierten [Verbindungs](./connection-object-ado.md) Objekt erstellen, indem Sie eine Verbindungs **Zeichenfolge** mit der **Open** -Methode übergeben. ADO erstellt weiterhin ein [Verbindungs](./connection-object-ado.md) Objekt, weist dieses Objekt jedoch nicht einer Objektvariablen zu. Wenn Sie jedoch mehrere **Recordset** -Objekte über die gleiche Verbindung öffnen, sollten Sie explizit ein **Verbindungs** Objekt erstellen und öffnen. Dadurch wird das **Verbindungs** Objekt einer Objektvariablen zugewiesen. Wenn Sie diese Objekt Variable beim Öffnen der **Recordset** -Objekte nicht verwenden, erstellt ADO ein neues **Verbindungs** Objekt für jedes neue Recordset, auch wenn Sie dieselbe Verbindungs **Zeichenfolge** übergeben.  
   
  Sie können beliebig viele **Recordset** -Objekte erstellen.  
   
- Wenn Sie ein **Recordset**öffnen, wird der aktuelle Datensatz auf den ersten Datensatz (sofern vorhanden) und die [BOF](./bof-eof-properties-ado.md) -und [EOF](./bof-eof-properties-ado.md) -Eigenschaften auf **false**festgelegt. Wenn keine Datensätze vorhanden sind, sind die **BOF** -und **EOF** -Eigenschafts Einstellungen **true**.  
+ Wenn Sie ein **Recordset** öffnen, wird der aktuelle Datensatz auf den ersten Datensatz (sofern vorhanden) und die [BOF](./bof-eof-properties-ado.md) -und [EOF](./bof-eof-properties-ado.md) -Eigenschaften auf **false** festgelegt. Wenn keine Datensätze vorhanden sind, sind die **BOF** -und **EOF** -Eigenschafts Einstellungen **true**.  
   
- Sie können die Methoden " [muvefirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)", " **muvelast**", " **muvenext**" und " **muveprevious** " verwenden; die [Move](./move-method-ado.md) -Methode. und die Eigenschaften [AbsolutePosition](./absoluteposition-property-ado.md), [AbsolutePage](./absolutepage-property-ado.md)und [Filter](./filter-property.md) zum Neupositionieren des aktuellen Datensatzes, vorausgesetzt, der Anbieter unterstützt die relevante Funktionalität. Forward-Only- **Recordsetobjekte** unterstützen [nur die-](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) Methode von "". Wenn Sie die **Move** -Methoden verwenden, um jeden Datensatz zu besuchen (oder das **Recordset**aufzulisten), können Sie die Eigenschaften **BOF** und **EOF** verwenden, um zu bestimmen, ob Sie über den Anfang oder das Ende des **Recordsets**hinaus verschoben haben.  
+ Sie können die Methoden " [muvefirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)", " **muvelast**", " **muvenext**" und " **muveprevious** " verwenden; die [Move](./move-method-ado.md) -Methode. und die Eigenschaften [AbsolutePosition](./absoluteposition-property-ado.md), [AbsolutePage](./absolutepage-property-ado.md)und [Filter](./filter-property.md) zum Neupositionieren des aktuellen Datensatzes, vorausgesetzt, der Anbieter unterstützt die relevante Funktionalität. Forward-Only- **Recordsetobjekte** unterstützen [nur die-](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) Methode von "". Wenn Sie die **Move** -Methoden verwenden, um jeden Datensatz zu besuchen (oder das **Recordset** aufzulisten), können Sie die Eigenschaften **BOF** und **EOF** verwenden, um zu bestimmen, ob Sie über den Anfang oder das Ende des **Recordsets** hinaus verschoben haben.  
   
  Bevor Sie eine Funktion eines **Recordset** -Objekts verwenden, müssen Sie die **unter** stützte Methode für das-Objekt verwenden, um zu überprüfen, ob die Funktionalität unterstützt wird oder verfügbar ist. Die-Funktion darf nicht verwendet werden, wenn die **unterstützte** Methode false zurückgibt. Beispielsweise können Sie die Methode " **muveprevious** " nur verwenden, wenn " `Recordset.Supports(adMovePrevious)` **true**" zurückgibt. Andernfalls erhalten Sie eine Fehlermeldung, da das **Recordset** -Objekt möglicherweise geschlossen wurde und die Funktionalität auf der-Instanz nicht verfügbar gemacht wurde. Wenn eine Funktion, an der Sie interessiert sind, nicht unterstützt wird, wird von **unterstützt** auch false zurückgegeben. In diesem Fall sollten Sie den Aufruf der entsprechenden Eigenschaft oder Methode für das **Recordset** -Objekt vermeiden.  
   
@@ -69,7 +69,7 @@ Debug.Print objRs.Fields.Item(0)  ' Both statements print
 Debug.Print objRs(0)              '  the Value of Item(0).  
 ```  
   
- Wenn ein **Recordset** Recordsetobjekt über Prozesse hinweg übermittelt wird, werden nur die **rowsetwerte** gemarshallt, und die Eigenschaften des **Recordset** -Objekts werden ignoriert. Beim Unmarshalling wird das **Rowset** in ein neu erstelltes Recordsetobjekt entpackt, das auch seine Eigenschaften auf die Standardwerte festlegt. **Recordset**  
+ Wenn ein  Recordsetobjekt über Prozesse hinweg übermittelt wird, werden nur die **rowsetwerte** gemarshallt, und die Eigenschaften des **Recordset** -Objekts werden ignoriert. Beim Unmarshalling wird das **Rowset** in ein neu erstelltes Recordsetobjekt entpackt, das auch seine Eigenschaften auf die Standardwerte festlegt.   
   
  Das **Recordset** -Objekt ist für die Skripterstellung sicher.  
   

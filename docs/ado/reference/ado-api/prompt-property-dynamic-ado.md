@@ -1,25 +1,25 @@
 ---
 description: Prompt – dynamische Eigenschaft (ADO)
-title: Prompt Property-Dynamic (ADO) | Microsoft-Dokumentation
+title: Eingabeaufforderung Property-Dynamic (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Prompt property [ADO]
 ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 67e8df1a59edecaf601f0ec4c5fd4b7782877e8d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b5b7e99548e156126455a66be7fdf73a9c00ebbc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990011"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166828"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Prompt – dynamische Eigenschaft (ADO)
 Gibt an, ob der OLE DB Anbieter den Benutzer zur Eingabe von Initialisierungs Informationen auffordern soll.  
@@ -35,7 +35,7 @@ Gibt an, ob der OLE DB Anbieter den Benutzer zur Eingabe von Initialisierungs In
 > [!NOTE]
 >  Geben Sie nicht an, dass der Anbieter den Benutzer in Szenarios auffordern soll, in denen der Benutzer nicht auf das Dialogfeld reagieren kann. Der Benutzer kann beispielsweise nicht Antworten, wenn die Anwendung auf einem Server System statt auf dem Client des Benutzers ausgeführt wird oder wenn die Anwendung auf einem System ausgeführt wird, auf dem kein Benutzer angemeldet ist. In diesen Fällen wartet die Anwendung unbegrenzt auf eine Antwort und scheint eine Sperre zu erhalten.  
   
-## <a name="usage"></a>Verwendung  
+## <a name="usage"></a>Verbrauch  
   
 ```  
 Set cn = New Connection  

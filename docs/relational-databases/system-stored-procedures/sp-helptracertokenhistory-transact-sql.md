@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helptracertokenhistory_TSQL
 - sp_helptracertokenhistory
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4874af1c1defd949f4744a98f9f959995bf1d231
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f701a1681281bfb63cf6c39ba42869ac83df204e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547933"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192880"
 ---
 # <a name="sp_helptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,16 +41,16 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung, in die das Überwachungs Token eingefügt wurde. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, in die das Überwachungs Token eingefügt wurde. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @tracer_id = ] tracer_id` Die ID des Überwachungs Tokens in der [MStracer_tokens &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) Tabelle, für die Verlaufs Informationen zurückgegeben werden. *tracer_id* ist vom Datentyp **int**und hat keinen Standardwert.  
+`[ @tracer_id = ] tracer_id` Die ID des Überwachungs Tokens in der [MStracer_tokens &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) Tabelle, für die Verlaufs Informationen zurückgegeben werden. *tracer_id* ist vom Datentyp **int** und hat keinen Standardwert.  
   
-`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]
 >  Dieser Parameter sollte nur für nicht--Verleger angegeben werden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @publisher_db = ] 'publisher_db'` Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter wird ignoriert, wenn die gespeicherte Prozedur auf dem Verleger ausgeführt wird.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Dieser Parameter wird ignoriert, wenn die gespeicherte Prozedur auf dem Verleger ausgeführt wird.  
   
 ## <a name="result-set"></a>Resultset  
   
@@ -65,7 +65,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helptracertokenhistory** wird bei der Transaktions Replikation verwendet.  
   
  Führen Sie [sp_helptracertokens &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) aus, um eine Liste der Überwachungs Token für die Veröffentlichung zu erhalten.  
@@ -76,7 +76,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-helptracertokenhistor_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** , der festen Daten Bank Rolle **db_owner** in der Veröffentlichungs Datenbank oder **db_owner** festen Datenbank-oder **replmonitor** -Rollen in der Verteilungs Datenbank können **sp_helptracertokenhistory**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** , der festen Daten Bank Rolle **db_owner** in der Veröffentlichungs Datenbank oder **db_owner** festen Datenbank-oder **replmonitor** -Rollen in der Verteilungs Datenbank können **sp_helptracertokenhistory** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Messen der Latenzzeit und Überprüfen der Verbindungen für die Transaktions Replikation](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   

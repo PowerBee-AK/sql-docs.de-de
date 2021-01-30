@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_articlefilter_TSQL
 - sp_articlefilter
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1adb46ae5954c0cbb2b401625869e4e1cb431484
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6e39f67440e57c2c4a725db45e6e8d8deda3c8b3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548296"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203252"
 ---
 # <a name="sp_articlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,13 +44,13 @@ sp_articlefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung, die den Artikel enthält. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, die den Artikel enthält. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @article = ] 'article'` Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @article = ] 'article'` Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @filter_name = ] 'filter_name'` Der Name der gespeicherten Filter Prozedur, die aus der *filter_name*erstellt werden soll. *filter_name* ist vom Datentyp **nvarchar (386)** und hat den Standardwert NULL. Sie müssen einen eindeutigen Namen für den Artikelfilter angeben.  
+`[ @filter_name = ] 'filter_name'` Der Name der gespeicherten Filter Prozedur, die aus der *filter_name* erstellt werden soll. *filter_name* ist vom Datentyp **nvarchar (386)** und hat den Standardwert NULL. Sie müssen einen eindeutigen Namen für den Artikelfilter angeben.  
   
-`[ @filter_clause = ] 'filter_clause'` Eine Einschränkungs Klausel (WHERE), die einen horizontalen Filter definiert. Wenn Sie die Einschränkungs Klausel eingeben, lassen Sie das Schlüsselwort aus. *filter_clause* ist vom Typ **ntext**und hat den Standardwert NULL.  
+`[ @filter_clause = ] 'filter_clause'` Eine Einschränkungs Klausel (WHERE), die einen horizontalen Filter definiert. Wenn Sie die Einschränkungs Klausel eingeben, lassen Sie das Schlüsselwort aus. *filter_clause* ist vom Typ **ntext** und hat den Standardwert NULL.  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *force_invalidate_snapshot* ist ein **Bit**, der Standardwert ist **0**.  
   
@@ -64,7 +64,7 @@ sp_articlefilter [ @publication = ] 'publication'
   
  mit **1** wird angegeben, dass vorhandene Abonnements durch Änderungen am Artikel erneut initialisiert werden, und es wird die Berechtigung für die erneute Initialisierung des Abonnements erteilt.  
   
-`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht mit einem Verleger verwendet werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -72,22 +72,22 @@ sp_articlefilter [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_articlefilter** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
  Wenn Sie **sp_articlefilter** für einen Artikel mit vorhandenen Abonnements ausführen, müssen diese Abonnements erneut initialisiert werden.  
   
  **sp_articlefilter** den Filter erstellt, fügt die ID der gespeicherten Filter Prozedur in die Spalte **Filter** der Tabelle [sysarticles &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) ein und fügt dann den Text der Einschränkungs Klausel in die **filter_clause** Spalte ein.  
   
- Um einen Artikel mit einem horizontalen Filter zu erstellen, führen Sie [sp_addarticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) ohne *Filter* Parameter aus. Führen Sie **sp_articlefilter**aus, und geben Sie alle Parameter einschließlich *filter_clause*an. führen Sie dann [sp_articleview &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)aus, und geben Sie alle Parameter einschließlich der identischen *filter_clause*an. Wenn der Filter bereits vorhanden ist und der **Typ** in **sysarticles** **1** (Protokoll basierter Artikel) ist, wird der vorherige Filter gelöscht, und es wird ein neuer Filter erstellt.  
+ Um einen Artikel mit einem horizontalen Filter zu erstellen, führen Sie [sp_addarticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) ohne *Filter* Parameter aus. Führen Sie **sp_articlefilter** aus, und geben Sie alle Parameter einschließlich *filter_clause* an. führen Sie dann [sp_articleview &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)aus, und geben Sie alle Parameter einschließlich der identischen *filter_clause* an. Wenn der Filter bereits vorhanden ist und der **Typ** in **sysarticles** **1** (Protokoll basierter Artikel) ist, wird der vorherige Filter gelöscht, und es wird ein neuer Filter erstellt.  
   
- Wenn *filter_name* und *filter_clause* nicht bereitgestellt werden, wird der vorherige Filter gelöscht, und die Filter-ID wird auf **0**festgelegt.  
+ Wenn *filter_name* und *filter_clause* nicht bereitgestellt werden, wird der vorherige Filter gelöscht, und die Filter-ID wird auf **0** festgelegt.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articlefilter-transac_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_articlefilter**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_articlefilter** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   

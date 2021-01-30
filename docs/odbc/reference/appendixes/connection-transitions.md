@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - transitioning states [ODBC], connection
 - connection transitions [ODBC]
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a5f7fecf0ad25311e9d96f4db8554c1cdbf24e91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60a26505af6d53265111bd24b08990e61b992902
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88339446"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165417"
 ---
 # <a name="connection-transitions"></a>Verbindungsübergänge
 ODBC-Verbindungen weisen die folgenden Zustände auf.  
   
-|Staat|Beschreibung|  
+|State|BESCHREIBUNG|  
 |-----------|-----------------|  
 |C0|Nicht zugeordnete Umgebung, nicht zugewiesene Verbindung|  
 |C1|Zugeordnete Umgebung, nicht zugeordnete Verbindung|  
@@ -54,7 +54,7 @@ ODBC-Verbindungen weisen die folgenden Zustände auf.
   
  [4] diese Zeile zeigt Übergänge an, wenn der *Handtyp* SQL_HANDLE_DESC wurde.  
   
- [5] das Aufrufen von **sqlzugewiesene CHandle** mit *outputhandleptr* , das auf ein gültiges Handle verweist, überschreibt dieses Handle ohne Berücksichtigung der vorherigen Inhalte dieses Handles und kann zu Problemen mit ODBC-Treibern führen. Es ist eine falsche ODBC-Anwendungsprogrammierung zum doppelten Aufrufen von **sqlzuordchandle** mit der gleichen Anwendungsvariablen, die für * \* outputhandleptr* definiert ist, ohne **SQLFreeHandle** aufzurufen, um das Handle vor der erneuten Zuordnung freizugeben. Das Überschreiben von ODBC-Handles auf diese Weise kann zu inkonsistenten Verhalten oder Fehlern im Rahmen der ODBC-Treiber führen.  
+ [5] das Aufrufen von **sqlzugewiesene CHandle** mit *outputhandleptr* , das auf ein gültiges Handle verweist, überschreibt dieses Handle ohne Berücksichtigung der vorherigen Inhalte dieses Handles und kann zu Problemen mit ODBC-Treibern führen. Es ist eine falsche ODBC-Anwendungsprogrammierung zum doppelten Aufrufen von **sqlzuordchandle** mit der gleichen Anwendungsvariablen, die für *\* outputhandleptr* definiert ist, ohne **SQLFreeHandle** aufzurufen, um das Handle vor der erneuten Zuordnung freizugeben. Das Überschreiben von ODBC-Handles auf diese Weise kann zu inkonsistenten Verhalten oder Fehlern im Rahmen der ODBC-Treiber führen.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   

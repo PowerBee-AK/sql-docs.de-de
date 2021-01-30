@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - converting data from SQL to C types [ODBC], character
 - character data type [ODBC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7fdb7f38-b64d-48f2-bcb4-1ca96b2bbdb6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dff2b456e995aa344fcd928a48a5aaa09c484e89
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 78bbf45362216f8fb2a0706977347219ac6ac28b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456528"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203063"
 ---
 # <a name="sql-to-c-character"></a>SQL zu C: Zeichen
 
@@ -45,7 +45,7 @@ In der folgenden Tabelle werden die ODBC-C-Datentypen angezeigt, in die SQL-Date
 |SQL_C_BINARY|Byte Länge der Daten <= *BufferLength*<br /><br /> Byte Länge der Daten > *BufferLength*|Daten<br /><br /> Abgeschnittene Daten|Länge der Daten in Bytes<br /><br /> Länge der Daten|–<br /><br /> 01004|  
 |SQL_C_TYPE_DATE|Der Datenwert ist ein gültiger *Datumswert*[a].<br /><br /> Der Datenwert ist ein gültiger *timestamp-Wert*. Der Uhrzeitteil ist 0 (null) [a]<br /><br /> Der Datenwert ist ein gültiger *timestamp-Wert*. Der Uhrzeitteil ist ungleich 0 (null) [a], [c]<br /><br /> Der Datenwert ist kein gültiger *Datums-* */Uhrzeitwert-oder timestamp-Wert*[a]|Daten<br /><br /> Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|6 [b]<br /><br /> 6 [b]<br /><br /> 6 [b]<br /><br /> Nicht definiert|–<br /><br /> –<br /><br /> 01S07<br /><br /> 22018|  
 |SQL_C_TYPE_TIME|Der Datenwert ist ein gültiger *Zeitwert, und der Wert für die Sekundenbruchteile ist 0*(null).<br /><br /> Der Datenwert ist ein gültiger *timestamp-Wert oder ein gültiger Zeitwert*. der Teil der Sekundenbruchteile ist 0 (null) [a], [d]<br /><br /> Der Datenwert ist ein gültiger *timestamp-Wert*. der Teil für die Sekundenbruchteile ist ungleich 0 (null) [a], [d], [e]<br /><br /> Der Datenwert ist kein gültiger *Zeitwert* oder *timestamp-Wert*[a].|Daten<br /><br /> Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert|6 [b]<br /><br /> 6 [b]<br /><br /> 6 [b]<br /><br /> Nicht definiert|–<br /><br /> –<br /><br /> 01S07<br /><br /> 22018|  
-|SQL_C_TYPE_TIMESTAMP|Der Datenwert ist ein gültiger *timestamp-Wert oder ein gültiger Zeitwert*. Teil Sekundenbruchteile nicht abgeschnitten [a]<br /><br /> Der Datenwert ist ein gültiger *timestamp-Wert oder ein gültiger Zeitwert*. Teil Bruchteile abgeschnitten [a]<br /><br /> Der Datenwert ist ein gültiger *Datumswert*[a].<br /><br /> Der Datenwert ist ein gültiger *Zeitwert*[a].<br /><br /> Der Datenwert ist kein gültiger *Datums-* */Uhrzeitwert-oder timestamp-Wert*[a] *time-value*|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Daten [f]<br /><br /> Daten [g]<br /><br /> Nicht definiert|16 [b]<br /><br /> 16 [b]<br /><br /> 16 [b]<br /><br /> 16 [b]<br /><br /> Nicht definiert|–<br /><br /> 01S07<br /><br /> –<br /><br /> –<br /><br /> 22018|  
+|SQL_C_TYPE_TIMESTAMP|Der Datenwert ist ein gültiger *timestamp-Wert oder ein gültiger Zeitwert*. Teil Sekundenbruchteile nicht abgeschnitten [a]<br /><br /> Der Datenwert ist ein gültiger *timestamp-Wert oder ein gültiger Zeitwert*. Teil Bruchteile abgeschnitten [a]<br /><br /> Der Datenwert ist ein gültiger *Datumswert*[a].<br /><br /> Der Datenwert ist ein gültiger *Zeitwert*[a].<br /><br /> Der Datenwert ist kein gültiger *Datums-* */Uhrzeitwert-oder timestamp-Wert*[a] |Daten<br /><br /> Abgeschnittene Daten<br /><br /> Daten [f]<br /><br /> Daten [g]<br /><br /> Nicht definiert|16 [b]<br /><br /> 16 [b]<br /><br /> 16 [b]<br /><br /> 16 [b]<br /><br /> Nicht definiert|–<br /><br /> 01S07<br /><br /> –<br /><br /> –<br /><br /> 22018|  
 |Alle C-Intervall Typen|Der Datenwert ist ein gültiger *Intervall Wert*. keine abkürzen<br /><br /> Der Datenwert ist ein gültiger *Intervall Wert*. Abschneiden von mindestens einem nachfolgenden Feld<br /><br /> Daten sind gültiges Intervall. die signifikante Genauigkeit des führenden Felds ist verloren gegangen.<br /><br /> Der Datenwert ist kein gültiger Intervall Wert.|Daten<br /><br /> Abgeschnittene Daten<br /><br /> Nicht definiert<br /><br /> Nicht definiert|Länge der Daten in Bytes<br /><br /> Länge der Daten in Bytes<br /><br /> Nicht definiert<br /><br /> Nicht definiert|–<br /><br /> 01S07<br /><br /> 22015<br /><br /> 22018|  
 |&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|
 

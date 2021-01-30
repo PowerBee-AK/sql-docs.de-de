@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - properties [ADOX]
 - ADOX, properties
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cbc72515c3ba8bcee52bff213ba11bd0b4bc2140
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 85f6cb74b25d7664bdf7b87c4290edd19a49dcd3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641149"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164325"
 ---
 # <a name="adox-properties"></a>ADOX-Eigenschaften
 
@@ -27,9 +27,9 @@ ms.locfileid: "97641149"
 |-|-|  
 |[ActiveConnection](./activeconnection-property-adox.md)|Gibt das ADO- **Verbindungs** Objekt an, zu dem der Katalog gehört.|  
 |[Attribute](./attributes-property-adox.md)|Beschreibt Spalten Eigenschaften.|  
-|[Gruppiert](./clustered-property-adox.md)|Gibt an, ob der Index gruppiert ist.|  
+|[Cluster](./clustered-property-adox.md)|Gibt an, ob der Index gruppiert ist.|  
 |[Befehl](./command-property-adox.md)|Gibt ein ADO- **Befehls** Objekt an, das verwendet werden kann, um die Prozedur zu erstellen oder auszuführen.|  
-|[Count](../ado-api/count-property-ado.md)|Gibt die Anzahl der-Objekte in einer Auflistung an.|  
+|[Anzahl](../ado-api/count-property-ado.md)|Gibt die Anzahl der-Objekte in einer Auflistung an.|  
 |[DateCreated](./datecreated-property-adox.md)|Gibt das Datum an, an dem das Objekt erstellt wurde.|  
 |[DateModified](./datemodified-property-adox.md)|Gibt das Datum an, an dem das Objekt zuletzt geändert wurde.|  
 |[DefinedSize](./definedsize-property-adox.md)|Gibt die angegebene maximale Größe der Spalte an.|  

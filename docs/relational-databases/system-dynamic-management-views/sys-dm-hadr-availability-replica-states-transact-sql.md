@@ -6,7 +6,7 @@ ms.date: 10/16/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_hadr_availability_replica_states
 - sys.dm_hadr_availability_replica_states_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 549c37fdcc04d16eb2163fc7cca7e2ffddf9ce3e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: ab171b0adfe6497520ba55d94ec6a1435cc6678a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98092780"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179317"
 ---
 # <a name="sysdm_hadr_availability_replica_states-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "98092780"
   
  **Auflösen:** Wenn sich ein Verfügbarkeits Replikat in der Rolle "auflösen" befindet, sind die möglichen Betriebszustände wie in der folgenden Tabelle dargestellt.  
   
-|Betriebsstatus|Beschreibung|  
+|Betriebsstatus|BESCHREIBUNG|  
 |-----------------------|-----------------|  
 |PENDING_FAILOVER|Derzeit wird ein Failoverbefehl für die Verfügbarkeitsgruppe verarbeitet.|  
 |OFFLINE|Alle Konfigurationsdaten für das Verfügbarkeitsreplikat wurden im WSFC-Cluster und auch in den lokalen Metadaten aktualisiert, aber in der Verfügbarkeitsgruppe fehlt derzeit ein primäres Replikat.|  
@@ -68,7 +68,7 @@ ms.locfileid: "98092780"
   
  **Primär:** Wenn ein Verfügbarkeits Replikat die primäre Rolle ausführt, ist es derzeit das primäre Replikat. Die möglichen Betriebszustände sind wie in der folgenden Tabelle dargestellt.  
   
-|Betriebsstatus|Beschreibung|  
+|Betriebsstatus|BESCHREIBUNG|  
 |-----------------------|-----------------|  
 |PENDING (AUSSTEHEND)|Dies ist ein vorübergehender Status, aber ein primäres Replikat kann in diesem Status hangen bleiben, wenn keine Arbeitsthreads zum Verarbeiten der Anforderungen verfügbar sind.|  
 |ONLINE|Die Verfügbarkeitsgruppenressource ist online, und alle Datenbankarbeitsthreads wurden abgerufen.|  
@@ -76,7 +76,7 @@ ms.locfileid: "98092780"
   
  **Sekundär:** Wenn ein Verfügbarkeits Replikat die sekundäre Rolle ausführt, ist es derzeit ein sekundäres Replikat. Die möglichen Betriebszustände sind wie in der folgenden Tabelle dargestellt.  
   
-|Betriebsstatus|Beschreibung|  
+|Betriebsstatus|BESCHREIBUNG|  
 |-----------------------|-----------------|  
 |ONLINE|Das lokale sekundäre Replikat ist mit dem primären Replikat verbunden.|  
 |FAILED|Das lokale sekundäre Replikat kann nicht aus dem WSFC-Cluster lesen oder in den WSFC-Cluster schreiben.|  

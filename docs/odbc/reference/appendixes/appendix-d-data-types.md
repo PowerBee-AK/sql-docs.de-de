@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - C data types [ODBC], defined
 - SQL data types [ODBC], defined
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 77ca1ac4b4628880e6f0a87237b347aadb66584d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b2ff95858f654bef654b18105b4fda52c77cca0c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88411486"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212546"
 ---
 # <a name="appendix-d-data-types"></a>Anhang D:-Datentypen
 ODBC definiert zwei Sätze von Datentypen: SQL-Datentypen und C-Datentypen. SQL-Datentypen geben den Datentyp der Daten an, die in der Datenquelle gespeichert sind. C-Datentypen geben den Datentyp der in Anwendungs Puffern gespeicherten Daten an.  
@@ -37,26 +37,26 @@ ODBC definiert zwei Sätze von Datentypen: SQL-Datentypen und C-Datentypen. SQL-
   
  Dieser Anhang enthält die folgenden Themen:  
   
--   [Using Data Type Identifiers (Verwenden von Datentypbezeichnern)](../../../odbc/reference/appendixes/using-data-type-identifiers.md)  
+-   [Verwenden von Datentypbezeichnern](../../../odbc/reference/appendixes/using-data-type-identifiers.md)  
   
 -   [SQL-Datentypen](../../../odbc/reference/appendixes/sql-data-types.md)  
   
 -   [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md)  
   
--   [Datentypbezeichnungen und Deskriptoren](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)  
+-   [Datentypbezeichner und Deskriptoren](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)  
   
--   [Pseudo-Typ-IDs](../../../odbc/reference/appendixes/pseudo-type-identifiers.md)  
+-   [Pseudotypbezeichner](../../../odbc/reference/appendixes/pseudo-type-identifiers.md)  
   
 -   [Übertragen von Daten in ihrer binären Form](../../../odbc/reference/appendixes/transferring-data-in-its-binary-form.md)  
   
--   [Richtlinien für das Intervall und numerische Datentypen](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md)  
+-   [Richtlinien für die Datentypen „Intervall“ und „Numerisch“](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md)  
   
 -   [Einschränkungen des gregorianischen Kalenders](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)  
   
--   [Column Size, Decimal Digits, Transfer Octet Length, and Display Size (Spaltengröße, Dezimalstellen, Oktettlänge Übertragung und Anzeigegröße)](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)  
+-   [Spaltengröße, Dezimalstellen, Länge der Übertragungsoktette und Anzeigegröße](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)  
   
--   [Konvertieren von Daten von SQL in C-Datentypen](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)  
+-   [Konvertieren von Daten von SQL- zu C-Datentypen](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)  
   
--   [Konvertieren von Daten von C-in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)  
+-   [Konvertieren von Daten von C- zu SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)  
   
  Eine Erläuterung der ODBC-Datentypen finden Sie unter [Datentypen in ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md). Informationen zu treiberspezifischen SQL-Datentypen finden Sie in der Dokumentation des Treibers.

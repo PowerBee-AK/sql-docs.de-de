@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8a9a9a7296ac87f733d8626f0c425071c5d8671
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 33a74ff761e6c1be0761fcabf149564b6d5bf4be
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990231"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166939"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue-und UnderlyingValue-Eigenschaften Beispiel (VC + +)
 In diesem Beispiel werden die [OriginalValue](./originalvalue-property-ado.md) -Eigenschaft und die [UnderlyingValue](./underlyingvalue-property.md) -Eigenschaft veranschaulicht, indem eine Meldung angezeigt wird, wenn sich die zugrunde liegenden Daten eines Datensatzes während eines [recordsetupdates](./recordset-object-ado.md) geändert haben.  

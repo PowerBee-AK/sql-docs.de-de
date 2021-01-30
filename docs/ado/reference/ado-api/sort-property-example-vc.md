@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fe3fdab656afa12de49ee5858783ef97c89c24c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a9cfb5a0f09e7f990fe5dd1f4ce21478c6d34446
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989021"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166527"
 ---
 # <a name="sort-property-example-vc"></a>Sort-Eigenschaft – Beispiel (VC++)
-In diesem Beispiel wird die [Sort](./sort-property.md) -Eigenschaft des [Recordset](./recordset-object-ado.md) -Objekts verwendet, um die Zeilen eines **Recordsets** neu anzuordnen, die von der Tabelle " ***Authors*** " der **Pubs** -Datenbank abgeleitet werden. Eine sekundäre hilfsprogrammroutine druckt jede Zeile.  
+In diesem Beispiel wird die [Sort](./sort-property.md) -Eigenschaft des [Recordset](./recordset-object-ado.md) -Objekts zum Neusortieren der Zeilen eines **Recordsets** verwendet, das von der " **_Authors_*_"-Tabelle der _* Pubs** -Datenbank abgeleitet wurde. Eine sekundäre hilfsprogrammroutine druckt jede Zeile.  
   
 ```  
 // SortPropertyExample.cpp  

@@ -7,7 +7,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - RDS::IBindMgr21::Server
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad10cbb434c1fda57f684438499bf6e4b885cf9b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 373b43f3540d0dcb99349ca34d0a424bc6235f73
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724238"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166126"
 ---
 # <a name="server-property-rds"></a>Servereigenschaft (RDS)
 Gibt den Namen des Internetinformationsdienste (IIS) und das Kommunikationsprotokoll an.  
   
- Sie können die **Server** -Eigenschaft zur Entwurfszeit in den Objekt Tags des[RDS festlegen. DataControl](./datacontrol-object-rds.md) -Objekt oder zur Laufzeit im Skriptcode.  
+ Sie können die **Server** -Eigenschaft zur Entwurfszeit in den Objekt Tags des [RDS festlegen. DataControl](./datacontrol-object-rds.md) -Objekt oder zur Laufzeit im Skriptcode.  
   
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](/dotnet/framework/wcf/)migriert werden.  
@@ -108,7 +108,7 @@ DataControl.Server=""
 ```  
   
 ## <a name="parameters"></a>Parameter  
- *awebsrvr*oder *Computername*  
+ *awebsrvr* oder *Computername*  
  Ein **Zeichen** folgen Wert, der einen Internet-oder intranetpfad bzw. einen Computernamen enthält, wenn sich der Server auf einem Remote Computer befindet. oder eine leere Zeichenfolge, wenn sich der Server auf dem lokalen Computer befindet.  
   
  *port*  

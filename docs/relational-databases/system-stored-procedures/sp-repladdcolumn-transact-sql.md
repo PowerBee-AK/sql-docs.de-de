@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_repladdcolumn_TSQL
 - sp_repladdcolumn
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9f4405bd222ee097d052d18648122313d9872329
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3579b68a229bd939be61bdb233e5d429dd0ca4c7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538619"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193538"
 ---
 # <a name="sp_repladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,23 +51,23 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  Ist der Name des Tabellenartikels, der die hinzuzufügende neue Spalte enthält. *source_object* ist vom Datentyp **nvarchar (358**) und hat keinen Standardwert.  
   
  [ @column =] '*Spalte*'  
- Ist der Name der Spalte in der für die Replikation hinzuzufügenden Tabelle. *Column* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+ Ist der Name der Spalte in der für die Replikation hinzuzufügenden Tabelle. *Column* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
  [ @typetext = ] '*TypeText*'  
- Entspricht der Definition der Spalte, die hinzugefügt wird. *TypeText* ist vom Datentyp **nvarchar (3000)** und hat keinen Standardwert. Wenn z. b. die Spalte order_filled hinzugefügt wird und es sich um ein einzelnes Zeichenfeld (nicht null) handelt und den Standardwert **N**aufweist, ist order_filled der *Column* -Parameter, während die Definition der Spalte, **char (1) NOT NULL-Einschränkung constraint_name Standard ' n '** der *TypeText* -Parameterwert wäre.  
+ Entspricht der Definition der Spalte, die hinzugefügt wird. *TypeText* ist vom Datentyp **nvarchar (3000)** und hat keinen Standardwert. Wenn z. b. die Spalte order_filled hinzugefügt wird und es sich um ein einzelnes Zeichenfeld (nicht null) handelt und den Standardwert **N** aufweist, ist order_filled der *Column* -Parameter, während die Definition der Spalte, **char (1) NOT NULL-Einschränkung constraint_name Standard ' n '** der *TypeText* -Parameterwert wäre.  
   
  [ @publication_to_add =] '*publication_to_add*'  
  Ist der Name der Veröffentlichung, der die neue Spalte hinzugefügt wird. *publication_to_add* ist vom Datentyp **nvarchar (4000)** und hat den Standardwert **all**. Wenn **all**, sind alle Veröffentlichungen betroffen, die diese Tabelle enthalten. Wenn *publication_to_add* angegeben wird, wird nur dieser Veröffentlichung die neue Spalte hinzugefügt.  
   
  [ @from_agent =] *from_agent*  
- Gibt an, ob die gespeicherte Prozedur von einem Replikations-Agent ausgeführt wird. *from_agent* ist vom Datentyp **int**und hat den Standardwert **0**. der Wert **1** wird verwendet, wenn diese gespeicherte Prozedur von einem Replikations-Agent ausgeführt wird. in jedem anderen Fall sollte der Standardwert **0**verwendet werden.  
+ Gibt an, ob die gespeicherte Prozedur von einem Replikations-Agent ausgeführt wird. *from_agent* ist vom Datentyp **int** und hat den Standardwert **0**. der Wert **1** wird verwendet, wenn diese gespeicherte Prozedur von einem Replikations-Agent ausgeführt wird. in jedem anderen Fall sollte der Standardwert **0** verwendet werden.  
   
  [ @schema_change_script =] '*schema_change_script*'  
  Gibt den Namen und Pfad eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Skripts an, das zum Ändern der systemgenerierten bzw. benutzerdefinierten gespeicherten Prozeduren dient. *schema_change_script* ist vom Datentyp **nvarchar (4000)** und hat den Standardwert NULL. Mithilfe der Replikation ist es möglich, mindestens eine der bei der Transaktionsreplikation verwendeten Standardprozeduren durch benutzerdefinierte gespeicherte Prozeduren zu ersetzen. *schema_change_script* wird ausgeführt, nachdem eine Schema Änderung an einem replizierten Tabellen Artikel mithilfe sp_repladdcolumn vorgenommen wurde, und kann verwendet werden, um eine der folgenden Aktionen auszuführen:  
   
 -   Wenn benutzerdefinierte gespeicherte Prozeduren automatisch erneut generiert werden, können *schema_change_script* verwendet werden, um diese benutzerdefinierten gespeicherten Prozeduren zu löschen und durch benutzerdefinierte gespeicherte Prozeduren zu ersetzen, die das neue Schema unterstützen.  
   
--   Wenn benutzerdefinierte gespeicherte Prozeduren nicht automatisch erneut generiert werden, können *schema_change_script*zum erneuten Generieren dieser gespeicherten Prozeduren oder zum Erstellen benutzerdefinierter gespeicherter Prozeduren verwendet werden.  
+-   Wenn benutzerdefinierte gespeicherte Prozeduren nicht automatisch erneut generiert werden, können *schema_change_script* zum erneuten Generieren dieser gespeicherten Prozeduren oder zum Erstellen benutzerdefinierter gespeicherter Prozeduren verwendet werden.  
   
  [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
  Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig zu erklären. *force_invalidate_snapshot* ist ein **Bit**, der Standardwert ist **1**.  

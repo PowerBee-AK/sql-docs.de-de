@@ -1,13 +1,13 @@
 ---
 description: sys.sp_xtp_control_query_exec_stats (Transact-SQL)
-title: sys. sp_xtp_control_query_exec_stats (Transact-SQL) | Microsoft-Dokumentation
+title: sys.sp_xtp_control_query_exec_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/13/2015
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_xtp_control_query_exec_stats_TSQL
 - sys.sp_xtp_control_query_exec_stats
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 74e92f12d7003df9a4e0a23ac451d016b84fd5bc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a1047918fd6d337d863dbf43d7058d1e3571e1cb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89525355"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180212"
 ---
 # <a name="syssp_xtp_control_query_exec_stats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "89525355"
   
  Die Leistung nimmt ab, wenn Sie die Statistiksammlung aktivieren. Wenn Sie eine Problembehandlung nur für eine bzw. einige wenige systemintern kompilierte gespeicherte Prozeduren durchführen möchten, können Sie die Statistiksammlung nur für diese bestimmten systemintern kompilierten gespeicherten Prozeduren aktivieren.  
   
- Informationen zum Aktivieren der Statistik Sammlung auf der Prozedur Ebene für alle System intern kompilierten gespeicherten Prozeduren finden Sie unter [sys. sp_xtp_control_proc_exec_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
+ Informationen zum Aktivieren der Statistik Sammlung auf der Prozedur Ebene für alle nativ kompilierten gespeicherten Prozeduren finden Sie unter [sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,7 +50,7 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
  @new_collection_value wird auf NULL festgelegt, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartet wird.  
   
  @database_id = = *database_id*, @xtp_object_id = *procedure_id*  
- Die Datenbank-ID und Objekt-ID der systemintern kompilierten gespeicherten Prozedur. Wenn die Statistik Sammlung für die-Instanz aktiviert ist ([sys. sp_xtp_control_proc_exec_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)), werden Statistiken für eine System intern kompilierte gespeicherte Prozedur gesammelt. Wenn Sie die Statistiksammlung auf der Instanz deaktivieren, wird die Statistiksammlung für die einzelnen systemintern kompilierten gespeicherten Prozeduren nicht deaktiviert.  
+ Die Datenbank-ID und Objekt-ID der systemintern kompilierten gespeicherten Prozedur. Wenn die Statistik Sammlung für die Instanz aktiviert ist ([sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)), werden Statistiken für eine System intern kompilierte gespeicherte Prozedur gesammelt. Wenn Sie die Statistiksammlung auf der Instanz deaktivieren, wird die Statistiksammlung für die einzelnen systemintern kompilierten gespeicherten Prozeduren nicht deaktiviert.  
   
  Verwenden Sie [sys. Database &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md), [sys. Procedures &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md), [DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)oder [object_id &#40;Transact-SQL-&#41;](../../t-sql/functions/object-id-transact-sql.md) , um IDs für eine Datenbank und eine gespeicherte Prozedur abzurufen.  
   

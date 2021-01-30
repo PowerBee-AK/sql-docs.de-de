@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ODBC cursor library [ODBC], about cursor library
 - ODBC cursor library [ODBC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a03084df-4e48-48ef-917d-4a3fae48a605
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 325c7cdc5d2fb185ef3dbd2500a20230d90193bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 44fcba1e4c4b2b7f82c99c82399884d7c9bdad85
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88411426"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212524"
 ---
 # <a name="appendix-f-odbc-cursor-library"></a>Anhang F: ODBC-Cursorbibliothek
 > [!IMPORTANT]  
@@ -33,18 +33,18 @@ ms.locfileid: "88411426"
   
  Die Cursor Bibliothek wird als Treiber für den Treiber-Manager angezeigt. Wenn sich die Cursor Bibliothek zwischen dem Treiber-Manager und einem ODBC *2. x* -Treiber befindet, wird die Cursor Bibliothek als ODBC *2. x* -Treiber angezeigt. Wenn sich die Cursor Bibliothek zwischen dem Treiber-Manager und einem ODBC *3. x* -Treiber befindet, wird die Cursor Bibliothek als ODBC *3. x* -Treiber angezeigt. Welches Verhalten von der Cursor Bibliothek angezeigt wird, hängt von der Version des Treibers ab, mit der er arbeitet, mit Ausnahme von Bindungs Offsets, die sowohl für ODBC *2. x* -als auch für ODBC *3. x* -Treiber unterstützt wird.  
   
- Zum Implementieren von Blockcursorn in **SQLFetch** und **SQLFetchScroll**Ruft die Cursor Bibliothek wiederholt **SQLFetch** im Treiber auf. Zum Implementieren von Bildlauf werden die Daten, die Sie im Arbeitsspeicher und in den Datenträger Dateien abgerufen haben, zwischengespeichert Wenn eine Anwendung ein neues Rowset anfordert, ruft die Cursor Bibliothek Sie nach Bedarf vom Treiber oder Cache ab.  
+ Zum Implementieren von Blockcursorn in **SQLFetch** und **SQLFetchScroll** Ruft die Cursor Bibliothek wiederholt **SQLFetch** im Treiber auf. Zum Implementieren von Bildlauf werden die Daten, die Sie im Arbeitsspeicher und in den Datenträger Dateien abgerufen haben, zwischengespeichert Wenn eine Anwendung ein neues Rowset anfordert, ruft die Cursor Bibliothek Sie nach Bedarf vom Treiber oder Cache ab.  
   
  Um positionierte UPDATE-und DELETE-Anweisungen zu implementieren, erstellt die Cursor Bibliothek eine **Update** -oder **Delete** -Anweisung mit einer **Where** -Klausel, die den zwischengespeicherten Wert der einzelnen gebundenen Spalten in der Zeile angibt. Wenn eine positionierte UPDATE-Anweisung ausgeführt wird, aktualisiert die Cursor Bibliothek Ihren Cache von den Werten in den rowsetpuffern.  
   
  Weitere Informationen zur ODBC-Cursor Bibliothek finden Sie in den folgenden Abschnitten dieses Anhangs:  
   
--   [Using the ODBC Cursor Library (Verwenden der ODBC-Cursorbibliothek)](../../../odbc/reference/appendixes/using-the-odbc-cursor-library.md)  
+-   [Verwenden der ODBC-Cursorbibliothek](../../../odbc/reference/appendixes/using-the-odbc-cursor-library.md)  
   
--   [Executing Positioned Update and Delete Statements (Ausführen einer positionierten Aktualisierung und von DELETE-Anweisungen)](../../../odbc/reference/appendixes/executing-positioned-update-and-delete-statements.md)  
+-   [Ausführen einer positionierten Aktualisierung und von DELETE-Anweisungen](../../../odbc/reference/appendixes/executing-positioned-update-and-delete-statements.md)  
   
--   [Cursor-Bibliothek-Codebeispiel](../../../odbc/reference/appendixes/cursor-library-code-example.md)  
+-   [Codebeispiel für Cursorbibliothek](../../../odbc/reference/appendixes/cursor-library-code-example.md)  
   
 -   [Hinweise zur Implementierung](../../../odbc/reference/appendixes/implementation-notes.md)  
   
--   [ODBC Cursor Library Error Codes (ODBC-Cursorbibliothek – Fehlercodes)](../../../odbc/reference/appendixes/odbc-cursor-library-error-codes.md)
+-   [ODBC-Cursorbibliothek – Fehlercodes](../../../odbc/reference/appendixes/odbc-cursor-library-error-codes.md)

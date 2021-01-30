@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLBindParameter
 apilocation:
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 44b8b59722b790685b7fad47300039913d7294ae
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: d173d3cc38a0f07532f6b9d8a225d9bbf44a6a28
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170152"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181083"
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter-Funktion
 
@@ -100,7 +100,7 @@ SQLRETURN SQLBindParameter(
 
  Wenn **SQLBindParameter** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_STMT und einem *handle* von *StatementHandle* abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die normalerweise von **SQLBindParameter** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
 
-|SQLSTATE|Fehler|Beschreibung|  
+|SQLSTATE|Fehler|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |07006|Verletzung des Attributs für eingeschränkte Datentypen|Der vom *ValueType* -Argument identifizierte Datentyp kann nicht in den Datentyp konvertiert werden, der durch das *Parameter Type* -Argument identifiziert wird. Beachten Sie, dass dieser Fehler von **SQLExecDirect**, **SQLExecute** oder **SQLPutData** zur Ausführungszeit anstelle von **SQLBindParameter** zurückgegeben werden kann.|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_fts_index_keywords_by_document_TSQL
 - dm_fts_index_keywords_by_document_TSQL
@@ -23,12 +23,12 @@ ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 353fcb321549546ff1b44956d5ebc20826e6c0e3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c11b68f45ef5f42cb4e46fdfb7c2c975df5483c5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484702"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193800"
 ---
 # <a name="sysdm_fts_index_keywords_by_document-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -64,7 +64,7 @@ sys.dm_fts_index_keywords_by_document
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Column|Datentyp|Beschreibung|  
+|Column|Datentyp|BESCHREIBUNG|  
 |------------|---------------|-----------------|  
 |Schlüsselwort (keyword)|**nvarchar(4000)**|Die hexadezimale Darstellung des Schlüsselworts, das im Volltextindex gespeichert ist.<br /><br /> Hinweis: OxFF stellt das Sonderzeichen dar, das das Ende einer Datei oder eines Datasets angibt.|  
 |display_term|**nvarchar(4000)**|Die Klartextform des Schlüsselworts. Dieses Format wird vom internen Format abgeleitet, das im Volltextindex gespeichert ist.<br /><br /> Hinweis: OxFF stellt das Sonderzeichen dar, das das Ende einer Datei oder eines Datasets angibt.|  
@@ -72,7 +72,7 @@ sys.dm_fts_index_keywords_by_document
 |document_id|**int**|Die ID des Dokuments bzw. der Zeile für die Volltextindizierung des aktuellen Ausdrucks. Diese ID entspricht dem Volltextschlüsselwert dieses Dokuments bzw. dieser Zeile.|  
 |occurrence_count|**int**|Anzahl der Vorkommen des aktuellen Schlüssel Worts in dem Dokument oder der Zeile, das durch **document_id** angegeben wird. Wenn "*search_property_name*" angegeben wird, zeigt occurrence_count nur die Anzahl der Vorkommen des aktuellen Schlüssel Worts in der angegebenen Such Eigenschaft innerhalb des Dokuments oder der Zeile an.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die von sys.dm_fts_index_keywords_by_document zurückgegebenen Informationen dienen u. a. zum Abrufen der folgenden Ergebnisse:  
   
 -   Die Gesamtzahl der Schlüsselwörter in einem Volltextindex  
