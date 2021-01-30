@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_notify_operator_TSQL
 - sp_notify_operator
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 946a2adf54435499ae72d12ed10e984892295533
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 954a314760a22d9b00996dc460062fcc75af16aa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541627"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191997"
 ---
 # <a name="sp_notify_operator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_notify_operator
 ## <a name="arguments"></a>Argumente  
 `[ @profile_name = ] 'profilename'` Der Name des Datenbank-E-Mail Profils, das zum Senden der Nachricht verwendet werden soll. Profile Name ist vom *Datentyp* **nvarchar (128)**. Wenn Profile Name nicht *angegeben wird,* wird das Standard Datenbank-E-Mail Profil verwendet.  
   
-`[ @id = ] id` Der Bezeichner für den Operator, an den die Nachricht gesendet werden soll. *ID* ist vom Datentyp **int**und hat den Standardwert NULL. Eine *ID* oder ein *Name* muss angegeben werden.  
+`[ @id = ] id` Der Bezeichner für den Operator, an den die Nachricht gesendet werden soll. *ID* ist vom Datentyp **int** und hat den Standardwert NULL. Eine *ID* oder ein *Name* muss angegeben werden.  
   
 `[ @name = ] 'name'` Der Name des Operators, an den die Nachricht gesendet werden soll. *Name ist vom Datentyp* **nvarchar (128)** und hat den Standardwert NULL. Eine *ID* oder ein *Name* muss angegeben werden.  
   
@@ -67,13 +67,13 @@ sp_notify_operator
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Sendet die Nachricht an die angegebene E-Mail-Adresse des angegebenen Operators. Falls für den Operator keine E-Mail-Adresse konfiguriert ist, wird ein Fehler zurückgegeben.  
   
  Die Datenbank-E-Mail und eine Mailhostdatenbank müssen konfiguriert werden, bevor eine Benachrichtigung an einen Operator gesendet werden kann.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
+ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
   
 -   **SQLAgentUserRole**  
   
@@ -98,7 +98,7 @@ EXEC dbo.sp_notify_operator
 GO  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
  [SQL Server-Agent gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_operator &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   

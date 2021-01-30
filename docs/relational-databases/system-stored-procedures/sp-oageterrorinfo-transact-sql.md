@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_OAGetErrorInfo_TSQL
 - sp_OAGetErrorInfo
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89bb7dff2131d8463e26754148aa6e8032503fd7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d55126c7feb362b910e83034a66e4d691f1be84c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546011"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191976"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,13 +48,13 @@ sp_OAGetErrorInfo [ objecttoken ]
  Ist entweder das Objekt Token eines OLE-Objekts, das zuvor mit **sp_OACreate** erstellt wurde oder NULL ist. Wenn *objecttoken* angegeben wird, werden Fehlerinformationen für dieses Objekt zurückgegeben. Wird NULL angegeben, werden die Fehlerinformationen für den gesamten Batch zurückgegeben.  
   
  _Quell_ **Ausgabe**  
- Die Quelle der Fehlerinformation. Wenn angegeben, muss es sich um eine lokale Variable vom Typ **char**, **NCHAR**, **varchar**oder **nvarchar** handeln. Der Rückgabewert wird bei Bedarf entsprechend der Länge der lokalen Variablen abgeschnitten.  
+ Die Quelle der Fehlerinformation. Wenn angegeben, muss es sich um eine lokale Variable vom Typ **char**, **NCHAR**, **varchar** oder **nvarchar** handeln. Der Rückgabewert wird bei Bedarf entsprechend der Länge der lokalen Variablen abgeschnitten.  
   
- _description_ **Ausgabe** der Beschreibung  
- Die Beschreibung des Fehlers. Wenn angegeben, muss es sich um eine lokale Variable vom Typ **char**, **NCHAR**, **varchar**oder **nvarchar** handeln. Der Rückgabewert wird bei Bedarf entsprechend der Länge der lokalen Variablen abgeschnitten.  
+  **Ausgabe** der Beschreibung  
+ Die Beschreibung des Fehlers. Wenn angegeben, muss es sich um eine lokale Variable vom Typ **char**, **NCHAR**, **varchar** oder **nvarchar** handeln. Der Rückgabewert wird bei Bedarf entsprechend der Länge der lokalen Variablen abgeschnitten.  
   
  _HelpFile_ - **Ausgabe**  
- Die Hilfedatei des OLE-Objekts. Wenn angegeben, muss es sich um eine lokale Variable vom Typ **char**, **NCHAR**, **varchar**oder **nvarchar** handeln. Der Rückgabewert wird bei Bedarf entsprechend der Länge der lokalen Variablen abgeschnitten.  
+ Die Hilfedatei des OLE-Objekts. Wenn angegeben, muss es sich um eine lokale Variable vom Typ **char**, **NCHAR**, **varchar** oder **nvarchar** handeln. Der Rückgabewert wird bei Bedarf entsprechend der Länge der lokalen Variablen abgeschnitten.  
   
  _HelpID_ - **Ausgabe**  
  Die Kontext-ID für die Hilfedatei. Wenn angegeben, muss es sich um eine lokale **int** -Variable handeln.  
@@ -78,7 +78,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**HelpFile**|**nvarchar (NN)**|Hilfedatei für die Quelle|  
 |**HelpID**|**int**|Hilfekontext-ID in der Hilfequelldatei|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Jeder-Aufrufsatz einer gespeicherten OLE-Automatisierungs Prozedur (außer **sp_OAGetErrorInfo**) setzt die Fehlerinformationen zurück. aus diesem Grund werden von **sp_OAGetErrorInfo** nur Fehlerinformationen für den letzten gespeicherten Prozedur Aufrufs der OLE-Automatisierung abgerufen. Beachten Sie, dass **sp_OAGetErrorInfo** die Fehlerinformationen nicht zurücksetzt, dass Sie mehrmals aufgerufen werden kann, um dieselben Fehlerinformationen zu erhalten.  
   
  In der folgenden Tabelle werden OLE-Automatisierungsfehler und deren übliche Ursachen aufgelistet.  
@@ -87,7 +87,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |-----------------------|------------------|  
 |**Falscher Variablentyp (0x80020008)**|Der Datentyp eines [!INCLUDE[tsql](../../includes/tsql-md.md)] als Methoden Parameter übergebenen Werts entsprach nicht dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Datentyp des Methoden Parameters, oder ein NULL-Wert wurde als Methoden Parameter übergeben.|  
 |**Unbekannter Name (0x8002006)**|Der angegebene Eigenschafts- oder Methodenname für das angegebene Objekt wurde nicht gefunden.|  
-|**Ungültige Klassenzeichenfolge (0x800401f3)**|Die angegebene ProgID oder CLSID wurde in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht als OLE-Objekt registriert. Benutzerdefinierte OLE-Automatisierungsserver müssen registriert werden, bevor Sie mit **sp_OACreate**instanziiert werden können. Hierzu können Sie das Regsvr32.exe-Hilfsprogramm für Prozess interne (dll-) Server oder den Befehls Zeilenschalter **/RegServer** für lokale (. exe-) Server verwenden.|  
+|**Ungültige Klassenzeichenfolge (0x800401f3)**|Die angegebene ProgID oder CLSID wurde in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht als OLE-Objekt registriert. Benutzerdefinierte OLE-Automatisierungsserver müssen registriert werden, bevor Sie mit **sp_OACreate** instanziiert werden können. Hierzu können Sie das Regsvr32.exe-Hilfsprogramm für Prozess interne (dll-) Server oder den Befehls Zeilenschalter **/RegServer** für lokale (. exe-) Server verwenden.|  
 |**Starten des Servers fehlgeschlagen (0x80080005)**|Das angegebene OLE-Objekt ist als lokaler OLE-Server (EXE-Datei) registriert, aber die EXE-Datei konnte nicht gefunden oder nicht ausgeführt werden.|  
 |**Das angegebene Modul wurde nicht gefunden (0x8007007e)**|Das angegebene OLE-Objekt ist als In-Process-OLE-Server (DLL-Datei) registriert, aber die DLL-Datei konnte nicht gefunden oder nicht geladen werden.|  
 |**Typenkonflikt (0x80020005)**|Der Datentyp einer lokalen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Variablen, die zum Speichern eines zurückgegebenen Eigenschaftswertes oder eines Rückgabewertes einer Methode verwendet wird, entspricht nicht dem [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Datentyp des Rückgabewertes der Eigenschaft oder Methode. Oder der Rückgabewert einer Eigenschaft oder einer Methode wurde angefordert, gibt jedoch keinen Wert zurück.|  

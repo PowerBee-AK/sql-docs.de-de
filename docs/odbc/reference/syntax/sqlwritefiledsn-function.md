@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLWriteFileDSN
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4bd63c368f4055821df41faceb7b9c33cf20bde3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f778c2669a55e3f63c1946d2b4323ae64242c533
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421004"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191663"
 ---
 # <a name="sqlwritefiledsn-function"></a>SQLWriteFileDSN-Funktion
 **Konformitäts**  
@@ -39,10 +39,10 @@ ms.locfileid: "88421004"
 ```cpp  
   
 BOOL SQLWriteFileDSN(  
-     LPCSTR     lpszFileName,  
-     LPCSTR     lpszAppName,  
-     LPCSTR     lpszKeyName,  
-     LPCSTR     lpszString);  
+     LPCSTR     lpszFileName,  
+     LPCSTR     lpszAppName,  
+     LPCSTR     lpszKeyName,  
+     LPCSTR     lpszString);  
 ```  
   
 ## <a name="arguments"></a>Argumente  
@@ -58,20 +58,20 @@ BOOL SQLWriteFileDSN(
  *lpszstring*  
  Ausgeben Verweist auf die Zeichenfolge, die dem zu schreibenden Schlüssel zugeordnet ist. Die maximale Länge der Zeichenfolge, auf die durch dieses Argument verwiesen wird, beträgt 32.767 bytes.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  Die Funktion gibt true zurück, wenn Sie erfolgreich ist, andernfalls false.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **sqlwrite tefiledsn** false zurückgibt, kann ein zugeordneter " * \* pferrorcode* "-Wert durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die " * \* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **sqlwrite tefiledsn** false zurückgibt, kann ein zugeordneter " *\* pferrorcode* "-Wert durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die " *\* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|Beschreibung|  
+|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
 |ODBC_ERROR_INVALID_PATH|Ungültiger Installationspfad.|Der im *lpszfilename* -Argument angegebene Dateiname ist ungültig.|  
 |ODBC_ERROR_INVALID_REQUEST_TYPE|Ungültiger Typ der Anforderung.|Das Argument " *lpszappname*", " *lpszkeyname*" oder " *lpszstring* " war NULL.|  
   
 ## <a name="comments"></a>Kommentare  
- ODBC reserviert den Abschnittsnamen [ODBC], in dem die Verbindungsinformationen gespeichert werden sollen. Die reservierten Schlüsselwörter für diesen Abschnitt sind identisch mit denen, die für eine Verbindungs Zeichenfolge in **SQLDriverConnect**reserviert sind. (Weitere Informationen finden Sie in der Beschreibung der [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) -Funktion.)  
+ ODBC reserviert den Abschnittsnamen [ODBC], in dem die Verbindungsinformationen gespeichert werden sollen. Die reservierten Schlüsselwörter für diesen Abschnitt sind identisch mit denen, die für eine Verbindungs Zeichenfolge in **SQLDriverConnect** reserviert sind. (Weitere Informationen finden Sie in der Beschreibung der [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) -Funktion.)  
   
  Anwendungen können diese reservierten Schlüsselwörter verwenden, um Informationen direkt in einen Datei-DSN zu schreiben. Wenn eine Anwendung die DSN-Less-Verbindungs Zeichenfolge erstellen oder ändern möchte, die einem Datei-DSN zugeordnet ist, kann Sie **sqlwrite tefiledsn** für beliebige Schlüsselwörter der reservierten Verbindungs Zeichenfolge im Abschnitt [ODBC] aufzurufen.  
   

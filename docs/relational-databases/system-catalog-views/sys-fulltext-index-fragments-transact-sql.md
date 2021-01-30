@@ -6,7 +6,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fulltext_index_fragments
 - sys.fulltext_index_fragments_TSQL
@@ -24,12 +24,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e0f1882c6840048e3308120e6b8768897b43d6b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: dbbf060be4706d17ed4bf4d9f5a25f121115d6b0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475181"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191483"
 ---
 # <a name="sysfulltext_index_fragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "97475181"
   Ein Volltextindex verwendet interne Tabellen, die als *Volltextindex Fragmente* bezeichnet werden, um die umgekehrten Indexdaten zu speichern. Diese Sicht kann verwendet werden, um die Metadaten zu diesen Fragmenten abzufragen. Diese Sicht enthält eine Zeile für jedes Volltextindexfragment in jeder Tabelle, die einen Volltextindex enthält.  
  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |table_id|**int**|Objekt-ID der Tabelle, die das Volltextindexfragment enthält.|  
 |fragment_object_id|**int**|Objekt-ID der dem Objekt zugeordneten internen Tabelle.|  
@@ -47,7 +47,7 @@ ms.locfileid: "97475181"
 |row_count|**int**|Anzahl der einzelnen Zeilen im Fragment.|  
 |status|**int**|Status des Fragments, entweder:<br /><br /> 0 = Neu erstellt und noch nicht verwendet<br /><br /> 1 = Während Volltextindexauffüllung oder Zusammenführungen zur Einfügung verwendet<br /><br /> 4 = Beendet. Bereit für Abfrage<br /><br /> 6 = Für Eingabe für Zusammenführung verwendet und bereit für Abfrage<br /><br /> 8 = Zum Löschen markiert. Wird nicht für Abfrage undQuelle der Zusammenführung verwendet.<br /><br /> Der Status 4 oder 6 bedeutet, dass das Fragment Teil des logischen voll Text Indexes ist und abgefragt werden kann. Das heißt, dass es sich *um ein* abfragbares Fragment handelt.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Katalogsicht sys.fulltext_index_fragments kann verwendet werden, um die Anzahl der Fragmente abzufragen, die ein Volltextindex umfasst. Wenn die Volltextabfrage nur langsam ausgeführt wird, können Sie mit fulltext_index_fragments die Anzahl der abfragbaren Fragmente (Status = 4 oder 6) im Volltextindex wie folgt abfragen:  
   
 ```  

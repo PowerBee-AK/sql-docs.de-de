@@ -6,7 +6,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.fulltext_languages
 - sys.fulltext_languages_TSQL
@@ -22,19 +22,19 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e8c29c32323c2c75e573e8e76851e4026a6e815
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 47032ad75fb96842f278533e184307b99017c798
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464691"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191499"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Diese Katalogsicht enthält eine Zeile pro Sprache, deren Wörtertrennungen bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden. Jede Zeile zeigt die LCID und den Namen der Sprache an. Wenn Wörter Trennungen für eine Sprache registriert sind, werden die anderen linguistischen Ressourcen Wort Stamm Erkennungen, Füll Wörter (Stoppwörter) und Thesaurusdateien für Volltextindizierungs-und-Abfrage Vorgänge verfügbar. Der Wert von **Name** oder **LCID** kann in den voll Text Abfragen und Volltextindex-Anweisungen angegeben werden [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
    
-|Column|Datentyp|Beschreibung|  
+|Column|Datentyp|BESCHREIBUNG|  
 |------------|---------------|-----------------|  
 |**lcid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschemabezeichner (Locale Identifier, LCID) für die Sprache.|  
 |**name**|**sysname**|Ist entweder der Wert des Alias in [sys.sysSprachen](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) , der dem Wert von **LCID** entspricht, oder die Zeichen folgen Darstellung der numerischen LCID.|  
@@ -98,7 +98,7 @@ ms.locfileid: "97464691"
 |Urdu|1056|  
 |Vietnamesisch|1066|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Um die Liste der bei der Volltextsuche registrierten Sprachen zu aktualisieren, verwenden Sie [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)"**update_languages**".  
   
 ## <a name="permissions"></a>Berechtigungen  
