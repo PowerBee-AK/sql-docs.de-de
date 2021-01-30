@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac6f8388e3f07bf93e00f1d24aa3a782237ca0e5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5c66c4bdd347aaa8d01ab80d3a11ae67ce683b47
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991581"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075862"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>Aufrufen einer gespeicherten Prozedur mit einem Befehl
 Sie können einen Befehl verwenden, um eine gespeicherte Prozedur aufzurufen. Das Codebeispiel am Ende dieses Themas bezieht sich auf eine gespeicherte Prozedur in der Northwind-Beispieldatenbank mit dem Namen CustOrdersOrders, die wie folgt definiert ist.  
@@ -35,7 +35,7 @@ ORDER BY OrderID
   
  Weitere Informationen zum Definieren und Abrufen gespeicherter Prozeduren finden Sie in der SQL Server-Dokumentation.  
   
- Diese gespeicherte Prozedur ähnelt dem Befehl, der in [Befehls Objekt Parametern](./command-object-parameters.md)verwendet wird. Er übernimmt einen Kunden-ID-Parameter und gibt Informationen zu den Aufträgen dieses Kunden zurück. Im folgenden Codebeispiel wird diese gespeicherte Prozedur als Quelle für ein ADO- **Recordset**verwendet.  
+ Diese gespeicherte Prozedur ähnelt dem Befehl, der in [Befehls Objekt Parametern](./command-object-parameters.md)verwendet wird. Er übernimmt einen Kunden-ID-Parameter und gibt Informationen zu den Aufträgen dieses Kunden zurück. Im folgenden Codebeispiel wird diese gespeicherte Prozedur als Quelle für ein ADO- **Recordset** verwendet.  
   
  Mithilfe der gespeicherten Prozedur können Sie auf eine andere Funktion von ADO zugreifen: die **Aktualisierungs** Methode für die **Parameter** Auflistung. Mit dieser Methode kann ADO automatisch alle Informationen zu den Parametern ausfüllen, die für den Befehl zur Laufzeit erforderlich sind. Bei der Verwendung dieses Verfahrens gibt es eine Leistungs Einbuße, da ADO die Datenquelle nach den Informationen zu den Parametern Abfragen muss.  
   
@@ -134,4 +134,4 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Knowledge Base-Artikel 117500](https://go.microsoft.com/fwlink/?LinkId=117500)
+ [Knowledge Base-Artikel 117500](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/185125)
