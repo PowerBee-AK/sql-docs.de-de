@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helplogins_TSQL
 - sp_helplogins
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9802a6087bd3747c8fe715d56482b54149ee55d8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b58e74a30ddd86fc2edbfc8db553ddf9449181db
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549630"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183120"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @LoginNamePattern = ] 'login'` Ein Anmelde Name. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. *login* muss vorhanden sein, wenn angegeben. Falls *login* nicht angegeben wird, werden Informationen zu allen Anmeldenamen zurückgegeben.  
+`[ @LoginNamePattern = ] 'login'` Ein Anmelde Name. *login* ist vom Datentyp **sysname** und hat den Standardwert NULL. *login* muss vorhanden sein, wenn angegeben. Falls *login* nicht angegeben wird, werden Informationen zu allen Anmeldenamen zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -53,7 +53,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |**LoginName**|**sysname**|Benutzername|  
 |**SID**|**varbinary(85)**|Sicherheits-ID (SID) für den Anmeldenamen.|  
 |**DefDBName**|**sysname**|Standarddatenbank, die **LoginName** beim Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet.|  
-|**DefLangName**|**sysname**|Von **LoginName**verwendete Standardsprache.|  
+|**DefLangName**|**sysname**|Von **LoginName** verwendete Standardsprache.|  
 |**Auser**|**char (5)**|Yes = **LoginName** ist ein Benutzername in einer Datenbank zugeordnet.<br /><br /> No = **LoginName** ist kein Benutzername zugeordnet.|  
 |**ARemote**|**char (7)**|Yes = **LoginName** ist ein Remoteanmeldename zugeordnet.<br /><br /> No = **LoginName** ist kein Anmeldename zugeordnet.|  
   
@@ -63,10 +63,10 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Benutzername|  
 |**DBName**|**sysname**|Standarddatenbank, die **LoginName** beim Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet.|  
-|**UserName**|**sysname**|Benutzerkonto, dem **LoginName** in **DBName**zugeordnet ist, und die Rollen, denen **LoginName** in **DBName**angehört.|  
+|**UserName**|**sysname**|Benutzerkonto, dem **LoginName** in **DBName** zugeordnet ist, und die Rollen, denen **LoginName** in **DBName** angehört.|  
 |**UserOrAlias**|**char (8)**|MemberOf = **UserName** ist eine Rolle.<br /><br /> User = **UserName** ist ein Benutzerkonto.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Bestimmen Sie mithilfe von **sp_helplogins** die Benutzerkonten, die dem Anmeldenamen zugeordnet sind, bevor Sie Anmeldenamen entfernen.  
   
 ## <a name="permissions"></a>Berechtigungen  

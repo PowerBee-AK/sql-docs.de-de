@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_update_policy_category_subscription_TSQL
 - sp_syspolicy_update_policy_category_subscription
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 78f2b47d687c695c50710d045e99494ac61598b8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 493da853bc06eb1c56986a99a0b2a2aac9c2e5c1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492981"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174400"
 ---
 # <a name="sp_syspolicy_update_policy_category_subscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +43,15 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @policy_category_subscription_id = ] policy_category_subscription_id` Ist der Bezeichner für das Richtlinienkategorieabonnement, das Sie aktualisieren möchten. *policy_category_subscription_id* ist vom Datentyp **int**und ist erforderlich.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` Ist der Bezeichner für das Richtlinienkategorieabonnement, das Sie aktualisieren möchten. *policy_category_subscription_id* ist vom Datentyp **int** und ist erforderlich.  
   
-`[ @target_type = ] 'target_type'` Der Zieltyp des Kategorieabonnements. *target_type* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @target_type = ] 'target_type'` Der Zieltyp des Kategorieabonnements. *target_type* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
- Wenn Sie *target_type*angeben, muss der Wert auf "Database" festgelegt werden.  
+ Wenn Sie *target_type* angeben, muss der Wert auf "Database" festgelegt werden.  
   
-`[ @target_object = ] 'target_object'` Der Name der Datenbank, die die Richtlinien Kategorie abonniert. *target_object* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @target_object = ] 'target_object'` Der Name der Datenbank, die die Richtlinien Kategorie abonniert. *target_object* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @policy_category = ] 'policy_category'` Der Name der Richtlinien Kategorie, die von der Datenbank abonniert werden soll. *policy_category* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @policy_category = ] 'policy_category'` Der Name der Richtlinien Kategorie, die von der Datenbank abonniert werden soll. *policy_category* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -59,7 +59,7 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ## <a name="remarks"></a>Bemerkungen  
  Sie müssen sp_syspolicy_update_policy_category_subscription im Kontext der Systemdatenbank msdb ausführen.  
   
- Zum Abrufen von Werten für *policy_category_subscription_id* und *policy_category*können Sie die folgende Abfrage verwenden:  
+ Zum Abrufen von Werten für *policy_category_subscription_id* und *policy_category* können Sie die folgende Abfrage verwenden:  
   
 ```  
 SELECT a.policy_category_subscription_id, a.target_type, a.target_object  

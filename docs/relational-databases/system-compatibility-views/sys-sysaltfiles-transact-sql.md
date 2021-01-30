@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sysaltfiles_TSQL
 - sys.sysaltfiles
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 698dec23-5336-4108-87a5-f8e407f8da09
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: f6139fb221ab1d960d8cfb455e592ac16fbcee09
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 1482980471675563417943366eef233396f6f902
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097799"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180735"
 ---
 # <a name="syssysaltfiles-transact-sql"></a>sys.sysaltfiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "98097799"
 |**wachsen**|**int**|Zuwachsgröße für die Datenbank.<br /><br /> 0 = Keine Vergrößerung. Kann je nach dem Wert von status entweder die Seitenanzahl oder der Prozentsatz der Dateigröße sein. Falls **status** 0x100000 ist, entspricht **growth** dem Prozentsatz der Dateigröße. Andernfalls handelt es sich um die Anzahl von Seiten.|  
 |**status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Leistungs**|**int**|Reserviert.|  
-|**dbid**|**smallint**|Datenbank-ID der Datenbank, zu der diese Datei gehört.|  
+|**DBID**|**smallint**|Datenbank-ID der Datenbank, zu der diese Datei gehört.|  
 |**name**|**sysname**|Logischer Name der Datei.|  
 |**filename**|**nvarchar(260)**|Name des physischen Geräts. Der Name schließt den vollständigen Pfad der Datei ein.|  
   

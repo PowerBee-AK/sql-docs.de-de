@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLAllocEnv
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 00bac0c1-346b-4e48-901a-06ba4557b944
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9929677402ec11b164a6bee165ea5ac37e77c5e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b787a922fcb0b34e546d494d69ec44d87a28fa34
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487303"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174581"
 ---
 # <a name="sqlallocenv-function"></a>SQLAllocEnv-Funktion
 **Konformitäts**  
@@ -37,6 +37,6 @@ ms.locfileid: "88487303"
 > [!NOTE]  
 >  Weitere Informationen dazu, wie der Treiber-Manager diese Funktion bei ODBC 2 zuordnet. die *x* -Anwendung arbeitet mit ODBC 3. zum *x* -Treiber finden Sie unter [Mapping Deprecated Functions](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Driver Guidelines for abwärts Compatibility.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

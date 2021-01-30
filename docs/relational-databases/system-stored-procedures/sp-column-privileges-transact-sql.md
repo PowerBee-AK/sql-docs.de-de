@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_column_privileges_TSQL
 - sp_column_privileges
@@ -19,12 +19,12 @@ ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 279789c40dbc79dd3d7b2d421d757a936b0e6126
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: db99cb2e9acb8ede62a066291cce68d209e495c3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482401"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174527"
 ---
 # <a name="sp_column_privileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +61,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
 ## <a name="result-sets"></a>Resultsets  
  sp_column_privileges entspricht SQLColumnPrivileges in ODBC. Die zurückgegebenen Ergebnisse sind nach den Spalten TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME, COLUMN_NAME und PRIVILEGE sortiert.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |TABLE_QUALIFIER|**sysname**|Tabellen qualifizierername. Dieses Feld kann den Wert NULL annehmen.|  
 |TABLE_OWNER|**sysname**|Der Name des Tabellen Besitzers. Dieses Feld gibt immer einen Wert zurück.|  
@@ -72,7 +72,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
 |PRIVILEGE|**varchar (** 32 **)**|Eine der verfügbaren Spaltenberechtigungen. Spaltenberechtigungen können folgende Werte annehmen (oder auch andere Werte, die von der Datenquelle bei der Definition der Implementierung unterstützt werden):<br /><br /> SELECT = der Berechtigte (GRANTEE) kann Daten für die Spalten abrufen.<br /><br /> INSERT = der Berechtigte (GRANTEE) kann Daten für diese Spalten bereitstellen, wenn neue Zeilen (von diesem GRANTEE) in die Tabelle eingefügt werden.<br /><br /> UPDATE = der Berechtigte (GRANTEE) kann vorhandene Daten in der Spalte ändern.<br /><br /> REFERENCES = der Berechtigte (GRANTEE) kann bei einer Primär-/Fremdschlüssel-Beziehung auf eine Spalte in einer Fremdschlüsseltabelle verweisen. Primär-/Fremdschlüssel-Beziehungen werden mithilfe von Tabelleneinschränkungen definiert.|  
 |IS_GRANTABLE|**varchar (** 3 **)**|Zeigt an, ob der Berechtigte (GRANTEE) anderen Benutzern Berechtigungen erteilen darf (bekannt als "Berechtigung mit Recht zum Erteilen"). Dieses Feld kann die Werte YES, NO oder NULL annehmen. Ein unbekannter Wert (oder NULL-Wert) verweist auf eine Datenquelle, für die die "Berechtigung mit Recht zum Erteilen" nicht zutreffend ist.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Berechtigungen mit der GRANT-Anweisung erteilt und mit der REVOKE-Anweisung aufgehoben.  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_OAMethod
 - sp_OAMethod_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7442e3af4bf0233e51f32d7c8e6f034d69598046
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: da84a59353baffa92ac0fa30e55bfa4b248379f7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526847"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182413"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_OAMethod objecttoken , methodname
   
 ## <a name="arguments"></a>Argumente  
  *objecttoken*  
- Das Objekttoken eines zuvor mit **sp_OACreate**erstellten OLE-Objekts.  
+ Das Objekttoken eines zuvor mit **sp_OACreate** erstellten OLE-Objekts.  
   
  *MethodName*  
  Der Name der Methode des OLE-Objekts, das aufgerufen wird.  
@@ -51,9 +51,9 @@ sp_OAMethod objecttoken , methodname
  _ReturnValue_-**Ausgabe**    
  Der Rückgabewert der Methode des OLE-Objekts. Wenn angegeben, muss es sich um eine lokale Variable vom entsprechenden Datentyp handeln.  
   
- Wenn die Methode einen einzelnen Wert zurückgibt, geben Sie entweder eine lokale Variable für *ReturnValue*an, die den Rückgabewert der Methode in der lokalen Variablen zurückgibt, oder geben Sie keinen *ReturnValue*-Wert an, der den Methodenrückgabewert an den Client als einspaltige einzeilige Resultset zurückgibt.  
+ Wenn die Methode einen einzelnen Wert zurückgibt, geben Sie entweder eine lokale Variable für *ReturnValue* an, die den Rückgabewert der Methode in der lokalen Variablen zurückgibt, oder geben Sie keinen *ReturnValue*-Wert an, der den Methodenrückgabewert an den Client als einspaltige einzeilige Resultset zurückgibt.  
   
- Wenn der Rückgabewert der Methode ein OLE-Objekt ist, muss *ReturnValue* eine lokale Variable vom Datentyp **int**sein. Ein Objekt Token wird in der lokalen Variablen gespeichert, und dieses Objekt Token kann mit anderen gespeicherten Prozeduren der OLE-Automatisierung verwendet werden.  
+ Wenn der Rückgabewert der Methode ein OLE-Objekt ist, muss *ReturnValue* eine lokale Variable vom Datentyp **int** sein. Ein Objekt Token wird in der lokalen Variablen gespeichert, und dieses Objekt Token kann mit anderen gespeicherten Prozeduren der OLE-Automatisierung verwendet werden.  
   
  Wenn der Rückgabewert der Methode ein Array ist, wird bei Angabe von *ReturnValue* der Wert auf NULL festgelegt.  
   
@@ -69,13 +69,13 @@ sp_OAMethod objecttoken , methodname
   
  Zum Abrufen des Rückgabewerts eines Ausgabe Parameters muss der *Parameter* eine lokale Variable des entsprechenden Datentyps sein, und die **Ausgabe** muss angegeben werden. Wenn ein konstanter Parameter angegeben wird oder wenn **Output** nicht angegeben wird, wird jeder Rückgabewert eines Ausgabe Parameters ignoriert.  
   
- Wenn angegeben, muss *Parameter Name* der Name des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] benannten Parameters sein. Beachten Sie, dass **@** _parametername_is keine [!INCLUDE[tsql](../../includes/tsql-md.md)] lokale Variable ist. Das at-Zeichen ( **@** ) wird entfernt, und Parameter *Name*wird als Parameter Name an das OLE-Objekt übergeben. Alle benannten Parameter müssen nach den Positionsparametern angegeben werden.  
+ Wenn angegeben, muss *Parameter Name* der Name des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] benannten Parameters sein. Beachten Sie, dass **@** _parametername_is keine [!INCLUDE[tsql](../../includes/tsql-md.md)] lokale Variable ist. Das at-Zeichen ( **@** ) wird entfernt, und Parameter *Name* wird als Parameter Name an das OLE-Objekt übergeben. Alle benannten Parameter müssen nach den Positionsparametern angegeben werden.  
   
  *n*  
  Ein Platzhalter, der anzeigt, dass mehrere Parameter angegeben werden können.  
   
 > [!NOTE]
->  Parameter Name kann ein * \@ benannter* Parameter sein, da er Teil der angegebenen Methode ist und an das-Objekt übergeben wird. Die anderen Parameter für diese gespeicherte Prozedur werden nicht nach dem Namen, sondern nach der Position angegeben.  
+>  Parameter Name kann ein *\@ benannter* Parameter sein, da er Teil der angegebenen Methode ist und an das-Objekt übergeben wird. Die anderen Parameter für diese gespeicherte Prozedur werden nicht nach dem Namen, sondern nach der Position angegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler), die dem ganzzahligen Wert von HRESULT entspricht, der vom OLE-Automatisierungsobjekt zurückgegeben wird.  

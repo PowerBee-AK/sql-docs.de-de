@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - server_audits_TSQL
 - sys.server_audits_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 3bb5b8b56cb2fec01b6fe655f3f51841cc7ebb21
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 6c7dba3282bf75e3c707be7d861f2051b56c6e0f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093087"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172700"
 ---
 # <a name="sysserver_audits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "98093087"
 |**modify_date**|**datetime**|Das UTC-Datum, an dem die Überwachung zuletzt geändert wurde.|  
 |**principal_id**|**int**|Die ID des Besitzers der Überwachung gemäß Registrierung beim Server.|  
 |**type**|**char(2)**|Überwachungstyp:<br /><br /> SL-NT-Sicherheits Ereignisprotokoll<br /><br /> Al-NT-Anwendungs Ereignisprotokoll<br /><br /> FL-Datei im Dateisystem|  
-|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPLICATION LOG<br /><br /> DATEI|  
+|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPLICATION LOG<br /><br /> FILE|  
 |**on_failure**|**tinyint**|Bei einem Fehler schreiben Sie folgendermaßen einen Aktionseintrag:<br /><br /> 0-fortfahren<br /><br /> 1-Serverinstanz herunterfahren<br /><br /> 2-fehlerhafter Vorgang|  
 |**on_failure_desc**|**nvarchar(60)**|Bei einem Fehler schreiben Sie folgendermaßen einen Aktionseintrag:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0 – Deaktiviert<br /><br /> 1 – Aktiviert|  
@@ -53,7 +53,7 @@ ms.locfileid: "98093087"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

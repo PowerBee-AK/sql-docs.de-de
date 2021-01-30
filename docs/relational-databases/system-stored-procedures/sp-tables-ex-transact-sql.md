@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_tables_ex
 - sp_tables_ex_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0156f75940cf5e0d2186625d148850dcfb181ad0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0126cfd14adde25d88d6990a5d7e78c2141ea21e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544732"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182759"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,15 +45,15 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @table_server = ] 'table_server'` Der Name des Verbindungs Servers, für den Tabellen Informationen zurückgegeben werden sollen. *table_server* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @table_server = ] 'table_server'` Der Name des Verbindungs Servers, für den Tabellen Informationen zurückgegeben werden sollen. *table_server* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-``[ , [ @table_name = ] 'table_name']`` Der Name der Tabelle, für die Datentyp Informationen zurückgegeben werden sollen. *table_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+``[ , [ @table_name = ] 'table_name']`` Der Name der Tabelle, für die Datentyp Informationen zurückgegeben werden sollen. *table_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @table_schema = ] 'table_schema']` Das Tabellen Schema. *TABLE_SCHEMA*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @table_schema = ] 'table_schema']` Das Tabellen Schema. *TABLE_SCHEMA* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @table_catalog = ] 'table_catalog'` Der Name der Datenbank, in der sich die angegebene *table_name* befindet. *TABLE_CATALOG* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @table_catalog = ] 'table_catalog'` Der Name der Datenbank, in der sich die angegebene *table_name* befindet. *TABLE_CATALOG* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @table_type = ] 'table_type'` Der Typ der zurück zugebende Tabelle. *TABLE_TYPE* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL und kann einen der folgenden Werte aufweisen.  
+`[ @table_type = ] 'table_type'` Der Typ der zurück zugebende Tabelle. *TABLE_TYPE* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL und kann einen der folgenden Werte aufweisen.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -81,8 +81,8 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE_TYPE**|**varchar(32)**|Tabelle, Systemtabelle oder Sicht.|  
 |**HINWEISE**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  
   
-## <a name="remarks"></a>Hinweise  
- **sp_tables_ex** wird ausgeführt, indem das TABLES-Rowset der **IDBSchemaRowset** -Schnittstelle des OLE DB Anbieters abgefragt wird, der *table_server*entspricht. Die Parameter *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG*und *Column* werden an diese Schnittstelle übermittelt, um die zurückgegebenen Zeilen einzuschränken.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_tables_ex** wird ausgeführt, indem das TABLES-Rowset der **IDBSchemaRowset** -Schnittstelle des OLE DB Anbieters abgefragt wird, der *table_server* entspricht. Die Parameter *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG* und *Column* werden an diese Schnittstelle übermittelt, um die zurückgegebenen Zeilen einzuschränken.  
   
  **sp_tables_ex** gibt ein leeres Resultset zurück, wenn der OLE DB Anbieter des angegebenen Verbindungs Servers das TABLES-Rowset der **IDBSchemaRowset** -Schnittstelle nicht unterstützt.  
   

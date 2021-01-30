@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_help_profileaccount_sp_TSQL
 - sysmail_help_profileaccount_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6894b44d7a09fa8f49ffa1d76a8613f930db7d18
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 45b542047875527a26d9c4854b223e626efda5ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541064"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181939"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,13 +44,13 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @profile_id = ] profile_id` Die Profil-ID des Profils, das aufgelistet werden soll. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
+`[ @profile_id = ] profile_id` Die Profil-ID des Profils, das aufgelistet werden soll. *profile_id* ist vom Datentyp **int** und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
-`[ @profile_name = ] 'profile_name'` Der Name des Profils, das aufgelistet werden soll. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
+`[ @profile_name = ] 'profile_name'` Der Name des Profils, das aufgelistet werden soll. *profile_name* ist vom Datentyp **sysname** und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
-`[ @account_id = ] account_id` Die Konto-ID, die aufgelistet werden soll. *account_id* ist vom Datentyp **int**und hat den Standardwert NULL. Wenn *account_id* sowie *account_name* NULL sind, werden alle Konten im Profil aufgelistet.  
+`[ @account_id = ] account_id` Die Konto-ID, die aufgelistet werden soll. *account_id* ist vom Datentyp **int** und hat den Standardwert NULL. Wenn *account_id* sowie *account_name* NULL sind, werden alle Konten im Profil aufgelistet.  
   
-`[ @account_name = ] 'account_name'` Der Name des Kontos, das aufgelistet werden soll. *account_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *account_id* sowie *account_name* NULL sind, werden alle Konten im Profil aufgelistet.  
+`[ @account_name = ] 'account_name'` Der Name des Kontos, das aufgelistet werden soll. *account_name* ist vom Datentyp **sysname** und hat den Standardwert NULL. Wenn *account_id* sowie *account_name* NULL sind, werden alle Konten im Profil aufgelistet.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -63,10 +63,10 @@ sysmail_help_profileaccount_sp
 |**profile_id**|**int**|Die Profil-ID des Profils.|  
 |**profile_name**|**sysname**|Der Name des Profils.|  
 |**account_id**|**int**|Die Konto-ID des Kontos.|  
-|**account_name**|**sysname**|Der Name des Kontos.|  
+|**account_name**|**sysname**|Der Kontoname.|  
 |**sequence_number**|**int**|Die Sequenznummer des Kontos innerhalb des Profils.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wird weder *profile_id* noch *profile_name* angegeben, gibt diese gespeicherte Prozedur Informationen für jedes Profil in der Instanz zurück.  
   
  Die gespeicherte Prozedur **sysmail_help_profileaccount_sp** wird in der **msdb** -Datenbank gespeichert und befindet sich im Besitz des **dbo** -Schemas. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen ausgeführt werden.  

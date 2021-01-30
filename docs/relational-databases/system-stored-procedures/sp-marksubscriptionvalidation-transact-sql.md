@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_marksubscriptionvalidation
 - sp_marksubscriptionvalidation_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c85f1fbfd603cc671368519716764d2642864fe
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1fadb2c21aacab18741576d5809c28df989a67d6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541675"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185319"
 ---
 # <a name="sp_marksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +41,13 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 `[ @subscriber = ] 'subscriber'` Der Name des Abonnenten. *Subscriber* ist vom Datentyp sysname und hat keinen Standardwert.  
   
-`[ @destination_db = ] 'destination_db'` Der Name der Zieldatenbank. *destination_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @destination_db = ] 'destination_db'` Der Name der Zieldatenbank. *destination_db* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  *Publisher* sollte nicht für eine Veröffentlichung verwendet werden, die zu einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger gehört.  
@@ -55,17 +55,17 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_marksubscriptionvalidation** wird bei der Transaktions Replikation verwendet.  
   
  **sp_marksubscriptionvalidation** unterstützt keine nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten.  
   
  Bei nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verlegern können **sp_marksubscriptionvalidation** nicht innerhalb einer expliziten Transaktion ausgeführt werden. Das liegt daran, dass explizite Transaktionen nicht über die Verbindung eines Verbindungsservers unterstützt werden, die für den Zugriff auf den Verleger verwendet wird.  
   
- **sp_marksubscriptionvalidation** müssen in Verbindung mit [sp_article_validation &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)verwendet werden, wobei der Wert **1** für *subscription_level*angegeben und mit anderen Aufrufen von **sp_marksubscriptionvalidation** verwendet werden kann, um die aktuelle geöffnete Transaktion für andere Abonnenten zu markieren.  
+ **sp_marksubscriptionvalidation** müssen in Verbindung mit [sp_article_validation &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)verwendet werden, wobei der Wert **1** für *subscription_level* angegeben und mit anderen Aufrufen von **sp_marksubscriptionvalidation** verwendet werden kann, um die aktuelle geöffnete Transaktion für andere Abonnenten zu markieren.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_marksubscriptionvalidation**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_marksubscriptionvalidation** ausführen.  
   
 ## <a name="example"></a>Beispiel  
  Die folgende Abfrage kann auf die Verlegerdatenbank angewendet werden, um Befehle mit Überprüfung auf Abonnementebene bereitzustellen. Diese Befehle werden von den Verteilungs-Agents der angegebenen Abonnenten erfasst. Beachten Sie, dass die erste Transaktion den Artikel "**art1**" überprüft, während die zweite Transaktion "**art2**" überprüft. Beachten Sie außerdem, dass die Aufrufe von **sp_marksubscriptionvalidation** und [sp_article_validation &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) in einer Transaktion gekapselt wurden. Es wird nur ein [sp_article_validation &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) pro Transaktion empfohlen. Dies liegt daran, dass [sp_article_validation &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) für die Dauer der Transaktion eine freigegebene Tabellensperre für die Quell Tabelle enthält. Die Transaktion muss so kurz wie möglich sein, um die Parallelität zu maximieren.  

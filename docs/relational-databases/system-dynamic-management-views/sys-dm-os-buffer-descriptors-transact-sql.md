@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_os_buffer_descriptors_TSQL
 - dm_os_buffer_descriptors_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c56a25586be861aca825119f38bff390eeba90a
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: a6749867b40c0673c63b8a6c4279bc31b6fb0682
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099763"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184975"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +61,7 @@ Bei den Dienst Zielen "Basic", "S0" und "S1" in SQL-Datenbank ist für Datenbank
 ## <a name="remarks"></a>Bemerkungen  
  sys.dm_os_buffer_descriptors gibt Seiten zurück, die von der Ressourcendatenbank verwendet werden. sys.dm_os_buffer_descriptors gibt keine Informationen zu freien oder gestohlenen Seiten zurück oder zu Seiten, die beim Lesen Fehler enthielten.  
   
-|Von|Beschreibung|Ein|Relationship|  
+|Von|Beschreibung|Ein|Beziehung|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|n:1|  
 |sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|n:1|  

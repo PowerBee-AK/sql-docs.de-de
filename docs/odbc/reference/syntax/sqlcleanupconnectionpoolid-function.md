@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLCleanupConnectionPoolID function [ODBC]
 ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 20ad05559aa172ff7e8937359bad93f85347a92a
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: ce2a6dc5a0a368312a46cb038cb56407f977b2ef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193445"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181015"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID-Funktion
 **Konformitäts**  
@@ -47,7 +47,7 @@ SQLRETURN  SQLCleanupConnectionPoolID (
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Der Treiber-Manager verarbeitet keine Diagnoseinformationen, die von **sqlcleanupconnectionpoolid**zurückgegeben werden.  
+ Der Treiber-Manager verarbeitet keine Diagnoseinformationen, die von **sqlcleanupconnectionpoolid** zurückgegeben werden.  
   
  Eine Anwendung kann die vom Treiber zurückgegebene Fehlermeldung nicht empfangen.  
   

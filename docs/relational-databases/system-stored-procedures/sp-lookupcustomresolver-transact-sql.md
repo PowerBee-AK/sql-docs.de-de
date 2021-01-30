@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_lookupcustomresolver_TSQL
 - sp_lookupcustomresolver
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 54e2f1f4237e169637c7d73085dc29cbffe3e720
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bdafb84d97bad1672780008ae845287ce105bb14
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541725"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185364"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,20 +53,20 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
   
 `[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` Der Name der Klasse, die überschreibt <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> , um den Geschäftslogik Handler zu implementieren. *dotnet_class_name* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL.  
   
-`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Verwenden Sie diesen Parameter, wenn die gespeicherte Prozedur nicht vom Verleger aufgerufen wird. Wenn keine Angabe erfolgt, wird davon ausgegangen, dass der lokale Server der Verleger ist.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Verwenden Sie diesen Parameter, wenn die gespeicherte Prozedur nicht vom Verleger aufgerufen wird. Wenn keine Angabe erfolgt, wird davon ausgegangen, dass der lokale Server der Verleger ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_lookupcustomresolver** wird bei der Mergereplikation verwendet.  
   
  **sp_lookupcustomresolver** gibt einen NULL-Wert für *resolver_clsid* zurück, wenn die Komponente nicht bei der Verteilung registriert ist, und den Wert "00000000-0000-0000-0000-000000000000", wenn die Registrierung zu einer .NET Framework Assembly gehört, die als Geschäftslogik Handler registriert ist.  
   
- **sp_lookupcustomresolver** wird von [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) und [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aufgerufen, um die angegebene *article_resolver*zu überprüfen.  
+ **sp_lookupcustomresolver** wird von [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) und [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aufgerufen, um die angegebene *article_resolver* zu überprüfen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **db_owner** Fixed-Daten Bank Rolle in der Veröffentlichungs Datenbank können **sp_lookupcustomresolver**ausführen.  
+ Nur Mitglieder der **db_owner** Fixed-Daten Bank Rolle in der Veröffentlichungs Datenbank können **sp_lookupcustomresolver** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Konflikterkennung und -lösung der Mergereplikation](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

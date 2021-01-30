@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_delete_principalprofile_sp_TSQL
 - sysmail_delete_principalprofile_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e5cfe34ff4bebc2e21517e6515b5ea2ebee3a37f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a80485aca8c7f0adb6a539f57540952ccd758a31
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538485"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182016"
 ---
 # <a name="sysmail_delete_principalprofile_sp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,18 +41,18 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @principal_id = ] principal_id` Die ID des Daten Bank Benutzers oder der Daten Bank Rolle in der **msdb** -Datenbank für die Zuordnung, die gelöscht werden soll. *principal_id* ist vom Datentyp **int**und hat den Standardwert NULL. Um ein öffentliches Profil in einem privaten Profil zu erstellen, geben Sie die Prinzipal-ID **0** oder den Prinzipal Namen **' Public '** an. Es muss entweder *principal_id* oder *principal_name* angegeben werden.  
+`[ @principal_id = ] principal_id` Die ID des Daten Bank Benutzers oder der Daten Bank Rolle in der **msdb** -Datenbank für die Zuordnung, die gelöscht werden soll. *principal_id* ist vom Datentyp **int** und hat den Standardwert NULL. Um ein öffentliches Profil in einem privaten Profil zu erstellen, geben Sie die Prinzipal-ID **0** oder den Prinzipal Namen **' Public '** an. Es muss entweder *principal_id* oder *principal_name* angegeben werden.  
   
-`[ @principal_name = ] 'principal_name'` Der Name des Daten Bank Benutzers oder der Daten Bank Rolle in der **msdb** -Datenbank für die Zuordnung, die gelöscht werden soll. *principal_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Um ein öffentliches Profil in einem privaten Profil zu erstellen, geben Sie die Prinzipal-ID **0** oder den Prinzipal Namen **' Public '** an. Es muss entweder *principal_id* oder *principal_name* angegeben werden.  
+`[ @principal_name = ] 'principal_name'` Der Name des Daten Bank Benutzers oder der Daten Bank Rolle in der **msdb** -Datenbank für die Zuordnung, die gelöscht werden soll. *principal_name* ist vom Datentyp **sysname** und hat den Standardwert NULL. Um ein öffentliches Profil in einem privaten Profil zu erstellen, geben Sie die Prinzipal-ID **0** oder den Prinzipal Namen **' Public '** an. Es muss entweder *principal_id* oder *principal_name* angegeben werden.  
   
-`[ @profile_id = ] profile_id` Die ID des Profils für die Zuordnung, die gelöscht werden soll. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
+`[ @profile_id = ] profile_id` Die ID des Profils für die Zuordnung, die gelöscht werden soll. *profile_id* ist vom Datentyp **int** und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
-`[ @profile_name = ] 'profile_name'` Der Name des Profils für die Zuordnung, die gelöscht werden soll. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
+`[ @profile_name = ] 'profile_name'` Der Name des Profils für die Zuordnung, die gelöscht werden soll. *profile_name* ist vom Datentyp **sysname** und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Sie ein öffentliches Profil in ein privates Profil erstellen möchten, geben Sie **"Public"** als Prinzipal Namen oder " **0** " für die Prinzipal-ID an.  
   
  Gehen Sie vorsichtig vor, wenn Sie für einen Benutzer die Berechtigungen für das private Standardprofil entfernen oder das öffentliche Standardprofil entfernen. Wenn kein Standardprofil verfügbar ist, ist für **sp_send_dbmail** der Name eines Profils als Argument erforderlich. Daher kann das Entfernen eines Standard Profils dazu führen, dass Aufrufe von **sp_send_dbmail** fehlschlagen. Weitere Informationen finden Sie unter [sp_send_dbmail &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).  

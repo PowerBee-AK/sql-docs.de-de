@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_operator
 - sp_delete_operator_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d228dbfe5d349a69addded2fe4eeadca6656836c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9de5e301020db6650dd52e172fd24671e10b8c08
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541805"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181279"
 ---
 # <a name="sp_delete_operator-transact-sql"></a>sp_delete_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ sp_delete_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'name'` Der Name des zu löschenden Operators. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @name = ] 'name'` Der Name des zu löschenden Operators. *Name ist vom Datentyp* **vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @reassign_to_operator = ] 'reassign_operator'` Der Name eines Operators, dem die Warnungen des angegebenen Operators neu zugewiesen werden können. *reassign_operator* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @reassign_to_operator = ] 'reassign_operator'` Der Name eines Operators, dem die Warnungen des angegebenen Operators neu zugewiesen werden können. *reassign_operator* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -55,7 +55,7 @@ sp_delete_operator [ @name = ] 'name'
  Beim Entfernen eines Operators werden alle dem Operator zugeordneten Benachrichtigungen ebenfalls entfernt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Mitglieder der festen Server Rolle **sysadmin** können **sp_delete_operator**ausführen.  
+ Mitglieder der festen Server Rolle **sysadmin** können **sp_delete_operator** ausführen.  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel löscht den Operator `François Ajenstat`.  

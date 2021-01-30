@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - CREATE TABLE [ODBC]
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ea84b28e12194ffb1a1b181089622cd169c91b7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0fb1e91c03f7a1a1fee98ce887be991370450999
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471632"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183208"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE (SQL-Befehl)
 Erstellt eine Tabelle mit den angegebenen Feldern.  
@@ -94,9 +94,9 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
  NULL-Werte und doppelte Datensätze sind in einem Feld, das für einen primären Index oder einen Kandidaten Index verwendet wird, nicht zulässig. Visual FoxPro generiert jedoch keinen Fehler, wenn Sie einen primären Index oder einen Kandidaten Index für ein Feld erstellen, das NULL-Werte unterstützt. Visual FoxPro generiert einen Fehler, wenn Sie versuchen, einen NULL-oder einen doppelten Wert in ein Feld einzugeben, das für einen primären oder einen Kandidaten Index verwendet wird.  
   
  Verweise *TableName2*[Tag *TagName1*]  
- Gibt die übergeordnete Tabelle an, mit der eine persistente Beziehung hergestellt wird. Wenn Sie Tag *TagName1*weglassen, wird die Beziehung mit dem primär Index Schlüssel der übergeordneten Tabelle hergestellt. Wenn die übergeordnete Tabelle keinen primären Index hat, generiert Visual FoxPro einen Fehler.  
+ Gibt die übergeordnete Tabelle an, mit der eine persistente Beziehung hergestellt wird. Wenn Sie Tag *TagName1* weglassen, wird die Beziehung mit dem primär Index Schlüssel der übergeordneten Tabelle hergestellt. Wenn die übergeordnete Tabelle keinen primären Index hat, generiert Visual FoxPro einen Fehler.  
   
- TagTagName1 *TagName1* einschließen, um eine Beziehung basierend auf einem vorhandenen Indextag für die übergeordnete Tabelle herzustellen. Indextagnamen können bis zu 10 Zeichen enthalten.  
+ TagTagName1  einschließen, um eine Beziehung basierend auf einem vorhandenen Indextag für die übergeordnete Tabelle herzustellen. Indextagnamen können bis zu 10 Zeichen enthalten.  
   
  Die übergeordnete Tabelle darf keine freie Tabelle sein.  
   
@@ -120,7 +120,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  Eine Tabelle kann über mehrere Kandidaten Indizes verfügen.  
   
- Fremdschlüssel *eExpression4*Tag *TagName4*[nodup]  
+ Fremdschlüssel *eExpression4* Tag *TagName4*[nodup]  
  Erstellt einen fremd Index (nonprimary) und richtet eine Beziehung zu einer übergeordneten Tabelle ein. *eExpression4* gibt den Fremdschlüssel Ausdruck des Indexes an, und *TagName4* gibt den Namen des zu erstellenden Fremdschlüssel Tags an. Indextagnamen können bis zu 10 Zeichen enthalten. Fügen Sie nodup ein, um einen Kandidaten fremden Index zu erstellen.  
   
  Sie können mehrere fremd Indizes für die Tabelle erstellen, aber die Foreign Index-Ausdrücke müssen andere Felder in der Tabelle angeben.  
@@ -162,7 +162,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
 -   In einer Batch-SQL-Anweisung, die eine Transaktion erfordert  
   
--   Im manuellen Commitmodus, nach einer-Anweisung, die eine Transaktion erforderte, es sei denn, die Anwendung ruft **SQLTransact**zuerst auf.  
+-   Im manuellen Commitmodus, nach einer-Anweisung, die eine Transaktion erforderte, es sei denn, die Anwendung ruft **SQLTransact** zuerst auf.  
   
  Wenn Sie z. b. eine temporäre Tabelle erstellen möchten, sollten Sie die Tabelle erstellen, bevor Sie mit der Anweisung beginnen, die eine Transaktion erfordert. Wenn Sie die CREATE TABLE-Anweisung in eine Batch-SQL-Anweisung einschließen, die eine Transaktion erfordert, gibt der Treiber eine Fehlermeldung zurück.  
   

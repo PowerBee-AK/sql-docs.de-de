@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_maintenance_plan_job
 - sp_delete_maintenance_plan_job_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0b06c9c385d85c1b1a4cb4df79ebb22f70d5abee
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 090fc42c20612f737bd0ed7b0be910d59dd1eb12
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536576"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183409"
 ---
 # <a name="sp_delete_maintenance_plan_job-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,9 +46,9 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @plan_id = ] 'plan\_id'` Gibt die ID des Wartungsplans an. *plan_id* ist vom Datentyp **uniqueidentifier**und muss eine gültige ID sein.  
+`[ @plan_id = ] 'plan\_id'` Gibt die ID des Wartungsplans an. *plan_id* ist vom Datentyp **uniqueidentifier** und muss eine gültige ID sein.  
   
-`[ @job_id = ] 'job\_id'` Gibt die ID des Auftrags an, dem der Wartungsplan zugeordnet ist. *job_id* ist vom Datentyp **uniqueidentifier**und muss eine gültige ID sein.  
+`[ @job_id = ] 'job\_id'` Gibt die ID des Auftrags an, dem der Wartungsplan zugeordnet ist. *job_id* ist vom Datentyp **uniqueidentifier** und muss eine gültige ID sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -59,7 +59,7 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
  Wenn alle Aufträge aus dem Wartungsplan entfernt wurden, sollten Benutzer **sp_delete_maintenance_plan_db** ausführen, um die verbleibenden Datenbanken aus dem Plan zu entfernen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Serverrolle **sysadmin** können **sp_delete_maintenance_plan_job**ausführen.  
+ Nur Mitglieder der festen Serverrolle **sysadmin** können **sp_delete_maintenance_plan_job** ausführen.  
   
 ## <a name="examples"></a>Beispiele  
  In diesem Beispiel wird der Auftrag B8FCECB1-E22C-11D2-AA64-00C04F688EAE aus dem Wartungsplan gelöscht.  

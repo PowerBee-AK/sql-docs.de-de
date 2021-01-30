@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdb
 - sp_helpdb_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b1b2055f810be69949f72dd97364ccfb47bfa22f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: efb199d0fc846bc37a8f7c1272563de99507c795
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809162"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176442"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,26 +40,26 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dbname = ] 'name'` Der Name der Datenbank, für die Informationen gemeldet werden. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert. Wenn *Name* nicht angegeben wird, **sp_helpdb** Berichte zu allen Datenbanken in der **sys. Datenbanken** -Katalog Sicht.  
+`[ @dbname = ] 'name'` Der Name der Datenbank, für die Informationen gemeldet werden. *Name ist vom Datentyp* **vom Datentyp sysname** und hat keinen Standardwert. Wenn *Name* nicht angegeben wird, **sp_helpdb** Berichte zu allen Datenbanken in der **sys. Datenbanken** -Katalog Sicht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Datenbankname.|  
 |**db_size**|**nvarchar (13)**|Gesamtgröße der Datenbank.|  
-|**Eigentor**|**sysname**|Datenbankbesitzer, z. b. **sa**.|  
+|**owner**|**sysname**|Datenbankbesitzer, z. b. **sa**.|  
 |**DBID**|**smallint**|Datenbank-ID|  
 |**created**|**nvarchar(11)**|Erstellungsdatum der Datenbank.|  
-|**status**|**nvarchar (600)**|Eine durch Trennzeichen getrennte Liste mit Werten von Datenbankoptionen, die zurzeit für die Datenbank festgelegt sind.<br /><br /> Optionen mit booleschen Werten werden nur aufgelistet, wenn sie aktiviert sind. Nicht boolesche Optionen werden mit ihren entsprechenden Werten in Form von *option_name* = *Wert*aufgelistet.<br /><br /> Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
+|**status**|**nvarchar (600)**|Eine durch Trennzeichen getrennte Liste mit Werten von Datenbankoptionen, die zurzeit für die Datenbank festgelegt sind.<br /><br /> Optionen mit booleschen Werten werden nur aufgelistet, wenn sie aktiviert sind. Nicht boolesche Optionen werden mit ihren entsprechenden Werten in Form von *option_name* = *Wert* aufgelistet.<br /><br /> Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |**compatibility_level**|**tinyint**|Datenbank-Kompatibilitätsgrad: 60, 65, 70, 80 oder 90.|  
   
  Wenn *Name* angegeben wird, gibt es ein zusätzliches Resultset, das die Datei Zuordnung für die angegebene Datenbank anzeigt.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**name**|**NCHAR (128)**|Logischer Dateiname der Datei.|  
 |**FileID**|**smallint**|Die Datei-ID|  
@@ -70,7 +70,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**wachsen**|**nvarchar (18)**|Vergrößerungsinkrement der Datei. Gibt den Speicherplatz an, der der Datei jedes Mal hinzugefügt wird, wenn neuer Speicherplatz benötigt wird.|  
 |**ungs**|**varchar (9)**|Verwendung der Datei. Bei einer Datendatei ist der Wert **' nur Daten** ', und für die Protokolldatei lautet der Wert **' nur protokollieren '**.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die **Status** -Spalte im Resultset meldet, welche Optionen in der Datenbank auf ON festgelegt wurden. Alle Daten Bankoptionen werden nicht von der **Status** -Spalte gemeldet. Verwenden Sie die **sys.** Database-Katalog Sicht, um eine komplette Liste der aktuellen Einstellungen für die Datenbankoption anzuzeigen.  
   
 ## <a name="permissions"></a>Berechtigungen  

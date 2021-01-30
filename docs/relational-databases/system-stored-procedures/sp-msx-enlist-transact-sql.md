@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_msx_enlist_TSQL
 - sp_msx_enlist
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9435c4b8628bb119b0ac81126e50e37a67650532
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 13a8c58ffa932199452db856b04e880dbbe2ff95
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541628"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174434"
 ---
 # <a name="sp_msx_enlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @msx_server_name = ] 'msx_server'` Der Name des multiserververwaltungsservers (Master). *msx_server* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @msx_server_name = ] 'msx_server'` Der Name des multiserververwaltungsservers (Master). *msx_server* ist vom Datentyp **sysname** und hat keinen Standardwert.  
   
 `[ @location = ] 'location'` Der Speicherort des hinzu zufügenden Zielservers. *location* ist vom Datentyp **nvarchar(100)** und hat den Standardwert NULL.  
   
@@ -55,7 +55,7 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
  Keine  
   
 ## <a name="permissions"></a>Berechtigungen  
- Die Berechtigungen zum Ausführen dieser Prozedur werden standardmäßig Mitgliedern der festen Server Rolle **sysadmin** zugewiesen.  
+ Berechtigungen zur Ausführung dieser Prozedur erhalten standardmäßig Mitglieder der festen Serverrolle **sysadmin** .  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der aktuelle Server auf dem Masterserver `AdventureWorks1` eingetragen. Der Speicherort für den aktuellen Server lautet `Building 21, Room 309, Rack 5`.  

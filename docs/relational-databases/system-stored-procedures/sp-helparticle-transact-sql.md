@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helparticle_TSQL
 - sp_helparticle
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7bc639fef551b78dd73da39cd404999e39219b2d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 14baf63cc2944396a13bbc911fb6be7670244216
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538789"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176492"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,13 +42,13 @@ sp_helparticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @article = ] 'article'` Der Name eines Artikels in der Veröffentlichung. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** . Wenn der *Artikel* nicht angegeben wird, werden Informationen zu allen Artikeln für die angegebene Veröffentlichung zurückgegeben.  
+`[ @article = ] 'article'` Der Name eines Artikels in der Veröffentlichung. der *Artikel* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert **%** . Wenn der *Artikel* nicht angegeben wird, werden Informationen zu allen Artikeln für die angegebene Veröffentlichung zurückgegeben.  
   
 `[ @returnfilter = ] returnfilter` Gibt an, ob die Filter Klausel zurückgegeben werden soll. *returnfilter* ist vom Typ **Bit**. der Standardwert ist **1**, wodurch die Filter Klausel zurückgegeben wird.  
   
-`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  der *Verleger* sollte nicht angegeben werden, wenn Informationen zu einem Artikel angefordert werden, der von einem Verleger veröffentlicht wurde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -84,8 +84,8 @@ sp_helparticle [ @publication = ] 'publication'
 |**filter_owner**|**sysname**|Besitzer des Filters.|  
 |**unqua_filter**|**sysname**|Name des Filters, ohne den Namen des Besitzers.|  
 |**auto_identity_range**|**int**|Flag, das anzeigt, ob die automatische Behandlung von Identitätsbereichen für die Veröffentlichung bei ihrer Erstellung aktiviert wurde. **1** bedeutet, dass der automatische Identitäts Bereich aktiviert ist. der Wert **0** bedeutet, dass er deaktiviert ist.|  
-|**publisher_identity_range**|**int**|Bereichs Größe des Identitäts Bereichs auf dem Verleger, wenn für den Artikel *identityrangemanagementoption* auf **Auto** oder **auto_identity_range** auf **true**festgelegt ist.|  
-|**identity_range**|**bigint**|Bereichs Größe des Identitäts Bereichs auf dem Abonnenten, wenn für den Artikel *identityrangemanagementoption* auf **Auto** oder **auto_identity_range** auf **true**festgelegt ist.|  
+|**publisher_identity_range**|**int**|Bereichs Größe des Identitäts Bereichs auf dem Verleger, wenn für den Artikel *identityrangemanagementoption* auf **Auto** oder **auto_identity_range** auf **true** festgelegt ist.|  
+|**identity_range**|**bigint**|Bereichs Größe des Identitäts Bereichs auf dem Abonnenten, wenn für den Artikel *identityrangemanagementoption* auf **Auto** oder **auto_identity_range** auf **true** festgelegt ist.|  
 |**threshold**|**bigint**|Prozentwert, der anzeigt, wann der Verteilungs-Agent einen neuen Identitätsbereich zuweist.|  
 |**identityrangemanagementoption**|**int**|Gibt die für den Artikel behandelte Identitätsbereichsverwaltung an.|  
 |**fire_triggers_on_snapshot**|**bit**|Gibt an, ob replizierte Benutzertrigger beim Anwenden der Anfangsmomentaufnahme ausgeführt werden.<br /><br /> **1** = Benutzer Trigger werden ausgeführt.<br /><br /> **0** = Benutzer Trigger werden nicht ausgeführt.|  
@@ -93,11 +93,11 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helparticle** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** , der festen Daten Bank Rolle **db_owner** oder der Veröffentlichungs Zugriffsliste für die aktuelle Veröffentlichung können **sp_helparticle**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** , der festen Daten Bank Rolle **db_owner** oder der Veröffentlichungs Zugriffsliste für die aktuelle Veröffentlichung können **sp_helparticle** ausführen.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_helptranarticle](../../relational-databases/replication/codesnippet/tsql/sp-helparticle-transact-_1.sql)]  

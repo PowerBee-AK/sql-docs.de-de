@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_spatial_geometry_index_xml_TSQL
 - sp_help_spatial_geometry_index_xml
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee3abb8e5a06d972b63140007cb8002e32837df2
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: f0630c37d00e6f9d8496d1fd0b0786987c46e96f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810897"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185390"
 ---
 # <a name="sp_help_spatial_geometry_index_xml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,11 +54,11 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Berechtigungen  
  Der Benutzer muss ein Mitglied der Datenbankrolle **public** sein. Erfordert die READ ACCESS-Berechtigung für den Server und das Objekt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Eigenschaften, die NULL-Werte enthalten sind, sind nicht in der zurückgegebenen XML-Menge enthalten.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird verwendet `sp_help_spatial_geometry_index_xml` , um den räumlichen Index **SIndx_SpatialTable_geometry_col2** zu untersuchen, der in Table **geometry_col** für das angegebene Abfrage Beispiel in ** \@ QS**definiert ist. Dieses Beispiel gibt die Kerneigenschaften des angegebenen Index in einem XML-Fragment zurück, das den Namen und den Wert der ausgewählten Eigenschaften anzeigt.  
+ Im folgenden Beispiel wird verwendet `sp_help_spatial_geometry_index_xml` , um den räumlichen Index **SIndx_SpatialTable_geometry_col2** zu untersuchen, der in Table **geometry_col** für das angegebene Abfrage Beispiel in **\@ QS** definiert ist. Dieses Beispiel gibt die Kerneigenschaften des angegebenen Index in einem XML-Fragment zurück, das den Namen und den Wert der ausgewählten Eigenschaften anzeigt.  
   
  Anschließend wird eine [XQuery](../../xquery/xquery-basics.md) für das Resultset ausgeführt, die eine bestimmte Eigenschaft zurückgibt.  
   

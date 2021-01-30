@@ -6,7 +6,7 @@ ms.date: 08/04/2017
 ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_set_database_firewall_rule
 - sp_set_database_firewall_rule_TSQL
@@ -22,17 +22,17 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: edbe51dc6694a94fcf68b012153e065906ce2208
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5aca09db0b26d15826547c3fb9847614ad5aa722
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472641"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184742"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-  Erstellt oder aktualisiert die Firewallregeln auf Datenbankebene für den [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . Datenbank-Firewallregeln können für die **Master** Datenbank und für Benutzer Datenbanken unter konfiguriert werden [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Datenbank-Firewallregeln sind besonders nützlich, wenn eigenständige Datenbankbenutzer verwendet werden. Weitere Informationen finden Sie unter [Eigenständige Datenbankbenutzer – machen Sie Ihre Datenbank portabel](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+  Erstellt oder aktualisiert die Firewallregeln auf Datenbankebene für den [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . Datenbank-Firewallregeln können für die **Master** Datenbank und für Benutzer Datenbanken unter konfiguriert werden [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Datenbank-Firewallregeln sind besonders nützlich, wenn eigenständige Datenbankbenutzer verwendet werden. Weitere Informationen finden Sie unter [Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,7 +56,7 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 > [!NOTE]  
 >  Azure-Verbindungsversuche sind zulässig, wenn sowohl dieses Feld als auch das *start_ip_address* Feld gleich sind `0.0.0.0` .  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Namen der Firewalleinstellungen auf Datenbankebene für eine Datenbank müssen eindeutig sein. Wenn der Name der für die gespeicherte Prozedur bereitgestellten Firewalleinstellung auf Datenbankebene bereits in der Tabelle mit den Firewalleinstellungen auf Datenbankebene vorhanden ist, werden die Start- und End-IP-Adressen aktualisiert. Andernfalls wird eine neue Firewalleinstellung auf Datenbankebene erstellt.  
   
  Wenn Sie eine Firewalleinstellung auf Datenbankebene hinzufügen, bei der die Start-und End-IP-Adressen gleich sind `0.0.0.0` , aktivieren Sie den Zugriff auf die Datenbank auf dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Server aus einer beliebigen Azure-Ressource. Geben Sie einen Wert für den *Name* -Parameter an, der Ihnen hilft, die Firewalleinstellung zu merken.  

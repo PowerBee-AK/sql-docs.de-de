@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_mergearticlecolumn
 - sp_mergearticlecolumn_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4be1d2544225a5317ea6af60598a57c958ce14a7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b5d8d2f63afd421081058dd1b53ec8084f4b5e13
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541638"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185309"
 ---
 # <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,18 +44,18 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @article = ] 'article'` Der Name des Artikels in der Veröffentlichung. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @article = ] 'article'` Der Name des Artikels in der Veröffentlichung. der *Artikel* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @column = ] 'column'` Identifiziert die Spalten, für die die vertikale Partition erstellt werden soll. *Column* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Bei den Werten NULL und `@operation = N'add'` werden dem Artikel standardmäßig alle Spalten in der Quelltabelle hinzugefügt. die *Spalte* darf nicht NULL sein, wenn der *Vorgang* auf **Drop**festgelegt ist. Um Spalten aus einem Artikel auszuschließen, führen Sie **sp_mergearticlecolumn** aus, und geben Sie *column* `@operation = N'drop'` für jede Spalte, die aus dem angegebenen *Artikel*entfernt werden soll, eine Spalte an.  
+`[ @column = ] 'column'` Identifiziert die Spalten, für die die vertikale Partition erstellt werden soll. *Column* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Bei den Werten NULL und `@operation = N'add'` werden dem Artikel standardmäßig alle Spalten in der Quelltabelle hinzugefügt. die *Spalte* darf nicht NULL sein, wenn der *Vorgang* auf **Drop** festgelegt ist. Um Spalten aus einem Artikel auszuschließen, führen Sie **sp_mergearticlecolumn** aus, und geben Sie  `@operation = N'drop'` für jede Spalte, die aus dem angegebenen *Artikel* entfernt werden soll, eine Spalte an.  
   
 `[ @operation = ] 'operation'` Der Replikations Status. der *Vorgang* ist vom Datentyp **nvarchar (4)** und hat den Standardwert Add. **Hinzufügen** markiert die Spalte für die Replikation. **Drop** löscht die Spalte.  
   
 `[ @schema_replication = ] 'schema_replication'` Gibt an, dass eine Schema Änderung weitergegeben wird, wenn die Merge-Agent ausgeführt wird. *schema_replication* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false.  
   
 > [!NOTE]  
->  Für *schema_replication*wird nur **false** unterstützt.  
+>  Für *schema_replication* wird nur **false** unterstützt.  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Aktiviert oder deaktiviert die Möglichkeit, eine Momentaufnahme für ungültig zu erklären. *force_invalidate_snapshot* ist ein **Bit**, der Standardwert ist **0**.  
   
@@ -72,7 +72,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_mergearticlecolumn** wird bei der Mergereplikation verwendet.  
   
  Eine Identitätsspalte kann nicht aus dem Artikel gelöscht werden, wenn die automatische Identitätsbereichsverwaltung verwendet wird. Weitere Informationen finden Sie unter [Replizieren von Identitätsspalten](../../relational-databases/replication/publish/replicate-identity-columns.md).  
@@ -85,7 +85,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-mergearticlecolumn-tr_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_mergearticlecolumn**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_mergearticlecolumn** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Definieren und Ändern eines Verknüpfungsfilters zwischen Mergeartikeln](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   

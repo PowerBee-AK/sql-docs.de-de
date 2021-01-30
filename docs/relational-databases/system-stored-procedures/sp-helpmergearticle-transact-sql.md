@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergearticle
 - sp_helpmergearticle_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 04e67d82b6c567a5c94de8009635c31e41864b92
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 43365f58dbfe76c89a5e7e41a0c65c65188edfdf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535210"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179290"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +39,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung, für die Informationen abgerufen werden sollen. *Publication*ist vom **Datentyp vom Datentyp sysname**und **%** hat den Standardwert, der Informationen zu allen Mergeartikeln zurückgibt, die in allen Veröffentlichungen in der aktuellen Datenbank enthalten sind.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, für die Informationen abgerufen werden sollen. *Publication* ist vom **Datentyp vom Datentyp sysname** und **%** hat den Standardwert, der Informationen zu allen Mergeartikeln zurückgibt, die in allen Veröffentlichungen in der aktuellen Datenbank enthalten sind.  
   
-`[ @article = ] 'article'` Der Name des Artikels, für den Informationen zurückgegeben werden sollen. der *Artikel*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** , mit dem Informationen zu allen Mergeartikeln in der angegebenen Veröffentlichung zurückgegeben werden.  
+`[ @article = ] 'article'` Der Name des Artikels, für den Informationen zurückgegeben werden sollen. der *Artikel* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert **%** , mit dem Informationen zu allen Mergeartikeln in der angegebenen Veröffentlichung zurückgegeben werden.  
   
 ## <a name="result-set"></a>Resultset  
   
@@ -54,7 +54,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**sync_object_owner**|**sysname**|Name des Besitzers der Sicht, die den veröffentlichten Artikel definiert|  
 |**sync_object**|**sysname**|Name des benutzerdefinierten Objekts, mit dem die Anfangsdaten für die Partition eingerichtet werden|  
 |**description**|**nvarchar(255)**|Beschreibung des Artikels|  
-|**status**|**tinyint**|Status des Artikels. Die folgenden Werte sind möglich:<br /><br /> **1** = inaktiv<br /><br /> **2** = aktiv<br /><br /> **5** = DDL-Vorgang (Data Definition Language) steht aus.<br /><br /> **6** = DDL-Vorgang mit einer neu generierten Momentaufnahme<br /><br /> Hinweis: Wenn ein Artikel erneut initialisiert wird, werden die Werte **5** und **6** in **2**geändert.|  
+|**status**|**tinyint**|Status des Artikels. Die folgenden Werte sind möglich:<br /><br /> **1** = inaktiv<br /><br /> **2** = aktiv<br /><br /> **5** = DDL-Vorgang (Data Definition Language) steht aus.<br /><br /> **6** = DDL-Vorgang mit einer neu generierten Momentaufnahme<br /><br /> Hinweis: Wenn ein Artikel erneut initialisiert wird, werden die Werte **5** und **6** in **2** geändert.|  
 |**creation_script**|**nvarchar(255)**|Pfad und Name eines optionalen Artikelschemaskripts, mit dem der Artikel in der Abonnementdatenbank erstellt wurde|  
 |**conflict_table**|**nvarchar (270)**|Name der Tabelle, in der die Einfüge- oder Updatekonflikte gespeichert werden.|  
 |**article_resolver**|**nvarchar(255)**|Benutzerdefinierter Konfliktlöser für den Artikel|  
@@ -88,11 +88,11 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helpmergearticle** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Daten Bank Rolle **db_owner** in der Veröffentlichungs Datenbank, der **replmonitor** -Rolle in der Verteilungs Datenbank oder der Veröffentlichungs Zugriffsliste für eine Veröffentlichung können **sp_helpmergearticle**ausführen.  
+ Nur Mitglieder der festen Daten Bank Rolle **db_owner** in der Veröffentlichungs Datenbank, der **replmonitor** -Rolle in der Verteilungs Datenbank oder der Veröffentlichungs Zugriffsliste für eine Veröffentlichung können **sp_helpmergearticle** ausführen.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_helpmergearticle](../../relational-databases/replication/codesnippet/tsql/sp-helpmergearticle-tran_1.sql)]  

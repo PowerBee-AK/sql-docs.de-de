@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdistributiondb_TSQL
 - sp_helpdistributiondb
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c79c1ed5bbbbf53be84432e4d542affece0b16a3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e9740605d1f3eca456ba506a692b5fc827273e67
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543313"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179293"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +50,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**history retention**|**int**|Die Anzahl von Stunden, für die der Verlauf erhalten bleibt.|  
 |**history_cleanup_agent**|**sysname**|Der Name des Verlaufscleanup-Agents.|  
 |**distribution_cleanup_agent**|**sysname**|Der Name des Verteilungscleanup-Agents.|  
-|**status**|**int**|Nur interne Verwendung.|  
+|**status**|**int**|Nur zur internen Verwendung.|  
 |**data_folder**|**nvarchar(255)**|Der Name des Verzeichnisses zum Speichern der Datenbankdateien.|  
 |**data_file**|**nvarchar(255)**|Der Name der Datenbankdatei.|  
 |**data_file_size**|**int**|Die Anfangsgröße der Datendatei in Megabyte.|  
@@ -61,7 +61,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helpdistributiondb** wird bei allen Replikations Typen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

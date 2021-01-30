@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdbfixedrole
 - sp_helpdbfixedrole_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e0b72a64d8d895956273a7c76e21dbb88152b546
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 817947901ca7f35ba2972004d23ed8d7f85215ed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538792"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176430"
 ---
 # <a name="sp_helpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @rolename = ] 'role'` Der Name einer Fixed-Daten Bank Rolle. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Role* angegeben ist, werden nur Informationen zu dieser Rolle zurückgegeben. Andernfalls wird eine Liste und eine Beschreibung aller fester Daten bankrollen zurückgegeben.  
+`[ @rolename = ] 'role'` Der Name einer Fixed-Daten Bank Rolle. *role* ist vom Datentyp **sysname** und hat den Standardwert NULL. Wenn *Role* angegeben ist, werden nur Informationen zu dieser Rolle zurückgegeben. Andernfalls wird eine Liste und eine Beschreibung aller fester Daten bankrollen zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -52,7 +52,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |**DbFixedRole**|**sysname**|Name der festen Datenbankrolle.|  
 |**Beschreibung**|**nvarchar (70)**|Beschreibung von **DbFixedRole.**|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Feste Datenbankrollen werden, wie in der folgenden Tabelle dargestellt, auf Datenbankebene definiert und besitzen Berechtigungen, um spezifische Verwaltungsaktivitäten auf Datenbankebene auszuführen. Feste Datenbankrollen können nicht hinzugefügt oder entfernt werden. Die für eine feste Datenbankrolle erteilten Berechtigungen können nicht geändert werden.  
   
 |Fixed-Daten Bank Rolle|BESCHREIBUNG|  

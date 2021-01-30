@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::Update
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb673de86d48143a8869460eeab3377f3c0ec0d2
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 279d0e82bff4d71a2c3b18bbdc7ff88f0b9581a9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988101"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172427"
 ---
 # <a name="update-method"></a>Update-Methode
 Speichert alle Änderungen, die Sie an der aktuellen Zeile eines [Recordset](./recordset-object-ado.md) -Objekts vornehmen, oder die [Fields](./fields-collection-ado.md) -Auflistung eines [Datensatz](./record-object-ado.md) -Objekts.  
@@ -35,7 +35,7 @@ record.Fields.Update
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Felder*  
+ *Fields*  
  Optional. Eine **Variante** , die einen einzelnen Namen darstellt, oder ein **Variant** -Array, das Namen oder Ordinalpositionen der Felder darstellt, die Sie ändern möchten.  
   
  *Werte*  
@@ -62,7 +62,7 @@ record.Fields.Update
   
  Der aktuelle Datensatz bleibt aktuell, nachdem Sie die **Update** -Methode aufgerufen haben.  
   
-## <a name="record"></a>Datensatz  
+## <a name="record"></a>Record  
  Die **Update** -Methode schließt Ergänzungen, Löschungen und Aktualisierungen von Feldern in der [Fields](./fields-collection-ado.md) -Auflistung eines **Datensatz** -Objekts ab.  
   
  Beispielsweise werden mit der **Delete** -Methode gelöschte Felder sofort zum Löschen markiert, bleiben jedoch in der Auflistung. Die **Update** -Methode muss aufgerufen werden, um diese Felder tatsächlich aus der Auflistung des Anbieters zu löschen.  

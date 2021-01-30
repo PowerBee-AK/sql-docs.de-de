@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpconstraint
 - sp_helpconstraint_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7199b56a0bf0c0eb397a061ca366534bdbf9c6ee
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: dddf290bd1b22f0ec25f9ea03dd2e9766e184308
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97404181"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176455"
 ---
 # <a name="sp_helpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -52,7 +52,7 @@ sp_helpconstraint [ @objname = ] 'table'
 ## <a name="result-sets"></a>Resultsets  
  **sp_helpconstraint** zeigt eine absteigende indizierte Spalte an, wenn Sie an Primär Schlüsseln beteiligt ist. Die absteigend indizierte Spalte wird im Resultset mit einem Minuszeichen (-) hinter dem Namen aufgelistet. Standardmäßig werden Spalten aufsteigend indiziert, diese werden nur mit dem Namen aufgelistet.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Sie **sp_help**_Tabelle_ ausführen, werden alle Informationen über die angegebene Tabelle gemeldet. Verwenden Sie **sp_helpconstraint**, um nur die Einschränkungs Informationen anzuzeigen.  
   
 ## <a name="permissions"></a>Berechtigungen  

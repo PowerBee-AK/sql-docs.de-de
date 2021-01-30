@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_run_collection_set_TSQL
 - sp_syscollector_run_collection_set
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 19d13692fda89e3596388269ef9a860615c3fb4b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dba48d2ba3e3945a137df381e4b403ebf1e6dfb8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544756"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185266"
 ---
 # <a name="sp_syscollector_run_collection_set-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,10 +54,10 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Entweder *collection_set_id* oder *Name* muss einen Wert aufweisen, beide dürfen nicht NULL sein.  
   
- Diese Prozedur startet die Sammlungs-und Uploadaufträge für den angegebenen Sammlungs Satz und startet sofort den Auftrag des Sammlungs-Agents, wenn für den Sammlungs Satz der ** \@ collection_mode** auf einen nicht zwischengespeicherten Wert festgelegt ist (1). Weitere Informationen finden Sie unter [sp_syscollector_create_collection_set &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ Diese Prozedur startet die Sammlungs-und Uploadaufträge für den angegebenen Sammlungs Satz und startet sofort den Auftrag des Sammlungs-Agents, wenn für den Sammlungs Satz der **\@ collection_mode** auf einen nicht zwischengespeicherten Wert festgelegt ist (1). Weitere Informationen finden Sie unter [sp_syscollector_create_collection_set &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
  sp_sycollector_run_collection_set kann auch verwendet werden, um einen Sammlungssatz auszuführen, der über keinen Zeitplan verfügt.  
   

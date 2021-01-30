@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_columns_ex
 - sp_columns_ex_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9ea62e350628099685b372362a3d6d075a90367b
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: 6696187b8f2b85b8a7ed179bfe406490e2c650aa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364831"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174487"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,9 +62,9 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Der Name des Qualifizierers für die Tabelle oder Sicht. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen ( _Qualifizierer_ ) **.** _Besitzer_**.** _Name_ ). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte dem Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
+|**TABLE_CAT**|**sysname**|Der Name des Qualifizierers für die Tabelle oder Sicht. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen (_Qualifizierer_)**.** _Besitzer_**.** _Name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte dem Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
 |**TABLE_SCHEM**|**sysname**|Der Name des Besitzers der Tabelle oder Sicht. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Namen des Datenbankbenutzers dar, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_NAME**|**sysname**|Der Name der Tabelle oder Sicht. Dieses Feld gibt immer einen Wert zurück.|  
 |**COLUMN_NAME**|**sysname**|Der Spaltenname für jede Spalte der zurückgegebenen **table_name** . Dieses Feld gibt immer einen Wert zurück.|  
@@ -87,7 +87,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
  Weitere Informationen finden Sie in der Microsoft ODBC-Dokumentation.  
   
 ## <a name="remarks"></a>Bemerkungen  
-- **sp_columns_ex** wird ausgeführt, indem das COLUMNS-Rowset der **IDBSchemaRowset** -Schnittstelle des OLE DB Anbieters abgefragt wird, der *table_server* entspricht. Die Parameter *table_name* , *TABLE_SCHEMA* , *TABLE_CATALOG* und *Column* werden an diese Schnittstelle übermittelt, um die zurückgegebenen Zeilen einzuschränken.  
+- **sp_columns_ex** wird ausgeführt, indem das COLUMNS-Rowset der **IDBSchemaRowset** -Schnittstelle des OLE DB Anbieters abgefragt wird, der *table_server* entspricht. Die Parameter *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG* und *Column* werden an diese Schnittstelle übermittelt, um die zurückgegebenen Zeilen einzuschränken.  
   
 - **sp_columns_ex** gibt ein leeres Resultset zurück, wenn der OLE DB Anbieter des angegebenen Verbindungs Servers das COLUMNS-Rowset der **IDBSchemaRowset** -Schnittstelle nicht unterstützt.  
   

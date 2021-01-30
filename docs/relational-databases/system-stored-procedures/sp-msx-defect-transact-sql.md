@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_msx_defect
 - sp_msx_defect_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1b5ea1139e0cfc1b27d7b79df29e6c1b1381b4d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2ca7f1d044ddfe0730052ff811e6084d5c070b6d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541542"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174443"
 ---
 # <a name="sp_msx_defect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @forced_defection = ] forced_defection` Gibt an, ob der Abgleich erzwungen werden soll, wenn der Master SQLServerAgent aufgrund einer unumkehrbar beschädigten **msdb** -Datenbank oder einer **msdb** -Datenbanksicherung dauerhaft verloren gegangen ist. *forced_defection*ist vom Typ **Bit**. der Standardwert ist **0**. Dies bedeutet, dass keine erzwungene Ausführung erfolgen soll. Ein Wert von **1** erzwingt das Abgleichen.  
+`[ @forced_defection = ] forced_defection` Gibt an, ob der Abgleich erzwungen werden soll, wenn der Master SQLServerAgent aufgrund einer unumkehrbar beschädigten **msdb** -Datenbank oder einer **msdb** -Datenbanksicherung dauerhaft verloren gegangen ist. *forced_defection* ist vom Typ **Bit**. der Standardwert ist **0**. Dies bedeutet, dass keine erzwungene Ausführung erfolgen soll. Ein Wert von **1** erzwingt das Abgleichen.  
   
- Nachdem Sie durch Ausführen von **sp_msx_defect**eine Ablauf Verfolgung erzwungen haben, muss ein Mitglied der festen Server Rolle **sysadmin** auf dem Master SQLServerAgent den folgenden Befehl ausführen, um den Abgleich abzuschließen:  
+ Nachdem Sie durch Ausführen von **sp_msx_defect** eine Ablauf Verfolgung erzwungen haben, muss ein Mitglied der festen Server Rolle **sysadmin** auf dem Master SQLServerAgent den folgenden Befehl ausführen, um den Abgleich abzuschließen:  
   
 ```  
 EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defection =  0;  

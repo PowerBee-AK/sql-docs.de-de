@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_OAGetProperty_TSQL
 - sp_OAGetProperty
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad769910b74dafd2727719980c6070d9487094da
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0542ae7cf67fb5b05c63a4c8cdb9ef9fb31c62e2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545991"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174410"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_OAGetProperty objecttoken , propertyname
   
 ## <a name="arguments"></a>Argumente  
  *objecttoken*  
- Das Objekttoken eines zuvor mit **sp_OACreate**erstellten OLE-Objekts.  
+ Das Objekttoken eines zuvor mit **sp_OACreate** erstellten OLE-Objekts.  
   
  *propertyname*  
  Der Eigenschaftsname des OLE-Objekts, dessen Wert zurückgegeben werden soll.  
@@ -53,7 +53,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  Wenn die Eigenschaft ein OLE-Objekt zurückgibt, muss *PropertyValue* eine lokale Variable vom Datentyp ' **int**' sein. Ein Objekt Token wird in der lokalen Variablen gespeichert, und dieses Objekt Token kann mit anderen gespeicherten Prozeduren der OLE-Automatisierung verwendet werden.  
   
- Wenn die Eigenschaft einen einzelnen Wert zurückgibt, geben Sie entweder eine lokale Variable für *PropertyValue*an, die den Eigenschafts Wert in der lokalen Variablen zurückgibt. oder geben Sie nicht *PropertyValue*an, der den Eigenschafts Wert an den Client als einspaltigen Resultset mit einer Zeile zurückgibt.  
+ Wenn die Eigenschaft einen einzelnen Wert zurückgibt, geben Sie entweder eine lokale Variable für *PropertyValue* an, die den Eigenschafts Wert in der lokalen Variablen zurückgibt. oder geben Sie nicht *PropertyValue* an, der den Eigenschafts Wert an den Client als einspaltigen Resultset mit einer Zeile zurückgibt.  
   
  Wenn die Eigenschaft ein Array zurückgibt, ist PropertyValue auf NULL festgelegt, wenn *PropertyValue* angegeben wird.  
   
