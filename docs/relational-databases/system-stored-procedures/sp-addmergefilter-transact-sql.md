@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addmergefilter
 - sp_addmergefilter_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 662fc45f9d2d4377bdb9a02ce69047a469d5bfe7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 836f493a3ae4ca6d3f17928af0d5faa367bdd1b4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546283"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192340"
 ---
 # <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,22 +46,22 @@ sp_addmergefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung, in der der Mergefilter hinzugefügt wird. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, in der der Mergefilter hinzugefügt wird. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @article = ] 'article'` Der Name des Artikels, für den der Mergefilter hinzugefügt wird. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @article = ] 'article'` Der Name des Artikels, für den der Mergefilter hinzugefügt wird. der *Artikel* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @filtername = ] 'filtername'` Der Name des Filters. *Filter Name* ist ein erforderlicher Parameter. *Filter Name*ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @filtername = ] 'filtername'` Der Name des Filters. *Filter Name* ist ein erforderlicher Parameter. *Filter Name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @join_articlename = ] 'join_articlename'` Der übergeordnete Artikel, mit dem der durch *Artikel*angegebene untergeordnete Artikel mithilfe der von *join_filterclause*angegebenen joinklausel verknüpft werden muss, um die Zeilen im untergeordneten Artikel zu ermitteln, die das Filter Kriterium des Mergefilters erfüllen. *join_articlename* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Der Artikel muss in der Veröffentlichung vorliegen, die von der *Veröffentlichung*angegeben wird.  
+`[ @join_articlename = ] 'join_articlename'` Der übergeordnete Artikel, mit dem der durch *Artikel* angegebene untergeordnete Artikel mithilfe der von *join_filterclause* angegebenen joinklausel verknüpft werden muss, um die Zeilen im untergeordneten Artikel zu ermitteln, die das Filter Kriterium des Mergefilters erfüllen. *join_articlename* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert. Der Artikel muss in der Veröffentlichung vorliegen, die von der *Veröffentlichung* angegeben wird.  
   
-`[ @join_filterclause = ] join_filterclause` Die Join-Klausel, die verwendet werden muss, um den untergeordneten Artikel, der durch den *Artikel*angegeben ist, und den von *join_article*angegebenen übergeordneten Artikel zu verknüpfen, um die Zeilen zu bestimmen, die den Mergefilter *join_filterclause* ist vom Datentyp **nvarchar (1000)**.  
+`[ @join_filterclause = ] join_filterclause` Die Join-Klausel, die verwendet werden muss, um den untergeordneten Artikel, der durch den *Artikel* angegeben ist, und den von *join_article* angegebenen übergeordneten Artikel zu verknüpfen, um die Zeilen zu bestimmen, die den Mergefilter *join_filterclause* ist vom Datentyp **nvarchar (1000)**.  
   
-`[ @join_unique_key = ] join_unique_key` Gibt an, ob der Join zwischen dem untergeordneten *Artikel und dem übergeordneten Artikel* *join_article*"1: n", "eins zu eins", "n:1" oder "m:n" ist. *join_unique_key* ist vom Datentyp **int**und hat den Standardwert 0. der Wert **0** gibt einen n:1-oder eine m:n-Join an. **1** gibt einen 1:1-oder 1: n-Join an. Dieser Wert ist **1** , wenn die Joinspalten einen eindeutigen Schlüssel in *join_article*bilden, oder wenn *join_filterclause* zwischen einem Fremdschlüssel in einem *Artikel* und einem Primärschlüssel in *join_article*liegt.  
+`[ @join_unique_key = ] join_unique_key` Gibt an, ob der Join zwischen dem untergeordneten *Artikel und dem übergeordneten Artikel* *join_article*"1: n", "eins zu eins", "n:1" oder "m:n" ist. *join_unique_key* ist vom Datentyp **int** und hat den Standardwert 0. der Wert **0** gibt einen n:1-oder eine m:n-Join an. **1** gibt einen 1:1-oder 1: n-Join an. Dieser Wert ist **1** , wenn die Joinspalten einen eindeutigen Schlüssel in *join_article* bilden, oder wenn *join_filterclause* zwischen einem Fremdschlüssel in einem *Artikel* und einem Primärschlüssel in *join_article* liegt.  
   
 > [!CAUTION]  
 >  Legen Sie diesen Parameter nur auf **1** fest, wenn eine Einschränkung für die Spalte beitreten in der zugrunde liegenden Tabelle für den übergeordneten Artikel vorhanden ist, der die Eindeutigkeit gewährleistet. Wenn *join_unique_key* falsch festgelegt ist, kann **eine** nicht Konvergenz von Daten auftreten.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *force_invalidate_snapshot* ist ein **Bit**und hat den Standardwert **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *force_invalidate_snapshot* ist ein **Bit** und hat den Standardwert **0**.  
   
  der Wert **0** gibt an, dass Änderungen am Mergeartikel nicht bewirken, dass die Momentaufnahme ungültig wird. Wenn die gespeicherte Prozedur erkennt, dass die Änderung eine neue Momentaufnahme erfordert, tritt ein Fehler auf, und es werden keine Änderungen vorgenommen.  
   
@@ -86,7 +86,7 @@ sp_addmergefilter [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_addmergefilter** wird bei der Mergereplikation verwendet.  
   
  **sp_addmergefilter** können nur mit Tabellen Artikeln verwendet werden. Artikel für Sichten und indizierte Sichten werden nicht unterstützt.  
@@ -105,7 +105,7 @@ sp_addmergefilter [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_addmergefilter](../../relational-databases/replication/codesnippet/tsql/sp-addmergefilter-transa_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addmergefilter**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addmergefilter** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::Execute
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d5f0c63773a0eb07233ffff0eb74f39e45baf33
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2fc73324160dd46a6d626c0db889a4213c9fc438
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973551"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167487"
 ---
 # <a name="execute-method-ado-connection"></a>Execute-Methode (ADO-Verbindung)
 Führt die angegebene Abfrage, die SQL-Anweisung, die gespeicherte Prozedur oder den anbieterspezifischen Text aus.  
@@ -40,7 +40,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
 #### <a name="parameters"></a>Parameter  
  *CommandText*  
- Ein **Zeichen** folgen Wert, der die SQL-Anweisung, die gespeicherte Prozedur, eine URL oder einen anbieterspezifischen Text enthält, der ausgeführt werden soll. **Optional**können Tabellennamen verwendet werden, aber nur, wenn der Anbieter SQL unterstützt. Wenn z. b. ein Tabellenname mit dem Namen "Customers" verwendet wird, stellt ADO automatisch die standardmäßige SQL SELECT-Syntax zum bilden voran und übergibt "SELECT * FROM Customers" als [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisung an den Anbieter.  
+ Ein **Zeichen** folgen Wert, der die SQL-Anweisung, die gespeicherte Prozedur, eine URL oder einen anbieterspezifischen Text enthält, der ausgeführt werden soll. **Optional** können Tabellennamen verwendet werden, aber nur, wenn der Anbieter SQL unterstützt. Wenn z. b. ein Tabellenname mit dem Namen "Customers" verwendet wird, stellt ADO automatisch die standardmäßige SQL SELECT-Syntax zum bilden voran und übergibt "SELECT * FROM Customers" als [!INCLUDE[tsql](../../../includes/tsql-md.md)] Anweisung an den Anbieter.  
   
  *RecordsAffected*  
  Optional. Eine **lange** Variable, in der der Anbieter die Anzahl der Datensätze zurückgibt, auf die sich der Vorgang ausgewirkt hat.  
@@ -52,10 +52,10 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
  Verwenden Sie nicht **adExecuteStream** mit der **Execute** -Methode eines **Connection** -Objekts.  
   
- Verwenden Sie den commandtypeenumum-Wert von adcmdfile oder adCmdTableDirect nicht mit Execute. Diese Werte können nur als Optionen mit den Methoden der [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) und der [Requery-Methode](../../../ado/reference/ado-api/requery-method.md) eines **Recordsets**verwendet werden.  
+ Verwenden Sie den commandtypeenumum-Wert von adcmdfile oder adCmdTableDirect nicht mit Execute. Diese Werte können nur als Optionen mit den Methoden der [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) und der [Requery-Methode](../../../ado/reference/ado-api/requery-method.md) eines **Recordsets** verwendet werden.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die Verwendung der Execute-Methode für ein [Verbindungs Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt führt jede **beliebige** Abfrage aus, die Sie im CommandText-Argument der angegebenen Verbindung an die-Methode übergeben. Wenn das CommandText-Argument eine Abfrage mit Zeilen Rückgabe angibt, werden alle von der Ausführung generierten Ergebnisse in einem neuen **Recordset** -Objekt gespeichert. Wenn der Befehl keine Ergebnisse zurückgeben soll (z. b. eine SQL-Update Abfrage), gibt der Anbieter **nichts** zurück, solange die Option **adExecuteNoRecords** angegeben ist. Andernfalls wird von Execute ein geschlossenes **Recordset**zurückgegeben.  
+ Die Verwendung der Execute-Methode für ein [Verbindungs Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt führt jede **beliebige** Abfrage aus, die Sie im CommandText-Argument der angegebenen Verbindung an die-Methode übergeben. Wenn das CommandText-Argument eine Abfrage mit Zeilen Rückgabe angibt, werden alle von der Ausführung generierten Ergebnisse in einem neuen **Recordset** -Objekt gespeichert. Wenn der Befehl keine Ergebnisse zurückgeben soll (z. b. eine SQL-Update Abfrage), gibt der Anbieter **nichts** zurück, solange die Option **adExecuteNoRecords** angegeben ist. Andernfalls wird von Execute ein geschlossenes **Recordset** zurückgegeben.  
   
  Das zurückgegebene **Recordset** -Objekt ist immer ein Schreib geschützter Vorwärts Cursor. Wenn Sie ein **Recordset** -Objekt mit mehr Funktionalität benötigen, erstellen Sie zunächst ein **Recordset** -Objekt mit den gewünschten Eigenschafts Einstellungen, und verwenden Sie dann die [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode des **Recordset** -Objekts, um die Abfrage auszuführen und den gewünschten Cursortyp zurückzugeben.  
   

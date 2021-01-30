@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropextendedproperty_TSQL
 - sp_dropextendedproperty
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 28a73c5cea3f957c83529de4d452efc88f6a6551
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c42236cc1f0157d774ea38d356ba8f122407c2c3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549784"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205142"
 ---
 # <a name="sp_dropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,7 +83,7 @@ sp_dropextendedproperty
 ## <a name="remarks"></a>Bemerkungen  
  Zum Angeben erweiterter Eigenschaften werden die Objekte in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank in drei Ebenen unterteilt: 0, 1 und 2. Die Ebene 0 ist die höchste Ebene und ist definiert als Objekte, die im Datenbankbereich enthalten sind. Objekte der Ebene 1 sind in einem Schema- oder Benutzerbereich enthalten, und Objekte der Ebene 2 sind in Objekten der Ebene 1 enthalten. Erweiterte Eigenschaften können für Objekte auf einer dieser Ebenen definiert werden. Verweise auf ein Objekt einer Ebene müssen mit den Typen und Namen aller Objekte der höheren Ebenen gekennzeichnet werden.  
   
- Wenn alle Objekttypen und-Namen bei einem gültigen *property_name*NULL sind und eine Eigenschaft in der aktuellen Datenbank vorhanden ist, wird diese Eigenschaft gelöscht. Weitere Informationen finden Sie im Beispiel B, weiter unten in diesem Thema.  
+ Wenn alle Objekttypen und-Namen bei einem gültigen *property_name* NULL sind und eine Eigenschaft in der aktuellen Datenbank vorhanden ist, wird diese Eigenschaft gelöscht. Weitere Informationen finden Sie im Beispiel B, weiter unten in diesem Thema.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Mitglieder der festen Datenbankrollen db_owner und db_ddladmin können erweiterte Eigenschaften beliebiger Objekte mit folgender Ausnahme löschen: db_ddladmin kann weder der Datenbank noch Benutzern oder Rollen Eigenschaften hinzufügen.  
@@ -134,7 +134,7 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys. fn_listextendedproperty &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
  [sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  

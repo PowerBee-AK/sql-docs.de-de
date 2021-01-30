@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_createstats_TSQL
 - sp_createstats
@@ -19,12 +19,12 @@ ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7af34bd1bbe065012b18826f7edaec31940d1e50
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a0fb35bd43125370dc4123425cc919be3033951f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466871"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205209"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +63,7 @@ sp_createstats
 ## <a name="result-sets"></a>Resultsets  
  Jedes neue Statistikobjekt hat den gleichen Namen wie die Spalte, für die es erstellt wurde.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_createstats erstellt oder aktualisiert keine Statistiken für Spalten, bei denen es sich um die erste Spalte in einem vorhandenen Statistik Objekt handelt.  Dies umfasst die erste Spalte von Statistiken, die für Indizes erstellt wurden, Spalten mit einspaltigen Statistiken, die mit AUTO_CREATE_STATISTICS Option generiert wurden, und die erste Spalte der Statistik, die mit der CREATE STATISTICS-Anweisung erstellt wurde. sp_createstats erstellt keine Statistiken für die ersten Spalten deaktivierter Indizes, es sei denn, diese Spalte wird in einem anderen aktivierten Index verwendet. sp_createstats erstellt keine Statistiken für Tabellen mit einem deaktivierten gruppierten Index.  
   
  Wenn die Tabelle einen Spaltensatz enthält, werden mit sp_createstats keine Statistiken für Sparsespalten erstellt. Weitere Informationen zu Spalten Sätzen und sparsespalten finden Sie unter Verwenden von Spalten [Sätzen](../../relational-databases/tables/use-column-sets.md) und [Verwenden von sparsespalten](../../relational-databases/tables/use-sparse-columns.md).  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - DataControl
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81f7d1a3ca15eaf2ebc2bb6dbaff20ba7762d89c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5c65d8f639ec1747e7085f8d88c266ed6b6299d4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721101"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169004"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl-Objekt (RDS)
 Bindet ein Datenabfrage- [Recordset](../ado-api/recordset-object-ado.md) an ein oder mehrere Steuerelemente (z. b. ein Textfeld, ein Raster Steuerelement oder ein Kombinations Feld), um die **Recordsetdaten** auf einer Webseite anzuzeigen.  
@@ -52,7 +52,7 @@ Bindet ein Datenabfrage- [Recordset](../ado-api/recordset-object-ado.md) an ein 
  Alle Eigenschaften im **RDS. DataControl** ist optional, da benutzerdefinierte Geschäftsobjekte ihre Funktionalität ersetzen können.  
   
 > [!NOTE]
->  Wenn Sie mehrere Ergebnisse Abfragen, wird nur das erste [Recordset](../ado-api/recordset-object-ado.md) zurückgegeben. Wenn mehrere Resultsets benötigt werden, weisen Sie jede der eigenen **DataControl**zu. Ein Beispiel für eine Abfrage für mehrere Ergebnisse könnte wie folgt lauten: `"Select * from Authors, Select * from Topics"`  
+>  Wenn Sie mehrere Ergebnisse Abfragen, wird nur das erste [Recordset](../ado-api/recordset-object-ado.md) zurückgegeben. Wenn mehrere Resultsets benötigt werden, weisen Sie jede der eigenen **DataControl** zu. Ein Beispiel für eine Abfrage für mehrere Ergebnisse könnte wie folgt lauten: `"Select * from Authors, Select * from Topics"`  
   
  Hinzufügen von "DFMode = 20;" zu ihrer Verbindungs Zeichenfolge, wenn Sie das **RDS verwenden. Das DataControl** -Objekt kann die Leistung des Servers beim Aktualisieren von Daten verbessern. Mit dieser Einstellung verwendet das **RDSServer. DataFactory** -Objekt auf dem Server einen weniger ressourcenintensiven Modus. Die folgenden Funktionen sind in dieser Konfiguration jedoch nicht verfügbar:  
   
@@ -60,7 +60,7 @@ Bindet ein Datenabfrage- [Recordset](../ado-api/recordset-object-ado.md) an ein 
   
 -   Abrufen von Parameter-oder Spalten Informationen vor dem Aufrufen der **Execute** -Methode.  
   
--   Die **Transact-Updates** werden auf **true**festgelegt.  
+-   Die **Transact-Updates** werden auf **true** festgelegt.  
   
 -   Zeilen Status wird erhalten.  
   
@@ -72,7 +72,7 @@ Bindet ein Datenabfrage- [Recordset](../ado-api/recordset-object-ado.md) an ein 
   
 -   Verwenden von **adCmdTableDirect**.  
   
- Das **RDS. Das DataControl** -Objekt wird standardmäßig im asynchronen Modus ausgeführt. Wenn Sie für Ihre Anwendung eine synchrone Ausführung benötigen, legen Sie den [ExecuteOptions](./executeoptions-property-rds.md) -Parameter auf **adcExecSync** und den [FetchOptions](./fetchoptions-property-rds.md) -Parameter auf **adcFetchUpFront**fest, wie im folgenden Beispiel gezeigt.  
+ Das **RDS. Das DataControl** -Objekt wird standardmäßig im asynchronen Modus ausgeführt. Wenn Sie für Ihre Anwendung eine synchrone Ausführung benötigen, legen Sie den [ExecuteOptions](./executeoptions-property-rds.md) -Parameter auf **adcExecSync** und den [FetchOptions](./fetchoptions-property-rds.md) -Parameter auf **adcFetchUpFront** fest, wie im folgenden Beispiel gezeigt.  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"   

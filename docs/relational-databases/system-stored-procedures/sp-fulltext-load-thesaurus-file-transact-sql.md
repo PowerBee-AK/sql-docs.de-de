@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_fulltext_load_thesaurus_file
 - sp_fulltext_load_thesaurus_file_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7fa28cb49c289437bc6c9dea524d1ff9e8b8ac64
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 129bc6385628ef44d5103ddbac5f8ee7f51889ef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546172"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185409"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 
@@ -43,9 +43,9 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
 ## <a name="arguments"></a>Argumente  
  *lcid*  
- Eine ganze Zahl, mit der der Gebietsschemabezeichner (LCID) der Sprache zugeordnet wird, für die Sie die Thesaurus-XML-Definition laden möchten. Zum Abrufen der LCIDs von Sprachen, die auf einer Serverinstanz verfügbar sind, verwenden Sie die [sys. fulltext_languages &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) -Katalog Sicht.  
+ Eine ganze Zahl, mit der der Gebietsschemabezeichner (LCID) der Sprache zugeordnet wird, für die Sie die Thesaurus-XML-Definition laden möchten. Zum Abrufen der LCIDs von Sprachen, die auf einer Serverinstanz verfügbar sind, verwenden Sie die [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) -Katalog Sicht.  
   
- ** \@ loadonlyifnotloaded**-  =  *Aktion*  
+ **\@ loadonlyifnotloaded**-  =  *Aktion*  
  Gibt an, ob die Thesaurusdatei in die internen Thesaurustabellen geladen wird, auch wenn sie bereits geladen wurde. die *Aktion* ist eine von:  
   
 |Wert|Definition|  
@@ -60,7 +60,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  Keine  
   
 ## <a name="remarks"></a>Bemerkungen  
- Thesaurusdateien werden automatisch von Volltextabfragen geladen, die den Thesaurus verwenden. Um die Auswirkungen auf die erstmalige Leistung von voll Text Abfragen zu vermeiden, empfiehlt es sich, **sp_fulltext_load_thesaurus_file**auszuführen.  
+ Thesaurusdateien werden automatisch von Volltextabfragen geladen, die den Thesaurus verwenden. Um die Auswirkungen auf die erstmalige Leistung von voll Text Abfragen zu vermeiden, empfiehlt es sich, **sp_fulltext_load_thesaurus_file** auszuführen.  
   
  Verwenden Sie [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)"**update_languages**", um die Liste der Sprachen zu aktualisieren, die für die Volltextsuche registriert sind.  
   

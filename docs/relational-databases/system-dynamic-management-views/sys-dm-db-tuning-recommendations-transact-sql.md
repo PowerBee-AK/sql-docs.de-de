@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_db_tuning_recommendations
 - dm_db_tuning_recommendations
@@ -22,12 +22,12 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cad75b88b14fd9bc64acbbd8b167619d3dbcc2e3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b9037aaefe27cd50deb9b61af423a8074ab86f65
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472881"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204812"
 ---
 # <a name="sysdm_db_tuning_recommendations-transact-sql"></a>Empfehlungen für die sys.DM-Datenbankoptimierung \_ \_ \_ (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -54,15 +54,15 @@ ms.locfileid: "97472881"
 | **\_Dauer der Aktions Wiederherstellung \_** | **time** | Dauer der Rückgängig-Aktion. |
 | **zurück \_ setzen \_ von Aktionen initiiert \_ von** | **nvarchar(4000)** | `User` = Benutzer manuell nicht erzwungener empfohlener Plan. <br /> `System` = System hat automatisch eine Empfehlung zurückgesetzt. |
 | **\_Aktion zum \_ Initiieren der Aktion \_** | **datetime2** | Datum, an dem die Empfehlung wieder hergestellt wurde. |
-| **Endergebnis** | **int** | Geschätzter Wert/Auswirkung für diese Empfehlung auf der 0-100-Skala (je höher die bessere) |
+| **score** | **int** | Geschätzter Wert/Auswirkung für diese Empfehlung auf der 0-100-Skala (je höher die bessere) |
 | **Einzel** | **nvarchar(max)** | JSON-Dokument, das weitere Details zur Empfehlung enthält. Folgende Felder sind verfügbar:<br /><br />`planForceDetails`<br />-    `queryId` -Abfrage- \_ ID der zurück gestellten Abfrage.<br />-    `regressedPlanId` -plan_id des zurück gestellten Plans.<br />-   `regressedPlanExecutionCount` -Anzahl der Ausführungen der Abfrage mit einem zurück gestellten Plan, bevor die Regression erkannt wird.<br />-    `regressedPlanAbortedCount` -Anzahl der erkannten Fehler während der Ausführung des zurück gestellten Plans.<br />-    `regressedPlanCpuTimeAverage` -Durchschnittliche CPU-Zeit (in Mikrosekunden), die von der zurück gestellten Abfrage beansprucht wird, bevor die Regression erkannt wird.<br />-    `regressedPlanCpuTimeStddev` -Standard Abweichung der CPU-Zeit, die von der zurück gestellten Abfrage beansprucht wird, bevor die Regression erkannt wird.<br />-    `recommendedPlanId` -plan_id des Plans, der erzwungen werden soll.<br />-   `recommendedPlanExecutionCount`-Anzahl der Ausführungen der Abfrage mit dem Plan, der erzwungen werden soll, bevor die Regression erkannt wird.<br />-    `recommendedPlanAbortedCount` -Anzahl der erkannten Fehler während der Ausführung des Plans, der erzwungen werden soll.<br />-    `recommendedPlanCpuTimeAverage` -Durchschnittliche CPU-Zeit (in Mikrosekunden), die von der Abfrage genutzt wird, die mit dem Plan ausgeführt wird, der erzwungen werden soll (berechnet, bevor die Regression erkannt wird).<br />-    `recommendedPlanCpuTimeStddev` Standard Abweichung der CPU-Zeit, die von der zurück gestellten Abfrage beansprucht wird, bevor die Regression erkannt wird.<br /><br />`implementationDetails`<br />-  `method` : Die Methode, die verwendet werden soll, um die Regression zu korrigieren. Der Wert ist immer `TSql` .<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] Skript, das ausgeführt werden soll, um den empfohlenen Plan zu erzwingen. |
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die von zurückgegebenen Informationen `sys.dm_db_tuning_recommendations` werden aktualisiert, wenn die Datenbank-Engine die mögliche Regression der Abfrageleistung identifiziert und nicht persistent ist. Empfehlungen werden nur beibehalten, bis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wird. Datenbankadministratoren sollten regelmäßig Sicherungskopien der Optimierungs Empfehlung erstellen, wenn Sie Sie nach dem wieder verwenden des Servers beibehalten möchten. 
 
  `currentValue` das Feld in der `state` Spalte kann die folgenden Werte aufweisen:
  
- | Status | Beschreibung |
+ | Status | BESCHREIBUNG |
  |--------|-------------|
  | `Active` | Die Empfehlung ist aktiv und wurde noch nicht angewendet. Der Benutzer kann ein Empfehlungs Skript erstellen und manuell ausführen. |
  | `Verifying` | Die Empfehlung wird von angewendet, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] und der interne Überprüfungsprozess vergleicht die Leistung des erzwungenen Plans mit dem zurück gestellten Plan. |

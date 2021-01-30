@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - FieldStatusEnum
@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d30c0bc3508c364b7a0d52f23ccb52d11e06f8d5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 968a4205a12e9f6ff36c3bff512cf41ae60ca469
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973091"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167350"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 Gibt den [Status](./status-property-ado-field.md) eines [Feld Objekts](./field-object.md)an.  
   
- Die **adfieldpending \* ** -Werte geben den Vorgang an, der bewirkt hat, dass der Status festgelegt wurde, und können mit anderen Status Werten kombiniert werden.  
+ Die **adfieldpending \** _-Werte geben den Vorgang an, der bewirkt hat, dass der Status festgelegt wurde, und können mit anderen Status Werten kombiniert werden.  
   
-|Konstante|Wert|Beschreibung|  
+|Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|**adfieldalread yexistiert**|26|Gibt an, dass das angegebene Feld bereits vorhanden ist.|  
+|_ *adfieldallesist vorhanden**|26|Gibt an, dass das angegebene Feld bereits vorhanden ist.|  
 |**adfieldbadstatus**|12|Gibt an, dass ein ungültiger Statuswert von ADO an den OLE DB-Anbieter gesendet wurde. Zu den möglichen Ursachen gehören ein OLE DB 1,0-oder 1,1-Anbieter oder eine falsche Kombination aus [Wert](./value-property-ado.md) und [Status](./status-property-ado-field.md).|  
 |**adfieldcannotcomplete**|20|Gibt an, dass der Server der von der [Quelle](./source-property-ado-record.md) angegebenen URL den Vorgang nicht beenden konnte.|  
 |**adfieldcannotdelta etesource**|23|Gibt an, dass während eines Verschiebungs Vorgangs eine Struktur oder Teilstruktur an eine neue Position verschoben wurde, die Quelle jedoch nicht gelöscht werden konnte.|  

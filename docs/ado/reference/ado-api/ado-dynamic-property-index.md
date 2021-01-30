@@ -6,18 +6,18 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bbf4cdae12da71f5fc4d3b8fbc11b7ca64c46c5b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4d3d765cbeba49a5c34bbc5529d833cefc5bb1ab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976491"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167909"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO – Index für dynamische Eigenschaften
 Datenanbieter, Dienstanbieter und Dienst Komponenten können den **Eigenschaften** Auflistungen der nicht geöffneten [Verbindungs](./connection-object-ado.md) -und [Recordset](./recordset-object-ado.md) -Objekte dynamische Eigenschaften hinzufügen. Ein bestimmter Anbieter kann auch zusätzliche Eigenschaften einfügen, wenn diese Objekte geöffnet werden. Einige dieser Eigenschaften werden im Abschnitt " [Eigenschaften](./ado-dynamic-properties.md) von ADO.net" aufgeführt. Weitere Informationen finden Sie unter den jeweiligen Anbietern im Abschnitt [Anhang A: Anbieter](../../guide/appendixes/appendix-a-providers.md) .  
@@ -48,7 +48,7 @@ Datenanbieter, Dienstanbieter und Dienst Komponenten können den **Eigenschaften
 |Group by-Unterstützung|DBPROP_GROUPBY|  
 |Unterstützung heterogener Tabellen|DBPROP_HETEROGENEOUSTABLES|  
 |Sensitivität bei Bezeichnern|DBPROP_IDENTIFIERCASE|  
-|Anfangskatalog|DBPROP_INIT_CATALOG|  
+|Initial Catalog|DBPROP_INIT_CATALOG|  
 |Isolationsstufen|DBPROP_SUPPORTEDTXNISOLEVELS|  
 |Isolations Beibehaltung|DBPROP_SUPPORTEDTXNISORETAIN|  
 |Locale Identifier|DBPROP_INIT_LCID|  
@@ -72,16 +72,16 @@ Datenanbieter, Dienstanbieter und Dienst Komponenten können den **Eigenschaften
 |Verfügbarkeit der Ausgabe Parameter|DBPROP_OUTPUTPARAMETERAVAILABILITY|  
 |Pass-by-Verweis-Accessoren|DBPROP_BYREFACCESSORS|  
 |Kennwort|DBPROP_AUTH_PASSWORD|  
-|Sicherheitsinformationen permanent speichern|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|  
+|Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|  
 |Persistente ID-Typ|DBPROP_PERSISTENTIDTYPE|  
 |Abbruch Verhalten vorbereiten|DBPROP_PREPAREABORTBEHAVIOR|  
 |Commit-Verhalten vorbereiten|DBPROP_PREPARECOMMITBEHAVIOR|  
 |Prozedur Begriff|DBPROP_PROCEDURETERM|  
-|Prompt|DBPROP_INIT_PROMPT|  
+|Eingabeaufforderung|DBPROP_INIT_PROMPT|  
 |Anzeige Name des Anbieters|DBPROP_PROVIDERFRIENDLYNAME|  
 |Anbietername|DBPROP_PROVIDERFILENAME|  
 |Anbieterversion|DBPROP_PROVIDERVER|  
-|Schreibgeschützte Datenquelle|DBPROP_DATASOURCEREADONLY|  
+|Datenquelle Read-Only|DBPROP_DATASOURCEREADONLY|  
 |Rowsetkonvertierungen für Befehl|DBPROP_ROWSETCONVERSIONSONCOMMAND|  
 |Schema Begriff|DBPROP_SCHEMATERM|  
 |Schema Verwendung|DBPROP_SCHEMAUSAGE|  
@@ -126,7 +126,7 @@ Datenanbieter, Dienstanbieter und Dienst Komponenten können den **Eigenschaften
 |IStream|DBPROP_ISTREAM|  
 |ISupportErrorInfo|DBPROP_ISUPPORTERRORINFO|  
 |Zugriffs Reihenfolge|DBPROP_ACCESSORDER|  
-|Nur Append-Rowset|DBPROP_APPENDONLY|  
+|Append-Only-Rowset|DBPROP_APPENDONLY|  
 |Asynchrone Rowsetverarbeitung|DBPROP_ROWSET_ASYNCH|  
 |Automatisch neu berechnen|DBPROP_ADC_AUTORECALC|  
 |Hintergrundfetch-Größe|DBPROP_ASYNCHFETCHSIZE|  

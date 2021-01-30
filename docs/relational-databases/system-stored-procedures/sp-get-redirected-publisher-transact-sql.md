@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_get_redirected_publisher_TSQL
 - sp_get_redirected_publisher
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5a71799e3d7820ce4a142d6c9ec7d55b743214fb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fa1a1b8f7cffe3f98435ebd48a404fb76df34c8a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538922"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204760"
 ---
 # <a name="sp_get_redirected_publisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +39,9 @@ sp_get_redirected_publisher
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @original_publisher = ] 'original_publisher'` Der Name der Instanz von SQL Server, die die Datenbank ursprünglich veröffentlicht hat. *original_publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.
+`[ @original_publisher = ] 'original_publisher'` Der Name der Instanz von SQL Server, die die Datenbank ursprünglich veröffentlicht hat. *original_publisher* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.
   
-`[ @publisher_db = ] 'publisher_db'` Der Name der Datenbank, die veröffentlicht wird. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Datenbank, die veröffentlicht wird. *publisher_db* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 `[ @bypass_publisher_validation = ] [0 | 1 ]` Wird verwendet, um die Validierung des umgeleiteten Verlegers zu umgehen. Wenn der Wert 0 ist, wird die Validierung ausgeführt. Bei 1 wird keine Überprüfung durchgeführt. *bypass_publisher_validation* ist vom Typ **Bit**. der Standardwert ist 0.  
   
@@ -57,8 +57,8 @@ sp_get_redirected_publisher
 |**error_severity**|**int**|Der Schweregrad des Überprüfungsfehlers.|  
 |**error_message**|**nvarchar(4000)**|Der Text der Überprüfungsfehlermeldung.|  
   
-## <a name="remarks"></a>Hinweise  
- *redirected_publisher* gibt den Namen des aktuellen Verlegers zurück. Gibt NULL zurück, wenn der Verleger und die Veröffentlichungs Datenbanken nicht mithilfe von **sp_redirect_publisher**umgeleitet wurden.  
+## <a name="remarks"></a>Bemerkungen  
+ *redirected_publisher* gibt den Namen des aktuellen Verlegers zurück. Gibt NULL zurück, wenn der Verleger und die Veröffentlichungs Datenbanken nicht mithilfe von **sp_redirect_publisher** umgeleitet wurden.  
   
  Wenn keine Überprüfung angefordert wird oder wenn kein Eintrag für den Verleger und die Veröffentlichungs Datenbank vorhanden ist, wird *ERROR_NUMBER* und *ERROR_SEVERITY* 0 zurückgegeben und *ERROR_MESSAGE* NULL zurückgegeben.  
   

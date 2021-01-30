@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - cursor library [ODBC], error codes
 - error codes [ODBC], cursor library
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9713480e-8744-4f37-a630-20871590d4a1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 414de02eb7145006af4faa543735888082a3d6ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6c9a4d7a68ddaf9f569a04acd8be81b993a636b1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466135"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193254"
 ---
 # <a name="odbc-cursor-library-error-codes"></a>ODBC-Cursorbibliothek – Fehlercodes
 > [!IMPORTANT]  
@@ -31,7 +31,7 @@ ms.locfileid: "88466135"
 > [!NOTE]  
 >  Die Cursor Bibliothek sortiert keine Statusdaten Sätze. Treiber-Manager und ODBC 3. *x* -Treiber sind für das Anordnen von Statusdaten Sätzen verantwortlich.  
   
-|SQLSTATE|Beschreibung|Kann zurückgegeben werden von|  
+|SQLSTATE|BESCHREIBUNG|Kann zurückgegeben werden von|  
 |--------------|-----------------|--------------------------|  
 |01000|Der Cursor kann nicht aktualisiert werden.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
 |01000|Die Cursor Bibliothek wird nicht verwendet. Fehler beim Laden.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
@@ -49,9 +49,9 @@ ms.locfileid: "88466135"
 |SL005|Die **Select** -Anweisung enthält eine Group By-Klausel.|**SQLGetData**|  
 |SL006|Parameter Arrays werden bei positionierten Anforderungen nicht unterstützt.|**SQLPrepare**<br /><br /> **SQLExecDirect**|  
 |SL008|**SQLGetData** ist für einen Vorwärts Cursor (nicht gepuffert) nicht zulässig.|**SQLGetData**|  
-|SL009|Vor dem Aufrufen von **SQLFetch** oder **SQLFetchScroll**wurden keine Spalten gebunden.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
+|SL009|Vor dem Aufrufen von **SQLFetch** oder **SQLFetchScroll** wurden keine Spalten gebunden.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
 |SL010|**SQLBindCol** hat beim Versuch, eine Bindung an einen internen Puffer herzustellen, SQL_ERROR zurückgegeben.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|SL011|Die Anweisungs Option ist nur gültig, nachdem **SQLFetch** oder **SQLFetchScroll**aufgerufen wurde.|**'SQLGetStmtAttr'**|  
+|SL011|Die Anweisungs Option ist nur gültig, nachdem **SQLFetch** oder **SQLFetchScroll** aufgerufen wurde.|**'SQLGetStmtAttr'**|  
 |SL012|Anweisungs Bindungen können nicht geändert werden, während ein Cursor geöffnet ist.|**SQLBindCol**<br /><br /> **SQLFreeHandle**<br /><br /> **'SQLFreeStmt'**<br /><br /> **SQLSetStmtAttr**|  
 |SL014|Eine positionierte Anforderung wurde ausgegeben, und es wurden nicht alle Felder der Spalten Anzahl gepuffert.|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLPrepare**|  
 |SL015|**SQLFetch** und **SQLFetchScroll** können nicht gemischt werden.|**SQLExtendedFetch**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**|

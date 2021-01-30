@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_get_ddl_history (Transact-SQL)
-title: sys. sp_cdc_get_ddl_history (Transact-SQL) | Microsoft-Dokumentation
+title: sys.sp_cdc_get_ddl_history (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_get_ddl_history
 - sp_cdc_get_ddl_history_TSQL
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b00c56c4324c4e25e9a19dd71d342dfcaafcc76d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b83e018c8e8e7c5e2f4daa704e5b7a13e7789f0b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547290"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205953"
 ---
 # <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,8 +62,8 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |ddl_lsn|**binary(10)**|Protokollfolgenummer (Log Sequence Number, LSN), die der DDL-Änderung zugeordnet wurde.|  
 |ddl_time|**datetime**|Der mit der DDL-Änderung verknüpfte Zeitpunkt.|  
   
-## <a name="remarks"></a>Hinweise  
- DDL-Änderungen an der Quell Tabelle, die die Spalten Struktur der Quell Tabelle ändern, z. b. das Hinzufügen oder Löschen einer Spalte oder das Ändern des Datentyps einer vorhandenen Spalte, werden in der Tabelle [CDC. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) beibehalten. Diese Änderungen können mithilfe dieser gespeicherten Prozedur gemeldet werden. Die Einträge in cdc.ddl_history erfolgen zu dem Zeitpunkt, zu dem der Aufzeichnungsprozess die DDL-Transaktion im Protokoll vorfindet.  
+## <a name="remarks"></a>Bemerkungen  
+ DDL-Änderungen an der Quell Tabelle, die die Spalten Struktur der Quell Tabelle ändern, z. b. das Hinzufügen oder Löschen einer Spalte oder das Ändern des Datentyps einer vorhandenen Spalte, werden in der [CDC.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) Tabelle beibehalten. Diese Änderungen können mithilfe dieser gespeicherten Prozedur gemeldet werden. Die Einträge in cdc.ddl_history erfolgen zu dem Zeitpunkt, zu dem der Aufzeichnungsprozess die DDL-Transaktion im Protokoll vorfindet.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Datenbankrolle db_owner, damit Zeilen für alle Aufzeichnungsinstanzen in der Datenbank zurückgegeben werden. Für alle anderen Benutzer ist die SELECT-Berechtigung für alle aufgezeichneten Spalten in der Quelltabelle und, wenn eine Gatingrolle für die Aufzeichnungsinstanz definiert wurde, eine Mitgliedschaft in dieser Datenbankrolle erforderlich.  

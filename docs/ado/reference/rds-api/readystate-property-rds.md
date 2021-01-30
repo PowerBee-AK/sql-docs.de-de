@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - ReadyState property [ADO]
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cdc3f2109d1938d7388454dcd1054deba341ed44
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: ce3cc80262b44ed824b61ddcd56631d15c5cfc65
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724331"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168816"
 ---
 # <a name="readystate-property-rds"></a>ReadyState-Eigenschaft (RDS)
 Gibt den Fortschritt eines [DataControl](./datacontrol-object-rds.md) -Objekts beim Abrufen von Daten in das [Recordset](../ado-api/recordset-object-ado.md) -Objekt an.  

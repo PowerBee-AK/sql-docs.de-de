@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - CancelUpdate method [RDS]
 ms.assetid: 76d8a6e9-bc6c-4ea0-8e7a-2bae5ed06650
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8cb9bcb9e0bf18cc2b6ab8d654eaccdc92ff7563
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c2a845eef1d48dd8a41d1499104908db9ba10be0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722621"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169062"
 ---
 # <a name="cancelupdate-method-rds"></a>CancelUpdate-Methode (RDS)
 Bricht alle Änderungen ab, die an der aktuellen oder neuen Zeile eines [Recordset](../ado-api/recordset-object-ado.md) -Objekts vorgenommen wurden.  
@@ -39,7 +39,7 @@ DataControl.CancelUpdate
  Eine Objekt Variable, die einen [RDS darstellt. DataControl](./datacontrol-object-rds.md) -Objekt.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Der Cursor Dienst für OLE DB behält sowohl eine Kopie der ursprünglichen Werte als auch einen Cache von Änderungen bei. Wenn Sie **CancelUpdate**aufrufen, wird der Cache der Änderungen auf "Empty" zurückgesetzt, und alle gebundenen Steuerelemente werden mit den ursprünglichen Daten aktualisiert.  
+ Der Cursor Dienst für OLE DB behält sowohl eine Kopie der ursprünglichen Werte als auch einen Cache von Änderungen bei. Wenn Sie **CancelUpdate** aufrufen, wird der Cache der Änderungen auf "Empty" zurückgesetzt, und alle gebundenen Steuerelemente werden mit den ursprünglichen Daten aktualisiert.  
   
 ## <a name="applies-to"></a>Gilt für  
  [DataControl-Objekt (RDS)](./datacontrol-object-rds.md)  

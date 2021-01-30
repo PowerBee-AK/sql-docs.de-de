@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLConnect
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 714bc6f69a72609ee266effff71f1898d62ec7d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90d982db52e0656fba25eb54065ea84b751a7b18
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461202"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206133"
 ---
 # <a name="sqlconnect-function"></a>SQLConnect-Funktion
 **Konformitäts**  
@@ -70,13 +70,13 @@ SQLRETURN SQLConnect(
  *NameLength3*  
  Der Länge der *-*Authentifizierung* in Zeichen.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE oder SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLCONNECT** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert abgerufen werden, indem **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_DBC und einem *handle* von *connectionHandle*aufgerufen wird. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die normalerweise von **SQLCONNECT** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
+ Wenn **SQLCONNECT** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert abgerufen werden, indem **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_DBC und einem *handle* von *connectionHandle* aufgerufen wird. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die normalerweise von **SQLCONNECT** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|Beschreibung|  
+|SQLSTATE|Fehler|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |01s02 entsprechen|Optionswert geändert|Der Treiber hat den angegebenen Wert des *ValuePtr* -Arguments in **SQLSetConnectAttr** nicht unterstützt und ersetzt einen ähnlichen Wert. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
@@ -85,12 +85,12 @@ SQLRETURN SQLConnect(
 |08004|Der Server hat die Verbindung abgelehnt.|Die Datenquelle hat die Einrichtung der Verbindung aus Implementierungs Gründen abgelehnt.|  
 |08S01|Kommunikations Verbindungsfehler|Der Kommunikationslink zwischen dem Treiber und der Datenquelle, mit dem der Treiber eine Verbindung herstellen wollte, ist fehlgeschlagen, bevor die Funktion die Verarbeitung abgeschlossen hat.|  
 |28000|Ungültige Autorisierungs Spezifikation|Der für das Argument *username* angegebene Wert oder der für die Argument *Authentifizierung* angegebene Wert verletzt die von der Datenquelle definierten Einschränkungen.|  
-|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im *\* MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
 |HY001|Fehler bei der Speicher Belegung|(DM) der Treiber-Manager konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
-|HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für *connectionHandle*aktiviert. Die **SQLCONNECT** -Funktion wurde aufgerufen, und bevor die Ausführung abgeschlossen wurde, wurde die [sqlcancelhandle-Funktion](../../../odbc/reference/syntax/sqlcancelhandle-function.md) für *connectionHandle*aufgerufen, und anschließend wurde die **SQLCONNECT** -Funktion für *connectionHandle*erneut aufgerufen.<br /><br /> Oder die **SQLCONNECT** -Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **sqlcancelhandle** für *connectionHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
+|HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für *connectionHandle* aktiviert. Die **SQLCONNECT** -Funktion wurde aufgerufen, und bevor die Ausführung abgeschlossen wurde, wurde die [sqlcancelhandle-Funktion](../../../odbc/reference/syntax/sqlcancelhandle-function.md) für *connectionHandle* aufgerufen, und anschließend wurde die **SQLCONNECT** -Funktion für *connectionHandle* erneut aufgerufen.<br /><br /> Oder die **SQLCONNECT** -Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **sqlcancelhandle** für *connectionHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
 |HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für *connectionHandle* aufgerufen und ausgeführt, als diese Funktion aufgerufen wurde.|  
 |HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
-|HY090|Ungültige Zeichen folgen-oder Pufferlänge|(DM) der für das Argument *NameLength1*, *NameLength2*oder *NameLength3* angegebene Wert war kleiner als 0 (null), aber nicht gleich SQL_NTS.<br /><br /> (DM) der für das Argument *NameLength1* angegebene Wert hat die maximale Länge für einen Datenquellen Namen überschritten.|  
+|HY090|Ungültige Zeichen folgen-oder Pufferlänge|(DM) der für das Argument *NameLength1*, *NameLength2* oder *NameLength3* angegebene Wert war kleiner als 0 (null), aber nicht gleich SQL_NTS.<br /><br /> (DM) der für das Argument *NameLength1* angegebene Wert hat die maximale Länge für einen Datenquellen Namen überschritten.|  
 |HYT00|Timeout abgelaufen|Das Abfrage Timeout ist abgelaufen, bevor die Verbindung mit der Datenquelle abgeschlossen wurde. Der Timeout Zeitraum wird mithilfe von **SQLSetConnectAttr**, SQL_ATTR_LOGIN_TIMEOUT festgelegt.|  
 |HY114|Der Treiber unterstützt keine asynchrone Funktions Ausführung auf Verbindungs Ebene.|(DM) die Anwendung hat den asynchronen Vorgang für das Verbindungs Handle aktiviert, bevor die Verbindung hergestellt wird. Der Treiber unterstützt jedoch keine asynchronen Vorgänge für das Verbindungs Handle.|  
 |HYT01|Verbindungs Timeout abgelaufen|Der Verbindungs Timeout Zeitraum ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Der Timeout Zeitraum für die Verbindung wird über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT festgelegt.|  
@@ -101,27 +101,27 @@ SQLRETURN SQLConnect(
 |IM005|Fehler beim Treiber "sqlzugewiesene CHandle" auf SQL_HANDLE_DBC|(DM) bei der **SQLCONNECT**-Funktion hat der Treiber-Manager die **sqlzuweisung** -Funktion des Treibers mit dem *Typ* "SQL_HANDLE_DBC" aufgerufen, und der Treiber hat einen Fehler zurückgegeben.|  
 |IM006|Fehler bei ' SQLSetConnectAttr ' des Treibers.|Während der **SQLCONNECT**-Funktion hat der Treiber-Manager die **SQLSetConnectAttr** -Funktion des Treibers aufgerufen, und der Treiber hat einen Fehler zurückgegeben. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
 |IM009|Verbindung mit Übersetzungs-DLL kann nicht hergestellt werden.|Der Treiber konnte keine Verbindung mit der Übersetzungs-DLL herstellen, die für die Datenquelle angegeben wurde.|  
-|IM010|Der Datenquellen Name ist zu lang.|(DM) * \* Servername* ist länger als SQL_MAX_DSN_LENGTH Zeichen.|  
+|IM010|Der Datenquellen Name ist zu lang.|(DM) *\* Servername* ist länger als SQL_MAX_DSN_LENGTH Zeichen.|  
 |IM014|Der angegebene DSN enthält einen Architektur Konflikt zwischen dem Treiber und der Anwendung.|(DM) 32-Bit-Anwendung verwendet einen DSN, der eine Verbindung mit einem 64-Bit-Treiber herstellt. oder umgekehrt.|  
-|IM015|Fehler beim Treiber von SQLConnect auf SQL_HANDLE_DBC_INFO_HANDLE|Wenn ein Treiber SQL_ERROR zurückgibt, wird der Treiber-Manager SQL_ERROR an die Anwendung zurückgegeben, und die Verbindung wird nicht hergestellt.<br /><br /> Weitere Informationen zu SQL_HANDLE_DBC_INFO_TOKEN finden Sie unter [entwickeln von Verbindungs Pool Informationen in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).|  
+|IM015|Fehler beim Treiber von SQLConnect auf SQL_HANDLE_DBC_INFO_HANDLE|Wenn ein Treiber SQL_ERROR zurückgibt, wird der Treiber-Manager SQL_ERROR an die Anwendung zurückgegeben, und die Verbindung wird nicht hergestellt.<br /><br /> Weitere Informationen zu SQL_HANDLE_DBC_INFO_TOKEN finden Sie unter [entwickeln von Connection-Pool Awareness in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).|  
 |IM017|Der Abruf ist im asynchronen Benachrichtigungs Modus deaktiviert.|Wenn das Benachrichtigungs Modell verwendet wird, ist das Abrufen deaktiviert.|  
 |IM018|**Sqlcompleteasync** wurde nicht aufgerufen, um den vorherigen asynchronen Vorgang für dieses Handle abzuschließen.|Wenn der vorherige Funktionsaufruf für das Handle SQL_STILL_EXECUTING zurückgibt und der Benachrichtigungs Modus aktiviert ist, muss **sqlcompleteasync** für das Handle aufgerufen werden, um die Nachbearbeitung auszuführen und den Vorgang abzuschließen.|  
 |S1118|Der Treiber unterstützt keine asynchrone Benachrichtigung.|Wenn der Treiber keine asynchrone Benachrichtigung unterstützt, können Sie SQL_ATTR_ASYNC_DBC_EVENT oder SQL_ATTR_ASYNC_DBC_RETCODE_PTR nicht festlegen.|  
   
 ## <a name="comments"></a>Kommentare  
- Informationen dazu, warum eine Anwendung **SQLCONNECT**verwendet, finden Sie unter [Herstellen einer Verbindung mit SQLCONNECT](../../../odbc/reference/develop-app/connecting-with-sqlconnect.md).  
+ Informationen dazu, warum eine Anwendung **SQLCONNECT** verwendet, finden Sie unter [Herstellen einer Verbindung mit SQLCONNECT](../../../odbc/reference/develop-app/connecting-with-sqlconnect.md).  
   
- Der Treiber-Manager stellt keine Verbindung mit einem Treiber her, bis die Anwendung eine Funktion (**SQLCONNECT**, **SQLDriverConnect**oder **sqlbrowseconnetct**) zum Herstellen einer Verbindung mit dem Treiber aufruft. Bis zu diesem Zeitpunkt arbeitet der Treiber-Manager mit seinen eigenen Handles und verwaltet die Verbindungsinformationen. Wenn die Anwendung eine Verbindungsfunktion aufruft, überprüft der Treiber-Manager, ob zurzeit ein Treiber für das angegebene *connectionHandle*verbunden ist:  
+ Der Treiber-Manager stellt keine Verbindung mit einem Treiber her, bis die Anwendung eine Funktion (**SQLCONNECT**, **SQLDriverConnect** oder **sqlbrowseconnetct**) zum Herstellen einer Verbindung mit dem Treiber aufruft. Bis zu diesem Zeitpunkt arbeitet der Treiber-Manager mit seinen eigenen Handles und verwaltet die Verbindungsinformationen. Wenn die Anwendung eine Verbindungsfunktion aufruft, überprüft der Treiber-Manager, ob zurzeit ein Treiber für das angegebene *connectionHandle* verbunden ist:  
   
--   Wenn ein Treiber nicht mit verbunden ist, stellt der Treiber-Manager eine Verbindung mit dem Treiber her und ruft **sqlzubinchandle** mit dem *Handlertyp* SQL_HANDLE_ENV, **sqlzuordchandle** mit dem *Handlertyp* SQL_HANDLE_DBC, **SQLSetConnectAttr** (wenn die Anwendung Verbindungs Attribute angegeben hat) und der Verbindungsfunktion im Treiber auf. Der Treiber-Manager gibt SQLSTATE IM006 ( **SQLSetConnectOption** des Treibers) zurück und SQL_SUCCESS_WITH_INFO für die Verbindungsfunktion, wenn der Treiber einen Fehler für **SQLSetConnectAttr**zurückgegeben hat. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einer Datenquelle oder einem Treiber](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md).  
+-   Wenn ein Treiber nicht mit verbunden ist, stellt der Treiber-Manager eine Verbindung mit dem Treiber her und ruft **sqlzubinchandle** mit dem *Handlertyp* SQL_HANDLE_ENV, **sqlzuordchandle** mit dem *Handlertyp* SQL_HANDLE_DBC, **SQLSetConnectAttr** (wenn die Anwendung Verbindungs Attribute angegeben hat) und der Verbindungsfunktion im Treiber auf. Der Treiber-Manager gibt SQLSTATE IM006 ( **SQLSetConnectOption** des Treibers) zurück und SQL_SUCCESS_WITH_INFO für die Verbindungsfunktion, wenn der Treiber einen Fehler für **SQLSetConnectAttr** zurückgegeben hat. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einer Datenquelle oder einem Treiber](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md).  
   
--   Wenn der angegebene Treiber bereits mit dem *connectionHandle*verbunden ist, ruft der Treiber-Manager nur die Verbindungsfunktion im Treiber auf. In diesem Fall muss der Treiber sicherstellen, dass alle Verbindungs Attribute für das *connectionHandle* die aktuellen Einstellungen beibehalten.  
+-   Wenn der angegebene Treiber bereits mit dem *connectionHandle* verbunden ist, ruft der Treiber-Manager nur die Verbindungsfunktion im Treiber auf. In diesem Fall muss der Treiber sicherstellen, dass alle Verbindungs Attribute für das *connectionHandle* die aktuellen Einstellungen beibehalten.  
   
--   Wenn ein anderer Treiber mit verbunden ist, ruft der Treiber-Manager **SQLFreeHandle mit dem Handlertyp** SQL_HANDLE_DBC auf, und wenn in dieser Umgebung kein anderer Treiber mit verbunden ist, ruft er **SQLFreeHandle** mit einem *Handlertyp* SQL_HANDLE_ENV im verbundenen Treiber auf und trennt dann die Verbindung mit dem Treiber. *HandleType* Anschließend werden die gleichen Vorgänge durchführt, als wenn ein Treiber nicht mit verbunden ist.  
+-   Wenn ein anderer Treiber mit verbunden ist, ruft der Treiber-Manager **SQLFreeHandle mit dem Handlertyp** SQL_HANDLE_DBC auf, und wenn in dieser Umgebung kein anderer Treiber mit verbunden ist, ruft er **SQLFreeHandle** mit einem *Handlertyp* SQL_HANDLE_ENV im verbundenen Treiber auf und trennt dann die Verbindung mit dem Treiber.  Anschließend werden die gleichen Vorgänge durchführt, als wenn ein Treiber nicht mit verbunden ist.  
   
  Der Treiber ordnet dann Handles zu und initialisiert sich selbst.  
   
- Wenn die Anwendung **SQLDisconnect**aufruft, ruft der Treiber-Manager **SQLDisconnect** im Treiber auf. Der Treiber wird jedoch nicht getrennt. Dadurch bleibt der Treiber im Speicher für Anwendungen, die wiederholt eine Verbindung mit einer Datenquelle herstellen und diese trennen. Wenn die Anwendung **SQLFreeHandle** mit einem Handlertyp von SQL_HANDLE_DBC aufruft, ruft der Treiber-Manager **SQLFreeHandle** mit dem *Typ* SQL_HANDLE_DBC und dann **SQLFreeHandle** *mit einem Handlertyp von* SQL_HANDLE_ENV im Treiber auf und trennt dann die Verbindung des Treibers. *HandleType*  
+ Wenn die Anwendung **SQLDisconnect** aufruft, ruft der Treiber-Manager **SQLDisconnect** im Treiber auf. Der Treiber wird jedoch nicht getrennt. Dadurch bleibt der Treiber im Speicher für Anwendungen, die wiederholt eine Verbindung mit einer Datenquelle herstellen und diese trennen. Wenn die Anwendung **SQLFreeHandle** mit einem Handlertyp von SQL_HANDLE_DBC aufruft, ruft der Treiber-Manager **SQLFreeHandle** mit dem *Typ* SQL_HANDLE_DBC und dann **SQLFreeHandle** *mit einem Handlertyp von* SQL_HANDLE_ENV im Treiber auf und trennt dann die Verbindung des Treibers.   
   
  Eine ODBC-Anwendung kann mehr als eine Verbindung herstellen.  
   
@@ -140,7 +140,7 @@ SQLRETURN SQLConnect(
   
  Wenn eine Standard Übersetzungs Bibliothek in den Systeminformationen für die Datenquelle angegeben ist, stellt der Treiber eine Verbindung damit her. Eine andere Übersetzungs Bibliothek kann durch Aufrufen von **SQLSetConnectAttr** mit dem SQL_ATTR_TRANSLATE_LIB-Attribut verbunden werden. Eine Übersetzungs Option kann durch Aufrufen von **SQLSetConnectAttr** mit dem SQL_ATTR_TRANSLATE_OPTION-Attribut angegeben werden.  
   
- Wenn ein Treiber **SQLCONNECT**unterstützt, muss der Treiber Schlüsselwortbereich der Systeminformationen für den Treiber das **connectfunctions** -Schlüsselwort enthalten, wobei das erste Zeichen auf "Y" festgelegt ist.  
+ Wenn ein Treiber **SQLCONNECT** unterstützt, muss der Treiber Schlüsselwortbereich der Systeminformationen für den Treiber das **connectfunctions** -Schlüsselwort enthalten, wobei das erste Zeichen auf "Y" festgelegt ist.  
   
 ### <a name="connection-pooling"></a>Verbindungspooling  
  Das Verbindungspooling ermöglicht einer Anwendung, eine bereits erstellte Verbindung wiederzuverwenden. Wenn das Verbindungspooling aktiviert ist und **SQLCONNECT** aufgerufen wird, versucht der Treiber-Manager, die Verbindung mithilfe einer Verbindung herzustellen, die zu einem Pool von Verbindungen in einer Umgebung gehört, die für das Verbindungspooling vorgesehen ist. Diese Umgebung ist eine freigegebene Umgebung, die von allen Anwendungen verwendet wird, die die Verbindungen im Pool verwenden.  
@@ -149,7 +149,7 @@ SQLRETURN SQLConnect(
   
  Nachdem das Verbindungspooling aktiviert wurde, wird **SQLAllocHandle** mit dem *Typ* "SQL_HANDLE_ENV" aufgerufen, um eine Umgebung zuzuordnen. Die durch diesen-Befehl zugeordnete Umgebung ist eine freigegebene Umgebung, da Verbindungspooling aktiviert wurde. Die Umgebung, die verwendet wird, wird jedoch erst bestimmt, wenn " **sqlzuzuordchandle** " mit dem *Typ* "SQL_HANDLE_DBC" aufgerufen wird.  
   
- **SQLAllocHandle** mit dem *Typ* "SQL_HANDLE_DBC" wird aufgerufen, um eine Verbindung zuzuordnen. Der Treiber-Manager versucht, eine vorhandene freigegebene Umgebung zu finden, die mit den von der Anwendung festgelegten Umgebungs Attributen übereinstimmt. Wenn keine solche Umgebung vorhanden ist, wird eine solche Umgebung als implizite frei *gegebene Umgebung*erstellt. Wenn eine übereinstimmende freigegebene Umgebung gefunden wird, wird das Umgebungs Handle an die Anwendung zurückgegeben, und der Verweis Zähler wird inkrementiert.  
+ **SQLAllocHandle** mit dem *Typ* "SQL_HANDLE_DBC" wird aufgerufen, um eine Verbindung zuzuordnen. Der Treiber-Manager versucht, eine vorhandene freigegebene Umgebung zu finden, die mit den von der Anwendung festgelegten Umgebungs Attributen übereinstimmt. Wenn keine solche Umgebung vorhanden ist, wird eine solche Umgebung als implizite frei *gegebene Umgebung* erstellt. Wenn eine übereinstimmende freigegebene Umgebung gefunden wird, wird das Umgebungs Handle an die Anwendung zurückgegeben, und der Verweis Zähler wird inkrementiert.  
   
  Die Verbindung, die verwendet wird, wird jedoch erst bestimmt, wenn **SQLCONNECT** aufgerufen wird. An diesem Punkt versucht der Treiber-Manager, eine vorhandene Verbindung im Verbindungspool zu suchen, die den von der Anwendung angeforderten Kriterien entspricht. Diese Kriterien umfassen die im Aufruf von **SQLCONNECT** angeforderten Verbindungsoptionen (die Werte der Schlüsselwörter " *Servername*", " *username*" und " *Authentication* ") und alle Verbindungs Attribute, die seit dem Aufruf von " **sqlzuordchandle** " mit dem *Typ* "SQL_HANDLE_DBC" aufgerufen wurden. Der Treiber-Manager überprüft diese Kriterien anhand der entsprechenden Verbindungs Schlüsselwörter und Attribute in Verbindungen im Pool. Wenn eine Entsprechung gefunden wird, wird die Verbindung im Pool verwendet. Wenn keine Entsprechung gefunden wird, wird eine neue Verbindung erstellt.  
   
@@ -176,7 +176,7 @@ SQLRETURN SQLConnect(
  Wenn die Anwendung **SQLDisconnect** aufruft, um die Verbindung zu trennen, wird die Verbindung an den Verbindungspool zurückgegeben und steht zur erneuten Verwendung zur Verfügung.  
   
 ### <a name="optimizing-connection-pooling-performance"></a>Optimieren der Verbindungs Pooling-Leistung  
- Wenn verteilte Transaktionen beteiligt sind, ist es möglich, die Verbindung mit dem Verbindungspooling mithilfe von **SQL_DTC_TRANSITION_COST**zu optimieren. dabei handelt es sich um eine SQLUINTEGER-Bitmaske. Bei den Übergängen, auf die verwiesen wird, handelt es sich um die Übergänge des Connection-Attributs SQL_ATTR_ENLIST_IN_DTC von Wert 0 bis ungleich NULL und umgekehrt. Dabei handelt es sich um eine Verbindung, die von nicht in einer verteilten Transaktion in eine verteilte Transaktion eingetragen wird und umgekehrt. Abhängig davon, wie der Treiber die Eintragung implementiert hat (Festlegen der Verbindungs Attribute SQL_ATTR_ENLIST_IN_DTC), können diese Übergänge teuer sein und sollten daher für eine optimale Leistung vermieden werden.  
+ Wenn verteilte Transaktionen beteiligt sind, ist es möglich, die Verbindung mit dem Verbindungspooling mithilfe von **SQL_DTC_TRANSITION_COST** zu optimieren. dabei handelt es sich um eine SQLUINTEGER-Bitmaske. Bei den Übergängen, auf die verwiesen wird, handelt es sich um die Übergänge des Connection-Attributs SQL_ATTR_ENLIST_IN_DTC von Wert 0 bis ungleich NULL und umgekehrt. Dabei handelt es sich um eine Verbindung, die von nicht in einer verteilten Transaktion in eine verteilte Transaktion eingetragen wird und umgekehrt. Abhängig davon, wie der Treiber die Eintragung implementiert hat (Festlegen der Verbindungs Attribute SQL_ATTR_ENLIST_IN_DTC), können diese Übergänge teuer sein und sollten daher für eine optimale Leistung vermieden werden.  
   
  Der vom Treiber zurückgegebene Wert enthält eine beliebige Kombination der folgenden Bits:  
   
@@ -257,6 +257,6 @@ int main() {
 |Zurückgeben der Einstellung eines Verbindungs Attributs|[SQLGetConnectAttr-Funktion](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |Festlegen eines Verbindungs Attributs|[SQLSetConnectAttr-Funktion](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

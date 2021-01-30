@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_manage_jobs_by_login
 - sp_manage_jobs_by_login_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e16bce5905a993082ca480996fae9639dd053eeb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5f367f869092bde5458c732fda3e79bc06e43cb8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547621"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185350"
 ---
 # <a name="sp_manage_jobs_by_login-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +43,11 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @action = ] 'action'` Die Aktion, die für den angegebenen Anmelde Namen ausgeführt werden soll. *Action* ist vom Datentyp **varchar (10)** und hat keinen Standardwert. Wenn *Action* **Delete**ist, löscht **sp_manage_jobs_by_login** alle Aufträge, die sich im Besitz *current_owner_login_name*befinden. Wenn *action* die Aktion **neu zugewiesen wird, werden**alle Aufträge *new_owner_login_name*zugewiesen.  
+`[ @action = ] 'action'` Die Aktion, die für den angegebenen Anmelde Namen ausgeführt werden soll. *Action* ist vom Datentyp **varchar (10)** und hat keinen Standardwert. Wenn *Action* **Delete** ist, löscht **sp_manage_jobs_by_login** alle Aufträge, die sich im Besitz *current_owner_login_name* befinden. Wenn  die Aktion **neu zugewiesen wird, werden** alle Aufträge *new_owner_login_name* zugewiesen.  
   
-`[ @current_owner_login_name = ] 'current_owner_login_name'` Der Anmelde Name des aktuellen Auftrags Besitzers. *current_owner_login_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @current_owner_login_name = ] 'current_owner_login_name'` Der Anmelde Name des aktuellen Auftrags Besitzers. *current_owner_login_name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @new_owner_login_name = ] 'new_owner_login_name'` Der Anmelde Name des neuen Auftrags Besitzers. Verwenden Sie diesen Parameter nur, wenn *Aktion* erneut **zugewiesen**wird. *new_owner_login_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @new_owner_login_name = ] 'new_owner_login_name'` Der Anmelde Name des neuen Auftrags Besitzers. Verwenden Sie diesen Parameter nur, wenn *Aktion* erneut **zugewiesen** wird. *new_owner_login_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

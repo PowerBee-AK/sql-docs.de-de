@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 02/27/2020
 ms.service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_db_resource_stats
 - sys.dm_db_resource_stats_TSQL
@@ -20,19 +20,19 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 0f1a31c5822ca8d3d7a18eed49145d37a07b49ec
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c7cfb333e3cb2d67e61b2f8ae8cb12d0748b05d7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475011"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204817"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Gibt CPU-Nutzung, E/A und Arbeitsspeichernutzung für eine [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Datenbank zurück. Jede Zeile wird für 15 Sekunden beibehalten, auch wenn keine Aktivität in der Datenbank vorhanden ist. Verlaufs Daten werden ungefähr eine Stunde lang aufbewahrt.  
   
-|Spalten|Datentyp|Beschreibung|  
+|Spalten|Datentyp|BESCHREIBUNG|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|UTC-Zeit, die das Ende des aktuellen Berichtsintervalls angibt.|  
 |avg_cpu_percent|**Dezimalzahl (5, 2)**|Die durchschnittliche Servernutzung als Prozentwert der maximalen Kapazität für die Dienstebene.|  
@@ -56,7 +56,7 @@ ms.locfileid: "97475011"
 ## <a name="permissions"></a>Berechtigungen
  Diese Sicht erfordert die VIEW DATABASE STATE-Berechtigung.  
   
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
  Die von **sys.dm_db_resource_stats** zurückgegebenen Daten werden als Prozentsatz der maximal zulässigen Grenzwerte für die Dienst Ebene/Leistungsstufe ausgedrückt, die Sie ausführen.
  
  Wenn für die Datenbank innerhalb der letzten 60 Minuten ein Failover auf einen anderen Server durchgeführt wurde, gibt die Sicht nur Daten für den Zeitraum seit dem Failover zurück.  

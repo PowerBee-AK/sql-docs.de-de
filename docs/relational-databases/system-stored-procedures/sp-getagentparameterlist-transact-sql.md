@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_getagentparameterlist
 - sp_getagentparameterlist_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 18cfa88a02506846e004da36b84ec54205359859
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9a44f56d638de2b37e804e54ca94812cec1703e0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535951"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204723"
 ---
 # <a name="sp_getagentparameterlist-transact-sql"></a>sp_getagentparameterlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,17 +44,17 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
 |-----------|-----------|  
 |**1**|Momentaufnahme|  
 |**2**|Protokollleser|  
-|**3**|Verteilung|  
-|**4**|Zusammenführen|  
+|**3**|Distribution|  
+|**4**|Merge|  
 |**9**|Warteschlangenleser|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_getagentparameter**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_getagentparameter** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_add_agent_parameter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
