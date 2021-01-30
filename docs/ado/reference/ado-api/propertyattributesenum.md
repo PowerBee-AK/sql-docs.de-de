@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - PropertyAttributesEnum
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fec6a7ccb1b097a4927e7c82d4b0e31265cba1a1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2bca96a1f3e1e4f39254335d19853493768fe8c9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989951"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166799"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 Gibt die Attribute eines [Eigenschafts](./property-object-ado.md) Objekts an.  
   
-|Konstante|Wert|Beschreibung|  
+|Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**adpropnotsupported**|0|Gibt an, dass die Eigenschaft vom Anbieter nicht unterstützt wird.|  
 |**adproprequired**|1|Gibt an, dass der Benutzer einen Wert für diese Eigenschaft angeben muss, bevor die Datenquelle initialisiert wird.|  

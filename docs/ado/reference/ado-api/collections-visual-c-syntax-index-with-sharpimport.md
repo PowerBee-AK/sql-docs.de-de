@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 dev_langs:
 - C++
@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cba9fa93b2f23388b11dc764a95b78d94df4874c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1e29b092ea7c11dc9729986c342c96b2022fbf58
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975261"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164677"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>Auflistungen (Visual C++ Syntax Index mit #Import)
 Es ist hilfreich zu wissen, dass Auflistungen bestimmte allgemeine Methoden und Eigenschaften erben.  
   
- Alle Auflistungen erben die **count** -Eigenschaft und die **Aktualisierungs** Methode, und alle Sammlungen fügen die **Item** -Eigenschaft hinzu. Die **Errors** -Auflistung fügt die **Clear** -Methode hinzu. Die **Parameters** -Auflistung erbt die Methoden zum **Anfügen** und **Löschen** , während die **Fields** -Auflistung die Methoden zum **Anfügen**, **Löschen**und **Aktualisieren** hinzufügt.  
+ Alle Auflistungen erben die **count** -Eigenschaft und die **Aktualisierungs** Methode, und alle Sammlungen fügen die **Item** -Eigenschaft hinzu. Die **Errors** -Auflistung fügt die **Clear** -Methode hinzu. Die **Parameters** -Auflistung erbt die Methoden zum **Anfügen** und **Löschen** , während die **Fields** -Auflistung die Methoden zum **Anfügen**, **Löschen** und **Aktualisieren** hinzufügt.  
   
 ## <a name="properties-collection"></a>'Properties'-Sammlung  
   

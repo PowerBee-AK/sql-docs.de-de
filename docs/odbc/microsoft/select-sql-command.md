@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - select [ODBC]
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2b5fb0e3d38a2e5594cacf77b116844bcce219d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3fc6ae552bc4e6e8bd681aa3d47ffadeaf81fd0a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466422"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99153520"
 ---
 # <a name="select---sql-command"></a>SELECT (SQL-Befehl)
 Ruft Daten aus einer oder mehreren Tabellen ab.  
@@ -102,7 +102,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  *DatabaseName*! Gibt den Namen einer anderen Datenbank als der an, die mit der Datenquelle angegeben ist. Wenn die Datenbank nicht mit der Datenquelle angegeben ist, müssen Sie den Namen der Datenbank einschließen, in der die Tabelle enthalten ist. Schließen Sie das Ausrufezeichen (!) nach dem Datenbanknamen und vor dem Tabellennamen ein.  
   
- *Local_Alias* gibt einen temporären Namen für die in *Table*benannte Tabelle an. Wenn Sie einen lokalen Alias angeben, müssen Sie den lokalen Alias anstelle des Tabellennamens in der SELECT-Anweisung verwenden. Der lokale Alias hat keine Auswirkung auf die Visual FoxPro-Umgebung.  
+ *Local_Alias* gibt einen temporären Namen für die in *Table* benannte Tabelle an. Wenn Sie einen lokalen Alias angeben, müssen Sie den lokalen Alias anstelle des Tabellennamens in der SELECT-Anweisung verwenden. Der lokale Alias hat keine Auswirkung auf die Visual FoxPro-Umgebung.  
   
  Wobei *joinCondition* [und *joinCondition* ...]    [Und &#124; oder *filtercondition* [und &#124; oder *filtercondition* ...]]  
  Weist Visual FoxPro an, nur bestimmte Datensätze in die Abfrageergebnisse einzubeziehen. Dabei ist erforderlich, um Daten aus mehreren Tabellen abzurufen.  
@@ -122,7 +122,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
      *FieldName1* ist der Name eines Felds aus einer Tabelle, *FieldName2* ist der Name eines Felds aus einer anderen Tabelle, und der *Vergleich* ist einer der Operatoren, die in der folgenden Tabelle beschrieben werden.  
   
-|Operator|Vergleich|  
+|Betreiber|Vergleich|  
 |--------------|----------------|  
 |=|Gleich|  
 |==|Genau gleich|  
@@ -167,7 +167,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `customer.postalcode BETWEEN 90000 AND 99999`  
   
- Im folgenden Beispiel wird überprüft, ob mindestens eine Zeile die Kriterien in der Unterabfrage erfüllt. Wenn die Filterbedingung vorhanden ist, wird die Filterbedingung als true ausgewertet (. T.), es sei denn, die Unterabfrage ergibt den leeren Satz.  
+ Im folgenden Beispiel wird überprüft, ob mindestens eine Zeile die Kriterien in der Unterabfrage erfüllt. Wenn die Filterbedingung vorhanden ist, wird die Filterbedingung als true (. T.) ausgewertet, es sei denn, die Unterabfrage ergibt den leeren Satz.  
   
  **Beispiel 6** [nicht] vorhanden (*Unterabfrage*)  
   
@@ -195,7 +195,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `customer.country NOT LIKE "USA"`  
   
- Diese Filterbedingung sucht nach jedem Feld, das *cexpression*entspricht. Sie können das Prozentzeichen (%) verwenden. und Unterstrich Zeichen (_) als Teil von *cexpression*. Der Unterstrich stellt ein einzelnes unbekanntes Zeichen in der Zeichenfolge dar.  
+ Diese Filterbedingung sucht nach jedem Feld, das *cexpression* entspricht. Sie können das Prozentzeichen (%) verwenden. und Unterstrich Zeichen (_) als Teil von *cexpression*. Der Unterstrich stellt ein einzelnes unbekanntes Zeichen in der Zeichenfolge dar.  
   
  Gruppieren nach *GroupColumn* [, *GroupColumn* ...]  
  Gruppiert Zeilen in der Abfrage auf der Grundlage von Werten in einer oder mehreren Spalten. *GroupColumn* kann eine der folgenden sein:  
@@ -254,7 +254,7 @@ WHERE customer.cust_id NOT IN ;
   
 -   Die WHERE-Klausel ermittelt alle Kundennummern in der Customer-Tabelle, die nicht in der Orders-Tabelle enthalten sind. Da im ersten Abschnitt des Befehls alle Unternehmen mit einer Kundennummer in der Tabelle Orders bereitgestellt wurden, sind alle Unternehmen in der Customer-Tabelle nun in den Abfrage Ergebnissen enthalten.  
   
--   Da die Strukturen von Tabellen, die in einer Union enthalten sind, identisch sein müssen, gibt es in der zweiten SELECT-Anweisung zwei Platzhalter, um *Orders. order_id* und *Orders. emp_id* in der ersten SELECT-Anweisung darzustellen.  
+-   Da die Strukturen von Tabellen, die in einer Union enthalten sind, identisch sein müssen, gibt es in der zweiten SELECT-Anweisung zwei Platzhalter, um *Orders.order_id* und *Orders.emp_id* aus der ersten SELECT-Anweisung darzustellen.  
   
     > [!NOTE]  
     >  Die Platzhalter müssen denselben Typ aufweisen wie die Felder, die Sie darstellen. Wenn es sich bei dem Feld um einen Datentyp handelt, sollte der Platzhalter {//} lauten. Wenn das Feld ein Zeichenfeld ist, muss der Platzhalter eine leere Zeichenfolge ("") sein.  
@@ -281,7 +281,7 @@ WHERE customer.cust_id NOT IN ;
 ## <a name="driver-remarks"></a>Hinweise zu Treibern  
  Wenn die Anwendung die ODBC-SQL-Anweisung SELECT an die Datenquelle sendet, konvertiert der Visual FoxPro-ODBC-Treiber den Befehl ohne Übersetzung in den Befehl Visual FoxPro SELECT, es sei denn, der Befehl enthält eine ODBC-Escapesequenz. In eine ODBC-Escapesequenz eingeschlossene Elemente werden in die Syntax von Visual FoxPro konvertiert. Weitere Informationen zur Verwendung von ODBC-Escapesequenzen finden Sie unter [Zeit-und Datumsfunktionen](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md) und in der *Microsoft ODBC Programmer es Reference (Escapesequenzen* [in ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md)).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE TABLE-SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERT-SQL](../../odbc/microsoft/insert-sql-command.md)   
  [ANSI festlegen](../../odbc/microsoft/set-ansi-command.md)   

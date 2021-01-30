@@ -6,7 +6,7 @@ ms.date: 01/07/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_server_services
 - sys.dm_server_services
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 65ba3ca60ceb6d1c4ba327ee191084fc63aca8d6
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: fd00b91eb2ba5018a7ae9865f323ac2f3faeb39d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170652"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99134588"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "98170652"
   Gibt Informationen über die SQL Server, den Volltext SQL Server-Launchpad Dienst (SQL Server 2017 +) und SQL Server-Agent Dienste in der aktuellen Instanz von zurück [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Verwenden Sie diese dynamische Verwaltungssicht, um Statusinformationen zu diesen Diensten zu melden.  
   
  
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |servicename|**nvarchar(256)**|Der Name des [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -, Volltext-oder SQL Server-Agent Dienstanbieter. Darf nicht NULL sein.|  
 |startup_type|**int**|Gibt den Startmodus des Diensts an. Im folgenden sind die möglichen Werte und ihre entsprechenden Beschreibungen aufgeführt.<br /><br /> 0: Sonstige<br />1: Sonstige<br />2: automatisch<br />3: manuell<br />4: deaktiviert<br /><br /> Lässt NULL-Werte zu.|  
@@ -42,7 +42,7 @@ ms.locfileid: "98170652"
 |process_id|**int**|Die Prozess-ID des Diensts. Darf nicht NULL sein.|  
 |last_startup_time|**datetimeoffset(7)**|Das Datum und die Uhrzeit, zu der der Dienst zuletzt gestartet wurde. Lässt NULL-Werte zu.|  
 |service_account|**nvarchar(256)**|Das Dienstkonto, das zum Steuern des Diensts autorisiert ist. Dieses Konto kann den Dienst starten oder beenden und die Diensteigenschaften bearbeiten. Darf nicht NULL sein.|  
-|filename|**nvarchar(256)**|Der Pfad und Dateiname der ausführbaren Dienstdatei. Darf nicht NULL sein.|  
+|Dateiname|**nvarchar(256)**|Der Pfad und Dateiname der ausführbaren Dienstdatei. Darf nicht NULL sein.|  
 |is_clustered|**nvarchar (1)**|Gibt an, ob der Dienst als Ressource eines gruppierten Servers installiert ist. Darf nicht NULL sein.|  
 |cluster_nodename|**nvarchar(256)**|Der Name des Clusterknotens, auf dem der Dienst installiert ist. Lässt NULL-Werte zu.|
 |instant_file_initialization_enabled|**nvarchar (1)**|Gibt an, ob die sofortige Datei Initialisierung für den Dienst aktiviert ist [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .<br /><br />Y = die sofortige Datei Initialisierung ist für den Dienst aktiviert.<br /><br />N = sofortige Datei Initialisierung ist für den Dienst deaktiviert.<br /><br /> Lässt NULL-Werte zu.<br /><br /> **Hinweis:** Gilt nicht für andere Dienste, z. b. die SQL Server-Agent.<br /><br /> **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Beginnend mit [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 und [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 und höher).|  

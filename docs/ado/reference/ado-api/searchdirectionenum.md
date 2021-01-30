@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - SearchDirectionEnum
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 81272ae3-2165-4f4e-adfe-9ede0368cb17
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc30978b5ce157aa103e41f2b68dd8b36864f25a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 957e84b3a98f0248e41a83301ef2c9a9c1943b11
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989225"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166580"
 ---
 # <a name="searchdirectionenum"></a>SearchDirectionEnum
 Gibt die Richtung einer Daten Satz Suche innerhalb eines [Recordsets](./recordset-object-ado.md)an.  
   
-|Konstante|Wert|Beschreibung|  
+|Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**adsearchrückwärts**|-1|Sucht rückwärts und beendet am Anfang des **Recordsets**. Wenn keine Entsprechung gefunden wird, wird der Daten Satz Zeiger bei [BOF](./bof-eof-properties-ado.md)positioniert.|  
 |**adsearchforward**|1|Sucht vorwärts und beendet am Ende des **Recordsets**. Wenn keine Entsprechung gefunden wird, wird der Daten Satz Zeiger auf [EOF](./bof-eof-properties-ado.md)positioniert.|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmergepublications
 - sysmergepublications_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 0b2a7e7783ffb67688041a6da39ea99f945a607f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 70cfe557241aa78c60726cc4e094b5945e876c61
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097340"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99102465"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "98097340"
 |**pre_snapshot_script**|**nvarchar(255)**|Zeiger auf. **SQL** -Datei, die der Merge-Agent vor einem der Replikations Objekt Skripts ausführt, wenn die Momentaufnahme auf dem Abonnenten angewendet wird.|  
 |**post_snapshot_script**|**nvarchar(255)**|Der Zeiger auf eine. **SQL** -Datei, die der Merge-Agent ausführt, nachdem alle anderen Replikations Objekt Skripts und-Daten während einer ersten Synchronisierung angewendet wurden.|  
 |**compress_snapshot**|**bit**|Gibt an, ob die an den **alt_snapshot_folder** Speicherort geschriebene Momentaufnahme in das CAB-Format komprimiert wird [!INCLUDE[msCoName](../../includes/msconame-md.md)] . der Wert **0** gibt an, dass die Datei nicht komprimiert ist.|  
-|**ftp_address**|**sysname**|Die Netzwerkadresse des Dateiübertragungsprotokoll (FTP)-Dienstanbieter für den Verteiler. Gibt an, wo die Veröffentlichungs-Momentaufnahmedateien zum Abholen durch den Merge-Agent gespeichert sind, wenn FTP aktiviert ist.|  
+|**ftp_address**|**sysname**|Die Netzwerkadresse des File Transfer Protocol (FTP)-Dienstanbieter für den Verteiler. Gibt an, wo die Veröffentlichungs-Momentaufnahmedateien zum Abholen durch den Merge-Agent gespeichert sind, wenn FTP aktiviert ist.|  
 |**ftp_port**|**int**|Die Portnummer des FTP-Dienstanbieter für den Verteiler.|  
 |**ftp_subdirectory**|**nvarchar(255)**|Das Unterverzeichnis, in dem die Momentaufnahmedateien zum Abholen durch den Merge-Agent verfügbar sind.|  
 |**ftp_login**|**sysname**|Der Benutzername, mit dem eine Verbindung mit dem FTP-Dienst hergestellt wird.|  

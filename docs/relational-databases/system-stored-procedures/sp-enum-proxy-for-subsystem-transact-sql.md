@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_enum_proxy_for_subsystem_TSQL
 - sp_enum_proxy_for_subsystem
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: f484764e05a23594c32494934a9c366154e02aeb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bac523afb9f802e3f6feb8a23c47835c82bac807
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489428"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99157070"
 ---
 # <a name="sp_enum_proxy_for_subsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 
@@ -44,13 +44,13 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @proxy_id = ] proxy_id` Die ID des Proxys, für den Informationen aufgelistet werden sollen. Der *proxy_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es kann entweder die *ID* oder die *proxy_name* angegeben werden.  
+`[ @proxy_id = ] proxy_id` Die ID des Proxys, für den Informationen aufgelistet werden sollen. Der *proxy_id* ist vom Datentyp **int** und hat den Standardwert NULL. Es kann entweder die *ID* oder die *proxy_name* angegeben werden.  
   
-`[ @proxy_name = ] 'proxy_name'` Der Name des Proxys, für den Informationen aufgelistet werden sollen. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es kann entweder die *ID* oder die *proxy_name* angegeben werden.  
+`[ @proxy_name = ] 'proxy_name'` Der Name des Proxys, für den Informationen aufgelistet werden sollen. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Es kann entweder die *ID* oder die *proxy_name* angegeben werden.  
   
-`[ @subsystem_id = ] subsystem_id` Die ID des Subsystems, für das Informationen aufgelistet werden sollen. Der *subsystem_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es kann entweder die *subsystem_id* oder die *subsystem_name* angegeben werden.  
+`[ @subsystem_id = ] subsystem_id` Die ID des Subsystems, für das Informationen aufgelistet werden sollen. Der *subsystem_id* ist vom Datentyp **int** und hat den Standardwert NULL. Es kann entweder die *subsystem_id* oder die *subsystem_name* angegeben werden.  
   
-`[ @subsystem_name = ] 'subsystem_name'` Der Name des Subsystems, für das Informationen aufgelistet werden sollen. Der *subsystem_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es kann entweder die *subsystem_id* oder die *subsystem_name* angegeben werden.  
+`[ @subsystem_name = ] 'subsystem_name'` Der Name des Subsystems, für das Informationen aufgelistet werden sollen. Der *subsystem_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Es kann entweder die *subsystem_id* oder die *subsystem_name* angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

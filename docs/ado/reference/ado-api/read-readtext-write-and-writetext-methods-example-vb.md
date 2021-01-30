@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83d15c287946bbd952a8ea37438e6862296901e7
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7889a43427c8752ba30a4ccae1b6fc5db77db549
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989891"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166769"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>"Read", "Read", "Write" und "Write-Text"-Methoden Beispiel (VB)
-In diesem Beispiel wird veranschaulicht, wie der Inhalt eines Textfelds in einem [Textstream](./stream-object-ado.md) und einem binären **Stream**gelesen wird. Weitere Eigenschaften und Methoden, die angezeigt werden, sind [Position](./position-property-ado.md), [Größe](./size-property-ado-parameter.md), Zeichen [Satz](./charset-property-ado.md)und [SetEOS](./seteos-method.md).  
+In diesem Beispiel wird veranschaulicht, wie der Inhalt eines Textfelds in einem [Textstream](./stream-object-ado.md) und einem binären **Stream** gelesen wird. Weitere Eigenschaften und Methoden, die angezeigt werden, sind [Position](./position-property-ado.md), [Größe](./size-property-ado-parameter.md), Zeichen [Satz](./charset-property-ado.md)und [SetEOS](./seteos-method.md).  
   
 ```  
 'BeginReadVB  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropuser
 - sp_dropuser_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f44b851dc2d60899f27c8419dfdb557951043683
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ba5b9eb814f48003d93bf6d7b05c2b1c37c1ea76
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536157"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99157147"
 ---
 # <a name="sp_dropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_dropuser [ @name_in_db = ] 'user'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name_in_db = ] 'user'` Der Name des zu entfernenden Benutzers. *User* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. der *Benutzer* muss in der aktuellen Datenbank vorhanden sein. Wenn Sie einen Windows-Anmeldenamen angeben, verwenden Sie den Namen, mit dem der Anmeldename von der Datenbank identifiziert wird.  
+`[ @name_in_db = ] 'user'` Der Name des zu entfernenden Benutzers. *User* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert. der *Benutzer* muss in der aktuellen Datenbank vorhanden sein. Wenn Sie einen Windows-Anmeldenamen angeben, verwenden Sie den Namen, mit dem der Anmeldename von der Datenbank identifiziert wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -55,7 +55,7 @@ sp_dropuser [ @name_in_db = ] 'user'
   
  Wenn ein Datenbankbenutzer entfernt wird, werden auch alle Aliase für diesen Benutzer entfernt. Wenn der Benutzer ein leeres Schema mit dem gleichen Namen wie der Benutzer besitzt, wird das Schema gelöscht. Wenn der Benutzer andere sicherungsfähige Elemente in der Datenbank besitzt, wird der Benutzer nicht gelöscht. Der Besitz der Objekte muss zuerst auf einen anderen Prinzipal übertragen werden. Weitere Informationen finden Sie unter [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md). Beim Entfernen eines Datenbankbenutzers werden automatisch die Berechtigungen dieses Benutzers entfernt, und der Benutzer wird aus allen Datenbankrollen entfernt, in denen er Mitglied ist.  
   
- **sp_dropuser** können nicht verwendet werden, um den Datenbankbesitzer (**dbo**) **INFORMATION_SCHEMA** Benutzer oder den **Gast** Benutzer aus den Datenbanken **Master** oder **tempdb** zu entfernen. In nicht-System Datenbanken `EXEC sp_dropuser 'guest'` wird die CONNECT-Berechtigung vom Benutzer **Gast**widerrufen. Der Benutzer selbst wird jedoch nicht gelöscht.  
+ **sp_dropuser** können nicht verwendet werden, um den Datenbankbesitzer (**dbo**) **INFORMATION_SCHEMA** Benutzer oder den **Gast** Benutzer aus den Datenbanken **Master** oder **tempdb** zu entfernen. In nicht-System Datenbanken `EXEC sp_dropuser 'guest'` wird die CONNECT-Berechtigung vom Benutzer **Gast** widerrufen. Der Benutzer selbst wird jedoch nicht gelöscht.  
   
  **sp_dropuser** kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   

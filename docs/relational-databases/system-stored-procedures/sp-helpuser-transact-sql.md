@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpuser
 - sp_helpuser_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e9ea3b0b0b6d1700c486514c29f889cc7beb3566
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ce2bf386978412c6b1409b31e371f8caa15eccdb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546038"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99103060"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89546038"
   Stellt Informationen zu Prinzipalen auf Datenbankebene in der aktuellen Datenbank bereit.  
   
 > [!IMPORTANT]  
->  **sp_helpuser** gibt keine Informationen zu Sicherungs fähigen Elementen zurück, die in eingeführt wurden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Verwenden Sie stattdessen [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) .  
+>  **sp_helpuser** gibt keine Informationen zu Sicherungs fähigen Elementen zurück, die in eingeführt wurden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Verwenden Sie stattdessen [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) .  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,13 +43,13 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name_in_db = ] 'security_account'` Der Name des Daten Bank Benutzers oder der Daten Bank Rolle in der aktuellen Datenbank. *security_account* muss in der aktuellen Datenbank vorhanden sein. *security_account* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *security_account* nicht angegeben ist, gibt **sp_helpuser** Informationen zu allen Daten Bank Prinzipale zurück.  
+`[ @name_in_db = ] 'security_account'` Der Name des Daten Bank Benutzers oder der Daten Bank Rolle in der aktuellen Datenbank. *security_account* muss in der aktuellen Datenbank vorhanden sein. *security_account* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn *security_account* nicht angegeben ist, gibt **sp_helpuser** Informationen zu allen Daten Bank Prinzipale zurück.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
- In der folgenden Tabelle wird das Resultset angezeigt, wenn für security_account weder ein Benutzerkonto noch ein- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder ein Windows-Benutzer *security_account*angegeben ist.  
+ In der folgenden Tabelle wird das Resultset angezeigt, wenn für security_account weder ein Benutzerkonto noch ein- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder ein Windows-Benutzer angegeben ist.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -68,7 +68,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**LoginName**|**sysname**|Anmeldenamen, die mithilfe eines Alias mit Benutzern in der aktuellen Datenbank verknüpft sind.|  
 |**UserNameAliasedTo**|**sysname**|Benutzername in der aktuellen Datenbank, mit dem der Anmeldename mithilfe eines Alias verknüpft ist.|  
   
- In der folgenden Tabelle wird das Resultset angezeigt, wenn eine Rolle für *security_account*angegeben wird.  
+ In der folgenden Tabelle wird das Resultset angezeigt, wenn eine Rolle für *security_account* angegeben wird.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -77,8 +77,8 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**Users_in_role**|**sysname**|Mitglied der Rolle in der aktuellen Datenbank.|  
 |**UserID**|**smallint**|Benutzer-ID für das Rollenmitglied.|  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden Sie [sys. database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md), um Informationen zur Mitgliedschaft in Daten bankrollen anzuzeigen. Um Informationen zu Server Rollen Mitgliedern anzuzeigen, verwenden Sie [sys. server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md), und um Informationen über Prinzipale auf Serverebene anzuzeigen, verwenden Sie [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie [sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md), um Informationen zur Mitgliedschaft in Daten bankrollen anzuzeigen. Um Informationen zu Server Rollen Mitgliedern anzuzeigen, verwenden Sie [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md), und um Informationen zu Prinzipale auf Serverebene anzuzeigen, verwenden Sie [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  

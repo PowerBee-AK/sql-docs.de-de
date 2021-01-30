@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ObjectTypeEnum
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3a0d27f8dbb1758a805ea2de033df1c65af1c894
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0b8aa3bdaa75994330325f32cf03676d48a00463
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983841"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164152"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 Gibt den Typ des Datenbankobjekts an, für das Berechtigungen oder den Besitz festgelegt werden sollen.  
   
-|Konstante|Wert|Beschreibung|  
+|Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**adPermObjColumn**|2|Das-Objekt ist eine-Spalte.|  
 |**adPermObjDatabase**|3|Das-Objekt ist eine-Datenbank.|  

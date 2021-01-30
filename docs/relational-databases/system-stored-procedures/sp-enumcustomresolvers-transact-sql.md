@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_enumcustomresolvers
 - sp_enumcustomresolvers_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2971d44f61076191addb74a701bb03069d06bc4c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8972aa1aaa4e567c60efb9653a75e6fa196211b4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549761"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99156776"
 ---
 # <a name="sp_enumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @distributor = ] 'distributor'` Der Name des Verteilers, auf dem sich der benutzerdefinierte Konflikt Löser befindet. *Distributor* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. *Dieser Parameter ist als veraltet markiert und wird in einer zukünftigen Version entfernt.*  
+`[ @distributor = ] 'distributor'` Der Name des Verteilers, auf dem sich der benutzerdefinierte Konflikt Löser befindet. *Distributor* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. *Dieser Parameter ist als veraltet markiert und wird in einer zukünftigen Version entfernt.*  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -53,11 +53,11 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_enumcustomresolvers** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** und der festen Daten Bank Rolle **db_owner** können **sp_enumcustomresolvers**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** und der festen Daten Bank Rolle **db_owner** können **sp_enumcustomresolvers** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replshowcmds
 - sp_replshowcmds_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9bbc74050303a854b39ced508caf8a49e1ffdd1d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: efb46a1c57dc44f9fb90bbee84906c7bcd8b86d4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534864"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99157509"
 ---
 # <a name="sp_replshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @maxtrans = ] maxtrans` Die Anzahl der Transaktionen, für die Informationen zurückgegeben werden sollen. *maxtrans* ist vom Datentyp **int**und hat den Standardwert **1**, womit die maximale Anzahl von Transaktionen mit ausstehender Replikation angegeben wird, für die **sp_replshowcmds** Informationen zurückgibt.  
+`[ @maxtrans = ] maxtrans` Die Anzahl der Transaktionen, für die Informationen zurückgegeben werden sollen. *maxtrans* ist vom Datentyp **int** und hat den Standardwert **1**, womit die maximale Anzahl von Transaktionen mit ausstehender Replikation angegeben wird, für die **sp_replshowcmds** Informationen zurückgibt.  
   
 ## <a name="result-sets"></a>Resultsets  
  **sp_replshowcmds** ist eine Diagnose Prozedur, die Informationen über die Veröffentlichungs Datenbank zurückgibt, von der Sie ausgeführt wird.  
@@ -52,20 +52,20 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 |**type**|**int**|Der Typ des Befehls.|  
 |**command**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] verwenden, um die Migrationsdaten zu bereinigen.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_replshowcmds** wird bei der Transaktions Replikation verwendet.  
   
- Mithilfe **sp_replshowcmds**können Sie Transaktionen anzeigen, die derzeit nicht verteilt sind (die im Transaktionsprotokoll verbleibenden Transaktionen, die nicht an den Verteiler gesendet wurden).  
+ Mithilfe **sp_replshowcmds** können Sie Transaktionen anzeigen, die derzeit nicht verteilt sind (die im Transaktionsprotokoll verbleibenden Transaktionen, die nicht an den Verteiler gesendet wurden).  
   
  Clients, die **sp_replshowcmds** ausführen und innerhalb derselben Datenbank **sp_replcmds** , erhalten den Fehler 18752.  
   
- Um diesen Fehler zu vermeiden, muss der erste Client die Verbindung trennen oder die Rolle des Clients, da der Protokoll Leser durch Ausführen von **sp_replflush**freigegeben werden muss. Nachdem alle Clients den Protokoll Leser getrennt haben, können **sp_replshowcmds** erfolgreich ausgeführt werden.  
+ Um diesen Fehler zu vermeiden, muss der erste Client die Verbindung trennen oder die Rolle des Clients, da der Protokoll Leser durch Ausführen von **sp_replflush** freigegeben werden muss. Nachdem alle Clients den Protokoll Leser getrennt haben, können **sp_replshowcmds** erfolgreich ausgeführt werden.  
   
 > [!NOTE]  
 >  **sp_replshowcmds** sollten nur zum Beheben von Problemen bei der Replikation ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_replshowcmds**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_replshowcmds** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Fehlermeldungen](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   

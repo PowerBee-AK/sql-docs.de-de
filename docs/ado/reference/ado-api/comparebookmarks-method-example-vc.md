@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b30ea43d8a47e5e32b57f94f997ea05bfbe641de
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2f84bc8a6ce834cecbdbe64b485cf52430d399e6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975031"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99155512"
 ---
 # <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks-Methode – Beispiel (VC++)
 In diesem Beispiel wird die [CompareBookmarks](./comparebookmarks-method-ado.md) -Methode veranschaulicht. Der relative Wert von Lesezeichen wird nur selten benötigt, wenn ein bestimmtes Lesezeichen etwas Besonderes ist.  
   
- Legen Sie eine zufällige Zeile eines [Recordsets fest](./recordset-object-ado.md) , die von der ***Autoren*** Tabelle als Ziel für eine Suche abgeleitet ist. Zeigen Sie dann die Position der einzelnen Zeilen relativ zu diesem Ziel an.  
+ Legen Sie eine zufällige Zeile eines [Recordsets fest](./recordset-object-ado.md) , die aus der Tabelle ***Authors** _ als Ziel einer Suche abgeleitet ist. Zeigen Sie dann die Position der einzelnen Zeilen relativ zu diesem Ziel an.  
   
 ```  
 // BeginCompareBookmarksCpp.cpp  
@@ -66,7 +66,7 @@ void CompareBookMarksX() {
    try {      
       TESTHR(pRstAuthors.CreateInstance(__uuidof(Recordset)));  
   
-      pRstAuthors->Open("SELECT * FROM authors ORDER BY au_id", strCnn, adOpenStatic, adLockReadOnly, adCmdText);  
+      pRstAuthors->Open("SELECT _ FROM authors ORDER BY au_id", strCnn, adOpenStatic, adLockReadOnly, adCmdText);  
   
       long count = pRstAuthors->RecordCount;  
       printf("Rows in the Recordset = %d\n", count);  

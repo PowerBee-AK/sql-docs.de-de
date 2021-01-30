@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - SeekEnum
@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 345e6dff5c2bc372f06eb386a4546a61b9e5a1bb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f61e05965b1750c4f8e6b48f092eeb059d1e19d3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989151"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166554"
 ---
 # <a name="seekenum"></a>SeekEnum
 Gibt den Typ des auszuführenden [Suchtyps](./seek-method.md) an.  
   
-|Konstante|Wert|Beschreibung|  
+|Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|**adseekfirsteq**|1|Sucht den ersten Schlüssel, der mit *KeyValues*übereinstimmt.|  
-|**adseeklasteq**|2|Sucht den letzten Schlüssel, der mit *KeyValues*übereinstimmt.|  
+|**adseekfirsteq**|1|Sucht den ersten Schlüssel, der mit *KeyValues* übereinstimmt.|  
+|**adseeklasteq**|2|Sucht den letzten Schlüssel, der mit *KeyValues* übereinstimmt.|  
 |**adseekaftereq**|4|Sucht entweder nach einem Schlüssel, der mit *KeyValues* identisch ist, oder direkt nach dem Speicherort der Übereinstimmung.|  
 |**adseekafter**|8|Sucht direkt nach einem Schlüssel, nach dem eine Entsprechung mit *KeyValues* aufgetreten wäre.|  
-|**adseekbeforeeq**|16|Sucht entweder nach einem Schlüssel, der mit *KeyValues*identisch ist, oder direkt vor dem, wo die Übereinstimmung aufgetreten wäre.|  
+|**adseekbeforeeq**|16|Sucht entweder nach einem Schlüssel, der mit *KeyValues* identisch ist, oder direkt vor dem, wo die Übereinstimmung aufgetreten wäre.|  
 |**adseekbefore**|32|Sucht direkt vor der Suche nach einer Taste, bei der eine Entsprechung mit *KeyValues* aufgetreten wäre.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - CompareBookmarks
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 785f2b61e4a6197a287ce9f97b27fef5cb8742b1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 63fc23d638a3ffecf29d6f3d3ad56e803d914072
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975051"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99155691"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks-Methode (ADO)
 Vergleicht zwei Lesezeichen und gibt eine Angabe über das Verhältnis der entsprechenden Werte zurück.  
@@ -50,7 +50,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
   
  Ein Lesezeichen identifiziert eine Zeile in einem **Recordset** -Objekt eindeutig. Verwenden Sie die [Bookmark](./bookmark-property-ado.md) -Eigenschaft der aktuellen Zeile, um das Lesezeichen zu erhalten.  
   
- Da der Datentyp eines Lesezeichens für jeden Anbieter spezifisch ist, macht ADO ihn als **Variant**verfügbar. SQL Server Lesezeichen sind z. b. vom Typ DBTYPE_R8 (**Double**). ADO würde diesen Typ als **Variant** mit dem Untertyp **Double**verfügbar machen.  
+ Da der Datentyp eines Lesezeichens für jeden Anbieter spezifisch ist, macht ADO ihn als **Variant** verfügbar. SQL Server Lesezeichen sind z. b. vom Typ DBTYPE_R8 (**Double**). ADO würde diesen Typ als **Variant** mit dem Untertyp **Double** verfügbar machen.  
   
  Beim Vergleichen von Lesezeichen versucht ADO nicht, eine Umwandlung durchführen. Die Werte werden einfach an den Anbieter übermittelt, wo der Vergleich erfolgt. Wenn die an die **CompareBookmarks** -Methode übergebenen Lesezeichen in Variablen unterschiedlicher Typen gespeichert werden, kann der folgende Typen Konflikt Fehler generiert werden: "Argumente weisen den falschen Typ auf, sind außerhalb des zulässigen Bereichs oder stehen miteinander in Konflikt."  
   
