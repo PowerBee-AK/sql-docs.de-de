@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - RightsEnum
@@ -16,25 +16,25 @@ helpviewer_keywords:
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: be2bd513cf41247fd6ce5c8f1172353557287144
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d89daeb8d85e9e59e60f6a1aa6b918364ab915fd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983411"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169219"
 ---
 # <a name="rightsenum"></a>RightsEnum
 Gibt die Rechte oder Berechtigungen für eine Gruppe oder einen Benutzer für ein Objekt an.  
   
-|Konstante|Wert|Beschreibung|  
+|Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**adRightCreate**|16384 (&H4000)|Der Benutzer oder die Gruppe verfügt über die Berechtigung zum Erstellen neuer Objekte dieses Typs.|  
-|**adRightDelete**|65536 (&H10000)|Der Benutzer oder die Gruppe verfügt über die Berechtigung zum Löschen von Daten aus einem Objekt. Für Objekte wie **Tabellen**verfügt der Benutzer über die Berechtigung zum Löschen von Datenwerten aus Datensätzen.|  
+|**adRightDelete**|65536 (&H10000)|Der Benutzer oder die Gruppe verfügt über die Berechtigung zum Löschen von Daten aus einem Objekt. Für Objekte wie **Tabellen** verfügt der Benutzer über die Berechtigung zum Löschen von Datenwerten aus Datensätzen.|  
 |**adRightDrop**|256 (&H100)|Der Benutzer oder die Gruppe verfügt über die Berechtigung zum Entfernen von Objekten aus dem Katalog. **Tabellen** können z. b. durch einen SQL-Befehl DROP TABLE gelöscht werden.|  
 |**adRightExclusive**|512 (&H200)|Der Benutzer oder die Gruppe verfügt ausschließlich über die Berechtigung, auf das Objekt zuzugreifen.|  
 |**adRightExecute**|536870912 (&H20000000)|Der Benutzer oder die Gruppe verfügt über die Berechtigung zum Ausführen des Objekts.|  
 |**adRightFull**|268435456 (&H10000000)|Der Benutzer oder die Gruppe verfügt über alle Berechtigungen für das Objekt.|  
-|**adRightInsert**|32768 (&H8000)|Der Benutzer oder die Gruppe verfügt über die Berechtigung zum Einfügen des Objekts. Für Objekte wie **Tabellen**verfügt der Benutzer über die Berechtigung zum Einfügen von Daten in die Tabelle.|  
+|**adRightInsert**|32768 (&H8000)|Der Benutzer oder die Gruppe verfügt über die Berechtigung zum Einfügen des Objekts. Für Objekte wie **Tabellen** verfügt der Benutzer über die Berechtigung zum Einfügen von Daten in die Tabelle.|  
 |**adRightMaximumAllowed**|33554432 (&H2000000)|Der Benutzer oder die Gruppe verfügt über die maximal zulässige Anzahl von Berechtigungen für den Anbieter. Bestimmte Berechtigungen sind vom Anbieter abhängig.|  
 |**adRightNone**|0|Der Benutzer oder die Gruppe verfügt über keine Berechtigungen für das Objekt.|  
 |**adRightRead**|-2147483648 (&H80000000)|Der Benutzer oder die Gruppe verfügt über die Berechtigung zum Lesen des Objekts. Für Objekte, wie z. b. [Tabellen](./table-object-adox.md), verfügt der Benutzer über die Berechtigung zum Lesen der Daten in der Tabelle.|  

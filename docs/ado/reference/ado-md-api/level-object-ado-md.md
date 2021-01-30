@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Level
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 34dc7bc7eb6d80b3ec50cb1838cda0d0e419053b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ebbebb2150cbe9c03e51ac296c39c362a6670e1d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986511"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169803"
 ---
 # <a name="level-object-ado-md"></a>Level-Objekt (ADO MD)
 Enthält einen Satz von Membern, von denen jeder denselben Rang innerhalb einer Hierarchie aufweist.  
@@ -43,11 +43,11 @@ Enthält einen Satz von Membern, von denen jeder denselben Rang innerhalb einer 
   
  Die **Properties** -Auflistung enthält vom Anbieter bereitgestellte Eigenschaften. In der folgenden Tabelle sind die verfügbaren Eigenschaften aufgeführt. Die tatsächliche Eigenschaften Liste kann je nach Implementierung des Anbieters abweichen. Eine ausführlichere Liste der verfügbaren Eigenschaften finden Sie in der Dokumentation für Ihren Anbieter.  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |CatalogName|Der Name des Katalogs, zu dem dieser Cube gehört.|  
 |CubeName|Der Name des Cubes.|  
-|Beschreibung|Eine aussagekräftige Beschreibung der Ebene.|  
+|BESCHREIBUNG|Eine aussagekräftige Beschreibung der Ebene.|  
 |Dimensionuniquename|Der eindeutige Name der [Dimension](./dimension-object-ado-md.md).|  
 |Hierarchyuniquename|Der eindeutige Name der Hierarchie.|  
 |LevelCaption|Eine Bezeichnung oder Beschriftung, die der Ebene zugeordnet ist.|  

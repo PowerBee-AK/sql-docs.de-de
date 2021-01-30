@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fba16dc701ab402084633a7adbdceb4cea273b8d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 92ec3f1eb3cf5504bd2a64322e91640bd9518a2e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720723"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168996"
 ---
 # <a name="execute21-method-rds"></a>Execute21-Methode (RDS)
 Führt die Anforderung aus und erstellt ein ADO-Recordset für die Verwendung in ADO 2,1.  
@@ -36,7 +36,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
   
 #### <a name="parameters"></a>Parameter  
  *ConnectionString*  
- Eine Zeichenfolge, die zum Herstellen einer Verbindung mit dem OLE DB Anbieter verwendet wird, an den die Anforderung zur Ausführung gesendet wird. Wenn ein Handler mithilfe von *handlerstring*angegeben wird, kann die Verbindungs Zeichenfolge bearbeitet oder ersetzt werden.  
+ Eine Zeichenfolge, die zum Herstellen einer Verbindung mit dem OLE DB Anbieter verwendet wird, an den die Anforderung zur Ausführung gesendet wird. Wenn ein Handler mithilfe von *handlerstring* angegeben wird, kann die Verbindungs Zeichenfolge bearbeitet oder ersetzt werden.  
   
  *HandlerString*  
  Die Zeichenfolge identifiziert den Handler, der bei dieser Ausführung verwendet werden soll. Die Zeichenfolge enthält zwei Teile. Der erste Teil enthält den Namen (ProgID) des zu verwendenden Handlers. Der zweite Teil der Zeichenfolge enthält Argumente, die an den Handler übermittelt werden sollen. Wie die Argument Zeichenfolge interpretiert wird, ist handlerspezifisch. Die beiden Teile sind durch die erste Instanz eines Kommas in der Zeichenfolge getrennt (obwohl die Argument Zeichenfolge zusätzliche Kommas enthalten kann). Die Argumente sind optional.  
@@ -55,11 +55,11 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *lExecuteOptions*  
  Eine Bitmaske der Ausführungs Optionen:  
   
- 1 =*Schreib* geschützt das Recordset wird mithilfe von **adlockread only**geöffnet.  
+ 1 =*Schreib* geschützt das Recordset wird mithilfe von **adlockread only** geöffnet.  
   
- 2 =*nobatch* das Recordset wird mithilfe von **adlockoptimistisch**geöffnet.  
+ 2 =*nobatch* das Recordset wird mithilfe von **adlockoptimistisch** geöffnet.  
   
- 4 =*allparaminfoist* der Aufrufer stellt sicher, dass Parameterinformationen für alle Parameter in *pparameters*angegeben werden.  
+ 4 =*allparaminfoist* der Aufrufer stellt sicher, dass Parameterinformationen für alle Parameter in *pparameters* angegeben werden.  
   
  8 =*GetInfo* -Parameterinformationen für die Abfrage werden vom OLE DB Anbieter abgerufen und im *pparameters* -Parameter zurückgegeben. Die Abfrage wird nicht ausgeführt, und es wird kein Recordset zurückgegeben.  
   
@@ -68,7 +68,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  Obwohl "read *only*", " *nobatch* " und " *gethiddencolumns* " sich gegenseitig ausschließende Optionen sind, ist es nicht möglich, mehr als eine dieser Optionen festzulegen. Wenn mehrere Optionen festgelegt sind, hat *gethiddencolumns* Vorrang vor allen anderen Optionen, gefolgt *von "* schreibgeschützt". Wenn keine Optionen angegeben werden, wird das Recordset standardmäßig mithilfe von **adlockbatchoptimierup** geöffnet, aber verborgene Spalten sind nicht im Recordset enthalten.  
   
  *pParameters*  
- Eine Variante, die ein sicheres Array von Parameter Definitionen enthält. Wenn die *GetInfo* -Option in *lexecuteoptions*angegeben wurde, wird dieser Parameter verwendet, um die Parameter Definitionen zurückzugeben, die vom OLE DB Anbieter abgerufen werden. Andernfalls ist dieser Parameter möglicherweise leer.  
+ Eine Variante, die ein sicheres Array von Parameter Definitionen enthält. Wenn die *GetInfo* -Option in *lexecuteoptions* angegeben wurde, wird dieser Parameter verwendet, um die Parameter Definitionen zurückzugeben, die vom OLE DB Anbieter abgerufen werden. Andernfalls ist dieser Parameter möglicherweise leer.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Der *handlerstring* -Parameter kann NULL sein. Was in diesem Fall geschieht, hängt von der Konfiguration des RDS-Servers ab. Die handlerzeichenfolge "msdfmap. Handler" gibt an, dass der von Microsoft bereitgestellte Handler (Msdfmap.dll) verwendet werden soll. Eine handlerzeichenfolge von "masdfmap. Handler, sample.ini" gibt an, dass der Msdfmap.dll Handler verwendet werden sollte und dass das Argument "sample.ini" an den Handler übermittelt werden soll. MSDFMAP.dll interpretiert das Argument als Richtung für die Verwendung des sample.ini, um die Verbindungs-und Abfrage Zeichenfolgen zu überprüfen.  

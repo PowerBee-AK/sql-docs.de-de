@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dec09d7c382bad1234da377cbedc204161a95885
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 647eca0b17066d46ff8ae3f9a39e22c87d4c07fa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988231"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170053"
 ---
 # <a name="type-property-example-property-vc"></a>Type-Eigenschaft – Beispiel (Property) (VC++)
 In diesem Beispiel wird die [Type](./type-property-ado.md) -Eigenschaft veranschaulicht. Es handelt sich um ein Modell eines Hilfsprogramms zum Auflisten der Namen und Typen einer Auflistung, wie z. b. [Eigenschaften](./properties-collection-ado.md), [Felder](./fields-collection-ado.md)usw.  

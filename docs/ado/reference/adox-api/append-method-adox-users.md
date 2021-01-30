@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Users::raw_Append
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14b0c573b3ccf8a03b1c2f6513cdac67303fb4bf
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e321d3cf41e8edcd5a5bd29452050542257a908b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985431"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169570"
 ---
 # <a name="append-method-adox-users"></a>Append-Methode (ADOX-Benutzer)
 Fügt der [Benutzer](./users-collection-adox.md) Auflistung ein neues [Benutzer](./user-object-adox.md) Objekt hinzu.  
@@ -47,7 +47,7 @@ Users.Append User[,Password]
  Wenn der Anbieter das Erstellen von Benutzern nicht unterstützt, tritt ein Fehler auf.  
   
 > [!NOTE]
->  Bevor ein Benutzerobjekt an die **Users** -Auflistung eines **Group** -Objekts angefügt wird, muss ein **Benutzer** Objekt mit demselben [Namen](./name-property-adox.md) wie das angefügte **-Objekt in** der **Benutzer** Auflistung des **Katalogs**bereits vorhanden sein.  
+>  Bevor ein Benutzerobjekt an die **Users** -Auflistung eines **Group** -Objekts angefügt wird, muss ein **Benutzer** Objekt mit demselben [Namen](./name-property-adox.md) wie das angefügte **-Objekt in** der **Benutzer** Auflistung des **Katalogs** bereits vorhanden sein.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Users-Collection (ADOX)](./users-collection-adox.md)  

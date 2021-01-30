@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Record::Source
@@ -21,23 +21,23 @@ helpviewer_keywords:
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9c551e52864caca8834350d5107b76aed88700d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 232bebc8eabf96584a4513c3197f329ecf70fe87
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988941"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170242"
 ---
 # <a name="source-property-ado-record"></a>Source-Eigenschaft (ADO-Datensatz)
 Gibt die Datenquelle oder das Objekt an, das durch den [Datensatz](./record-object-ado.md)dargestellt wird.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt einen **Variant** -Wert fest, der die vom **Datensatz**dargestellte Entität angibt, oder gibt diesen zurück.  
+ Legt einen **Variant** -Wert fest, der die vom **Datensatz** dargestellte Entität angibt, oder gibt diesen zurück.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die **Source** -Eigenschaft gibt das *Quell* Argument der [Open](./open-method-ado-record.md) -Methode des **Datensatz** -Objekts zurück. Sie kann eine absolute oder relative URL Zeichenfolge enthalten. Eine absolute URL kann ohne Festlegen der [ActiveConnection](./activeconnection-property-ado.md) -Eigenschaft verwendet werden, um das **Datensatz** -Objekt direkt zu öffnen. In diesem Fall wird ein implizites **Verbindungs** Objekt erstellt.  
   
- Die **Source** -Eigenschaft kann auch einen Verweis auf ein bereits geöffnetes **Recordset**enthalten, das ein **Daten Satz** Objekt öffnet, das die aktuelle Zeile im **Recordset**darstellt.  
+ Die **Source** -Eigenschaft kann auch einen Verweis auf ein bereits geöffnetes **Recordset** enthalten, das ein **Daten Satz** Objekt öffnet, das die aktuelle Zeile im **Recordset** darstellt.  
   
  Die **Source** -Eigenschaft könnte auch einen Verweis auf ein [Befehls](./command-object-ado.md) Objekt enthalten, das eine einzelne Daten Zeile vom Anbieter zurückgibt.  
   

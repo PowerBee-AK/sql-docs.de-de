@@ -1,25 +1,25 @@
 ---
 description: Update Resync – dynamische Eigenschaft (ADO)
-title: Aktualisieren Sie die Resync-Eigenschaft dynamisch (ADO) | Microsoft-Dokumentation
+title: Aktualisieren von Resync-Property-Dynamic (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Update Resync property [ADO]
 ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 506fd7fecee179a055e23ffad1beab76bcd2fbe2
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d92f70c5091ec2468199874c4a79843398bc7833
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988091"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170031"
 ---
 # <a name="update-resync-property-dynamic-ado"></a>Update Resync – dynamische Eigenschaft (ADO)
 Gibt an, ob auf die [UpdateBatch](./updatebatch-method.md) -Methode ein impliziter Vorgang zum [erneuten Synchronisieren](./resync-method.md) der Methode folgt, und wenn ja, der Gültigkeitsbereich dieses Vorgangs.  
@@ -32,7 +32,7 @@ Gibt an, ob auf die [UpdateBatch](./updatebatch-method.md) -Methode ein implizit
   
  Die Konstante **adresyncconflicts** speichert die Werte für die erneute Synchronisierung als zugrunde liegende Werte, überschreibt jedoch ausstehende Änderungen nicht.  
   
- **Update Resync** ist eine dynamische Eigenschaft, die an die Auflistung der [Recordset](./recordset-object-ado.md) -Objekt [Eigenschaften](./properties-collection-ado.md) angehängt wird, wenn die [Cursor Location](./cursorlocation-property-ado.md) -Eigenschaft auf **adUseClient**festgelegt ist.  
+ **Update Resync** ist eine dynamische Eigenschaft, die an die Auflistung der [Recordset](./recordset-object-ado.md) -Objekt [Eigenschaften](./properties-collection-ado.md) angehängt wird, wenn die [Cursor Location](./cursorlocation-property-ado.md) -Eigenschaft auf **adUseClient** festgelegt ist.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](./recordset-object-ado.md)

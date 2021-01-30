@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::ConnectionString
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2add76a640e89bebe8a941afa5896bb2300750a9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3a5e9bc25728de2859074136adb1a28349b2806d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974771"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167715"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString-Eigenschaft (ADO)
 Gibt die Informationen an, die zum Herstellen einer Verbindung mit einer Datenquelle verwendet werden.  
@@ -34,7 +34,7 @@ Gibt die Informationen an, die zum Herstellen einer Verbindung mit einer Datenqu
   
  ADO unterstützt fünf Argumente für die **ConnectionString** -Eigenschaft. alle anderen Argumente werden direkt an den Anbieter übergeben, ohne dass Sie von ADO verarbeitet werden. Die von ADO unterstützten Argumente lauten wie folgt.  
   
-|Argument|Beschreibung|  
+|Argument|BESCHREIBUNG|  
 |--------------|-----------------|  
 |*Anbieter =*|Gibt den Namen eines Anbieters an, der für die Verbindung verwendet werden soll.|  
 |*Dateiname =*|Gibt den Namen einer anbieterspezifischen Datei an (z. b. ein persistente Datenquellen Objekt), die voreingestellte Verbindungsinformationen enthält.|  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4eb8b682e7e539c1c0af784eb70016fa1bb25c1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6ab7be112f27f16d25d613b21f9ecbe5b14fcbbd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975961"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167869"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>Beispiel für Attribute und namens Eigenschaften (VC + +)
 In diesem Beispiel wird der Wert der Eigenschaft [Attribute](./attributes-property-ado.md) für [Verbindungs](./connection-object-ado.md)-, [Feld](./field-object.md)-und [Eigenschafts](./property-object-ado.md) Objekte angezeigt. Er verwendet die [Name](./name-property-ado.md) -Eigenschaft, um den Namen der einzelnen **Felder** und **Eigenschaften** Objekte anzuzeigen.  

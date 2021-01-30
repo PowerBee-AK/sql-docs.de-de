@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::BOF
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 710a116e28a102eeac8a7a062a9f66cd8dcbe79c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 71424db7a06dc8b1d5d47a3505e90ffaf175cc3b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975781"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167830"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF- und EOF-Eigenschaften (ADO)
 -   **BOF** Gibt an, dass sich die aktuelle Daten Satz Position vor dem ersten Datensatz in einem [Recordset](./recordset-object-ado.md) -Objekt befindet.  
@@ -40,9 +40,9 @@ ms.locfileid: "88975781"
   
  Die **EOF** -Eigenschaft gibt **true** zurück, wenn die aktuelle Daten Satz Position nach dem letzten Datensatz liegt, und **false** , wenn die aktuelle Daten Satz Position am oder vor dem letzten Datensatz liegt.  
   
- Wenn die **BOF** -Eigenschaft oder die **EOF** -Eigenschaft den Wert **true**hat, ist kein aktueller Datensatz vorhanden.  
+ Wenn die **BOF** -Eigenschaft oder die **EOF** -Eigenschaft den Wert **true** hat, ist kein aktueller Datensatz vorhanden.  
   
- Wenn Sie ein **Recordset** -Objekt öffnen, das keine Datensätze enthält, werden die **BOF** -und **EOF** -Eigenschaften auf **true** festgelegt (Weitere Informationen zu diesem Status eines **Recordsets**finden Sie in der [RecordCount](./recordcount-property-ado.md) -Eigenschaft). Wenn Sie ein **Recordset** -Objekt öffnen, das mindestens einen Datensatz enthält, ist der erste Datensatz der aktuelle Datensatz, und die **BOF** -und **EOF** -Eigenschaften sind **false**.  
+ Wenn Sie ein **Recordset** -Objekt öffnen, das keine Datensätze enthält, werden die **BOF** -und **EOF** -Eigenschaften auf **true** festgelegt (Weitere Informationen zu diesem Status eines **Recordsets** finden Sie in der [RecordCount](./recordcount-property-ado.md) -Eigenschaft). Wenn Sie ein **Recordset** -Objekt öffnen, das mindestens einen Datensatz enthält, ist der erste Datensatz der aktuelle Datensatz, und die **BOF** -und **EOF** -Eigenschaften sind **false**.  
   
  Wenn Sie den letzten verbleibenden Datensatz im **Recordset** -Objekt löschen, bleiben die **BOF** -und **EOF** -Eigenschaften möglicherweise **falsch** , bis Sie versuchen, den aktuellen Datensatz neu zu positionieren.  
   

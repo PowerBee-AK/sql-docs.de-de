@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::raw_Find
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18b4dc88dfedbb5a9a06968ebb5b02300439ed1b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8f581b2c4b4861c852a9e5a24aec5a219ee098f4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88972951"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167322"
 ---
 # <a name="find-method-ado"></a>Find-Methode (ADO)
-Durchsucht ein [Recordset](./recordset-object-ado.md) nach der Zeile, die die angegebenen Kriterien erfüllt. Optional können die Suchrichtung, die Anfangs Zeile und der Offset der Anfangs Zeile angegeben werden. Wenn die Kriterien erfüllt sind, wird die aktuelle Zeilen Position für den gefundenen Datensatz festgelegt. Andernfalls wird die Position auf das Ende (oder den Anfang) des **Recordsets**festgelegt.  
+Durchsucht ein [Recordset](./recordset-object-ado.md) nach der Zeile, die die angegebenen Kriterien erfüllt. Optional können die Suchrichtung, die Anfangs Zeile und der Offset der Anfangs Zeile angegeben werden. Wenn die Kriterien erfüllt sind, wird die aktuelle Zeilen Position für den gefundenen Datensatz festgelegt. Andernfalls wird die Position auf das Ende (oder den Anfang) des **Recordsets** festgelegt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,13 +42,13 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Optional. Ein **Long** -Wert, dessen Standardwert 0 (null) ist, der den Zeilen Offset aus der aktuellen Zeile oder dem *Start* Lesezeichen angibt, um die Suche zu starten. Standardmäßig wird die Suche in der aktuellen Zeile gestartet.  
   
  *Suchrichtung*  
- Optional. Ein [SearchDirectionEnum](./searchdirectionenum.md) -Wert, der angibt, ob die Suche mit der aktuellen Zeile oder der nächsten verfügbaren Zeile in der Suchrichtung beginnen soll. Eine fehlgeschlagene Suche wird am Ende des **Recordsets** angehalten, wenn der Wert **adsearchforward**lautet. Eine nicht erfolgreiche Suche wird am Anfang des **Recordsets** angehalten, wenn der Wert **adsearchrückwärts**lautet.  
+ Optional. Ein [SearchDirectionEnum](./searchdirectionenum.md) -Wert, der angibt, ob die Suche mit der aktuellen Zeile oder der nächsten verfügbaren Zeile in der Suchrichtung beginnen soll. Eine fehlgeschlagene Suche wird am Ende des **Recordsets** angehalten, wenn der Wert **adsearchforward** lautet. Eine nicht erfolgreiche Suche wird am Anfang des **Recordsets** angehalten, wenn der Wert **adsearchrückwärts** lautet.  
   
  *Starten*  
  Optional. Ein **Variant** -Lesezeichen, das als Startposition für die Suche fungiert.  
   
 ## <a name="remarks"></a>Bemerkungen  
- In den *Kriterien*kann nur ein einspaltige Name angegeben werden. Diese Methode unterstützt keine Suchvorgänge mit mehreren Spalten.  
+ In den *Kriterien* kann nur ein einspaltige Name angegeben werden. Diese Methode unterstützt keine Suchvorgänge mit mehreren Spalten.  
   
  Der Vergleichs Operator in den *Kriterien* kann " **>** " (größer als), "* * \<**" (less than), "=" (equal), "> =" (größer als oder gleich), "<=" (kleiner als oder gleich), "<>" (nicht gleich) oder "like" (Muster Vergleich) sein.  
   
@@ -59,7 +59,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Sternchen können nur am Ende einer Kriterienzeichenfolge oder am Anfang und am Ende einer Kriterienzeichenfolge verwendet werden, wie oben gezeigt. Sie können das Sternchen nicht als führenden Platzhalter ("* str") oder als eingebetteten Platzhalter (" \* r") verwenden. Dies führt zu einem Fehler.  
   
 > [!NOTE]
->  Wenn eine aktuelle Zeilen Position vor dem Aufrufen von **Find**nicht festgelegt ist, tritt ein Fehler auf. Jede Methode, die die Zeilen Position festlegt, [wie z](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md). b. "", sollte vor dem Aufrufen von " **Find**" aufgerufen werden.  
+>  Wenn eine aktuelle Zeilen Position vor dem Aufrufen von **Find** nicht festgelegt ist, tritt ein Fehler auf. Jede Methode, die die Zeilen Position festlegt, [wie z](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md). b. "", sollte vor dem Aufrufen von " **Find**" aufgerufen werden.  
   
 > [!NOTE]
 >  Wenn Sie die **Find** -Methode für ein Recordset aufzurufen und die aktuelle Position im Recordset den letzten Datensatz oder das Ende der Datei (EOF) enthält, werden Sie nichts finden. Sie müssen die Methode " **muvefirst** " aufzurufen, um die aktuelle Position/den Cursor auf den Anfang des Recordsets festzulegen.  
@@ -70,5 +70,5 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 ## <a name="see-also"></a>Weitere Informationen  
  [Find Method-Beispiel (VB)](./find-method-example-vb.md)   
  [Index-Eigenschaft](./index-property.md)   
- [Optimieren von Eigenschaften-Dynamic (ADO)](./optimize-property-dynamic-ado.md)   
+ [Optimieren der Property-Dynamic (ADO)](./optimize-property-dynamic-ado.md)   
  [Seek-Methode](./seek-method.md)

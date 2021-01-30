@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Error::GetSQLState
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bbc849f19c91f7b2387df5e0e71b3455efa0db09
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8ebacade44d53ddf142f22f9e30bce140e375592
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988861"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170219"
 ---
 # <a name="sqlstate-property"></a>SQLState-Eigenschaft
 Gibt den SQL-Status für ein angegebenes [Fehler](./error-object.md) Objekt an.  

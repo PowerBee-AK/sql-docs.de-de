@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Field
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4768281228e39ed8eeb6ffc003e463bf8a53450d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6042032018ea75eb7b2b13bb677ad48dca56290b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973231"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167378"
 ---
 # <a name="field-object"></a>Field-Objekt
 Stellt eine Datenspalte mit einem gemeinsamen Datentyp dar.  
@@ -47,7 +47,7 @@ Stellt eine Datenspalte mit einem gemeinsamen Datentyp dar.
   
 -   Wenn der Anbieter Batch Aktualisierungen unterstützt, lösen Sie bei der Batch Aktualisierung Unterschiede in den Feldwerten mit den Eigenschaften [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) und [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) .  
   
- Alle Metadateneigenschaften ("**Name**", " **Type**", " **DefinedSize**", " **Precision**" und " **NumericScale**") stehen vor dem Öffnen des **Recordsets**des **Feld** Objekts zur Verfügung. Die Festlegung zu diesem Zeitpunkt ist für das dynamische Erstellen von Formularen nützlich.  
+ Alle Metadateneigenschaften ("**Name**", " **Type**", " **DefinedSize**", " **Precision**" und " **NumericScale**") stehen vor dem Öffnen des **Recordsets** des **Feld** Objekts zur Verfügung. Die Festlegung zu diesem Zeitpunkt ist für das dynamische Erstellen von Formularen nützlich.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   

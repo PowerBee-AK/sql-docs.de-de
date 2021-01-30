@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - MoveLast method [RDS]
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0e2b53967017ca093b04b5449ebd7a47a983f29
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 80a0a2b5fae2339718089903060c512595957be3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724471"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168913"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst-, MoveLast-, MoveNext- und MovePrevious-Methode (RDS)
 Wechselt zum ersten, letzten, nächsten oder vorherigen Datensatz in einem angegebenen [Recordset](../ado-api/recordset-object-ado.md) -Objekt.  
@@ -42,7 +42,7 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  Eine Objekt Variable, die einen [RDS darstellt. DataControl](./datacontrol-object-rds.md) -Objekt.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die **Move** -Methoden können mit RDS verwendet werden **. DataControl** -Objekt, um durch die Datensätze in den Daten gebundenen Steuerelementen auf einer Webseite zu navigieren. Nehmen Sie beispielsweise an, dass Sie ein **Recordset** in einem Raster durch Binden an einen **RDS anzeigen. DataControl** -Objekt. Sie können dann die Schaltflächen First, Last, Next und Previous einschließen, auf die Benutzer klicken können, um zum ersten, letzten, nächsten oder vorherigen Datensatz im angezeigten **Recordset**zu wechseln. Dies erreichen Sie, indem Sie die Methoden " **muvefirst**", " **muvelast**", " **muvenext**" und " **muveprevious** " des **RDS aufrufen. DataControl** -Objekt in den OnClick-Prozeduren für die Schaltflächen First, Last, Next und Previous. Das [Adressbuch Beispiel](../../guide/remote-data-service/address-book-navigation-buttons.md) zeigt die Vorgehensweise.  
+ Die **Move** -Methoden können mit RDS verwendet werden **. DataControl** -Objekt, um durch die Datensätze in den Daten gebundenen Steuerelementen auf einer Webseite zu navigieren. Nehmen Sie beispielsweise an, dass Sie ein **Recordset** in einem Raster durch Binden an einen **RDS anzeigen. DataControl** -Objekt. Sie können dann die Schaltflächen First, Last, Next und Previous einschließen, auf die Benutzer klicken können, um zum ersten, letzten, nächsten oder vorherigen Datensatz im angezeigten **Recordset** zu wechseln. Dies erreichen Sie, indem Sie die Methoden " **muvefirst**", " **muvelast**", " **muvenext**" und " **muveprevious** " des **RDS aufrufen. DataControl** -Objekt in den OnClick-Prozeduren für die Schaltflächen First, Last, Next und Previous. Das [Adressbuch Beispiel](../../guide/remote-data-service/address-book-navigation-buttons.md) zeigt die Vorgehensweise.  
   
 ## <a name="applies-to"></a>Gilt für  
  [DataControl-Objekt (RDS)](./datacontrol-object-rds.md)  

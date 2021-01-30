@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 47cae7b3aabda7192467bf4dd746ac9a083b404a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 17ea6f0a278a9df688a27db338f566c4e5be6b1d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989031"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170260"
 ---
 # <a name="sort-property-example-vb"></a>Sort-Eigenschaft – Beispiel (VB)
-In diesem Beispiel wird die [Sort](./sort-property.md) -Eigenschaft des [Recordset](./recordset-object-ado.md) -Objekts verwendet, um die Zeilen eines **Recordsets** neu anzuordnen, die von der Tabelle " ***Authors*** " der ***Pubs*** -Datenbank abgeleitet werden. Eine sekundäre hilfsprogrammroutine druckt jede Zeile.  
+In diesem Beispiel wird die [Sort](./sort-property.md) -Eigenschaft des [Recordset](./recordset-object-ado.md) -Objekts verwendet, um die Zeilen eines **Recordsets** neu anzuordnen, das aus der Tabelle **_Authors_* _ der _*_Pubs_*_ -Datenbank abgeleitet wurde. Eine sekundäre hilfsprogrammroutine druckt jede Zeile.  
   
 ```  
 'BeginSortVB  
@@ -52,7 +52,7 @@ Public Sub Main()
     ' open client-side recordset to enable sort method  
     Set rstAuthors = New ADODB.Recordset  
     rstAuthors.CursorLocation = adUseClient  
-    strSQLAuthors = "SELECT * FROM Authors"  
+    strSQLAuthors = "SELECT _ FROM Authors"  
     rstAuthors.Open strSQLAuthors, Cnxn, adOpenStatic, adLockReadOnly, adCmdText  
   
      ' sort the recordset last name ascending  
@@ -104,7 +104,7 @@ End Sub
 'EndSortVB  
 ```  
   
- Dies ist die sekundäre Dienstprogramm Routine, die den angegebenen Titel und den Inhalt des angegebenen **Recordsets**ausgibt.  
+ Dies ist die sekundäre Dienstprogramm Routine, die den angegebenen Titel und den Inhalt des angegebenen **Recordsets** ausgibt.  
   
 ```  
 Attribute VB_Name = "Sort"  

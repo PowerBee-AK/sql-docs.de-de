@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ADO MD, properties
 - properties [ADO MD]
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1ffc556d5c4138f35b1831a8aebeb15622328d4c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: ed3add4b0920c493e7f83ccad14032a1ff227166
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97637860"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170008"
 ---
 # <a name="ado-md-properties"></a>ADO MD-Eigenschaften
 
@@ -29,8 +29,8 @@ ms.locfileid: "97637860"
 |[Beschriftung](./caption-property-ado-md.md)|Gibt den Beschriftungs Text an, der beim Anzeigen einer **Ebene** **oder eines** Element Objekts verwendet werden soll.|  
 |[ChildCount](./childcount-property-ado-md.md)|Gibt die Anzahl der Elemente an, für die **das aktuelle Element** Objekt das übergeordnete Element in einer Hierarchie ist.|  
 |[Children](./children-property-ado-md.md)|Gibt eine **Auflistung von** Membern zurück, für die **das aktuelle Element** das übergeordnete Element in der Hierarchie ist.|  
-|[Count](../ado-api/count-property-ado.md)|Gibt die Anzahl der-Objekte in einer Auflistung an.|  
-|[Tiefe](./depth-property-ado-md.md)|Gibt die Anzahl der Ebenen zwischen der **Ebene** und dem Stamm der Hierarchieebene an.|  
+|[Anzahl](../ado-api/count-property-ado.md)|Gibt die Anzahl der-Objekte in einer Auflistung an.|  
+|[Depth](./depth-property-ado-md.md)|Gibt die Anzahl der Ebenen zwischen der **Ebene** und dem Stamm der Hierarchieebene an.|  
 |[Beschreibung](./description-property-ado-md.md)|Gibt eine Text Erklärung des aktuellen-Objekts zurück.|  
 |[DimensionCount](./dimensioncount-property-ado-md.md)|Gibt die Anzahl der Dimensionen auf einer Achse an.|  
 |[DrilledDown](./drilleddown-property-ado-md.md)|Gibt an, ob dem Element auf der Achse keine untergeordneten Elemente unmittelbar folgen.|  

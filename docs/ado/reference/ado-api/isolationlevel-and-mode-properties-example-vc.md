@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d30aa737f78ba6356ac5104ca24ceeaf2f5504a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 29ef200146cdd048375c815e426f3d208095238f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990791"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167208"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel-und Mode-Eigenschaften (Beispiel) (VC + +)
 In diesem Beispiel wird die [Mode](./mode-property-ado.md) -Eigenschaft verwendet, um eine exklusive Verbindung zu öffnen, und die [IsolationLevel](./isolationlevel-property.md) -Eigenschaft, um eine Transaktion zu öffnen, die isoliert von anderen Transaktionen durchgeführt wird.  

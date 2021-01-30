@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Fields
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f16fd27e7bee9d3f9e922de4db625b897266a61
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2e16bf602bd0c54b425587fcf1a50d2cc60b2aa7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973121"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167353"
 ---
 # <a name="fields-collection-ado"></a>Fields-Collection (ADO)
 Enthält alle [Feld](./field-object.md) Objekte eines [Recordsets](./recordset-object-ado.md) oder eines [Datensatz](./record-object-ado.md) -Objekts.  
@@ -36,11 +36,11 @@ Enthält alle [Feld](./field-object.md) Objekte eines [Recordsets](./recordset-o
   
  Die **Fields** -Auflistung verfügt über eine [Append](./append-method-ado.md) -Methode, die vorläufig ein **Feld** Objekt erstellt und der Auflistung hinzufügt, sowie eine **Update** -Methode, die alle Ergänzungen oder Löschungen schließt.  
   
- Ein **Datensatz** -Objekt verfügt über zwei spezielle Felder, die mit [fieldenum](./fieldenum.md) -Konstanten indiziert werden können. Eine Konstante greift auf ein Feld zu, das den Standardstream für den **Datensatz**enthält, und die andere auf ein Feld, das die absolute URL Zeichenfolge für den **Datensatz**enthält.  
+ Ein **Datensatz** -Objekt verfügt über zwei spezielle Felder, die mit [fieldenum](./fieldenum.md) -Konstanten indiziert werden können. Eine Konstante greift auf ein Feld zu, das den Standardstream für den **Datensatz** enthält, und die andere auf ein Feld, das die absolute URL Zeichenfolge für den **Datensatz** enthält.  
   
- Bestimmte Anbieter (z. b. der [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) können die **Fields** -Auflistung mit einer Teilmenge der verfügbaren Felder für den **Datensatz** oder das **Recordset**auffüllen. Der Auflistung werden keine anderen Felder hinzugefügt, bis Sie zunächst anhand ihres Namens referenziert oder durch den Code indiziert werden.  
+ Bestimmte Anbieter (z. b. der [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) können die **Fields** -Auflistung mit einer Teilmenge der verfügbaren Felder für den **Datensatz** oder das **Recordset** auffüllen. Der Auflistung werden keine anderen Felder hinzugefügt, bis Sie zunächst anhand ihres Namens referenziert oder durch den Code indiziert werden.  
   
- Wenn Sie versuchen, mit dem Namen auf ein nicht vorhandenes Feld zu verweisen, wird ein neues **Feld** Objekt an die **Fields** -Auflistung mit dem [Status](./status-property-ado-field.md) **adfieldpdinginsert**angehängt. Wenn Sie [Update](./update-method.md)aufruft, erstellt ADO ein neues Feld in der Datenquelle, wenn es von Ihrem Anbieter zugelassen wird.  
+ Wenn Sie versuchen, mit dem Namen auf ein nicht vorhandenes Feld zu verweisen, wird ein neues **Feld** Objekt an die **Fields** -Auflistung mit dem [Status](./status-property-ado-field.md) **adfieldpdinginsert** angehängt. Wenn Sie [Update](./update-method.md)aufruft, erstellt ADO ein neues Feld in der Datenquelle, wenn es von Ihrem Anbieter zugelassen wird.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
