@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::Mode
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eab9f3db1bfe9417411dc832cfa24e3d4496257b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 86b6f8b9f7e55f78242427ab5a648896978ecc0a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990601"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170836"
 ---
 # <a name="mode-property-ado"></a>Mode-Eigenschaft (ADO)
 Gibt die verfügbaren Berechtigungen zum Ändern von Daten in einem [Verbindungs](./connection-object-ado.md)-, [Datensatz](./record-object-ado.md)-oder [Streamobjekt](./stream-object-ado.md) an.  
@@ -34,12 +34,12 @@ Gibt die verfügbaren Berechtigungen zum Ändern von Daten in einem [Verbindungs
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **Mode** -Eigenschaft, um die Zugriffsberechtigungen festzulegen oder zurückzugeben, die vom Anbieter für die aktuelle Verbindung verwendet werden. Die **Mode** -Eigenschaft kann nur festgelegt werden, wenn das **Verbindungs** Objekt geschlossen wird.  
   
- Bei einem **Streamobjekt** , wenn der Zugriffsmodus nicht angegeben ist, wird es von der Quelle geerbt, die zum Öffnen des Daten **Strom** Objekts verwendet wird. Wenn beispielsweise ein **Stream** von einem **Datensatz** -Objekt aus geöffnet wird, wird er standardmäßig im gleichen Modus wie der **Datensatz**geöffnet.  
+ Bei einem **Streamobjekt** , wenn der Zugriffsmodus nicht angegeben ist, wird es von der Quelle geerbt, die zum Öffnen des Daten **Strom** Objekts verwendet wird. Wenn beispielsweise ein **Stream** von einem **Datensatz** -Objekt aus geöffnet wird, wird er standardmäßig im gleichen Modus wie der **Datensatz** geöffnet.  
   
  Diese Eigenschaft ist Lese-/Schreibzugriff, wenn das Objekt geschlossen und schreibgeschützt ist, während das-Objekt geöffnet ist.  
   
 > [!NOTE]
->  **Verwendung von Remote Datendiensten** Wenn die **Mode** -Eigenschaft für ein Client seitiges **Verbindungs** Objekt verwendet wird, kann Sie nur auf **adModeUnknown**festgelegt werden.  
+>  **Verwendung von Remote Datendiensten** Wenn die **Mode** -Eigenschaft für ein Client seitiges **Verbindungs** Objekt verwendet wird, kann Sie nur auf **adModeUnknown** festgelegt werden.  
   
 ## <a name="applies-to"></a>Gilt für  
 

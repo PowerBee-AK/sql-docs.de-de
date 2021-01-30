@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::MarshalOptions
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 390c8abf-133e-40da-8b99-8f748a983e4f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e7e574836f09df6f3bb8fdb078661c85cbf6355
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2d825a56123965fa95605e913354f6ea34db04ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990671"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170880"
 ---
 # <a name="marshaloptions-property-ado"></a>MarshalOptions-Eigenschaft (ADO)
 Gibt an, welche Datensätze des [Recordsets](./recordset-object-ado.md) zurück an den Server gemarshallt werden sollen.  
@@ -33,7 +33,7 @@ Gibt an, welche Datensätze des [Recordsets](./recordset-object-ado.md) zurück 
  Bei Verwendung eines Client seitigen [Recordsets](./recordset-object-ado.md)werden Datensätze, die auf dem Client geändert wurden, mithilfe eines Verfahrens namens Marshalling zurück auf die mittlere Ebene oder den Webserver zurückgeschrieben. dabei handelt es sich um das Verpacken und Senden von Schnittstellen Methoden Parametern über Thread-oder Prozess Grenzen hinweg. Das Festlegen der Eigenschaft " **MarshalOptions** " kann die Leistung verbessern, wenn geänderte Remote Daten für die Aktualisierung auf die mittlere Ebene oder den Webserver gemarshallt werden.  
   
 > [!NOTE]
->  **Verwendung von Remote Datendiensten** Diese Eigenschaft wird nur für ein Client seitiges **Recordset**verwendet.  
+>  **Verwendung von Remote Datendiensten** Diese Eigenschaft wird nur für ein Client seitiges **Recordset** verwendet.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](./recordset-object-ado.md)  

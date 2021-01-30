@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Error::GetHelpContext
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9ac9c7f712514f50ab8d40704700924ac344d23
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 355f3047a31e82d034cfe23b2d1c069d07a7bbab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990841"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170944"
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext- und HelpFile-Eigenschaft
 Gibt die Hilfedatei und das Thema an, die einem [Fehler](./error-object.md) Objekt zugeordnet sind.  

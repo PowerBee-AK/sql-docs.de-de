@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::EditMode
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6dd04a089d5a28a7eec3b67ebe1c48fe563ff69
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5854dce12ddb2303077111f3129274861a340ebd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973831"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171236"
 ---
 # <a name="editmode-property"></a>EditMode-Eigenschaft
 Gibt den Bearbeitungsstatus des aktuellen Datensatzes an.  
@@ -34,7 +34,7 @@ Gibt den Bearbeitungsstatus des aktuellen Datensatzes an.
   
  Im *sofort Update Modus* wird die **EditMode** -Eigenschaft auf " **adEditNone** " zurückgesetzt, nachdem ein erfolgreicher Aufruf der **Update** -Methode aufgerufen wurde. Wenn durch einen [Delete-DELETE](../../../ado/reference/ado-api/delete-method-ado-recordset.md) -Vorgang der Datensatz oder die Datensätze in der Datenquelle (z. b. aufgrund von Verletzungen der referenziellen Integrität) nicht erfolgreich gelöscht werden, verbleibt das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) im Bearbeitungsmodus (**EditMode**  =  **adEditInProgress**). Daher muss **CancelUpdate** aufgerufen werden, bevor der aktuelle Datensatz (z. b. [Move](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)oder [Close](../../../ado/reference/ado-api/close-method-ado.md) ) verschoben wird.  
   
- Im *Batch Update Modus* (in dem der Anbieter mehrere Änderungen zwischenspeichert und Sie nur dann in die zugrunde liegende Datenquelle schreibt, wenn Sie die [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) -Methode aufrufen), wird der Wert der **EditMode** -Eigenschaft geändert, wenn der erste Vorgang ausgeführt wird, und er wird nicht durch einen Aufrufen der **Update** -Methode zurückgesetzt. Nachfolgende Vorgänge ändern den Wert der **EditMode** -Eigenschaft nicht, auch wenn verschiedene Vorgänge ausgeführt werden. Wenn beispielsweise der erste Vorgang ist, einen neuen Datensatz hinzuzufügen, und der zweite Vorgang Änderungen an einem vorhandenen Datensatz vornimmt, ist die Eigenschaft von **EditMode** weiterhin **adEditAdd**. Die **EditMode** -Eigenschaft wird erst nach dem Aufrufen von **UpdateBatch**auf ' **adEditNone** ' zurückgesetzt. Um zu ermitteln, welche Vorgänge ausgeführt wurden, legen Sie die [Filter](../../../ado/reference/ado-api/filter-property.md) -Eigenschaft auf [adfilterpending](../../../ado/reference/ado-api/filtergroupenum.md) fest, sodass nur Datensätze mit ausstehenden Änderungen sichtbar sind, und untersuchen Sie die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) -Eigenschaft jedes Datensatzes, um zu bestimmen, welche Änderungen an den Daten vorgenommen wurden.  
+ Im *Batch Update Modus* (in dem der Anbieter mehrere Änderungen zwischenspeichert und Sie nur dann in die zugrunde liegende Datenquelle schreibt, wenn Sie die [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) -Methode aufrufen), wird der Wert der **EditMode** -Eigenschaft geändert, wenn der erste Vorgang ausgeführt wird, und er wird nicht durch einen Aufrufen der **Update** -Methode zurückgesetzt. Nachfolgende Vorgänge ändern den Wert der **EditMode** -Eigenschaft nicht, auch wenn verschiedene Vorgänge ausgeführt werden. Wenn beispielsweise der erste Vorgang ist, einen neuen Datensatz hinzuzufügen, und der zweite Vorgang Änderungen an einem vorhandenen Datensatz vornimmt, ist die Eigenschaft von **EditMode** weiterhin **adEditAdd**. Die **EditMode** -Eigenschaft wird erst nach dem Aufrufen von **UpdateBatch** auf ' **adEditNone** ' zurückgesetzt. Um zu ermitteln, welche Vorgänge ausgeführt wurden, legen Sie die [Filter](../../../ado/reference/ado-api/filter-property.md) -Eigenschaft auf [adfilterpending](../../../ado/reference/ado-api/filtergroupenum.md) fest, sodass nur Datensätze mit ausstehenden Änderungen sichtbar sind, und untersuchen Sie die [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) -Eigenschaft jedes Datensatzes, um zu bestimmen, welche Änderungen an den Daten vorgenommen wurden.  
   
 > [!NOTE]
 >  **EditMode** kann nur dann einen gültigen Wert zurückgeben, wenn ein aktueller Datensatz vorhanden ist. **EditMode** gibt einen Fehler zurück, wenn [BOF oder EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) true ist oder wenn der aktuelle Datensatz gelöscht wurde.  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset::ExecuteComplete
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ef8df9f6d4ea113d5cca9ad9ffba9c4888776d8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 261a3a39486dc73e95a7339906a49657a0d04634
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973351"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171114"
 ---
 # <a name="fetchcomplete-event-ado"></a>FetchComplete-Ereignis (ADO)
 Das Ereignis **FetchComplete** wird aufgerufen, nachdem alle Datensätze in einem langwierigen asynchronen Vorgang in das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)abgerufen wurden.  
@@ -36,7 +36,7 @@ FetchComplete pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>Parameter  
  *pError*  
- Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Es wird der Fehler beschrieben, der aufgetreten ist, wenn der Wert von **adStatus** **adstatuserrorsoccurrred**ist. Andernfalls ist es nicht festgelegt.  
+ Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Es wird der Fehler beschrieben, der aufgetreten ist, wenn der Wert von **adStatus** **adstatuserrorsoccurrred** ist. Andernfalls ist es nicht festgelegt.  
   
  *adStatus*  
  Ein [eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md) -Statuswert. Wenn dieses Ereignis aufgerufen wird, wird dieser Parameter auf **adstatuusok** festgelegt, wenn der Vorgang, der das Ereignis verursacht hat, erfolgreich war, oder auf **adstatuuserrorsoccurrred** , wenn der Vorgang fehlgeschlagen ist.  

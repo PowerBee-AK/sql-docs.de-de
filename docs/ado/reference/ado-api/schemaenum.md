@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - SchemaEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bcbe9bd3c3f4408be7d228c9edae4da20929f69
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 55a55d39117f2367b1b13c1a25b3785fe2d9cacc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989261"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170311"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Gibt den Typ des Schema- **Recordsets** an, das von der [OpenSchema](./openschema-method.md) -Methode abgerufen wird.  
@@ -33,9 +33,9 @@ Gibt den Typ des Schema- **Recordsets** an, das von der [OpenSchema](./openschem
   
  Sie können die Datentypen von Spalten in der OLE DB-Dokumentation in ADO-Datentypen übersetzen, indem Sie auf die Spalte Beschreibung des Themas ADO [DataTypeEnum](./datatypeenum.md) verweisen. Beispielsweise entspricht ein OLE DB Datentyp **DBTYPE_WSTR** dem ADO-Datentyp **adwchar**.  
   
- ADO generiert Schema ähnliche Ergebnisse für die Konstanten **adSchemaDBInfoKeywords** und **adSchemaDBInfoLiterals**. ADO erstellt ein **Recordset**und füllt dann jede Zeile mit den Werten aus, die von den **IDBInfo:: GetKeywords** -und **IDBInfo:: GetLiteralInfo** -Methoden zurückgegeben werden. Weitere Informationen zu diesen Methoden finden Sie im Abschnitt [IDBInfo](/previous-versions/windows/desktop/ms713663(v=vs.85)) der OLE DB Programmierer-Referenz.  
+ ADO generiert Schema ähnliche Ergebnisse für die Konstanten **adSchemaDBInfoKeywords** und **adSchemaDBInfoLiterals**. ADO erstellt ein **Recordset** und füllt dann jede Zeile mit den Werten aus, die von den **IDBInfo:: GetKeywords** -und **IDBInfo:: GetLiteralInfo** -Methoden zurückgegeben werden. Weitere Informationen zu diesen Methoden finden Sie im Abschnitt [IDBInfo](/previous-versions/windows/desktop/ms713663(v=vs.85)) der OLE DB Programmierer-Referenz.  
   
-|Konstante|Wert|Beschreibung|Einschränkungs Spalten|  
+|Konstante|Wert|BESCHREIBUNG|Einschränkungs Spalten|  
 |--------------|-----------|-----------------|------------------------|  
 |**adschemaassert**|0|Gibt die im Katalog definierten Assertionen zurück, deren Besitzer ein angegebener Benutzer ist.<br /><br /> (Assertionen-Rowset)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA constraint_name|  
 |**adschemacatalogs**|1|Gibt die physischen Attribute zurück, die Katalogen zugeordnet sind, auf die über das DBMS zugegriffen werden<br /><br /> (Katalogen-Rowset)|CATALOG_NAME|  

@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Reshape Name property [ADO]
 ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1678bcbae00c7d1022bfeffbb72a3e9b1ee63401
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 14e7b8ab97c59b566356ddeec10a6fbbd212840c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97637977"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170381"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Reshape Name – dynamische Eigenschaft (ADO)
 Gibt einen Namen für das [Recordset](./recordset-object-ado.md) -Objekt an.  
@@ -27,7 +27,7 @@ Gibt einen Namen für das [Recordset](./recordset-object-ado.md) -Objekt an.
 ## <a name="return-values"></a>Rückgabewerte  
  Gibt einen **Zeichen** folgen Wert zurück, der dem Namen des **Recordsets** entspricht.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Namen bleiben für die Dauer der Verbindung oder bis zum Schließen des **Recordsets** erhalten.  
   
  Die Eigenschaft " **Name Umformen** " ist hauptsächlich für die Verwendung mit der Umgestaltung der Funktion des Microsoft-Daten Strukturierungs [Dienstanbieters für OLE DB](../../guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) Dienstanbieter vorgesehen. Namen müssen eindeutig sein, um an der Umgestaltung beteiligt werden zu können.  

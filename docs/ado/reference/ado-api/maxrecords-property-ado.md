@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::MaxRecords
@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31870c4df71b20c162f95f1f1d942dde63885227
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ec7732203c4341840e6dcd05a9e37101b443a1df
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990641"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170855"
 ---
 # <a name="maxrecords-property-ado"></a>MaxRecords-Eigenschaft (ADO)
 Gibt die maximale Anzahl von Datensätzen an, die aus einer Abfrage zu einem [Recordset](./recordset-object-ado.md) zurückgegeben werden sollen.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt einen **Long** -Wert fest, der die maximale Anzahl zurück zugebender Datensätze angibt, oder gibt ihn zurück. Der Standardwert ist**0**(null), was bedeutet, dass kein Grenzwert gilt.  
+ Legt einen **Long** -Wert fest, der die maximale Anzahl zurück zugebender Datensätze angibt, oder gibt ihn zurück. Der Standardwert ist **0**(null), was bedeutet, dass kein Grenzwert gilt.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **maxRecords** -Eigenschaft, um die Anzahl der vom Anbieter zurückgegebenen Datensätze aus der Datenquelle einzuschränken. Die Standardeinstellung dieser Eigenschaft ist 0 (null), was bedeutet, dass der Anbieter alle angeforderten Datensätze zurückgibt.  

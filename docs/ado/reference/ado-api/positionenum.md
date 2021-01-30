@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - PositionEnum
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: e69af0a5-3405-4b72-9c6e-6b188ff746fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a871f6d2f7b73e7430761318a5acee31f05df3c1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 22760113f966379d8e1705420853705114d9c362
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990071"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170567"
 ---
 # <a name="positionenum"></a>PositionEnum
 Gibt die aktuelle Position des Daten Satz Zeigers innerhalb eines [Recordsets](./recordset-object-ado.md)an.  
   
-|Konstante|Wert|Beschreibung|  
+|Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**adposbof**|-2|Gibt an, dass sich der aktuelle Daten Satz Zeiger bei BOF befindet (d. h., die [BOF](./bof-eof-properties-ado.md) -Eigenschaft ist **true**).|  
 |**adtargeof**|-3|Gibt an, dass der aktuelle Daten Satz Zeiger bei EOF ist (d. h., die [EOF](./bof-eof-properties-ado.md) -Eigenschaft ist **true**).|  

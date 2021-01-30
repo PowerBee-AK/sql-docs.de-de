@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _DynaCollection::Delete
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3860a824690d9dca469a22135d35e040cc000dca
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 63b71709bd3c6f07c1dad3d7f3c471ecd267b202
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974121"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171294"
 ---
 # <a name="delete-method-ado-parameters-collection"></a>Delete-Methode (ADO-Parameters-Collection)
 Löscht ein-Objekt aus der [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung.  

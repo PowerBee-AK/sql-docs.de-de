@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::OpenSchema
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce524119367b53cac86c4bd29e3dc6927671c871
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9b5ca92e42a68639f6b9e3044894ec779109fff5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990281"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170681"
 ---
 # <a name="openschema-method"></a>OpenSchema-Methode
 Ruft Datenbankschema Informationen vom Anbieter ab.  
@@ -35,7 +35,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt ein [Recordset](./recordset-object-ado.md) -Objekt zurück, das Schema Informationen enthält. Das **Recordset** wird als Schreib geschützter, statischer Cursor geöffnet. Der *QueryType* bestimmt, welche Spalten im **Recordset**angezeigt werden.  
+ Gibt ein [Recordset](./recordset-object-ado.md) -Objekt zurück, das Schema Informationen enthält. Das **Recordset** wird als Schreib geschützter, statischer Cursor geöffnet. Der *QueryType* bestimmt, welche Spalten im **Recordset** angezeigt werden.  
   
 #### <a name="parameters"></a>Parameter  
  *QueryType*  
@@ -45,18 +45,18 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  Optional. Ein Array von Abfrage Einschränkungen für jede *QueryType* -Option, wie in [SchemaEnum](./schemaenum.md)aufgeführt.  
   
  *SchemaID*  
- Die GUID für eine Anbieter Schema Abfrage, die nicht durch die OLE DB Spezifikation definiert ist. Dieser Parameter ist erforderlich, wenn *QueryType* auf **adSchemaProviderSpecific**festgelegt ist. Andernfalls wird Sie nicht verwendet.  
+ Die GUID für eine Anbieter Schema Abfrage, die nicht durch die OLE DB Spezifikation definiert ist. Dieser Parameter ist erforderlich, wenn *QueryType* auf **adSchemaProviderSpecific** festgelegt ist. Andernfalls wird Sie nicht verwendet.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die **OpenSchema** -Methode gibt selbst beschreibende Informationen über die Datenquelle zurück, z. b. die Tabellen in der Datenquelle, die Spalten in den Tabellen und die unterstützten Datentypen.  
   
  Das *QueryType* -Argument ist eine GUID, die die zurückgegebenen Spalten (Schemas) angibt. Die OLE DB Spezifikation verfügt über eine vollständige Liste der Schemas.  
   
- Das *Kriterienargument* schränkt die Ergebnisse einer Schema Abfrage ein. *Kriterien* geben ein Array von Werten an, die in einer entsprechenden Teilmenge der Spalten (Einschränkungs Spalten) im resultierenden **Recordset**auftreten müssen.  
+ Das *Kriterienargument* schränkt die Ergebnisse einer Schema Abfrage ein. *Kriterien* geben ein Array von Werten an, die in einer entsprechenden Teilmenge der Spalten (Einschränkungs Spalten) im resultierenden **Recordset** auftreten müssen.  
   
  Die Konstante **adSchemaProviderSpecific** wird für das *QueryType* -Argument verwendet, wenn der Anbieter seine eigenen nicht standardmäßigen Schema Abfragen außerhalb der zuvor aufgeführten definiert. Wenn diese Konstante verwendet wird, ist das *SchemaID* -Argument erforderlich, um die GUID der auszuführenden Schema Abfrage zu übergeben. Wenn *QueryType* auf **adSchemaProviderSpecific** festgelegt ist, aber *SchemaID* nicht angegeben wird, tritt ein Fehler auf.  
   
- Anbieter sind nicht erforderlich, um alle OLE DB Standardschema Abfragen zu unterstützen. Insbesondere werden für die OLE DB Spezifikation nur **adSchemaTables**, **adschemacolenumns**und **adschemaprovidertypes** benötigt. Es ist jedoch nicht erforderlich, dass der Anbieter die zuvor aufgeführten *kriterieneinschränkungen* für diese Schema Abfragen unterstützt.  
+ Anbieter sind nicht erforderlich, um alle OLE DB Standardschema Abfragen zu unterstützen. Insbesondere werden für die OLE DB Spezifikation nur **adSchemaTables**, **adschemacolenumns** und **adschemaprovidertypes** benötigt. Es ist jedoch nicht erforderlich, dass der Anbieter die zuvor aufgeführten *kriterieneinschränkungen* für diese Schema Abfragen unterstützt.  
   
 > [!NOTE]
 >  **Verwendung von Remote Datendiensten** Die **OpenSchema** -Methode ist für ein Client seitiges [Verbindungs](./connection-object-ado.md) Objekt nicht verfügbar.  

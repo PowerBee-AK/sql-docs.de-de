@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Command::Dialect
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: be93ceb76aa0aadba5b28673c16704b0881186f9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ed95df8ca18a60cf34108258e7b3f624cb0cb1fe
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973901"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171249"
 ---
 # <a name="dialect-property"></a>Dialect-Eigenschaft
 Gibt den Dialekt der [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) -Eigenschaft oder der [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) -Eigenschaft an. Der Dialekt definiert die Syntax und die allgemeinen Regeln, die der Anbieter verwendet, um die Zeichenfolge oder den Stream zu analysieren.  

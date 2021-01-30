@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - DataTypeEnum
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd0e2226c0b85b10d7da9f4f14e7068aa25b1d2d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 700f7aa4053a1e99bcae5cdabe01a5fc6c440258
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974241"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171317"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Gibt den Datentyp eines [Felds](../../../ado/reference/ado-api/field-object.md), eines [Parameters](../../../ado/reference/ado-api/parameter-object.md)oder einer [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md)an. Der entsprechende OLE DB Typindikator wird in Klammern in der Beschreibungs Spalte der folgenden Tabelle angezeigt.  
   
-|Konstante|Wert|Beschreibung|  
+|Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**Adarray**|0x2000|Ein Flagwert, der immer mit einer anderen Datentyp Konstante kombiniert wird und ein Array des anderen Datentyps angibt. Gilt nicht für ADOX.|  
 |**adBigInt**|20|Gibt eine 8-Byte-Ganzzahl mit Vorzeichen (DBTYPE_I8) an.|  

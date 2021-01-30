@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Command15::get_Parameters
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bad2570c368e469afeb7c69e4f283bdbdfe04674
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4cd94745a6ec2d4f34245b53f509752c13688d45
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990121"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170600"
 ---
 # <a name="parameters-collection-ado"></a>Parameters-Collection (ADO)
 Enthält alle [Parameter](./parameter-object.md) Objekte eines [Befehls](./command-object-ado.md) Objekts.  
@@ -39,11 +39,11 @@ Enthält alle [Parameter](./parameter-object.md) Objekte eines [Befehls](./comma
   
  Die Objekte in der **Parameters** -Auflistung eines **Recordsets** gehen außerhalb des gültigen Bereichs (daher nicht verfügbar), wenn das **Recordset** geschlossen wird.  
   
- Beim Aufrufen einer gespeicherten Prozedur mit einem **Befehl**wird der Rückgabewert/Output-Parameter einer gespeicherten Prozedur wie folgt abgerufen:  
+ Beim Aufrufen einer gespeicherten Prozedur mit einem **Befehl** wird der Rückgabewert/Output-Parameter einer gespeicherten Prozedur wie folgt abgerufen:  
   
 1.  Wenn Sie eine gespeicherte Prozedur aufrufen, die über keine Parameter verfügt, sollte die **Aktualisierungs** Methode für die **Parameter** Auflistung aufgerufen werden, bevor die **Execute** -Methode für das **Command** -Objekt aufgerufen wird.  
   
-2.  Beim Aufrufen einer gespeicherten Prozedur mit Parametern und dem expliziten Anfügen eines Parameters an die **Parameter** Auflistung mit **Append**sollte der Rückgabewert/Ausgabeparameter an die **Parameter** Auflistung angehängt werden. Der Rückgabewert muss zuerst an die **Parameter** Auflistung angehängt werden. Verwenden **Sie anfügen,** um die anderen Parameter der **Parameter** Auflistung in der Reihenfolge der Definition hinzuzufügen. Beispielsweise verfügt die gespeicherte Prozedur spwithparam über zwei Parameter. Der erste Parameter, *InParam*, ist ein als adVarChar (20) definierter Eingabeparameter, und der zweite Parameter, *outParam*, ist ein Output-Parameter, der als adVarChar (20) definiert ist. Sie können den Rückgabewert/Output-Parameter mit dem folgenden Code abrufen.  
+2.  Beim Aufrufen einer gespeicherten Prozedur mit Parametern und dem expliziten Anfügen eines Parameters an die **Parameter** Auflistung mit **Append** sollte der Rückgabewert/Ausgabeparameter an die **Parameter** Auflistung angehängt werden. Der Rückgabewert muss zuerst an die **Parameter** Auflistung angehängt werden. Verwenden **Sie anfügen,** um die anderen Parameter der **Parameter** Auflistung in der Reihenfolge der Definition hinzuzufügen. Beispielsweise verfügt die gespeicherte Prozedur spwithparam über zwei Parameter. Der erste Parameter, *InParam*, ist ein als adVarChar (20) definierter Eingabeparameter, und der zweite Parameter, *outParam*, ist ein Output-Parameter, der als adVarChar (20) definiert ist. Sie können den Rückgabewert/Output-Parameter mit dem folgenden Code abrufen.  
   
     ```vb
     ' Open Connection Conn  

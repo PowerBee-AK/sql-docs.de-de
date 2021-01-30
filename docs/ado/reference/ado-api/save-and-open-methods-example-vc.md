@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 547916d25655a34883072f39701f3ac9b1a5df45
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0c39faffc0626cf5cec3837368b13b3df6f5a2a3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989351"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170329"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Beispiel für das Speichern und Öffnen von Methoden (VC + +)
 Diese drei Beispiele veranschaulichen, wie die [Save](./save-method.md) -Methode und die **Open** -Methode gleichzeitig verwendet werden können.  
   
- Angenommen, Sie arbeiten an einer Geschäftsreise und möchten eine Tabelle aus einer Datenbank aufnehmen. Bevor Sie fortfahren, greifen Sie auf die Daten als [Recordset](./recordset-object-ado.md) zu, und speichern Sie Sie in einem austauschen-Format. Wenn Sie das Ziel erreichen, greifen Sie als lokales, nicht verbundenes **Recordset**auf das **Recordset** zu. Sie nehmen Änderungen am **Recordset**vor und speichern es dann erneut. Wenn Sie zu Hause zurückkehren, stellen Sie erneut eine Verbindung mit der Datenbank her, und aktualisieren Sie Sie mit den Änderungen, die Sie auf dem Weg vorgenommen haben.  
+ Angenommen, Sie arbeiten an einer Geschäftsreise und möchten eine Tabelle aus einer Datenbank aufnehmen. Bevor Sie fortfahren, greifen Sie auf die Daten als [Recordset](./recordset-object-ado.md) zu, und speichern Sie Sie in einem austauschen-Format. Wenn Sie das Ziel erreichen, greifen Sie als lokales, nicht verbundenes **Recordset** auf das **Recordset** zu. Sie nehmen Änderungen am **Recordset** vor und speichern es dann erneut. Wenn Sie zu Hause zurückkehren, stellen Sie erneut eine Verbindung mit der Datenbank her, und aktualisieren Sie Sie mit den Änderungen, die Sie auf dem Weg vorgenommen haben.  
   
 ```  
 // BeginSaveCpp.cpp  

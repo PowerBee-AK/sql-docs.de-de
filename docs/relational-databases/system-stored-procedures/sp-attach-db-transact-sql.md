@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_attach_db_TSQL
 - sp_attach_db
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 79c3d518798c53342e67bfa42ce430d9ffe8e07a
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: cb1d6447fb73174817fe8105c3dea1866d09b789
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753472"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171773"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,9 +48,9 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dbname = ] 'dbnam_ '` Der Name der Datenbank, die an den Server angefügt werden soll. Der Name muss eindeutig sein. *dbname* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @dbname = ] 'dbnam_ '` Der Name der Datenbank, die an den Server angefügt werden soll. Der Name muss eindeutig sein. *dbname* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @filename1 = ] 'filename_n'` Der physische Name einer Datenbankdatei, einschließlich des Pfads. *filename_n* ist vom Datentyp **nvarchar (260)** und hat den Standardwert NULL. Sie können bis zu 16 Dateinamen angeben. Die Parameternamen beginnen bei ** \@ filename1** und erhöhen zu ** \@ filename16**. Die Liste der Dateinamen muss mindestens die primäre Datei einschließen. Die primäre Datei enthält die Systemtabellen, die auf andere Dateien in der Datenbank zeigen. Die Liste muss außerdem alle Dateien enthalten, die nach dem Trennen der Datenbank verschoben wurden.  
+`[ @filename1 = ] 'filename_n'` Der physische Name einer Datenbankdatei, einschließlich des Pfads. *filename_n* ist vom Datentyp **nvarchar (260)** und hat den Standardwert NULL. Sie können bis zu 16 Dateinamen angeben. Die Parameternamen beginnen bei **\@ filename1** und erhöhen zu **\@ filename16**. Die Liste der Dateinamen muss mindestens die primäre Datei einschließen. Die primäre Datei enthält die Systemtabellen, die auf andere Dateien in der Datenbank zeigen. Die Liste muss außerdem alle Dateien enthalten, die nach dem Trennen der Datenbank verschoben wurden.  
   
 > [!NOTE]  
 >  Dieses Argument entspricht dem FILENAME-Parameter der CREATE DATABASE-Anweisung. Weitere Informationen finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  

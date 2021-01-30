@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_proxy
 - sp_update_proxy_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 052f78652c02b7486d930dbb7071a6b2a981074b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f12d4666ed97033b19d7a0d4e39b17806e4d0953
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473495"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171716"
 ---
 # <a name="sp_update_proxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,17 +48,17 @@ sp_update_proxy
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @proxy_id = ] id` Die Proxy-ID des zu ändernden Proxys. Der *proxy_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @proxy_id = ] id` Die Proxy-ID des zu ändernden Proxys. Der *proxy_id* ist vom Datentyp **int** und hat den Standardwert NULL.  
   
-`[ @proxy_name = ] 'proxy_name'` Der Name des zu ändernden Proxys. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @proxy_name = ] 'proxy_name'` Der Name des zu ändernden Proxys. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @credential_name = ] 'credential_name'` Der Name der neuen Anmelde Informationen für den Proxy. Der *credential_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es können entweder *credential_name* oder *credential_id* angegeben werden.  
+`[ @credential_name = ] 'credential_name'` Der Name der neuen Anmelde Informationen für den Proxy. Der *credential_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Es können entweder *credential_name* oder *credential_id* angegeben werden.  
   
-`[ @credential_id = ] credential_id` Die Identifikationsnummer der neuen Anmelde Informationen für den Proxy. Der *credential_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es können entweder *credential_name* oder *credential_id* angegeben werden.  
+`[ @credential_id = ] credential_id` Die Identifikationsnummer der neuen Anmelde Informationen für den Proxy. Der *credential_id* ist vom Datentyp **int** und hat den Standardwert NULL. Es können entweder *credential_name* oder *credential_id* angegeben werden.  
   
-`[ @new_name = ] 'new_name'` Der neue Name des Proxys. Der *new_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn bereitgestellt, ändert die Prozedur den Namen des Proxys in *new_name*. Wenn für das Argument NULL festgelegt wird, bleibt der Name des Proxys unverändert.  
+`[ @new_name = ] 'new_name'` Der neue Name des Proxys. Der *new_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn bereitgestellt, ändert die Prozedur den Namen des Proxys in *new_name*. Wenn für das Argument NULL festgelegt wird, bleibt der Name des Proxys unverändert.  
   
-`[ @enabled = ] is_enabled` Gibt an, ob der Proxy aktiviert ist. Das *is_enabled* -Flag ist vom Datentyp **tinyint**. der Standardwert ist NULL. Wenn *is_enabled* **0**ist, ist der Proxy nicht aktiviert und kann nicht von einem Auftrags Schritt verwendet werden. Wird für das Argument NULL festgelegt, bleibt der Status des Proxys unverändert.  
+`[ @enabled = ] is_enabled` Gibt an, ob der Proxy aktiviert ist. Das *is_enabled* -Flag ist vom Datentyp **tinyint**. der Standardwert ist NULL. Wenn *is_enabled* **0** ist, ist der Proxy nicht aktiviert und kann nicht von einem Auftrags Schritt verwendet werden. Wird für das Argument NULL festgelegt, bleibt der Status des Proxys unverändert.  
   
 `[ @description = ] 'description'` Die neue Beschreibung des Proxys. Die *Beschreibung* ist vom Datentyp **nvarchar (512)** und hat den Standardwert NULL. Wenn für das Argument NULL festgelegt wird, bleibt die Beschreibung des Proxys unverändert.  
   
@@ -66,9 +66,9 @@ sp_update_proxy
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Es muss entweder ** \@ proxy_name** oder ** \@ proxy_id** angegeben werden. Wenn beide Argumente angegeben werden, müssen sie sich beide auf denselben Proxy beziehen. Andernfalls erzeugt die gespeicherte Prozedur einen Fehler.  
+ Es muss entweder **\@ proxy_name** oder **\@ proxy_id** angegeben werden. Wenn beide Argumente angegeben werden, müssen sie sich beide auf denselben Proxy beziehen. Andernfalls erzeugt die gespeicherte Prozedur einen Fehler.  
   
- Es muss entweder ** \@ credential_name** oder ** \@ credential_id** angegeben werden, um die Anmelde Informationen für den Proxy zu ändern. Wenn beide Argumente angegeben werden, müssen sich beide auf dieselben Anmeldeinformationen beziehen, andernfalls erzeugt die gespeicherte Prozedur einen Fehler.  
+ Es muss entweder **\@ credential_name** oder **\@ credential_id** angegeben werden, um die Anmelde Informationen für den Proxy zu ändern. Wenn beide Argumente angegeben werden, müssen sich beide auf dieselben Anmeldeinformationen beziehen, andernfalls erzeugt die gespeicherte Prozedur einen Fehler.  
   
  Mit dieser Prozedur wird der Proxy geändert, jedoch nicht der Zugriff auf den Proxy. Verwenden Sie **sp_grant_login_to_proxy** und **sp_revoke_login_from_proxy**, um den Zugriff auf einen Proxy zu ändern.  
   

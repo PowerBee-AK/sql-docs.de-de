@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ADORecordsetConstruction::PutRowset
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3341def2ce9f9f8e68f2135dc2b38cc3f947366f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1f5e99f97179323e92ff04153b5cb9fe0d67fe46
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989371"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170333"
 ---
 # <a name="rowset-property-ado"></a>Rowset-Eigenschaft (ADO)
 Ruft ein OLE DB Rowsetobjekt aus/in einem **adorecordsetconstruction** -Objekt ab oder legt dieses **fest** . Wenn Sie put_Rowset verwenden, wird das Rowset in ein ADO- **Recordset** -Objekt umgewandelt.  
@@ -41,10 +41,10 @@ HRESULT put_Rowset([in] IUnknown* pRowset);
   
 ## <a name="parameters"></a>Parameter  
  *ppRowset*  
- Zeiger auf ein OLE DB **Rowset** Rowsetobjekt.  
+ Zeiger auf ein OLE DB  Rowsetobjekt.  
   
  *Prowset*  
- Ein OLE DB **Rowset** Rowsetobjekt.  
+ Ein OLE DB  Rowsetobjekt.  
   
 ## <a name="return-values"></a>Rückgabewerte  
  Diese Eigenschaften Methode gibt die HRESULT-Standardwerte zurück, einschließlich S_OK und E_FAIL.  

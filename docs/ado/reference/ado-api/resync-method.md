@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset20::raw_Resync
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 79a43a36fb68063c2f0c880f0d8d086714dcfffe
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b1c4156c56a3c6722fb856511ccb3be1b14c7f5e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989481"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170357"
 ---
 # <a name="resync-method"></a>Resync-Methode
 Aktualisiert die Daten im aktuellen [Recordset](./recordset-object-ado.md) -Objekt oder der [Fields](./fields-collection-ado.md) -Auflistung eines [Datensatz](./record-object-ado.md) -Objekts aus der zugrunde liegenden Datenbank.  
@@ -59,9 +59,9 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
 ## <a name="fields"></a>Felder  
  Verwenden Sie die **Resync** -Methode, um die Werte der **Fields** -Auflistung eines **Datensatz** -Objekts mit der zugrunde liegenden Datenquelle erneut zu synchronisieren. Die [count](./count-property-ado.md) -Eigenschaft ist von dieser Methode nicht betroffen.  
   
- Wenn *resyncvalues* auf **adResyncAllValues** (Standardwert) festgelegt ist, werden die Eigenschaften " [UnderlyingValue](./underlyingvalue-property.md)", " [value](./value-property-ado.md)" und " [OriginalValue](./originalvalue-property-ado.md) " der [Feld](./field-object.md) Objekte in der Sammlung synchronisiert. Wenn *resyncvalues* auf **adresyncunderlyingvalues**festgelegt ist, wird nur die **UnderlyingValue** -Eigenschaft synchronisiert.  
+ Wenn *resyncvalues* auf **adResyncAllValues** (Standardwert) festgelegt ist, werden die Eigenschaften " [UnderlyingValue](./underlyingvalue-property.md)", " [value](./value-property-ado.md)" und " [OriginalValue](./originalvalue-property-ado.md) " der [Feld](./field-object.md) Objekte in der Sammlung synchronisiert. Wenn *resyncvalues* auf **adresyncunderlyingvalues** festgelegt ist, wird nur die **UnderlyingValue** -Eigenschaft synchronisiert.  
   
- Der Wert der Eigenschaft **Status** für jedes **Feld** Objekt zum Zeitpunkt des Aufrufes wirkt sich auch auf das Verhalten der **erneuten Synchronisierung**aus. Bei **Feld** Objekten, die die **Status** Werte **adfieldkdingunknown** oder **adfieldpdinginsert**aufweisen, hat die **erneute Synchronisierung** keine Auswirkung. Bei den **Status** Werten **adfieldpdingchange** oder **adfieldpdingdelete**synchronisiert **Resync** Datenwerte für Felder, die noch in der Datenquelle vorhanden sind.  
+ Der Wert der Eigenschaft **Status** für jedes **Feld** Objekt zum Zeitpunkt des Aufrufes wirkt sich auch auf das Verhalten der **erneuten Synchronisierung** aus. Bei **Feld** Objekten, die die **Status** Werte **adfieldkdingunknown** oder **adfieldpdinginsert** aufweisen, hat die **erneute Synchronisierung** keine Auswirkung. Bei den **Status** Werten **adfieldpdingchange** oder **adfieldpdingdelete** synchronisiert **Resync** Datenwerte für Felder, die noch in der Datenquelle vorhanden sind.  
   
  Bei der **erneuten Synchronisierung** werden die **Status** Werte von **Feld** Objekten nur dann geändert, wenn beim Aufruf der **erneuten Synchronisierung** ein Fehler auftritt. Wenn das Feld z. b. nicht mehr vorhanden ist, gibt der Anbieter einen entsprechenden **Status** Wert für das **Feld** Objekt zurück, z. b. **adfielddoesnotexist**. Zurückgegebene **Status** Werte können logisch in dem Wert der **Status** -Eigenschaft kombiniert werden.  
   

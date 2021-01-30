@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Parameter::NumericScale
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 120d88e82f77af622de962ac306442625487ff08
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3164dcc61165171ff0d1c33956f152bcb65f33b1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990411"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170740"
 ---
 # <a name="numericscale-property-ado"></a>NumericScale-Eigenschaft (ADO)
 Gibt die Skala numerischer Werte in einem [Parameter](./parameter-object.md) -oder [Feld](./field-object.md) Objekt an.  
@@ -35,7 +35,7 @@ Gibt die Skala numerischer Werte in einem [Parameter](./parameter-object.md) -od
   
  Bei **Parameter** Objekten ist die **NumericScale** -Eigenschaft Lese-/Schreibzugriff.  
   
- Für ein **Feld**Objekt ist **NumericScale** normalerweise schreibgeschützt. Bei neuen **Feld** Objekten, die an die [Fields](./fields-collection-ado.md) -Auflistung eines [Datensatzes](./record-object-ado.md)angehängt wurden, ist **NumericScale** jedoch nur Lese-/Schreibzugriff, nachdem die [value](./value-property-ado.md) -Eigenschaft für das **Feld** angegeben wurde und der Datenanbieter das neue **Feld** erfolgreich hinzugefügt hat, indem die [Update](./update-method.md) -Methode der [Fields](./fields-collection-ado.md) -Auflistung aufgerufen wurde.  
+ Für ein **Feld** Objekt ist **NumericScale** normalerweise schreibgeschützt. Bei neuen **Feld** Objekten, die an die [Fields](./fields-collection-ado.md) -Auflistung eines [Datensatzes](./record-object-ado.md)angehängt wurden, ist **NumericScale** jedoch nur Lese-/Schreibzugriff, nachdem die [value](./value-property-ado.md) -Eigenschaft für das **Feld** angegeben wurde und der Datenanbieter das neue **Feld** erfolgreich hinzugefügt hat, indem die [Update](./update-method.md) -Methode der [Fields](./fields-collection-ado.md) -Auflistung aufgerufen wurde.  
   
 ## <a name="applies-to"></a>Gilt für  
 

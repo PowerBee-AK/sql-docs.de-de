@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Record::raw_DeleteRecord
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 634e28fb1bcc6d246de72164f33d3d252f63505a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2986edf2ad2b987146f479c1bd6a1c4bbbc6736c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974001"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171267"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord-Methode (ADO)
 Löscht eine durch einen [Datensatz](../../../ado/reference/ado-api/record-object-ado.md)dargestellte Entität.  
@@ -42,9 +42,9 @@ Record.DeleteRecord Source, Async
  Optional. Ein **boolescher** Wert, der, wenn **true**, angibt, dass der Löschvorgang asynchron ist.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Vorgänge für das Objekt, das durch diesen **Datensatz** dargestellt wird, können nach Abschluss dieser Methode fehlschlagen. Nach dem Aufruf von **DeleteRecord**sollte der **Datensatz** geschlossen werden, da das Verhalten des **Datensatzes** möglicherweise unvorhersehbar wird, je nachdem, wann der Anbieter den **Datensatz** mit der Datenquelle aktualisiert.  
+ Vorgänge für das Objekt, das durch diesen **Datensatz** dargestellt wird, können nach Abschluss dieser Methode fehlschlagen. Nach dem Aufruf von **DeleteRecord** sollte der **Datensatz** geschlossen werden, da das Verhalten des **Datensatzes** möglicherweise unvorhersehbar wird, je nachdem, wann der Anbieter den **Datensatz** mit der Datenquelle aktualisiert.  
   
- Wenn dieser **Datensatz** von einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)abgerufen wurde, werden die Ergebnisse dieses Vorgangs nicht sofort in das **Recordset**reflektiert. Aktualisieren Sie das **Recordset** , indem Sie es schließen und erneut öffnen oder indem Sie die Methode **Recordset** [Requery](../../../ado/reference/ado-api/requery-method.md) , die [Update](../../../ado/reference/ado-api/update-method.md) -Methode oder die [Resync](../../../ado/reference/ado-api/resync-method.md) -Methode ausführen.  
+ Wenn dieser **Datensatz** von einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)abgerufen wurde, werden die Ergebnisse dieses Vorgangs nicht sofort in das **Recordset** reflektiert. Aktualisieren Sie das **Recordset** , indem Sie es schließen und erneut öffnen oder indem Sie die Methode **Recordset** [Requery](../../../ado/reference/ado-api/requery-method.md) , die [Update](../../../ado/reference/ado-api/update-method.md) -Methode oder die [Resync](../../../ado/reference/ado-api/resync-method.md) -Methode ausführen.  
   
 > [!NOTE]
 >  URLs, die das http-Schema verwenden, rufen automatisch den [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung auf](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Weitere Informationen finden Sie unter [absolute und relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  

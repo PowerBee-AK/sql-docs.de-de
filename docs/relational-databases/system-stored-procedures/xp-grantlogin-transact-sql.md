@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - xp_grantlogin
 - xp_grantlogin_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 185532cdcade18b6902fe1c3e8d1c8ab3eb568b7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d31a966e6b882a7901f156b150ce7ba13c9680c2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419264"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171689"
 ---
 # <a name="xp_grantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @loginame = ] 'login'` Der Name des hinzu zufügenden Windows-Benutzers oder der Windows-Gruppe. Der Windows-Benutzer oder die Windows-Gruppe muss mit einem Windows-Domänen Namen in der Form " *Domäne* \\ *Benutzer*" qualifiziert werden. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @loginame = ] 'login'` Der Name des hinzu zufügenden Windows-Benutzers oder der Windows-Gruppe. Der Windows-Benutzer oder die Windows-Gruppe muss mit einem Windows-Domänen Namen in der Form " *Domäne* \\ *Benutzer*" qualifiziert werden. *login* ist vom Datentyp **sysname** und hat keinen Standardwert.  
   
 `[ @logintype = ] 'logintype'` Die Sicherheitsstufe der Anmeldung, für die der Zugriff gewährt wird. *LoginType ist vom Datentyp* **varchar (5)** und hat den Standardwert NULL. Es kann nur **Admin** angegeben werden. Wenn **Admin** angegeben ist, erhält der *Anmelde* Name Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und wird als Mitglied der festen Server Rolle **sysadmin** hinzugefügt.  
   
@@ -51,15 +51,15 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="remarks"></a>Bemerkungen  
- **xp_grantlogin** ist nun eine gespeicherte System Prozedur anstelle einer erweiterten gespeicherten Prozedur. **xp_grantlogin** ruft **sp_grantlogin** und **sp_addsrvrolemember**auf.  
+ **xp_grantlogin** ist nun eine gespeicherte System Prozedur anstelle einer erweiterten gespeicherten Prozedur. **xp_grantlogin** ruft **sp_grantlogin** und **sp_addsrvrolemember** auf.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Server Rolle **securityadmin** . Wenn *LoginType*geändert wird, ist die Mitgliedschaft in der festen Server Rolle **sysadmin** erforderlich.  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **securityadmin** . Wenn *LoginType* geändert wird, ist die Mitgliedschaft in der festen Server Rolle **sysadmin** erforderlich.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sp_denylogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
- [sp_grantlogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
+ [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Allgemeine erweiterte gespeicherte Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_enumgroups &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/xp-enumgroups-transact-sql.md)   
  [xp_loginconfig &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)   

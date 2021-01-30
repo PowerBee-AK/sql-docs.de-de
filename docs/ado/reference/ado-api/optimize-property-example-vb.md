@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eeb075e3ad722fa7d449833a6be9b1acaa481eab
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 183d57a53063a4fc72d5218a2fd061a9913ce5c5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990271"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170672"
 ---
 # <a name="optimize-property-example-vb"></a>Optimize-Eigenschaft – Beispiel (VB)
-Dieses Beispiel veranschaulicht die dynamische **Optimierungs** Eigenschaft des [Field](./field-object.md) -Objekts. Das ***ZIP*** -Feld der Tabelle " ***Authors*** " in der ***Pubs*** -Datenbank ist nicht indiziert. Wenn die Eigenschaft [optimieren](./optimize-property-dynamic-ado.md) für das ***ZIP*** -Feld auf **true** festgelegt wird, wird ADO zum Erstellen eines Indexes autorisiert, der die Leistung der [Find](./find-method-ado.md) -Methode verbessert.  
+Dieses Beispiel veranschaulicht die dynamische **Optimierungs** Eigenschaft des [Field](./field-object.md) -Objekts. Das **_Feld ZIP_*_ der Tabelle _*_Authors_*_ in der _*_Pubs_*_-Datenbank ist nicht indiziert. Wenn Sie die Eigenschaft [optimieren](./optimize-property-dynamic-ado.md) auf _* true** für das Feld **_ZIP_* _ festlegen, wird ADO zum Erstellen eines Indexes autorisiert, der die Leistung der [Find](./find-method-ado.md) -Methode verbessert.  
   
 ```  
 'BeginOptimizeVB  
@@ -49,7 +49,7 @@ Public Sub Main()
      ' open recordset client-side to enable index creation.  
     Set rstAuthors = New ADODB.Recordset  
     rstAuthors.CursorLocation = adUseClient  
-    strSQLAuthors = "SELECT * FROM Authors"  
+    strSQLAuthors = "SELECT _ FROM Authors"  
     rstAuthors.Open strSQLAuthors, Cnxn, adOpenStatic, adLockReadOnly, adCmdText  
      ' Create the index.  
     rstAuthors!zip.Properties("Optimize") = True  

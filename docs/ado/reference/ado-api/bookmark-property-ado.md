@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::Bookmark
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 755397c0cf1b16243cdfa2d7777af487b7629b6e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: dd484230ba2801abcb553fa8f9013dce53799b09
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975771"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171562"
 ---
 # <a name="bookmark-property-ado"></a>Bookmark-Eigenschaft (ADO)
 Gibt ein Lesezeichen an, das den aktuellen Datensatz in einem [Recordset](./recordset-object-ado.md) -Objekt eindeutig identifiziert, oder legt den aktuellen Datensatz in einem **Recordset** -Objekt auf den Datensatz fest, der durch ein gültiges Lesezeichen identifiziert wird.  
@@ -36,7 +36,7 @@ Gibt ein Lesezeichen an, das den aktuellen Datensatz in einem [Recordset](./reco
   
  Der Benutzer ist möglicherweise nicht in der Lage, den Wert des Lesezeichens anzuzeigen. Außerdem sollten die Benutzer nicht erwarten, dass Lesezeichen direkt vergleichbar sind, da zwei Lesezeichen, die auf denselben Datensatz verweisen, möglicherweise unterschiedliche Werte aufweisen.  
   
- Wenn Sie die [Clone](./clone-method-ado.md) -Methode verwenden, um eine Kopie eines **Recordset** -Objekts zu erstellen, sind die **Lesezeichen** Eigenschafts Einstellungen für das ursprüngliche und das doppelte Recordsetobjekt identisch, und Sie können Sie austauschbar verwenden. **Recordset** Es ist jedoch nicht möglich, Lesezeichen aus unterschiedlichen **Recordset** -Objekten austauschbar zu verwenden, auch wenn Sie aus derselben Quelle oder demselben Befehl erstellt wurden.  
+ Wenn Sie die [Clone](./clone-method-ado.md) -Methode verwenden, um eine Kopie eines **Recordset** -Objekts zu erstellen, sind die **Lesezeichen** Eigenschafts Einstellungen für das ursprüngliche und das doppelte Recordsetobjekt identisch, und Sie können Sie austauschbar verwenden.  Es ist jedoch nicht möglich, Lesezeichen aus unterschiedlichen **Recordset** -Objekten austauschbar zu verwenden, auch wenn Sie aus derselben Quelle oder demselben Befehl erstellt wurden.  
   
 > [!NOTE]
 >  **Verwendung von Remote Datendiensten** Bei Verwendung auf einem Client seitigen **Recordset** -Objekt ist die **Bookmark** -Eigenschaft immer verfügbar.  

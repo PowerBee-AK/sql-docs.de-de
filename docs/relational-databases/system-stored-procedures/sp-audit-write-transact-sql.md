@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_audit_write
 - sp_audit_write_TSQL
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56795d7ed3da83dff9f50d70f639300dae0da3a1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0ac793b35f5e72b93a27369bf00327a969059b0d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536707"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171762"
 ---
 # <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Fügt der **USER_DEFINED_AUDIT_GROUP**ein benutzerdefiniertes Überwachungsereignis hinzu. Wenn **USER_DEFINED_AUDIT_GROUP** nicht aktiviert ist, wird **sp_audit_write** ignoriert.  
+  Fügt der **USER_DEFINED_AUDIT_GROUP** ein benutzerdefiniertes Überwachungsereignis hinzu. Wenn **USER_DEFINED_AUDIT_GROUP** nicht aktiviert ist, wird **sp_audit_write** ignoriert.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>Argumente  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- Ein vom Benutzer definierter und in der **user_defined_event_id** -Spalte des Überwachungsprotokolls aufgezeichneter Parameter. * \@ user_defined_event_id* ist vom Typ **smallint**.  
+ Ein vom Benutzer definierter und in der **user_defined_event_id** -Spalte des Überwachungsprotokolls aufgezeichneter Parameter. *\@ user_defined_event_id* ist vom Typ **smallint**.  
   
  `[ @succeeded = ] succeeded`  
  Ein vom Benutzer übergebener Parameter, mit dem angegeben wird, ob das Ereignis erfolgreich war. Dies wird in der Spalte Erfolgreich des Überwachungsprotokolls angezeigt. `@succeeded` ist **Bit**.  
@@ -56,7 +56,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
  Fehler entstehen durch falsche Eingabeparameter oder Fehler beim Schreiben in das Zielüberwachungsprotokoll.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn **USER_DEFINED_AUDIT_GROUP** entweder einer Serverüberwachungs- oder Datenbanküberwachungsspezifikation hinzugefügt wird, wird das von **sp_audit_write** ausgelöste Ereignis in das Überwachungsprotokoll eingeschlossen.  
   
 ## <a name="permissions"></a>Berechtigungen  

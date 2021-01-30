@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4359302bbd32d110ce55d073f155b74438586563
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 80215c133895804264ad7be586faeaf7cfcc4180
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990731"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170909"
 ---
 # <a name="item-property-example-vc"></a>Item-Eigenschaft – Beispiel (VC++)
-In diesem Beispiel wird veranschaulicht, wie die [Item](./item-property-ado.md) -Eigenschaft auf Member einer Auflistung zugreift. Im Beispiel wird die Tabelle " ***Authors*** " der ***Pubs*** -Datenbank mit einem parametrisierten Befehl geöffnet.  
+In diesem Beispiel wird veranschaulicht, wie die [Item](./item-property-ado.md) -Eigenschaft auf Member einer Auflistung zugreift. Im Beispiel wird die Tabelle ***Authors** _ der _*_Pubs_*_ -Datenbank mit einem parametrisierten Befehl geöffnet.  
   
  Auf den Parameter im Befehl, der für die Datenbank ausgegeben wird, wird von der [Parameter](./parameters-collection-ado.md) Auflistung des [Befehls](./command-object-ado.md) Objekts anhand des Indexes und namens zugegriffen. Auf die Felder des zurückgegebenen [Recordsets](./recordset-object-ado.md) wird von der [Fields](./fields-collection-ado.md) -Auflistung dieses Objekts nach Index und Name zugegriffen.  
   
@@ -82,7 +82,7 @@ void ItemX() {
       Column[7] = "zip";  
       Column[8] = "contract";  
   
-      _bstr_t strText("SELECT * FROM authors WHERE state = ?");  
+      _bstr_t strText("SELECT _ FROM authors WHERE state = ?");  
       pCmd->CommandText = strText;  
   
       pPrm = pCmd->CreateParameter("ItemXparm", adChar, adParamInput, 2, "CA");  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset21::Index
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44dab27756e71142b59ae27b2d8499e1dd2f639a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9e8c346ac48092d7a5dcaf09068bb64d63316a38
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990811"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170959"
 ---
 # <a name="index-property"></a>Index-Eigenschaft
 Gibt den Namen des Indexes an, der aktuell für ein [Recordset](./recordset-object-ado.md) -Objekt wirksam ist.  
@@ -44,7 +44,7 @@ Gibt den Namen des Indexes an, der aktuell für ein [Recordset](./recordset-obje
   
  Wenn der Index festgelegt werden kann, kann sich die aktuelle Zeilen Position ändern. Dies führt zu einem Update der [AbsolutePosition](./absoluteposition-property-ado.md) -Eigenschaft und löst die Ereignisse " **WillChangeRecordset**", " **RecordsetChangeComplete**", " [WillMove](./willmove-and-movecomplete-events-ado.md)" und " [MoveComplete](./willmove-and-movecomplete-events-ado.md) " aus.  
   
- Wenn der Index festgelegt werden kann und die [LockType](./locktype-property-ado.md) -Eigenschaft auf **adlockpessimioder** **adlockoptimistisch**festgelegt ist, wird ein impliziter [UpdateBatch](./updatebatch-method.md) -Vorgang ausgeführt. Dadurch werden die aktuellen und die betroffenen Gruppen freigegeben. Es wird ein beliebiger vorhandener Filter freigegeben, und die aktuelle Zeilen Position wird in die erste Zeile des neu geordneten **Recordsets**geändert.  
+ Wenn der Index festgelegt werden kann und die [LockType](./locktype-property-ado.md) -Eigenschaft auf **adlockpessimioder** **adlockoptimistisch** festgelegt ist, wird ein impliziter [UpdateBatch](./updatebatch-method.md) -Vorgang ausgeführt. Dadurch werden die aktuellen und die betroffenen Gruppen freigegeben. Es wird ein beliebiger vorhandener Filter freigegeben, und die aktuelle Zeilen Position wird in die erste Zeile des neu geordneten **Recordsets** geändert.  
   
  Die **Index** -Eigenschaft wird in Verbindung mit der [Seek](./seek-method.md) -Methode verwendet. Wenn der zugrunde liegende Anbieter die **Index** -Eigenschaft und somit die **Seek** -Methode nicht unterstützt, sollten Sie stattdessen die [Find](./find-method-ado.md) -Methode verwenden. Bestimmen Sie, ob das **Recordset** -Objekt Indizes mit der [unterstützten](./supports-method.md)**(adIndex)** -Methode unterstützt.  
   

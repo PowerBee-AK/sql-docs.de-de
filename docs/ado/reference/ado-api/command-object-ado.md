@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Command
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 252a59f63c4ce782a915a1e1cf11af58fd2f233b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b8926e551f97d60256758b7df6c9dabca5584123
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975231"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171487"
 ---
 # <a name="command-object-ado"></a>Command-Objekt (ADO)
 Definiert einen bestimmten Befehl, den Sie für eine Datenquelle ausführen möchten.  
@@ -60,7 +60,7 @@ Definiert einen bestimmten Befehl, den Sie für eine Datenquelle ausführen möc
   
  Wenn Sie ein **Befehls** Objekt unabhängig von einem zuvor definierten **Verbindungs** Objekt erstellen möchten, legen Sie die zugehörige **ActiveConnection** -Eigenschaft auf eine gültige Verbindungs Zeichenfolge fest. ADO erstellt weiterhin ein **Verbindungs** Objekt, weist dieses Objekt jedoch nicht einer Objektvariablen zu. Wenn Sie jedoch mehrere **Befehls** Objekte derselben Verbindung zuordnen, sollten Sie explizit ein **Verbindungs** Objekt erstellen und öffnen. Dadurch wird das **Verbindungs** Objekt einer Objektvariablen zugewiesen. Stellen Sie sicher, dass das **Verbindungs** Objekt erfolgreich geöffnet wurde, bevor Sie es der **ActiveConnection** -Eigenschaft des **Befehls** Objekts zuweisen, da das Zuweisen eines geschlossenen **Verbindungs** Objekts einen Fehler verursacht. Wenn Sie die **ActiveConnection** -Eigenschaft des **Command** -Objekts nicht auf diese Objekt Variable festlegen, erstellt ADO ein neues **Verbindungs** Objekt für jedes **Befehls** Objekt, auch wenn Sie dieselbe Verbindungs Zeichenfolge verwenden.  
   
- Um einen **Befehl**auszuführen, nennen Sie ihn anhand seiner [Name](./name-property-ado.md) -Eigenschaft für das zugeordnete **Verbindungs** Objekt. Für den **Befehl** muss die **ActiveConnection** -Eigenschaft auf das **Verbindungs** Objekt festgelegt sein. Wenn der **Befehl** über Parameter verfügt, übergeben Sie seine Werte als Argumente an die-Methode.  
+ Um einen **Befehl** auszuführen, nennen Sie ihn anhand seiner [Name](./name-property-ado.md) -Eigenschaft für das zugeordnete **Verbindungs** Objekt. Für den **Befehl** muss die **ActiveConnection** -Eigenschaft auf das **Verbindungs** Objekt festgelegt sein. Wenn der **Befehl** über Parameter verfügt, übergeben Sie seine Werte als Argumente an die-Methode.  
   
  Wenn zwei oder mehr **Befehls** Objekte für dieselbe Verbindung ausgeführt werden und ein **Befehls** Objekt eine gespeicherte Prozedur mit Ausgabeparametern ist, tritt ein Fehler auf. Verwenden Sie separate Verbindungen, oder trennen Sie alle anderen **Befehls** Objekte von der Verbindung, um jedes **Befehls** Objekt auszuführen.  
   

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ConnectOptionEnum
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b924acf0f41ead3025197bade8bcc2d459508f2a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 257dd82d5740c89fd8ca9f8f8d1969d27b9301ba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974691"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171429"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
 Gibt an, ob die [Open](./open-method-ado-connection.md) -Methode eines [Connection](./connection-object-ado.md) -Objekts zurückgegeben werden soll, nachdem die Verbindung (synchron) oder vor (asynchron) hergestellt wurde.  
   
-|Konstante|Wert|Beschreibung|  
+|Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**adasyncconnect**|16|Öffnet die Verbindung asynchron. Das Ereignis [ConnectComplete](./connectcomplete-and-disconnect-events-ado.md) kann verwendet werden, um zu bestimmen, wann die Verbindung verfügbar ist.|  
 |**adconnectunspezifiziert**|-1|Standard. Öffnet die Verbindung synchron.|  

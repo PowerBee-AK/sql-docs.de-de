@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::GetRows
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 666eabf1a375c6a86826bc94600846bd10a0ecfe
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: df59c3d464d1c19a3b98e8611e2db2983db2a833
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990911"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170993"
 ---
 # <a name="getrows-method-ado"></a>GetRows-Methode (ADO)
 Ruft mehrere Datensätze eines [Recordset](./recordset-object-ado.md) -Objekts in ein Array ab.  
@@ -44,7 +44,7 @@ array = recordset.GetRows(Rows, Start, Fields )
  *Starten*  
  Optional. Ein **Zeichen** folgen Wert oder **Variant** , der das Lesezeichen für den Datensatz ergibt, von dem der **GetRows** -Vorgang beginnen soll. Sie können auch einen [bookmarkenum](./bookmarkenum.md) -Wert verwenden.  
   
- *Felder*  
+ *Fields*  
  Optional. Eine **Variante** , die einen einzelnen Feldnamen oder eine Ordinalposition darstellt, oder ein Array von Feldnamen oder ordinalpositions Nummern. ADO gibt nur die Daten in diesen Feldern zurück.  
   
 ## <a name="remarks"></a>Bemerkungen  
@@ -56,7 +56,7 @@ array = recordset.GetRows(Rows, Start, Fields )
   
  Wenn Sie die Felder einschränken möchten, die der **GetRows** -Rückruf zurückgibt, können Sie entweder einen einzelnen Feldnamen/eine Zahl oder ein Array von Feldnamen/-Zahlen im *Fields* -Argument übergeben.  
   
- Nachdem Sie **GetRows**aufgerufen haben, wird der nächste ungelesene Datensatz zum aktuellen Datensatz, oder die [EOF](./bof-eof-properties-ado.md) -Eigenschaft wird auf **true** festgelegt, wenn keine weiteren Datensätze vorhanden sind.  
+ Nachdem Sie **GetRows** aufgerufen haben, wird der nächste ungelesene Datensatz zum aktuellen Datensatz, oder die [EOF](./bof-eof-properties-ado.md) -Eigenschaft wird auf **true** festgelegt, wenn keine weiteren Datensätze vorhanden sind.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](./recordset-object-ado.md)  

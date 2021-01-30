@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Connection collection [ADO], ADO/WFC syntax
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25153814172cd0298d2aca5e9499803e17cbfa60
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c0100fb432156a3f970fadfa0f39f2d72daee8b2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974936"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171456"
 ---
 # <a name="connection-ado---wfc-syntax"></a>Connection (ADO/WFC-Syntax)
 ## <a name="package-commswfcdata"></a>Paket "com. ms. wfc. Data"  
@@ -45,7 +45,7 @@ public int executeUpdate(String commandText)
 public int executeUpdate(String commandText, int options)  
 ```  
   
- Die **ExecuteUpdate** -Methode ist eine spezielle Case-Methode, die die zugrunde liegende ADO **Execute** -Methode mit bestimmten Parametern aufruft. Die **ExecuteUpdate** -Methode unterstützt die Rückgabe eines **Recordset** -Objekts nicht, sodass der *options* -Parameter der **Execute** -Methode mit **AdoEnums.Executeoptions. norecords**geändert wird. Nachdem die **Execute** -Methode abgeschlossen wurde, wird der aktualisierte *recordsafffiziert* -Parameter an die **ExecuteUpdate** -Methode zurückgegeben, die schließlich als **int**zurückgegeben wird.  
+ Die **ExecuteUpdate** -Methode ist eine spezielle Case-Methode, die die zugrunde liegende ADO **Execute** -Methode mit bestimmten Parametern aufruft. Die **ExecuteUpdate** -Methode unterstützt die Rückgabe eines **Recordset** -Objekts nicht, sodass der *options* -Parameter der **Execute** -Methode mit **AdoEnums.Executeoptions. norecords** geändert wird. Nachdem die **Execute** -Methode abgeschlossen wurde, wird der aktualisierte *recordsafffiziert* -Parameter an die **ExecuteUpdate** -Methode zurückgegeben, die schließlich als **int** zurückgegeben wird.  
   
 ```  
 public void open()   

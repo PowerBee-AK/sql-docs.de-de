@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - CursorOptionEnum
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a14102f57f2b328314e20e4124ca7e78258fb7e0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 00b50d99fa31e260118a93ce357c1afc4871e4ce
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974351"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171362"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 Gibt an, auf welche Funktionalität die [unterstützte](./supports-method.md) Methode testen soll.  
   
-|Konstante|Wert|Beschreibung|  
+|Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**adAddNew**|0x1000400|Unterstützt die [AddNew](./addnew-method-ado.md) -Methode, um neue Datensätze hinzuzufügen.|  
 |**adapproxposition**|0x4000|Unterstützt die Eigenschaften [AbsolutePosition](./absoluteposition-property-ado.md) und [AbsolutePage](./absolutepage-property-ado.md) .|  
@@ -38,7 +38,7 @@ Gibt an, auf welche Funktionalität die [unterstützte](./supports-method.md) Me
 |**admuveprevious**|0x200|Unterstützt die [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) -Methode und die [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) -Methode, und [Move](./move-method-ado.md) -oder [GetRows](./getrows-method-ado.md) -Methoden, um die aktuelle Daten Satz Position rückwärts zu verschieben, ohne Lesezeichen|  
 |**adnotify**|0x40000|Gibt an, dass der zugrunde liegende Datenanbieter Benachrichtigungen unterstützt (die bestimmen, ob **recordsetereignisse** unterstützt werden).|  
 |**adresync**|0x20000|Unterstützt die [Resync](./resync-method.md) -Methode, um den Cursor mit den Daten zu aktualisieren, die in der zugrunde liegenden Datenbank sichtbar sind.|  
-|**adSeek**|0x200000|Unterstützt die [Seek](./seek-method.md) -Methode, um eine Zeile in einem **Recordset**zu suchen.|  
+|**adSeek**|0x200000|Unterstützt die [Seek](./seek-method.md) -Methode, um eine Zeile in einem **Recordset** zu suchen.|  
 |**adupdate**|0x1008000|Unterstützt die [Update](./update-method.md) -Methode, um vorhandene Daten zu ändern.|  
 |**adUpdateBatch**|0x10000|Unterstützt die Batch Aktualisierung ([UpdateBatch](./updatebatch-method.md) -und [CancelBatch](./cancelbatch-method-ado.md) -Methoden) zum Übertragen von Gruppen von Änderungen an den Anbieter.|  
   

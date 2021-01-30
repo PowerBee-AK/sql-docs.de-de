@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::raw_Open
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3691f6b7b86d7f48ea570a542f85af75c53d017
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a3bca1379c776f6fad1f4ab2aa7368b424ff9e7f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990331"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170711"
 ---
 # <a name="open-method-ado-connection"></a>Open-Methode (ADO-Verbindung)
 Öffnet eine Verbindung mit einer Datenquelle.  
@@ -53,9 +53,9 @@ connection.Open ConnectionString, UserID, Password, Options
   
  Verwenden Sie das optionale *ConnectionString* -Argument, um entweder eine Verbindungs Zeichenfolge mit einer Reihe von *Argument* *= value* -Anweisungen, die durch Semikolons getrennt sind, oder eine Datei-oder Verzeichnis Ressource anzugeben, die mit einer URL identifiziert wird Die **ConnectionString** -Eigenschaft erbt automatisch den Wert, der für das *ConnectionString* -Argument verwendet wird. Daher können Sie entweder die **ConnectionString** -Eigenschaft des **Verbindungs** Objekts vor dem Öffnen festlegen oder das *ConnectionString* -Argument verwenden, um die aktuellen Verbindungsparameter **während des Aufrufes Aufrufes** aufzurufen oder zu überschreiben.  
   
- Wenn Sie Benutzer-und Kenn Wort Informationen sowohl im *ConnectionString* -Argument als auch in den optionalen *UserID* -und *Password* -Argumenten übergeben, überschreiben die Argumente " *UserID* " und *"Password"* die Werte, die in *ConnectionString*angegeben werden.  
+ Wenn Sie Benutzer-und Kenn Wort Informationen sowohl im *ConnectionString* -Argument als auch in den optionalen *UserID* -und *Password* -Argumenten übergeben, überschreiben die Argumente " *UserID* " und *"Password"* die Werte, die in *ConnectionString* angegeben werden.  
   
- Wenn Sie Ihre Vorgänge über eine geöffnete **Verbindung**abgeschlossen haben, verwenden Sie die [Close](./close-method-ado.md) -Methode, um alle zugeordneten Systemressourcen freizugeben. Durch das Schließen eines Objekts wird es nicht aus dem Arbeitsspeicher entfernt. Sie können die Eigenschafts Einstellungen ändern und die **Open** -Methode verwenden, um Sie zu einem späteren Zeitpunkt erneut zu öffnen. Wenn Sie ein Objekt vollständig aus dem Arbeitsspeicher entfernen möchten, legen Sie die Objekt Variable auf *Nothing*fest.  
+ Wenn Sie Ihre Vorgänge über eine geöffnete **Verbindung** abgeschlossen haben, verwenden Sie die [Close](./close-method-ado.md) -Methode, um alle zugeordneten Systemressourcen freizugeben. Durch das Schließen eines Objekts wird es nicht aus dem Arbeitsspeicher entfernt. Sie können die Eigenschafts Einstellungen ändern und die **Open** -Methode verwenden, um Sie zu einem späteren Zeitpunkt erneut zu öffnen. Wenn Sie ein Objekt vollständig aus dem Arbeitsspeicher entfernen möchten, legen Sie die Objekt Variable auf *Nothing* fest.  
   
 > [!NOTE]
 >  **Verwendung von Remote Datendiensten** Wenn die **Open** -Methode für ein Client seitiges **Verbindungs** Objekt verwendet wird, stellt Sie keine Verbindung mit dem Server her, bis ein [Recordset](./recordset-object-ado.md) für das **Verbindungs** Objekt geöffnet ist.  

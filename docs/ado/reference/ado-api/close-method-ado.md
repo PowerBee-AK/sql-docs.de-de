@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::Close
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7843642c38a30d854cb6729fd5a418de8c91f2c7
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9a7c0ea176f203bd9b7b2febc17475e6af385d7f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975391"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171518"
 ---
 # <a name="close-method-ado"></a>Close-Methode (ADO)
 Schließt ein offenes Objekt und alle abhängigen Objekte.  
@@ -43,10 +43,10 @@ object.Close
   
  Sie können später die [Open](./open-method-ado-connection.md) -Methode aufzurufen, um die Verbindung mit derselben oder einer anderen Datenquelle wiederherzustellen. Während das **Verbindungs** Objekt geschlossen wird, wird beim Aufrufen von Methoden, die eine geöffnete Verbindung mit der Datenquelle erfordern, ein Fehler generiert.  
   
- Wenn Sie ein **Verbindungs** Objekt schließen, während für die Verbindung geöffnete Recordsetobjekte vorhanden sind, wird für alle ausstehenden Änderungen in allen **Recordset** -Objekten ein Rollback ausgeführt. **Recordset** Das explizite Schließen eines **Verbindungs** Objekts (Aufrufen der **Close** -Methode) während einer Transaktion wird ein Fehler generiert. Wenn ein **Verbindungs** Objekt den Gültigkeitsbereich verlässt, während eine Transaktion ausgeführt wird, führt ADO automatisch ein Rollback für die Transaktion aus.  
+ Wenn Sie ein **Verbindungs** Objekt schließen, während für die Verbindung geöffnete Recordsetobjekte vorhanden sind, wird für alle ausstehenden Änderungen in allen **Recordset** -Objekten ein Rollback ausgeführt.  Das explizite Schließen eines **Verbindungs** Objekts (Aufrufen der **Close** -Methode) während einer Transaktion wird ein Fehler generiert. Wenn ein **Verbindungs** Objekt den Gültigkeitsbereich verlässt, während eine Transaktion ausgeführt wird, führt ADO automatisch ein Rollback für die Transaktion aus.  
   
 ## <a name="recordset-record-stream"></a>Recordset, Datensatz, Stream  
- Mithilfe der **Close** -Methode zum Schließen eines **Recordsets**, eines **Datensatzes**oder eines **Stream** -Objekts werden die zugeordneten Daten und alle exklusiven Zugriffe freigegeben, die Sie möglicherweise über dieses bestimmte Objekt haben. Sie können später die [Open](./open-method-ado-recordset.md) -Methode aufzurufen, um das Objekt mit den gleichen oder geänderten Attributen erneut zu öffnen.  
+ Mithilfe der **Close** -Methode zum Schließen eines **Recordsets**, eines **Datensatzes** oder eines **Stream** -Objekts werden die zugeordneten Daten und alle exklusiven Zugriffe freigegeben, die Sie möglicherweise über dieses bestimmte Objekt haben. Sie können später die [Open](./open-method-ado-recordset.md) -Methode aufzurufen, um das Objekt mit den gleichen oder geänderten Attributen erneut zu öffnen.  
   
  Während ein **Recordset** -Objekt geschlossen wird, wird beim Aufrufen von Methoden, die einen Live Cursor erfordern, ein Fehler generiert.  
   

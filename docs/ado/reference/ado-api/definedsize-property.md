@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Field20::DefinedSize
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 35330c6cae4a3450d4a970edddf360296ce33148
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 756fe40bf7916dfa3e56a3e559be2874b5e8cd85
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974151"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171306"
 ---
 # <a name="definedsize-property"></a>DefinedSize-Eigenschaft
 Gibt die Datenkapazität eines [Feld](../../../ado/reference/ado-api/field-object.md) Objekts an.  

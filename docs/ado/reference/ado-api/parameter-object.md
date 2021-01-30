@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Parameter
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 123ca1553ede61735565a6f82cb36b0035c56dcb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d3922289548cbc3cb2e694399ac9f09e13d73985
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990171"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170617"
 ---
 # <a name="parameter-object"></a>Parameter-Objekt
 Stellt einen Parameter oder ein Argument dar, der einem [Befehls](./command-object-ado.md) Objekt auf Grundlage einer parametrisierten Abfrage oder gespeicherten Prozedur zugeordnet ist.  

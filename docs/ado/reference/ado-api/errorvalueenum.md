@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ErrorValueEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 48962e163804eaa779f82789082e5b8d493bc3cd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 238c8bf3d0c21625b9317690f70adbe16bd5075f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973581"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171166"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Gibt den Typ des ADO-Lauf Zeit Fehlers an.  
@@ -32,14 +32,14 @@ Gibt den Typ des ADO-Lauf Zeit Fehlers an.
   
 -   Negatives Dezimaltrennzeichen: die Dezimal Übersetzung der vollständigen Fehlernummer.  
   
--   Hexadezimal-die hexadezimale Darstellung der vollständigen Fehlernummer. Der Windows-Einrichtungs Code ist in der vierten Ziffer. Der Einrichtungs Code für ADO-Fehlernummern ist *ein*. Beispiel: 0x800***A***0e7b.  
+-   Hexadecimal-The hexadezimal Darstellung der vollständigen Fehlernummer. Der Windows-Einrichtungs Code ist in der vierten Ziffer. Der Einrichtungs Code für ADO-Fehlernummern ist *ein*. Beispiel: 0x800 ***A** _0E7B.  
   
 > [!NOTE]
->  OLE DB Fehler können an Ihre ADO-Anwendung übermittelt werden. Diese können in der Regel durch einen Windows-Einrichtungs Code von *4*identifiziert werden. Beispiel: 0x800***4***.  
+>  OLE DB Fehler können an Ihre ADO-Anwendung übermittelt werden. Diese können in der Regel durch einen Windows-Einrichtungs Code von _4 identifiziert werden *. Beispiel: 0x800 * * * 4* *_.  
   
-|Konstante|Wert|Beschreibung|  
+|Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|**aderrboundto-Befehl**|3707-2146824581 0x800a0e7b|Die **ActiveConnection** -Eigenschaft eines **Recordset** -Objekts, das über ein **Command** -Objekt als Quelle verfügt, kann nicht geändert werden.|  
+|_ *aderrbound-Befehl**|3707-2146824581 0x800a0e7b|Die **ActiveConnection** -Eigenschaft eines **Recordset** -Objekts, das über ein **Command** -Objekt als Quelle verfügt, kann nicht geändert werden.|  
 |**aderrcannotcomplete**|3732-2146824556 0x800a0e94|Der Server kann den Vorgang nicht beenden.|  
 |**aderrcantchangeconnection**|3748-2146824540 0x800a0ea4|Die Verbindung wurde verweigert. Die von Ihnen angeforderte neue Verbindung weist andere Eigenschaften auf als die, die bereits verwendet werden.|  
 |**aderrcantchangeprovider**|3220-2146825068 0x800a0c94|Der angegebene Anbieter unterscheidet sich von dem bereits verwendeten Anbieter.|  
@@ -91,8 +91,8 @@ Gibt den Typ des ADO-Lauf Zeit Fehlers an.
 |**aderrurlnamedrowdoesnotexist**|3737-2146824551 0x800a0e99|Der von dieser URL benannte Datensatz ist nicht vorhanden.|  
 |**aderrvolumumotfound**|3733-2146824555 0x800a0e95|Der Anbieter kann das durch die URL gekennzeichnete Speichergerät nicht finden. Stellen Sie sicher, dass die URL ordnungsgemäß eingegeben wurde.|  
 |**aderrschreitedatei**|3004-2146825284 0x800a0bbc|Fehler beim Schreiben in die Datei.|  
-|**adwrnsecuritydialog**|3717-2146824571 0x800a0e85|Nur für interne Verwendung. Darf nicht verwendet werden.|  
-|**adwrnsecuritydialogheader**|3718-2146824570 0x800a0e86|Nur für interne Verwendung. Darf nicht verwendet werden.|  
+|**adwrnsecuritydialog**|3717-2146824571 0x800a0e85|Nur zur internen Verwendung. Darf nicht verwendet werden.|  
+|**adwrnsecuritydialogheader**|3718-2146824570 0x800a0e86|Nur zur internen Verwendung. Darf nicht verwendet werden.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
