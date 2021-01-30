@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acd8183389276b47502b7ef14978eac855c74743
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d5049e6d1e60a2a54633c1fa0fe7adacb0685690
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984884"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172213"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Connection Close-Methode, Table Type-Eigenschaft – Beispiel (VB)
 Wenn die [ActiveConnection](./activeconnection-property-adox.md) -Eigenschaft auf **Nothing** festgelegt wird, sollte die Verbindung mit dem Katalog geschlossen werden. Zugeordnete Sammlungen sind leer. Alle Objekte, die aus Schema Objekten im Katalog erstellt wurden, sind verwaist. Alle Eigenschaften von Objekten, die zwischengespeichert wurden, sind weiterhin verfügbar, aber ein Versuch, Eigenschaften zu lesen, die einen-Anrufe an den Anbieter erfordern, schlägt fehl.  

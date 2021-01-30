@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Tables::Append
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ffd2ef32cae3fafb7179568d1342606d32236657
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 56ead8ee314cb5b6bffa31a3292b395c0c990927
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985471"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172289"
 ---
 # <a name="append-method-adox-tables"></a>Append-Methode (ADOX-Tabellen)
 Fügt der [Tables](./tables-collection-adox.md) -Auflistung ein neues [Table](./table-object-adox.md) -Objekt hinzu.  
@@ -35,7 +35,7 @@ Tables.Append Table
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Table*  
+ *Tabelle*  
  Ein **Variant** -Wert, der einen Verweis auf die anzufügende **Tabelle** oder den Namen der zu erstellenden und anzufügende Tabelle enthält.  
   
 ## <a name="remarks"></a>Bemerkungen  

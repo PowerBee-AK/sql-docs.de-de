@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset::RecordsetChangeComplete
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3066ebce2f1f3e96404e933af1c39ad0fdd2659
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6246eaa8dbdd92236a891fa56189e104b594b64c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987801"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172357"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset- und RecordsetChangeComplete-Ereignis (ADO)
 Das Ereignis " **WillChangeRecordset** " wird aufgerufen, bevor das [Recordset](./recordset-object-ado.md)durch einen ausstehenden Vorgang geändert wird. Das **RecordsetChangeComplete** -Ereignis wird aufgerufen, nachdem das **Recordset** geändert wurde.  
@@ -40,7 +40,7 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>Parameter  
  *adReason*  
- Ein [eventreasonenumerationswert](./eventreasonenum.md) , der den Grund für dieses Ereignis angibt. Der Wert kann **adrsnrequery**, **adrsnresynch**, **adrsnclose**, **adrsnopen**lauten.  
+ Ein [eventreasonenumerationswert](./eventreasonenum.md) , der den Grund für dieses Ereignis angibt. Der Wert kann **adrsnrequery**, **adrsnresynch**, **adrsnclose**, **adrsnopen** lauten.  
   
  *adStatus*  
  Ein [eventstatusenum](./eventstatusenum.md) -Statuswert.  
@@ -54,7 +54,7 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
  Bevor " **WillChangeRecordset** " oder " **RecordsetChangeComplete** " zurückgegeben wird, legen Sie diesen Parameter auf **adstatuingunwantedevent** fest, um nachfolgende Benachrichtigungen zu verhindern  
   
  *pError*  
- Ein [Fehler](./error-object.md) Objekt. Es wird der Fehler beschrieben, der aufgetreten ist, wenn der Wert von *adStatus* **adstatuserrorsoccurrred**ist. Andernfalls ist es nicht festgelegt.  
+ Ein [Fehler](./error-object.md) Objekt. Es wird der Fehler beschrieben, der aufgetreten ist, wenn der Wert von *adStatus* **adstatuserrorsoccurrred** ist. Andernfalls ist es nicht festgelegt.  
   
  *pRecordset*  
  Ein **Recordset** -Objekt. Das **Recordset** , für das dieses Ereignis aufgetreten ist.  

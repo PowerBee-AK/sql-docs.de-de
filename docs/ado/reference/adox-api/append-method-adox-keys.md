@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Keys::Append
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2531031808c16db4892fb0b759a8a8d819a2222d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c4690fba27f42da95eb354b5074f9eb9954902a6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985481"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172302"
 ---
 # <a name="append-method-adox-keys"></a>Append-Methode (ADOX-Schlüssel)
 Fügt der [Keys](./keys-collection-adox.md) -Auflistung ein neues [Schlüssel](./key-object-adox.md) Objekt hinzu.  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 582c558222bec95914e73902b69fe9c7ce46161e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7d79ad455184a8cb97a92c7dcc458e7fff2eddf0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985239"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172262"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Catalog ActiveConnection-Eigenschaft – Beispiel (VB)
 Beim Festlegen der [ActiveConnection](./activeconnection-property-adox.md) -Eigenschaft auf eine gültige, geöffnete Verbindung wird der Katalog geöffnet. Von einem geöffneten Katalog aus können Sie auf die in diesem Katalog enthaltenen Schema Objekte zugreifen.  

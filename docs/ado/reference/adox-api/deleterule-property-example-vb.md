@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ba00118-a80d-4a6d-a7d6-4f5492fb7ded
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e87e17c77e22efe38a80d2ed7990b49ef297e101
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5e06fe258c1baaa01eff25678c312cdb087f9b6c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984601"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172093"
 ---
 # <a name="deleterule-property-example-vb"></a>DeleteRule-Eigenschaft – Beispiel (VB)
-In diesem Beispiel wird die [DeleteRule](./deleterule-property-adox.md) -Eigenschaft eines [Key](./key-object-adox.md) -Objekts veranschaulicht. Der Code fügt eine neue [Tabelle](./table-object-adox.md) an und definiert dann einen neuen Primärschlüssel, wobei **DeleteRule** auf **adricascade**festgelegt wird.  
+In diesem Beispiel wird die [DeleteRule](./deleterule-property-adox.md) -Eigenschaft eines [Key](./key-object-adox.md) -Objekts veranschaulicht. Der Code fügt eine neue [Tabelle](./table-object-adox.md) an und definiert dann einen neuen Primärschlüssel, wobei **DeleteRule** auf **adricascade** festgelegt wird.  
   
 ```  
 ' BeginDeleteRuleVB  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ActiveConnection
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 541f6800a440019d210bdf427ab8dafd58acc3b5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 71aa79f359989b1e0ab77d0247b0f1082f3ce1c6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987641"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172332"
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection-Eigenschaft (ADO MD)
 Gibt an, zu welchem ADO- [Verbindungs](../ado-api/connection-object-ado.md) Objekt das aktuelle Cellset oder der aktuelle Katalog gehört.  
@@ -38,12 +38,12 @@ Gibt an, zu welchem ADO- [Verbindungs](../ado-api/connection-object-ado.md) Obje
   
  Wenn die **ActiveConnection** -Eigenschaft eines [catalog](./catalog-object-ado-md.md) -Objekts auf **Nothing** festgelegt wird, werden die zugeordneten Daten freigegeben, einschließlich der Daten in der [CubeDefs](./cubedefs-collection-ado-md.md) -Auflistung und aller zugehörigen [Dimensions](./dimension-object-ado-md.md) [-,](./member-object-ado-md.md) [Hierarchie](./hierarchy-object-ado-md.md)-, [Ebene](./level-object-ado-md.md)-und Element Objekte Das Schließen eines **Verbindungs** Objekts, das zum Öffnen eines **Katalogs** verwendet wurde, hat dieselbe Auswirkung wie das Festlegen der **ActiveConnection** -Eigenschaft auf " **Nothing**".  
   
- Durch Ändern der Standarddatenbank der Verbindung, auf die von der **ActiveConnection** -Eigenschaft eines **Katalog** Objekts verwiesen wird, wird der Inhalt des **Katalogs**ungültig.  
+ Durch Ändern der Standarddatenbank der Verbindung, auf die von der **ActiveConnection** -Eigenschaft eines **Katalog** Objekts verwiesen wird, wird der Inhalt des **Katalogs** ungültig.  
   
  Wenn Sie versuchen, die **ActiveConnection** -Eigenschaft für ein geöffnetes **Cellset** -Objekt zu ändern, tritt ein Fehler auf.  
   
 > [!NOTE]
->  Denken Sie in Visual Basic daran, das **Set** -Schlüsselwort zu verwenden, wenn Sie die **ActiveConnection** -Eigenschaft auf ein **Connection** -Objekt festlegen. Wenn Sie das Set-Schlüsselwort weglassen, **legen** Sie die **ActiveConnection** -Eigenschaft tatsächlich auf die Standard Eigenschaft **ConnectionString**des **Verbindungs** Objekts fest. Der Code funktioniert. Allerdings erstellen Sie eine zusätzliche Verbindung mit der Datenquelle, die negative Auswirkungen auf die Leistung haben kann.  
+>  Denken Sie in Visual Basic daran, das **Set** -Schlüsselwort zu verwenden, wenn Sie die **ActiveConnection** -Eigenschaft auf ein **Connection** -Objekt festlegen. Wenn Sie das Set-Schlüsselwort weglassen, **legen** Sie die **ActiveConnection** -Eigenschaft tatsächlich auf die Standard Eigenschaft **ConnectionString** des **Verbindungs** Objekts fest. Der Code funktioniert. Allerdings erstellen Sie eine zusätzliche Verbindung mit der Datenquelle, die negative Auswirkungen auf die Leistung haben kann.  
   
  Wenn Sie den MSOLAP-Datenanbieter verwenden, legen Sie die Datenquelle in einer Verbindungs Zeichenfolge auf einen Servernamen fest, und legen Sie den Anfangs Katalog auf den Namen eines Katalogs aus der Datenquelle fest. Legen Sie den Speicherort auf den vollständigen Pfad fest, um eine Verbindung mit einer Cube-Datei herzustellen, die von einem Server getrennt ist. CUB-Datei. Legen Sie den Anbieter in beiden Fällen auf den Anbieter Namen fest. Die folgende Zeichenfolge verwendet beispielsweise den MSOLAP-Anbieter, um eine Verbindung mit einem Katalog mit dem Namen "BOSB Video Store" auf einem Server namens "Server **Name**" herzustellen:  
   

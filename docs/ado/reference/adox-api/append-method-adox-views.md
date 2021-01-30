@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Views::raw_Append
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 77682d479d65c7ccc0dd01fd1fd86627a580d8c5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 757778961d7b66dd147b8b013b48062dae0cbd91
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985391"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172279"
 ---
 # <a name="append-method-adox-views"></a>Append-Methode (ADOX-Sichten)
 Erstellt ein neues [Ansichts](./view-object-adox.md) Objekt und fügt es an die [views](./views-collection-adox.md) -Auflistung an.  
@@ -47,7 +47,7 @@ Views.Append Name, Command
  Wenn der Befehls Text, den der Benutzer angibt, eine Prozedur anstelle einer Ansicht darstellt, hängt das Verhalten vom Anbieter ab. Beim **Anfügen** tritt ein Fehler auf, wenn der Anbieter das Beibehalten von Befehlen nicht unterstützt.  
   
 > [!NOTE]
->  Wenn **Sie den OLE DB** Anbieter für Microsoft Jet verwenden, können Sie mit der **Ansichts** Sammlungs- **Append** -Methode anstelle einer Ansicht im *Befehls* Parameter eine **Prozedur** angeben. Die **Prozedur** wird der Datenquelle hinzugefügt und der Auflistung **views** hinzugefügt. Wenn nach dem Anfüge **Vorgang** die Auflistungen für **Prozeduren** und **Sichten** aktualisiert **werden, ist**die Prozedur nicht mehr in der Sammlung **views** enthalten und wird in der Auflistung der **Prozeduren** angezeigt.  
+>  Wenn **Sie den OLE DB** Anbieter für Microsoft Jet verwenden, können Sie mit der **Ansichts** Sammlungs- **Append** -Methode anstelle einer Ansicht im *Befehls* Parameter eine **Prozedur** angeben. Die **Prozedur** wird der Datenquelle hinzugefügt und der Auflistung **views** hinzugefügt. Wenn nach dem Anfüge **Vorgang** die Auflistungen für **Prozeduren** und **Sichten** aktualisiert **werden, ist** die Prozedur nicht mehr in der Sammlung **views** enthalten und wird in der Auflistung der **Prozeduren** angezeigt.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Views-Collection (ADOX)](./views-collection-adox.md)  

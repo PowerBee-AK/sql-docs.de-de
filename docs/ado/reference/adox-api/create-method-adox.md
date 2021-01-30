@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Catalog::raw_Create
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 588f73fcd2ced95be3cd7f8586faed864b38f8ad
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b44be7497ca6952dd88d6f18ac0b42a6c989db36
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984841"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172208"
 ---
 # <a name="create-method-adox"></a>Create-Methode (ADOX)
 Erstellt einen neuen Katalog.  
@@ -39,7 +39,7 @@ Catalog.Create ConnectString
  Ein **Zeichen** folgen Wert, der für die Verbindung mit der Datenquelle verwendet wird.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die **Create** -Methode erstellt eine neue ADO- [Verbindung](../ado-api/connection-object-ado.md) mit der in *ConnectString*angegebenen Datenquelle und öffnet diese. Bei erfolgreicher Ausführung wird das neue **Verbindungs** Objekt der [ActiveConnection](./activeconnection-property-adox.md) -Eigenschaft zugewiesen.  
+ Die **Create** -Methode erstellt eine neue ADO- [Verbindung](../ado-api/connection-object-ado.md) mit der in *ConnectString* angegebenen Datenquelle und öffnet diese. Bei erfolgreicher Ausführung wird das neue **Verbindungs** Objekt der [ActiveConnection](./activeconnection-property-adox.md) -Eigenschaft zugewiesen.  
   
  Wenn der Anbieter das Erstellen neuer Kataloge nicht unterstützt, tritt ein Fehler auf.  
   

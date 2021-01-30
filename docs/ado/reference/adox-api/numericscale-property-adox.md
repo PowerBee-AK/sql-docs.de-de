@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Column::PutNumericScale
@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 573ee5d1-57c7-4a27-be79-a0e12944ad9b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 161b6049ca5392eafacaf0fd97db653070f105e0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9b602ab38b284ba90a038b7893c9e26b3f38020f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983891"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171984"
 ---
 # <a name="numericscale-property-adox"></a>NumericScale-Eigenschaft (ADOX)
 Gibt die Skala eines numerischen Werts in der Spalte an.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt einen **Bytewert** fest, der die Skala der Datenwerte in der Spalte ist, wenn die [Type](./type-property-column-adox.md) -Eigenschaft **adNumeric** oder **addecimal**ist, und gibt diesen zurück. **NumericScale** wird für alle anderen Datentypen ignoriert.  
+ Legt einen **Bytewert** fest, der die Skala der Datenwerte in der Spalte ist, wenn die [Type](./type-property-column-adox.md) -Eigenschaft **adNumeric** oder **addecimal** ist, und gibt diesen zurück. **NumericScale** wird für alle anderen Datentypen ignoriert.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Der Standardwert ist 0 (null).  
