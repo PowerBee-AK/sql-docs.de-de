@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_scriptsubconflicttable
 - sp_scriptsubconflicttable_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e8fe3437c1852ffb2ec5817125317fa1a8fa379
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4ed5d504e669e1bdf5fb6677880e87271739c1cd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538539"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189953"
 ---
 # <a name="sp_scriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +38,9 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung, die den Artikel enthält. Der Name muss in der Datenbank eindeutig sein. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, die den Artikel enthält. Der Name muss in der Datenbank eindeutig sein. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @article = ] 'article'` Der Name des Abonnement Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @article = ] 'article'` Der Name des Abonnement Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -51,11 +51,11 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 |-----------------|---------------|-----------------|  
 |**cmdtext**|**nvarchar(4000)**|Gibt das [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skript für die Erstellung der Konflikttabelle beim Abonnementen für den Artikel in dem Abonnement mit Warteschlange zurück. Dieses Skript wird beim Abonnementen in der Abonnementendatenbank ausgeführt.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_scriptsubconflicttable** wird für Abonnenten verwendet, die über Abonnements verfügen, bei denen die Anfangs Momentaufnahme manuell angewendet wird. Bei der Konflikttabelle handelt es sich um eine optionale Tabelle beim Abonnementen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_scriptsubconflicttable**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_scriptsubconflicttable** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erkennen und Auflösen von Konflikten beim Aktualisieren von verzögertem Update](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   

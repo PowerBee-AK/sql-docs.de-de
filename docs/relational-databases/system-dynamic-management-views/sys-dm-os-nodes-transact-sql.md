@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_os_nodes
 - dm_os_nodes_TSQL
@@ -21,12 +21,12 @@ ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4409ba73ba7231f674ac60f3ed63b06b6c454fa7
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 98a753e6eb1a61aa4be832188919ed1ed0e8bb36
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170642"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190163"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ Die folgende Tabelle enthält Informationen zu diesen Knoten.
 > [!NOTE]
 > Um diese DMV von oder aus aufzurufen [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , verwenden Sie den Namen **sys.dm_pdw_nodes_os_nodes**.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|ID des Knotens.|  
 |node_state_desc|**nvarchar(256)**|Beschreibung des Knotenzustands. Die Werte werden zuerst mit den sich gegenseitig ausschließenden Werten angezeigt, gefolgt von den kombinierbaren Werten. Beispiel:<br /> Online, Thread Resources Low, Lazy Preemptive<br /><br />Es gibt vier sich gegenseitig ausschließende node_state_desc-Werte. Sie sind unten mit ihren Beschreibungen aufgeführt.<br /><ul><li>Online: Knoten ist online.<li>Offline: Knoten ist offline.<li>Im Leerlauf: der Knoten verfügt über keine ausstehenden Arbeitsanforderungen und befindet sich in einem Leerlaufzustand.<li>IDLE_READY: der Knoten verfügt über keine ausstehenden Arbeitsanforderungen und kann in den Leerlauf versetzt werden.</li></ul><br />Es gibt drei kombinierbare node_state_desc Werte, die unten mit ihren Beschreibungen aufgeführt sind.<br /><ul><li>DAC: dieser Knoten ist für die [dedizierte administrative Verbindung](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)reserviert.<li>THREAD_RESOURCES_LOW: auf diesem Knoten können keine neuen Threads erstellt werden, weil nicht genügend Arbeitsspeicher verfügbar ist.<li>Hot Added: gibt an, dass die Knoten als Reaktion auf ein Hot Add CPU-Ereignis hinzugefügt wurden.</li></ul>|  

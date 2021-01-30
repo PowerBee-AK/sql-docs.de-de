@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 06/03/2020
 ms.service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_db_resource_stats
 - sys.dm_db_resource_stats_TSQL
@@ -20,12 +20,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 456197c4519ca4135cf4a5edbf38d58c6d9246a8
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5115f543953d549769f1894530baba1f41eac42a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472851"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190154"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -34,7 +34,7 @@ Gibt eine einzelne Zeile zurück, die die Konfiguration des Auftrags Objekts bes
 
 Ein Auftrags Objekt ist ein Windows-Konstrukt, das CPU-, Arbeitsspeicher-und e/A-Ressourcenkontrolle auf Betriebssystemebene implementiert. Weitere Informationen zu Auftrags Objekten finden Sie unter [Auftrags Objekte](/windows/desktop/ProcThread/job-objects).
   
-|Spalten|Datentyp|Beschreibung|  
+|Spalten|Datentyp|BESCHREIBUNG|  
 |-------------|---------------|-----------------|  
 |cpu_rate|**int**|Gibt den Teil der Prozessor Zyklen an, den SQL Server Threads während jedes Zeit Planungs Intervalls verwenden können. Der Wert wird als Prozentsatz der verfügbaren Zyklen innerhalb eines 10000-Zyklus-Planungs Intervalls, multipliziert mit der Anzahl logischer CPUs, angezeigt. Beispielsweise bedeutet der Wert 800 für eine SQL Server Instanz mit 8 logischen CPUs, dass die Verwendung von CPUs die volle Kapazität von Threads verwenden kann.|
 |cpu_affinity_mask|**bigint**|Eine Bitmaske, die beschreibt, welche logischen Prozessoren der SQL Server Prozess innerhalb der Prozessor Gruppe verwenden kann. Beispielsweise bedeutet cpu_affinity_mask 255 (1111 1111 in Binary), dass die ersten acht logischen Prozessoren verwendet werden können. <br /><br />Diese Spalte wird aus Gründen der Abwärtskompatibilität bereitgestellt. Die Prozessor Gruppe wird nicht gemeldet, und der gemeldete Wert ist möglicherweise falsch, wenn eine Prozessor Gruppe mehr als 64 logische Prozessoren enthält. Verwenden Sie die- `process_physical_affinity` Spalte, um stattdessen die Prozessor Affinität zu bestimmen.|

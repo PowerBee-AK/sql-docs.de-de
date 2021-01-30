@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLInstallDriverEx
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2c200615c9d3bc71ccb146d3b898517611b53eed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3ebdfa732ba9c5a4a539009600749563daff4a35
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421184"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189706"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx-Funktion
 **Konformitäts**  
@@ -60,13 +60,13 @@ BOOL SQLInstallDriverEx(
  Der Vollständiger Pfad des Zielverzeichnisses der Installation oder ein NULL-Zeiger. Wenn *lpszpathin* ein NULL-Zeiger ist, werden die Treiber im System Verzeichnis installiert.  
   
  *lpszpathout*  
- Ausgeben Der Pfad des Zielverzeichnisses, in dem der Treiber installiert werden soll. Wenn der Treiber nicht bereits installiert wurde, sollte *lpszpathout* mit *lpszpathin*identisch sein. Wenn der Treiber bereits installiert war, ist *lpszpathout* der Pfad der vorherigen Installation.  
+ Ausgeben Der Pfad des Zielverzeichnisses, in dem der Treiber installiert werden soll. Wenn der Treiber nicht bereits installiert wurde, sollte *lpszpathout* mit *lpszpathin* identisch sein. Wenn der Treiber bereits installiert war, ist *lpszpathout* der Pfad der vorherigen Installation.  
   
  *cbpaarwert*  
  Der Länge von *lpszpathout*.  
   
  *pcbpathout*  
- Ausgeben Die Gesamtanzahl der Bytes (mit Ausnahme des NULL-Beendigungs Zeichens), die für die Rückgabe in *lpszpathout*verfügbar ist. Wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *cbpathoutmax*ist, wird der Ausgabepfad in *lpszpathout* auf *cbpathoutmax* abzüglich des NULL-Beendigungs Zeichens gekürzt. Das *pcbpathout* -Argument kann ein NULL-Zeiger sein.  
+ Ausgeben Die Gesamtanzahl der Bytes (mit Ausnahme des NULL-Beendigungs Zeichens), die für die Rückgabe in *lpszpathout* verfügbar ist. Wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *cbpathoutmax* ist, wird der Ausgabepfad in *lpszpathout* auf *cbpathoutmax* abzüglich des NULL-Beendigungs Zeichens gekürzt. Das *pcbpathout* -Argument kann ein NULL-Zeiger sein.  
   
  *fRequest*  
  Der Der Typ der Anforderung. Das *fRequest* -Argument muss einen der folgenden Werte enthalten:  
@@ -80,13 +80,13 @@ BOOL SQLInstallDriverEx(
   
  Anwendungen sollten die Verwendungs Anzahl nicht festlegen. Diese Anzahl wird von ODBC beibehalten.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  Die Funktion gibt true zurück, wenn Sie erfolgreich ist, andernfalls false.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **sqlinstalldriverex** "false" zurückgibt, kann ein zugeordneter " * \* pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die " * \* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **sqlinstalldriverex** "false" zurückgibt, kann ein zugeordneter " *\* pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror** abgerufen werden. In der folgenden Tabelle sind die " *\* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|Beschreibung|  
+|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|Ungültige Pufferlänge.|Das *lpszpathout* -Argument war nicht groß genug, um den Ausgabepfad zu enthalten. Der Puffer enthält den abgeschnittene Pfad.<br /><br /> Das *cbpthoutmax* -Argument war 0, und *fRequest* war ODBC_INSTALL_COMPLETE.|  
@@ -133,9 +133,9 @@ SQL Server\0Driver=SQLSRVR.DLL\0\0
   
  Die Länge des Pfads in " *lpszpathout* " in " **sqlinstalldriverex** " ermöglicht einen zweistufigen Installationsprozess, sodass eine Anwendung ermitteln kann, was " *cbpathoutmax* " sein sollte, indem Sie " **sqlinstalldriverex** " mit dem ODBC_INSTALL_INQUIRY Modus " *fRequest* " aufrufen. Dadurch wird die Gesamtanzahl der Bytes zurückgegeben, die im *pcbpathout* -Puffer verfügbar sind. **Sqlinstalldriverex** kann dann mit einem *fRequest* von ODBC_INSTALL_COMPLETE aufgerufen werden, und das *cbpathoutmax* -Argument ist auf den Wert im *pcbpathout* -Puffer sowie auf das NULL-Beendigungs Zeichen festgelegt.  
   
- Wenn Sie sich dafür entscheiden, das zweistufige Modell für **sqlinstalldriverex**nicht zu verwenden, müssen Sie die Größe des Speichers für den Pfad des Zielverzeichnisses auf den Wert *_MAX_PATH festlegen,* wie in STDLIB. h definiert, um das Abschneiden zu verhindern.  
+ Wenn Sie sich dafür entscheiden, das zweistufige Modell für **sqlinstalldriverex** nicht zu verwenden, müssen Sie die Größe des Speichers für den Pfad des Zielverzeichnisses auf den Wert *_MAX_PATH festlegen,* wie in STDLIB. h definiert, um das Abschneiden zu verhindern.  
   
- Wenn *fRequest* ODBC_INSTALL_COMPLETE ist, lässt **sqlinstalldriverex** nicht zu, dass *lpszpathout* NULL ist (oder *cbpathoutmax* muss 0 sein). Wenn *fRequest* ODBC_INSTALL_COMPLETE ist, wird false zurückgegeben, wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *cbpaarwert*ist, wobei das Ergebnis der Kürzung auftritt.  
+ Wenn *fRequest* ODBC_INSTALL_COMPLETE ist, lässt **sqlinstalldriverex** nicht zu, dass *lpszpathout* NULL ist (oder *cbpathoutmax* muss 0 sein). Wenn *fRequest* ODBC_INSTALL_COMPLETE ist, wird false zurückgegeben, wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *cbpaarwert* ist, wobei das Ergebnis der Kürzung auftritt.  
   
  Nachdem **sqlinstalldriverex** aufgerufen wurde und das Anwendungs Setup Programm die Treiberdatei (falls erforderlich) kopiert hat, muss die Treiber-Setup-DLL **sqlconfigdriver** aufrufen, um die Konfiguration für den Treiber festzulegen.  
   

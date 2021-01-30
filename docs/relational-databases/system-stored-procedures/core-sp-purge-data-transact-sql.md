@@ -1,13 +1,13 @@
 ---
 description: core.sp_purge_data (Transact-SQL)
-title: Core. sp_purge_data (Transact-SQL) | Microsoft-Dokumentation
+title: Core.sp_purge_data (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_purge_data_TSQL
 - sp_purge_data
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff33927812ccab2f2665e80709bcf6074ebacc1a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a4f198f3aa51d42b3dbc22d040fe9b3325f4361f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89530307"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190061"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,12 +51,12 @@ core.sp_purge_data
  Die Anzahl der Tage für die Beibehaltung von Daten in den Verwaltungs-Data Warehouse-Tabellen. Daten mit einem Zeitstempel, der älter als *retention_days* ist, werden entfernt. *retention_days* ist vom Datentyp **smallint**. der Standardwert ist NULL. Wenn angegeben, muss der Wert positiv sein. Wenn der Wert NULL ist, legt der Wert in der valid_through-Spalte in der core.snapshots-Sicht die Zeilen fest, die entfernt werden können.  
   
  [ @instance_name =] '*instance_name*'  
- Der Name der Instanz für den Sammlungssatz. *instance_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+ Der Name der Instanz für den Sammlungssatz. *instance_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
- *instance_name* muss der voll qualifizierte Instanzname sein, der aus dem Computernamen und dem Instanznamen im Format *Computername* \\ *instanceName*besteht. Wenn der Wert NULL ist, wird die Standardinstanz auf dem lokalen Server verwendet.  
+ *instance_name* muss der voll qualifizierte Instanzname sein, der aus dem Computernamen und dem Instanznamen im Format *Computername* \\ *instanceName* besteht. Wenn der Wert NULL ist, wird die Standardinstanz auf dem lokalen Server verwendet.  
   
  [ @collection_set_uid =] '*collection_set_uid*'  
- Die GUID für den Sammlungssatz. *collection_set_uid* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL. Wenn der Wert NULL ist, werden die qualifizierenden Zeilen aus allen Sammlungssätzen entfernt. Um diesen Wert abzurufen, fragen Sie die syscollector_collection_sets-Katalogsicht ab.  
+ Die GUID für den Sammlungssatz. *collection_set_uid* ist vom Datentyp **uniqueidentifier** und hat den Standardwert NULL. Wenn der Wert NULL ist, werden die qualifizierenden Zeilen aus allen Sammlungssätzen entfernt. Um diesen Wert abzurufen, fragen Sie die syscollector_collection_sets-Katalogsicht ab.  
   
  [ @duration =] *Dauer*  
  Die maximale Anzahl der Minuten für die Ausführung des Entfernen-Vorgangs. *Duration* ist vom Datentyp **smallint**. der Standardwert ist NULL. Wenn dieser Wert angegeben ist, muss er 0 (null) oder eine positive ganze Zahl sein. Wenn der Wert NULL ist, wird der Vorgang so lange ausgeführt, bis alle gekennzeichneten Zeilen entfernt sind oder bis der Vorgang manuell beendet wird.  
@@ -64,7 +64,7 @@ core.sp_purge_data
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Diese Prozedur wählt Zeilen in der core.snapshots-Sicht aus, die in Abhängigkeit einer Beibehaltungsdauer entfernt werden können. Alle für die Entfernung gekennzeichneten Zeilen werden aus der core.snapshots_internal-Tabelle gelöscht. Das Löschen der vorangehenden Zeilen löst eine Löschweitergabe (cascading delete) in allen Verwaltungs-Data Warehouse-Tabellen aus. Dies wird durch die Verwendung der ON DELETE CASCADE-Klausel erzielt, die für alle Tabellen definiert wird, in denen gesammelte Daten gespeichert werden.  
   
  Jede Momentaufnahme wird mit den zugeordneten Daten in einer expliziten Transaktion gelöscht. Anschließend wird ein Commit ausgeführt. Wenn der Löschvorgang also manuell beendet oder der für angegebene Wert @duration überschritten wird, verbleiben nur die Daten, für die kein Commit ausgeführt wurde. Diese Daten können bei der nächsten Ausführung des Auftrags entfernt werden.  

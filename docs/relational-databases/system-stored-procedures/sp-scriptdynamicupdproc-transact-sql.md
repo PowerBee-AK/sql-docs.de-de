@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_scriptdynamicupdproc_TSQL
 - sp_scriptdynamicupdproc
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 03be0aa206a4037de5e09e202e38fcce5ecf5a6c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ab8af33b865570067301df85355f13e0112979ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89525867"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189988"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,19 +38,19 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @artid = ] artid` Ist die Artikel-ID. *artid* ist vom Datentyp **int**und hat keinen Standardwert.  
+`[ @artid = ] artid` Ist die Artikel-ID. *artid* ist vom Datentyp **int** und hat keinen Standardwert.  
   
 ## <a name="result-sets"></a>Resultsets  
  Gibt ein Resultset zurück, das aus einer einzelnen **nvarchar (4000)** -Spalte besteht. Das Resultset enthält die vollständige CREATE PROCEDURE-Anweisung, die zum Erstellen der benutzerdefinierten gespeicherten Prozedur verwendet wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_scriptdynamicupdproc** wird bei der Transaktions Replikation verwendet. Die standardmäßige MCALL-Skripterstellungslogik schließt alle Spalten in der UPDATE-Anweisung ein und verwendet ein Bitmuster, um die geänderten Spalten zu bestimmen. Wenn eine Spalte nicht geändert wurde, wird sie wieder auf den bestehenden Wert zurückgesetzt. Normalerweise ist dies unproblematisch. Wenn die Spalte indiziert ist, entsteht zusätzlicher Verarbeitungsaufwand. Beim dynamischen Vorgehen enthält das Update nur die Spalten, die geändert wurden, sodass eine optimale UPDATE-Zeichenfolge bereitgestellt wird. Zur Laufzeit entsteht jedoch zusätzlicher Verarbeitungsaufwand für das Erstellen der dynamischen UPDATE-Anweisung. Es wird empfohlen, dass Sie das dynamische und statische Vorgehen testen und dann die bessere Lösung auswählen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_scriptdynamicupdproc**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_scriptdynamicupdproc** ausführen.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Beispiel wird ein Artikel (mit *artid* , der auf **1**festgelegt ist) für die **Autoren** Tabelle in der **Pubs** -Datenbank erstellt und angegeben, dass die Update-Anweisung die auszuführende benutzerdefinierte Prozedur ist:  
+ In diesem Beispiel wird ein Artikel (mit *artid* , der auf **1** festgelegt ist) für die **Autoren** Tabelle in der **Pubs** -Datenbank erstellt und angegeben, dass die Update-Anweisung die auszuführende benutzerdefinierte Prozedur ist:  
   
 ```  
 'MCALL sp_mupd_authors'  

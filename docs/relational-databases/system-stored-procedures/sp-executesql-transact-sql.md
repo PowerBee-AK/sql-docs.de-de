@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_executesql
 - sp_executesql_TSQL
@@ -20,12 +20,12 @@ ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 315abb75423d2d7fa11d70ab1b2d6897b8bbc372
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 333bc510861d769a8b9dbb22272918e65982ff2a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97427898"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99188013"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +76,7 @@ sp_executesql [ @stmt = ] statement
 ## <a name="result-sets"></a>Resultsets  
  Gibt die Resultsets von allen SQL-Anweisungen der SQL-Zeichenfolge zurück.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_executesql Parameter müssen in der jeweiligen Reihenfolge eingegeben werden, wie im Abschnitt "Syntax" weiter oben in diesem Thema beschrieben. Wenn die Parameter nicht in der vorgegebenen Reihenfolge eingegeben werden, wird eine Fehlermeldung ausgegeben.  
   
  sp_executesql verhält sich hinsichtlich Batches, Namensbereichen und Datenbankkontext wie EXECUTE. Die- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder der-Batch im sp_executesql \@ stmt-Parameter wird erst kompiliert, wenn die sp_executesql-Anweisung ausgeführt wird. Der Inhalt von \@ stmt wird dann kompiliert und als Ausführungsplan ausgeführt, der separat vom Ausführungsplan des Batches ist, der sp_executesql aufgerufen hat. Der sp_executesql-Batch kann nicht auf Variablen verweisen, die in dem Batch deklariert werden, der sp_executesql aufruft. Lokale Cursor oder Variablen im sp_executesql-Batch sind für den Batch, der sp_executesql aufruft, nicht sichtbar. Änderungen am Datenbankkontext sind nur bis zum Ende der sp_executesql-Anweisung vorhanden.  

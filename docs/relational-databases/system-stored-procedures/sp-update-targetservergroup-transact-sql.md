@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_targetservergroup_TSQL
 - sp_update_targetservergroup
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f48424649b3265ee810e48c08602140ce133fc98
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 631e1b316cb66c69ed220cf1e1d3ca09f8e45807
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541567"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189509"
 ---
 # <a name="sp_update_targetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ sp_update_targetservergroup
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'current_name'` Der Name der Zielserver Gruppe. *current_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @name = ] 'current_name'` Der Name der Zielserver Gruppe. *current_name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @new_name = ] 'new_name'` Der neue Name für die Zielserver Gruppe. *new_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @new_name = ] 'new_name'` Der neue Name für die Zielserver Gruppe. *new_name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -52,7 +52,7 @@ sp_update_targetservergroup
 ## <a name="permissions"></a>Berechtigungen  
  Zum Ausführen dieser gespeicherten Prozedur muss den Benutzern die festen Server Rolle **sysadmin** erteilt werden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_update_targetservergroup** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
 ## <a name="examples"></a>Beispiele  

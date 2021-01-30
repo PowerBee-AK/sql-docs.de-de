@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysdac_history_internal
 - sysdac_history_internal_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: eaea0060136a928e6fab1184c9fd0c08d88df09f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2c1770701b0373e56bac0a6c7c5bb2e9eac44ad3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094894"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187935"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Tabellen von Datenschichtanwendung: sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "98094894"
 |**sequence_id**|**int**|Identifiziert einen Schritt innerhalb einer Aktion.|  
 |**instance_id**|**uniqueidentifier**|Der Bezeichner der DAC-Instanz. Diese Spalte kann in der Spalte **instance_id** in [dbo.sysdac_instances &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)verknüpft werden.|  
 |**action_type**|**tinyint**|Bezeichner des Aktionstyps:<br /><br /> **0** = bereitstellen<br /><br /> **1** = erstellen<br /><br /> **2** = umbenennen<br /><br /> **3** = trennen<br /><br /> **4** = löschen|  
-|**action_type_name**|**varchar (19)**|Name des Aktionstyps:<br /><br /> **deploy**<br /><br /> **erstellen**<br /><br /> **rename**<br /><br /> **Trennen**<br /><br /> **delete**|  
+|**action_type_name**|**varchar (19)**|Name des Aktionstyps:<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **Trennen**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|Bezeichner des Typs des von der Aktion betroffenen Objekts:<br /><br /> **0** = dacpac<br /><br /> **1** = Anmeldung<br /><br /> **2** = Datenbank|  
 |**dac_object_type_name**|**varchar (8)**|Name des Typs des von der Aktion betroffenen Objekts:<br /><br /> **dacpac** = DAC-Instanz<br /><br /> **Anmel**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Code, der den aktuellen Status der Aktion identifiziert:<br /><br /> **0** = ausstehend<br /><br /> **1** = Erfolg<br /><br /> **2** = Fehler|  
-|**action_status_name**|**varchar (11)**|Aktueller Status der Aktion:<br /><br /> **ausstehende**<br /><br /> **erfolglos**<br /><br /> **UN**|  
+|**action_status_name**|**varchar (11)**|Aktueller Status der Aktion:<br /><br /> **pending**<br /><br /> **erfolglos**<br /><br /> **UN**|  
 |**Erforderlich**|**bit**|Wird von [!INCLUDE[ssDE](../../includes/ssde-md.md)] verwendet, wenn das Rollback eines DAC-Vorgangs ausgeführt wird.|  
 |**dac_object_name_pretran**|**sysname**|Name des Objekts, bevor ein Commit für die Transaktion ausgeführt wird, in der die Aktion enthalten ist. Wird nur für Datenbanken und Anmeldenamen verwendet.|  
 |**dac_object_name_posttran**|**sysname**|Name des Objekts, nachdem ein Commit für die Transaktion ausgeführt wurde, in der die Aktion enthalten ist. Wird nur für Datenbanken und Anmeldenamen verwendet.|  

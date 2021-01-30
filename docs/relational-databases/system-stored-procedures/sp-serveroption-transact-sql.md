@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_serveroption_TSQL
 - sp_serveroption
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ba6045caf5d95aed6d11c0844c16afd93365368f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ec6dfda1d4e12b190999b82e16c27b5127d5af6d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547384"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190780"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,25 +43,25 @@ sp_serveroption [@server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @server = ] 'server'` Der Name des Servers, für den die Option festgelegt werden soll. *server* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @server = ] 'server'` Der Name des Servers, für den die Option festgelegt werden soll. *server* ist vom Datentyp **sysname** und hat keinen Standardwert.  
   
 `[ @optname = ] 'option_name'` Die Option, die für den angegebenen Server festgelegt werden soll. *option_name* ist vom Datentyp **varchar (** 35 **)** und hat keinen Standardwert. *option_name* kann einen der folgenden Werte aufweisen.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**kompatibel mit Sortierung**|Betrifft die Ausführung verteilter Abfragen für Verbindungsserver. Wenn diese Option auf **true**festgelegt ist, wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] davon ausgegangen, dass alle Zeichen auf dem Verbindungs Server in Bezug auf den Zeichensatz und die Sortierreihenfolge (oder die Sortierreihenfolge) mit dem lokalen Server kompatibel sind. Dies ermöglicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Vergleiche für Zeichenspalten an den Provider zu senden. Wird diese Option nicht festgelegt, werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Vergleiche für Zeichenspalten immer lokal ausgewertet.<br /><br /> Diese Option sollte nur festgelegt werden, wenn sicher ist, dass die Datenquelle, die dem Verbindungsserver entspricht, den gleichen Zeichensatz und die gleiche Sortierreihenfolge wie der lokale Server verwendet.|  
+|**kompatibel mit Sortierung**|Betrifft die Ausführung verteilter Abfragen für Verbindungsserver. Wenn diese Option auf **true** festgelegt ist, wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] davon ausgegangen, dass alle Zeichen auf dem Verbindungs Server in Bezug auf den Zeichensatz und die Sortierreihenfolge (oder die Sortierreihenfolge) mit dem lokalen Server kompatibel sind. Dies ermöglicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Vergleiche für Zeichenspalten an den Provider zu senden. Wird diese Option nicht festgelegt, werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Vergleiche für Zeichenspalten immer lokal ausgewertet.<br /><br /> Diese Option sollte nur festgelegt werden, wenn sicher ist, dass die Datenquelle, die dem Verbindungsserver entspricht, den gleichen Zeichensatz und die gleiche Sortierreihenfolge wie der lokale Server verwendet.|  
 |**Sortierungs Name**|Gibt den Namen der von der Remote Datenquelle verwendeten Sortierung an, wenn **use Remote COLLATIONS** auf **true** festgelegt ist und die Datenquelle keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquelle ist. Der Name muss eine von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützte Sortierung sein.<br /><br /> Verwenden Sie diese Option, wenn auf eine OLE DB-Datenquelle zugegriffen wird, die keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenquelle ist, deren Sortierung jedoch mit einer der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sortierungen übereinstimmt.<br /><br /> Der Verbindungsserver muss eine einzige Sortierung unterstützen, die für alle Spalten in diesem Server verwendet wird. Legen Sie diese Option nicht fest, wenn der Verbindungsserver mehrere Sortierungen in einer einzelnen Datenquelle unterstützt oder wenn festgestellt wird, dass die Sortierung des Verbindungsservers nicht mit einer der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sortierungen übereinstimmt.|  
-|**Verbindungs Timeout**|Timeout Wert in Sekunden für das Herstellen einer Verbindung mit einem Verbindungs Server.<br /><br /> Wenn der Wert **0**ist, verwenden Sie den **sp_configure** Standard.|  
-|**Datenzugriff**|Aktiviert und deaktiviert den Zugriff auf verteilte Abfragen für Verbindungsserver. Kann nur für **sys. Server** -Einträge verwendet werden, die über **sp_addlinkedserver**hinzugefügt wurden.|  
+|**Verbindungs Timeout**|Timeout Wert in Sekunden für das Herstellen einer Verbindung mit einem Verbindungs Server.<br /><br /> Wenn der Wert **0** ist, verwenden Sie den **sp_configure** Standard.|  
+|**Datenzugriff**|Aktiviert und deaktiviert den Zugriff auf verteilte Abfragen für Verbindungsserver. Kann nur für **sys. Server** -Einträge verwendet werden, die über **sp_addlinkedserver** hinzugefügt wurden.|  
 |**dist**|Der Verteiler.|  
-|**Verzögerte Schemaüberprüfung**|Bestimmt, ob das Schema von Remotetabellen überprüft wird.<br /><br /> Wenn der Wert **true**ist, wird die Schema Überprüfung von Remote Tabellen am Anfang der Abfrage übersprungen.|  
+|**Verzögerte Schemaüberprüfung**|Bestimmt, ob das Schema von Remotetabellen überprüft wird.<br /><br /> Wenn der Wert **true** ist, wird die Schema Überprüfung von Remote Tabellen am Anfang der Abfrage übersprungen.|  
 |**knei**|Gebers.|  
-|**Abfrage Timeout**|Der Timeout Wert für Abfragen für einen Verbindungs Server.<br /><br /> Wenn der Wert **0**ist, verwenden Sie den **sp_configure** Standard.|  
+|**Abfrage Timeout**|Der Timeout Wert für Abfragen für einen Verbindungs Server.<br /><br /> Wenn der Wert **0** ist, verwenden Sie den **sp_configure** Standard.|  
 |**RPC**|Aktiviert RPC von dem betreffenden Server.|  
 |**RPC-Ausgabe**|Aktiviert RPC zu dem betreffenden Server.|  
 |**sub**|Abonnenten.|  
 |**System**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Remote Sortierung verwenden**|Bestimmt, ob die Sortierung einer Remotespalte oder eines lokalen Servers verwendet wird.<br /><br /> **True**gibt an, dass die Sortierung von Remote Spalten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquellen verwendet wird, und die im **Sortierungs Namen** angegebene Sortierung wird für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquellen verwendet.<br /><br /> Wenn der Wert **false**ist, verwenden verteilte Abfragen immer die Standardsortierung des lokalen Servers, während der **Sortierungs Name** und die Sortierung von Remote Spalten ignoriert werden. Die Standardeinstellung ist **false**. (Der Wert **false** ist mit der in 7,0 verwendeten Sortierungs Semantik kompatibel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .)|  
+|**Remote Sortierung verwenden**|Bestimmt, ob die Sortierung einer Remotespalte oder eines lokalen Servers verwendet wird.<br /><br /> **True** gibt an, dass die Sortierung von Remote Spalten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquellen verwendet wird, und die im **Sortierungs Namen** angegebene Sortierung wird für nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenquellen verwendet.<br /><br /> Wenn der Wert **false** ist, verwenden verteilte Abfragen immer die Standardsortierung des lokalen Servers, während der **Sortierungs Name** und die Sortierung von Remote Spalten ignoriert werden. Der Standardwert ist **FALSE**. (Der Wert **false** ist mit der in 7,0 verwendeten Sortierungs Semantik kompatibel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .)|  
 |**Remote Proc Transaction Promotion**|Verwenden Sie diese Option, um die Aktionen einer Server-zu-Server-Prozedur durch eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator-Transaktion (MS DTC) zu schützen. Wenn diese Option auf TRUE (oder ON) festgelegt ist und eine remote gespeicherte Prozedur aufgerufen wird, wird eine verteilte Transaktion gestartet und bei MS DTC eingetragen. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, die die remote gespeicherte Prozedur aufruft, wird als Transaktionsurheber bezeichnet und steuert die Beendigung der Transaktion. Wenn im Anschluss eine COMMIT TRANSACTION- oder ROLLBACK TRANSACTION-Anweisung für die Verbindung ausgegeben wird, fordert die steuernde Instanz MS DTC auf, die Beendigung der verteilten Transaktion auf den beteiligten Computern zu verwalten.<br /><br /> Nachdem eine verteilte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Transaktion gestartet wurde, können Aufrufe remote gespeicherter Prozeduren für weitere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen erfolgen, die als Verbindungsserver definiert wurden. Alle Verbindungsserver werden in der verteilten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Transaktion eingetragen, und MS DTC stellt sicher, dass die Transaktion für jeden Verbindungsserver abgeschlossen wird.<br /><br /> Wenn diese Option auf FALSE (oder OFF) festgelegt ist, wird eine lokale Transaktion beim Aufruf einer remote gespeicherten Prozedur für einen Verbindungsserver nicht zu einer verteilten Transaktion höher gestuft.<br /><br /> Falls die Transaktion vor dem Server-zu-Server-Prozeduraufruf bereits eine verteilte Transaktion ist, hat diese Option keine Auswirkung. Der Prozeduraufruf für einen Verbindungsserver wird unter der gleichen verteilten Transaktion ausgeführt.<br /><br /> Falls vor dem Server-zu-Server-Prozeduraufruf keine Transaktion in der Verbindung aktiv ist, hat diese Option keine Auswirkung. Die Prozedur wird dann für einen Verbindungsserver ohne aktive Transaktionen ausgeführt.<br /><br /> Der Standardwert für diese Option ist TRUE (oder ON).|  
   
 `[ @optvalue = ] 'option_value'` Gibt an, ob der *option_name* aktiviert (**true** oder **on**) oder deaktiviert (**false** oder **Off**) sein soll. *option_value* ist vom Datentyp **varchar (** 10 **)** und hat keinen Standardwert.  

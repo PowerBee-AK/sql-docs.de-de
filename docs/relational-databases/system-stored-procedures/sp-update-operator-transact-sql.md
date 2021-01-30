@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_operator_TSQL
 - sp_update_operator
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4dbc3c382ecd1c58e9bd76624700a1c62804a82c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2d664bbfc012ee262528397f735525138e91e82b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545901"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187306"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,10 +55,10 @@ sp_update_operator
   
 ## <a name="arguments"></a>Argumente  
  [ @name =] '*Name*'  
- Der Name des zu ändernden Operators. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
+ Der Name des zu ändernden Operators. *Name ist vom Datentyp* **vom Datentyp sysname** und hat keinen Standardwert.  
   
  [ @new_name =] '*new_name*'  
- Der neue Name des Operators. Dieser Name muss eindeutig sein. *new_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+ Der neue Name des Operators. Dieser Name muss eindeutig sein. *new_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
  [ @enabled =] *aktiviert*  
  Eine Zahl, die den aktuellen Status des Operators angibt (**1** , wenn derzeit aktiviert, **0** , wenn dies nicht der Wert ist). *aktiviert* ist vom Datentyp **tinyint**. der Standardwert ist NULL. Bei deaktivierter Option empfängt der Operator keine Warnbenachrichtigungen.  
@@ -70,25 +70,25 @@ sp_update_operator
  Gibt die Pageradresse des Operators an. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *pager_number* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL.  
   
  [ @weekday_pager_start_time =] *weekday_pager_start_time*  
- Gibt die Uhrzeit an, nach der von Montag bis Freitag eine Pagerbenachrichtigung an diesen Operator gesendet werden kann. *weekday_pager_start_time*ist vom Datentyp **int**und hat den Standardwert NULL und muss in der Form HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
+ Gibt die Uhrzeit an, nach der von Montag bis Freitag eine Pagerbenachrichtigung an diesen Operator gesendet werden kann. *weekday_pager_start_time* ist vom Datentyp **int** und hat den Standardwert NULL und muss in der Form HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
   
  [ @weekday_pager_end_time =] *weekday_pager_end_time*  
- Gibt die Uhrzeit an, nach der von Montag bis Freitag eine Pagerbenachrichtigung nicht an den angegebenen Operator gesendet werden kann. *weekday_pager_end_time*ist vom Datentyp **int**und hat den Standardwert NULL und muss in der Form HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
+ Gibt die Uhrzeit an, nach der von Montag bis Freitag eine Pagerbenachrichtigung nicht an den angegebenen Operator gesendet werden kann. *weekday_pager_end_time* ist vom Datentyp **int** und hat den Standardwert NULL und muss in der Form HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
   
  [ @saturday_pager_start_time =] *saturday_pager_start_time*  
- Gibt die Uhrzeit an, nach der samstags eine Pagerbenachrichtigung an den angegebenen Operator gesendet werden kann. *saturday_pager_start_time*ist vom Datentyp **int**und hat den Standardwert NULL und muss in der Form HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
+ Gibt die Uhrzeit an, nach der samstags eine Pagerbenachrichtigung an den angegebenen Operator gesendet werden kann. *saturday_pager_start_time* ist vom Datentyp **int** und hat den Standardwert NULL und muss in der Form HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
   
  [ @saturday_pager_end_time =] *saturday_pager_end_time*  
- Gibt die Uhrzeit an, nach der samstags eine Pagerbenachrichtigung nicht an den angegebenen Operator gesendet werden kann. *saturday_pager_end_time*ist vom Datentyp **int**und hat den Standardwert NULL und muss in der Form HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
+ Gibt die Uhrzeit an, nach der samstags eine Pagerbenachrichtigung nicht an den angegebenen Operator gesendet werden kann. *saturday_pager_end_time* ist vom Datentyp **int** und hat den Standardwert NULL und muss in der Form HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
   
  [ @sunday_pager_start_time =] *sunday_pager_start_time*  
- Gibt die Uhrzeit an, nach der sonntags eine Pagerbenachrichtigung an den angegebenen Operator gesendet werden kann. *sunday_pager_start_time*ist vom Datentyp **int**und hat den Standardwert NULL und muss in der Form HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
+ Gibt die Uhrzeit an, nach der sonntags eine Pagerbenachrichtigung an den angegebenen Operator gesendet werden kann. *sunday_pager_start_time* ist vom Datentyp **int** und hat den Standardwert NULL und muss in der Form HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
   
  [ @sunday_pager_end_time =] *sunday_pager_end_time*  
- Gibt die Uhrzeit an, nach der sonntags eine Pagerbenachrichtigung nicht an den angegebenen Operator gesendet werden kann. *sunday_pager_end_time*ist vom Datentyp **int**und hat den Standardwert NULL und muss in der Form HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
+ Gibt die Uhrzeit an, nach der sonntags eine Pagerbenachrichtigung nicht an den angegebenen Operator gesendet werden kann. *sunday_pager_end_time* ist vom Datentyp **int** und hat den Standardwert NULL und muss in der Form HHMMSS für die Verwendung mit einem 24-Stunden-Format eingegeben werden.  
   
  [ @pager_days =] *pager_days*  
- Gibt an, an welchen Tagen der Operator für den Empfang von Seiten zur Verfügung steht (vorbehaltlich der angegebenen Start-/Beendigungszeiten). *pager_days*ist vom Datentyp **tinyint**. der Standardwert ist NULL, und der Wert muss ein Wert zwischen **0** und **127**sein. *pager_days* wird berechnet, indem die einzelnen Werte für die erforderlichen Tage addiert werden. Beispielsweise ist von Montag bis Freitag **2** + **4** + **8** + **16** + **32**  =  **64**.  
+ Gibt an, an welchen Tagen der Operator für den Empfang von Seiten zur Verfügung steht (vorbehaltlich der angegebenen Start-/Beendigungszeiten). *pager_days* ist vom Datentyp **tinyint**. der Standardwert ist NULL, und der Wert muss ein Wert zwischen **0** und **127** sein. *pager_days* wird berechnet, indem die einzelnen Werte für die erforderlichen Tage addiert werden. Beispielsweise ist von Montag bis Freitag **2** + **4** + **8** + **16** + **32**  =  **64**.  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -101,15 +101,15 @@ sp_update_operator
 |**64**|Samstag|  
   
  [ @netsend_address =] '*netsend_address*'  
- Die Netzwerkadresse des Operators, an die die Netzwerknachricht gesendet wird. *netsend_address*ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL.  
+ Die Netzwerkadresse des Operators, an die die Netzwerknachricht gesendet wird. *netsend_address* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL.  
   
  [ @category_name =] '*Kategorie*'  
- Der Name der Kategorie für diese Warnung. *Category* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+ Der Name der Kategorie für diese Warnung. *Category* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_update_operator muss aus der msdb-Datenbank ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  

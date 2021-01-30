@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_script_synctran_commands
 - sp_script_synctran_commands_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f596a02346748cedcc6b99ada4e0a6122b184673
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9d52c3c63009d6dd5fdc33fca3f9c2c1598e96e8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541592"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189975"
 ---
 # <a name="sp_script_synctran_commands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +39,9 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung, für die ein Skript erstellt werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, für die ein Skript erstellt werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @article = ] 'article'` Der Name des Artikels, für den ein Skript erstellt werden soll. der *Artikel* ist vom **Datentyp vom Datentyp sysname**. der Standardwert **all**gibt an, dass für alle Artikel skriskripten erstellt werden.  
+`[ @article = ] 'article'` Der Name des Artikels, für den ein Skript erstellt werden soll. der *Artikel* ist vom **Datentyp vom Datentyp sysname**. der Standardwert **all** gibt an, dass für alle Artikel skriskripten erstellt werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -49,13 +49,13 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ## <a name="results-set"></a>Resultset  
  **sp_script_synctran_commands** gibt ein Resultset zurück, das aus einer einzelnen **nvarchar (4000)** -Spalte besteht. Das Resultset bildet die gesamten Skripts, die zum Erstellen der **sp_addsynctrigger** -und **sp_addqueued_artinfo** Aufrufe erforderlich sind, die auf den Abonnenten angewendet werden sollen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_script_synctran_commands** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
  **sp_addqueued_artinfo** wird für aktualisierbare Abonnements in der Warteschlange verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_script_synctran_commands**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_script_synctran_commands** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_addsynctriggers &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addsynctriggers-transact-sql.md)   

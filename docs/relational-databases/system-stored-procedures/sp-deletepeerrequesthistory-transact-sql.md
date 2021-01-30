@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_deletepeerrequesthistory
 - sp_deletepeerrequesthistory_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 606c3f362b5be303ce7c0ccbd3cd53f21fde8cd8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 56dad6791177093750585122eb939ba5a4ca5763
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548091"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189614"
 ---
 # <a name="sp_deletepeerrequesthistory-transact-sql"></a>sp_deletepeerrequesthistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,22 +40,22 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung, für die die Status Anforderung durchgeführt wurde. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, für die die Status Anforderung durchgeführt wurde. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @request_id = ] request_id` Gibt eine einzelne Status Anforderung an, sodass alle Antworten auf diese Anforderung gelöscht werden. *request_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @request_id = ] request_id` Gibt eine einzelne Status Anforderung an, sodass alle Antworten auf diese Anforderung gelöscht werden. *request_id* ist vom Datentyp **int** und hat den Standardwert NULL.  
   
-`[ @cutoff_date = ] cutoff_date` Gibt ein Umstellungs Datum an, vor dem alle früheren Antwortdaten Sätze gelöscht werden. *cutoff_date* ist vom **Datentyp DateTime**und hat den Standardwert NULL.  
+`[ @cutoff_date = ] cutoff_date` Gibt ein Umstellungs Datum an, vor dem alle früheren Antwortdaten Sätze gelöscht werden. *cutoff_date* ist vom **Datentyp DateTime** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_deletepeerrequesthistory** wird in einer Peer-zu-Peer-Transaktions Replikations Topologie verwendet. Weitere Informationen finden Sie unter [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
- Beim Ausführen **sp_deletepeerrequesthistory**muss entweder *request_id* oder *cutoff_date* angegeben werden.  
+ Beim Ausführen **sp_deletepeerrequesthistory** muss entweder *request_id* oder *cutoff_date* angegeben werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_deletepeerrequesthistory**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_deletepeerrequesthistory** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_helppeerrequests &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)   

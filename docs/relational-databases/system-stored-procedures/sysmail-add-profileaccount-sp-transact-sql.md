@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_add_profileaccount_sp
 - sysmail_add_profileaccount_sp_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 209240de58b09e48c4d35f145640f1edf97f1c4a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c01a72073b36aeba37cf28b5be8175fc283a07df
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538530"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99188764"
 ---
 # <a name="sysmail_add_profileaccount_sp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,25 +42,25 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @profile_id = ] profile_id` Die Profil-ID, der das Konto hinzugefügt werden soll. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
+`[ @profile_id = ] profile_id` Die Profil-ID, der das Konto hinzugefügt werden soll. *profile_id* ist vom Datentyp **int** und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
-`[ @profile_name = ] 'profile_name'` Der Profilname, dem das Konto hinzugefügt werden soll. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
+`[ @profile_name = ] 'profile_name'` Der Profilname, dem das Konto hinzugefügt werden soll. *profile_name* ist vom Datentyp **sysname** und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
-`[ @account_id = ] account_id` Die Konto-ID, die dem Profil hinzugefügt werden soll. *account_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *account_id* oder *account_name* angegeben werden.  
+`[ @account_id = ] account_id` Die Konto-ID, die dem Profil hinzugefügt werden soll. *account_id* ist vom Datentyp **int** und hat den Standardwert NULL. Es muss entweder *account_id* oder *account_name* angegeben werden.  
   
-`[ @account_name = ] 'account_name'` Der Name des Kontos, das dem Profil hinzugefügt werden soll. *account_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *account_id* oder *account_name* angegeben werden.  
+`[ @account_name = ] 'account_name'` Der Name des Kontos, das dem Profil hinzugefügt werden soll. *account_name* ist vom Datentyp **sysname** und hat den Standardwert NULL. Es muss entweder *account_id* oder *account_name* angegeben werden.  
   
-`[ @sequence_number = ] sequence_number` Die Sequenznummer des Kontos innerhalb des Profils. *sequence_number* ist vom Datentyp **int**und hat keinen Standardwert. Über die Sequenznummer wird die Reihenfolge festgelegt, in der Konten im Profil verwendet werden.  
+`[ @sequence_number = ] sequence_number` Die Sequenznummer des Kontos innerhalb des Profils. *sequence_number* ist vom Datentyp **int** und hat keinen Standardwert. Über die Sequenznummer wird die Reihenfolge festgelegt, in der Konten im Profil verwendet werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Sowohl das Profil als auch das Konto müssen bereits vorhanden sein. Andernfalls gibt die gespeicherte Prozedur einen Fehler zurück.  
   
  Beachten Sie, dass diese gespeicherte Prozedur nicht die Sequenznummer eines Kontos ändert, das bereits dem angegebenen Profil zugeordnet ist. Weitere Informationen zum Aktualisieren der Sequenznummer eines Kontos finden Sie unter [sysmail_update_profileaccount_sp &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md).  
   
- Über die Sequenznummer wird die Reihenfolge festgelegt, in der Konten im Profil von Datenbank-E-Mail verwendet werden. Für eine neue E-Mail-Nachricht beginnt Datenbank-E-Mail mit dem Konto mit der niedrigsten Sequenznummer. Wenn dieses Konto fehlschlägt, verwendet Datenbank-E-Mail das Konto mit der nächsthöheren Sequenznummer usw., bis entweder Datenbank-E-Mail die Nachricht erfolgreich versendet oder das Konto mit der höchsten Sequenznummer fehlschlägt. Wenn das Konto mit der höchsten Sequenznummer fehlschlägt, unterbricht die Datenbank-E-Mail die Versuche zum Senden der E-Mail für den Zeitraum, der im *AccountRetryDelay* -Parameter von **sysmail_configure_sp**konfiguriert ist. Danach wird das Senden der E-Mail erneut gestartet, wobei mit der niedrigsten Sequenznummer begonnen wird. Verwenden Sie den *AccountRetryAttempts* -Parameter von **sysmail_configure_sp**, um zu konfigurieren, wie oft der externe Mailprozess versuchen soll, die E-Mail-Nachricht mithilfe der einzelnen Konten im angegebenen Profil zu senden.  
+ Über die Sequenznummer wird die Reihenfolge festgelegt, in der Konten im Profil von Datenbank-E-Mail verwendet werden. Für eine neue E-Mail-Nachricht beginnt Datenbank-E-Mail mit dem Konto mit der niedrigsten Sequenznummer. Wenn dieses Konto fehlschlägt, verwendet Datenbank-E-Mail das Konto mit der nächsthöheren Sequenznummer usw., bis entweder Datenbank-E-Mail die Nachricht erfolgreich versendet oder das Konto mit der höchsten Sequenznummer fehlschlägt. Wenn das Konto mit der höchsten Sequenznummer fehlschlägt, unterbricht die Datenbank-E-Mail die Versuche zum Senden der E-Mail für den Zeitraum, der im *AccountRetryDelay* -Parameter von **sysmail_configure_sp** konfiguriert ist. Danach wird das Senden der E-Mail erneut gestartet, wobei mit der niedrigsten Sequenznummer begonnen wird. Verwenden Sie den *AccountRetryAttempts* -Parameter von **sysmail_configure_sp**, um zu konfigurieren, wie oft der externe Mailprozess versuchen soll, die E-Mail-Nachricht mithilfe der einzelnen Konten im angegebenen Profil zu senden.  
   
  Sind mehrere Konten mit der gleichen Sequenznummer vorhanden, verwendet die Datenbank-E-Mail nur eines dieser Konten für eine bestimmte E-Mail-Nachricht. In diesem Fall kann Datenbank-E-Mail nicht sicherstellen, welches der Konten für diese Sequenznummer verwendet wird oder dass für die einzelnen Nachrichten jeweils dasselbe Konto verwendet wird.  
   

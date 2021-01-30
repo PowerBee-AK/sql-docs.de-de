@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_foreignkeys_TSQL
 - sp_foreignkeys
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8a87d51fff7179ece3442e2459d8d2c5a96c8029
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 377ef64c76238e2e840107dbbe6b32dc9ba4c00f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543400"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189567"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,19 +46,19 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @table_server = ] 'table_server'` Der Name des Verbindungs Servers, für den Tabellen Informationen zurückgegeben werden sollen. *table_server* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @table_server = ] 'table_server'` Der Name des Verbindungs Servers, für den Tabellen Informationen zurückgegeben werden sollen. *table_server* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @pktab_name = ] 'pktab_name'` Der Name der Tabelle mit einem Primärschlüssel. *pktab_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @pktab_name = ] 'pktab_name'` Der Name der Tabelle mit einem Primärschlüssel. *pktab_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @pktab_schema = ] 'pktab_schema'` Der Name des Schemas mit einem Primärschlüssel. *pktab_schema*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält dies den Namen des Besitzers.  
+`[ @pktab_schema = ] 'pktab_schema'` Der Name des Schemas mit einem Primärschlüssel. *pktab_schema* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält dies den Namen des Besitzers.  
   
-`[ @pktab_catalog = ] 'pktab_catalog'` Der Name des Katalogs mit einem Primärschlüssel. *pktab_catalog*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält dies den Namen der Datenbank.  
+`[ @pktab_catalog = ] 'pktab_catalog'` Der Name des Katalogs mit einem Primärschlüssel. *pktab_catalog* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält dies den Namen der Datenbank.  
   
-`[ @fktab_name = ] 'fktab_name'` Der Name der Tabelle mit einem Fremdschlüssel. *fktab_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @fktab_name = ] 'fktab_name'` Der Name der Tabelle mit einem Fremdschlüssel. *fktab_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @fktab_schema = ] 'fktab_schema'` Der Name des Schemas mit einem Fremdschlüssel. *fktab_schema*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @fktab_schema = ] 'fktab_schema'` Der Name des Schemas mit einem Fremdschlüssel. *fktab_schema* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @fktab_catalog = ] 'fktab_catalog'` Der Name des Katalogs mit einem Fremdschlüssel. *fktab_catalog*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @fktab_catalog = ] 'fktab_catalog'` Der Name des Katalogs mit einem Fremdschlüssel. *fktab_catalog* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Keine  
@@ -85,8 +85,8 @@ sp_foreignkeys [ @table_server = ] 'table_server'
   
  Im Resultset geben die Spalten FK_NAME und PK_NAME immer NULL zurück.  
   
-## <a name="remarks"></a>Hinweise  
- **sp_foreignkeys** fragt das FOREIGN_KEYS Rowset der **IDBSchemaRowset** -Schnittstelle des OLE DB Anbieters ab, der *table_server*entspricht. Die Parameter *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG*und *Column* werden an diese Schnittstelle übermittelt, um die zurückgegebenen Zeilen einzuschränken.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_foreignkeys** fragt das FOREIGN_KEYS Rowset der **IDBSchemaRowset** -Schnittstelle des OLE DB Anbieters ab, der *table_server* entspricht. Die Parameter *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG* und *Column* werden an diese Schnittstelle übermittelt, um die zurückgegebenen Zeilen einzuschränken.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigung für das Schema.  

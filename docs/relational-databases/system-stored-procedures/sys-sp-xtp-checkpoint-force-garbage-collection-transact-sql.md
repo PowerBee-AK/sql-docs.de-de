@@ -1,13 +1,13 @@
 ---
 description: sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
-title: sys. sp_xtp_checkpoint_force_garbage_collection (Transact-SQL) | Microsoft-Dokumentation
+title: sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_xtp_checkpoint_force_garbage_collection_TSQL
 - sys.sp_xtp_checkpoint_force_garbage_collection
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 82b35b2b-edbd-44ac-9fc8-80695f2fd1df
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4ca922c0f2cfe2036107509026d97cd0db1ee54a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 31e2afff0668cd17605ecf83dbd3ca891f521f24
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551121"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190562"
 ---
 # <a name="syssp_xtp_checkpoint_force_garbage_collection-transact-sql"></a>sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sys.sp_xtp_checkpoint_force_garbage_collection [[ @dbname=database_name]
 ## <a name="result-set"></a>Resultset  
  Eine zurückgegebene Zeile enthält die folgenden Informationen:  
   
-|Column|BESCHREIBUNG|  
+|Spalte|BESCHREIBUNG|  
 |------------|-----------------|  
 |num_collected_items|Gibt die Anzahl der Dateien an, die in die Filestream Garbage Collection verschoben wurden. Diese Dateien verfügen über eine Protokollfolgenummer (LSN), die niedriger ist als die LSN des Protokollkürzungspunkts.|  
 |num_marked_for_collection_items|Gibt die Anzahl der Daten-/Änderungsdateien an, deren LSN mit der Protokollblock-ID der Protokollende-LSN aktualisiert wurde.|  

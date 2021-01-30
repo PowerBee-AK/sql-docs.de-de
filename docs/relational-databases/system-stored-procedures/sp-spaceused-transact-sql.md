@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_spaceused_TSQL
 - sp_spaceused
@@ -19,12 +19,12 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b887b79a2e768f3c73a683ae6f60b06fb8d16a2c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 480b61493dc38ea91679e590f3abe63bde3a48c0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466831"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189306"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +62,7 @@ Wenn *objname* nicht angegeben wird, werden die Ergebnisse für die gesamte Date
   
  Das *Mode* -Argument kann die folgenden Werte aufweisen:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |ALL|Gibt die Speicher Statistik des Objekts oder der Datenbank zurück, einschließlich des lokalen Teils und des Remote Teils.|  
 |LOCAL_ONLY|Gibt die Speicher Statistiken für nur den lokalen Teil des Objekts oder der Datenbank zurück. Wenn das Objekt oder die Datenbank nicht Stretch-aktiviert ist, gibt dieselbe Statistik zurück wie when @mode = all.|  
@@ -72,7 +72,7 @@ Wenn *objname* nicht angegeben wird, werden die Ergebnisse für die gesamte Date
   
 `[ @oneresultset = ] oneresultset` Gibt an, ob ein einzelnes Resultset zurückgegeben werden soll. Das *oneresultset* -Argument kann die folgenden Werte aufweisen:  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0|Wenn *\@ objname* NULL ist oder nicht angegeben ist, werden zwei Resultsets zurückgegeben. Zwei Resultsets sind das Standardverhalten.|  
 |1|Wenn *\@ objname* = NULL oder nicht angegeben wird, wird ein einzelnes Resultset zurückgegeben.|  
@@ -90,13 +90,13 @@ Wenn *objname* nicht angegeben wird, werden die Ergebnisse für die gesamte Date
 ## <a name="result-sets"></a>Resultsets  
  Wenn *objname* ausgelassen wird und der Wert von *oneresultset* den Wert 0 hat, werden die folgenden Resultsets zurückgegeben, um aktuelle Informationen zur Datenbankgröße bereitzustellen.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Der Name der aktuellen Datenbank.|  
 |**database_size**|**varchar (18)**|Die Größe der aktuellen Datenbank in Megabyte. **database_size** enthält sowohl Daten-als auch Protokolldateien.|  
 |**nicht zugewiesener Speicherplatz**|**varchar (18)**|Speicherplatz in der Datenbank, der nicht für Datenbankobjekte zugeordnet wurde.|  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**bleiben**|**varchar (18)**|Gesamter von Objekten in der Datenbank zugeordneter Speicherplatz.|  
 |**data**|**varchar (18)**|Gesamter für Daten verwendeter Speicherplatz.|  
@@ -105,7 +105,7 @@ Wenn *objname* nicht angegeben wird, werden die Ergebnisse für die gesamte Date
   
  Wenn *objname* ausgelassen wird und der Wert von *oneresultset* 1 ist, wird das folgende einzelne Resultset zurückgegeben, um aktuelle Informationen zur Datenbankgröße bereitzustellen.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Der Name der aktuellen Datenbank.|  
 |**database_size**|**varchar (18)**|Die Größe der aktuellen Datenbank in Megabyte. **database_size** enthält sowohl Daten-als auch Protokolldateien.|  
@@ -117,7 +117,7 @@ Wenn *objname* nicht angegeben wird, werden die Ergebnisse für die gesamte Date
   
  Wenn *objname* angegeben ist, wird das folgende Resultset für das angegebene Objekt zurückgegeben.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|Name des Objekts, für das Informationen zur Speicherverwendung angefordert wurden.<br /><br /> Der Schemaname des Objekts wird nicht zurückgegeben. Wenn der Schema Name erforderlich ist, verwenden Sie die [sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) oder [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) dynamischen Verwaltungs Sichten, um entsprechende Größen Informationen zu erhalten.|  
 |**rows**|**char (20)**|Anzahl der Zeilen in der Tabelle. Wenn es sich bei dem angegebenen Objekt um eine [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Warteschlange handelt, wird in dieser Spalte die Anzahl der in der Warteschlange vorhandenen Nachrichten angegeben.|  
@@ -128,7 +128,7 @@ Wenn *objname* nicht angegeben wird, werden die Ergebnisse für die gesamte Date
  
 Dies ist der Standardmodus, wenn keine Parameter angegeben werden. Die folgenden Resultsets werden in Detailinformationen zur Datenbankgröße auf dem Datenträger zurückgegeben. 
 
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Der Name der aktuellen Datenbank.|  
 |**database_size**|**varchar (18)**|Die Größe der aktuellen Datenbank in Megabyte. **database_size** enthält sowohl Daten-als auch Protokolldateien. Wenn die Datenbank über eine MEMORY_OPTIMIZED_DATA Dateigruppe verfügt, schließt dies die Gesamtgröße aller Prüf Punkt Dateien in der Datei Gruppe auf dem Datenträger ein.|  
@@ -136,7 +136,7 @@ Dies ist der Standardmodus, wenn keine Parameter angegeben werden. Die folgenden
 
 Speicherplatz, der von Tabellen in der Datenbank verwendet wird: (dieses Resultset spiegelt keine Speicher optimierten Tabellen wider, da es keine Tabellen übergreifende Erfassung der Datenträger Verwendung gibt) 
 
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**bleiben**|**varchar (18)**|Gesamter von Objekten in der Datenbank zugeordneter Speicherplatz.|  
 |**data**|**varchar (18)**|Gesamter für Daten verwendeter Speicherplatz.|  
@@ -145,7 +145,7 @@ Speicherplatz, der von Tabellen in der Datenbank verwendet wird: (dieses Results
 
 Das folgende Resultset wird **nur** zurückgegeben, wenn die Datenbank über eine MEMORY_OPTIMIZED_DATA-Datei Gruppe mit mindestens einem Container verfügt: 
 
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**xtp_precreated**|**varchar (18)**|Gesamtgröße der Prüf Punkt Dateien, für die der Status vorab erstellt wurde, in KB. Wird in Bezug auf den nicht zugeordneten Speicherplatz in der Datenbank als Ganzes gezählt. [Wenn z. b. 600.000 KB vorab erstellte Prüf Punkt Dateien vorhanden sind, enthält diese Spalte "600000 KB"].|  
 |**xtp_used**|**varchar (18)**|Gesamtgröße der Prüf Punkt Dateien mit Zuständen, die in Bearbeitung, aktiv und Zusammenschluss Ziel in KB liegen. Dies ist der Speicherplatz, der für Daten in Speicher optimierten Tabellen aktiv verwendet wird.|  
@@ -153,7 +153,7 @@ Das folgende Resultset wird **nur** zurückgegeben, wenn die Datenbank über ein
 
 Wenn *objname* weggelassen wird, ist der Wert von oneresultset 1 und *include_total_xtp_storage* 1. das folgende einzelne Resultset wird zurückgegeben, um aktuelle Informationen zur Datenbankgröße bereitzustellen. Wenn den Wert `include_total_xtp_storage` 0 (Standard) hat, werden die letzten drei Spalten weggelassen. 
 
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Der Name der aktuellen Datenbank.|  
 |**database_size**|**varchar (18)**|Die Größe der aktuellen Datenbank in Megabyte. **database_size** enthält sowohl Daten-als auch Protokolldateien. Wenn die Datenbank über eine MEMORY_OPTIMIZED_DATA Dateigruppe verfügt, schließt dies die Gesamtgröße aller Prüf Punkt Dateien in der Datei Gruppe auf dem Datenträger ein.|
@@ -166,7 +166,7 @@ Wenn *objname* weggelassen wird, ist der Wert von oneresultset 1 und *include_to
 |**xtp_used**|**varchar (18)**|Gesamtgröße der Prüf Punkt Dateien mit Zuständen, die in Bearbeitung, aktiv und Zusammenschluss Ziel in KB liegen. Dies ist der Speicherplatz, der für Daten in Speicher optimierten Tabellen aktiv verwendet wird. Gibt NULL zurück, wenn die Datenbank nicht über eine memory_optimized_data-Datei Gruppe mit mindestens einem Container verfügt. *Diese Spalte ist nur enthalten, wenn @include_total_xtp_storage = 1*.| 
 |**xtp_pending_truncation**|**varchar (18)**|Gesamtgröße der Prüf Punkt Dateien mit Status WAITING_FOR_LOG_TRUNCATION in KB. Dies ist der Speicherplatz, der für Prüf Punkt Dateien verwendet wird, die auf eine Bereinigung warten, sobald das Abschneiden des Protokolls erfolgt ist. Gibt NULL zurück, wenn die Datenbank nicht über eine memory_optimized_data-Datei Gruppe mit mindestens einem Container verfügt. Diese Spalte ist nur enthalten, wenn `@include_total_xtp_storage=1` .|
 
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **database_size** ist im Allgemeinen größer als die Summe des **reservierten**  +  **Speicherplatzes** , weil er die Größe der Protokolldateien enthält, aber **reserviert** ist und **unallocated_space** nur Datenseiten berücksichtigt. In einigen Fällen mit Azure Synapse Analytics ist diese Anweisung möglicherweise nicht "true". 
   
  Seiten, die von XML-Indizes und Volltextindizes verwendet werden, sind in **index_size** für beide Resultsets enthalten. Wenn *objname* angegeben ist, werden die Seiten für die XML-Indizes und Volltextindizes für das Objekt auch in den **reservierten** und **index_size** Ergebnissen gezählt.  

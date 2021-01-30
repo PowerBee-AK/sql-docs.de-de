@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_server_diagnostics
 - sp_server_diagnostics_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 01c576dcb71aa3814f1e1c560c6e38ec35874161
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b57d7d6f9925c8cd2c4670daa68054dff9f1e871
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547410"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190819"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +80,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **\<name of the availability group>**: Sammelt Daten f체r die angegebene Verf체gbarkeits Gruppe (wenn component_type = "Always on: availabilitygroup").  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
 Die Komponenten system, resource und query_processing werden zur Fehlererkennung aus Fehlerperspektive genutzt, w채hrend die Komponenten io_subsystem und events nur zu Diagnosezwecken genutzt werden.  
   
 In der folgenden Tabelle sind die Komponenten den jeweils zugeordneten Integrit채tszust채nden zugeordnet.  
@@ -91,7 +91,7 @@ In der folgenden Tabelle sind die Komponenten den jeweils zugeordneten Integrit�
 |resource|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
-|events||||w|  
+|events||||x|  
   
 Das (x) in jeder Zeile steht f체r g체ltige Zust채nde f체r die Komponente. Im Beispiel wird io_subsystem als fehlerfrei oder Warnung angezeigt. Der Fehlerstatus wird nicht angezeigt.  
  

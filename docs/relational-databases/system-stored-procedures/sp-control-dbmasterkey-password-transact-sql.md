@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_control_dbmasterkey_password
 - sp_control_dbmasterkey_password_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 08b749ad756a47ed991acd1ad0ea1d533bbb770c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06de3460a55eecba6c1525576caec85d6baa905f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481440"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190035"
 ---
 # <a name="sp_control_dbmasterkey_password-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +59,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 > [!CAUTION]  
 >  Wenn von sa und anderen Serverprinzipalen mit hohen Privilegien nicht auf eine Datenbank zugegriffen werden soll, ist das Erstellen von Hauptschlüssel-Anmeldeinformationen nicht empfehlenswert. Sie können eine Datenbank so konfigurieren, dass ihre Schlüsselhierarchie nicht vom Diensthauptschlüssel entschlüsselt werden kann. Diese Option wird als sicherer Schutz für Datenbanken mit verschlüsselten Informationen unterstützt, auf die von sa oder anderen Serverprinzipalen mit hohen Privilegien nicht zugegriffen werden soll. Durch das Erstellen eines Hauptschlüssels für eine Datenbank dieser Art wird der sichere Schutz entfernt, sodass sa und andere Serverprinzipale mit hohen Privilegien die Datenbank entschlüsseln können.  
   
- Anmelde Informationen, die mit sp_control_dbmasterkey_password erstellt werden, sind in der [sys. master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) -Katalog Sicht sichtbar. Die Namen der für Datenbank-Hauptschlüssel erstellten Anmeldeinformationen besitzen das folgende Format: `##DBMKEY_<database_family_guid>_<random_password_guid>##`. Das Kennwort wird als Anmeldeinformation-Kennwort gespeichert. Für jedes dem Anmeldeinformationenspeicher hinzugefügte Kennwort ist eine Zeile in sys.credentials vorhanden.  
+ Anmelde Informationen, die mit sp_control_dbmasterkey_password erstellt werden, sind in der [sys.master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) -Katalog Sicht sichtbar. Die Namen der für Datenbank-Hauptschlüssel erstellten Anmeldeinformationen besitzen das folgende Format: `##DBMKEY_<database_family_guid>_<random_password_guid>##`. Das Kennwort wird als Anmeldeinformation-Kennwort gespeichert. Für jedes dem Anmeldeinformationenspeicher hinzugefügte Kennwort ist eine Zeile in sys.credentials vorhanden.  
   
  sp_control_dbmasterkey_password kann nicht verwendet werden, um Anmeldeinformationen für die folgenden Systemdatenbanken zu erstellen: master, model, msdb oder tempdb.  
   
@@ -83,7 +83,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>A. Erstellen von Anmeldeinformationen für den AdventureWorks2012-Hauptschlüssel  
- Im folgenden Beispiel werden Anmeldeinformationen für den Hauptschlüssel der `AdventureWorks2012`-Datenbank erstellt, und das Kennwort für den Hauptschlüssel wird als geheimer Eintrag in den Anmeldeinformationen gespeichert. Da alle Parameter, die an übermittelt werden, `sp_control_dbmasterkey_password` vom Datentyp **nvarchar**sein müssen, werden die Text Zeichenfolgen mit dem Umwandlungs Operator konvertiert `N` .  
+ Im folgenden Beispiel werden Anmeldeinformationen für den Hauptschlüssel der `AdventureWorks2012`-Datenbank erstellt, und das Kennwort für den Hauptschlüssel wird als geheimer Eintrag in den Anmeldeinformationen gespeichert. Da alle Parameter, die an übermittelt werden, `sp_control_dbmasterkey_password` vom Datentyp **nvarchar** sein müssen, werden die Text Zeichenfolgen mit dem Umwandlungs Operator konvertiert `N` .  
   
 ```  
 EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   
@@ -101,9 +101,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Einrichten einer verschlüsselten Spiegel Datenbank](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
- [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Einrichten einer verschlüsselten Spiegeldatenbank](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
+ [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [Anmeldeinformationen &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)  
   

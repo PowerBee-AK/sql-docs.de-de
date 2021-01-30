@@ -5,33 +5,33 @@ editor: ''
 ms.prod: sql
 ms.technology: connectivity
 ms.devlang: cpp
-ms.topic: conceptual
+ms.topic: reference
 ms.custom: ''
 ms.date: 07/14/2017
 ms.author: v-daenge
 author: David-Engel
-ms.openlocfilehash: 63575c952feb8fc21d56f48540a7cd4e54d5e11f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dce2f56d3257ac3b513ef3839f949258c6f018df
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305121"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187175"
 ---
-# <a name="retrieve-numeric-data-with-sql_numeric_struct"></a>Abrufen numerischer Daten mit\_der\_numerischen SQL-Struktur
+# <a name="retrieve-numeric-data-with-sql_numeric_struct"></a>Abrufen numerischer Daten mit der numerischen SQL- \_ \_ Struktur
 
 In diesem Artikel wird beschrieben, wie numerische Daten aus dem SQL Server ODBC-Treiber in eine numerische Struktur abgerufen werden. Außerdem wird beschrieben, wie Sie die richtigen Werte mit bestimmten Genauigkeits-und Skalierungs Werten erhalten.
 
-Mit diesem Datentyp können Anwendungen numerische Daten direkt verarbeiten. Im Jahr 2003 führte ODBC 3,0 einen neuen ODBC-C-Datentyp ein, der **von\_SQL\_C numeric**identifiziert wird. Dieser Datentyp ist weiterhin ab 2017 relevant.
+Mit diesem Datentyp können Anwendungen numerische Daten direkt verarbeiten. Im Jahr 2003 führte ODBC 3,0 einen neuen ODBC-C-Datentyp ein, der von **SQL \_ C \_ numeric** identifiziert wird. Dieser Datentyp ist weiterhin ab 2017 relevant.
 
-Der verwendete C-Puffer weist die Typdefinition der **\_numerischen SQL\_-Struktur**auf. Diese Struktur enthält Felder zum Speichern der Genauigkeit, der Skala, des Zeichens und des Werts der numerischen Daten. Der Wert selbst wird als eine skalierte Ganzzahl mit dem geringsten signifikanten Byte gespeichert, beginnend an der äußersten linken Position. 
+Der verwendete C-Puffer weist die Typdefinition der **numerischen SQL \_ - \_ Struktur** auf. Diese Struktur enthält Felder zum Speichern der Genauigkeit, der Skala, des Zeichens und des Werts der numerischen Daten. Der Wert selbst wird als eine skalierte Ganzzahl mit dem geringsten signifikanten Byte gespeichert, beginnend an der äußersten linken Position. 
 
-Der Artikel [C-Datentypen](c-data-types.md) bietet weitere Informationen über das Format und die Verwendung\_der\_numerischen SQL-Struktur. Im Allgemeinen werden die Datentypen in der [Anhang D](appendix-d-data-types.md) der ODBC 3,0-Programmier Referenz erläutert.
-
-
-## <a name="sql_numeric_struct-overview"></a>Übersicht\_über\_die numerische SQL-Struktur
+Der Artikel [C-Datentypen](c-data-types.md) bietet weitere Informationen über das Format und die Verwendung der numerischen SQL- \_ \_ Struktur. Im Allgemeinen werden die Datentypen in der [Anhang D](appendix-d-data-types.md) der ODBC 3,0-Programmier Referenz erläutert.
 
 
-Die numerische\_\_SQL-Struktur wird in der Header Datei SqlTypes. h wie folgt definiert:
+## <a name="sql_numeric_struct-overview"></a>\_Übersicht über die numerische SQL- \_ Struktur
+
+
+Die numerische SQL- \_ \_ Struktur wird in der Header Datei SqlTypes. h wie folgt definiert:
 
 
 ```c
@@ -50,7 +50,7 @@ Die Felder für Genauigkeit und Skala der numerischen Struktur werden nie für d
 
 Der Treiber verwendet die Standardgenauigkeit (Treiber definiert) und die Standardskala (0), wenn Daten an die Anwendung zurückgegeben werden. Wenn die Anwendung keine Werte für Genauigkeit und dezimal Stellung angibt, geht der Treiber von der Standardeinstellung aus und verkürzt den Dezimalteil der numerischen Daten.
 
-## <a name="sql_numeric_struct-code-sample"></a>Code\_Beispiel\_für numerische SQL-Struktur
+## <a name="sql_numeric_struct-code-sample"></a>\_Codebeispiel für numerische SQL- \_ Struktur
 
 Dieses Codebeispiel zeigt Ihnen Folgendes:
 
@@ -265,7 +265,7 @@ long strtohextoval()
 ### <a name="applies-to-versions"></a>Gilt für Versionen
 
 
-Die vorstehenden Informationen zur\_numerischen\_SQL-Struktur gelten für die folgenden Produktversionen:
+Die vorstehenden Informationen zur \_ numerischen SQL- \_ Struktur gelten für die folgenden Produktversionen:
 
 - Microsoft ODBC Driver for Microsoft SQL Server 3,7
 - Microsoft Data Access Components 2,1
@@ -274,10 +274,10 @@ Die vorstehenden Informationen zur\_numerischen\_SQL-Struktur gelten für die fo
 - Microsoft Data Access Components 2,7
 
 
-## <a name="sql_c_numeric-overview"></a>Übersicht\_über\_SQL C numeric
+## <a name="sql_c_numeric-overview"></a>\_ \_ Übersicht über SQL C numeric
 
 
-Das folgende Beispielprogramm veranschaulicht die Verwendung von SQL\_C\_numeric, indem 123,45 in eine Tabelle eingefügt wird. In der-Tabelle ist die-Spalte als numerisch oder Decimal definiert, mit der Genauigkeit 5 und mit der Skala 2.
+Das folgende Beispielprogramm veranschaulicht die Verwendung von SQL \_ C \_ numeric, indem 123,45 in eine Tabelle eingefügt wird. In der-Tabelle ist die-Spalte als numerisch oder Decimal definiert, mit der Genauigkeit 5 und mit der Skala 2.
 
 Der ODBC-Treiber, den Sie zum Ausführen dieses Programms verwenden, muss die ODBC 3,0-Funktionalität unterstützen.
 

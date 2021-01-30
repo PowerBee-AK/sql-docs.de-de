@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_schedule
 - sp_update_schedule_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5aead8188bbdaac714bb68e44be0c54cce12fce6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 13359a3d3588e238ef0b78ed5bfe5148fb447dae
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541580"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189534"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,15 +56,15 @@ sp_update_schedule
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @schedule_id = ] schedule_id` Der Bezeichner des Zeitplans, der geändert werden soll. *schedule_id* ist vom Datentyp **int**und hat keinen Standardwert. Es muss entweder *schedule_id* oder *schedule_name* angegeben werden.  
+`[ @schedule_id = ] schedule_id` Der Bezeichner des Zeitplans, der geändert werden soll. *schedule_id* ist vom Datentyp **int** und hat keinen Standardwert. Es muss entweder *schedule_id* oder *schedule_name* angegeben werden.  
   
-`[ @name = ] 'schedule_name'` Der Name des Zeitplans, der geändert werden soll. *schedule_name*ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Es muss entweder *schedule_id* oder *schedule_name* angegeben werden.  
+`[ @name = ] 'schedule_name'` Der Name des Zeitplans, der geändert werden soll. *schedule_name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert. Es muss entweder *schedule_id* oder *schedule_name* angegeben werden.  
   
-`[ @new_name = ] new_name` Der neue Name für den Zeitplan. *new_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *new_name* NULL ist, bleibt der Name des Zeitplans unverändert.  
+`[ @new_name = ] new_name` Der neue Name für den Zeitplan. *new_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn *new_name* NULL ist, bleibt der Name des Zeitplans unverändert.  
   
-`[ @enabled = ] enabled` Gibt den aktuellen Status des Zeitplans an. *aktiviert*ist vom Datentyp **tinyint**. der Standardwert ist **1** (aktiviert). Wenn der Wert **0**ist, ist der Zeitplan nicht aktiviert. Wenn der Zeitplan nicht aktiviert ist, werden über diesen Zeitplan keine Aufträge ausgeführt.  
+`[ @enabled = ] enabled` Gibt den aktuellen Status des Zeitplans an. *aktiviert* ist vom Datentyp **tinyint**. der Standardwert ist **1** (aktiviert). Wenn der Wert **0** ist, ist der Zeitplan nicht aktiviert. Wenn der Zeitplan nicht aktiviert ist, werden über diesen Zeitplan keine Aufträge ausgeführt.  
   
-`[ @freq_type = ] freq_type` Ein Wert, der angibt, wann ein Auftrag ausgeführt werden soll. *freq_type*ist vom Datentyp **int**und hat den Standardwert **0**. die folgenden Werte sind möglich:  
+`[ @freq_type = ] freq_type` Ein Wert, der angibt, wann ein Auftrag ausgeführt werden soll. *freq_type* ist vom Datentyp **int** und hat den Standardwert **0**. die folgenden Werte sind möglich:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -76,7 +76,7 @@ sp_update_schedule
 |**64**|Ausführen beim Start des SQLServerAgent-Diensts|  
 |**128**|Ausführen, wenn sich der Computer im Leerlauf befindet|  
   
-`[ @freq_interval = ] freq_interval` Die Tage, an denen ein Auftrag ausgeführt wird. *freq_interval* ist vom Datentyp **int**und hat den Standardwert **0**. der Wert hängt vom Wert *freq_type*ab.  
+`[ @freq_interval = ] freq_interval` Die Tage, an denen ein Auftrag ausgeführt wird. *freq_interval* ist vom Datentyp **int** und hat den Standardwert **0**. der Wert hängt vom Wert *freq_type* ab.  
   
 |Wert *freq_type*|Auswirkung auf *freq_interval*|  
 |---------------------------|--------------------------------|  
@@ -88,7 +88,7 @@ sp_update_schedule
 |**64** (wenn der SQLServerAgent-Dienst gestartet wird)|*freq_interval* wird nicht verwendet.|  
 |**128**|*freq_interval* wird nicht verwendet.|  
   
-`[ @freq_subday_type = ] freq_subday_type` Gibt die Einheiten für *freq_subday_interval * * an.* *freq_subday_type*ist vom Datentyp **int**und hat den Standardwert **0**. die folgenden Werte sind möglich:  
+`[ @freq_subday_type = ] freq_subday_type` Gibt die Einheiten für *freq_subday_interval * * an.* *freq_subday_type* ist vom Datentyp **int** und hat den Standardwert **0**. die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
@@ -97,9 +97,9 @@ sp_update_schedule
 |**0x4**|Minuten|  
 |**0x8**|Stunden|  
   
-`[ @freq_subday_interval = ] freq_subday_interval` Die Anzahl der *freq_subday_type* Zeiträume zwischen jeder Ausführung eines Auftrags. *freq_subday_interval*ist vom Datentyp **int**und hat den Standardwert **0**.  
+`[ @freq_subday_interval = ] freq_subday_interval` Die Anzahl der *freq_subday_type* Zeiträume zwischen jeder Ausführung eines Auftrags. *freq_subday_interval* ist vom Datentyp **int** und hat den Standardwert **0**.  
   
-`[ @freq_relative_interval = ] freq_relative_interval` Das Vorkommen eines Auftrags *freq_interval* in jedem Monat, wenn *freq_interval* **32** (monatlich, relativ) ist. *freq_relative_interval*ist vom Datentyp **int**und hat den Standardwert **0**. die folgenden Werte sind möglich:  
+`[ @freq_relative_interval = ] freq_relative_interval` Das Vorkommen eines Auftrags *freq_interval* in jedem Monat, wenn *freq_interval* **32** (monatlich, relativ) ist. *freq_relative_interval* ist vom Datentyp **int** und hat den Standardwert **0**. die folgenden Werte sind möglich:  
   
 |Wert|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
@@ -107,32 +107,32 @@ sp_update_schedule
 |**2**|Sekunde|  
 |**4**|Third|  
 |**8**|Vierter|  
-|**16**|Last (Letzter)|  
+|**16**|Letzter|  
   
-`[ @freq_recurrence_factor = ] freq_recurrence_factor` Die Anzahl der Wochen oder Monate zwischen der geplanten Ausführung eines Auftrags. *freq_recurrence_factor* wird nur verwendet, *freq_type* wenn freq_type **8**, **16**oder **32**ist. *freq_recurrence_factor*ist vom Datentyp **int**und hat den Standardwert **0**.  
+`[ @freq_recurrence_factor = ] freq_recurrence_factor` Die Anzahl der Wochen oder Monate zwischen der geplanten Ausführung eines Auftrags. *freq_recurrence_factor* wird nur verwendet,  wenn freq_type **8**, **16** oder **32** ist. *freq_recurrence_factor* ist vom Datentyp **int** und hat den Standardwert **0**.  
   
-`[ @active_start_date = ] active_start_date` Das Datum, an dem die Ausführung eines Auftrags beginnen kann. *active_start_date*ist vom Datentyp **int**und hat den Standardwert NULL, der das heutige Datum angibt. Das Datum wird als YYYYMMDD formatiert. Wenn *active_start_date* nicht NULL ist, muss das Datum größer oder gleich 19900101 sein.  
+`[ @active_start_date = ] active_start_date` Das Datum, an dem die Ausführung eines Auftrags beginnen kann. *active_start_date* ist vom Datentyp **int** und hat den Standardwert NULL, der das heutige Datum angibt. Das Datum wird als YYYYMMDD formatiert. Wenn *active_start_date* nicht NULL ist, muss das Datum größer oder gleich 19900101 sein.  
   
  Überprüfen Sie nach dem Erstellen des Zeitplans, ob das Startdatum korrekt ist. Weitere Informationen finden Sie im Abschnitt "Planen des Start Datums" unter [Erstellen und Anfügen von Zeitplänen an Aufträge](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
-`[ @active_end_date = ] active_end_date` Das Datum, an dem die Ausführung eines Auftrags beendet werden kann. *active_end_date*ist vom Datentyp **int**und hat den Standardwert **99991231**, womit der 31. Dezember 9999 angegeben wird. Im Format JJJJMMTT.  
+`[ @active_end_date = ] active_end_date` Das Datum, an dem die Ausführung eines Auftrags beendet werden kann. *active_end_date* ist vom Datentyp **int** und hat den Standardwert **99991231**, womit der 31. Dezember 9999 angegeben wird. Im Format JJJJMMTT.  
   
-`[ @active_start_time = ] active_start_time` Die Uhrzeit an einem beliebigen Tag zwischen *active_start_date* und *active_end_date* , um die Ausführung eines Auftrags zu beginnen. *active_start_time*ist vom Datentyp **int**und hat den Standardwert 000000, der 12:00:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
+`[ @active_start_time = ] active_start_time` Die Uhrzeit an einem beliebigen Tag zwischen *active_start_date* und *active_end_date* , um die Ausführung eines Auftrags zu beginnen. *active_start_time* ist vom Datentyp **int** und hat den Standardwert 000000, der 12:00:00 Uhr im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
-`[ @active_end_time = ] active_end_time` Die Uhrzeit an einem beliebigen Tag zwischen *active_start_date* und *active_end_date* , um die Ausführung eines Auftrags zu beenden. *active_end_time*ist vom Datentyp **int**und hat den Standardwert **235959**, der 11:59:59 Uhr angibt. im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
+`[ @active_end_time = ] active_end_time` Die Uhrzeit an einem beliebigen Tag zwischen *active_start_date* und *active_end_date* , um die Ausführung eines Auftrags zu beenden. *active_end_time* ist vom Datentyp **int** und hat den Standardwert **235959**, der 11:59:59 Uhr angibt. im 24-Stunden-Format an und muss im Format HHMMSS eingegeben werden.  
   
-`[ @owner_login_name = ] 'owner_login_name']` Der Name des Server Prinzipals, der den Zeitplan besitzt. *owner_login_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL, womit angegeben wird, dass der Zeitplan dem Ersteller gehört.  
+`[ @owner_login_name = ] 'owner_login_name']` Der Name des Server Prinzipals, der den Zeitplan besitzt. *owner_login_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL, womit angegeben wird, dass der Zeitplan dem Ersteller gehört.  
   
 `[ @automatic_post = ] automatic_post` Bleiben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Alle Aufträge, die den Zeitplan verwenden, verwenden sofort die neuen Einstellungen. Zurzeit ausgeführte Aufträge werden durch das Ändern eines Zeitplans jedoch nicht beendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
+ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
   
 -   **SQLAgentUserRole**  
   

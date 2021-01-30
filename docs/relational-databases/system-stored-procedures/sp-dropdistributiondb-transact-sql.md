@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropdistributiondb_TSQL
 - sp_dropdistributiondb
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5c1cb17767cf61b49345b93f7c5ee5ebfbc9d27
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2de544361c4bcd9befb80e5172e0b4887a984a9d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543477"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191194"
 ---
 # <a name="sp_dropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,15 +38,15 @@ sp_dropdistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @database = ] 'database'` Die Datenbank, die gelöscht werden soll. *Database* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @database = ] 'database'` Die Datenbank, die gelöscht werden soll. *Database* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_dropdistributiondb** wird bei allen Replikations Typen verwendet.  
   
- Diese gespeicherte Prozedur muss ausgeführt werden, bevor der Verteiler gelöscht wird, indem **sp_dropdistributor**ausgeführt wird.  
+ Diese gespeicherte Prozedur muss ausgeführt werden, bevor der Verteiler gelöscht wird, indem **sp_dropdistributor** ausgeführt wird.  
   
  **sp_dropdistributiondb** entfernt auch einen Warteschlangenlese-Agent Auftrag für die Verteilungs Datenbank, sofern vorhanden.  
   
@@ -56,7 +56,7 @@ sp_dropdistributiondb [ @database= ] 'database'
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributiondb-tr_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_dropdistributiondb**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_dropdistributiondb** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Deaktivieren der Veröffentlichung und Verteilung](../../relational-databases/replication/disable-publishing-and-distribution.md)   

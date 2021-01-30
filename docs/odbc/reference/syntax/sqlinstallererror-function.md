@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLInstallerError
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fcc5f89a40802e6efa405771474cda3e86f4519c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dcafadc902504ddfd32fa8b7369780bd5c296a0d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421164"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189681"
 ---
 # <a name="sqlinstallererror-function"></a>SQLInstallerError-Funktion
 **Konformitäts**  
@@ -63,13 +63,13 @@ RETCODE SQLInstallerError(
  Der Maximale Länge des *szErrorMsg* -Puffers. Dieser Wert muss kleiner oder gleich SQL_MAX_MESSAGE_LENGTH minus dem NULL-Terminierungs Zeichen sein.  
   
  *pcberrormsg*  
- Ausgeben Ein Zeiger auf die Gesamtzahl der Bytes (ausgenommen des NULL-Beendigungs Zeichens), die in *lpszerrormsg*zurückgegeben werden können. Wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *cberrormsgmax*ist, wird der Fehlermeldungs Text in *lpszerrormsg* auf *cberrormsgmax* abzüglich der NULL-Beendigungs Zeichen Bytes abgeschnitten. Das *pcberrormsg* -Argument kann ein NULL-Zeiger sein.  
+ Ausgeben Ein Zeiger auf die Gesamtzahl der Bytes (ausgenommen des NULL-Beendigungs Zeichens), die in *lpszerrormsg* zurückgegeben werden können. Wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *cberrormsgmax* ist, wird der Fehlermeldungs Text in *lpszerrormsg* auf *cberrormsgmax* abzüglich der NULL-Beendigungs Zeichen Bytes abgeschnitten. Das *pcberrormsg* -Argument kann ein NULL-Zeiger sein.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA oder SQL_ERROR.  
   
 ## <a name="diagnostics"></a>Diagnose  
- **Sqlinstallererror** sendet keine Fehler Werte für sich selbst. **Sqlinstallererror** gibt SQL_NO_DATA zurück, wenn keine Fehlerinformationen abgerufen werden können (in diesem Fall ist " *staufrorcode* " nicht definiert). Wenn **sqlinstallererror** aus irgendeinem Grund, der normalerweise SQL_ERROR zurückgeben würde, nicht auf Fehler Werte zugreifen kann, gibt **sqlinstallererror** SQL_ERROR zurück, stellt jedoch keine Fehler Werte bereit. Wenn Sie die Länge der Warnungs Zeichenfolge (*lpszerrormsg*) nicht kennen, können Sie *lpszerrormsg* auf NULL festlegen und **sqlinstallererror**aufzurufen. **Sqlinstallererror** gibt dann die Länge der Warnungs Zeichenfolge in *cberrormsgmax*zurück. Wenn der Puffer für die Fehlermeldung zu kurz ist, gibt **sqlinstallererror** SQL_SUCCESS_WITH_INFO zurück und gibt den korrekten Wert von " *pferrorcode* " für **sqlinstallererror**zurück.  
+ **Sqlinstallererror** sendet keine Fehler Werte für sich selbst. **Sqlinstallererror** gibt SQL_NO_DATA zurück, wenn keine Fehlerinformationen abgerufen werden können (in diesem Fall ist " *staufrorcode* " nicht definiert). Wenn **sqlinstallererror** aus irgendeinem Grund, der normalerweise SQL_ERROR zurückgeben würde, nicht auf Fehler Werte zugreifen kann, gibt **sqlinstallererror** SQL_ERROR zurück, stellt jedoch keine Fehler Werte bereit. Wenn Sie die Länge der Warnungs Zeichenfolge (*lpszerrormsg*) nicht kennen, können Sie *lpszerrormsg* auf NULL festlegen und **sqlinstallererror** aufzurufen. **Sqlinstallererror** gibt dann die Länge der Warnungs Zeichenfolge in *cberrormsgmax* zurück. Wenn der Puffer für die Fehlermeldung zu kurz ist, gibt **sqlinstallererror** SQL_SUCCESS_WITH_INFO zurück und gibt den korrekten Wert von " *pferrorcode* " für **sqlinstallererror** zurück.  
   
  Um zu ermitteln, ob ein Abschneiden in der Fehlermeldung aufgetreten ist, kann eine Anwendung den Wert im *cberrormsgmax* -Argument mit der tatsächlichen Länge des Nachrichten Texts vergleichen, der in das *pcberrormsg* -Argument geschrieben wurde. Wenn es zu einem Abschneiden kommt, sollte die richtige Pufferlänge für *lpszerrormsg* zugewiesen werden, und **sqlinstallererror** sollte erneut mit dem entsprechenden *IError* -Datensatz aufgerufen werden.  
   

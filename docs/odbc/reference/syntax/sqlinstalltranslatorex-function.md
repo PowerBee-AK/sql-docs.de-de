@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLInstallTranslatorEx
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7957a04e0dafaeb2177401f775c5cdbb75135569
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e055f3f3565c6240134bf43b4b4f8951059e2725
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421144"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189645"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx-Funktion
 **Konformitäts**  
@@ -68,7 +68,7 @@ BOOL SQLInstallTranslatorEx(
  Der Länge von *lpszpathout.*  
   
  *pcbpathout*  
- Ausgeben Die Gesamtanzahl der Bytes, die in " *lpszpathout*" zurückgegeben werden können. Wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *cbpathoutmax*ist, wird der Ausgabepfad in *lpszpathout* auf *pcbpathoutmax* abzüglich des NULL-Beendigungs Zeichens gekürzt. Das *pcbpathout* -Argument kann ein NULL-Zeiger sein.  
+ Ausgeben Die Gesamtanzahl der Bytes, die in " *lpszpathout*" zurückgegeben werden können. Wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *cbpathoutmax* ist, wird der Ausgabepfad in *lpszpathout* auf *pcbpathoutmax* abzüglich des NULL-Beendigungs Zeichens gekürzt. Das *pcbpathout* -Argument kann ein NULL-Zeiger sein.  
   
  *fRequest*  
  Der Der Typ der Anforderung. *fRequest* muss einen der folgenden Werte enthalten:  
@@ -82,13 +82,13 @@ BOOL SQLInstallTranslatorEx(
   
  Anwendungen sollten die Verwendungs Anzahl nicht festlegen. Diese Anzahl wird von ODBC beibehalten.  
   
-## <a name="returns"></a>Rückgabe  
+## <a name="returns"></a>Gibt zurück  
  Die Funktion gibt true zurück, wenn Sie erfolgreich ist, andernfalls false.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **sqlinstalltranslatorex** "false" zurückgibt, kann ein zugeordneter " * \* pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die " * \* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **sqlinstalltranslatorex** "false" zurückgibt, kann ein zugeordneter " *\* pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror** abgerufen werden. In der folgenden Tabelle sind die " *\* pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pferrorcode*|Fehler|Beschreibung|  
+|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|Ungültige Pufferlänge.|Das *lpszpathout* -Argument war nicht groß genug, um den Ausgabepfad zu enthalten. Der Puffer enthält den abgeschnittene Pfad.<br /><br /> Das *cbpthoutmax* -Argument war 0, und das *fRequest* -Argument wurde ODBC_INSTALL_COMPLETE.|  
@@ -109,9 +109,9 @@ BOOL SQLInstallTranslatorEx(
   
  Die Länge des Pfads in " *lpszpathout* " in " **sqlinstalltranslatorex** " ermöglicht einen zweiphasigen Installationsprozess, sodass eine Anwendung ermitteln kann, was " *cbpathoutmax* " sein sollte, indem Sie " **sqlinstalltranslatorex** " mit dem ODBC_INSTALL_INQUIRY Modus " *fRequest* " aufrufen. Dadurch wird die Gesamtanzahl der Bytes zurückgegeben, die im *pcbpathout* -Puffer verfügbar sind. **Sqlinstalltranslatorex** kann dann mit einem *fRequest* von ODBC_INSTALL_COMPLETE aufgerufen werden, und das *cbpathoutmax* -Argument ist auf den Wert im *pcbpathout* -Puffer sowie auf das NULL-Beendigungs Zeichen festgelegt.  
   
- Wenn Sie sich dafür entscheiden, das zweistufige Modell für **sqlinstalltranslatorex**nicht zu verwenden, müssen Sie die Größe des Speichers für den Pfad des Zielverzeichnisses auf den Wert *_MAX_PATH festlegen,* wie in STDLIB. h definiert, um das Abschneiden zu verhindern.  
+ Wenn Sie sich dafür entscheiden, das zweistufige Modell für **sqlinstalltranslatorex** nicht zu verwenden, müssen Sie die Größe des Speichers für den Pfad des Zielverzeichnisses auf den Wert *_MAX_PATH festlegen,* wie in STDLIB. h definiert, um das Abschneiden zu verhindern.  
   
- Wenn *fRequest* ODBC_INSTALL_COMPLETE ist, lässt **sqlinstalltranslatorex** nicht zu, dass *lpszpathout* NULL ist (oder *cbpathoutmax* muss 0 sein). Wenn *fRequest* ODBC_INSTALL_COMPLETE ist, wird false zurückgegeben, wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *cbpaarwert*ist, wobei das Ergebnis der Kürzung auftritt.  
+ Wenn *fRequest* ODBC_INSTALL_COMPLETE ist, lässt **sqlinstalltranslatorex** nicht zu, dass *lpszpathout* NULL ist (oder *cbpathoutmax* muss 0 sein). Wenn *fRequest* ODBC_INSTALL_COMPLETE ist, wird false zurückgegeben, wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *cbpaarwert* ist, wobei das Ergebnis der Kürzung auftritt.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_sproc_columns
 - sp_sproc_columns_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 180d57f7daacb1f7aeb6b638dba03f893340c1d2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c6d7113657e036b0116e212c17df8ed4479cc1cc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97404195"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189314"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|Der Name des Prozedurqualifizierers. Diese Spalte kann NULL enthalten.|  
 |**PROCEDURE_OWNER**|**sysname**|Der Name des Prozedurbesitzers. Diese Spalte gibt immer einen Wert zurück.|  
@@ -89,7 +89,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**IS_NULLABLE**|**varchar (254)**|NULL-Zulässigkeit der Spalte in der Tabelle. Die NULL-Zulässigkeit wird gemäß den ISO-Regeln bestimmt. Ein DBMS nach ISO kann keine leere Zeichenfolge zurückgeben.<br /><br /> YES, wenn die Spalte NULL-Werte einschließen kann. NO, wenn die Spalte keine NULL-Werte einschließen kann.<br /><br /> Die Spalte gibt eine leere Zeichenfolge zurück, wenn die NULL-Zulässigkeit unbekannt ist.<br /><br /> Der für diese Spalte zurückgegebene Wert ist ein anderer als der für die NULLABLE-Spalte zurückgegebene Wert.|  
 |**SS_DATA_TYPE**|**tinyint**|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp, der von erweiterten gespeicherten Prozeduren verwendet wird. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_sproc_columns** entspricht **sqlprocedurecolrens** in ODBC. Die zurückgegebenen Ergebnisse werden nach **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**, **procedure_name** und der Reihenfolge sortiert, in der die Parameter in der Prozedur Definition angezeigt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  

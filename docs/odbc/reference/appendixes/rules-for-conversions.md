@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - numeric data type [ODBC], literals
 - conversions with numeric literals [ODBC]
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8e3d9a931a960ce1bd404b6616b4a6e4f0d37c4a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b015a60e376e47a4c3c931d4739a884db23fc98b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424952"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187130"
 ---
 # <a name="rules-for-conversions"></a>Regeln für Konvertierungen
 Die Regeln in diesem Abschnitt gelten für Konvertierungen, die numerische Literale einschließen. Für diese Regeln sind die folgenden Begriffe definiert:  
   
--   *Speicherzuweisung:* Beim Senden von Daten an eine Tabellenspalte in einer-Datenbank. Dies tritt bei Aufrufen von **SQLExecute**, **SQLExecDirect**und **SQLSetPos**auf. Während der Speicherzuweisung bezieht sich "target" auf eine Daten Bank Spalte, und "Source" bezieht sich auf Daten in Anwendungs Puffern.  
+-   *Speicherzuweisung:* Beim Senden von Daten an eine Tabellenspalte in einer-Datenbank. Dies tritt bei Aufrufen von **SQLExecute**, **SQLExecDirect** und **SQLSetPos** auf. Während der Speicherzuweisung bezieht sich "target" auf eine Daten Bank Spalte, und "Source" bezieht sich auf Daten in Anwendungs Puffern.  
   
--   *Abruf Zuweisung:* Beim Abrufen von Daten aus der Datenbank in Anwendungs Puffer. Dies tritt bei Aufrufen von **SQLFetch**, **SQLGetData**, **SQLFetchScroll**und **SQLSetPos**auf. Während der Abruf Zuweisung bezieht sich "target" auf die Anwendungs Puffer, und "Quelle" bezieht sich auf die Daten Bank Spalte.  
+-   *Abruf Zuweisung:* Beim Abrufen von Daten aus der Datenbank in Anwendungs Puffer. Dies tritt bei Aufrufen von **SQLFetch**, **SQLGetData**, **SQLFetchScroll** und **SQLSetPos** auf. Während der Abruf Zuweisung bezieht sich "target" auf die Anwendungs Puffer, und "Quelle" bezieht sich auf die Daten Bank Spalte.  
   
 -   *CS:* Der Wert in der zeichenquelle.  
   
@@ -47,7 +47,7 @@ Die Regeln in diesem Abschnitt gelten für Konvertierungen, die numerische Liter
 ## <a name="character-source-to-numeric-target"></a>Zeichenquelle zum numerischen Ziel  
  Im folgenden werden die Regeln für die Umstellung von einer zeichenquelle (CS) in ein numerisches Ziel (NT) aufgeführt:  
   
-1.  Ersetzen Sie CS durch den Wert, der durch Entfernen aller führenden oder nachfolgenden Leerzeichen in CS abgerufen wird. Wenn CS keine gültige *numerische Literale*ist, wird SQLSTATE 22018 (ungültiger Zeichen Wert für Umwandlungs Spezifikation) zurückgegeben.  
+1.  Ersetzen Sie CS durch den Wert, der durch Entfernen aller führenden oder nachfolgenden Leerzeichen in CS abgerufen wird. Wenn CS keine gültige *numerische Literale* ist, wird SQLSTATE 22018 (ungültiger Zeichen Wert für Umwandlungs Spezifikation) zurückgegeben.  
   
 2.  Ersetzen Sie CS durch den Wert, den Sie erhalten haben, indem Sie führende Nullen vor dem Dezimaltrennzeichen, nachfolgende Nullen nach dem Dezimaltrennzeichen oder beides entfernen.  
   
@@ -70,7 +70,7 @@ Die Regeln in diesem Abschnitt gelten für Konvertierungen, die numerische Liter
   
          Let ysn ist die kürzeste Zeichenfolge, die der Definition von Exact-*numeric-Literale* entspricht und deren interpretierter Wert der absolute Wert von NS ist. Wenn die Länge von ysn kleiner als der (*Precision* + 1) des Datentyps NS ist, lassen Sie den Wert von "typiysn".  
   
-         Andernfalls ist "YP" die kürzeste Zeichenfolge, die der Definition des *ungefähren numerischen Literals* entspricht, dessen interpretierter Wert der absolute Wert von NS ist und dessen *Mantisse* aus einer einzelnen *Ziffer* , die nicht "0" ist, gefolgt von einem *Zeitraum* und einer *Ganzzahl ohne*Vorzeichen besteht.  
+         Andernfalls ist "YP" die kürzeste Zeichenfolge, die der Definition des *ungefähren numerischen Literals* entspricht, dessen interpretierter Wert der absolute Wert von NS ist und dessen *Mantisse* aus einer einzelnen *Ziffer* , die nicht "0" ist, gefolgt von einem *Zeitraum* und einer *Ganzzahl ohne* Vorzeichen besteht.  
   
 3.  Schreibweise:  
   

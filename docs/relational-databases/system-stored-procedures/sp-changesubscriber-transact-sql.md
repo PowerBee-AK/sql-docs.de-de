@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changesubscriber
 - sp_changesubscriber_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 96cce9a9d9a0b9bf74a1ac3b67d3089f4fcd23ed
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3f920abb3544800d99ba108e024e200fad769f1a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543678"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189612"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,13 +57,13 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @subscriber = ] 'subscriber'` Der Name des Abonnenten, auf dem die Optionen geändert werden sollen. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @subscriber = ] 'subscriber'` Der Name des Abonnenten, auf dem die Optionen geändert werden sollen. *Subscriber* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 `[ @type = ] type` Der Typ des Abonnenten. *Type ist vom Datentyp* **tinyint**. der Standardwert ist NULL. **0** gibt einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten an. **1** gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder einen anderen ODBC-Datenquellen Server-Abonnenten an.  
   
-`[ @login = ] 'login'` Die Anmelde-ID für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+`[ @login = ] 'login'` Die Anmelde-ID für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung. *login* ist vom Datentyp **sysname** und hat den Standardwert NULL.  
   
-`[ @password = ] 'password'` Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierungs Kennwort. *Password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** . **%** Gibt an, dass die Kenn Wort Eigenschaft nicht geändert wird.  
+`[ @password = ] 'password'` Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierungs Kennwort. *Password* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert **%** . **%** Gibt an, dass die Kenn Wort Eigenschaft nicht geändert wird.  
   
 `[ @commit_batch_size = ] commit_batch_size` Wird nur aus Gründen der Abwärtskompatibilität unterstützt.  
   
@@ -84,7 +84,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**64**|Autostart|  
 |**128**|Wiederholt|  
   
-`[ @frequency_interval = ] frequency_interval` Das Intervall für die *frequency_type*. *frequency_interval* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @frequency_interval = ] frequency_interval` Das Intervall für die *frequency_type*. *frequency_interval* ist vom Datentyp **int** und hat den Standardwert NULL.  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` Das Datum des Verteilungs Tasks. Dieser Parameter wird verwendet, wenn *frequency_type* auf **32** (monatlich, relativ) festgelegt ist. *frequency_relative_interval* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
@@ -94,9 +94,9 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**2**|Sekunde|  
 |**4**|Third|  
 |**8**|Vierter|  
-|**16**|Last (Letzter)|  
+|**16**|Letzter|  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Gibt an, wie oft der Verteilungs Task während der definierten *frequency_type*wiederholt werden soll. *frequency_recurrence_factor* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Gibt an, wie oft der Verteilungs Task während der definierten *frequency_type* wiederholt werden soll. *frequency_recurrence_factor* ist vom Datentyp **int** und hat den Standardwert NULL.  
   
 `[ @frequency_subday = ] frequency_subday` Gibt an, wie oft innerhalb des definierten Zeitraums neu geplant werden soll. *frequency_subday* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
@@ -107,15 +107,15 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**4**|Minute|  
 |**8**|Stunde|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Das Intervall für die *frequence_subday*. *frequency_subday_interval* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Das Intervall für die *frequence_subday*. *frequency_subday_interval* ist vom Datentyp **int** und hat den Standardwert NULL.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Die Tageszeit, zu der der Verteilungs Task zum ersten Mal geplant ist. dabei wird das Format HHMMSS verwendet. *active_start_time_of_day* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Die Tageszeit, zu der der Verteilungs Task zum ersten Mal geplant ist. dabei wird das Format HHMMSS verwendet. *active_start_time_of_day* ist vom Datentyp **int** und hat den Standardwert NULL.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Die Tageszeit, zu der der Verteilungs Task nicht mehr geplant ist. dabei wird das Format HHMMSS verwendet. *active_end_time_of_day*ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Die Tageszeit, zu der der Verteilungs Task nicht mehr geplant ist. dabei wird das Format HHMMSS verwendet. *active_end_time_of_day* ist vom Datentyp **int** und hat den Standardwert NULL.  
   
-`[ @active_start_date = ] active_start_date` Das Datum, an dem der Verteilungs Task zum ersten Mal geplant ist. dabei wird das Format YYYYMMDD verwendet. *active_start_date* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @active_start_date = ] active_start_date` Das Datum, an dem der Verteilungs Task zum ersten Mal geplant ist. dabei wird das Format YYYYMMDD verwendet. *active_start_date* ist vom Datentyp **int** und hat den Standardwert NULL.  
   
-`[ @active_end_date = ] active_end_date` Das Datum, an dem der Verteilungs Task nicht mehr geplant ist. dabei wird das Format YYYYMMDD verwendet. *active_end_date*ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @active_end_date = ] active_end_date` Das Datum, an dem der Verteilungs Task nicht mehr geplant ist. dabei wird das Format YYYYMMDD verwendet. *active_end_date* ist vom Datentyp **int** und hat den Standardwert NULL.  
   
 `[ @description = ] 'description'` Ist eine optionale Textbeschreibung. die *Beschreibung* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL.  
   
@@ -126,7 +126,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung|  
 |**1**|Windows-Authentifizierung|  
   
-`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Gibt einen nicht-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  der *Verleger* sollte nicht verwendet werden, wenn Artikeleigenschaften auf einem Verleger geändert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -134,11 +134,11 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_changesubscriber** wird bei allen Replikations Typen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_changesubscriber**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_changesubscriber** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_addsubscriber &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   

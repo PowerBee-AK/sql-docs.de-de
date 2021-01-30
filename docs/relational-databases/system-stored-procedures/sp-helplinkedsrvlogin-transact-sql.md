@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helplinkedsrvlogin_TSQL
 - sp_helplinkedsrvlogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4468902fc983e94656a7f00c457b51e26a752a82
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 274d1d9a39feac333d5b7d572ec475bb89444c2b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541742"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190022"
 ---
 # <a name="sp_helplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @rmtsrvname = ] 'rmtsrvname'` Der Name des Verbindungs Servers, für den die Anmelde Namen Zuordnung gilt. *rmzrvname* ist vom Datentyp **vom Datentyp sysname**und hat den Standardwert NULL. Mit NULL werden alle Anmeldenamenzuordnungen zurückgegeben, die für alle auf dem lokalen Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definierten Verbindungsserver definiert werden.  
+`[ @rmtsrvname = ] 'rmtsrvname'` Der Name des Verbindungs Servers, für den die Anmelde Namen Zuordnung gilt. *rmzrvname* ist vom Datentyp **vom Datentyp sysname** und hat den Standardwert NULL. Mit NULL werden alle Anmeldenamenzuordnungen zurückgegeben, die für alle auf dem lokalen Computer mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definierten Verbindungsserver definiert werden.  
   
-`[ @locallogin = ] 'locallogin'` Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Name auf dem lokalen Server, der eine Zuordnung zum Verbindungs Server *rmzrvname*aufweist. *loczuweisung* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. NULL gibt an, dass alle für *rmtrvname* definierten Anmeldungs Zuordnungen zurückgegeben werden. Wenn der Wert nicht NULL ist, muss bereits eine Zuordnung für *loczuweisung* zu *rmzrvname* vorhanden sein. *loczuweisung* kann ein- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Name oder ein Windows-Benutzer sein. Dem Windows-Benutzer müssen die Zugriffsrechte auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erteilt worden sein. Dies kann entweder direkt oder über seine Mitgliedschaft in einer Windows-Gruppe erfolgen, der die Zugriffsrechte erteilt wurden.  
+`[ @locallogin = ] 'locallogin'` Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Name auf dem lokalen Server, der eine Zuordnung zum Verbindungs Server *rmzrvname* aufweist. *loczuweisung* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. NULL gibt an, dass alle für *rmtrvname* definierten Anmeldungs Zuordnungen zurückgegeben werden. Wenn der Wert nicht NULL ist, muss bereits eine Zuordnung für *loczuweisung* zu *rmzrvname* vorhanden sein. *loczuweisung* kann ein- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Name oder ein Windows-Benutzer sein. Dem Windows-Benutzer müssen die Zugriffsrechte auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erteilt worden sein. Dies kann entweder direkt oder über seine Mitgliedschaft in einer Windows-Gruppe erfolgen, der die Zugriffsrechte erteilt wurden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -54,10 +54,10 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 |-----------------|---------------|-----------------|  
 |**Verbindungs Server**|**sysname**|Name des Verbindungsservers.|  
 |**Lokale Anmeldung**|**sysname**|Lokaler Anmeldename, für den die Zuordnung gilt.|  
-|**Is Self Mapping**|**smallint**|0 = der **lokale Anmelde Name** wird **entfernte Anmeldung** zugeordnet, wenn eine Verbindung mit dem Verbindungs **Server**hergestellt wird.<br /><br /> 1 = der **lokale Anmelde Name** wird demselben Anmelde Namen und Kennwort zugeordnet, wenn eine Verbindung mit dem Verbindungs **Server**hergestellt wird.|  
+|**Is Self Mapping**|**smallint**|0 = der **lokale Anmelde Name** wird **entfernte Anmeldung** zugeordnet, wenn eine Verbindung mit dem Verbindungs **Server** hergestellt wird.<br /><br /> 1 = der **lokale Anmelde Name** wird demselben Anmelde Namen und Kennwort zugeordnet, wenn eine Verbindung mit dem Verbindungs **Server** hergestellt wird.|  
 |**Remote Login**|**sysname**|Der Anmelde Name auf dem **LinkedServer** , der **loczumapping** zugeordnet ist, wenn **isselfmapping** den Wert 0 hat. Wenn **isselfmapping** den Wert 1 hat, ist **RemoteLogin** NULL.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Bevor Sie Anmelde Namen Zuordnungen löschen, verwenden Sie **sp_helplinkedsrvlogin** , um die beteiligten Verbindungs Server zu ermitteln.  
   
 ## <a name="permissions"></a>Berechtigungen  
