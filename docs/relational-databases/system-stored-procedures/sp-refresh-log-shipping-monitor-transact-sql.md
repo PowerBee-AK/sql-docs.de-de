@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_refresh_log_shipping_monitor
 - sp_refresh_log_shipping_monitor_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3ece1b616c1639a7e826f6c5d5cc566ec8cb35b6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 16c1fb1de57fb0e1c61410071ec8fde31951f2ab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549561"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185718"
 ---
 # <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ sp_refresh_log_shipping_monitor
 ## <a name="result-sets"></a>Resultsets  
  Keine.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_refresh_log_shipping_monitor** aktualisiert die Tabellen " **log_shipping_monitor_primary**", " **log_shipping_monitor_secondary**", " **log_shipping_monitor_history_detail**" und " **log_shipping_monitor_error_detail** " mit Sitzungsinformationen, die noch nicht übertragen wurden. Dies ermöglicht das Synchronisieren des Überwachungsservers mit dem primären oder einem sekundären Server, wenn der Überwachungsserver für einen bestimmten Zeitraum nicht mehr synchronisiert wurde. Zudem können Sie die Überwachungsinformationen auf dem Überwachungsserver bei Bedarf leeren.  
   
  **sp_refresh_log_shipping_monitor** muss von der **Master** -Datenbank auf dem primären oder sekundären Server ausgeführt werden.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_control_plan_guide
 - sp_control_plan_guide_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5a66806fa3c4865da7486a7ada3c46a9691be6d7
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 0b4f5d1adbdadf9d8291257708a3098fb50ce175
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753902"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185779"
 ---
 # <a name="sp_control_plan_guide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,19 +55,19 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Gibt die Planhinweisliste an, die gelöscht, aktiviert oder deaktiviert wird. *plan_guide_name* in der aktuellen Datenbank aufgelöst wird. Wenn nicht angegeben, *plan_guide_name* standardmäßig NULL.  
   
  DROP  
- Löscht die durch *plan_guide_name*angegebene Plan Hinweis Liste. Nachdem eine Planhinweisliste gelöscht wurde, werden zukünftige Ausführungen einer Abfrage, die zuvor mit der Planhinweisliste übereingestimmt hat, nicht von dieser Liste beeinflusst.  
+ Löscht die durch *plan_guide_name* angegebene Plan Hinweis Liste. Nachdem eine Planhinweisliste gelöscht wurde, werden zukünftige Ausführungen einer Abfrage, die zuvor mit der Planhinweisliste übereingestimmt hat, nicht von dieser Liste beeinflusst.  
   
  DROP ALL  
  Löscht alle Planhinweislisten in der aktuellen Datenbank. **N '**_plan_guide_name_ kann nicht angegeben werden, wenn Drop all angegeben wird.  
   
  DISABLE  
- Deaktiviert die durch *plan_guide_name*angegebene Plan Hinweis Liste. Nachdem eine Planhinweisliste deaktiviert wurde, werden zukünftige Ausführungen einer Abfrage, die zuvor mit der Planhinweisliste übereingestimmt hat, nicht von dieser Liste beeinflusst.  
+ Deaktiviert die durch *plan_guide_name* angegebene Plan Hinweis Liste. Nachdem eine Planhinweisliste deaktiviert wurde, werden zukünftige Ausführungen einer Abfrage, die zuvor mit der Planhinweisliste übereingestimmt hat, nicht von dieser Liste beeinflusst.  
   
  DISABLE ALL  
  Deaktiviert alle Planhinweislisten in der aktuellen Datenbank. **N '**_plan_guide_name_ kann nicht angegeben werden, wenn alles deaktivieren angegeben wird.  
   
  ENABLE  
- Aktiviert die durch *plan_guide_name*angegebene Plan Hinweis Liste. Eine aktivierte Planhinweisliste kann mit einer geeigneten Abfrage abgeglichen werden. Planhinweislisten werden standardmäßig bei ihrer Erstellung aktiviert.  
+ Aktiviert die durch *plan_guide_name* angegebene Plan Hinweis Liste. Eine aktivierte Planhinweisliste kann mit einer geeigneten Abfrage abgeglichen werden. Planhinweislisten werden standardmäßig bei ihrer Erstellung aktiviert.  
   
  ENABLE ALL  
  Aktiviert alle Planhinweislisten in der aktuellen Datenbank. **N '**_plan_guide_name_**'** kann nicht angegeben werden, wenn ' Enable all ' angegeben ist.  
@@ -80,7 +80,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Plan Hinweis Listen sind nicht in jeder Edition von verfügbar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md). Allerdings können Sie **sp_control_plan_guide** mit der Option Drop or Drop All in jeder Edition von ausführen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="permissions"></a>Berechtigungen  
- Zum Ausführen von **sp_control_plan_guide** in einer Plan Hinweis Liste des Typs Object (erstellt mit Angabe von ** @type = '** Object **'** ) ist die ALTER-Berechtigung für das Objekt erforderlich, auf das von der Plan Hinweis Liste verwiesen wird. Für alle anderen Planhinweislisten ist die ALTER DATABASE-Berechtigung erforderlich.  
+ Zum Ausführen von **sp_control_plan_guide** in einer Plan Hinweis Liste des Typs Object (erstellt mit Angabe von **@type = '** Object **'** ) ist die ALTER-Berechtigung für das Objekt erforderlich, auf das von der Plan Hinweis Liste verwiesen wird. Für alle anderen Planhinweislisten ist die ALTER DATABASE-Berechtigung erforderlich.  
   
 ## <a name="examples"></a>Beispiele  
   

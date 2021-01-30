@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - trusted_assemblies_TSQL
 - trusted_assemblies
@@ -19,12 +19,12 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6d3305687b7592d8503911e9385cd04a93f16a4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f2b26f5e646d1997959ba4856a88463ae8b1b3ed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97428387"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186155"
 ---
 # <a name="systrusted_assemblies-transact-sql"></a>sys.trusted_assemblies (Transact-SQL)  
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -34,7 +34,7 @@ Enthält eine Zeile für jede vertrauenswürdige Assembly für den Server.
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 
-|Spaltenname |Datentyp |Beschreibung |
+|Spaltenname |Datentyp |BESCHREIBUNG |
 |--- |--- |--- |
 |hash |varbinary(8000) |SHA2_512 Hash des assemblyinhalts. |
 |description |nvarchar(4000) |Optionale benutzerdefinierte Beschreibung der Assembly. Microsoft empfiehlt die Verwendung des kanonischen Namens, der den einfachen Namen, die Versionsnummer, die Kultur, den öffentlichen Schlüssel und die Architektur der Assembly codiert, die als vertrauenswürdig eingestuft wird. Durch diesen Wert wird die Assembly auf der Seite Common Language Runtime (CLR) eindeutig identifiziert, und Sie entspricht dem clr_name Wert in sys. Assemblys. |
@@ -45,7 +45,7 @@ Enthält eine Zeile für jede vertrauenswürdige Assembly für den Server.
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
  
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
 Verwenden Sie **[sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)** , um Assemblys aus hinzuzufügen und **[sys.sp_drop_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)** zu entfernen `sys.trusted_assemblies` .
 
 ## <a name="see-also"></a>Weitere Informationen  

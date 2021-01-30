@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_job
 - sp_delete_job_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d4ded9ec986afc467534c3053e17831147bc404
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ef2fdfc32a0b8b076037b3d75d2c88df9a5883aa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541845"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186341"
 ---
 # <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,20 +43,20 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id` Die ID des Auftrags, der gelöscht werden soll. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die ID des Auftrags, der gelöscht werden soll. *job_id* ist vom Datentyp **uniqueidentifier** und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'` Der Name des Auftrags, der gelöscht werden soll. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags, der gelöscht werden soll. *job_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  Es muss entweder *job_id* oder *job_name*angegeben werden. Beide können nicht angegeben werden.  
+>  Es muss entweder *job_id* oder *job_name* angegeben werden. Beide können nicht angegeben werden.  
   
 `[ @originating_server = ] 'server'` Zur internen Verwendung.  
   
-`[ @delete_history = ] delete_history` Gibt an, ob der Verlauf für den Auftrag gelöscht werden soll. *delete_history* ist vom Typ **Bit**und hat den Standardwert **1**. Wenn *delete_history* **1**ist, wird der Auftrags Verlauf für den Auftrag gelöscht. Wenn *delete_history* **0**ist, wird der Auftrags Verlauf nicht gelöscht.  
+`[ @delete_history = ] delete_history` Gibt an, ob der Verlauf für den Auftrag gelöscht werden soll. *delete_history* ist vom Typ **Bit** und hat den Standardwert **1**. Wenn *delete_history* **1** ist, wird der Auftrags Verlauf für den Auftrag gelöscht. Wenn *delete_history* **0** ist, wird der Auftrags Verlauf nicht gelöscht.  
   
  Beachten Sie Folgendes: Wenn ein Auftrag gelöscht und der Verlauf nicht gelöscht wird, werden die Verlaufs Informationen für den Auftrag nicht in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] grafischen Benutzeroberfläche des Agent-Auftragsverlaufs angezeigt. die Informationen befinden sich jedoch weiterhin in der **sysjobhistory** -Tabelle der **msdb** -Datenbank.  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` Gibt an, ob die an diesen Auftrag angefügten Zeitpläne gelöscht werden sollen, wenn Sie nicht an einen anderen Auftrag angefügt sind. *delete_unused_schedule* ist vom Typ **Bit**und hat den Standardwert **1**. Wenn *delete_unused_schedule* **1**ist, werden die an diesen Auftrag angefügten Zeitpläne gelöscht, wenn keine anderen Aufträge auf den Zeitplan verweisen. Wenn *delete_unused_schedule* **0**ist, werden die Zeitpläne nicht gelöscht.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` Gibt an, ob die an diesen Auftrag angefügten Zeitpläne gelöscht werden sollen, wenn Sie nicht an einen anderen Auftrag angefügt sind. *delete_unused_schedule* ist vom Typ **Bit** und hat den Standardwert **1**. Wenn *delete_unused_schedule* **1** ist, werden die an diesen Auftrag angefügten Zeitpläne gelöscht, wenn keine anderen Aufträge auf den Zeitplan verweisen. Wenn *delete_unused_schedule* **0** ist, werden die Zeitpläne nicht gelöscht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -65,16 +65,16 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  Keine  
   
 ## <a name="remarks"></a>Bemerkungen  
- Das ** \@ originating_server** -Argument ist für die interne Verwendung reserviert.  
+ Das **\@ originating_server** -Argument ist für die interne Verwendung reserviert.  
   
- Das ** \@ delete_unused_schedule** -Argument bietet Abwärtskompatibilität mit früheren Versionen von SQL Server durch automatisches Entfernen von Zeitplänen, die nicht an einen Auftrag angefügt sind. Beachten Sie, dass dieser Parameter standardmäßig das Verhalten der Abwärtskompatibilität bietet. Wenn Sie Zeitpläne beibehalten möchten, die nicht an einen Auftrag angefügt sind, müssen Sie den Wert **0** als ** \@ delete_unused_schedule** Argument angeben.  
+ Das **\@ delete_unused_schedule** -Argument bietet Abwärtskompatibilität mit früheren Versionen von SQL Server durch automatisches Entfernen von Zeitplänen, die nicht an einen Auftrag angefügt sind. Beachten Sie, dass dieser Parameter standardmäßig das Verhalten der Abwärtskompatibilität bietet. Wenn Sie Zeitpläne beibehalten möchten, die nicht an einen Auftrag angefügt sind, müssen Sie den Wert **0** als **\@ delete_unused_schedule** Argument angeben.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
   
  Mit dieser gespeicherten Prozedur können keine Wartungspläne oder Aufträge, die Teil von Wartungsplänen sind, gelöscht werden. Zum Löschen von Wartungsplänen müssen Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
+ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
   
 -   **SQLAgentUserRole**  
   

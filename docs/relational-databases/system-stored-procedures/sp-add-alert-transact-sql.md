@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_alert
 - sp_add_alert_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dd4c19f3cbe2525bf9b968e1d314767217f62129
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b6d7d1e451949d17dc7e4637dc82b86c4225f06c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419314"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186043"
 ---
 # <a name="sp_add_alert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,18 +54,18 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @name = ] 'name'` Der Name der Warnung. Der Name wird in der E-Mail- oder Pagernachricht angezeigt, die als Reaktion auf die Warnung gesendet wird. Er muss eindeutig sein und kann das Prozentzeichen ( **%** ) enthalten. *Name ist vom Datentyp* **vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @name = ] 'name'` Der Name der Warnung. Der Name wird in der E-Mail- oder Pagernachricht angezeigt, die als Reaktion auf die Warnung gesendet wird. Er muss eindeutig sein und kann das Prozentzeichen ( **%** ) enthalten. *Name ist vom Datentyp* **vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @message_id = ] message_id` Die Nachrichten Fehlernummer, die die Warnung definiert. (Dies entspricht in der Regel einer Fehlernummer in der Tabelle **sysmess** .) *message_id* ist vom Datentyp **int**und hat den Standardwert **0**. Wenn der *Schweregrad* zum Definieren der Warnung verwendet wird, muss *message_id* **0** oder NULL sein.  
+`[ @message_id = ] message_id` Die Nachrichten Fehlernummer, die die Warnung definiert. (Dies entspricht in der Regel einer Fehlernummer in der Tabelle **sysmess** .) *message_id* ist vom Datentyp **int** und hat den Standardwert **0**. Wenn der *Schweregrad* zum Definieren der Warnung verwendet wird, muss *message_id* **0** oder NULL sein.  
   
 > [!NOTE]  
 >  Nur **sysmess** -Fehler, die in das Microsoft Windows-Anwendungsprotokoll geschrieben werden, können dazu führen, dass eine Warnung gesendet wird.  
   
-`[ @severity = ] severity` Der Schweregrad (von **1** bis **25**), der die Warnung definiert. Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der **sysmess** -Tabelle gespeicherte Nachricht, die [!INCLUDE[msCoName](../../includes/msconame-md.md)] mit dem angegeben Schweregrad an das Windows-Anwendungsprotokoll gesendet wird, bewirkt, dass die Warnung gesendet wird. der *Schweregrad* ist vom Datentyp **int**. der Standardwert ist 0. Wenn *message_id* zum Definieren der Warnung verwendet wird, muss der *Schweregrad* **0**sein.  
+`[ @severity = ] severity` Der Schweregrad (von **1** bis **25**), der die Warnung definiert. Jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der **sysmess** -Tabelle gespeicherte Nachricht, die [!INCLUDE[msCoName](../../includes/msconame-md.md)] mit dem angegeben Schweregrad an das Windows-Anwendungsprotokoll gesendet wird, bewirkt, dass die Warnung gesendet wird. der *Schweregrad* ist vom Datentyp **int**. der Standardwert ist 0. Wenn *message_id* zum Definieren der Warnung verwendet wird, muss der *Schweregrad* **0** sein.  
   
-`[ @enabled = ] enabled` Gibt den aktuellen Status der Warnung an. *aktiviert* ist vom Datentyp **tinyint**. der Standardwert ist 1 (aktiviert). Wenn der Wert **0**ist, ist die Warnung nicht aktiviert und wird nicht ausgelöst.  
+`[ @enabled = ] enabled` Gibt den aktuellen Status der Warnung an. *aktiviert* ist vom Datentyp **tinyint**. der Standardwert ist 1 (aktiviert). Wenn der Wert **0** ist, ist die Warnung nicht aktiviert und wird nicht ausgelöst.  
   
-`[ @delay_between_responses = ] delay_between_responses` Die Wartezeit (in Sekunden) zwischen den Antworten auf die Warnung. *delay_between_responses*ist vom Datentyp **int**und hat den Standardwert **0**. Dies bedeutet, dass keine Warteschlange zwischen Antworten vorliegt (jedes Vorkommen der Warnung generiert eine Antwort). Die Reaktion kann in einer oder beiden der folgenden Formen erfolgen:  
+`[ @delay_between_responses = ] delay_between_responses` Die Wartezeit (in Sekunden) zwischen den Antworten auf die Warnung. *delay_between_responses* ist vom Datentyp **int** und hat den Standardwert **0**. Dies bedeutet, dass keine Warteschlange zwischen Antworten vorliegt (jedes Vorkommen der Warnung generiert eine Antwort). Die Reaktion kann in einer oder beiden der folgenden Formen erfolgen:  
   
 -   Als eine oder mehrere per E-Mail oder Pager gesendete Benachrichtigungen.  
   
@@ -75,7 +75,7 @@ sp_add_alert [ @name = ] 'name'
   
 `[ @notification_message = ] 'notification_message'` Ist eine optionale zusätzliche Nachricht, die als Teil der e-Mail-, **net send**-oder Pager-Benachrichtigung an den Operator gesendet wird. *notification_message* ist vom Datentyp **nvarchar (512)** und hat den Standardwert NULL. Das Angeben von *notification_message* ist nützlich zum Hinzufügen von speziellen Notizen, wie z. b  
   
-`[ @include_event_description_in = ] include_event_description_in` Gibt an, ob die Beschreibung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fehlers als Teil der Benachrichtigungs Meldung eingeschlossen werden soll. *include_event_description_in*ist vom Datentyp **tinyint**. der Standardwert ist **5** (e-Mail und **net send**), und ein oder mehrere dieser Werte können mit einem logischen **or** -Operator kombiniert werden.  
+`[ @include_event_description_in = ] include_event_description_in` Gibt an, ob die Beschreibung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fehlers als Teil der Benachrichtigungs Meldung eingeschlossen werden soll. *include_event_description_in* ist vom Datentyp **tinyint**. der Standardwert ist **5** (e-Mail und **net send**), und ein oder mehrere dieser Werte können mit einem logischen **or** -Operator kombiniert werden.  
   
 > [!IMPORTANT]
 >  Die Pager- und **net send** -Optionen werden in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht mehr im [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktionen zurzeit verwenden.  
@@ -85,15 +85,15 @@ sp_add_alert [ @name = ] 'name'
 |**0**|Keine|  
 |**1**|E-Mail|  
 |**2**|Pager|  
-|**4**|**NET SEND**|  
+|**4**|**net send**|  
   
-`[ @database_name = ] 'database'` Die Datenbank, in der der Fehler auftreten muss, damit die Warnung ausgelöst wird. Wenn die *Datenbank*nicht bereitgestellt wird, wird die Warnung unabhängig davon ausgelöst, wo der Fehler aufgetreten ist. *Database* ist vom **Datentyp vom Datentyp sysname**. In eckige Klammern ([ ]) eingeschlossene Namen sind nicht zulässig. Der Standardwert ist NULL.  
+`[ @database_name = ] 'database'` Die Datenbank, in der der Fehler auftreten muss, damit die Warnung ausgelöst wird. Wenn die *Datenbank* nicht bereitgestellt wird, wird die Warnung unabhängig davon ausgelöst, wo der Fehler aufgetreten ist. *Database* ist vom **Datentyp vom Datentyp sysname**. In eckige Klammern ([ ]) eingeschlossene Namen sind nicht zulässig. Der Standardwert ist NULL.  
   
 `[ @event_description_keyword = ] 'event_description_keyword_pattern'` Die Zeichenfolge, die die Beschreibung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fehlers aufweisen muss. Zulässig sind Zeichen, die dem Muster des LIKE-Ausdrucks von [!INCLUDE[tsql](../../includes/tsql-md.md)] entsprechen. *event_description_keyword_pattern* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL. Dieser Parameter ist nützlich zum Filtern von Objektnamen (z. b. **% customer_table%**).  
   
-`[ @job_id = ] job_id` Die ID des Auftrags, der als Reaktion auf diese Warnung ausgeführt werden soll. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @job_id = ] job_id` Die ID des Auftrags, der als Reaktion auf diese Warnung ausgeführt werden soll. *job_id* ist vom Datentyp **uniqueidentifier** und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'` Der Name des Auftrags, der als Reaktion auf diese Warnung ausgeführt werden soll. *job_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'` Der Name des Auftrags, der als Reaktion auf diese Warnung ausgeführt werden soll. *job_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
@@ -108,9 +108,9 @@ sp_add_alert [ @name = ] 'name'
 |*Vergleichs Operator*|Einer dieser Operatoren: >, < oder =|  
 |*Wert*|Numerischer Wert des Indikators|  
   
-`[ @category_name = ] 'category'` Der Name der Warnungs Kategorie. *Category* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @category_name = ] 'category'` Der Name der Warnungs Kategorie. *Category* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @wmi_namespace = ] 'wmi_namespace'` Der WMI-Namespace, der nach Ereignissen abgefragt werden soll. *wmi_namespace* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es werden nur Namespaces auf dem lokalen Server unterstützt.  
+`[ @wmi_namespace = ] 'wmi_namespace'` Der WMI-Namespace, der nach Ereignissen abgefragt werden soll. *wmi_namespace* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Es werden nur Namespaces auf dem lokalen Server unterstützt.  
   
 `[ @wmi_query = ] 'wmi_query'` Die Abfrage, die das WMI-Ereignis für die Warnung angibt. *wmi_query* ist vom Datentyp **nvarchar (512)** und hat den Standardwert NULL.  
   
@@ -143,10 +143,10 @@ sp_add_alert [ @name = ] 'name'
   
 -   Die Warnung ist aktiviert.  
   
--   Ereignisse, die mit **xp_logevent** generiert werden, treten in der master-Datenbank auf. Daher löst **xp_logevent** nur dann eine Warnung aus, wenn der ** \@ database_name** für die Warnung **"Master"** oder NULL ist.  
+-   Ereignisse, die mit **xp_logevent** generiert werden, treten in der master-Datenbank auf. Daher wird von **xp_logevent** erst dann eine Warnung ausgelöst, wenn der **\@database_name**-Wert für die Warnung den Wert **'master'** oder NULL aufweist.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** die Prozedur **sp_add_alert**ausführen.  
+ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** die Prozedur **sp_add_alert** ausführen.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine Warnung (Test Alert) hinzugefügt, die den `Back up the AdventureWorks2012 Database`-Auftrag ausführt, wenn sie ausgegeben wird.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_agent_parameter_TSQL
 - sp_add_agent_parameter
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: abd0a36fe9699c3fc72db4848d08ad6469ae3dc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f0b1879f0dad9d99f24bca5eb5f43a38eba4d2d3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481645"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186078"
 ---
 # <a name="sp_add_agent_parameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,7 +40,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @profile_id = ] profile_id` Die ID des Profils aus der **MSagent_profiles** Tabelle in der **msdb** -Datenbank. *profile_id* ist vom Datentyp **int**und hat keinen Standardwert.  
+`[ @profile_id = ] profile_id` Die ID des Profils aus der **MSagent_profiles** Tabelle in der **msdb** -Datenbank. *profile_id* ist vom Datentyp **int** und hat keinen Standardwert.  
   
  Um herauszufinden, welcher Agenttyp diese *profile_id* darstellt, suchen Sie die *profile_id* in der [MSagent_profiles &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) Tabelle, und notieren Sie sich den Wert des *agent_type* Felds. Mit den Parametern werden folgende Werte angegeben:  
   
@@ -52,7 +52,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 |**4**|Merge-Agent|  
 |**9**|Warteschlangenlese-Agent|  
   
-`[ @parameter_name = ] 'parameter_name'` Der Name des Parameters. *parameter_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Eine Liste der Parameter, die bereits in Systemprofilen definiert sind, finden Sie unter [Replikations-Agentprofile](../../relational-databases/replication/agents/replication-agent-profiles.md). Eine vollständige Liste der gültigen Parameter für die einzelnen Agents finden Sie in den folgenden Themen:  
+`[ @parameter_name = ] 'parameter_name'` Der Name des Parameters. *parameter_name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert. Eine Liste der Parameter, die bereits in Systemprofilen definiert sind, finden Sie unter [Replikations-Agentprofile](../../relational-databases/replication/agents/replication-agent-profiles.md). Eine vollständige Liste der gültigen Parameter für die einzelnen Agents finden Sie in den folgenden Themen:  
   
 -   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -73,7 +73,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
  **sp_add_agent_parameter** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_add_agent_parameter**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_add_agent_parameter** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Arbeiten mit Replikations-Agent-Profilen](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

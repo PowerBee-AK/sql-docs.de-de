@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_registercustomresolver
 - sp_registercustomresolver_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bd973ace7e8edbd7a5ec561fd53a19f8a7a05a92
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4a4c08e8643aedaecd415177ef87f9fadc69563f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543165"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185698"
 ---
 # <a name="sp_registercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,16 +50,16 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
   
 `[ @dotnet_assembly_name = ] 'dotnet_assembly_name'` Der Name der Assembly, die den Geschäftslogik Handler implementiert. *dotnet_assembly_name* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL. Sie müssen den vollständigen Pfad zur Assembly angeben, falls sie nicht im gleichen Verzeichnis wie die ausführbare Datei für den Merge-Agent, im gleichen Verzeichnis wie die Anwendung, mit der der Merge-Agent synchron gestartet wird, oder im globalen Assemblycache (GAC) bereitgestellt wird.  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name'` Der Name der Klasse, die überschreibt <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> , um den Geschäftslogik Handler zu implementieren. Der Name muss im Format **Namespace. ClassName**angegeben werden. *dotnet_class_name* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL.  
+`[ @dotnet_class_name = ] 'dotnet_class_name'` Der Name der Klasse, die überschreibt <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> , um den Geschäftslogik Handler zu implementieren. Der Name muss im Format **Namespace. ClassName** angegeben werden. *dotnet_class_name* ist vom Datentyp **nvarchar (255)** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_registercustomresolver** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_registercustomresolver**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_registercustomresolver** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_getapplock_TSQL
 - sp_getapplock
@@ -20,12 +20,12 @@ ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16a51a2578718db33e27a5c0c027f607eb4d37fc
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 82c0c343d76c3fb8fe6275c2450b62d50fd11b34
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474641"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185759"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -79,7 +79,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |-3|Die Sperranforderung wurde als Deadlockopfer gewählt.|  
 |-999|Gibt einen Fehler bei Parameterüberprüfung oder einen anderen Aufruffehler an.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Für eine Ressource bestehende Sperren sind der aktuellen Transaktion oder der aktuellen Sitzung zugeordnet. Der aktuellen Transaktion zugeordnete Sperren werden aufgehoben, wenn für die Transaktion ein Commit oder ein Rollback ausgeführt wird. Sperren, die der Sitzung zugeordnet sind, werden freigegeben, wenn die Sitzung abgemeldet wird. Wenn der Server aus irgendeinem Grund heruntergefahren wird, werden alle Sperren freigegeben.  
   
  Die von sp_getapplock erstellte Sperrenressource wird in der aktuellen Datenbank der Sitzung erstellt. Jede Sperrenressource wird durch die kombinierten Werte folgender Elemente identifiziert:  
