@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_enum_login_for_proxy_TSQL
 - sp_enum_login_for_proxy
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 7707843979bd0c741ade8e4ae6759d265eb13d06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b51d02a66833df04a82a970319bab4e62f462a33
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486057"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186967"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 
@@ -45,9 +45,9 @@ sp_enum_login_for_proxy
 ## <a name="arguments"></a>Argumente  
 `[ @name = ] 'name'` Der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Prinzipal-, Anmelde-, Server Rolle oder **msdb** -Daten Bank Rolle, für die Proxys aufgelistet werden sollen. Der Name ist vom Datentyp **nvarchar (256)** und hat den Standardwert NULL.  
   
-`[ @proxy_id = ] id` Die Proxy-ID des Proxys, für den Informationen aufgelistet werden sollen. Der *proxy_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es kann entweder die *ID* oder die *proxy_name* angegeben werden.  
+`[ @proxy_id = ] id` Die Proxy-ID des Proxys, für den Informationen aufgelistet werden sollen. Der *proxy_id* ist vom Datentyp **int** und hat den Standardwert NULL. Es kann entweder die *ID* oder die *proxy_name* angegeben werden.  
   
-`[ @proxy_name = ] 'proxy_name'` Der Name des Proxys, für den Informationen aufgelistet werden sollen. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es kann entweder die *ID* oder die *proxy_name* angegeben werden.  
+`[ @proxy_name = ] 'proxy_name'` Der Name des Proxys, für den Informationen aufgelistet werden sollen. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Es kann entweder die *ID* oder die *proxy_name* angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

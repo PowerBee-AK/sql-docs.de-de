@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dsninfo
 - sp_dsninfo_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 451d19531bbee4814fe9335bc4aaba7707263a10
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 65a3f12555d1dbb0e26702229fdcc47664cc4c82
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536082"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186969"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,9 +53,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**DATABASE_NAME**|Gibt den Datenbanknamen an.|  
 |**SQL_SUBSCRIBER**|Gibt an, dass die Datenquelle ein Abonnent sein kann.|  
   
-`[ @login = ] 'login'` Der Anmelde Name für die Datenquelle. Wenn die Datenquelle einen Anmeldenamen aufweist, geben Sie NULL an, oder lassen Sie den Parameter weg. *Login*ist vom Datentyp **varchar (128)** und hat den Standardwert NULL.  
+`[ @login = ] 'login'` Der Anmelde Name für die Datenquelle. Wenn die Datenquelle einen Anmeldenamen aufweist, geben Sie NULL an, oder lassen Sie den Parameter weg. *Login* ist vom Datentyp **varchar (128)** und hat den Standardwert NULL.  
   
-`[ @password = ] 'password'` Das Kennwort für die Anmeldung. Wenn die Datenquelle einen Anmeldenamen aufweist, geben Sie NULL an, oder lassen Sie den Parameter weg. *Password*ist vom Datentyp **varchar (128)** und hat den Standardwert NULL.  
+`[ @password = ] 'password'` Das Kennwort für die Anmeldung. Wenn die Datenquelle einen Anmeldenamen aufweist, geben Sie NULL an, oder lassen Sie den Parameter weg. *Password* ist vom Datentyp **varchar (128)** und hat den Standardwert NULL.  
   
 `[ @dso_type = ] dso_type` Der Daten Quellentyp. *dso_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
@@ -74,13 +74,13 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**Informationstyp**|**nvarchar (64)**|Informationstypen, wie z. B. DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER.|  
 |**Wert**|**nvarchar(512)**|Der Wert der verknüpften Informationstypen.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_dsninfo** wird bei allen Replikations Typen verwendet.  
   
  **sp_dsninfo** ruft ODBC-oder OLE DB Datenquellen Informationen ab, die anzeigen, ob die Datenbank für die Replikation oder Abfrage verwendet werden kann.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_dsninfo**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_dsninfo** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_enumdsn &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   

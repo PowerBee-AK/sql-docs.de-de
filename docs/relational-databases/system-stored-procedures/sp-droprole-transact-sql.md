@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_droprole
 - sp_droprole_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6180676b4458a5f270f9ecab9bb35d2ed8a481c4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 58832ba9f1d5b508f8125dc137805e59d3977f9e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548104"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187027"
 ---
 # <a name="sp_droprole-transact-sql"></a>sp_droprole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +43,15 @@ sp_droprole [ @rolename= ] 'role'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @rolename = ] 'role'` Der Name der Daten Bank Rolle, die aus der aktuellen Datenbank entfernt werden soll. *role* ist vom Datentyp **sysname**und hat keinen Standardwert. *role* muss in der aktuellen Datenbank bereits vorhanden sein.  
+`[ @rolename = ] 'role'` Der Name der Daten Bank Rolle, die aus der aktuellen Datenbank entfernt werden soll. *role* ist vom Datentyp **sysname** und hat keinen Standardwert. *role* muss in der aktuellen Datenbank bereits vorhanden sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="remarks"></a>Bemerkungen  
- Mit **sp_droprole**können nur Datenbankrollen entfernt werden.  
+ Mit **sp_droprole** können nur Datenbankrollen entfernt werden.  
   
- Es ist nicht möglich, eine Datenbankrolle mit vorhandenen Mitgliedern zu entfernen. Vor dem Entfernen der Datenbankrolle müssen zunächst alle Mitglieder aus der Datenbankrolle entfernt werden. Entfernen Sie mithilfe von **sp_droprolemember**Benutzer aus einer Rolle. Sollten Benutzer weiterhin Mitglieder der Rolle sein, zeigen Sie diese Mitglieder mit **sp_droprole** an.  
+ Es ist nicht möglich, eine Datenbankrolle mit vorhandenen Mitgliedern zu entfernen. Vor dem Entfernen der Datenbankrolle müssen zunächst alle Mitglieder aus der Datenbankrolle entfernt werden. Entfernen Sie mithilfe von **sp_droprolemember** Benutzer aus einer Rolle. Sollten Benutzer weiterhin Mitglieder der Rolle sein, zeigen Sie diese Mitglieder mit **sp_droprole** an.  
   
  Feste Rollen und die **public** -Rolle können nicht entfernt werden.  
   

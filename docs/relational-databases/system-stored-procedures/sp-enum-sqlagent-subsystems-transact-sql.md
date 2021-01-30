@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_enum_sqlagent_subsystems
 - sp_enum_sqlagent_subsystems_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7ee9bf6fbb0b0567ca06635ca5d98ba9a3b98f6b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3a65369cb7c4769d930acdaf655a006c60bdd55f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549773"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186958"
 ---
 # <a name="sp_enum_sqlagent_subsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,13 +59,13 @@ sp_enum_sqlagent_subsystems
 |**max_worker_threads**|**int**|Maximale Anzahl von Threads, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent für dieses Subsystem startet.|  
 |**subsystem_id**|**int**|Bezeichner für das Subsystem.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Diese Prozedur listet die in der Instanz verfügbaren Subsysteme auf.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen Datenbankrolle **SQLAgentOperatorRole** in der **msdb** -Datenbank sein.  
+ Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen Datenbankrolle **SQLAgentOperatorRole** in der **msdb** -Datenbank sein.  
   
- Ausführliche Informationen zu **SQLAgentOperatorRole**finden Sie unter [SQL Server-Agent fester Daten bankrollen](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Ausführliche Informationen zu **SQLAgentOperatorRole** finden Sie unter [SQL Server-Agent fester Daten bankrollen](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Implementieren SQL Server-Agent-Sicherheit](../../ssms/agent/implement-sql-server-agent-security.md)   

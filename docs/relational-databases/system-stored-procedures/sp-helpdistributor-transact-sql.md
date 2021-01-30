@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdistributor_TSQL
 - sp_helpdistributor
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f2c7f0778ced979765e046634d0bb39adc01578d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c23613a7b79ea7bfa418425a32b6d2ee9bf62699
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549644"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186988"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -56,19 +56,19 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 `[ @directory = ] 'directory' OUTPUT` Das Arbeitsverzeichnis. Das *Verzeichnis* ist vom Datentyp **nvarchar (255)**. der Standard **%** Wert ist. Dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
-`[ @account = ] 'account' OUTPUT` Ist das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzerkonto. Das *Konto*ist vom Datentyp **nvarchar (255)**. der Standard **%** Wert ist. Dies ist der einzige Wert, der ein Resultset zurückgibt.  
+`[ @account = ] 'account' OUTPUT` Ist das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzerkonto. Das *Konto* ist vom Datentyp **nvarchar (255)**. der Standard **%** Wert ist. Dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
-`[ @min_distretention = ] _min_distretentionOUTPUT` Die minimale Beibehaltungs Dauer für die Verteilung (in Stunden). *min_distretention* ist vom Datentyp **int**und hat den Standardwert **-1**.  
+`[ @min_distretention = ] _min_distretentionOUTPUT` Die minimale Beibehaltungs Dauer für die Verteilung (in Stunden). *min_distretention* ist vom Datentyp **int** und hat den Standardwert **-1**.  
   
-`[ @max_distretention = ] _max_distretentionOUTPUT` Die maximale Beibehaltungs Dauer für die Verteilung (in Stunden). *max_distretention* ist vom Datentyp **int**und hat den Standardwert **-1**.  
+`[ @max_distretention = ] _max_distretentionOUTPUT` Die maximale Beibehaltungs Dauer für die Verteilung (in Stunden). *max_distretention* ist vom Datentyp **int** und hat den Standardwert **-1**.  
   
-`[ @history_retention = ] _history_retentionOUTPUT` Die Beibehaltungs Dauer für den Verlauf (in Stunden). *history_retention* ist vom Datentyp **int**und hat den Standardwert **-1**.  
+`[ @history_retention = ] _history_retentionOUTPUT` Die Beibehaltungs Dauer für den Verlauf (in Stunden). *history_retention* ist vom Datentyp **int** und hat den Standardwert **-1**.  
   
 `[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` Der Name des Verlaufscleanup-Agents. *history_cleanupagent* ist vom Datentyp **nvarchar (100)**. der Standard **%** Wert ist. Dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
 `[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` Der Name des Verteilungscleanup-Agents. *distrib_cleanupagent* ist vom Datentyp **nvarchar (100)**. der Standard **%** Wert ist. Dies ist der einzige Wert, der ein Resultset zurückgibt.  
   
-`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 `[ @local = ] 'local'` Gibt an, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lokale Server Werte erhalten soll. *local* ist vom Datentyp **nvarchar (5)** und hat den Standardwert NULL.  
   
@@ -96,15 +96,15 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helpdistributor** wird bei allen Replikations Typen verwendet.  
   
- Wenn beim Ausführen **sp_helpdistributor**ein oder mehrere Ausgabeparameter angegeben werden, werden allen Ausgabeparametern, die auf NULL festgelegt sind, beim Beenden Werte zugewiesen, und es wird kein Resultset zurückgegeben. Wenn keine Ausgabeparameter angegeben werden, wird ein Resultset zurückgegeben.  
+ Wenn beim Ausführen **sp_helpdistributor** ein oder mehrere Ausgabeparameter angegeben werden, werden allen Ausgabeparametern, die auf NULL festgelegt sind, beim Beenden Werte zugewiesen, und es wird kein Resultset zurückgegeben. Wenn keine Ausgabeparameter angegeben werden, wird ein Resultset zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Die folgenden Resultsetspalten oder Ausgabeparameter werden an Mitglieder der festen Server Rolle **sysadmin** auf dem Verleger und der festen Daten Bank Rolle **db_owner** in der Veröffentlichungs Datenbank zurückgegeben:  
   
-|Resultsetspalte|Output-Parameter|  
+|Resultsetspalte|Ausgabeparameter|  
 |-----------------------|----------------------|  
 |account|**\@Ziehen**|  
 |min distrib retention|**\@min_distretention**|  
@@ -120,7 +120,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
  Die folgenden Resultsetspalten werden an alle Benutzer zurückgegeben.  
   
-|Resultsetspalte|Output-Parameter|  
+|Resultsetspalte|Ausgabeparameter|  
 |-----------------------|----------------------|  
 |distributor|**\@Verleih**|  
 |distribution database|**\@Verteil DB**|  

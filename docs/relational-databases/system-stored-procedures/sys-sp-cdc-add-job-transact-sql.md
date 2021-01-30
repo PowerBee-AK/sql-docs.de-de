@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_add_job (Transact-SQL)
-title: sys. sp_cdc_add_job (Transact-SQL) | Microsoft-Dokumentation
+title: sys.sp_cdc_add_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_add_job_TSQL
 - sys.sp_cdc_add_job
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c8a1285df9bf4d7e17e074e3c22f0ff37241c400
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1c48413f1f588ea4a70c4f8a1190e819758c76b2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545842"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186695"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -90,7 +90,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  Da die Cleanup- und Aufzeichnungsaufträge standardmäßig erstellt werden, ist diese gespeicherte Prozedur nur dann erforderlich, wenn ein Auftrag explizit gelöscht wurde und erneut erstellt werden muss.  
   
- Der Name des Auftrags ist **CDC.** _\<database\_name\>_ ** \_ Bereinigung** oder **CDC.** _\<database\_name\>_ ** \_ Erfassung**, wobei *<database_name>* der Name der aktuellen Datenbank ist. Wenn bereits ein Auftrag mit demselben Namen vorhanden ist, wird der Name mit einem Wert (**.**) gefolgt von einem eindeutigen Bezeichner (z. b. CDC) angehängt **. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ Der Name des Auftrags ist **CDC.** _\<database\_name\>_ **\_ Bereinigung** oder **CDC.** _\<database\_name\>_ **\_ Erfassung**, wobei *<database_name>* der Name der aktuellen Datenbank ist. Wenn bereits ein Auftrag mit demselben Namen vorhanden ist, wird der Name mit einem Wert (**.**) gefolgt von einem eindeutigen Bezeichner angehängt, z **. b. cdc.AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Verwenden Sie [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md), um die aktuelle Konfiguration eines Bereinigungs-oder Aufzeichnungs Auftrags anzuzeigen. Verwenden Sie [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md), um die Konfiguration eines Auftrags zu ändern.  
   
@@ -122,8 +122,8 @@ EXEC sys.sp_cdc_add_job
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [dbo. cdc_jobs &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys. sp_cdc_enable_table &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [dbo.cdc_jobs &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [Über Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   
