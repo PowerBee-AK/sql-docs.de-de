@@ -1,12 +1,12 @@
 ---
 description: sys.dm_fts_index_keywords (Transact-SQL)
-title: sys. dm_fts_index_keywords (Transact-SQL) | Microsoft-Dokumentation
+title: sys.dm_fts_index_keywords (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_fts_index_keywords
 - sys.dm_fts_index_keywords
@@ -21,22 +21,22 @@ helpviewer_keywords:
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e57cb14d48f23235971b3adacb656277aa2d1626
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55bd43c5d4704d145618401230be62e59f3cd3c6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474946"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211204"
 ---
 # <a name="sysdm_fts_index_keywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Gibt Informationen zum Inhalt eines Volltextindex für die angegebene Tabelle zurück.  
   
- **sys. dm_fts_index_keywords** ist eine dynamische Verwaltungsfunktion.  
+ **sys.dm_fts_index_keywords** ist eine dynamische Verwaltungsfunktion.  
   
 > [!NOTE]  
->  Um Volltextindex Informationen auf niedrigerer Ebene anzuzeigen, verwenden Sie die dynamische Verwaltungsfunktion [sys. dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md) auf Dokument Ebene.  
+>  Um Volltextindex Informationen auf niedrigerer Ebene anzuzeigen, verwenden Sie die dynamische Verwaltungsfunktion [sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md) auf Dokument Ebene.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,7 +47,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 ## <a name="arguments"></a>Argumente  
  DB_ID ('*database_name*')  
- Ein Aufrufder [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) -Funktion. Diese Funktion akzeptiert einen Datenbanknamen und gibt die Datenbank-ID zurück, die **sys. dm_fts_index_keywords** verwendet, um die angegebene Datenbank zu suchen. Wenn *database_name* nicht angegeben ist, wird die aktuelle Datenbank-ID zurückgegeben.  
+ Ein Aufrufder [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) -Funktion. Diese Funktion akzeptiert einen Datenbanknamen und gibt die Datenbank-ID zurück, die **sys.dm_fts_index_keywords** verwendet, um die angegebene Datenbank zu suchen. Wenn *database_name* nicht angegeben ist, wird die aktuelle Datenbank-ID zurückgegeben.  
   
  object_id ('*table_name*')  
  Ein Aufrufder [object_id ()](../../t-sql/functions/object-id-transact-sql.md) -Funktion. Diese Funktion akzeptiert einen Tabellennamen und gibt die Tabellen-ID der Tabelle zurück, die den zu überprüfenden Volltextindex enthält.  
@@ -62,7 +62,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 |**document_count**|**int**|Die Anzahl der Dokumente bzw. Zeilen, die den aktuellen Begriff enthalten.|  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die Informationen, die von **sys. dm_fts_index_keywords** zurückgegeben werden, sind unter anderem nützlich, um Folgendes zu ermitteln:  
+ Die von **sys.dm_fts_index_keywords** zurückgegebenen Informationen sind unter anderem nützlich, um Folgendes zu ermitteln:  
   
 -   Ob ein Schlüsselwort ein Teil des Volltextindexes ist  
   
@@ -75,7 +75,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
     -   Häufige oder gemeinsame Schlüsselwörter eignen sich in der Regel für die Deklaration als Stoppwörter.  
   
 > [!NOTE]  
->  Der von **sys. dm_fts_index_keywords** zurückgegebene **document_count** kann für ein bestimmtes Dokument weniger genau sein als die von **sys. dm_fts_index_keywords_by_document** oder einer **enthält** -Abfrage zurückgegebene Anzahl. Die mögliche Ungenauigkeit liegt bei ca. 1 %. Diese ingenauigkeit kann auftreten, wenn eine **document_id** zweimal gezählt werden kann, wenn Sie über mehr als eine Zeile im Index Fragment hinweg fortgesetzt wird, oder wenn Sie mehrmals in derselben Zeile angezeigt wird. Um einen genaueren Zähler für ein bestimmtes Dokument zu erhalten, verwenden Sie **sys. dm_fts_index_keywords_by_document** oder eine **enthält** -Abfrage.  
+>  Der von **sys.dm_fts_index_keywords** zurückgegebene **document_count** kann für ein bestimmtes Dokument weniger genau sein als die Anzahl, die von **sys.dm_fts_index_keywords_by_document** oder einer **enthält** -Abfrage zurückgegeben wird. Die mögliche Ungenauigkeit liegt bei ca. 1 %. Diese ingenauigkeit kann auftreten, wenn eine **document_id** zweimal gezählt werden kann, wenn Sie über mehr als eine Zeile im Index Fragment hinweg fortgesetzt wird, oder wenn Sie mehrmals in derselben Zeile angezeigt wird. Um einen genaueren Zähler für ein bestimmtes Dokument zu erhalten, verwenden Sie **sys.dm_fts_index_keywords_by_document** oder eine **enthält** -Abfrage.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  

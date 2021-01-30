@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergesubscription
 - sp_helpmergesubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 48d40b3209311968443a6c6d2b713b4aa1e3d43a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 274048dcfcd76e815d3f4ec159dded0571f66e43
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535197"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210884"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,13 +48,13 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 `[ @subscriber = ] 'subscriber'` Der Name des Abonnenten. *Subscriber* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **%** . Mit NULL oder % werden Informationen zu allen Abonnements einer bestimmten Veröffentlichung zurückgegeben.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Der Name der Abonnement Datenbank. *subscriber_db*ist vom **Datentyp vom Datentyp sysname**und hat **%** den Standardwert, mit dem Informationen zu allen Abonnement Datenbanken zurückgegeben werden.  
+`[ @subscriber_db = ] 'subscriber_db'` Der Name der Abonnement Datenbank. *subscriber_db* ist vom **Datentyp vom Datentyp sysname** und hat **%** den Standardwert, mit dem Informationen zu allen Abonnement Datenbanken zurückgegeben werden.  
   
-`[ @publisher = ] 'publisher'` Der Name des Verlegers. Der Verleger muss ein gültiger Server sein. *Publisher*ist vom **Datentyp vom Datentyp sysname**und **%** hat den Standardwert, mit dem Informationen zu allen Verlegern zurückgegeben werden.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. Der Verleger muss ein gültiger Server sein. *Publisher* ist vom **Datentyp vom Datentyp sysname** und **%** hat den Standardwert, mit dem Informationen zu allen Verlegern zurückgegeben werden.  
   
-`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db*ist vom **Datentyp vom Datentyp sysname**und hat **%** den Standardwert, mit dem Informationen zu allen Verleger Datenbanken zurückgegeben werden.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname** und hat **%** den Standardwert, mit dem Informationen zu allen Verleger Datenbanken zurückgegeben werden.  
   
-`[ @subscription_type = ] 'subscription_type'` Der Abonnementtyp. *subscription_type*ist vom Datentyp **nvarchar (15)**. die folgenden Werte sind möglich:  
+`[ @subscription_type = ] 'subscription_type'` Der Abonnementtyp. *subscription_type* ist vom Datentyp **nvarchar (15)**. die folgenden Werte sind möglich:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -84,7 +84,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**full_publication**|**tinyint**|Gibt an, ob das Abonnement für eine vollständige oder gefilterte Veröffentlichung besteht.|  
 |**offload_enabled**|**bit**|Gibt an, ob festgelegt wurde, dass die Auslagerungsausführung eines Replikations-Agents auf dem Abonnenten ausgeführt wird. Bei NULL erfolgt die Ausführung auf dem Verleger.|  
 |**offload_server**|**sysname**|Name des Servers, auf den der Agent verlagert wird.|  
-|**use_interactive_resolver**|**int**|Gibt zurück, ob der interaktive Konfliktlöser während der Konfliktlösung verwendet wird. Wenn der Wert **0**ist, wird der interaktive Konflikt Löser nicht verwendet.|  
+|**use_interactive_resolver**|**int**|Gibt zurück, ob der interaktive Konfliktlöser während der Konfliktlösung verwendet wird. Wenn der Wert **0** ist, wird der interaktive Konflikt Löser nicht verwendet.|  
 |**hostname**|**sysname**|Der Wert, der angegeben wird, wenn ein Abonnement nach dem Wert der [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) Funktion gefiltert wird.|  
 |**subscriber_security_mode**|**smallint**|Der Sicherheitsmodus auf dem Abonnenten, wobei **1** die Windows-Authentifizierung und **0** die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung bedeutet.|  
 |**subscriber_login**|**sysname**|Der Anmeldename auf dem Abonnenten.|  
@@ -93,13 +93,13 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helpmergesubscription** wird bei der Mergereplikation verwendet, um auf dem Verleger oder dem wieder Veröffentlichungs Abonnenten gespeicherte Abonnement Informationen zurückzugeben.  
   
- Bei anonymen Abonnements ist der *subscription_type*Wert immer **1** (Pull). Sie müssen jedoch [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) auf dem Abonnenten ausführen, um Informationen zu anonymen Abonnements zu erhalten.  
+ Bei anonymen Abonnements ist der *subscription_type* Wert immer **1** (Pull). Sie müssen jedoch [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) auf dem Abonnenten ausführen, um Informationen zu anonymen Abonnements zu erhalten.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** , der festen Daten Bank Rolle **db_owner** oder der Veröffentlichungs Zugriffsliste für die Veröffentlichung, zu der das Abonnement gehört, können **sp_helpmergesubscription**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** , der festen Daten Bank Rolle **db_owner** oder der Veröffentlichungs Zugriffsliste für die Veröffentlichung, zu der das Abonnement gehört, können **sp_helpmergesubscription** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_addmergesubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   

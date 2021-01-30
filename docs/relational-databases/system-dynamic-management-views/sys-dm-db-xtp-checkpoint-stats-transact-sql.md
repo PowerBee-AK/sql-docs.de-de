@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: in-memory-oltp
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_db_xtp_checkpoint_stats
 - dm_db_xtp_checkpoint_stats_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fa75ed45028187c4855aaf80f25f9a30c6000c7
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: b6211155c51a2751e3f4625a4c838bec29695905
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171452"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210901"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -45,7 +45,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 ## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] und höher  
  In der folgenden Tabelle werden die Spalten in beschrieben `sys.dm_db_xtp_checkpoint_stats` , die mit beginnen **[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]** .  
   
-|Spaltenname|type|Beschreibung|  
+|Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|Die letzte LSN, die vom Controller erkannt wird.|  
 |end_of_log_lsn|**numerisch (38)**|Die LSN für das Ende des Protokolls.|  
@@ -87,7 +87,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  In der folgenden Tabelle werden die Spalten in beschrieben `sys.dm_db_xtp_checkpoint_stats` **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
-|Spaltenname|type|Beschreibung|  
+|Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|Die Anzahl von Protokollbytes zwischen der aktuellen Protokollfolgenummer (LSN) und dem Protokollende des Threads.|  
 |total_log_blocks_processed|**bigint**|Gesamtzahl der Protokollblöcke, die seit dem Start des Servers verarbeitet wurden.|  

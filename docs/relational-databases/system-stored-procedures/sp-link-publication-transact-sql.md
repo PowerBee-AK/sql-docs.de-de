@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_link_publication_TSQL
 - sp_link_publication
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b80c28d86ae4d7022ad8784adfa7ab9023e3ebd0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b6a6e0b057f0d01c838aa5ac7b57143221fec13c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543227"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210773"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,11 +50,11 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'` Der Name des Verlegers, mit dem eine Verknüpfung hergestellt werden soll. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers, mit dem eine Verknüpfung hergestellt werden soll. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank, mit der eine Verknüpfung hergestellt werden soll. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank, mit der eine Verknüpfung hergestellt werden soll. *publisher_db* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung, mit der eine Verknüpfung hergestellt werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, mit der eine Verknüpfung hergestellt werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 `[ @security_mode = ] security_mode` Der Sicherheitsmodus, der vom Abonnenten verwendet wird, um eine Verbindung mit einem Remote Verleger für das sofortige Aktualisieren herzustellen. *security_mode* ist vom Datentyp **int**. die folgenden Werte sind möglich: [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
@@ -62,31 +62,31 @@ sp_link_publication [ @publisher = ] 'publisher'
 |-----------|-----------------|  
 |**0**|Verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die-Authentifizierung mit der in dieser gespeicherten Prozedur angegebenen Anmeldung als *Login* und *Password*.<br /><br /> Hinweis: in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wurde diese Option zum Angeben eines dynamischen Remote Prozedur Aufrufs (RPC) verwendet.|  
 |**1**|Verwendet den Sicherheitskontext ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung oder Windows-Authentifizierung) des Benutzers, der die Änderung auf dem Abonnenten ausführt.<br /><br /> Hinweis: dieses Konto muss auch auf dem Verleger mit ausreichenden Berechtigungen vorhanden sein. Bei Verwendung der Windows-Authentifizierung muss die Delegierung von Sicherheitskonten unterstützt werden.|  
-|**2**|Verwendet einen vorhandenen benutzerdefinierten Anmelde Namen für den verknüpften Server, der mit **sp_link_publication**erstellt wurde.|  
+|**2**|Verwendet einen vorhandenen benutzerdefinierten Anmelde Namen für den verknüpften Server, der mit **sp_link_publication** erstellt wurde.|  
   
-`[ @login = ] 'login'` Der Anmelde Name. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. Dieser Parameter muss angegeben werden, *security_mode* wenn security_mode **0**ist.  
+`[ @login = ] 'login'` Der Anmelde Name. *login* ist vom Datentyp **sysname** und hat den Standardwert NULL. Dieser Parameter muss angegeben werden,  wenn security_mode **0** ist.  
   
-`[ @password = ] 'password'` Das Kennwort. *Password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter muss angegeben werden, *security_mode* wenn security_mode **0**ist.  
+`[ @password = ] 'password'` Das Kennwort. *Password* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Dieser Parameter muss angegeben werden,  wenn security_mode **0** ist.  
   
-`[ @distributor = ] 'distributor'` Der Name des Verteilers. *Distributor* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @distributor = ] 'distributor'` Der Name des Verteilers. *Distributor* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_link_publication** wird von Abonnements mit sofortigem Update bei der Transaktions Replikation verwendet.  
   
  **sp_link_publication** können für Pushabonnements und Pullabonnements verwendet werden. Der Aufruf ist vor oder nach dem Erstellen des Abonnements möglich. Ein Eintrag wird in der [MSsubscription_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) Systemtabelle eingefügt oder aktualisiert.  
   
  Bei Pushabonnements kann der Eintrag durch [sp_subscription_cleanup &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)bereinigt werden. Für Pullabonnements kann der Eintrag durch [sp_droppullsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) oder [sp_subscription_cleanup &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)bereinigt werden. Sie können auch **sp_link_publication** mit einem NULL-Kennwort anrufen, um den Eintrag in der [MSsubscription_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) Systemtabelle zu löschen.  
   
- Der Standardmodus, der von einem Abonnenten mit sofortigem Update verwendet wird, wenn eine Verbindung zum Verleger hergestellt wird, ermöglicht nicht die Verwendung einer Verbindung mit der Windows-Authentifizierung. Wenn Sie eine Verbindung mit der Windows-Authentifizierung herstellen möchten, muss ein Verbindungsserver für den Verleger eingerichtet werden. Der Abonnent mit sofortigem Update sollte diese Verbindung dann für das Update des Abonnenten verwenden. Dies erfordert, dass die **sp_link_publication** mit *security_mode*  =  **2**ausgeführt werden. Bei Verwendung der Windows-Authentifizierung muss die Delegierung von Sicherheitskonten unterstützt werden.  
+ Der Standardmodus, der von einem Abonnenten mit sofortigem Update verwendet wird, wenn eine Verbindung zum Verleger hergestellt wird, ermöglicht nicht die Verwendung einer Verbindung mit der Windows-Authentifizierung. Wenn Sie eine Verbindung mit der Windows-Authentifizierung herstellen möchten, muss ein Verbindungsserver für den Verleger eingerichtet werden. Der Abonnent mit sofortigem Update sollte diese Verbindung dann für das Update des Abonnenten verwenden. Dies erfordert, dass die **sp_link_publication** mit *security_mode*  =  **2** ausgeführt werden. Bei Verwendung der Windows-Authentifizierung muss die Delegierung von Sicherheitskonten unterstützt werden.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent_failover](../../relational-databases/replication/codesnippet/tsql/sp-link-publication-tran_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_link_publication**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_link_publication** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_droppullsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   

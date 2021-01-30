@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helprole_TSQL
 - sp_helprole
@@ -19,12 +19,12 @@ ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9832373d4b6c65ba16bfa83b8ef54cba963777c0
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 24eca96d2d3c1b7535607fedb2cd3a04961a29df
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462711"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210786"
 ---
 # <a name="sp_helprole-transact-sql"></a>sp_helprole (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,13 +48,13 @@ sp_helprole [ [ @rolename = ] 'role' ]
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**RoleName**|**sysname**|Name der Rolle in der aktuellen Datenbank.|  
 |**RoleId**|**smallint**|ID von **RoleName**.|  
 |**Isapprole**|**int**|0 = **RoleName** ist keine Anwendungsrolle.<br /><br /> 1 = **RoleName** ist eine Anwendungsrolle.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Mithilfe von **sp_helprotect** zeigen Sie die Berechtigungen an, die einer Rolle zugeordnet sind. Mithilfe von **sp_helprolemember** zeigen Sie die Mitglieder einer Datenbankrolle an.  
   
 ## <a name="permissions"></a>Berechtigungen  

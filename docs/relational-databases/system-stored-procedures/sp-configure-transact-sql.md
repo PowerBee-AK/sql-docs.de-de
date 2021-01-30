@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_configure
 - sp_configure_TSQL
@@ -19,12 +19,12 @@ ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: bd045c01439e2913179fdf2188448772f20d9f48
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5888c4735c884721449858af55c928b30a44b1f2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97427355"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211110"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -75,9 +75,9 @@ RECONFIGURE
 ## <a name="result-sets"></a>Resultsets  
  Bei der Ausführung ohne Parameter gibt **sp_configure** ein Resultset mit fünf Spalten zurück und sortiert die Optionen alphabetisch in aufsteigender Reihenfolge, wie in der folgenden Tabelle dargestellt.  
   
- Die Werte für **config_value** und **run_value** entsprechen nicht automatisch. Nachdem Sie eine Konfigurationseinstellung mithilfe von **sp_configure** aktualisiert haben, muss der Systemadministrator den Wert für die laufende Konfiguration entweder mithilfe von RECONFIGURE oder RECONFIGURE WITH OVERRIDE aktualisieren. Weitere Informationen finden Sie im Abschnitt "Hinweise".  
+ Die Werte für **config_value** und **run_value** entsprechen nicht automatisch. Nachdem Sie eine Konfigurationseinstellung mithilfe von **sp_configure** aktualisiert haben, muss der Systemadministrator den Wert für die laufende Konfiguration entweder mithilfe von RECONFIGURE oder RECONFIGURE WITH OVERRIDE aktualisieren. Weitere Informationen finden Sie im Abschnitt mit Hinweisen.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|Der Name der Konfigurationsoption.|  
 |**minimum**|**int**|Der Mindestwert der Konfigurationsoption.|  
@@ -85,7 +85,7 @@ RECONFIGURE
 |**config_value**|**int**|Der Wert, mit dem die Konfigurationsoption mithilfe von **sp_configure** festgelegt wurde (Wert in **sys.configurations. Value**). Weitere Informationen zu diesen Optionen finden Sie unter [Server Konfigurationsoptionen &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) und [sys.configurationen &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
 |**run_value**|**int**|Aktuell laufender Wert der Konfigurationsoption (Wert in **sys.configurations.value_in_use**).<br /><br /> Weitere Informationen finden Sie unter [sys.configurations &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie **sp_configure** , um Einstellungen auf Serverebene anzuzeigen oder zu ändern. Zum Ändern von Einstellungen auf Datenbankebene können Sie ALTER DATABASE verwenden. Wenn Einstellungen geändert werden sollen, die nur die aktuelle Benutzersitzung betreffen, verwenden Sie die SET-Anweisung.  
   
 ### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]

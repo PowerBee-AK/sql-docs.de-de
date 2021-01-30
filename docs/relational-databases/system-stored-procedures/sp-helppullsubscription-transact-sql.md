@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helppullsubscription_TSQL
 - sp_helppullsubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: abad011197d58876915ce242c4c38198b13105ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3e7711e7034190f5862d512c3da02df685c3aaf5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535177"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210844"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,13 +41,13 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'` Der Name des Remote Servers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und **%** hat den Standardwert, mit dem Informationen für alle Verleger zurückgegeben werden.  
+`[ @publisher = ] 'publisher'` Der Name des Remote Servers. *Publisher* ist vom **Datentyp vom Datentyp sysname** und **%** hat den Standardwert, mit dem Informationen für alle Verleger zurückgegeben werden.  
   
-`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** , mit dem alle Verleger Datenbanken zurückgegeben werden.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert **%** , mit dem alle Verleger Datenbanken zurückgegeben werden.  
   
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **%** , mit dem alle Veröffentlichungen zurückgegeben werden. Wenn dieser Parameter dem Wert all entspricht, werden nur Pullabonnements mit independent_agent = **0** zurückgegeben.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert **%** , mit dem alle Veröffentlichungen zurückgegeben werden. Wenn dieser Parameter dem Wert all entspricht, werden nur Pullabonnements mit independent_agent = **0** zurückgegeben.  
   
-`[ @show_push = ] 'show_push'` Gibt an, ob alle Pushabonnements zurückgegeben werden sollen. *show_push*ist vom Datentyp **nvarchar (5)** und hat den Standardwert false, bei dem keine Pushabonnements zurückgegeben werden.  
+`[ @show_push = ] 'show_push'` Gibt an, ob alle Pushabonnements zurückgegeben werden sollen. *show_push* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false, bei dem keine Pushabonnements zurückgegeben werden.  
   
 ## <a name="result-sets"></a>Resultsets  
   
@@ -82,22 +82,22 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**ftp_password**|**nvarchar (524)**|Nur aus Gründen der Abwärtskompatibilität beibehalten|  
 |**alt_snapshot_folder**|**nvarchar(255)**|Der Speicherort des Momentaufnahmeordners, wenn dies nicht der standardmäßige Speicherort ist oder ein zusätzlicher Speicherort zum Standardspeicherort vorhanden ist.|  
 |**working_directory**|**nvarchar(255)**|Der vollgekennzeichnete Pfad zum Verzeichnis, in das die Momentaufnahmedateien mit File Transfer Protocol (FTP) übertragen werden, wenn diese Option angegeben ist.|  
-|**use_ftp**|**bit**|Abonnement abonniert die Veröffentlichung über die konfigurierten Internet- und FTP-Adressierungseigenschaften. Wenn der Wert **0**ist, verwendet das Abonnement nicht FTP. Bei **1**verwendet das Abonnement FTP.|  
+|**use_ftp**|**bit**|Abonnement abonniert die Veröffentlichung über die konfigurierten Internet- und FTP-Adressierungseigenschaften. Wenn der Wert **0** ist, verwendet das Abonnement nicht FTP. Bei **1** verwendet das Abonnement FTP.|  
 |**publication_type**|**int**|Gibt den Replikationstyp der Veröffentlichung an.<br /><br /> **0** = Transaktions Replikation<br /><br /> **1** = Momentaufnahme Replikation<br /><br /> **2** = Mergereplikation|  
 |**dts_package_name**|**sysname**|Gibt den Namen des DTS-Pakets (Data Transformation Services) an.|  
 |**dts_package_location**|**int**|Der Speicherort des DTS-Pakets:<br /><br /> **0** = Verteiler<br /><br /> **1** = Abonnent|  
-|**offload_agent**|**bit**|Gibt an, ob der Agent remote aktiviert werden kann. Wenn der Wert **0**ist, kann der Agent nicht remote aktiviert werden.|  
+|**offload_agent**|**bit**|Gibt an, ob der Agent remote aktiviert werden kann. Wenn der Wert **0** ist, kann der Agent nicht remote aktiviert werden.|  
 |**offload_server**|**sysname**|Gibt den Netzwerknamen des Servers an, der für die Remoteaktivierung verwendet wird.|  
 |**last_sync_status**|**int**|Abonnementstatus:<br /><br /> **0** = alle Aufträge warten auf den Start<br /><br /> **1** = mindestens ein Auftrag wird gestartet.<br /><br /> **2** = alle Aufträge wurden erfolgreich ausgeführt.<br /><br /> **3** = mindestens ein Auftrag wird ausgeführt<br /><br /> **4** = alle Aufträge sind geplant und im Leerlauf<br /><br /> **5** = mindestens ein Auftrag versucht, nach einem vorherigen Fehler auszuführen<br /><br /> **6** = mindestens ein Auftrag konnte nicht erfolgreich ausgeführt werden.|  
 |**last_sync_summary**|**sysname**|Beschreibung der letzten Synchronisierungsergebnisse.|  
 |**last_sync_time**|**datetime**|Zeitpunkt, zu dem die Abonnementinformationen aktualisiert wurden. Dies ist eine UNICODE-Zeichenfolge aus ISO-Datum (114) + ODBC-Zeit (121). Das Format ist yyyymmdd hh:mi:sss.mmm, wobei yyyy das Jahr, mm den Monat, dd den Tag, hh die Stunde, mi die Minute, sss die Sekunden und mmm die Millisekunden angibt.|  
-|**job_login**|**nvarchar(512)**|Das Windows-Konto, unter dem der Verteilungs-Agent ausgeführt wird, das im Format *Domäne* \\ *Benutzername*zurückgegeben wird.|  
+|**job_login**|**nvarchar(512)**|Das Windows-Konto, unter dem der Verteilungs-Agent ausgeführt wird, das im Format *Domäne* \\ *Benutzername* zurückgegeben wird.|  
 |**job_password**|**sysname**|Aus Sicherheitsgründen wird immer der Wert " **\*\*\*\*\*\*\*\*\*\*** " zurückgegeben.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helppullsubscription** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  

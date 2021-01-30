@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_register_custom_scripting
 - sp_register_custom_scripting_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4f73353cc5d2e0e9be02be5a0e6dc59eaf2f909f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f9239f89c5f65f0a4af3ddfd5588a92551dfbcdc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547498"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210447"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,22 +55,22 @@ sp_register_custom_scripting [ @type  = ] 'type'
 > [!NOTE]  
 >  Wenn Sie NULL für *value*-Parameter angeben, wird die Registrierung eines zuvor registrierten Skripts aufgehoben. Dies entspricht dem Ausführen von [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  
   
- Wenn der Wert des *Typs* **custom_script**ist, werden der Name und der vollständige Pfad einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Skriptdatei erwartet. Andernfalls muss *value* der Name einer registrierten gespeicherten Prozedur sein.  
+ Wenn der Wert des *Typs* **custom_script** ist, werden der Name und der vollständige Pfad einer [!INCLUDE[tsql](../../includes/tsql-md.md)] Skriptdatei erwartet. Andernfalls muss *value* der Name einer registrierten gespeicherten Prozedur sein.  
   
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung, für die die benutzerdefinierte gespeicherte Prozedur oder das Skript registriert wird. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **null**.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, für die die benutzerdefinierte gespeicherte Prozedur oder das Skript registriert wird. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert **null**.  
   
-`[ @article = ] 'article'` Der Name des Artikels, für den die benutzerdefinierte gespeicherte Prozedur oder das Skript registriert wird. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert **null**.  
+`[ @article = ] 'article'` Der Name des Artikels, für den die benutzerdefinierte gespeicherte Prozedur oder das Skript registriert wird. der *Artikel* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert **null**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_register_custom_scripting** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
  Diese gespeicherte Prozedur sollte ausgeführt werden, bevor Schemaänderungen an einer replizierten Tabelle vorgenommen werden. Weitere Informationen zur Verwendung dieser gespeicherten Prozedur finden Sie unter [Neugenerieren von benutzerdefinierten Transaktions Prozeduren, um Schema Änderungen widerzuspiegeln](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** , der festen Daten Bank Rolle **db_owner** oder der festen Daten Bank Rolle **db_ddladmin** können **sp_register_custom_scripting**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** , der festen Daten Bank Rolle **db_owner** oder der festen Daten Bank Rolle **db_ddladmin** können **sp_register_custom_scripting** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_unregister_custom_scripting &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  

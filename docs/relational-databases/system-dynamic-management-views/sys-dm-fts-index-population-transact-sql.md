@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_fts_index_population
 - dm_fts_index_population
@@ -21,19 +21,19 @@ ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06e804011443a4486c8ffbfd18d5ed639a3a3ec9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0da9010acff84b43fa66f44b6185706c756f96e2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484682"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211222"
 ---
 # <a name="sysdm_fts_index_population-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Gibt Informationen zu den aktuell ausgeführten Auffüllungen des Volltextindexes und semantischen Schlüsselausdrucks zurück, die gerade in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden.  
  
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID der Datenbank, die den aufzufüllenden Volltextindex enthält.|  
 |**catalog_id**|**int**|ID des Volltextkatalogs, in dem dieser Volltextindex enthalten ist.|  
@@ -55,7 +55,7 @@ ms.locfileid: "97484682"
 |**start_time**|**datetime**|Zeit des Starts der Auffüllung.|  
 |**incremental_timestamp**|**timestamp**|Stellt den Timestamp des Starts einer vollständigen Auffüllung dar. Für alle anderen Auffüllungstypen ist dieser Wert der letzte Prüfpunkt, für den ein Commit ausgeführt wurde, der den Fortschritt der Auffüllung darstellt.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn die statistische semantische Indizierung zusätzlich zur Volltextindizierung aktiviert ist, erfolgen die semantischen Extraktion und Auffüllung von Schlüsselausdrücken sowie die Extraktion von Dokumentähnlichkeitsdaten gleichzeitig mit der Volltextindizierung. Die Auffüllung des Dokumentähnlichkeitsindexes erfolgt später in einer zweiten Phase. Weitere Informationen finden Sie unter [Verwalten und Überwachen der semantischen Suche](../../relational-databases/search/manage-and-monitor-semantic-search.md).  
   
 ## <a name="permissions"></a>Berechtigungen  

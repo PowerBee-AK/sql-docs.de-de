@@ -1,13 +1,13 @@
 ---
 description: core.sp_create_snapshot (Transact-SQL)
-title: Core. sp_create_snapshot (Transact-SQL) | Microsoft-Dokumentation
+title: Core.sp_create_snapshot (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_create_snapshot
 - sp_create_snapshot_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 719167961eb9c716266e1a96a17c31ea82367cbc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 737739cfa627e6668d95e6453d66ed1bad4ad637
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550127"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210512"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,13 +55,13 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  Die GUID für einen Sammlertyp. *collector_type_uid* ist vom Datentyp **uniqueidentifier** und hat keinen Standardwert. Um die GUID zu erhalten, fragen Sie die dbo.syscollector_collector_types-Sicht in der MSDB-Datenbank ab.  
   
  [ @machine_name =] '*machine_name*'  
- Der Name des Servers, auf dem sich der Sammlungssatz befindet. *machine_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+ Der Name des Servers, auf dem sich der Sammlungssatz befindet. *machine_name* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
  [ @named_instance =] '*named_instance*'  
- Der Name der Instanz für den Sammlungssatz. *named_instance* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+ Der Name der Instanz für den Sammlungssatz. *named_instance* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
  [ @log_id =] *log_id*  
- Der eindeutige Bezeichner, der dem Ereignisprotokoll des Sammlungssatzes auf dem Server zugeordnet ist, der die Daten gesammelt hat. *log_id* ist vom Datentyp **bigint** und hat keinen Standardwert. Wenn Sie den Wert für *log_id*abrufen möchten, Fragen Sie die dbo.syscollector_execution_log Sicht in der msdb-Datenbank ab.  
+ Der eindeutige Bezeichner, der dem Ereignisprotokoll des Sammlungssatzes auf dem Server zugeordnet ist, der die Daten gesammelt hat. *log_id* ist vom Datentyp **bigint** und hat keinen Standardwert. Wenn Sie den Wert für *log_id* abrufen möchten, Fragen Sie die dbo.syscollector_execution_log Sicht in der msdb-Datenbank ab.  
   
  [ @snapshot_id =] *snapshot_id*  
  Der eindeutige Bezeichner für eine Zeile, die in die Core. Momentaufnahmen-Sicht eingefügt wird. *snapshot_id* ist vom Datentyp **int** und wird als Output zurückgegeben.  
@@ -69,7 +69,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Jedes Mal, wenn ein Uploadpaket mit dem Hochladen von Daten in das Verwaltungs-Data Warehouse startet, ruft die Laufzeitkomponente des Datensammlers core.sp_create_snapshot  auf.  
   
  Diese Prozedur führt eine Überprüfung auf Folgendes durch:  

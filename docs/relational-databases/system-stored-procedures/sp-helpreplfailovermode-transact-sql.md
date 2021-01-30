@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpreplfailovermode
 - sp_helpreplfailovermode_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 49573995e7a89b0cb2cc9cdecd55009320f565f4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 11ebe0df55bb0b6b5a2b7f009a0be4be28c788c1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538791"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210833"
 ---
 # <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'` Der Name des Verlegers, der am Update dieses Abonnenten teilnimmt. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Der Verleger muss bereits für das Veröffentlichen konfiguriert sein.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers, der am Update dieses Abonnenten teilnimmt. *Publisher* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert. Der Verleger muss bereits für das Veröffentlichen konfiguriert sein.  
   
-`[ @publisher_db = ] 'publisher_db'` Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung, die an der Aktualisierung dieses Abonnenten teilnimmt. *Publication*ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung, die an der Aktualisierung dieses Abonnenten teilnimmt. *Publication* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 `[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` Gibt den ganzzahligen Wert des Failovermodus zurück und ist ein **Output** -Parameter. *failover_mode_id* ist vom Datentyp **tinyint** . der Standardwert ist **0**. Sie gibt **0** für sofortiges Aktualisieren und **1** für verzögertes Update über eine Warteschlange zurück.  
   
@@ -60,11 +60,11 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helpreplfailovermode** wird bei der Momentaufnahme-oder Transaktions Replikation verwendet, bei der Abonnements für eine sofortige Aktualisierung mit verzögertem Update über eine Warteschlange als Failover aktiviert sind, falls ein Fehler aufgetreten ist.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_helpreplfailovermode**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_helpreplfailovermode** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_setreplfailovermode &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  

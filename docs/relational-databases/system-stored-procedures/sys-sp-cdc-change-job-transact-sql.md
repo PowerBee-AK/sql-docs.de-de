@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_change_job (Transact-SQL)
-title: sys. sp_cdc_change_job (Transact-SQL) | Microsoft-Dokumentation
+title: sys.sp_cdc_change_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_cdc_change_job_TSQL
 - sys.sp_cdc_change_job
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf81cfb8cbd06602252e62b3c72bafe694c14ed8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0dcc3a8b69e6cf8e65f96b239dd7699f796246ba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545866"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210756"
 ---
 # <a name="syssp_cdc_change_job-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Ändert die Konfiguration eines Cleanup- oder Aufzeichnungsauftrags für Change Data Capture in der aktuellen Datenbank. Um die aktuelle Konfiguration eines Auftrags anzuzeigen, Fragen Sie die Tabelle [dbo. cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) ab, oder verwenden Sie [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
+  Ändert die Konfiguration eines Cleanup- oder Aufzeichnungsauftrags für Change Data Capture in der aktuellen Datenbank. Um die aktuelle Konfiguration eines Auftrags anzuzeigen, Fragen Sie die [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) Tabelle ab, oder verwenden Sie [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,9 +64,9 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  Wenn *Continuous* = 0, wird der **sp_cdc_scan** Auftrag bis zu *max_scans* Scans des Protokolls ausgeführt, während jeder Überprüfung bis zu *max_trans* Transaktionen verarbeitet und dann beendet.  
   
- Wenn ** \@ Continuous** von 1 in 0 geändert wird, wird ** \@ PollingInterval** automatisch auf 0 festgelegt. Ein Wert, der für das ** \@ PollingInterval** -Wert ungleich 0 angegeben ist, wird ignoriert.  
+ Wenn **\@ Continuous** von 1 in 0 geändert wird, wird **\@ PollingInterval** automatisch auf 0 festgelegt. Ein Wert, der für das **\@ PollingInterval** -Wert ungleich 0 angegeben ist, wird ignoriert.  
   
- Wenn ** \@ Continuous** ausgelassen wird oder explizit auf NULL und ** \@ PollingInterval** explizit auf einen Wert größer als 0 festgelegt ist, wird ** \@ Continuous** automatisch auf 1 festgelegt.  
+ Wenn **\@ Continuous** ausgelassen wird oder explizit auf NULL und **\@ PollingInterval** explizit auf einen Wert größer als 0 festgelegt ist, wird **\@ Continuous** automatisch auf 1 festgelegt.  
   
  *Continuous* ist nur für Aufzeichnungs Aufträge gültig.  
   
@@ -87,7 +87,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
  Keine  
   
 ## <a name="remarks"></a>Bemerkungen  
- Wenn ein Parameter weggelassen wird, wird der zugehörige Wert in der [dbo. cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) -Tabelle nicht aktualisiert. Ein explizit auf NULL festgelegter Parameter wird so behandelt, als ob der Parameter weggelassen wird.  
+ Wenn ein Parameter weggelassen wird, wird der zugehörige Wert in der [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) Tabelle nicht aktualisiert. Ein explizit auf NULL festgelegter Parameter wird so behandelt, als ob der Parameter weggelassen wird.  
   
  Die Angabe eines für den Auftragstyp ungültigen Parameters führt dazu, dass die Anweisung fehlschlägt.  
   
@@ -112,7 +112,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>B. Ändern eines Cleanupauftrags  
- Im folgenden Beispiel wird ein Cleanupauftrag in der `AdventureWorks2012`-Datenbank aktualisiert. Alle gültigen Parameter für diesen Auftragstyp, außer ** \@ Schwellenwert**, werden angegeben. Der Wert für ** \@ Schwellen** Wert wird nicht geändert.  
+ Im folgenden Beispiel wird ein Cleanupauftrag in der `AdventureWorks2012`-Datenbank aktualisiert. Alle gültigen Parameter für diesen Auftragstyp, außer **\@ Schwellenwert**, werden angegeben. Der Wert für **\@ Schwellen** Wert wird nicht geändert.  
   
 ```  
 USE AdventureWorks2012;  
@@ -124,8 +124,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [dbo. cdc_jobs &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys. sp_cdc_enable_table &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [dbo.cdc_jobs &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sys.sp_cdc_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

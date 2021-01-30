@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_validate_redirected_publisher
 - sp_validate_redirected_publisher_TSQL
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 42184546069fb5358fbdc8863998b7bda74f89a4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dd0e7a98d9f9a5886d829c5567d91795ca388b6a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534756"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211321"
 ---
 # <a name="sp_validate_redirected_publisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Überprüft, ob der aktuelle Host für die Veröffentlichungsdatenbank die Replikation unterstützen kann. Muss von einer Verteilungsdatenbank ausgeführt werden. Diese Prozedur wird von **sp_get_redirected_publisher**aufgerufen.  
+  Überprüft, ob der aktuelle Host für die Veröffentlichungsdatenbank die Replikation unterstützen kann. Muss von einer Verteilungsdatenbank ausgeführt werden. Diese Prozedur wird von **sp_get_redirected_publisher** aufgerufen.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,11 +41,11 @@ ms.locfileid: "89534756"
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @original_publisher = ] 'original_publisher'` Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die die Datenbank ursprünglich veröffentlicht hat. *original_publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @original_publisher = ] 'original_publisher'` Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die die Datenbank ursprünglich veröffentlicht hat. *original_publisher* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @publisher_db = ] 'publisher_db'` Der Name der Datenbank, die veröffentlicht wird. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Datenbank, die veröffentlicht wird. *publisher_db* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
-`[ @redirected_publisher = ] 'redirected_publisher'` Das Ziel der Umleitung, das angegeben wurde, als **sp_redirect_publisher** für das Verleger-/Datenbankpaar aufgerufen wurde. *redirected_publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @redirected_publisher = ] 'redirected_publisher'` Das Ziel der Umleitung, das angegeben wurde, als **sp_redirect_publisher** für das Verleger-/Datenbankpaar aufgerufen wurde. *redirected_publisher* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -53,8 +53,8 @@ ms.locfileid: "89534756"
 ## <a name="result-sets"></a>Resultsets  
  Keine.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn kein Eintrag für den Verleger und die Veröffentlichungs Datenbank vorhanden ist, gibt **sp_validate_redirected_publisher** im * \@ redirected_publisher*Output-Parameter den Wert NULL zurück. Wenn ein Eintrag vorhanden ist, wird er im Ausgabeparameter in Erfolgs- und Fehlerfällen zurückgegeben.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn kein Eintrag für den Verleger und die Veröffentlichungs Datenbank vorhanden ist, gibt **sp_validate_redirected_publisher** im *\@ redirected_publisher* Output-Parameter den Wert NULL zurück. Wenn ein Eintrag vorhanden ist, wird er im Ausgabeparameter in Erfolgs- und Fehlerfällen zurückgegeben.  
   
  Wenn die Überprüfung erfolgreich ist, gibt **sp_validate_redirected_publisher** eine Erfolgs Angabe zurück.  
   

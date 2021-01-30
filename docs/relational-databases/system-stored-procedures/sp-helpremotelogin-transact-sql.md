@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpremotelogin_TSQL
 - sp_helpremotelogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4b35458a0c99eb14db60a058ef72e98df529c217
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ff291542fee3d10fe94e9ccd628e05c8f9e77f7b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547977"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210816"
 ---
 # <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,11 +44,11 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @remoteserver **=** ] **'***Remote Server***'**  
- Der Remoteserver, für den Informationen zu Remoteanmeldenamen zurückgegeben werden. *Remote Server* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *Remote Server* nicht angegeben wird, werden Informationen zu allen Remote Servern zurückgegeben, die auf dem lokalen Server definiert sind.  
+ [ @remoteserver **=** ] **'**_Remote Server_*_'_*  
+ Der Remoteserver, für den Informationen zu Remoteanmeldenamen zurückgegeben werden. *Remote Server* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn *Remote Server* nicht angegeben wird, werden Informationen zu allen Remote Servern zurückgegeben, die auf dem lokalen Server definiert sind.  
   
- [ @remotename **=** ] **'***remote_name***'**  
- Ein bestimmter Remoteanmeldename auf dem Remoteserver. *remote_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *remote_name* nicht angegeben wird, werden Informationen zu allen Remote Benutzern, die für *Remote Server* definiert sind, zurückgegeben.  
+ [ @remotename **=** ] **'**_remote_name_*_'_*  
+ Ein bestimmter Remoteanmeldename auf dem Remoteserver. *remote_name* ist vom Datentyp **sysname** und hat den Standardwert NULL. Wenn *remote_name* nicht angegeben wird, werden Informationen zu allen Remote Benutzern, die für *Remote Server* definiert sind, zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -62,7 +62,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 |remote_user_name|**sysname**|Anmeldename auf dem Remoteserver, der local_user_name zugeordnet wird.|  
 |Optionen|**sysname**|Vertrauenswürdig = Der Remoteanmeldename muss beim Herstellen der Verbindung zum lokalen Server vom Remoteserver aus kein Kennwort angeben.<br /><br /> Nicht vertrauenswürdig (oder leer) = Der Remoteanmeldename wird beim Herstellen der Verbindung zum lokalen Server vom Remoteserver aus zur Eingabe eines Kennworts aufgefordert.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Mit sp_helpserver listen Sie die Namen der auf dem lokalen Server definierten Remoteserver auf.  
   
 ## <a name="permissions"></a>Berechtigungen  
