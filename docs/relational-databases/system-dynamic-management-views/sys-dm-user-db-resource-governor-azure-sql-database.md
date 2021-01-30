@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.resource_governance
 - sys.resource_governance_TSQL
@@ -21,12 +21,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current
-ms.openlocfilehash: 933b7749218e71a66cdc6d0a25666be32c8badfe
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8580ae3857b4c8c7f54599e70134879a076e89ca
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474751"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99131368"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-SQL)
 
@@ -34,7 +34,7 @@ ms.locfileid: "97474751"
 
 Gibt die tatsächlichen Konfigurations- und Kapazitätseinstellungen zurück, die von Ressourcenkontrollmechanismen in der aktuellen Datenbank oder im Pool für elastische Datenbanken verwendet werden.
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**database_id**|INT|Die ID der Datenbank, die innerhalb eines Azure SQL-Datenbankservers eindeutig ist.|
 |**logical_database_guid**|UNIQUEIDENTIFIER|Logische GUID für die Benutzerdatenbank, die während der Lebensdauer einer Benutzerdatenbank verbleibt.  Durch das Umbenennen der Datenbank oder das Ändern des servicelevelziels wird dieser Wert nicht geändert.|
@@ -95,7 +95,7 @@ Gibt die tatsächlichen Konfigurations- und Kapazitätseinstellungen zurück, di
 
 Diese Sicht erfordert die VIEW DATABASE STATE-Berechtigung.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 
 Eine Beschreibung der Ressourcenkontrolle in der Azure SQL-Datenbank finden Sie unter [Ressourceneinschränkungen für SQL-Datenbanken](/azure/sql-database/sql-database-resource-limits-database-server).
 

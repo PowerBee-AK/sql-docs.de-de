@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - xp_cmdshell
 - xp_cmdshell_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7f545d556069e31e349c0a8badf0fd9d95e6dcef
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 73bea06c7919c40b1080458f3e6982d2c10ebe47
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257607"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99125000"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ xp_cmdshell { 'command_string' } [ , no_output ]
   
 ## <a name="arguments"></a>Argumente  
  **"** *command_string* **"**  
- Die Zeichenfolge, die einen an das Betriebssystem zu übergebenden Befehl enthält. *command_string* ist vom Datentyp **varchar (8000)** oder **nvarchar (4000)** und hat keinen Standardwert. *command_string* darf nicht mehr als einen Satz von doppelten Anführungszeichen enthalten. Ein einzelnes Paar von Anführungszeichen ist erforderlich, wenn in den Dateipfaden oder Programmnamen, auf die in *command_string*verwiesen wird, Leerzeichen vorhanden sind. Wenn Probleme mit eingebetteten Leerzeichen auftreten, sollten Sie FAT 8.3-Dateinamen verwenden, um dieses Problem zu umgehen.  
+ Die Zeichenfolge, die einen an das Betriebssystem zu übergebenden Befehl enthält. *command_string* ist vom Datentyp **varchar (8000)** oder **nvarchar (4000)** und hat keinen Standardwert. *command_string* darf nicht mehr als einen Satz von doppelten Anführungszeichen enthalten. Ein einzelnes Paar von Anführungszeichen ist erforderlich, wenn in den Dateipfaden oder Programmnamen, auf die in *command_string* verwiesen wird, Leerzeichen vorhanden sind. Wenn Probleme mit eingebetteten Leerzeichen auftreten, sollten Sie FAT 8.3-Dateinamen verwenden, um dieses Problem zu umgehen.  
   
  **no_output**  
  Ein optionaler Parameter, der angibt, dass keine Ausgabe an den Client zurückgegeben werden soll.  
@@ -67,7 +67,7 @@ The command(s) completed successfully.
  Der von **xp_cmdshell** erzeugte Windows-Prozess hat die gleichen Sicherheitsrechte wie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst Konto.  
  
 > [!IMPORTANT]
->  **xp_cmdshell** ist ein sehr leistungsfähiges Feature, das standardmäßig deaktiviert ist. **xp_cmdshell** können mithilfe der Richtlinien basierten Verwaltung oder durch Ausführen von **sp_configure**aktiviert und deaktiviert werden. Weitere Informationen finden Sie unter [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md) und [xp_cmdshell Server Configuration Option](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+>  **xp_cmdshell** ist ein sehr leistungsfähiges Feature, das standardmäßig deaktiviert ist. **xp_cmdshell** können mithilfe der Richtlinien basierten Verwaltung oder durch Ausführen von **sp_configure** aktiviert und deaktiviert werden. Weitere Informationen finden Sie unter [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md) und [xp_cmdshell Server Configuration Option](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
  **xp_cmdshell** erfolgt synchron. Die Steuerung wird erst dann an den Aufrufer zurückgegeben, wenn der Befehl der Befehlsshell abgeschlossen wurde. 
  
@@ -77,7 +77,7 @@ The command(s) completed successfully.
 ## <a name="xp_cmdshell-proxy-account"></a>xp_cmdshell-Proxykonto  
  Wenn Sie von einem Benutzer aufgerufen wird, der kein Mitglied der festen Server Rolle **sysadmin** ist, stellt **xp_cmdshell** eine Verbindung mit Windows her, indem er den in den Anmelde Informationen mit dem Namen **# #xp_cmdshell_proxy_account # #** gespeicherten Kontonamen und das Kennwort verwendet. Wenn diese Proxy Anmelde Informationen nicht vorhanden sind, schlägt **xp_cmdshell** fehl.  
   
- Die Anmelde Informationen des Proxy Kontos können durch Ausführen von **sp_xp_cmdshell_proxy_account**erstellt werden. Als Argumente besitzt diese gespeicherte Prozedur einen Windows-Benutzernamen und ein Kennwort. Mit dem folgenden Befehl werden z. B. Proxyanmeldeinformationen für den Windows-Domänenbenutzer `SHIPPING\KobeR` erstellt, der das Windows-Kennwort `sdfh%dkc93vcMt0` besitzt.  
+ Die Anmelde Informationen des Proxy Kontos können durch Ausführen von **sp_xp_cmdshell_proxy_account** erstellt werden. Als Argumente besitzt diese gespeicherte Prozedur einen Windows-Benutzernamen und ein Kennwort. Mit dem folgenden Befehl werden z. B. Proxyanmeldeinformationen für den Windows-Domänenbenutzer `SHIPPING\KobeR` erstellt, der das Windows-Kennwort `sdfh%dkc93vcMt0` besitzt.  
   
 ```  
 EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';  
@@ -86,11 +86,11 @@ EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';
  Weitere Informationen finden Sie unter [sp_xp_cmdshell_proxy_account &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Da böswillige Benutzer manchmal versuchen, ihre Berechtigungen mithilfe von **xp_cmdshell**zu erhöhen, ist **xp_cmdshell** standardmäßig deaktiviert. Verwenden Sie **sp_configure** oder **Richtlinien basierte Verwaltung** , um Sie zu aktivieren. Weitere Informationen finden Sie unter [xp_cmdshell (Serverkonfigurationsoption)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+ Da böswillige Benutzer manchmal versuchen, ihre Berechtigungen mithilfe von **xp_cmdshell** zu erhöhen, ist **xp_cmdshell** standardmäßig deaktiviert. Verwenden Sie **sp_configure** oder **Richtlinien basierte Verwaltung** , um Sie zu aktivieren. Weitere Informationen finden Sie unter [xp_cmdshell (Serverkonfigurationsoption)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
- Bei der ersten Aktivierung erfordert **xp_cmdshell** die Control Server-Berechtigung für die Ausführung, und der von **xp_cmdshell** erstellte Windows-Prozess hat denselben Sicherheitskontext wie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst Konto. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst Konto verfügt häufig über mehr Berechtigungen, als für die Arbeit erforderlich sind, die von dem von **xp_cmdshell**erstellten Prozess ausgeführt wird. Um die Sicherheit zu erhöhen, sollte der Zugriff auf **xp_cmdshell** auf Benutzer mit hohen Privilegien eingeschränkt werden.  
+ Bei der ersten Aktivierung erfordert **xp_cmdshell** die Control Server-Berechtigung für die Ausführung, und der von **xp_cmdshell** erstellte Windows-Prozess hat denselben Sicherheitskontext wie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst Konto. Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst Konto verfügt häufig über mehr Berechtigungen, als für die Arbeit erforderlich sind, die von dem von **xp_cmdshell** erstellten Prozess ausgeführt wird. Um die Sicherheit zu erhöhen, sollte der Zugriff auf **xp_cmdshell** auf Benutzer mit hohen Privilegien eingeschränkt werden.  
   
- Führen Sie die folgenden Schritte aus, um nicht Administratoren die Verwendung von **xp_cmdshell**zu gestatten und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Erstellen von untergeordneten Prozessen mit dem Sicherheits Token eines Kontos mit geringen Rechten zu ermöglichen:  
+ Führen Sie die folgenden Schritte aus, um nicht Administratoren die Verwendung von **xp_cmdshell** zu gestatten und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Erstellen von untergeordneten Prozessen mit dem Sicherheits Token eines Kontos mit geringen Rechten zu ermöglichen:  
   
 1.  Erstellen Sie ein lokales Windows-Benutzerkonto oder ein Domänenkonto mit den geringsten Berechtigungen, die von den Prozessen benötigt werden, und passen Sie es an.  
   
@@ -99,9 +99,9 @@ EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';
     > [!NOTE]  
     >  Sie können dieses Proxy Konto auch mithilfe [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] von konfigurieren, indem Sie in Objekt-Explorer mit der rechten Maustaste auf **Eigenschaften** Ihres Server namens klicken und auf der Registerkarte **Sicherheit** für den Abschnitt **Server Proxy Konto** suchen.  
   
-3.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Führen Sie in mithilfe der Master-Datenbank die-Anweisung aus, `GRANT exec ON xp_cmdshell TO N'<some_user>';` um bestimmten nicht-**sysadmin** -Benutzern die Ausführung von **xp_cmdshell**zu ermöglichen. Der angegebene Benutzer muss in der Master-Datenbank vorhanden sein.  
+3.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Führen Sie in mithilfe der Master-Datenbank die-Anweisung aus, `GRANT exec ON xp_cmdshell TO N'<some_user>';` um bestimmten nicht-**sysadmin** -Benutzern die Ausführung von **xp_cmdshell** zu ermöglichen. Der angegebene Benutzer muss in der Master-Datenbank vorhanden sein.  
   
- Nicht Administratoren können jetzt Betriebssystem Prozesse mit **xp_cmdshell** starten, und diese Prozesse werden mit den Berechtigungen des von Ihnen konfigurierten Proxy Kontos ausgeführt. Benutzer mit Control Server-Berechtigung (Mitglieder der festen Server Rolle **sysadmin** ) empfangen weiterhin die Berechtigungen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst Kontos für untergeordnete Prozesse, die von **xp_cmdshell**gestartet werden.  
+ Nicht Administratoren können jetzt Betriebssystem Prozesse mit **xp_cmdshell** starten, und diese Prozesse werden mit den Berechtigungen des von Ihnen konfigurierten Proxy Kontos ausgeführt. Benutzer mit Control Server-Berechtigung (Mitglieder der festen Server Rolle **sysadmin** ) empfangen weiterhin die Berechtigungen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst Kontos für untergeordnete Prozesse, die von **xp_cmdshell** gestartet werden.  
   
  Führen Sie die folgende Anweisung aus, um das Windows-Konto zu bestimmen, das von **xp_cmdshell** beim Starten von Betriebssystem Prozessen verwendet wird:  
   

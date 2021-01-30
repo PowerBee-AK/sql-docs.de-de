@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpsubscription_properties
 - sp_helpsubscription_properties_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4bcbd2ec90018561870d6159edb41105119ebc69
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 681a72a604af765311bb10833cc17842819e97f1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547960"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99103185"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,13 +41,13 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und **%** hat den Standardwert, mit dem Informationen zu allen Verlegern zurückgegeben werden.  
+`[ @publisher = ] 'publisher'` Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname** und **%** hat den Standardwert, mit dem Informationen zu allen Verlegern zurückgegeben werden.  
   
-`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat **%** den Standardwert, mit dem Informationen zu allen Verleger Datenbanken zurückgegeben werden.  
+`[ @publisher_db = ] 'publisher_db'` Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname** und hat **%** den Standardwert, mit dem Informationen zu allen Verleger Datenbanken zurückgegeben werden.  
   
-`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und **%** hat den Standardwert, mit dem Informationen zu allen Veröffentlichungen zurückgegeben werden.  
+`[ @publication = ] 'publication'` Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname** und **%** hat den Standardwert, mit dem Informationen zu allen Veröffentlichungen zurückgegeben werden.  
   
-`[ @publication_type = ] publication_type` Der Typ der Veröffentlichung. *publication_type* ist vom Datentyp **int**und hat den Standardwert NULL. Wenn angegeben, muss *publication_type* einen der folgenden Werte aufweisen:  
+`[ @publication_type = ] publication_type` Der Typ der Veröffentlichung. *publication_type* ist vom Datentyp **int** und hat den Standardwert NULL. Wenn angegeben, muss *publication_type* einen der folgenden Werte aufweisen:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -76,11 +76,11 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**ftp_password**|**nvarchar (524)**|Nur aus Gründen der Abwärtskompatibilität beibehalten Benutzer Kennwort, das zum Herstellen einer Verbindung mit dem FTP-Dienst verwendet|  
 |**alt_snapshot_folder**|**nvarchar(255)**|Gibt den Speicherort des anderen Ordners für die Momentaufnahme an.|  
 |**working_directory**|**nvarchar(255)**|Der Name des Arbeitsverzeichnisses, das zum Speichern der Daten- und Schemadateien verwendet wird.|  
-|**use_ftp**|**bit**|Gibt anstelle des normalen Protokolls FTP an, um Momentaufnahmen abzurufen. Bei **einem**Wert von 1 wird FTP verwendet.|  
+|**use_ftp**|**bit**|Gibt anstelle des normalen Protokolls FTP an, um Momentaufnahmen abzurufen. Bei **einem** Wert von 1 wird FTP verwendet.|  
 |**dts_package_name**|**sygleich**|Gibt den Namen des DTS-Pakets (Data Transformation Services) an.|  
 |**dts_package_password**|**nvarchar (524)**|Gibt gegebenenfalls das Kennwort des Pakets an.|  
 |**dts_package_location**|**int**|Speicherort, an dem das DTS-Paket gespeichert wird.<br /><br /> **0** = der Speicherort des Pakets befindet sich auf dem Verteiler.<br /><br /> **1** = der Speicherort des Pakets befindet sich auf dem Abonnenten.|  
-|**offload_agent**|**bit**|Gibt an, ob der Agent remote aktiviert werden kann. Wenn der Wert **0**ist, kann der Agent nicht remote aktiviert werden.|  
+|**offload_agent**|**bit**|Gibt an, ob der Agent remote aktiviert werden kann. Wenn der Wert **0** ist, kann der Agent nicht remote aktiviert werden.|  
 |**offload_server**|**sysname**|Gibt den Netzwerknamen des Servers an, der für die Remoteaktivierung verwendet wird.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Gibt den Pfad zum Ordner an, in dem die Momentaufnahmedateien gespeichert werden.|  
 |**use_web_sync**|**bit**|Gibt an, ob das Abonnement über HTTPS synchronisiert werden kann, wobei der Wert **1** bedeutet, dass diese Funktion aktiviert ist.|  
@@ -94,11 +94,11 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helpsubscription_properties** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_helpsubscription_properties**ausführen.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_helpsubscription_properties** ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

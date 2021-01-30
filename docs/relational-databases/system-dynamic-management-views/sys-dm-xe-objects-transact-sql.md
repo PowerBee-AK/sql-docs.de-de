@@ -6,7 +6,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_xe_objects
 - sys.dm_xe_objects
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6e54e02ec730fae0f57a8be8976d7fa694824bd0
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 9e797a7010a23bfc8b13673d1efa1a90d849e6ef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098873"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99129342"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "98098873"
  |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|Der Name des Objekts. der Name ist innerhalb eines Pakets für einen bestimmten Objekttyp eindeutig. Lässt keine NULL-Werte zu.|  
-|object_type|**nvarchar(60)**|Der Typ des Objekts. object_type ist einer der folgenden:<br /><br /> Ereignis<br /><br /> Aktion<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> Lässt keine NULL-Werte zu.|  
+|object_type|**nvarchar(60)**|Der Typ des Objekts. object_type ist einer der folgenden:<br /><br /> Ereignis<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> Typ<br /><br /> Lässt keine NULL-Werte zu.|  
 |package_guid|**uniqueidentifier**|Die GUID für das Paket, das diese Aktion verfügbar macht. Es gibt eine n:1-Beziehung mit sys.dm_xe_packages.package_id. Lässt keine NULL-Werte zu.|  
 |description|**nvarchar(256)**|Eine Beschreibung der Aktion. die Beschreibung wird vom Paket Ersteller festgelegt. Lässt keine NULL-Werte zu.|  
 |capabilities|**int**|Eine Bitmap, die die Fähigkeiten des Objekts beschreibt. Lässt NULL-Werte zu.|  
@@ -59,7 +59,7 @@ ms.locfileid: "98098873"
   
 ### <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|Beschreibung|Relationship|  
+|Von|Beschreibung|Beziehung|  
 |----------|--------|------------------|  
 |sys.dm_xe_objects.package_guid|sys.dm_xe_packages.guid|n:1|  
   

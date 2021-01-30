@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursorfetch
 - sp_cursorfetch_TSQL
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 45621f2b99616085a2543972df7109b2f2fe8e3c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bd6ad166a48d259ab925ae9369abe0d73a73f13b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543591"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99126310"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Ruft einen Puffer mit mindestens einer Zeile aus der Datenbank ab. Die Gruppe der Zeilen in diesem Puffer wird als *Fetchpuffer*des Cursors bezeichnet. sp_cursorfetch wird aufgerufen, indem ID = 7 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
+  Ruft einen Puffer mit mindestens einer Zeile aus der Datenbank ab. Die Gruppe der Zeilen in diesem Puffer wird als *Fetchpuffer* des Cursors bezeichnet. sp_cursorfetch wird aufgerufen, indem ID = 7 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -97,7 +97,7 @@ sp_cursorfetch cursor
 |Für KEYSET- und STATIC-Cursor|Normalerweise die aktuelle Keysetgröße.<br /><br /> **-m** , wenn sich der Cursor in einer asynchronen Erstellung befindet, wobei *m* Zeilen zu diesem Zeitpunkt gefunden werden.|  
 |Für DYNAMIC-Cursor|-1|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="cursor-parameter"></a>cursor-Parameter  
  Bevor Abrufvorgänge stattgefunden haben, befindet sich die Standardposition eines Cursors vor der ersten Zeile des Resultsets.  
@@ -114,7 +114,7 @@ sp_cursorfetch cursor
  Wenn ein Abrufvorgang fehlerhaft ist, weil die angeforderte Cursorposition außerhalb des Resultsets liegt, wird die Cursorposition unmittelbar nach der letzten Zeile festgelegt. Wenn ein Abrufvorgang fehlerhaft ist, weil die angeforderte Cursorposition vor dem Resultset liegt, wird die Cursorposition vor der ersten Zeile festgelegt.  
   
 ## <a name="rownum-parameter"></a>rownum-Parameter  
- Wenn Sie *rowNum*verwenden, wird der Puffer beginnend mit der angegebenen Zeile aufgefüllt.  
+ Wenn Sie *rowNum* verwenden, wird der Puffer beginnend mit der angegebenen Zeile aufgefüllt.  
   
  Der *FetchType* -Wert absolute verweist auf die Position von *rowNum* im gesamten Resultset. Eine negative Zahl mit ABSOLUTE gibt an, dass bei dem Vorgang Zeilen vom Ende des Resultsets gezählt werden.  
   
@@ -174,7 +174,7 @@ row 6 contents
 >  Genau in diesem Fall wird der RPC-Statusparameter auf 2 festgelegt.  
   
 ### <a name="b-using-prev_noadjust-to-return-fewer-rows-than-prev"></a>B. Zurückgeben von weniger Zeilen als PREV mithilfe von PREV_NOADJUST  
- PREV_NOADJUST schließt nie Zeilen ein, die sich an oder nach der aktuellen Cursorposition im Block zurückgegebener Zeilen befinden. In Fällen, in denen Prev Zeilen nach der aktuellen Position zurückgibt, gibt PREV_NOADJUST weniger Zeilen zurück, als in *nrows*angefordert wurden. Bei der aktuellen Position in Beispiel A oben ruft  (h2, 4, 1, 5) die folgenden Zeilen ab, wenn PREV angegeben ist:  
+ PREV_NOADJUST schließt nie Zeilen ein, die sich an oder nach der aktuellen Cursorposition im Block zurückgegebener Zeilen befinden. In Fällen, in denen Prev Zeilen nach der aktuellen Position zurückgibt, gibt PREV_NOADJUST weniger Zeilen zurück, als in *nrows* angefordert wurden. Bei der aktuellen Position in Beispiel A oben ruft  (h2, 4, 1, 5) die folgenden Zeilen ab, wenn PREV angegeben ist:  
   
 ```  
 row1 contents   
