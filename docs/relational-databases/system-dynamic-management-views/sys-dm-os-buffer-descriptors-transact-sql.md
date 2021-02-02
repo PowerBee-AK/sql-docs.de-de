@@ -21,17 +21,17 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6749867b40c0673c63b8a6c4279bc31b6fb0682
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ce3894ac989047dc8274c6770e881066023ccabd
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184975"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250373"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Gibt Informationen zu allen Datenseiten zurück, die derzeit im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Pufferpool sind. Die Ausgabe dieser Sicht kann verwendet werden, um die Verteilung der Datenbankseiten im Pufferpool gemäß der Datenbank, des Objekts oder des Typs zu bestimmen. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] gibt diese dynamische Verwaltungssicht auch Informationen über die Datenseiten in der Pufferpoolerweiterungsdatei zurück. Weitere Informationen finden Sie unter [Puffer Pool Erweiterung](../../database-engine/configure-windows/buffer-pool-extension.md).  
+  Gibt Informationen zu allen Datenseiten zurück, die derzeit im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Pufferpool sind. Die Ausgabe dieser Sicht kann verwendet werden, um die Verteilung der Datenbankseiten im Pufferpool gemäß der Datenbank, des Objekts oder des Typs zu bestimmen. In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] gibt diese dynamische Verwaltungssicht auch Informationen über die Datenseiten in der Pufferpoolerweiterungsdatei zurück. Weitere Informationen finden Sie unter [Puffer Pool Erweiterung](../../database-engine/configure-windows/buffer-pool-extension.md).  
   
  Beim Lesen einer Datenseite vom Datenträger wird die Seite in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Pufferpool kopiert und für die Wiederverwendung zwischengespeichert. Jede zwischengespeicherte Datenseite verfügt über einen Pufferdeskriptor. Pufferdeskriptoren identifizieren jede Datenseite eindeutig, die derzeit in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zwischengespeichert ist. sys.dm_os_buffer_descriptors gibt zwischengespeicherte Seiten für alle Benutzer- und Systemdatenbanken zurück. Dazu zählen auch Seiten, die der Ressourcendatenbank zugeordnet sind.  
   
