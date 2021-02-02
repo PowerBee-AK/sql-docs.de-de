@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 9bfce6f56bdf39597def73884f12ca06f6eb56b7
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: a74539209e56e1e2da9053cfffccd7d528684a30
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170272"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235835"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 
@@ -57,7 +57,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |query_plan|**xml**|Enthält die Showplan-Lauf Zeit Darstellung des Abfrage Ausführungs Plans, der mit *plan_handle* angegeben wird, die partielle Statistiken enthält. Der Showplan liegt im XML-Format vor. Für jeden Batch, der z. B. Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, Aufrufe von gespeicherten Prozeduren und benutzerdefinierten Funktionen enthält, wird jeweils ein Plan generiert. NULL-Werte sind zulässig.|
 
 ## <a name="remarks"></a>Bemerkungen
-Diese Systemfunktion ist ab SP1 verfügbar [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] . Siehe KB [3190871](https://support.microsoft.com/help/3190871)
+Diese Systemfunktion ist ab SP1 verfügbar [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] . Siehe KB [3190871](https://support.microsoft.com/help/3190871)
 
 Diese Systemfunktion funktioniert sowohl mit der **standardmäßigen** als auch der **Lightweight** -Abfrage für die Abfrage Ausführungs Statistik. Weitere Informationen finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md).  
 

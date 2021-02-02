@@ -21,12 +21,12 @@ ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 96bf6756f26e0bc8b82c6f7f008203fcb206c22f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fe236fc66e4155e64006ede1c6eace01982470e8
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184339"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236895"
 ---
 # <a name="sysdm_database_encryption_keys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "99184339"
 |encryptor_thumbprint|**varbinary(20)**|Zeigt den Fingerabdruck der Verschlüsselung an.|  
 |encryptor_type|**nvarchar(32)**|**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis [aktuelle Version](/troubleshoot/sql/general/determine-version-edition-update-level)).<br /><br /> Beschreibt die Verschlüsselung.|  
 |percent_complete|**real**|Prozentualer Anteil der bereits abgeschlossenen Änderung des Verschlüsselungsstatus einer Datenbank. Dieser Wert ist 0, wenn es keine Statusänderung gibt.|
-|encryption_state_desc|**nvarchar(32)**|**Gilt für**:  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höher.<br><br> Eine Zeichenfolge, die angibt, ob die Datenbank verschlüsselt oder nicht verschlüsselt ist.<br><br>Keine<br><br>Unverschlüsselte<br><br>.<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
-|encryption_scan_state|**int**|**Gilt für**:  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höher.<br><br>Gibt den aktuellen Status des Verschlüsselungs Scans an. <br><br>0 = Es wurde kein Scan initiiert, TDE ist nicht aktiviert.<br><br>1 = Überprüfung wird ausgeführt.<br><br>2 = Scan wird ausgeführt, aber angehalten, der Benutzer kann fortgesetzt werden.<br><br>3 = die Überprüfung wurde aus irgendeinem Grund abgebrochen. es ist ein manueller Eingriff erforderlich. Weitere Unterstützung erhalten Sie Microsoft-Support.<br><br>4 = die Überprüfung wurde erfolgreich abgeschlossen, TDE ist aktiviert, und die Verschlüsselung ist abgeschlossen.|
-|encryption_scan_state_desc|**nvarchar(32)**|**Gilt für**:  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höher.<br><br>Eine Zeichenfolge, die den aktuellen Status des Verschlüsselungs Scans angibt.<br><br> Keine<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>Ganz|
-|encryption_scan_modify_date|**datetime**|**Gilt für**:  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höher.<br><br> Zeigt das Datum (in UTC) an, an dem der Verschlüsselungs Überprüfungs Zustand zuletzt geändert wurde.|
+|encryption_state_desc|**nvarchar(32)**|**Gilt für**:  [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] und höher.<br><br> Eine Zeichenfolge, die angibt, ob die Datenbank verschlüsselt oder nicht verschlüsselt ist.<br><br>Keine<br><br>Unverschlüsselte<br><br>.<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
+|encryption_scan_state|**int**|**Gilt für**:  [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] und höher.<br><br>Gibt den aktuellen Status des Verschlüsselungs Scans an. <br><br>0 = Es wurde kein Scan initiiert, TDE ist nicht aktiviert.<br><br>1 = Überprüfung wird ausgeführt.<br><br>2 = Scan wird ausgeführt, aber angehalten, der Benutzer kann fortgesetzt werden.<br><br>3 = die Überprüfung wurde aus irgendeinem Grund abgebrochen. es ist ein manueller Eingriff erforderlich. Weitere Unterstützung erhalten Sie Microsoft-Support.<br><br>4 = die Überprüfung wurde erfolgreich abgeschlossen, TDE ist aktiviert, und die Verschlüsselung ist abgeschlossen.|
+|encryption_scan_state_desc|**nvarchar(32)**|**Gilt für**:  [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] und höher.<br><br>Eine Zeichenfolge, die den aktuellen Status des Verschlüsselungs Scans angibt.<br><br> Keine<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>Ganz|
+|encryption_scan_modify_date|**datetime**|**Gilt für**:  [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] und höher.<br><br> Zeigt das Datum (in UTC) an, an dem der Verschlüsselungs Überprüfungs Zustand zuletzt geändert wurde.|
   
 ## <a name="permissions"></a>Berechtigungen
 

@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 92511a835a8a9a6f899f7597900fec6707f6dada
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: ca05529c9b4ce1d9ec603989af81f0d2aeebf76b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129420"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236400"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services-Installation und -Konfiguration
 
@@ -130,11 +130,11 @@ Wenn Sie Änderungen an der Installation von [!INCLUDE[ssCurrent_md](../includes
   
 3.  Geben Sie auf der Seite **Daten Bank Server** die SQL Server Instanz an. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] Fügt Unterstützung für SQL Server verwaltete Instanz hinzu. Legen Sie den Wert **SQL Server Instanz** auf den Host der verwalteten Instanz fest. Beispiel: `xxxxxx.xxxxxx.database.windows.net`.
+    >  [!INCLUDE[sqlv15](../includes/sssql19-md.md)] Fügt Unterstützung für SQL Server verwaltete Instanz hinzu. Legen Sie den Wert **SQL Server Instanz** auf den Host der verwalteten Instanz fest. Beispiel: `xxxxxx.xxxxxx.database.windows.net`.
 
 4. Wählen Sie den **Authentifizierungstyp** aus, und klicken Sie dann auf **Verbindung testen** , um zu bestätigen, dass Sie mithilfe der Anmelde Informationen für den von Ihnen ausgewählten Authentifizierungstyp eine Verbindung Klicken Sie auf **Weiter**.
 
-    >[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Verwenden Sie für das Herstellen einer Verbindung mit der verwalteten Instanz einen der folgenden Authentifizierungs Typen:
+    >[!INCLUDE[sqlv15](../includes/sssql19-md.md)]Verwenden Sie für das Herstellen einer Verbindung mit der verwalteten Instanz einen der folgenden Authentifizierungs Typen:
     >
     >- Azure Active Directory integrierte Authentifizierung: **Aktueller Benutzer – Active Directory integriert**
     >- SQL Server Authentifizierung: **SQL Server Konto**.

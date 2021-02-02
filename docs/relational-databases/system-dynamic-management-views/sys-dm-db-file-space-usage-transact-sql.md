@@ -21,12 +21,12 @@ ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c50652dee0c0930d528249c340bf905a94763f0e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d5b078e8c93918cc15d547e01d45ab0a3f97adae
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99180685"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236847"
 ---
 # <a name="sysdm_db_file_space_usage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "99180685"
 |user_object_reserved_page_count|**bigint**|Gesamtzahl der Seiten, die aus gleichartigen Blöcken für Benutzerobjekte in der Datenbank zugeordnet werden. Nicht verwendete Seiten aus einem zugeordneten Block sind in der Gesamtzahl enthalten.<br /><br /> IAM-Seiten sind nicht enthalten, da sie immer aus gemischten Blöcken zugeordnet werden. PFS-Seiten sind dann enthalten, wenn sie aus einem einheitlichen Block zugeordnet werden.<br /><br /> Mit der Spalte total_pages in der [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) -Katalog Sicht können Sie die Anzahl der reservierten Seiten jeder Zuordnungs Einheit im Benutzerobjekt zurückgeben. Die total_pages-Spalte enthält jedoch IAM-Seiten.|  
 |internal_object_reserved_page_count|**bigint**|Gesamtzahl der Seiten in gleichartigen Blöcken, die für interne Objekte in der Datei zugeordnet werden. Nicht verwendete Seiten aus einem zugeordneten Block sind in der Gesamtzahl enthalten.<br /><br /> IAM-Seiten sind nicht enthalten, da sie immer aus gemischten Blöcken zugeordnet werden. PFS-Seiten sind dann enthalten, wenn sie aus einem einheitlichen Block zugeordnet werden.<br /><br /> Es ist keine Katalogsicht bzw. kein dynamisches Verwaltungsobjekt vorhanden, die bzw. das die Seitenanzahl für jedes interne Objekt zurückgibt.|  
 |mixed_extent_page_count|**bigint**|Gesamtzahl der zugeordneten und nicht zugeordneten Seiten in zugeordneten gemischten Blöcken in der Datei. Gemischte Blöcke enthalten Seiten, die verschiedenen Objekten zugeordnet werden. Diese Gesamtzahl enthält alle IAM-Seiten in der Datei.|
-|modified_extent_page_count|**bigint**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP2 und höher.<br /><br />Gesamtanzahl der Seiten, die seit der letzten vollständigen Datenbanksicherung in den zugeordneten Blöcken der Datei geändert wurden. Mithilfe der geänderten Seitenanzahl kann die Menge der differenziellen Änderungen in der Datenbank seit der letzten vollständigen Sicherung nachverfolgt werden, um zu entscheiden, ob eine differenzielle Sicherung erforderlich ist.|
+|modified_extent_page_count|**bigint**|**Gilt für**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP2 und höher.<br /><br />Gesamtanzahl der Seiten, die seit der letzten vollständigen Datenbanksicherung in den zugeordneten Blöcken der Datei geändert wurden. Mithilfe der geänderten Seitenanzahl kann die Menge der differenziellen Änderungen in der Datenbank seit der letzten vollständigen Sicherung nachverfolgt werden, um zu entscheiden, ob eine differenzielle Sicherung erforderlich ist.|
 |pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
 |distribution_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Die eindeutige, der Verteilung zugeordnete numerische ID.|  
   

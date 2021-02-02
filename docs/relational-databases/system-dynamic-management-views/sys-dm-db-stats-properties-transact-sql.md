@@ -21,12 +21,12 @@ ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e3149b73a7926e8c8a953fd685778431ec445b3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7786afaa6ae9b50f8df1e2c0d9ec73e35dcc249d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99210253"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236038"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,8 +57,8 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |rows_sampled|**bigint**|Gesamtzahl der Zeilen, die für die statistischen Berechnungen in die Stichprobe aufgenommen wurden.|  
 |steps|**int**|Anzahl der Schritte im Histogramm. Weitere Informationen finden Sie unter [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).|  
 |unfiltered_rows|**bigint**|Gesamtanzahl der Zeilen in der Tabelle vor dem Anwenden des Filterausdrucks (für gefilterte Statistiken). Wenn die Statistik nicht gefiltert ist, entspricht „unfiltered_rows“ dem in der rows-Spalte zurückgegebenen Wert.|  
-|modification_counter|**bigint**|Gesamtanzahl der Änderungen für die führende Statistikspalte (auf der das Histogramm basiert) seit der letzten Aktualisierung der Statistik.<br /><br /> Speicher optimierte Tabellen: das Starten [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] und in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] dieser Spalte enthält: Gesamtzahl der Änderungen für die Tabelle seit der letzten Aktualisierung der Statistik oder der Neuerstellung der Datenbank.|  
-|persisted_sample_percent|**float**|Der persistierte Prozentwert für die Stichprobe wird für Aktualisierungen von Statistiken verwendet, die keinen expliziten Prozentwert für die Stichprobenentnahme angibt. Wenn der Wert 0 (null) ist, wird kein persistierter Prozentwert für diese Statistik festgelegt.<br /><br /> **Anwendungsbereich:** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 CU4|  
+|modification_counter|**bigint**|Gesamtanzahl der Änderungen für die führende Statistikspalte (auf der das Histogramm basiert) seit der letzten Aktualisierung der Statistik.<br /><br /> Speicher optimierte Tabellen: das Starten [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] und in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] dieser Spalte enthält: Gesamtzahl der Änderungen für die Tabelle seit der letzten Aktualisierung der Statistik oder der Neuerstellung der Datenbank.|  
+|persisted_sample_percent|**float**|Der persistierte Prozentwert für die Stichprobe wird für Aktualisierungen von Statistiken verwendet, die keinen expliziten Prozentwert für die Stichprobenentnahme angibt. Wenn der Wert 0 (null) ist, wird kein persistierter Prozentwert für diese Statistik festgelegt.<br /><br /> **Anwendungsbereich:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 CU4|  
   
 ## <a name="remarks"></a><a name="Remarks"></a> Hinweise  
  **sys.dm_db_stats_properties** gibt unter den folgenden Bedingungen ein leeres Rowset zurück:  

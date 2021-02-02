@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a0e183d97b17936d5d7e1b414c2d492910a8a8b3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d6d44a187862903181cb19ee2eabafc1fd26ec91
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99207077"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237218"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -112,7 +112,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**findende**|Verwendet eine Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus, sperrt jedoch die Tabellen beim Generieren der Momentaufnahme nicht. Nicht für die Momentaufnahmereplikation gültig.|  
 ||**concurrent_c**|Verwendet eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus, sperrt jedoch die Tabellen beim Generieren der Momentaufnahme nicht. Nicht für die Momentaufnahmereplikation gültig.|  
 |**TaskID**||Diese Eigenschaft wurde als veraltet markiert und wird nicht mehr unterstützt.|  
-|**allow_drop**|**true**|Aktiviert `DROP TABLE` die DLL-Unterstützung für Artikel, die Teil der Transaktions Replikation sind. Unterstützte Mindestversion: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 oder höher und [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Service Pack 1 oder höher. Zusätzlicher Verweis: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+|**allow_drop**|**true**|Aktiviert `DROP TABLE` die DLL-Unterstützung für Artikel, die Teil der Transaktions Replikation sind. Unterstützte Mindestversion: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 oder höher und [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 1 oder höher. Zusätzlicher Verweis: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|Deaktiviert `DROP TABLE` die DLL-Unterstützung für Artikel, die Teil der Transaktions Replikation sind. Dies ist der **Standard** Wert für diese Eigenschaft.|
 |**Null** (Standard)||Gibt die Liste der unterstützten Werte für die- *Eigenschaft* zurück.|  
   

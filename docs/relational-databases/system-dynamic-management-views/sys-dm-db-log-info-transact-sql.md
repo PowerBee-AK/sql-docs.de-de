@@ -21,12 +21,12 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12fe1e95cbb1c7ad26025ee52ce111cb3f835704
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 171cada53538f8e5b615e6096a169b0976b57532
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440825"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236045"
 ---
 # <a name="sysdm_db_log_info-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sys.dm_db_log_info ( database_id )
 
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
 
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Datenbank-ID|
 |file_id|**smallint**|Die Datei-ID des Transaktions Protokolls.|  
@@ -61,9 +61,9 @@ sys.dm_db_log_info ( database_id )
 |vlf_parity|**tinyint** |Parität der [virtuellen Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Wird intern verwendet, um das Ende des Protokolls innerhalb eines VLF zu bestimmen.|
 |vlf_first_lsn|**nvarchar (48)** |[Protokoll Sequenznummer (Log Sequence Number, LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) des ersten Protokolldaten Satzes in der [virtuellen Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 |vlf_create_lsn|**nvarchar (48)** |[Protokoll Sequenznummer (Log Sequence Number, LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) des Protokolldaten Satzes, von dem die [virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)erstellt wurde.|
-|vlf_encryptor_thumbprint|**varbinary(20)**| **Gilt für:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Zeigt den Fingerabdruck der Verschlüsselung der VLF an, wenn die VLF mit [transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md)verschlüsselt ist, andernfalls NULL. |
+|vlf_encryptor_thumbprint|**varbinary(20)**| **Gilt für:** [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] <br><br> Zeigt den Fingerabdruck der Verschlüsselung der VLF an, wenn die VLF mit [transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md)verschlüsselt ist, andernfalls NULL. |
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 Die `sys.dm_db_log_info` dynamische Verwaltungsfunktion ersetzt die- `DBCC LOGINFO` Anweisung.    
  
 ## <a name="permissions"></a>Berechtigungen  

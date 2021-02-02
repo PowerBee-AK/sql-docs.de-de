@@ -21,12 +21,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: 7261cde3df2e1aa31e7a7ab0d5ccbd5f8e8d3e54
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a37a592866c8fcfdc12e5b84657bc7fa7166ee81
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161399"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237885"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "99161399"
 |**server_id**|**int**|Lokale ID des Verbindungsservers.|  
 |**name**|**sysname**|Wenn **server_id** = 0 ist, ist der zurückgegebene Wert der Servername.<br /><br /> Wenn **server_id** > 0, ist der zurückgegebene Wert der lokale Name des Verbindungs Servers.|  
 |**product**|**sysname**|Der Produktname des Verbindungsservers. Der Wert "SQL Server" gibt eine andere Instanz von an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**ab**|**sysname**|Der Name des OLE DB-Anbieters zum Herstellen einer Verbindung mit Verbindungsservern.<br /><br />Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird der Wert "sqlncli" standardmäßig dem [Microsoft OLE DB-Treiber für SQL Server (msoledbsql)](../../connect/oledb/oledb-driver-for-sql-server.md) zugeordnet. In früheren Versionen wird der Wert "sqlncli" dem [SQL Server Native Client OLE DB-Anbieters (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md)zugeordnet.|  
+|**ab**|**sysname**|Der Name des OLE DB-Anbieters zum Herstellen einer Verbindung mit Verbindungsservern.<br /><br />Ab [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] wird der Wert "sqlncli" standardmäßig dem [Microsoft OLE DB-Treiber für SQL Server (msoledbsql)](../../connect/oledb/oledb-driver-for-sql-server.md) zugeordnet. In früheren Versionen wird der Wert "sqlncli" dem [SQL Server Native Client OLE DB-Anbieters (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md)zugeordnet.|  
 |**data_source**|**nvarchar(4000)**|Die Verbindungseigenschaft der OLE DB-Datenquelle.|  
 |**location**|**nvarchar(4000)**|Die Verbindungseigenschaft des OLE DB-Standortes. Ist NULL, wenn nichts angegeben wird.|  
 |**provider_string**|**nvarchar(4000)**|Die Verbindungseigenschaft der OLE DB-Anbieterzeichenfolge.<br /><br /> Ist NULL, wenn der Aufrufer nicht über die `ALTER ANY LINKED SERVER` Berechtigung verfügt.|  
@@ -60,7 +60,7 @@ ms.locfileid: "99161399"
 |**is_nonsql_subscriber**|**bit**|Der Server ist ein Replikationsabonnent ohne SQL Server.|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|Wenn diese Option auf 1 festgelegt ist und eine remote gespeicherte Prozedur aufgerufen wird, wird eine verteilte Transaktion gestartet und bei MS DTC eingetragen. Weitere Informationen finden Sie unter [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)erläutert.|  
 |**modify_date**|**datetime**|Datum, an dem die Serverinformationen zuletzt geändert wurden.|  
-|**is_rda_server**|**bit**|**Gilt für:** Ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] .<br /><br />Server ist Remote Data Archive enable (Stretch-fähig). Weitere Informationen finden Sie unter [Aktivieren von Stretch Database auf dem Server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).|
+|**is_rda_server**|**bit**|**Gilt für:** Ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] .<br /><br />Server ist Remote Data Archive enable (Stretch-fähig). Weitere Informationen finden Sie unter [Aktivieren von Stretch Database auf dem Server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).|
   
 ## <a name="permissions"></a>Berechtigungen  
  Der Wert in **provider_string** ist immer NULL, wenn der Aufrufer nicht über die ALTER ANY LINKED SERVER-Berechtigung verfügt.  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 0f685d3d6782aa003d36788757ed76bc41fdb2de
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a34af15094cdd70833c16b2e3b3bfa1ce0ca4fca
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99193734"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235961"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**supports_sparse_files**|**tinyint**|Gibt an, ob das Volume Sparsedateien unterstützt.  Kann unter Windows nicht NULL sein und gibt bei Linux-Betriebssystem den Wert NULL zurück.|  
 |**is_read_only**|**tinyint**|Gibt an, ob das Volume derzeit als schreibgeschützt gekennzeichnet ist. Darf nicht NULL sein.|  
 |**is_compressed**|**tinyint**|Gibt an, ob dieses Volume derzeit komprimiert ist. Kann unter Windows nicht NULL sein und gibt bei Linux-Betriebssystem den Wert NULL zurück.|  
-|**incurs_seek_penalty**|**tinyint**|Gibt den Typ des Speichers an, der dieses Volume unterstützt. Mögliche Werte:<br /><br />0: keine Such Strafe auf diesem Volume, normalerweise wenn das Speichergerät PMM oder SSD ist<br /><br />1: Durchsuchen des Volumes auf diesem Volume (in der Regel, wenn das Speichergerät HDD ist)<br /><br />2: der Speichertyp kann nicht ermittelt werden, wenn sich das Volume in einem UNC-Pfad oder in bereitgestellten Freigaben befindet.<br /><br />NULL: der Speichertyp kann unter dem Linux-Betriebssystem nicht bestimmt werden.<br /><br />**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] )|  
+|**incurs_seek_penalty**|**tinyint**|Gibt den Typ des Speichers an, der dieses Volume unterstützt. Mögliche Werte:<br /><br />0: keine Such Strafe auf diesem Volume, normalerweise wenn das Speichergerät PMM oder SSD ist<br /><br />1: Durchsuchen des Volumes auf diesem Volume (in der Regel, wenn das Speichergerät HDD ist)<br /><br />2: der Speichertyp kann nicht ermittelt werden, wenn sich das Volume in einem UNC-Pfad oder in bereitgestellten Freigaben befindet.<br /><br />NULL: der Speichertyp kann unter dem Linux-Betriebssystem nicht bestimmt werden.<br /><br />**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (beginnend mit [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] )|  
   
 ## <a name="security"></a>Sicherheit  
   

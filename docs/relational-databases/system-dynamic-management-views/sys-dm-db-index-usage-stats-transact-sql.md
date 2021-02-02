@@ -21,12 +21,12 @@ ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5aa1d0b79ab6fbafad932e20bf8d3c46212d596f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b72a95ed752275c25be3d9fab307b9e066f5beb8
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99190605"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236103"
 ---
 # <a name="sysdm_db_index_usage_stats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "99190605"
   
  Falls ein Index verwendet wird, wird **sys.dm_db_index_usage_stats** eine Zeile hinzugefügt, wenn nicht bereits eine Zeile für diesen Index vorhanden ist. Beim Hinzufügen der Zeile sind deren Zähler anfänglich auf 0 festgelegt.  
   
- Während des Upgrades auf [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] werden Einträge in sys.dm_db_index_usage_stats entfernt. Ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] werden Einträge wie vor gespeichert [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
+ Während des Upgrades auf [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] werden Einträge in sys.dm_db_index_usage_stats entfernt. Ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] werden Einträge wie vor gespeichert [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
 ## <a name="permissions"></a>Berechtigungen  
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ist die- `VIEW SERVER STATE` Berechtigung erforderlich.   

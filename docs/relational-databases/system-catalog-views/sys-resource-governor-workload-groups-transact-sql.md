@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: d89b9210d0da27b3b4d45e8f4d2652960cf0c1d4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d6d391ef9e6ed2139944246911bd47e46bc87bbc
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99183638"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236488"
 ---
 # <a name="sysresource_governor_workload_groups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "99183638"
 |max_dop|**int**|Maximaler Grad der Parallelität für die Arbeitsauslastungsgruppe. Der Standardwert 0 verwendet globale Einstellungen. Lässt keine NULL-Werte zu.<br /><br /> **Knoten:** Mit dieser Einstellung wird die Abfrage Option **MAXDOP** überschrieben.|  
 |group_max_requests|**int**|Maximale Anzahl gleichzeitiger Anforderungen. Der Standardwert 0 bedeutet, dass kein Grenzwert festgelegt ist. Lässt keine NULL-Werte zu.|  
 |pool_id|**int**|ID des Ressourcenpools, den diese Arbeitsauslastungsgruppe verwendet.|  
-|external_pool_id|**int**|**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] und höher.<br /><br /> ID des externen Ressourcenpools, der von dieser Arbeits Auslastungs Gruppe verwendet wird.|  
+|external_pool_id|**int**|**Gilt für**:  [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] und höher.<br /><br /> ID des externen Ressourcenpools, der von dieser Arbeits Auslastungs Gruppe verwendet wird.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die Katalogsicht zeigt die gespeicherten Metadaten an. Um die Konfiguration im Arbeitsspeicher anzuzeigen, verwenden Sie die entsprechende dynamische Verwaltungs Sicht, [sys.dm_resource_governor_workload_groups &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md).  

@@ -22,12 +22,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 208ea5a903e8a5e3517f5cf663a52a521c6cf9a7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b8957c55955ba24131f6cc5692e17b86cd2154a4
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99190598"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236161"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +66,7 @@ sys.dm_db_index_physical_stats (
  *object_id* \| NULL \| 0 \| Standard  
  Die Objekt-ID der Tabelle oder Sicht, in der sich der Index befindet. *object_id* ist vom Datentyp **int**.  
   
- Gültige Eingaben sind die ID einer Tabelle und Sicht, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig. Ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] enthalten gültige Eingaben auch den Service Broker-Warteschlangen Namen oder den internen Warteschlangen Tabellennamen. Wenn Standardparameter angewendet werden (d. h. alle Objekte, alle Indizes usw.), werden die Fragmentierungs Informationen für alle Warteschlangen in das Resultset eingeschlossen.  
+ Gültige Eingaben sind die ID einer Tabelle und Sicht, NULL, 0 oder DEFAULT. Die Standardeinstellung ist 0. NULL, 0 und DEFAULT sind in diesem Kontext gleichwertig. Ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] enthalten gültige Eingaben auch den Service Broker-Warteschlangen Namen oder den internen Warteschlangen Tabellennamen. Wenn Standardparameter angewendet werden (d. h. alle Objekte, alle Indizes usw.), werden die Fragmentierungs Informationen für alle Warteschlangen in das Resultset eingeschlossen.  
   
  Geben Sie NULL an, wenn Informationen zu allen Tabellen und Sichten in der angegebenen Datenbank zurückgegeben werden sollen. Wenn Sie für *object_id* NULL angeben, müssen Sie auch für *index_id* und *partition_number* NULL angeben.  
   
@@ -417,7 +417,7 @@ FROM sys.dm_db_index_physical_stats (db_id(),
   
 ||  
 |-|  
-|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] bis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Gilt für**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] bis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
  In den folgenden Beispielen wird gezeigt, wie Sie Server Broker-Warteschlangen für die Fragmentierung Abfragen.  
   

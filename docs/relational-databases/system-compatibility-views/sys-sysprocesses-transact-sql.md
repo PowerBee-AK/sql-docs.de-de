@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6b0a49e257760e44398da7426933f6a9050a62f2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8cf9c34360cfabff16dd4823738168b9611a90ba
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99160672"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235881"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "99160672"
 |stmt_start|**int**|Der Startoffset der aktuellen SQL-Anweisung für den angegebenen sql_handle-Wert.|  
 |stmt_end|**int**|Der Endoffset der aktuellen SQL-Anweisung für den angegebenen sql_handle-Wert.<br /><br /> -1 = Die aktuelle Anweisung wird bis zum Ende der Ergebnisse ausgeführt, die von der fn_get_sql-Funktion für den angegebenen sql_handle-Wert zurückgegeben werden.|  
 |request_id|**int**|Die ID der Anforderung. Hiermit werden Anforderungen identifiziert, die in einer bestimmten Sitzung ausgeführt werden.|
-|page_resource |**Binär (8)** |**Gilt für:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> Eine 8-Byte-hexadezimale Darstellung der Seiten Ressource, wenn die `waitresource` Spalte eine Seite enthält. |  
+|page_resource |**Binär (8)** |**Gilt für:** [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] <br /><br /> Eine 8-Byte-hexadezimale Darstellung der Seiten Ressource, wenn die `waitresource` Spalte eine Seite enthält. |  
   
 ## <a name="remarks"></a>Bemerkungen  
  Wenn ein Benutzer die VIEW SERVER STATE-Berechtigung auf dem Server besitzt, kann er alle zurzeit ausgeführten Sitzungen in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzeigen; andernfalls wird dem Benutzer nur die aktuelle Sitzung angezeigt.  

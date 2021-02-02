@@ -21,12 +21,12 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: 429f8049ef0b92168be5e3e0fc90c91e3d37224e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 10756b0297cdc731468ea8983c5378d5b380fef9
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472811"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236014"
 ---
 # <a name="sysdm_db_page_info-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "97472811"
 Gibt Informationen zu einer Seite in einer Datenbank zurück.  Die-Funktion gibt eine Zeile zurück, die die Header Informationen der Seite enthält, einschließlich `object_id` , `index_id` und `partition_id` .  Dank dieser Funktion ist die Verwendung von `DBCC PAGE` in den meisten Fällen nicht mehr erforderlich.
 
 > [!NOTE]
-> `sys.dm_db_page_info` wird derzeit nur in und höher unterstützt [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .
+> `sys.dm_db_page_info` wird derzeit nur in und höher unterstützt [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] .
 
 
 ## <a name="syntax"></a>Syntax   
@@ -58,7 +58,7 @@ Bestimmt die Detailebene in der Ausgabe der Funktion. "Limited" gibt NULL-Werte 
 
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
 
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |database_id |INT |Datenbank-ID |
 |file_id |INT |Datei-ID |
@@ -114,7 +114,7 @@ Bestimmt die Detailebene in der Ausgabe der Funktion. "Limited" gibt NULL-Werte 
 |xdes_id |nvarchar (64) |Letzte von m_reserved beigetragene Transaktion <br> Nur zu Debuggingzwecken |
 ||||
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 Die `sys.dm_db_page_info` dynamische Verwaltungsfunktion gibt Seiten Informationen wie `page_id` , `file_id` , `index_id` `object_id` usw. zurück, die in einem Seitenkopf vorhanden sind. Diese Informationen sind für die Problembehandlung und das Debuggen verschiedener Leistungsprobleme (Sperr-und Latchkonflikte) und Beschädigungs Probleme nützlich.
 
 `sys.dm_db_page_info` kann anstelle der- `DBCC PAGE` Anweisung in vielen Fällen verwendet werden, aber es werden nur die Seitenheader Informationen und nicht der Text der Seite zurückgegeben. `DBCC PAGE` wird immer noch für Anwendungsfälle benötigt, in denen der gesamte Inhalt der Seite erforderlich ist.

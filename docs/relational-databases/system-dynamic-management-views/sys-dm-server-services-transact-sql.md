@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: fd00b91eb2ba5018a7ae9865f323ac2f3faeb39d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7b37fc021c8d324076e81c8f864099ddd9fdad14
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99134588"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235951"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "99134588"
 |Dateiname|**nvarchar(256)**|Der Pfad und Dateiname der ausführbaren Dienstdatei. Darf nicht NULL sein.|  
 |is_clustered|**nvarchar (1)**|Gibt an, ob der Dienst als Ressource eines gruppierten Servers installiert ist. Darf nicht NULL sein.|  
 |cluster_nodename|**nvarchar(256)**|Der Name des Clusterknotens, auf dem der Dienst installiert ist. Lässt NULL-Werte zu.|
-|instant_file_initialization_enabled|**nvarchar (1)**|Gibt an, ob die sofortige Datei Initialisierung für den Dienst aktiviert ist [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .<br /><br />Y = die sofortige Datei Initialisierung ist für den Dienst aktiviert.<br /><br />N = sofortige Datei Initialisierung ist für den Dienst deaktiviert.<br /><br /> Lässt NULL-Werte zu.<br /><br /> **Hinweis:** Gilt nicht für andere Dienste, z. b. die SQL Server-Agent.<br /><br /> **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Beginnend mit [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 und [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 und höher).|  
+|instant_file_initialization_enabled|**nvarchar (1)**|Gibt an, ob die sofortige Datei Initialisierung für den Dienst aktiviert ist [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .<br /><br />Y = die sofortige Datei Initialisierung ist für den Dienst aktiviert.<br /><br />N = sofortige Datei Initialisierung ist für den Dienst deaktiviert.<br /><br /> Lässt NULL-Werte zu.<br /><br /> **Hinweis:** Gilt nicht für andere Dienste, z. b. die SQL Server-Agent.<br /><br /> **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Beginnend mit [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 und [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 und höher).|  
 
 ## <a name="security"></a>Sicherheit  
   

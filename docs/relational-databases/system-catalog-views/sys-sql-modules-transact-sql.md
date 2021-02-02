@@ -21,12 +21,12 @@ ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c44ef469dfa60e7c4ac96386ab87812fab447555
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 58e1f2042f10d1b4f06482fdfb13f07cf5edfa3e
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99210287"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237704"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,8 +47,8 @@ ms.locfileid: "99210287"
 |**null_on_null_input**|**bit**|Das Modul wurde so deklariert, dass auf eine NULL-Eingabe eine NULL-Ausgabe folgt.|  
 |**execute_as_principal_id**|**Int**|Die ID des Datenbankprinzipals EXECUTE AS.<br /><br /> NULL als Standardwert oder bei Verwendung von EXECUTE AS CALLER.<br /><br /> ID des angegebenen Prinzipals, wenn EXECUTE als Self oder EXECUTE AS ausgeführt wird \<principal> .<br /><br /> -2 = EXECUTE AS OWNER.|  
 |**uses_native_compilation**|**bit**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = nicht systemintern kompiliert<br /><br /> 1 = systemintern kompiliert<br /><br /> Der Standardwert ist 0.|  
-|**is_inlineable**|**bit**|**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] und höher.<br/><br />Gibt an, ob das Modul Inline fähig ist oder nicht. Die Inline barkeit basiert auf den [hier](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements)angegebenen Bedingungen.<br /><br /> 0 = nicht Inline fähig<br /><br /> 1 = ist Inline fähig. <br /><br /> Bei skalaren UDFs ist der Wert 1, wenn die UDF offline ist, andernfalls 0. Sie enthält immer den Wert 1 für Inline-TVFs und 0 für alle anderen Modultypen.<br />|  
-|**inline_type**|**bit**|**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] und höher.<br /><br />Gibt an, ob Inlining für das Modul aktuell aktiviert ist. <br /><br />0 = Inlining ist ausgeschaltet<br /><br /> 1 = Inlining ist eingeschaltet.<br /><br /> Bei skalaren UDFs ist der Wert 1, wenn Inlining aktiviert ist (explizit oder implizit). Der Wert ist für Inline-TVFs immer 1 und 0 für andere Modultypen.<br />|  
+|**is_inlineable**|**bit**|**Gilt für**:  [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] und höher.<br/><br />Gibt an, ob das Modul Inline fähig ist oder nicht. Die Inline barkeit basiert auf den [hier](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements)angegebenen Bedingungen.<br /><br /> 0 = nicht Inline fähig<br /><br /> 1 = ist Inline fähig. <br /><br /> Bei skalaren UDFs ist der Wert 1, wenn die UDF offline ist, andernfalls 0. Sie enthält immer den Wert 1 für Inline-TVFs und 0 für alle anderen Modultypen.<br />|  
+|**inline_type**|**bit**|**Gilt für**:  [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] und höher.<br /><br />Gibt an, ob Inlining für das Modul aktuell aktiviert ist. <br /><br />0 = Inlining ist ausgeschaltet<br /><br /> 1 = Inlining ist eingeschaltet.<br /><br /> Bei skalaren UDFs ist der Wert 1, wenn Inlining aktiviert ist (explizit oder implizit). Der Wert ist für Inline-TVFs immer 1 und 0 für andere Modultypen.<br />|  
 
   
 ## <a name="remarks"></a>Bemerkungen  

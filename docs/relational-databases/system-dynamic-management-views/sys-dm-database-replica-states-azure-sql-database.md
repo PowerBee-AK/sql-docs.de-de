@@ -19,12 +19,12 @@ helpviewer_keywords:
 - sys.dm_database_replica_states dynamic management view
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 9eb132b607edda5dacdd14f53f5b19ff5292f1b2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6696c88262753f12651b57b5e227c80c7c61ae83
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99180695"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237519"
 ---
 # <a name="sysdm_database_replica_states-azure-sql-database"></a>sys.dm_database_replica_states (Azure SQL-Datenbank)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "99180695"
 |**last_commit_lsn**|**numeric(25,0)**|Tatsächliche Protokollfolgenummer, die dem letzten Commitdatensatz im Transaktionsprotokoll entspricht.<br /><br /> Entspricht bei der primären Datenbank dem zuletzt verarbeiteten Commitdatensatz. In den Zeilen für sekundäre Datenbanken wird die Protokollfolgenummer angezeigt, die das sekundäre Replikat dem primären Replikat gesendet hat.<br /><br /> Beim sekundären Replikat ist dies der letzte Commitdatensatz, der wiederholt wurde.|  
 |**last_commit_time**|**datetime**|Die Zeit, die dem letzten Commitdatensatz entspricht.<br /><br /> Bei der sekundären Datenbank ist diese Zeit mit der für die primäre Datenbank identisch.<br /><br /> Auf dem primären Replikat zeigt jede Zeile für die sekundäre Datenbank die Zeit an, die das sekundäre Replikat, das die sekundäre Datenbank hostet, dem primären Replikat zurückgemeldet hat. Der Unterschied in der Zeit zwischen der Zeile der primären Datenbank und der angegebenen sekundären Datenbankzeile stellt ungefähr die Recovery Point Objective (RPO) dar, wobei angenommen wird, dass der Wiederholungs Prozess abgefangen wurde und dass der Fortschritt vom sekundären Replikat an das primäre Replikat zurückgemeldet wurde.|  
 |**low_water_mark_for_ghosts**|**bigint**|Eine monoton steigende Zahl für die Datenbank, die eine Untergrenze angibt, die für das Cleanup inaktiver Datensätze verwendet wurde. Wenn diese Zahl im Zeitverlauf nicht zunimmt, weist dies darauf hin, dass das Cleanup für inaktive Datensätze möglicherweise nicht erfolgt ist. Um zu entscheiden, welche Zeilen mit inaktiven Datensätzen bereinigt werden sollen, verwendet das primäre Replikat den Mindestwert dieser Spalte für alle Verfügbarkeitsreplikate (einschließlich des primären Replikats) für diese Datenbank.|  
-|**secondary_lag_seconds**|**bigint**|Die Anzahl der Sekunden, die das sekundäre Replikat während der Synchronisierung hinter dem primären Replikat liegt.<br /><br />**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] und höher.|  
+|**secondary_lag_seconds**|**bigint**|Die Anzahl der Sekunden, die das sekundäre Replikat während der Synchronisierung hinter dem primären Replikat liegt.<br /><br />**Gilt für:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] und höher.|  
 |**quorum_commit_lsn**|**numeric(25,0)**|Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|
 |**quorum_commit_time**|**datetime**|Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|
 

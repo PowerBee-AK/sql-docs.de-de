@@ -21,12 +21,12 @@ ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0384c81a0ff80e9dda9c97d793c99d1ee8e28f54
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 79b0df20ec7c4db142593ed628f7cfa17974cf9f
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184799"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236829"
 ---
 # <a name="sysdm_os_schedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,10 +62,10 @@ ms.locfileid: "99184799"
 |memory_object_address|**varbinary(8)**|Speicheradresse des Speicherobjekts des Zeitplanungsmoduls. Lässt keine NULL-Werte zu.|  
 |task_memory_object_address|**varbinary(8)**|Speicheradresse des Speicherobjekts des Tasks. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [sys.dm_os_memory_objects &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Macht das von SQLOS verwendete Zeitplanungsmodul-Quantum verfügbar.|  
-| total_cpu_usage_ms |**bigint**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] und höher <br><br> Gesamte von diesem Scheduler verbrauchte CPU, wie von nicht präemptiven Workern gemeldet. Lässt keine NULL-Werte zu.|
+| total_cpu_usage_ms |**bigint**|**Gilt für**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] und höher <br><br> Gesamte von diesem Scheduler verbrauchte CPU, wie von nicht präemptiven Workern gemeldet. Lässt keine NULL-Werte zu.|
 |total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Gibt die Drosselung basierend auf dem [Service Level-Ziel](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective)an, ist für nicht-Azure-Versionen von immer 0 (null) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lässt NULL-Werte zu.|
-|total_scheduler_delay_ms|**bigint**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] und höher <br><br> Die Zeit zwischen dem Wechsel zwischen einem Worker und einem anderen Wechsel in. Kann darauf zurückzuführen sein, dass ein präemptiver Worker die Planung des nächsten nicht-präemptiven Workers verzögert oder aufgrund des Betriebssystems, das Threads aus anderen Prozessen plant. Lässt keine NULL-Werte zu.|
-|ideal_workers_limit|**int**|**Gilt für**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höher <br><br> Wie viele Worker im Idealfall im Scheduler sein sollten. Wenn die aktuellen Worker den Grenzwert aufgrund einer unausgeglichenen Aufgaben Auslastung überschreiten, werden Sie nach dem Leerlauf gekürzt. Lässt keine NULL-Werte zu.|
+|total_scheduler_delay_ms|**bigint**|**Gilt für**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] und höher <br><br> Die Zeit zwischen dem Wechsel zwischen einem Worker und einem anderen Wechsel in. Kann darauf zurückzuführen sein, dass ein präemptiver Worker die Planung des nächsten nicht-präemptiven Workers verzögert oder aufgrund des Betriebssystems, das Threads aus anderen Prozessen plant. Lässt keine NULL-Werte zu.|
+|ideal_workers_limit|**int**|**Gilt für**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] und höher <br><br> Wie viele Worker im Idealfall im Scheduler sein sollten. Wenn die aktuellen Worker den Grenzwert aufgrund einer unausgeglichenen Aufgaben Auslastung überschreiten, werden Sie nach dem Leerlauf gekürzt. Lässt keine NULL-Werte zu.|
 |pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen

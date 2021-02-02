@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: a723e1278c0319e4dd80bc6bb69aa58d9a9a8d9a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ac96eec67c1421e55bc4533c995a85aa6c404a4e
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99204843"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236080"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "99204843"
 -   **TransparentDataEncryption.** Gibt an, dass eine Datenbank mit transparenter Datenverschlüsselung verschlüsselt wird. Um die transparente Datenverschlüsselung zu entfernen, verwenden Sie die ALTER DATABASE-Anweisung. Weitere Informationen finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
 
 > [!NOTE]
-> Ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Service Pack 1 sind diese Features mit Ausnahme von **transparentdataencryption.** sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für mehrere Editionen verfügbar und nicht nur für die Enterprise oder Developer Edition.
+> Ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 1 sind diese Features mit Ausnahme von **transparentdataencryption.** sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für mehrere Editionen verfügbar und nicht nur für die Enterprise oder Developer Edition.
 
  Wenn Sie feststellen möchten, ob in einer Datenbank Funktionen verwendet werden, die nur in bestimmten Editionen verfügbar sind, führen Sie die folgende Anweisung in der Datenbank aus:  
   

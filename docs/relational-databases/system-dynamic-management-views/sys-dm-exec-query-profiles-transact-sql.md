@@ -21,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b1f8aa494a01a8fc99fc48efc79a66b80458524
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4777dea76c24aaeab7f64a761c4d13b49c644af0
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161365"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235873"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -84,7 +84,7 @@ Die zurückgegebenen Leistungsindikatoren gelten pro Operator und pro Thread. Di
   
 -   Bei einem parallelen Scan meldet diese DMV Leistungsindikatoren für jeden der parallelen Threads für den Scan.
  
-Ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 ist die *Standard Infrastruktur für die Abfrage Ausführungs Statistik-Profilerstellung* parallel mit einer vereinfachten Profil Erstellungs Infrastruktur für die *Abfrage Ausführungs Statistik* vorhanden. `SET STATISTICS XML ON` und `SET STATISTICS PROFILE ON` verwenden stets die *Standardprofil Erstellungs Infrastruktur für die Abfrage Ausführungs Statistik*. Um aufgefüllt `sys.dm_exec_query_profiles` zu werden, muss eine der Abfrage Profil Erstellungs Infrastrukturen aktiviert werden. Weitere Informationen finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md).    
+Ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 ist die *Standard Infrastruktur für die Abfrage Ausführungs Statistik-Profilerstellung* parallel mit einer vereinfachten Profil Erstellungs Infrastruktur für die *Abfrage Ausführungs Statistik* vorhanden. `SET STATISTICS XML ON` und `SET STATISTICS PROFILE ON` verwenden stets die *Standardprofil Erstellungs Infrastruktur für die Abfrage Ausführungs Statistik*. Um aufgefüllt `sys.dm_exec_query_profiles` zu werden, muss eine der Abfrage Profil Erstellungs Infrastrukturen aktiviert werden. Weitere Informationen finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
 > Die Abfrage, die untersucht wird, muss gestartet werden, **nachdem** die Infrastruktur für die Abfrage Profilerstellung aktiviert wurde, sodass Sie nach dem Start der Abfrage keine Ergebnisse in erzeugt `sys.dm_exec_query_profiles` . Weitere Informationen zum Aktivieren der Abfrage Profil Erstellungs Infrastrukturen finden Sie unter [Infrastruktur für die Abfrage Profilerstellung](../../relational-databases/performance/query-profiling-infrastructure.md).

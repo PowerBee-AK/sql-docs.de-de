@@ -21,12 +21,12 @@ ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98a753e6eb1a61aa4be832188919ed1ed0e8bb36
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e0b0252dc739f688e88575f11715594a3972e256
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99190163"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235848"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "99190163"
 Eine interne Komponente mit der Bezeichnung SQLOS erstellt Knotenstrukturen, die die Lage des Hardwareprozessors imitieren. Diese Strukturen können mithilfe von [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md) geändert werden, um benutzerdefinierte Knoten Layouts zu erstellen.  
 
 > [!NOTE]
-> Ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] wird von automatisch Soft-NUMA für bestimmte Hardware Konfigurationen verwendet. Weitere Informationen finden Sie unter [Automatische Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
+> Ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] wird von automatisch Soft-NUMA für bestimmte Hardware Konfigurationen verwendet. Weitere Informationen finden Sie unter [Automatische Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
   
 Die folgende Tabelle enthält Informationen zu diesen Knoten.  
   
