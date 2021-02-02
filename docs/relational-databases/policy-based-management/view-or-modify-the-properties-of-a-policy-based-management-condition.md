@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b4948f353ea34ff40ace9b10f1ef4815c4e3fd1d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ffdb11c75726469d61c54c9a2cc12ff18a31ca1a
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773085"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076182"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>Anzeigen oder Ändern der Eigenschaften einer Bedingung der richtlinienbasierten Verwaltung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In diesem Thema wird beschrieben, wie Sie die Eigenschaften einer Bedingung der richtlinienbasierten Verwaltung mithilfe von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[tsql](../../includes/tsql-md.md)]ändern.  
+  In diesem Thema wird beschrieben, wie Sie die Eigenschaften einer Bedingung der richtlinienbasierten Verwaltung mithilfe von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[tsql](../../includes/tsql-md.md)]ändern.  
   
 
   
@@ -38,15 +38,15 @@ ms.locfileid: "85773085"
   
 #### <a name="to-view-or-modify-a-conditions-properties"></a>So zeigen Sie die Eigenschaften einer Bedingung an bzw. ändern sie  
   
-1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen, um den Server zu erweitern, der die Bedingungen enthält, die Sie anzeigen oder ändern möchten.  
+1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, der die Bedingungen enthält, die Sie anzeigen oder ändern möchten.  
   
 2.  Klicken Sie auf das Pluszeichen, um den Ordner **Verwaltung** zu erweitern.  
   
-3.  Klicken Sie auf das Pluszeichen, um **Richtlinienverwaltung**zu erweitern.  
+3.  Klicken Sie auf das Pluszeichen, um **Richtlinienverwaltung** zu erweitern.  
   
 4.  Klicken Sie auf das Pluszeichen, um den Ordner **Bedingungen** zu erweitern.  
   
-5.  Klicken Sie mit der rechten Maustaste auf die Bedingung, die Sie anzeigen oder bearbeiten möchten, und wählen Sie **Eigenschaften**aus. Weitere Informationen zu den Optionen im **Dialogfeld „Bedingung öffnen –** _Bedingungsname_“ finden Sie unter [Dialogfeld „Neue Bedingung erstellen“ oder „Bedingung öffnen“, Seite „Allgemein“](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md), [Dialogfeld „Bedingung öffnen“, Seite „Abhängige Richtlinien“](../../relational-databases/policy-based-management/open-condition-dialog-box-dependent-policies-page.md), [Dialogfeld „Neue Bedingung erstellen“ oder „Bedingung öffnen“, Seite „Beschreibung“](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-description-page.md) und [Dialogfeld „Erweiterte Bearbeitung &#40;Bedingung&#41;“](../../relational-databases/policy-based-management/advanced-edit-condition-dialog-box.md).  
+5.  Klicken Sie mit der rechten Maustaste auf die Bedingung, die Sie anzeigen oder bearbeiten möchten, und wählen Sie **Eigenschaften** aus. Weitere Informationen zu den Optionen im **Dialogfeld „Bedingung öffnen –** _Bedingungsname_“ finden Sie unter [Dialogfeld „Neue Bedingung erstellen“ oder „Bedingung öffnen“, Seite „Allgemein“](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md), [Dialogfeld „Bedingung öffnen“, Seite „Abhängige Richtlinien“](../../relational-databases/policy-based-management/open-condition-dialog-box-dependent-policies-page.md), [Dialogfeld „Neue Bedingung erstellen“ oder „Bedingung öffnen“, Seite „Beschreibung“](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-description-page.md) und [Dialogfeld „Erweiterte Bearbeitung &#40;Bedingung&#41;“](../../relational-databases/policy-based-management/advanced-edit-condition-dialog-box.md).  
   
 6.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
 

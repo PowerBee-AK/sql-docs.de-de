@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cecd24ccf5aba44beff0a258ee75cf26722358f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36c15a9d7de2c613b3a25b16827bfcc037393524
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773904"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076222"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Erstellen eines Abonnements für einen Nicht-SQL Server-Abonnenten
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In diesem Thema wird beschrieben, wie ein Abonnement für einen Nicht-SQL Server-Abonnenten in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird. Die Transaktionsreplikation und die Momentaufnahmereplikation unterstützen das Veröffentlichen von Daten an Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten. Informationen zu den unterstützten Abonnentenplattformen finden Sie unter [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)erstellt wird.  
+  In diesem Thema wird beschrieben, wie ein Abonnement für einen Nicht-SQL Server-Abonnenten in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erstellt wird. Die Transaktionsreplikation und die Momentaufnahmereplikation unterstützen das Veröffentlichen von Daten an Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abonnenten. Informationen zu den unterstützten Abonnentenplattformen finden Sie unter [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)erstellt wird.  
   
  **In diesem Thema**  
   
@@ -41,9 +41,9 @@ ms.locfileid: "85773904"
   
 2.  Erstellen Sie mithilfe des Assistenten für neue Veröffentlichung eine Veröffentlichung. Weitere Informationen zum Erstellen von Veröffentlichungen finden Sie unter [Erstellen einer Veröffentlichung](../../relational-databases/replication/publish/create-a-publication.md) und [Erstellen einer Veröffentlichung aus einer Oracle-Datenbank](../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md). Geben Sie im Assistenten für neue Veröffentlichung folgende Optionen an:  
   
-    -   Wählen Sie auf der Seite **Veröffentlichungstyp** entweder **Momentaufnahmeveröffentlichung** oder **Transaktionsveröffentlichung**aus.  
+    -   Wählen Sie auf der Seite **Veröffentlichungstyp** entweder **Momentaufnahmeveröffentlichung** oder **Transaktionsveröffentlichung** aus.  
   
-    -   Heben Sie auf der Seite **Momentaufnahme-Agent** die Auswahl von **Momentaufnahme sofort erstellen**auf.  
+    -   Heben Sie auf der Seite **Momentaufnahme-Agent** die Auswahl von **Momentaufnahme sofort erstellen** auf.  
   
          Die Erstellung der Momentaufnahme erfolgt nach der Aktivierung der Veröffentlichung für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten, um sicherzustellen, dass der Momentaufnahme-Agent eine Momentaufnahme und Initialisierungsskripts generiert, die für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten geeignet sind.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "85773904"
   
 3.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Wählen Sie auf der Seite **Abonnementoptionen** den Wert **Wahr** für die Option **Nicht-SQL Server-Abonnenten zulassen**aus. Beim Auswählen dieser Option werden eine Reihe von Eigenschaften so geändert, dass die Veröffentlichung mit Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten kompatibel ist.  
+4.  Wählen Sie auf der Seite **Abonnementoptionen** den Wert **Wahr** für die Option **Nicht-SQL Server-Abonnenten zulassen** aus. Beim Auswählen dieser Option werden eine Reihe von Eigenschaften so geändert, dass die Veröffentlichung mit Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten kompatibel ist.  
   
     > [!NOTE]  
     >  Durch die Auswahl von **Wahr** wird der Wert der Artikeleigenschaft **pre_creation_cmd** auf 'drop' festgelegt. Mit dieser Einstellung wird angegeben, dass bei der Replikation auf dem Abonnenten eine Tabelle gelöscht werden soll, wenn sie mit dem Namen der Tabelle in dem Artikel übereinstimmt. Wenn auf dem Abonnenten Tabellen vorhanden sind, die Sie aufheben möchten, verwenden Sie für jeden Artikel die gespeicherte Prozedur [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) . Geben Sie für **pre_creation_cmd**: `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`den Wert 'none' an.  
@@ -84,7 +84,7 @@ ms.locfileid: "85773904"
   
 5.  Wählen Sie im Dialogfeld **Nicht-SQL Server-Abonnenten hinzufügen** den Abonnententyp aus.  
   
-6.  Geben Sie im Feld **Datenquellenname**einen Wert ein:  
+6.  Geben Sie im Feld **Datenquellenname** einen Wert ein:  
   
     -   Bei Oracle ist dies der von Ihnen konfigurierte Transparent Network Substrate-(TNS-)Name.  
   
@@ -102,11 +102,11 @@ ms.locfileid: "85773904"
   
 9. Führen Sie im Dialogfeld **Sicherheit für den Verteilungs-Agent** folgende Schritte aus:  
   
-    -   Geben Sie in den Feldern **Prozesskonto**, **Kennwort**und **Kennwort bestätigen** das Konto und Kennwort von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows  an, unter dem der Verteilungs-Agent ausgeführt werden soll und unter dem er lokale Verbindungen mit dem Verteiler herstellen soll.  
+    -   Geben Sie in den Feldern **Prozesskonto**, **Kennwort** und **Kennwort bestätigen** das Konto und Kennwort von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows  an, unter dem der Verteilungs-Agent ausgeführt werden soll und unter dem er lokale Verbindungen mit dem Verteiler herstellen soll.  
   
          Für das Konto müssen folgende Mindestberechtigungen erfüllt werden: Mitglied der festen Datenbankrolle **db_owner** in der Verteilungsdatenbank, Mitglied der Veröffentlichungszugriffsliste (PAL, Publication Access List); Leseberechtigungen für die Momentaufnahmefreigabe sowie Leseberechtigungen für das Installationsverzeichnis des OLE DB-Anbieters. Weitere Informationen zur PAL finden Sie unter [Sichern des Verlegers](../../relational-databases/replication/security/secure-the-publisher.md).  
   
-    -   Geben Sie unter **Verbindung mit dem Abonnenten herstellen**, in den Feldern **Anmeldung**, **Kennwort**und **Kennwort bestätigen** die Anmeldung und das Kennwort ein, die zum Verbindungsaufbau mit dem Abonnenten verwendet werden sollen. Diese Anmeldung sollte bereits konfiguriert sein und für das Erstellen von Objekten in der Abonnementdatenbank ausreichende Berechtigungen aufweisen.  
+    -   Geben Sie unter **Verbindung mit dem Abonnenten herstellen**, in den Feldern **Anmeldung**, **Kennwort** und **Kennwort bestätigen** die Anmeldung und das Kennwort ein, die zum Verbindungsaufbau mit dem Abonnenten verwendet werden sollen. Diese Anmeldung sollte bereits konfiguriert sein und für das Erstellen von Objekten in der Abonnementdatenbank ausreichende Berechtigungen aufweisen.  
   
     -   Geben Sie im Feld **Zusätzliche Verbindungsoptionen** sämtliche Verbindungsoptionen für den Abonnenten in Form einer Verbindungszeichenfolge an (für Oracle sind keine zusätzlichen Optionen erforderlich). Mehrere Optionen müssen durch Semikolons voneinander getrennt werden. Hier ein Beispiel einer DB2-Verbindungszeichenfolge (die Umbrüche dienen der Leserlichkeit):  
   
@@ -117,9 +117,9 @@ ms.locfileid: "85773904"
         Persist Security Info=False;Connection Pooling=True;  
         ```  
   
-         Die meisten Optionen in der Zeichenfolge hängen von dem DB2-Server ab, den Sie konfigurieren. Allerdings sollte die Option **Process Binary as Character** immer auf **False**festgelegt sein. Zur Identifizierung der Abonnementdatenbank ist ein Wert für die Option **Anfangskatalog** erforderlich.  
+         Die meisten Optionen in der Zeichenfolge hängen von dem DB2-Server ab, den Sie konfigurieren. Allerdings sollte die Option **Process Binary as Character** immer auf **False** festgelegt sein. Zur Identifizierung der Abonnementdatenbank ist ein Wert für die Option **Anfangskatalog** erforderlich.  
   
-10. Wählen Sie auf der Seite **Synchronisierungszeitplan** im Menü **Agentzeitplan** einen Zeitplan für den Verteilungs-Agent aus (der Zeitplan weist normalerweise das Attribut **Fortlaufend ausführen**auf).  
+10. Wählen Sie auf der Seite **Synchronisierungszeitplan** im Menü **Agentzeitplan** einen Zeitplan für den Verteilungs-Agent aus (der Zeitplan weist normalerweise das Attribut **Fortlaufend ausführen** auf).  
   
 11. Geben Sie auf der Seite **Abonnements initialisieren** an, ob das Abonnement initialisiert werden soll, und wenn ja, wann:  
   
@@ -131,7 +131,7 @@ ms.locfileid: "85773904"
   
 #### <a name="to-retain-tables-at-the-subscriber"></a>So behalten Sie Tabellen auf dem Abonnenten bei  
   
--   Standardmäßig wird durch das Aktivieren einer Veröffentlichung für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten der Wert der **pre_creation_cmd** -Artikeleigenschaft auf 'drop' festgelegt. Mit dieser Einstellung wird angegeben, dass bei der Replikation auf dem Abonnenten eine Tabelle gelöscht werden soll, wenn sie mit dem Namen der Tabelle in dem Artikel übereinstimmt. Wenn auf dem Abonnenten Tabellen vorhanden sind, die Sie beibehalten möchten, verwenden Sie für jeden Artikel die gespeicherte Prozedur [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) . Geben Sie für **pre_creation_cmd**den Wert 'none' an. `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`.  
+-   Standardmäßig wird durch das Aktivieren einer Veröffentlichung für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten der Wert der **pre_creation_cmd** -Artikeleigenschaft auf 'drop' festgelegt. Mit dieser Einstellung wird angegeben, dass bei der Replikation auf dem Abonnenten eine Tabelle gelöscht werden soll, wenn sie mit dem Namen der Tabelle in dem Artikel übereinstimmt. Wenn auf dem Abonnenten Tabellen vorhanden sind, die Sie beibehalten möchten, verwenden Sie für jeden Artikel die gespeicherte Prozedur [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) . Geben Sie für **pre_creation_cmd** den Wert 'none' an. `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`.  
   
 #### <a name="to-generate-a-snapshot-for-the-publication"></a>So generieren Sie eine Momentaufnahme für die Veröffentlichung  
   
@@ -160,7 +160,7 @@ ms.locfileid: "85773904"
     -   Wenn der Wert von **enabled_for_het_sub** 0 ist, führen Sie [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) aus, und geben Sie **enabled_for_het_sub** für `@property` und **true** für `@value` an.  
   
         > [!NOTE]  
-        >  Bevor Sie **enabled_for_het_sub** zu **true**ändern, müssen Sie alle vorhandenen Abonnements für die Veröffentlichung löschen. Sie können **enabled_for_het_sub** nicht auf **true** festlegen, wenn die Veröffentlichung auch Abonnements mit Update unterstützt. Die Änderung von **enabled_for_het_sub** beeinflusst andere Veröffentlichungseigenschaften. Weitere Informationen finden Sie unter [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
+        >  Bevor Sie **enabled_for_het_sub** zu **true** ändern, müssen Sie alle vorhandenen Abonnements für die Veröffentlichung löschen. Sie können **enabled_for_het_sub** nicht auf **true** festlegen, wenn die Veröffentlichung auch Abonnements mit Update unterstützt. Die Änderung von **enabled_for_het_sub** beeinflusst andere Veröffentlichungseigenschaften. Weitere Informationen finden Sie unter [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
   
 3.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) aus. Geben Sie `@publication`, `@subscriber`, den Wert `(default destination)` für `@destination_db`, den Wert **push** für `@subscription_type` und den Wert 3 für `@subscriber_type` (gibt einen OLE DB-Anbieter an) an.  
   

@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: abbd77be3e20cc69bc12cd69f07fa82ec99d95db
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 4ccacb2b46b609b61485821f250644596f0e3955
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88470464"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048883"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Verschieben eines vorhandenen Indexes in eine andere Dateigruppe
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  In diesem Thema wird beschrieben, wie Sie einen vorhandenen Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]von der aktuellen Dateigruppe in eine andere verschieben.  
+  In diesem Thema wird beschrieben, wie Sie einen vorhandenen Index in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]von der aktuellen Dateigruppe in eine andere verschieben.  
   
  **In diesem Thema**  
   
@@ -98,7 +98,7 @@ ms.locfileid: "88470464"
   
      Für das Verschieben von gruppierten Indizes können Sie die Onlineverarbeitung verwenden. Die Onlineverarbeitung ermöglicht, dass Benutzer während des Verschiebungsvorgangs des Indexes auf die dem Index zugrunde liegenden Daten sowie auf nicht gruppierte Indizes zugreifen können. Weitere Informationen finden Sie unter [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md) .  
   
-     Auf Multiprozessorcomputern mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]können Sie die Anzahl der zum Ausführen der Indexanweisung verwendeten Prozessoren mit einem maximalen Grad an Parallelität konfigurieren. Die Funktion für parallele Indexvorgänge ist nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter „Von den SQL Server 2016-Editionen unterstützte Funktionen“. Weitere Informationen zu parallelen Indexvorgängen finden Sie unter [Konfigurieren von Parallelindexvorgängen](../../relational-databases/indexes/configure-parallel-index-operations.md).  
+     Auf Multiprozessorcomputern mit [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]können Sie die Anzahl der zum Ausführen der Indexanweisung verwendeten Prozessoren mit einem maximalen Grad an Parallelität konfigurieren. Die Funktion für parallele Indexvorgänge ist nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter „Von den SQL Server 2016-Editionen unterstützte Funktionen“. Weitere Informationen zu parallelen Indexvorgängen finden Sie unter [Konfigurieren von Parallelindexvorgängen](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 8.  Klicken Sie auf **OK**.  
   

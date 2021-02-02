@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 563a075ec3cba0cc25980e59a228a5c319075caa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e0e411e82a6492fda48cc8d3541dbd272075f994
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727576"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813135"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Hinzufügen von Daten- oder Protokolldateien zu einer Datenbank
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In diesem Thema wird beschrieben, wie Daten- oder Protokolldateien in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]einer Datenbank hinzugefügt werden.  
+  In diesem Thema wird beschrieben, wie Daten- oder Protokolldateien in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]einer Datenbank hinzugefügt werden.  
   
  **In diesem Thema**  
   
@@ -61,7 +61,7 @@ ms.locfileid: "85727576"
   
 #### <a name="to-add-data-or-log-files-to-a-database"></a>So fügen Sie einer Datenbank Daten- oder Protokolldateien hinzu  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
   
 2.  Erweitern Sie **Datenbanken**, klicken Sie mit der rechten Maustaste auf die Datenbank, der die Dateien hinzugefügt werden sollen, und klicken Sie dann auf **Eigenschaften**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "85727576"
   
     1.  Wählen Sie **Beschränkt vergrößerbar (MB)** aus, um die maximale Größe für die Datei anzugeben, und geben Sie einen Wert an.  
   
-    2.  Um ein Anwachsen der Datei bei Bedarf zuzulassen, wählen Sie **Unbeschränkt vergrößerbar**aus.  
+    2.  Um ein Anwachsen der Datei bei Bedarf zuzulassen, wählen Sie **Unbeschränkt vergrößerbar** aus.  
   
     3.  Um die Vergrößerung der Datei zu verhindern, deaktivieren Sie das Kontrollkästchen **Automatische Vergrößerung aktivieren** . Die Größe der Datei steigt dann nicht über den in der Spalte **Anfangsgröße (MB)** angegebenen Wert hinaus.  
   

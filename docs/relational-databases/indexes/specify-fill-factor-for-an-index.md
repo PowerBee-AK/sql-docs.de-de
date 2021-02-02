@@ -15,17 +15,17 @@ ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016
-ms.openlocfilehash: d80ece2cf3b8974f203bf03601dd9c41bfc9bf79
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e1e0a2b406d6817c43a5a4a51bea90b556c5cea6
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478141"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048773"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Angeben des Füllfaktors für einen Index
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  In diesem Thema wird beschrieben, was ein Füllfaktor ist und wie ein Füllfaktorwert in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] für einen Index mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]angegeben wird.  
+  In diesem Thema wird beschrieben, was ein Füllfaktor ist und wie ein Füllfaktorwert in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] für einen Index mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]angegeben wird.  
   
  Die Füllfaktoroption wird zur erweiterten Leistungsoptimierung beim Speichern von Indexdaten bereitgestellt. Wenn ein Index erstellt oder neu erstellt wird, bestimmt der Füllfaktorwert den prozentualen Speicherplatz, der auf jeder Blattebenenseite mit Daten gefüllt werden soll. Der Rest jeder Seite wird als freier Speicherplatz für zukünftige Erweiterungen reserviert. Wenn Sie beispielsweise einen Füllfaktorwert von 80 angeben, bedeutet dies, dass 20 Prozent jeder Seite auf der Blattebene leer gelassen werden, um Speicherplatz für zukünftige Indexerweiterungen bereitzustellen, während der zugrunde liegenden Tabelle Daten hinzugefügt werden. Der freie Speicherplatz wird zwischen den Indexzeilen statt am Ende des Indexes reserviert.  
   

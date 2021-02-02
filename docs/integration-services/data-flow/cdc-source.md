@@ -16,19 +16,19 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7bd7f2478a08b00d1eb970b80ca3e5fb9f168d21
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 9c10e3f1aa1460f63f3fcd3e95bb95bef8e63065
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196466"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049209"
 ---
 # <a name="cdc-source"></a>CDC-Quelle
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Die CDC-Quelle liest einen Bereich mit Änderungsdaten aus [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Änderungstabellen und übermittelt die Änderungen an die anderen SSIS-Downstreamkomponenten.  
+  Die CDC-Quelle liest einen Bereich mit Änderungsdaten aus [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Änderungstabellen und übermittelt die Änderungen an die anderen SSIS-Downstreamkomponenten.  
   
  Der Bereich mit Änderungsdaten, der von CDC-Quelle gelesen wird, wird als CDC-Verarbeitungsbereich bezeichnet und mithilfe des CDC-Steuerungstasks bestimmt, der vor Beginn des aktuellen Datenflusses ausgeführt wird. Der CDC-Verarbeitungsbereich wird aus dem Wert einer Paketvariablen abgeleitet, die den Status der CDC-Verarbeitung für eine Gruppe von Tabellen verwaltet.  
   
@@ -126,7 +126,7 @@ use <cdc-enabled-database-name>
 -   [Extrahieren von Änderungsdaten mithilfe der CDC-Quelle](../../integration-services/data-flow/extract-change-data-using-the-cdc-source.md)  
   
 ## <a name="cdc-source-editor-connection-manager-page"></a>Quellen-Editor für CDC (Seite Verbindungs-Manager)
-  Auf der Seite **Verbindungs-Manager** des Dialogfelds **Quellen-Editor für CDC** können Sie den ADO.NET-Verbindungs-Manager für die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank auswählen, aus der die CDC-Quelle Änderungszeilen liest (CDC-Datenbank). Nachdem Sie die CDC-Datenbank ausgewählt haben, müssen Sie eine aufgezeichnete Tabelle in der Datenbank auswählen.  
+  Auf der Seite **Verbindungs-Manager** des Dialogfelds **Quellen-Editor für CDC** können Sie den ADO.NET-Verbindungs-Manager für die [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Datenbank auswählen, aus der die CDC-Quelle Änderungszeilen liest (CDC-Datenbank). Nachdem Sie die CDC-Datenbank ausgewählt haben, müssen Sie eine aufgezeichnete Tabelle in der Datenbank auswählen.  
   
  Weitere Informationen zur CDC-Quelle finden Sie unter [CDC Source](../../integration-services/data-flow/cdc-source.md).  
   
@@ -137,7 +137,7 @@ use <cdc-enabled-database-name>
   
 2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf die CDC-Quelle.  
   
-3.  Klicken Sie im **Quellen-Editor für CDC**auf **Verbindungs-Manager**.  
+3.  Klicken Sie im **Quellen-Editor für CDC** auf **Verbindungs-Manager**.  
   
 ### <a name="options"></a>Tastatur  
  **ADO.NET-Verbindungs-Manager**  
@@ -174,7 +174,7 @@ use <cdc-enabled-database-name>
  Wählen Sie die SSIS-Zeichenfolgenpaketvariable aus, in der der CDC-Status für den aktuellen CDC-Kontext verwaltet wird. Weitere Informationen zur CDC-Statusvariablen finden Sie unter [Definieren einer Statusvariablen](../../integration-services/data-flow/define-a-state-variable.md).  
   
  **Include reprocessing indicator column**  
- Aktivieren Sie dieses Kontrollkästchen, um eine spezielle Ausgabespalte mit dem Namen **__$reprocessing**zu erstellen.  
+ Aktivieren Sie dieses Kontrollkästchen, um eine spezielle Ausgabespalte mit dem Namen **__$reprocessing** zu erstellen.  
   
  Diese Spalte hat den Wert **TRUE** , wenn sich der CDC-Verarbeitungsbereich mit dem ursprünglichen Verarbeitungsbereich überschneidet (der LSN-Bereich, der dem Zeitraum des erstmaligen Ladens entspricht) oder wenn ein CDC-Verarbeitungsbereich nach einem Fehler bei einer vorherigen Ausführung erneut verarbeitet wird. In dieser Indikatorspalte können SSIS-Entwickler Fehler unterschiedlich behandeln, wenn sie Änderungen erneut verarbeiten (z. B. können Aktionen, wie das Löschen einer nicht vorhandenen Zeile und ein fehlgeschlagener Einfügevorgang aufgrund eines doppelten Schlüssels, ignoriert werden).  
   
@@ -190,7 +190,7 @@ use <cdc-enabled-database-name>
   
 2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf die CDC-Quelle.  
   
-3.  Klicken Sie im **Quellen-Editor für CDC**auf **Spalten**.  
+3.  Klicken Sie im **Quellen-Editor für CDC** auf **Spalten**.  
   
 ### <a name="options"></a>Tastatur  
  **Verfügbare externe Spalten**  
@@ -212,7 +212,7 @@ use <cdc-enabled-database-name>
   
 2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf die CDC-Quelle.  
   
-3.  Klicken Sie im **Quellen-Editor für CDC**auf **Fehlerausgabe**.  
+3.  Klicken Sie im **Quellen-Editor für CDC** auf **Fehlerausgabe**.  
   
 ### <a name="options"></a>Tastatur  
  **Eingabe/Ausgabe**  

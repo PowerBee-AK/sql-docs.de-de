@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6721d36159003077cf771fbff6a0e7a50a182ed2
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: abb62aec3a712ace96d6db82ea8eb0085d8a9e74
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97490010"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049275"
 ---
 # <a name="install-integration-services-ssis"></a>Installieren von Integration Services (SSIS)
 
@@ -81,7 +81,7 @@ Wenn Sie einen dedizierten Server für ETL-Prozesse (Extrahieren, Transformieren
 
 ### <a name="configuring-ssis-event-logging"></a>Konfigurieren der SSIS-Ereignisprotokollierung
 
-Bei einer Neuinstallation wird [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] standardmäßig so konfiguriert, dass Ereignisse im Zusammenhang mit der Ausführung von Paketen im Anwendungsereignisprotokoll nicht protokolliert werden. Mit dieser Einstellung wird verhindert, dass zu viele Ereignisprotokolleinträge erstellt werden, wenn Sie die Datensammler-Funktion von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]verwenden. Zu den nicht protokollierten Ereignissen gehören EventID 12288 „Paket wurde gestartet“ und EventID 12289 „Paket wurde erfolgreich beendet“. Wenn Sie diese Ereignisse im Anwendungsereignisprotokoll protokollieren möchten, öffnen Sie die Registrierung zum Bearbeiten. Suchen Sie anschließend in der Registrierung den Knoten "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS", und ändern Sie den Wert DWORD der Einstellung LogPackageExecutionToEventLog von 0 auf 1.
+Bei einer Neuinstallation wird [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] standardmäßig so konfiguriert, dass Ereignisse im Zusammenhang mit der Ausführung von Paketen im Anwendungsereignisprotokoll nicht protokolliert werden. Mit dieser Einstellung wird verhindert, dass zu viele Ereignisprotokolleinträge erstellt werden, wenn Sie die Datensammler-Funktion von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]verwenden. Zu den nicht protokollierten Ereignissen gehören EventID 12288 „Paket wurde gestartet“ und EventID 12289 „Paket wurde erfolgreich beendet“. Wenn Sie diese Ereignisse im Anwendungsereignisprotokoll protokollieren möchten, öffnen Sie die Registrierung zum Bearbeiten. Suchen Sie anschließend in der Registrierung den Knoten "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS", und ändern Sie den Wert DWORD der Einstellung LogPackageExecutionToEventLog von 0 auf 1.
 
 ## <a name="install-additional-components-for-integration-services"></a>Installieren zusätzlicher Komponenten für Integration Services
 

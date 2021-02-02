@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 685ac46fd80e92d115dcf8aed3c49abb1ac9d144
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 492a0cd4b510b91d1f5f17ad04de54b005502bba
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96123580"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049114"
 ---
 # <a name="cdc-control-task"></a>CDC-Steuerungstask
 
@@ -37,9 +37,9 @@ ms.locfileid: "96123580"
 |Vorgang|BESCHREIBUNG|  
 |---------------|-----------------|  
 |ResetCdcState|Dieser Vorgang wird verwendet, um den persistenten CDC-Status zurückzusetzen, der dem aktuellen CDC-Kontext zugeordnet ist. Nachdem dieser Vorgang ausgeführt wurde, wird die aktuelle höchste LSN aus der LSN-Zeitstempeltabelle `sys.fn_cdc_get_max_lsn` zum Startpunkt für den nächsten Verarbeitungsbereich. Für diesen Vorgang ist eine Verbindung zur Quelldatenbank erforderlich.|  
-|MarkInitialLoadStart|Dieser Vorgang wird zu Beginn eines Pakets für das erstmalige Laden verwendet, um die aktuelle LSN in der Quelldatenbank aufzuzeichnen, bevor das Paket für das erstmalige Laden mit dem Lesen der Quelltabellen beginnt. Dies erfordert eine Verbindung zur Quelldatenbank, damit `sys.fn_cdc_get_max_lsn`aufgerufen werden kann.<br /><br /> Wenn Sie bei der Verwendung von CDC in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (d.h. nicht in Oracle) die Option MarkInitialLoadStart auswählen, muss der im Verbindungs-Manager angegebene Benutzer über die Rolle db_owner oder sysadmin verfügen.|  
-|MarkInitialLoadEnd|Dieser Vorgang wird am Ende eines Pakets zum erstmaligen Laden verwendet, um die aktuelle LSN in der Quelldatenbank aufzuzeichnen, nachdem das Paket für das erstmalige Laden das Lesen der Quelltabellen beendet hat. Diese LSN wird durch das Aufzeichnen des aktuellen Zeitpunkts, zu dem dieser Vorgang aufgetreten ist, und das anschließende Abfragen der Zuordnungstabelle `cdc.lsn_time_`in der CDC-Datenbank ermittelt. Dabei wird nach einer Änderung gesucht, die nach diesem Zeitpunkt aufgetreten ist.<br /><br /> Wenn Sie bei der Verwendung von CDC in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (d.h. nicht in Oracle) die Option MarkInitialLoadEnd auswählen, muss der im Verbindungs-Manager angegebene Benutzer über die Berechtigung db_owner oder sysadmin verfügen.|  
-|MarkCdcStart|Dieser Vorgang wird verwendet, wenn das erstmalige Laden basierend auf einer Momentaufnahmen-Datenbank erfolgt. In diesem Fall sollte die Änderungsverarbeitung unmittelbar nach der Momentaufnahme-LSN starten. Sie können den Namen der zu verwendenden Momentaufnahmen-Datenbank angeben. Der CDC-Steuerungstask fragt [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dann nach der Momentaufnahme-LSN ab. Sie können die Momentaufnahme-LSN auch direkt angeben.<br /><br /> Wenn Sie bei der Verwendung von CDC in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (d.h. nicht in Oracle) die Option MarkCdcStart auswählen, muss der im Verbindungs-Manager angegebene Benutzer über die Berechtigung db_owner oder sysadmin verfügen.|  
+|MarkInitialLoadStart|Dieser Vorgang wird zu Beginn eines Pakets für das erstmalige Laden verwendet, um die aktuelle LSN in der Quelldatenbank aufzuzeichnen, bevor das Paket für das erstmalige Laden mit dem Lesen der Quelltabellen beginnt. Dies erfordert eine Verbindung zur Quelldatenbank, damit `sys.fn_cdc_get_max_lsn`aufgerufen werden kann.<br /><br /> Wenn Sie bei der Verwendung von CDC in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] (d.h. nicht in Oracle) die Option MarkInitialLoadStart auswählen, muss der im Verbindungs-Manager angegebene Benutzer über die Rolle db_owner oder sysadmin verfügen.|  
+|MarkInitialLoadEnd|Dieser Vorgang wird am Ende eines Pakets zum erstmaligen Laden verwendet, um die aktuelle LSN in der Quelldatenbank aufzuzeichnen, nachdem das Paket für das erstmalige Laden das Lesen der Quelltabellen beendet hat. Diese LSN wird durch das Aufzeichnen des aktuellen Zeitpunkts, zu dem dieser Vorgang aufgetreten ist, und das anschließende Abfragen der Zuordnungstabelle `cdc.lsn_time_`in der CDC-Datenbank ermittelt. Dabei wird nach einer Änderung gesucht, die nach diesem Zeitpunkt aufgetreten ist.<br /><br /> Wenn Sie bei der Verwendung von CDC in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] (d.h. nicht in Oracle) die Option MarkInitialLoadEnd auswählen, muss der im Verbindungs-Manager angegebene Benutzer über die Berechtigung db_owner oder sysadmin verfügen.|  
+|MarkCdcStart|Dieser Vorgang wird verwendet, wenn das erstmalige Laden basierend auf einer Momentaufnahmen-Datenbank erfolgt. In diesem Fall sollte die Änderungsverarbeitung unmittelbar nach der Momentaufnahme-LSN starten. Sie können den Namen der zu verwendenden Momentaufnahmen-Datenbank angeben. Der CDC-Steuerungstask fragt [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] dann nach der Momentaufnahme-LSN ab. Sie können die Momentaufnahme-LSN auch direkt angeben.<br /><br /> Wenn Sie bei der Verwendung von CDC in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] (d.h. nicht in Oracle) die Option MarkCdcStart auswählen, muss der im Verbindungs-Manager angegebene Benutzer über die Berechtigung db_owner oder sysadmin verfügen.|  
   
  Die folgenden Vorgänge werden verwendet, um den Verarbeitungsbereich zu verwalten:  
   
@@ -108,17 +108,17 @@ ms.locfileid: "96123580"
   
 -   **Beginn des anfänglichen Ladevorgangs kennzeichnen**: Dieser Vorgang wird verwendet, wenn der anfängliche Ladevorgang aus einer aktiven Datenbank ohne Momentaufnahme erfolgt. Er wird zu Beginn eines Pakets für das anfängliche Laden verwendet, um die aktuelle LSN in der Quelldatenbank aufzuzeichnen, bevor das Paket für das anfängliche Laden mit dem Lesen der Quelltabellen beginnt. Für diesen Vorgang ist eine Verbindung mit der Quelldatenbank erforderlich.  
   
-     Wenn Sie bei Verwendung von **CDC (nicht Oracle) die Option** Beginn des anfänglichen Ladevorgangs kennzeichnen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auswählen, muss als Benutzer im Verbindungs-Manager entweder  **db_owner** oder **sysadmin** angegeben sein.  
+     Wenn Sie bei Verwendung von **CDC (nicht Oracle) die Option** Beginn des anfänglichen Ladevorgangs kennzeichnen [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] auswählen, muss als Benutzer im Verbindungs-Manager entweder  **db_owner** oder **sysadmin** angegeben sein.  
   
 -   **Ende des anfänglichen Ladevorgangs kennzeichnen**: Dieser Vorgang wird verwendet, wenn der anfängliche Ladevorgang aus einer aktiven Datenbank ohne Momentaufnahme erfolgt. Er wird am Ende eines Pakets zum anfänglichen Laden verwendet, um die aktuelle LSN in der Quelldatenbank aufzuzeichnen, nachdem das Paket für das anfängliche Laden das Lesen der Quelltabellen beendet hat. Diese LSN wird durch das Aufzeichnen der aktuellen Zeit, zu der dieser Vorgang aufgetreten ist, und das anschließende Abfragen der `cdc.lsn_time_`-Zuordnungstabelle in der CDC-Datenbank ermittelt. Dabei wird nach einer Änderung gesucht, die nach diesem Zeitpunkt aufgetreten ist.  
   
-     Wenn Sie bei Verwendung von **CDC (nicht Oracle) die Option** Ende des anfänglichen Ladevorgangs kennzeichnen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auswählen, muss als Benutzer im Verbindungs-Manager entweder  **db_owner** oder **sysadmin** angegeben sein.  
+     Wenn Sie bei Verwendung von **CDC (nicht Oracle) die Option** Ende des anfänglichen Ladevorgangs kennzeichnen [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] auswählen, muss als Benutzer im Verbindungs-Manager entweder  **db_owner** oder **sysadmin** angegeben sein.  
   
 -   **CDC-Start kennzeichnen**: Dieser Vorgang wird verwendet, wenn der anfängliche Ladevorgang aus einer Momentaufnahmedatenbank oder einer inaktiven Datenbank erfolgt. Er wird an einem beliebigem Punkt im anfänglich geladenen Paket aufgerufen. Der Vorgang akzeptiert einen Parameter, bei dem es sich um eine Momentaufnahme-LSN oder den Namen einer Momentaufnahmedatenbank (von dem die Momentaufnahme-LSN automatisch abgeleitet wird) handeln kann. Der Parameter kann auch leer gelassen werden. In diesem Fall wird die aktuelle Datenbank-LSN als Start-LSN für das Änderungsverarbeitungspaket verwendet.  
   
      Dieser Vorgang wird anstelle der Vorgänge "Beginn/Ende des anfänglichen Ladevorgangs kennzeichnen" verwendet.  
   
-     Wenn Sie bei Verwendung von **CDC (nicht Oracle) die Option** CDC-Start kennzeichnen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auswählen, muss als Benutzer im Verbindungs-Manager entweder  **db_owner** oder **sysadmin** angegeben sein.  
+     Wenn Sie bei Verwendung von **CDC (nicht Oracle) die Option** CDC-Start kennzeichnen [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] auswählen, muss als Benutzer im Verbindungs-Manager entweder  **db_owner** oder **sysadmin** angegeben sein.  
   
 -   **Verarbeitungsbereich abrufen**: Dieser Vorgang wird in einem Änderungsverarbeitungspaket vor dem Aufrufen des Datenflusses verwendet, der den CDC-Quelldatenfluss verwendet. Dabei wird ein Bereich von LSNs eingerichtet, der vom CDC-Quelldatenfluss nach dem Aufrufen gelesen wird. Der Bereich wird in einer SSIS-Paketvariablen gespeichert, die von der CDC-Quelle während der Datenflussverarbeitung verwendet wird.  
   

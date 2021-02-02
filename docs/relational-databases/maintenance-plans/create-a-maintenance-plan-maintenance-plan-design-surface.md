@@ -13,16 +13,16 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 46d577d8488a4b696ef5736a1bb94127e24bc53a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 931aa85fbb37d8dba1c9bb3e06e00760d3f16caf
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85667711"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049153"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Erstellen eines Wartungsplans (Entwurfsoberfläche für Wartungspläne)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In diesem Thema wird beschrieben, wie für einen einzelnen Server oder mehrere Server mithilfe der Entwurfsoberfläche für Wartungspläne in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ein Wartungsplan erstellt wird. Der **Wartungsplanungs-Assistent** eignet sich am besten für das Erstellen von grundlegenden Wartungsplänen. Wenn Sie die Entwurfsoberfläche zum Erstellen eines Plans verwenden, können Sie einen erweiterten Workflow nutzen.  
+  In diesem Thema wird beschrieben, wie für einen einzelnen Server oder mehrere Server mithilfe der Entwurfsoberfläche für Wartungspläne in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]ein Wartungsplan erstellt wird. Der **Wartungsplanungs-Assistent** eignet sich am besten für das Erstellen von grundlegenden Wartungsplänen. Wenn Sie die Entwurfsoberfläche zum Erstellen eines Plans verwenden, können Sie einen erweiterten Workflow nutzen.  
   
  **In diesem Thema**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "85667711"
   
 -   Wenn Sie einen Multiserver-Wartungsplan erstellen möchten, muss eine Multiserverumgebung mit einem Masterserver und mindestens einem Zielserver konfiguriert sein. Multiserver-Wartungspläne müssen auf dem Masterserver erstellt und verwaltet werden. Diese Pläne können auf Zielservern zwar angezeigt, jedoch nicht verwaltet werden.  
   
--   Mitglieder der **db_ssisadmin** -Rolle und der **dc_admin** -Rolle können ihre Berechtigungen möglicherweise auf **sysadmin**erhöhen. Diese Ausweitung von Berechtigungen ist möglich, da diese Rollen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete ändern können. Diese Pakete können von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des **sysadmin** -Sicherheitskontexts des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden. Konfigurieren Sie als Schutz vor dieser Ausweitung von Berechtigungen beim Ausführen von Wartungsplänen, Datensammlungssätzen und anderen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents, die Pakete ausführen, für die Verwendung eines Proxykontos mit eingeschränkten Berechtigungen, oder fügen Sie der **db_ssisadmin** -Rolle und der **dc_admin** -Rolle nur **sysadmin** -Mitglieder hinzu.  
+-   Mitglieder der **db_ssisadmin** -Rolle und der **dc_admin** -Rolle können ihre Berechtigungen möglicherweise auf **sysadmin** erhöhen. Diese Ausweitung von Berechtigungen ist möglich, da diese Rollen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete ändern können. Diese Pakete können von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des **sysadmin** -Sicherheitskontexts des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden. Konfigurieren Sie als Schutz vor dieser Ausweitung von Berechtigungen beim Ausführen von Wartungsplänen, Datensammlungssätzen und anderen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents, die Pakete ausführen, für die Verwendung eines Proxykontos mit eingeschränkten Berechtigungen, oder fügen Sie der **db_ssisadmin** -Rolle und der **dc_admin** -Rolle nur **sysadmin** -Mitglieder hinzu.  
   
 ###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
@@ -55,7 +55,7 @@ ms.locfileid: "85667711"
   
 2.  Klicken Sie auf das Pluszeichen, um den Ordner **Verwaltung** zu erweitern.  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Wartungspläne** , und wählen Sie **Neuer Wartungsplan**aus.  
+3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Wartungspläne** , und wählen Sie **Neuer Wartungsplan** aus.  
   
 4.  Geben Sie im Dialogfeld **Neuer Wartungsplan** im Feld **Name** einen Namen für den Plan ein, und klicken Sie auf **OK**. Dadurch werden die Toolbox und die Oberfläche *maintenance_plan_name* **[Design]** mit dem Unterplan **Subplan_1** geöffnet, der im Hauptraster erstellt wurde.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "85667711"
      **Designeroberfläche**  
      Hiermit können Sie Wartungspläne entwerfen und verwalten. Verwenden Sie die Designeroberfläche, um einem Plan Wartungspläne hinzuzufügen, Tasks aus einem Plan zu entfernen, Rangfolgenlinks zwischen den Tasks anzugeben oder Taskverzweigungen und -parallelausführungen anzuzeigen.  
   
-     Ein Rangfolgenlink zwischen zwei Tasks legt eine Beziehung zwischen den Tasks fest. Der zweite Task (der *abhängige Task*) wird nur ausgeführt, wenn das Ausführungsergebnis des ersten Tasks (des *Vorgängertasks*) bestimmte Kriterien erfüllt. Normalerweise ist das angegebene Ausführungsergebnis **Erfolg**, **Fehler**oder **Beendigung**. Weitere Informationen finden Sie unter Schritt **8** .  
+     Ein Rangfolgenlink zwischen zwei Tasks legt eine Beziehung zwischen den Tasks fest. Der zweite Task (der *abhängige Task*) wird nur ausgeführt, wenn das Ausführungsergebnis des ersten Tasks (des *Vorgängertasks*) bestimmte Kriterien erfüllt. Normalerweise ist das angegebene Ausführungsergebnis **Erfolg**, **Fehler** oder **Beendigung**. Weitere Informationen finden Sie unter Schritt **8** .  
   
 5.  Doppelklicken Sie in der Kopfzeile des Entwurfsbereichs auf **Unterplan_1** , und geben Sie im Dialogfeld **Unterplaneigenschaften** einen Namen sowie eine Beschreibung für den Unterplan ein.  
   
@@ -109,14 +109,14 @@ ms.locfileid: "85667711"
      **Zeitplan**  
      Gibt an, nach welchem Zeitplan der Unterplan ausgeführt wird. Klicken Sie auf **Zeitplan des Unterplans** , um das Dialogfeld **Neuer Auftragszeitplan** zu öffnen. Klicken Sie auf **Zeitplan entfernen** , um den Zeitplan aus dem Unterplan zu löschen.  
   
-     Liste**Ausführen als**  
+     Liste **Ausführen als**  
      Wählen Sie das Konto aus, das zum Ausführen dieser Unteraufgabe verwendet werden soll.  
   
 6.  Klicken Sie auf **Zeitplan des Unterplans** , um die Details zum Zeitplan in das Dialogfeld **Neuer Auftragszeitplan** einzugeben.  
   
 7.  Um den Unterplan zu erstellen, ziehen Sie die Tasksteuerungselemente aus der **Toolbox** auf die Planentwurfsoberfläche. Doppelklicken Sie auf Tasks, um Dialogfelder zum Konfigurieren der Taskoptionen zu öffnen.  
   
-     Die folgenden Wartungsplantasks sind in der **Toolbox**verfügbar:  
+     Die folgenden Wartungsplantasks sind in der **Toolbox** verfügbar:  
   
     -   **Datenbank sichern (Task)**  
   
@@ -140,17 +140,17 @@ ms.locfileid: "85667711"
   
     -   **Statistiken aktualisieren (Task)**  
   
-     So fügen Sie der **Toolbox**Tasks hinzu:  
+     So fügen Sie der **Toolbox** Tasks hinzu:  
   
     1.  Klicken Sie im Menü **Extras** auf **Toolboxelemente auswählen**.  
   
-    2.  Wählen Sie die Tools aus, die in der **Toolbox**angezeigt werden sollen, und klicken Sie dann auf **OK**.  
+    2.  Wählen Sie die Tools aus, die in der **Toolbox** angezeigt werden sollen, und klicken Sie dann auf **OK**.  
   
-     Wenn Wartungsplantasks der **Toolbox** hinzugefügt werden, sind diese auch im **Wartungsplanungs-Assistenten**verfügbar. Weitere Informationen zu den einzelnen Tasks finden Sie unter [Verwenden des Wartungsplanungs-Assistenten](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) im Abschnitt **So starten Sie den Wartungsplanungs-Assistenten**.  
+     Wenn Wartungsplantasks der **Toolbox** hinzugefügt werden, sind diese auch im **Wartungsplanungs-Assistenten** verfügbar. Weitere Informationen zu den einzelnen Tasks finden Sie unter [Verwenden des Wartungsplanungs-Assistenten](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) im Abschnitt **So starten Sie den Wartungsplanungs-Assistenten**.  
   
 8.  So definieren Sie einen Workflow zwischen Tasks:  
   
-    1.  Klicken Sie mit der rechten Maustaste auf den Vorgängertask, und wählen Sie **Rangfolgeneinschränkung hinzufügen**aus.  
+    1.  Klicken Sie mit der rechten Maustaste auf den Vorgängertask, und wählen Sie **Rangfolgeneinschränkung hinzufügen** aus.  
   
     2.  Wählen Sie im Dialogfeld **Ablaufsteuerung** in der Liste **Zu** den abhängigen Task aus, und klicken Sie auf **OK**.  
   
@@ -161,17 +161,17 @@ ms.locfileid: "85667711"
          **Einschränkungsoption**  
          Definiert, wie eine Einschränkung zwischen zwei Tasks angewendet wird.  
   
-         Liste**Auswertungsvorgang**  
-         Geben Sie den Auswertungsvorgang an, den die Rangfolgeneinschränkung verwendet. Folgende Vorgänge sind möglich: **Einschränkung**, **Ausdruck**, **Ausdruck und Einschränkung**und **Ausdruck oder Einschränkung**.  
+         Liste **Auswertungsvorgang**  
+         Geben Sie den Auswertungsvorgang an, den die Rangfolgeneinschränkung verwendet. Folgende Vorgänge sind möglich: **Einschränkung**, **Ausdruck**, **Ausdruck und Einschränkung** und **Ausdruck oder Einschränkung**.  
   
-         Liste**Wert**  
-         Geben Sie den Einschränkungswert an: **Erfolg**, **Fehler**oder **Beendigung**. **Erfolg** ist die Standardeinstellung.  
+         Liste **Wert**  
+         Geben Sie den Einschränkungswert an: **Erfolg**, **Fehler** oder **Beendigung**. **Erfolg** ist die Standardeinstellung.  
   
         > [!NOTE]  
-        >  Die Rangfolgeneinschränkungszeile wird für **Erfolg**grün, für **Fehler**rot und für **Beendigung**blau angezeigt.  
+        >  Die Rangfolgeneinschränkungszeile wird für **Erfolg** grün, für **Fehler** rot und für **Beendigung** blau angezeigt.  
   
          **Ausdruck**  
-         Geben Sie, wenn Sie die Vorgänge **Ausdruck**, **Ausdruck und Einschränkung**oder **Ausdruck oder Einschränkung**verwenden, einen Ausdruck ein. Der Ausdruck muss zu einem booleschen Wert ausgewertet werden.  
+         Geben Sie, wenn Sie die Vorgänge **Ausdruck**, **Ausdruck und Einschränkung** oder **Ausdruck oder Einschränkung** verwenden, einen Ausdruck ein. Der Ausdruck muss zu einem booleschen Wert ausgewertet werden.  
   
          **Test**  
          Überprüfen Sie den Ausdruck.  
@@ -203,7 +203,7 @@ ms.locfileid: "85667711"
   
     4.  Geben Sie unter **Geben Sie Folgendes für die Verbindung mit SQL Server-Daten an** im Feld **Wählen Sie einen Servernamen aus, oder geben Sie ihn ein** entweder den Namen des SQL-Servers ein, den Sie verwenden möchten, oder klicken Sie auf die Auslassungspunkte **(…)** , und wählen Sie im Dialogfeld **SQL Server** einen Server aus. Wenn Sie im Dialogfeld **SQL Server** einen Server auswählen, klicken Sie auf **OK**.  
   
-    5.  Wählen Sie unter **Geben Sie Informationen zum Anmelden am Server ein**die Option **Integrierte Sicherheit von Windows NT verwenden** oder **SQL Server-Authentifizierung verwenden**aus. Wenn Sie sich für die Verwendung der SQL Server-Authentifizierung entscheiden, geben Sie die entsprechenden Informationen in die Felder **Benutzername** und **Kennwort** ein.  
+    5.  Wählen Sie unter **Geben Sie Informationen zum Anmelden am Server ein** die Option **Integrierte Sicherheit von Windows NT verwenden** oder **SQL Server-Authentifizierung verwenden** aus. Wenn Sie sich für die Verwendung der SQL Server-Authentifizierung entscheiden, geben Sie die entsprechenden Informationen in die Felder **Benutzername** und **Kennwort** ein.  
   
     6.  Klicken Sie im Dialogfeld **Verbindungseigenschaften** auf **OK**.  
   
@@ -213,24 +213,24 @@ ms.locfileid: "85667711"
   
     1.  Klicken Sie in der Symbolleiste des Entwurfsbereichs auf **Berichterstellung und Protokollierung**.  
   
-    2.  Aktivieren Sie im Dialogfeld **Berichterstellung und Protokollierung** unter **Berichterstellung**die Option **Textdateibericht generieren** oder **Bericht an einen E-Mail-Empfänger senden** oder beide Optionen.  
+    2.  Aktivieren Sie im Dialogfeld **Berichterstellung und Protokollierung** unter **Berichterstellung** die Option **Textdateibericht generieren** oder **Bericht an einen E-Mail-Empfänger senden** oder beide Optionen.  
   
-        1.  Wenn Sie **Textdateibericht generieren**auswählen, können Sie entweder **Neue Datei erstellen** oder **An Datei anfügen**auswählen.  
+        1.  Wenn Sie **Textdateibericht generieren** auswählen, können Sie entweder **Neue Datei erstellen** oder **An Datei anfügen** auswählen.  
   
         2.  Geben Sie je nach Ihrer Auswahl den Namen und vollständigen Pfad der neuen Datei oder der anzufügenden Datei ein, indem Sie die Informationen im Feld **Ordner** bzw. **Dateiname** angeben. Alternativ dazu können Sie auf die Auslassungspunkte **(…)** klicken und den Pfad zum Ordner oder den Dateinamen in den Dialogfeldern **Ordner suchen –** _server\_name_ oder **Datenbankdateien suchen –** _server\_name_ auswählen.  
   
-        3.  Wenn Sie in der Liste **Agentoperator**die Option **Bericht an einen E-Mail-Empfänger senden** auswählen, können Sie den Empfänger des per E-Mail gesendeten Berichts angeben.  
+        3.  Wenn Sie in der Liste **Agentoperator** die Option **Bericht an einen E-Mail-Empfänger senden** auswählen, können Sie den Empfänger des per E-Mail gesendeten Berichts angeben.  
   
             > [!NOTE]  
             >  Der SQL Server-Agent muss für die Verwendung von Datenbank-E-Mail konfiguriert werden, um E-Mails senden zu können. Weitere Informationen finden Sie unter [Configure SQL Server Agent Mail to Use Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
-    3.  Wählen Sie zum Speichern detaillierter Informationen unter **Protokollierung**die Option **Erweiterte Informationen protokollieren**aus.  
+    3.  Wählen Sie zum Speichern detaillierter Informationen unter **Protokollierung** die Option **Erweiterte Informationen protokollieren** aus.  
   
     4.  Wählen Sie zum Schreiben von Informationen zu Wartungsplanergebnissen auf einen anderen Server die Option **Auf Remoteserver protokollieren** , und wählen Sie entweder eine Serververbindung aus der Liste **Verbindung** aus, oder klicken Sie auf **Neu** , und geben Sie die Verbindungsinformationen im Dialogfeld **Verbindungseigenschaften** ein.  
   
     5.  Klicken Sie im Dialogfeld **Berichterstellung und Protokollierung** auf **OK**.  
   
-12. Wenn Sie die Ergebnisse im Protokolldatei-Viewer anzeigen möchten, klicken Sie im **Objekt-Explorer**mit der rechten Maustaste entweder auf den Ordner **Wartungspläne** oder auf einen bestimmten Wartungsplan, und klicken Sie dann auf **Verlauf anzeigen**.  
+12. Wenn Sie die Ergebnisse im Protokolldatei-Viewer anzeigen möchten, klicken Sie im **Objekt-Explorer** mit der rechten Maustaste entweder auf den Ordner **Wartungspläne** oder auf einen bestimmten Wartungsplan, und klicken Sie dann auf **Verlauf anzeigen**.  
 
      Die folgenden Optionen sind im Dialogfeld **Protokolldatei-Viewer –** _server\_name_ verfügbar.  
   
@@ -244,7 +244,7 @@ ms.locfileid: "85667711"
      Aktualisieren Sie die Anzeige der ausgewählten Protokolle. Beim Übernehmen von Filtereinstellungen werden mithilfe der Schaltfläche **Aktualisieren** die ausgewählten Protokolle erneut vom Zielserver gelesen.  
   
      **Filter**  
-     Öffnen Sie ein Dialogfeld, in dem Sie zum Filtern der Protokolldatei verwendete Einstellungen angeben können, z.B. Filterkriterien wie **Verbindung**, **Datum**oder **Allgemein** .  
+     Öffnen Sie ein Dialogfeld, in dem Sie zum Filtern der Protokolldatei verwendete Einstellungen angeben können, z.B. Filterkriterien wie **Verbindung**, **Datum** oder **Allgemein** .  
   
      **Suchen,**  
      Durchsuchen Sie die Protokolldatei nach bestimmtem Text. Das Suchen mit Platzhalterzeichen wird nicht unterstützt.  

@@ -17,17 +17,17 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbad843d482945a29cb03fde9545b1c19fb354f9
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: cd8b60ec5b302183fdb1a0713e71568821dae2fe
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098393"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813102"
 ---
 # <a name="contained-databases"></a>Eigenständige Datenbanken
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Eine *eigenständige Datenbank* ist eine Datenbank, die von anderen Datenbanken und der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , der die Datenbank hostet, isoliert ist.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] hilft Benutzern dabei, ihre Datenbank von der Instanz auf vier Arten zu isolieren.  
+  Eine *eigenständige Datenbank* ist eine Datenbank, die von anderen Datenbanken und der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , der die Datenbank hostet, isoliert ist.  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] hilft Benutzern dabei, ihre Datenbank von der Instanz auf vier Arten zu isolieren.  
   
 -   Eine Menge der Metadaten, die eine Datenbank beschreiben, wird in der Datenbank verwaltet. (Zusätzlich zur oder anstelle der Verwaltung von Metadaten in der master-Datenbank.)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "98098393"
   
 -   Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Umgebung (DMVs, XEvents usw.) berichtet und kann auf Kapselungsinformationen reagieren.  
   
- Einige Funktionen von teilweise eigenständigen Datenbanken, beispielsweise das Speichern von Metadaten in der Datenbank, gelten für alle [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbanken. Einige Vorteile der teilweise eigenständigen Datenbanken, beispielsweise Authentifizierung auf Datenbankebene und Katalogsortierung, müssen erst aktiviert werden, damit sie verfügbar sind. Die partielle Eigenständigkeit wird mithilfe der Anweisungen **CREATE DATABASE** und **ALTER DATABASE** oder mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aktiviert. Weitere Informationen zum Aktivieren der Sortierung teilweiser Datenbanken finden Sie unter [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md).  
+ Einige Funktionen von teilweise eigenständigen Datenbanken, beispielsweise das Speichern von Metadaten in der Datenbank, gelten für alle [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Datenbanken. Einige Vorteile der teilweise eigenständigen Datenbanken, beispielsweise Authentifizierung auf Datenbankebene und Katalogsortierung, müssen erst aktiviert werden, damit sie verfügbar sind. Die partielle Eigenständigkeit wird mithilfe der Anweisungen **CREATE DATABASE** und **ALTER DATABASE** oder mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aktiviert. Weitere Informationen zum Aktivieren der Sortierung teilweiser Datenbanken finden Sie unter [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md).  
   
 ##  <a name="partially-contained-database-concepts"></a><a name="Concepts"></a> Konzepte zur teilweise eigenständigen Datenbank  
  Eine vollständig eigenständige Datenbank schließt alle erforderlichen Datenbankeinstellungen und Metadaten zum Definieren der Datenbank ein, und ihre Konfiguration ist nicht von der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Instanz abhängig, in der die Datenbank installiert ist. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]konnte das Trennen einer Datenbank von der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine zeitraubende Angelegenheit sein, und es erforderte ein fundiertes Wissen der Beziehung zwischen den Datenbanken und der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die teilweise eigenständigen Datenbanken erleichtern das Trennen einer Datenbank von der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und anderen Datenbanken.  
