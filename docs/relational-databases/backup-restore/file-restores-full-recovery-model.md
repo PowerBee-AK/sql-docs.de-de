@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 69ad35549678772fc0da1c834ba4064beeb19ed7
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: fd5fa04b32d9c00f810b61bbca81963e21bd5697
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125605"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076878"
 ---
 # <a name="file-restores-full-recovery-model"></a>Dateiwiederherstellungen (vollständiges Wiederherstellungsmodell)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "96125605"
   
      Bei einer *Offlinedateiwiederherstellung* ist die Datenbank offline, während die beschädigten Dateien oder Dateigruppen wiederhergestellt werden. Am Ende der Wiederherstellungssequenz wird die Datenbank wieder online geschaltet.  
   
-     Offlinewiederherstellungen werden von allen Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt.  
+     Offlinewiederherstellungen werden von allen Editionen von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] unterstützt.  
   
 -   Onlinedateiwiederherstellung  
   

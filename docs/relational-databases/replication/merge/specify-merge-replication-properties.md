@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d842733a3b1356803ad0ca979c058f2afc2043a6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bb40ff622df8183b51349252663b964249399c3a
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482439"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99077108"
 ---
 # <a name="specify-merge-replication-properties"></a>Angeben von Mergereplikationseigenschaften
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ Wählen Sie im Assistenten für neue Veröffentlichung auf der Seite **Artikel**
   
 1.  Führen Sie den Befehl [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) aus, und überprüfen Sie den Wert **upload_options** für den Artikel im Resultset, um zu bestimmen, ob ein Artikel nur herunterladbar ist. 
   
-2.  Wenn in Schritt 1 der Wert **0**zurückgegeben wird, führen Sie [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus, und geben Sie dabei den Wert **subscriber_upload_options** für `@property`, den Wert **1** für `@force_invalidate_snapshot` und `@force_reinit_subscription` sowie den Wert **1** oder **2** für `@value` an, was folgendem Verhalten entspricht:  
+2.  Wenn in Schritt 1 der Wert **0** zurückgegeben wird, führen Sie [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus, und geben Sie dabei den Wert **subscriber_upload_options** für `@property`, den Wert **1** für `@force_invalidate_snapshot` und `@force_reinit_subscription` sowie den Wert **1** oder **2** für `@value` an, was folgendem Verhalten entspricht:  
   
     -   **1** &ndash; Änderungen sind auf dem Abonnenten zulässig, werden aber nicht auf den Verleger hochgeladen.    
     -   **2** &ndash; Änderungen sind auf dem Abonnenten nicht zulässig.  
@@ -86,7 +86,7 @@ Wählen Sie im Assistenten für neue Veröffentlichung auf der Seite **Artikel**
 #### <a name="enable-interactive-conflict-resolution-for-an-article"></a>Aktivieren der interaktiven Konfliktlösung für einen Artikel  
   
 1.  Wählen Sie auf der Seite **Artikel** des Assistenten für neue Veröffentlichung bzw. des Dialogfelds **Veröffentlichungseigenschaften - \<Publication>** eine Tabelle aus. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](../../../relational-databases/replication/publish/create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).   
-2.  Klicken Sie auf **Artikeleigenschaften**und anschließend auf **Eigenschaften des hervorgehobenen Tabellenartikels festlegen** bzw. **Eigenschaften aller Tabellenartikel festlegen**.    
+2.  Klicken Sie auf **Artikeleigenschaften** und anschließend auf **Eigenschaften des hervorgehobenen Tabellenartikels festlegen** bzw. **Eigenschaften aller Tabellenartikel festlegen**.    
 3.  Klicken Sie auf der Seite **Artikeleigenschaften - \<Article>** oder **Artikeleigenschaften - \<ArticleType>** auf die Registerkarte **Konfliktlöser**.    
 4.  Aktivieren Sie die Option **Zulassen, dass der Abonnent Konflikte während bedarfsgesteuerter Synchronisierungen interaktiv löst**.    
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]    
@@ -103,8 +103,8 @@ Wählen Sie im Assistenten für neue Veröffentlichung auf der Seite **Artikel**
 #### <a name="create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>Erstellen eines Mergepullabonnements, das den interaktiven Konfliktlöser verwendet  
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) aus, und geben Sie dabei `@publication` an. Betrachten Sie den Wert von **allow_interactive_resolver** für jeden Artikel im Resultset, für das der interaktive Konfliktlöser verwendet wird.   
-    -   Wenn dieser Wert **1**lautet, wird der Interaktive Konfliktlöser verwendet.    
-    -   Wenn dieser Wert **0**lautet, müssen Sie zuerst den interaktiven Konfliktlöser für jeden Artikel aktivieren. Führen Sie hierzu [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus, und geben Sie dabei `@publication`, `@article`, den Wert **allow_interactive_resolver** für `@property` sowie den Wert **TRUE** für `@value` an.    
+    -   Wenn dieser Wert **1** lautet, wird der Interaktive Konfliktlöser verwendet.    
+    -   Wenn dieser Wert **0** lautet, müssen Sie zuerst den interaktiven Konfliktlöser für jeden Artikel aktivieren. Führen Sie hierzu [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) aus, und geben Sie dabei `@publication`, `@article`, den Wert **allow_interactive_resolver** für `@property` sowie den Wert **TRUE** für `@value` an.    
 2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)aus. Weitere Informationen finden Sie unter [Create a Pull Subscription](../../../relational-databases/replication/create-a-pull-subscription.md).    
 3.  Führen Sie auf dem Abonnenten für die Abonnentendatenbank [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)aus, und geben Sie die folgenden Parameter an:    
     -   `@publisher`, `@publisher_db` (die veröffentlichte Datenbank) und `@publication`.    
@@ -118,7 +118,7 @@ Wählen Sie im Assistenten für neue Veröffentlichung auf der Seite **Artikel**
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)aus. Geben Sie den Namen der Veröffentlichung, zu der der Artikel gehört, für `@publication`, den Namen des Artikels für `@article`, das Datenbankobjekt, das veröffentlicht wird, für `@source_object` und den Wert **TRUE** für `@allow_interactive_resolver` an. Weitere Informationen finden Sie unter [Definieren eines Artikels](../../../relational-databases/replication/publish/define-an-article.md).  
  
 ## <a name="conflict-tracking-and-resolution-level-for-merge-articles"></a>Konfliktnachverfolgungs- und -lösungsebene für Mergeartikel
-In diesem Thema wird beschrieben, wie die Konfliktnachverfolgung und die Auflösungsebene für Mergeartikel in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]angegeben werden.  
+In diesem Thema wird beschrieben, wie die Konfliktnachverfolgung und die Auflösungsebene für Mergeartikel in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]angegeben werden.  
   
  Wenn ein Abonnement für eine Mergeveröffentlichung synchronisiert wird, prüft die Replikation auf Konflikte, die sich ergeben, wenn der Verleger und der Abonnent die gleichen Daten ändern. Sie können angeben, ob Konflikte auf Zeilenebene erkannt werden, wobei jede Änderung in der Zeile als Konflikt eingestuft wird, oder auf Spaltenebene, wobei nur die Änderungen in derselben Spalte und derselben Zeile als Konflikte eingestuft werden. Die Konfliktlösung für Artikel wird auf Zeilenebene ausgeführt. Weitere Informationen zur Konflikterkennung und -lösung bei logischen Datensätzen finden Sie unter [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
  
@@ -133,7 +133,7 @@ In diesem Thema wird beschrieben, wie die Konfliktnachverfolgung und die Auflös
 #### <a name="specify-row--or-column-level-tracking"></a>Angeben der Nachverfolgung auf Zeilen- oder Spaltenebene  
   
 1.  Wählen Sie auf der Seite **Artikel** des Assistenten für neue Veröffentlichung bzw. des Dialogfelds **Veröffentlichungseigenschaften - \<Publication>** eine Tabelle aus.  
-2.  Klicken Sie auf **Artikeleigenschaften**und anschließend auf **Eigenschaften des hervorgehobenen Tabellenartikels festlegen** bzw. **Eigenschaften aller Tabellenartikel festlegen**.   
+2.  Klicken Sie auf **Artikeleigenschaften** und anschließend auf **Eigenschaften des hervorgehobenen Tabellenartikels festlegen** bzw. **Eigenschaften aller Tabellenartikel festlegen**.   
 3.  Wählen Sie im Dialogfeld **Artikeleigenschaften \<Article>** auf der Registerkarte **Eigenschaften** einen der folgenden Werte für die Eigenschaft **Nachverfolgungsebene** aus: **Nachverfolgung auf Zeilenebene** oder **Nachverfolgung auf Spaltenebene**.   
 4.  Wenn Sie sich im Dialogfeld **Veröffentlichungseigenschaften - \<Publication>** befinden, klicken Sie auf **OK**, um die Einstellungen zu speichern und das Dialogfeld zu schließen.  
   
@@ -189,9 +189,9 @@ Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergear
 ### <a name="how-processing-order-is-determined"></a>Funktionsweise bei der Festlegung der Verarbeitungsreihenfolge  
  Während der Mergesynchronisierung werden die Artikel standardmäßig entsprechend den Abhängigkeiten zwischen den Objekten geordnet. Zu diesen Abhängigkeiten gehören auch die in den Basistabellen definierten DRI-Einschränkungen (Deklarative referenzielle Integrität). Bei der Verarbeitung werden die Änderungen in einer Tabelle aufgezählt und dann angewendet. Wenn es keine deklarative referenzielle Integrität gibt, zwischen den Tabellenartikeln aber Joinfilter oder logische Datensätze vorhanden sind, werden die Artikel entsprechend der in den Filtern und logischen Datensätzen festgelegten Reihenfolge verarbeitet. Artikel, für die keine Abhängigkeiten per DRI, Joinfiltern, logischen Datensätzen oder anderen Methoden bestehen, werden anhand ihres in der [sysmergearticles &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/sysmergearticles-transact-sql.md)-Systemtabelle verzeichneten Artikelspitznamens verarbeitet.  
   
- Angenommen, es gibt eine Veröffentlichung mit der **SalesOrderHeader** - und der **SalesOrderDetail** -Tabelle mit einer **SalesOrderID** -Primärschlüsselspalte in der **SalesOrderHeader** -Tabelle und einer zugehörigen **SalesOrderID** -Fremdschlüsselspalte in der **SalesOrderDetail** -Tabelle. Bei der Synchronisierung verhindert die Mergereplikation Fremdschlüsselverletzungen, indem alle neuen Zeilen zuerst in **SalesOrderHeader** und erst dann die entsprechenden Zeilen in **SalesOrderDetail**eingefügt werden. Genauso werden erst Zeilen aus der **SalesOrderDetail** -Tabelle gelöscht, bevor die entsprechenden Zeilen auch aus der **SalesOrderHeader**-Tabelle gelöscht werden.  
+ Angenommen, es gibt eine Veröffentlichung mit der **SalesOrderHeader** - und der **SalesOrderDetail** -Tabelle mit einer **SalesOrderID** -Primärschlüsselspalte in der **SalesOrderHeader** -Tabelle und einer zugehörigen **SalesOrderID** -Fremdschlüsselspalte in der **SalesOrderDetail** -Tabelle. Bei der Synchronisierung verhindert die Mergereplikation Fremdschlüsselverletzungen, indem alle neuen Zeilen zuerst in **SalesOrderHeader** und erst dann die entsprechenden Zeilen in **SalesOrderDetail** eingefügt werden. Genauso werden erst Zeilen aus der **SalesOrderDetail** -Tabelle gelöscht, bevor die entsprechenden Zeilen auch aus der **SalesOrderHeader**-Tabelle gelöscht werden.  
   
- In einigen Anwendungen wird die referenzielle Integrität durch Datenbanktrigger oder auf Anwendungsebene und nicht per DRI erzwungen. So könnte z. B. die oben beschriebene Veröffentlichung statt DRI in der **SalesOrderDetail** -Tabelle einen INSERT-Trigger besitzen, der sicherstellt, dass die zugehörige Zeile in der **SalesOrderHeader** -Tabelle vorhanden ist, bevor eine Einfügung zugelassen wird. Die**SalesOrderHeader** -Tabelle könnte einen DELETE-Trigger enthalten, der sicherstellt, dass in **SalesOrderDetail** keine zugehörigen Zeilen vorhanden sind, bevor eine Löschung zugelassen wird. Bei der Mergereplikation werden zur Bestimmung der Verarbeitungsreihenfolge der Artikel keine Trigger berücksichtigt, da dieser Replikationstyp das Ergebnis des Triggers nicht vorhersehen kann. Darüber hinaus kann diese Replikation auch keine auf Anwendungsebene definierten Einschränkungen berücksichtigen.  
+ In einigen Anwendungen wird die referenzielle Integrität durch Datenbanktrigger oder auf Anwendungsebene und nicht per DRI erzwungen. So könnte z. B. die oben beschriebene Veröffentlichung statt DRI in der **SalesOrderDetail** -Tabelle einen INSERT-Trigger besitzen, der sicherstellt, dass die zugehörige Zeile in der **SalesOrderHeader** -Tabelle vorhanden ist, bevor eine Einfügung zugelassen wird. Die **SalesOrderHeader** -Tabelle könnte einen DELETE-Trigger enthalten, der sicherstellt, dass in **SalesOrderDetail** keine zugehörigen Zeilen vorhanden sind, bevor eine Löschung zugelassen wird. Bei der Mergereplikation werden zur Bestimmung der Verarbeitungsreihenfolge der Artikel keine Trigger berücksichtigt, da dieser Replikationstyp das Ergebnis des Triggers nicht vorhersehen kann. Darüber hinaus kann diese Replikation auch keine auf Anwendungsebene definierten Einschränkungen berücksichtigen.  
   
  Wenn die referenzielle Integrität durch Trigger oder auf Anwendungsebene gewahrt wird, müssen Sie die Reihenfolge angeben, in der die Artikel verarbeitet werden sollen. Im Beispiel mit den Triggern würden Sie dann angeben, dass die **SalesOrderHeader** -Tabelle vor der **SalesOrderDetail**-Tabelle zu verarbeiten ist, weil die Artikelreihenfolge auf der Einfügereihenfolge basiert. Bei der Mergereplikation wird die Reihenfolge der Löschungen automatisch umgekehrt. Das Nichtfestlegen einer Artikelverarbeitungsreihenfolge führt nicht zu einem Scheitern der Mergereplikation, weil der Merge-Agent mit der Verarbeitung der Artikel fortfährt, wenn es zu einer Einschränkungsverletzung kommt. Wenn die anderen Artikel verarbeitet sind, versucht der Agent, alle Operationen, die fehlgeschlagen sind, erneut auszuführen. Durch das Angeben einer Artikelverarbeitungsreihenfolge werden lediglich solche Neuversuche und die damit verbundene zusätzliche Verarbeitung verhindert. Wenn Sie eine falsche Reihenfolge angeben (z. B. eine, bei der die Detaildatensätze vor den Headerdatensätzen verarbeitet werden), versucht die Mergereplikation die Verarbeitung so lange, bis sie gelingt.   
   

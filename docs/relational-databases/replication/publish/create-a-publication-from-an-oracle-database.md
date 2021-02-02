@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: daff2b55669f1922425c2976340e5ee46f964dc5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc7660d1990f556ae3ccfb8d34d66519dd2ecd76
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423454"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076778"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Erstellen einer Veröffentlichung aus einer Oracle-Datenbank
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  In diesem Thema wird beschrieben, wie in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]eine Veröffentlichung aus einer Oracle-Datenbank erstellt wird.  
+  In diesem Thema wird beschrieben, wie in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]eine Veröffentlichung aus einer Oracle-Datenbank erstellt wird.  
   
  **In diesem Thema**  
   
@@ -62,15 +62,15 @@ ms.locfileid: "88423454"
   
     1.  Geben Sie den Namen der Oracle-Datenbankinstanz ein, oder wählen Sie im Kombinationsfeld **Serverinstanz** den Eintrag **Suche fortsetzen** aus.  
   
-    2.  Wählen Sie **Oracle-Standardauthentifizierung** (empfohlen) oder **Windows-Authentifizierung**aus.  
+    2.  Wählen Sie **Oracle-Standardauthentifizierung** (empfohlen) oder **Windows-Authentifizierung** aus.  
   
-         Wenn Sie die **Windows-Authentifizierung**wählen: Der Oracle-Server muss so konfiguriert werden, dass Verbindungen mithilfe von Windows-Anmeldeinformationen möglich sind (weitere Informationen dazu finden Sie in der Oracle-Dokumentation). Darüber hinaus müssen Sie aktuell mit demselben [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Konto angemeldet sein, das Sie für das Schema des administrativen Replikationsbenutzers angegeben haben.  
+         Wenn Sie die **Windows-Authentifizierung** wählen: Der Oracle-Server muss so konfiguriert werden, dass Verbindungen mithilfe von Windows-Anmeldeinformationen möglich sind (weitere Informationen dazu finden Sie in der Oracle-Dokumentation). Darüber hinaus müssen Sie aktuell mit demselben [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Konto angemeldet sein, das Sie für das Schema des administrativen Replikationsbenutzers angegeben haben.  
   
-    3.  Wenn Sie sich für **Oracle-Standardauthentifizierung**entschieden haben, geben Sie den Anmeldenamen und das Kennwort für das Schema für den administrativen Replikationsbenutzer ein, das Sie beim Konfigurieren auf dem Oracle-Verleger erstellt haben.  
+    3.  Wenn Sie sich für **Oracle-Standardauthentifizierung** entschieden haben, geben Sie den Anmeldenamen und das Kennwort für das Schema für den administrativen Replikationsbenutzer ein, das Sie beim Konfigurieren auf dem Oracle-Verleger erstellt haben.  
   
-6.  Wählen Sie auf der Registerkarte **Verbindungseigenschaften** als Verlegertyp **Gateway** oder **Vollständig**aus.  
+6.  Wählen Sie auf der Registerkarte **Verbindungseigenschaften** als Verlegertyp **Gateway** oder **Vollständig** aus.  
   
-     Mithilfe der Option **Vollständig** kann für Momentaufnahme- und Transaktionsveröffentlichungen der vollständige Satz an unterstützten Funktionen für Oracle-Veröffentlichungen verfügbar gemacht werden. Die Option **Gateway** bietet spezielle Designoptimierungen, um die Leistung in Fällen zu verbessern, in denen die Replikation als Gateway zwischen Systemen verwendet wird. Sie können die Option **Gateway** nicht verwenden, wenn Sie planen, dieselbe Tabelle in mehreren Transaktionsveröffentlichungen zu veröffentlichen. Wenn Sie **Gateway**auswählen, kann eine Tabelle höchstens in einer Transaktionsveröffentlichung und in einer beliebigen Zahl an Momentaufnahmeveröffentlichungen erscheinen.  
+     Mithilfe der Option **Vollständig** kann für Momentaufnahme- und Transaktionsveröffentlichungen der vollständige Satz an unterstützten Funktionen für Oracle-Veröffentlichungen verfügbar gemacht werden. Die Option **Gateway** bietet spezielle Designoptimierungen, um die Leistung in Fällen zu verbessern, in denen die Replikation als Gateway zwischen Systemen verwendet wird. Sie können die Option **Gateway** nicht verwenden, wenn Sie planen, dieselbe Tabelle in mehreren Transaktionsveröffentlichungen zu veröffentlichen. Wenn Sie **Gateway** auswählen, kann eine Tabelle höchstens in einer Transaktionsveröffentlichung und in einer beliebigen Zahl an Momentaufnahmeveröffentlichungen erscheinen.  
   
 7.  Klicken Sie auf **Verbinden**. Es wird eine Verbindung mit dem Oracle-Verleger hergestellt, und die Verbindung wird für die Replikation konfiguriert. Das Dialogfeld **Verbindung mit Server herstellen** wird geschlossen, und es wird wieder das Dialogfeld **Verteilereigenschaften – \<Distributor>** angezeigt.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "88423454"
   
 4.  Wählen Sie auf der Seite **Oracle-Verleger** des Assistenten für neue Veröffentlichung den Oracle-Verleger aus. Wenn der Oracle-Verleger nicht angezeigt wird, klicken Sie auf **Oracle-Verleger hinzufügen**. Führen Sie dann die in der vorherigen Prozedur beschriebenen Schritte aus.  
   
-5.  Wählen Sie auf der Seite **Veröffentlichungstyp** entweder **Momentaufnahmeveröffentlichung** oder **Transaktionsveröffentlichung**aus.  
+5.  Wählen Sie auf der Seite **Veröffentlichungstyp** entweder **Momentaufnahmeveröffentlichung** oder **Transaktionsveröffentlichung** aus.  
   
 6.  Wählen Sie auf der Seite **Artikel** die Datenbankobjekte aus, die Sie veröffentlichen möchten.  
   
