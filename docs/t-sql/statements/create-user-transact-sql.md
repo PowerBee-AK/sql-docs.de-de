@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - WITHOUT_LOGIN_TSQL
 - CREATE_USER_TSQL
@@ -30,12 +30,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 446e9fa7dc252da75bc1c14ecf3fbe0fdf92b3e8
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 6943409b7a0406a7012374b0c8a0ee7142550fe0
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170322"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237072"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 
@@ -240,7 +240,7 @@ SID = *sid*
  Gilt nur für Benutzer mit Kennwörtern ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung) in einer eigenständigen Datenbank. Gibt die SID des neuen Datenbankbenutzers an. Wenn diese Option nicht ausgewählt wird, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatisch ein SID zugewiesen. Erstellen Sie mit dem SID-Parameter Benutzer in mehreren Datenbanken, die die gleiche Identität (SID) aufweisen. Dies ist beim Erstellen von Benutzern in mehreren Datenbanken für die Vorbereitung eines Always On-Failovers hilfreich. Fragen Sie zum Bestimmen der SID eines Benutzers sys.database_principals ab.  
   
 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ON | **OFF**]  
- **Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] und höher, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Gilt für:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] und höher, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Verhindert bei Massenkopiervorgängen kryptografische Metadatenüberprüfungen auf dem Server. Dadurch kann der Benutzer durch Massenkopiervorgänge Daten zwischen Tabellen oder Datenbanken austauschen, ohne dabei die Daten zu verschlüsseln. Der Standardwert ist OFF.  
   
@@ -458,7 +458,7 @@ CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'
 ### <a name="h-creating-a-user-to-copy-encrypted-data"></a>H. Erstellen eines Benutzers zum Kopieren von verschlüsselten Daten  
  Im folgenden Beispiel wird ein Benutzer erstellt, der durch das Feature „Always Encrypted“ geschützte Daten aus einem Tabellensatz mit verschlüsselten Spalten in einen anderen Tabellensatz mit verschlüsselten Spalten kopieren kann (innerhalb derselben oder zu einer anderen Datenbank).  Weitere Informationen finden Sie unter [Migrieren von durch Always Encrypted geschützten sensiblen Daten](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).  
   
-**Gilt für:** [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] und höher, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Gilt für:** [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] und höher, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```sql  
 CREATE USER [Chin]   

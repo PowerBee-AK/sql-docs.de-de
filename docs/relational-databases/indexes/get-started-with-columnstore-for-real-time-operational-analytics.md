@@ -12,17 +12,17 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e62692402f33bfc42957363794bad9a698b18bb
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: dbc0867b71cadb33b1eb9174132b2031134a72f0
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172762"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236935"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Erste Schritte mit Columnstore für die operative Echtzeitanalyse
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Mit [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] wird die operative Echtzeitanalyse eingeführt, die Möglichkeit, Analyse- und OLTP-Workloads zugleich auf den gleichen Datenbanktabellen auszuführen. Damit können Sie nicht nur Analysen in Echtzeit ausführen, sondern benötigen auch keine ETL-Aufträge und kein Data Warehouse mehr.  
+  Mit [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] wird die operative Echtzeitanalyse eingeführt, die Möglichkeit, Analyse- und OLTP-Workloads zugleich auf den gleichen Datenbanktabellen auszuführen. Damit können Sie nicht nur Analysen in Echtzeit ausführen, sondern benötigen auch keine ETL-Aufträge und kein Data Warehouse mehr.  
   
 ## <a name="real-time-operational-analytics-explained"></a>Grundlagen der operativen Echtzeitanalyse  
  Bisher verwendeten Unternehmen separate Systeme für operative (d. h. OLTP) und Analysearbeitsauslastungen. Bei derartigen Systemen verschieben ETL-Aufträge (Extrahieren, Transformieren, Laden) die Daten aus dem Betriebs- in den Analysespeicher. Die Analysedaten sind normalerweise in einem Data Warehouse oder Data Mart gespeichert, die dediziert für die Ausführung von Analyseabfragen verwendet werden. Diese Lösung hat sich zwar als Standard etabliert, sie sieht sich jedoch diesen drei Herausforderungen gegenüber:  

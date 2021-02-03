@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7f773a1ee50395eeebd40e0f08672c324170ccf3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d015a1adf0bdd5e5f47b49a8dabb6783b8538b7e
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883542"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250079"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Erstellen einer Server- und Datenbanküberwachungsspezifikation
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  In diesem Artikel erfahren Sie, wie Sie eine Server- und eine Datenbanküberwachungsspezifikation in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] erstellen.  
+  In diesem Artikel erfahren Sie, wie Sie eine Server- und eine Datenbanküberwachungsspezifikation in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] erstellen.  
   
  Die Überwachung einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz oder einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank umfasst die Nachverfolgung und Protokollierung der Ereignisse des Systems. Das *SQL Server Audit*-Objekt erfasst eine einzelne Instanz von Aktionen oder Aktionsgruppen auf Server- oder Datenbankebene auf, die überwacht werden soll. Die Überwachung wird auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzebene ausgeführt. Es können mehrere Überwachungen pro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz vorliegen. Das Objekt für die *Überwachungsspezifikation auf Datenbankebene* gehört ebenfalls zu einer Überwachung. Sie können eine Datenbank-Überwachungsspezifikation pro SQL Server-Datenbank und pro Überwachung erstellen. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -76,7 +76,7 @@ ms.locfileid: "85883542"
      Gibt die aufzuzeichnenden Überwachungsaktionsgruppen auf Datenbankebene und Überwachungsaktionen an. Eine Liste der Überwachungsaktionsgruppen auf Datenbankebene und Überwachungsaktionen sowie eine Beschreibung der darin enthaltenen Ereignisse finden Sie unter [SQL Server Audit-Aktionsgruppen und -Aktionen](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
   
      **Objektschema**  
-     Zeigt das Schema für den angegebenen **Objektnamen**an.  
+     Zeigt das Schema für den angegebenen **Objektnamen** an.  
   
      **Objektnamen**  
      Der Name des zu überwachenden Objekts. Diese Option ist nur für Überwachungsaktionen verfügbar. Sie gilt nicht für Überwachungsgruppen.  

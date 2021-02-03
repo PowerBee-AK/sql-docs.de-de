@@ -11,12 +11,12 @@ ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c88fd07e9af86a3c12561935364514b23bc2ea91
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 3bce064f00aa3f16a9fc4710fc9dd7dcd53e1534
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172282"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236871"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Zugreifen auf speicheroptimierte Tabellen mit interpretiertem Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "98172282"
   
 Interpretiertes [!INCLUDE[tsql](../../includes/tsql-md.md)] bezieht sich auf [!INCLUDE[tsql](../../includes/tsql-md.md)] -Batches oder gespeicherte Prozeduren, die keine systemintern kompilierten gespeicherten Prozeduren sind. Der Zugriff auf speicheroptimierte Tabellen mittels interpretiertem [!INCLUDE[tsql](../../includes/tsql-md.md)] wird als Interopzugriff bezeichnet.  
 
-Ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]können Abfragen in interpretiertem [!INCLUDE[tsql](../../includes/tsql-md.md)] speicheroptimierte Tabellen parallel scannen, nicht nur im seriellen Modus.
+Ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]können Abfragen in interpretiertem [!INCLUDE[tsql](../../includes/tsql-md.md)] speicheroptimierte Tabellen parallel scannen, nicht nur im seriellen Modus.
 
 Auf speicheroptimierte Tabellen kann auch mithilfe einer systemintern kompilierten gespeicherten Prozedur zugegriffen werden. Für leistungskritische OLTP-Vorgänge werden systemintern kompilierte gespeicherte Prozeduren empfohlen.  
   

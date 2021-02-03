@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - time_TSQL
 - time
@@ -23,12 +23,12 @@ ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f86da3e041d4edea7c6fcb71869414ba75544752
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 7425622f808eccb983b73670b57ec3295de15fb3
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472161"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237351"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 
@@ -108,7 +108,7 @@ ms.locfileid: "97472161"
   
  Beim Konvertieren in **time(n)** werden die Stunde, die Minute und die Sekunden kopiert. Wenn die Genauigkeit des Quellwerts die Genauigkeit des Zielwerts übersteigt, werden die Sekundenbruchteile entsprechend der Genauigkeit des Zielwerts aufgerundet. Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `time(3)`-Wert.  
   
-```  
+```sql
 DECLARE @timeFrom time(4) = '12:34:54.1237';  
 DECLARE @timeTo time(3) = @timeFrom;  
   
@@ -126,7 +126,7 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
   
  Wenn eine Konvertierung in **datetime** vorgenommen wird, werden die Werte für Stunden, Minuten und Sekunden kopiert, und die Datumskomponente wird auf 1900-01-01 festgelegt. Wenn die Genauigkeit des **time(n)**-Werts größer ist als drei Sekundenbruchteile, wird das **datetime**-Ergebnis gekürzt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetime`-Wert.  
   
-```  
+```sql
 DECLARE @time time(4) = '12:15:04.1237';  
 DECLARE @datetime datetime= @time;  
 SELECT @time AS '@time', @datetime AS '@datetime';  
@@ -142,7 +142,7 @@ SELECT @time AS '@time', @datetime AS '@datetime';
   
  Wenn eine Konvertierung in **smalldatetime** vorgenommen wird, wird das Datum auf 1900-01-01 festgelegt, und die Werte für Stunden und Minuten werden aufgerundet. Die Sekunden und die Sekundenbruchteile werden auf 0 festgelegt. Der folgende Code zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `smalldatetime`-Wert.  
   
-```  
+```sql
 -- Shows rounding up of the minute value.  
 DECLARE @time time(4) = '12:15:59.9999';   
 DECLARE @smalldatetime smalldatetime= @time;    
@@ -169,7 +169,7 @@ SELECT @time AS '@time', @smalldatetime AS '@smalldatetime';
   
  Wenn eine Konvertierung in **datetimeoffset(n)** vorgenommen wird, wird das Datum auf 1900-01-01 festgelegt und die Uhrzeit kopiert. Der Zeitzonenoffset wird auf +00:00 festgelegt. Wenn die Genauigkeit in Sekundenbruchteilen des **time(n)**-Werts größer ist als die Genauigkeit des **datetimeoffset(n)**-Werts, wird der Wert entsprechend aufgerundet. Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetimeoffset(3)`-Typ.  
   
-```  
+```sql
 DECLARE @time time(4) = '12:15:04.1237';  
 DECLARE @datetimeoffset datetimeoffset(3) = @time;  
   
@@ -186,7 +186,7 @@ SELECT @time AS '@time', @datetimeoffset AS '@datetimeoffset';
   
  Wenn eine Konvertierung in **datetime2(n)** vorgenommen wird, wird das Datum auf 1900-01-01 festgelegt, die Zeitkomponente wird kopiert, und der Zeitzonenoffset wird auf 00:00 festgelegt. Wenn die Genauigkeit in Sekundenbruchteilen des **datetime2(n)**-Werts größer ist als die Genauigkeit des **time(n)**-Werts, wird der Wert entsprechend aufgerundet.  Das folgende Beispiel zeigt die Ergebnisse der Konvertierung eines `time(4)`-Werts in einen `datetime2(2)`-Wert.  
   
-```  
+```sql
 DECLARE @time time(4) = '12:15:04.1237';  
 DECLARE @datetime2 datetime2(3) = @time;  
   
@@ -221,7 +221,7 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
 ### <a name="a-comparing-date-and-time-data-types"></a>A. Vergleichen des date-Datentyps mit dem time-Datentyp  
  Im folgenden Beispiel werden die Ergebnisse der Umwandlung von einer Zeichenfolge in alle **date**- und **time**-Datentypen verglichen.  
   
-```  
+```sql
 SELECT   
      CAST('2007-05-08 12:35:29. 1234567 +12:15' AS time(7)) AS 'time'   
     ,CAST('2007-05-08 12:35:29. 1234567 +12:15' AS date) AS 'date'   

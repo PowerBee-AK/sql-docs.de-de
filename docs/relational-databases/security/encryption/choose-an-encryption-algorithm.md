@@ -17,12 +17,12 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fb31365f95cddc23739db02df9ba4ad9db0345e
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: acb57d952832f5ae4d8fbfea0ee037170a854839
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171812"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236630"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Auswählen eines Verschlüsselungsalgorithmus
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "98171812"
  Mit Verschlüsselungsalgorithmen werden Datentransformationen definiert, die von unbefugten Benutzern nicht leicht umgekehrt werden können. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ermöglicht Administratoren und Entwicklern die Auswahl aus mehreren Algorithmen, einschließlich DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, 128-Bit-RC4, DESX, 128-Bit-AES, 192-Bit-AES und 256-Bit-AES.  
   
 > [!NOTE]  
->  Ab [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)]gelten alle anderen Algorithmen als AES_128, AES_192 und AES_256 als veraltet. Um ältere Algorithmen zu verwenden (was nicht empfohlen wird), müssen Sie den Kompatibilitätsgrad zwischen Datenbanken auf höchsten 120 festlegen.  
+>  Ab [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)]gelten alle anderen Algorithmen als AES_128, AES_192 und AES_256 als veraltet. Um ältere Algorithmen zu verwenden (was nicht empfohlen wird), müssen Sie den Kompatibilitätsgrad zwischen Datenbanken auf höchsten 120 festlegen.  
   
  Keiner der Algorithmen ist für alle Situationen ideal, und Richtlinien zu den Vorteilen der einzelnen Algorithmen würden den Rahmen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Onlinedokumentation sprengen. Es gelten jedoch die folgenden allgemeinen Prinzipien:  
   

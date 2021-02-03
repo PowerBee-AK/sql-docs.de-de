@@ -9,22 +9,22 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15'
-ms.openlocfilehash: 4630a96f1abf961174ece179aabfd160a5784ad9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5b99f12aebc27d04b384ff0b8d51b5359ca76d19
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471611"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236914"
 ---
 # <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Konfigurieren von persistentem Speicher (PMEM) für SQL Server für Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-In diesem Artikel wird beschrieben, wie der persistente Speicher (persistent memory, PMEM) für [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] für Linux konfiguriert wird.
+In diesem Artikel wird beschrieben, wie der persistente Speicher (persistent memory, PMEM) für [!INCLUDE[sqlv15](../includes/sssql19-md.md)] für Linux konfiguriert wird.
 
 ## <a name="overview"></a>Übersicht
 
-[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] verfügt über verschiedene In-Memory-Features, die persistenten Speicher verwenden. Hier fahren Sie, wie Sie den persistenten Speicher für SQL Server für Linux konfigurieren.
+[!INCLUDE[sqlv15](../includes/sssql19-md.md)] verfügt über verschiedene In-Memory-Features, die persistenten Speicher verwenden. Hier fahren Sie, wie Sie den persistenten Speicher für SQL Server für Linux konfigurieren.
 
 > [!NOTE]
 > Der Begriff _Aufklärung_ wurde eingeführt, um das Konzept eines Dateisystems auszudrücken, das persistenten Speicher unterstützt. Der direkte Zugriff auf das Dateisystem von Anwendungen des Benutzerbereichs aus erfolgt mithilfe einer Speicherzuordnung (`mmap()`). Wenn eine Speicherzuordnung für eine Datei erstellt wird, kann die Anwendung Lade-/Speicheranweisungen ausgeben und den E/A-Stapel dabei vollständig umgehen. Dies gilt aus der Perspektive der Hosterweiterungsanwendung (dem Blackboxcode, über den SQLPAL mit Windows- oder Linux-Betriebssystemen interagieren kann) als „aufgeklärte“ Dateizugriffsmethode.

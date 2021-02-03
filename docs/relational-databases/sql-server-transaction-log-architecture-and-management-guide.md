@@ -22,12 +22,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a445552a69033bec7564e05d7fc86d7416a5ff47
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ed532d22800cd10530ecc7db8595fcf75e3737da
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461831"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237941"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Handbuch zur Architektur und Verwaltung von Transaktionsprotokollen in SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -239,7 +239,7 @@ Das aktive Protokoll muss jeden Teil aller Transaktionen umfassen, für die noch
 * Wenn das System heruntergefahren wird, nachdem die Transaktion zahlreiche Änderungen vorgenommen hat, für die kein Commit ausgeführt wurde, kann die Wiederherstellungsphase beim nachfolgenden Neustart erheblich länger dauern, als durch die Option **Wiederherstellungsintervall festgelegt** wurde.
 * Das Protokoll kann sehr umfangreich werden, da das Protokoll nicht hinter der MinLSN abgeschnitten werden kann. Dies tritt auch dann auf, wenn die Datenbank das einfache Wiederherstellungsmodell verwendet, bei dem das Transaktionsprotokoll in der Regel bei jedem automatischen Prüfpunkt abgeschnitten wird.
 
-Beginnend mit [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] und in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] können Sie die Wiederherstellung von Transaktionen mit langer Laufzeit und die oben beschriebenen Probleme durch Verwenden der [verbesserten Wiederherstellung von Datenbanken](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr) vermeiden.  
+Beginnend mit [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] und in [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] können Sie die Wiederherstellung von Transaktionen mit langer Laufzeit und die oben beschriebenen Probleme durch Verwenden der [verbesserten Wiederherstellung von Datenbanken](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr) vermeiden.  
 
 ### <a name="replication-transactions"></a>Replikationstransaktionen
 Der Protokolllese-Agent überwacht das Transaktionsprotokoll jeder für die Transaktionsreplikation konfigurierten Datenbank und kopiert die für die Replikation markierten Transaktionen aus dem Transaktionsprotokoll in die Verteilungsdatenbank. Das aktive Protokoll muss alle Transaktionen enthalten, die für die Replikation markiert wurden, die jedoch noch nicht an die Verteilungsdatenbank übermittelt wurden. Wenn diese Transaktionen nicht rechtzeitig repliziert werden, können sie die Kürzung des Protokolls verhindern. Weitere Informationen finden Sie unter [Transaktionsreplikation](../relational-databases/replication/transactional/transactional-replication.md).

@@ -41,7 +41,7 @@ IMPORTANCE hat einen lokalen Bezug zum Ressourcenpool; Arbeitsauslastungsgruppen
 REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*</br>
 Gibt die Höchstmenge an Arbeitsspeicher an, die eine einzelne Anforderung vom Pool in Anspruch nehmen kann. *value* entspricht einem Prozentwert, der relativ zur Ressourcenpoolgröße ist, die mit MAX_MEMORY_PERCENT festgelegt wird.
 
-*value* ist bis [!INCLUDE[ssSQL17](sssql17-md.md)] ein Integer und ab [!INCLUDE[sql-server-2019](sssqlv15-md.md)] und in Azure SQL Managed Instance eine Gleitkommazahl. Der Standardwert ist 25. Der zulässige Bereich für *value* liegt zwischen 1 und 100.
+*value* ist bis [!INCLUDE[ssSQL17](sssql17-md.md)] ein Integer und ab [!INCLUDE[sql-server-2019](sssql19-md.md)] und in Azure SQL Managed Instance eine Gleitkommazahl. Der Standardwert ist 25. Der zulässige Bereich für *value* liegt zwischen 1 und 100.
 
 > [!IMPORTANT]  
 > Die angegebene Menge bezieht sich nur auf den für die Abfrageausführung gewährten Arbeitsspeicher.
@@ -64,7 +64,7 @@ Gibt die maximale CPU-Zeit in Sekunden an, die eine Anforderung beanspruchen kan
 > [!NOTE]
 > Resource Governor verhindert nicht, dass eine Anforderung bei Erreichung des maximalen Zeitlimits fortgesetzt wird. Es wird jedoch ein Ereignis generiert. Weitere Informationen finden Sie unter [CPU Threshold Exceeded (Ereignisklasse)](../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).
 > [!IMPORTANT]
-> Ab [!INCLUDE[ssSQL15](sssql16-md.md)] SP2 und [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 bricht Resource Governor mit [Ablaufverfolgungsflag 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) eine Anforderung ab, wenn die maximale Zeit überschritten wird.
+> Ab [!INCLUDE[sssql16-md](sssql16-md.md)] SP2 und [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 bricht Resource Governor mit [Ablaufverfolgungsflag 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) eine Anforderung ab, wenn die maximale Zeit überschritten wird.
 
 REQUEST_MEMORY_GRANT_TIMEOUT_SEC = *value*</br>
 Gibt die maximale Zeit in Sekunden an, die eine Abfrage auf das Freiwerden einer Speicherzuweisung (Arbeitsspeicherpuffer) wartet. *value* muss 0 (null) oder ein positiver Integer sein. Die Standardeinstellung für *value* ist 0 (null). Hierbei wird eine interne Berechnung basierend auf den Abfragekosten verwendet, um die maximale Zeit zu ermitteln.
@@ -97,7 +97,7 @@ Ordnet die Arbeitsauslastungsgruppe dem benutzerdefinierten Ressourcenpool zu, d
 > Für vordefinierte Arbeitsauslastungsgruppen und Ressourcenpools werden ausschließlich kleingeschriebene Namen verwendet, z. B. "default". Dies sollte bei Servern beachtet werden, die bei der Sortierung zwischen Groß-/Kleinschreibung unterscheiden. Server, die bei der Sortierung keine Groß- und Kleinschreibung unterscheiden, z. B. SQL_Latin1_General_CP1_CI_AS, behandeln "default" und "Default" gleich.
 
 EXTERNAL external_pool_name | "default"</br>
-**Gilt für**: [!INCLUDE[ssNoVersion](ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](sssql16-md.md)]).
+**Gilt für**: [!INCLUDE[ssNoVersion](ssnoversion-md.md)] (ab [!INCLUDE[sssql16-md](sssql16-md.md)]).
 
 Die Arbeitsauslastungsgruppe kann einen externen Ressourcenpool angeben. Sie können eine Arbeitsauslastungsgruppe definieren und zwei Pools zuordnen:
 
@@ -106,7 +106,7 @@ Die Arbeitsauslastungsgruppe kann einen externen Ressourcenpool angeben. Sie kö
 
 ## <a name="remarks"></a>Bemerkungen
 
-Wenn `REQUEST_MEMORY_GRANT_PERCENT` verwendet wird, kann die Indexerstellung verwendet werden, um mehr Arbeitsbereichsspeicher als ursprünglich zugewiesen zu verwenden, damit eine bessere Leistung erzielt wird. Diese besondere Behandlung wird von der Ressourcenkontrolle in [!INCLUDE[ssCurrent](sscurrent-md.md)] unterstützt. Die Zuweisung anfänglichen und zusätzlichen Arbeitsspeichers wird jedoch durch den Ressourcenpool und die Einstellungen der Arbeitsauslastungsgruppe begrenzt.
+Wenn `REQUEST_MEMORY_GRANT_PERCENT` verwendet wird, kann die Indexerstellung verwendet werden, um mehr Arbeitsbereichsspeicher als ursprünglich zugewiesen zu verwenden, damit eine bessere Leistung erzielt wird. Diese besondere Behandlung wird von der Ressourcenkontrolle in [!INCLUDE[ssCurrent](ssnoversion-md.md)] unterstützt. Die Zuweisung anfänglichen und zusätzlichen Arbeitsspeichers wird jedoch durch den Ressourcenpool und die Einstellungen der Arbeitsauslastungsgruppe begrenzt.
 
 Der Grenzwert `MAX_DOP` wird [taskbezogen](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) festgelegt. Es handelt sich nicht um einen [anforderungs](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)- oder abfragebezogenen Grenzwert. Das bedeutet, dass während einer parallelen Abfrageausführung eine einzelne Abfrage mehrere Tasks erzeugen kann, die einem [Planer](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) zugeordnet sind. Weitere Informationen finden Sie im [Handbuch zur Thread- und Taskarchitektur](../relational-databases/thread-and-task-architecture-guide.md).
 

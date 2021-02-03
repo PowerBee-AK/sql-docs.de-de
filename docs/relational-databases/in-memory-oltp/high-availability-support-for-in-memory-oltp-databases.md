@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9b275387efa5cc44b012cccef82fb3284e594abb
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 96686e379f9d10058ebcedffd44405b6c2f8a18a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170542"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237583"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Unterstützung für Hochverfügbarkeit für In-Memory OLTP-Datenbanken
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "98170542"
     Sekundäre Replikate behalten den im Speicher enthaltenen Status der dauerhaften speicheroptimierten Tabellen. Bei einem automatischen oder erzwungenen Failover ist die für das Failover auf das neue primäre Replikat erforderliche Zeit mit der für datenträgerbasierte Tabellen vergleichbar, da keine Wiederherstellung notwendig ist. Speicheroptimierte Tabellen, die als SCHEMA_ONLY erstellt wurden, werden in dieser Konfiguration unterstützt. Änderungen an diesen Tabellen werden jedoch nicht protokolliert. Deshalb sind in diesen Tabellen auf dem sekundären Replikat keine Daten vorhanden.  
   
 -   **Lesbares sekundäres Replikat**   
-    Sie können auf speicheroptimierte Tabellen im sekundären Replikat zugreifen und sie abfragen, wenn es für den Lesezugriff konfiguriert wurde. In [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] ist der Lesezeitstempel im sekundären Replikat eng mit dem Lesezeitstempel im primären Replikat synchronisiert. Änderungen am primären Replikat sind daher schnell im sekundären Replikat sichtbar. Diese enge Synchronisierung unterscheidet sich von In-Memory OLTP von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+    Sie können auf speicheroptimierte Tabellen im sekundären Replikat zugreifen und sie abfragen, wenn es für den Lesezugriff konfiguriert wurde. In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] ist der Lesezeitstempel im sekundären Replikat eng mit dem Lesezeitstempel im primären Replikat synchronisiert. Änderungen am primären Replikat sind daher schnell im sekundären Replikat sichtbar. Diese enge Synchronisierung unterscheidet sich von In-Memory OLTP von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
 
 ### <a name="considerations"></a>Überlegungen
 

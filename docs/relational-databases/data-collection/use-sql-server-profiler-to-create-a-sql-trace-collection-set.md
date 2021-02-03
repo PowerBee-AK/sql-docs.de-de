@@ -12,16 +12,16 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 25e6685166177b6adc436a1fc024d899be5f0233
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 4b2f20965b3bdff081368c2e1fcaa2bc255aca47
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96128829"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250093"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>Verwenden von SQL Server Profiler zum Erstellen eines Sammlungssatzes für die SQL-Ablaufverfolgung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] können Sie die serverseitigen Ablaufverfolgungsfunktionen von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] nutzen, um eine Ablaufverfolgungsdefinition für das Erstellen eines Sammlungssatzes zu exportieren, der den generischen Sammlertyp für die SQL-Ablaufverfolgung verwendet. Dieser Vorgang besteht aus zwei Teilen:  
+  In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] können Sie die serverseitigen Ablaufverfolgungsfunktionen von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] nutzen, um eine Ablaufverfolgungsdefinition für das Erstellen eines Sammlungssatzes zu exportieren, der den generischen Sammlertyp für die SQL-Ablaufverfolgung verwendet. Dieser Vorgang besteht aus zwei Teilen:  
   
 1.  Sie erstellen und exportieren eine [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Ablaufverfolgung.  
   

@@ -12,17 +12,17 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: 73f4abc0c1b2a7cd6943ab6b216133812c145d19
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ccf508d0415bc6baabc9c054a95ec26cf7989880
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772423"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236517"
 ---
 # <a name="hybrid-buffer-pool"></a>Hybrider Pufferpool
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-In einem hybriden Pufferpool können Pufferpoolobjekte auf Datenseiten in Datenbankdateien verweisen, die sich auf persistenten Speichergeräten (persistent memory, PMEM) befinden, anstatt nur auf Kopien der Datenseiten, die im flüchtigen DRAM zwischengespeichert sind. Dieses Feature wird in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] eingeführt.
+In einem hybriden Pufferpool können Pufferpoolobjekte auf Datenseiten in Datenbankdateien verweisen, die sich auf persistenten Speichergeräten (persistent memory, PMEM) befinden, anstatt nur auf Kopien der Datenseiten, die im flüchtigen DRAM zwischengespeichert sind. Dieses Feature wird in [!INCLUDE[sqlv15](../../includes/sssql19-md.md)] eingeführt.
 
 ![Hybrider Pufferpool](./media/hybrid-buffer-pool.png)
 
@@ -42,7 +42,7 @@ Weitere Informationen finden Sie unter
 
 ## <a name="enable-hybrid-buffer-pool"></a>Aktivieren des hybriden Pufferpools
 
-Mit [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] wird DDL (Dynamic Data Language) zum Steuern des hybriden Pufferpools eingeführt.
+Mit [!INCLUDE[sqlv15](../../includes/sssql19-md.md)] wird DDL (Dynamic Data Language) zum Steuern des hybriden Pufferpools eingeführt.
 
 Im folgenden Beispiel wird der hybride Pufferpool für eine Instanz von SQL Server aktiviert:
 

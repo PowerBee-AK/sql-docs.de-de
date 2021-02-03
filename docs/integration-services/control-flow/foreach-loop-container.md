@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ae64e777b08cdf4df6f7e8fdd05ff8c3822a06b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 3f1e5c31fdd51a7db14540bfeea3229c170dd2fa
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171522"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236657"
 ---
 # <a name="foreach-loop-container"></a>Foreach-Schleifencontainer
 
@@ -461,7 +461,7 @@ Auf der Seite **Allgemein** des Dialogfelds **Foreach-Schleifen-Editor** können
 ####  <a name="enumerator--foreach-azure-blob-enumerator"></a><a name="ForeachAzureBlob"></a> Enumerator = Foreach-Azure-Blob-Enumerator  
  Der **Azure-Blob-Enumerator** ermöglicht einem SSIS-Paket das Aufzählen von Blobdateien am angegebenen Blobspeicherort. Sie können den Namen der aufgezählten Blobdatei in einer Variablen speichern und in Tasks innerhalb des Foreach-Schleifencontainers verwenden.  
   
- Der **Azure-Blob-Enumerator** ist eine Komponente des SQL Server Integration Services (SSIS) Feature Pack für Azure für [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]. Laden Sie das Feature Pack [hier](https://go.microsoft.com/fwlink/?LinkID=626967)herunter.  
+ Der **Azure-Blob-Enumerator** ist eine Komponente des SQL Server Integration Services (SSIS) Feature Pack für Azure für [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]. Laden Sie das Feature Pack [hier](https://go.microsoft.com/fwlink/?LinkID=626967)herunter.  
   
  **Azure Storage-Verbindungs-Manager**  
  Wählen Sie einen vorhandenen Azure Storage-Verbindungs-Manager aus, oder erstellen Sie einen neuen, der auf ein Azure Storage-Konto verweist.  

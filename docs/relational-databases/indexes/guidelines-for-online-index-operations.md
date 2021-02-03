@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17c91b53c786934d292692493fa886698128b34d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9612070531dc13d9646d439501925f59f62c8da7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465301"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236913"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Richtlinien für Onlineindexvorgänge
 
@@ -119,7 +119,7 @@ Im Allgemeinen besteht kein Unterschied bei der Defragmentierungsqualität zwisc
 ## <a name="online-default-options"></a>Standardonlineoptionen
 
 > [!IMPORTANT]
-> Diese Optionen befinden sich in der öffentlichen Vorschau für [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)].
+> Diese Optionen befinden sich in der öffentlichen Vorschau für [!INCLUDE[ssNoVersion](../../includes/sssql19-md.md)].
 
 Sie können Standardoptionen für online oder fortsetzbar auf Datenbankebene festlegen, indem Sie die datenbankbezogenen Konfigurationsoptionen ELEVATE_ONLINE und ELEVATE_RESUMABLE festlegen. Mit diesen Standardoptionen können Sie versehentliches Ausführen eines Vorgangs verhindern, der die Datenbanktabelle offline schalten würde. Beide Optionen bewirken, dass die Engine bestimmte Vorgänge automatisch in Online- oder fortsetzbare Ausführung erhöht.  
 Sie können die Option über den Befehl [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) entweder auf FAIL_UNSUPPORTED, WHEN_SUPPORTED oder OFF festlegen. Sie können verschiedene Werte für online und fortsetzbar festlegen.
@@ -129,7 +129,7 @@ Sowohl ELEVATE_ONLINE als auch ELEVATE_RESUMABLE gelten nur für DDL-Anweisungen
 > [!NOTE]
 > ELEVATE_ONLINE und ELEVATE_RESUMABLE gelten nicht für XML-Indexvorgänge.
 
-## <a name="related-content"></a>Verwandte Themen
+## <a name="related-content"></a>Verwandter Inhalt
 
 - [Funktionsweise von Onlineindexvorgängen](../../relational-databases/indexes/how-online-index-operations-work.md)  
 - [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md)  

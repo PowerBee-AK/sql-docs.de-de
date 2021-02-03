@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: 88f965eadf0defbd75c859fa2308dd255f5c1486
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6625022360c93da5cbc43224572908738f6d430c
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470430"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236451"
 ---
 # <a name="in-memory-database-systems-and-technologies"></a>In-Memory-Datenbanksysteme und -Technologien
 
@@ -39,13 +39,13 @@ Bei Arbeitsauslastungen von relationalen Datenbanken ist ein schneller flüchtig
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-Bei einem [hybriden Pufferpool](../database-engine/configure-windows/hybrid-buffer-pool.md) wird der Pufferpool für Datenbankdateien, die auf byteadressierbaren Speichergeräten mit persistentem Speicher liegen, für Windows- und Linuxplattformen mit [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] erweitert.
+Bei einem [hybriden Pufferpool](../database-engine/configure-windows/hybrid-buffer-pool.md) wird der Pufferpool für Datenbankdateien, die auf byteadressierbaren Speichergeräten mit persistentem Speicher liegen, für Windows- und Linuxplattformen mit [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] erweitert.
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Speicheroptimierte `tempdb`-Metadaten
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-Mit [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] wird eine neue Funktion für [speicheroptimierte tempdb-Metadaten](./databases/tempdb-database.md#memory-optimized-tempdb-metadata) eingeführt, durch die einige Engpässe aufgrund von Konflikten effektiv behoben werden und sich eine neue Ebene der Skalierbarkeit für tempdb-intensive Workloads ergibt.
+Mit [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] wird eine neue Funktion für [speicheroptimierte tempdb-Metadaten](./databases/tempdb-database.md#memory-optimized-tempdb-metadata) eingeführt, durch die einige Engpässe aufgrund von Konflikten effektiv behoben werden und sich eine neue Ebene der Skalierbarkeit für tempdb-intensive Workloads ergibt.
 
 ## <a name="in-memory-oltp"></a>In-Memory-OLTP
 
@@ -57,7 +57,7 @@ Mit [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] wird eine neue Funkt
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] beschreibt, wie Sie persistenten Speicher unter Verwendung des [persistenten Speichers](../linux/sql-server-linux-configure-pmem.md) des Hilfsprogramms `ndctl` konfigurieren.
+[!INCLUDE[sqlv15](../includes/sssql19-md.md)] beschreibt, wie Sie persistenten Speicher unter Verwendung des [persistenten Speichers](../linux/sql-server-linux-configure-pmem.md) des Hilfsprogramms `ndctl` konfigurieren.
 
 ## <a name="persisted-log-buffer"></a>Persistenter Protokollpuffer
 

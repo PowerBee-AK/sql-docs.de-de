@@ -13,16 +13,16 @@ ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0cdf5dee29f2035ddb700f29df9c0bbb993c0aa
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 780944c299548aaa9a5664fef4688c11cdf69646
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479371"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250339"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>Erstellen identischer symmetrischer Schlüssel auf zwei Servern
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  In diesem Thema wird beschrieben, wie identische symmetrische Schlüssel in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]auf zwei verschiedenen Servern erstellt werden. Zum Entschlüsseln von verschlüsseltem Text benötigen Sie den Schlüssel, der beim Verschlüsseln verwendet wurde. Wenn eine Datenbank sowohl Verschlüsselungen als auch Entschlüsselungen enthält, ist der Schlüssel in der Datenbank gespeichert, und er ist entsprechend den Berechtigungen sowohl für die Verschlüsselung als auch für die Entschlüsselung verfügbar. Wenn sich Verschlüsselung und Entschlüsselung jedoch in separaten Datenbanken oder auf separaten Servern befinden, kann der in einer Datenbank gespeicherte Schlüssel nicht für die zweite Datenbank verwendet werden.
+  In diesem Thema wird beschrieben, wie identische symmetrische Schlüssel in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]auf zwei verschiedenen Servern erstellt werden. Zum Entschlüsseln von verschlüsseltem Text benötigen Sie den Schlüssel, der beim Verschlüsseln verwendet wurde. Wenn eine Datenbank sowohl Verschlüsselungen als auch Entschlüsselungen enthält, ist der Schlüssel in der Datenbank gespeichert, und er ist entsprechend den Berechtigungen sowohl für die Verschlüsselung als auch für die Entschlüsselung verfügbar. Wenn sich Verschlüsselung und Entschlüsselung jedoch in separaten Datenbanken oder auf separaten Servern befinden, kann der in einer Datenbank gespeicherte Schlüssel nicht für die zweite Datenbank verwendet werden.
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
   

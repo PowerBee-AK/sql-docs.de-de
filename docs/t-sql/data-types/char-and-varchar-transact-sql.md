@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - varchar
 - varchar_TSQL
@@ -25,18 +25,18 @@ ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f78cfecbfcf99ec3ae855b41bb802a0c6b12864
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a54d7e0abbbb15379f83a13fc0e604b6d087326d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462551"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236393"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char und varchar (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Dieser Artikel beschreibt Zeichendatentypen, die entweder über eine feste Größe – **char** – oder über eine variable Größe – **varchar** – verfügen. Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] gilt Folgendes: Wenn eine Sortierung mit aktiviertem UTF-8 verwendet wird, speichern diese Datentypen den gesamten Bereich der [Unicodezeichendaten](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) und verwenden die Zeichencodierung [UTF-8](https://www.wikipedia.org/wiki/UTF-8). Wenn eine Sortierung ohne aktivierte UTF-8 angegeben wird, speichern diese Datentypen nur eine Teilmenge von Zeichen, die von der entsprechenden Codepage dieser Sortierung unterstützt wird.
+Dieser Artikel beschreibt Zeichendatentypen, die entweder über eine feste Größe – **char** – oder über eine variable Größe – **varchar** – verfügen. Ab [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] gilt Folgendes: Wenn eine Sortierung mit aktiviertem UTF-8 verwendet wird, speichern diese Datentypen den gesamten Bereich der [Unicodezeichendaten](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) und verwenden die Zeichencodierung [UTF-8](https://www.wikipedia.org/wiki/UTF-8). Wenn eine Sortierung ohne aktivierte UTF-8 angegeben wird, speichern diese Datentypen nur eine Teilmenge von Zeichen, die von der entsprechenden Codepage dieser Sortierung unterstützt wird.
 
 ## <a name="arguments"></a>Argumente
 
@@ -56,11 +56,11 @@ Objekten, die **char** oder **varchar** verwenden, wird die Standardsortierung d
 Multibyte-Codierungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] umfassen:
 
 - Doppelbyte-Zeichensätze (DBCS) für einige ostasiatische Sprachen mit Codepages 936 und 950 (Chinesisch), 932 (Japanisch) oder 949 (Koreanisch).
-- UTF-8 mit Codepage 65001. **Anwendungsbereich:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]))
+- UTF-8 mit Codepage 65001. **Anwendungsbereich:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]))
 
 Wenn Sie Websites haben, die mehrere Sprachen unterstützen:
 
-- Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird eine Sortierung mit aktiviertem UTF-8 empfohlen, um Unicode zu unterstützen und Probleme bei der Zeichenkonvertierung zu vermeiden.
+- Ab [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] wird eine Sortierung mit aktiviertem UTF-8 empfohlen, um Unicode zu unterstützen und Probleme bei der Zeichenkonvertierung zu vermeiden.
 - Wenn Sie eine ältere Version von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verwenden, sollten Sie die Unicodedatentypen **nchar** oder **nvarchar** verwenden, um Probleme bei der Zeichenkonvertierung zu vermeiden.
 
 Wenn Sie **char** oder **varchar** verwenden, wird Folgendes empfohlen:

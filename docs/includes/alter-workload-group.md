@@ -46,7 +46,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*     
  Gibt die Höchstmenge an Arbeitsspeicher an, die eine einzelne Anforderung vom Pool in Anspruch nehmen kann. *value* entspricht einem Prozentwert, der relativ zur Ressourcenpoolgröße ist, die mit MAX_MEMORY_PERCENT festgelegt wird.  
 
-*value* entspricht bis [!INCLUDE[ssSQL17](sssql17-md.md)] einem Integer und ab [!INCLUDE[sql-server-2019](sssqlv15-md.md)] einer Gleitkommazahl. Der Standardwert ist 25. Der zulässige Bereich für *value* liegt zwischen 1 und 100.
+*value* entspricht bis [!INCLUDE[ssSQL17](sssql17-md.md)] einem Integer und ab [!INCLUDE[sql-server-2019](sssql19-md.md)] einer Gleitkommazahl. Der Standardwert ist 25. Der zulässige Bereich für *value* liegt zwischen 1 und 100.
   
 > [!NOTE]  
 > Die angegebene Menge bezieht sich nur auf den für die Abfrageausführung gewährten Arbeitsspeicher.  
@@ -72,7 +72,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > Resource Governor verhindert nicht, dass eine Anforderung bei Erreichung des maximalen Zeitlimits fortgesetzt wird. Es wird jedoch ein Ereignis generiert. Weitere Informationen finden Sie unter [CPU Threshold Exceeded (Ereignisklasse)](../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
 
 > [!IMPORTANT]
-> Ab [!INCLUDE[ssSQL15](sssql16-md.md)] SP2 und [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 bricht Resource Governor mit [Ablaufverfolgungsflag 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) eine Anforderung ab, wenn die maximale Zeit überschritten wird.
+> Ab [!INCLUDE[sssql16-md](sssql16-md.md)] SP2 und [!INCLUDE[ssSQL17](sssql17-md.md)] CU3 bricht Resource Governor mit [Ablaufverfolgungsflag 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) eine Anforderung ab, wenn die maximale Zeit überschritten wird.
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Gibt die maximale Zeit in Sekunden an, die eine Abfrage auf das Freiwerden einer Arbeitspeicherzuweisung (Arbeitsspeicherpuffer) wartet.  

@@ -15,12 +15,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40416d9ccd36e8de4ac1e4196a769607af3b5545
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4e8b8a82580fbe6f1a60a82d54e90c5ee106280f
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482366"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236790"
 ---
 # <a name="tables"></a>Tabellen
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ Tabellen sind Datenbankobjekte, die sämtliche in einer Datenbank enthaltenen Da
 
 ### <a name="partitioned-tables"></a>Partitionierte Tabellen
 
-Partitionierte Tabellen sind Tabellen, deren Daten horizontal in Einheiten aufgeteilt sind, die über mehrere Dateigruppen innerhalb einer Datenbank verteilt sein können. Durch die Partitionierung sind große Tabellen oder Indizes leichter zu verwalten, denn Sie können dadurch schnell und effizient auf Datenteilmengen zugreifen und sie verwalten, während die Integrität der gesamten Sammlung erhalten bleibt. Standardmäßig unterstützt [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bis zu 15.000 Partitionen. Weitere Informationen finden Sie unter [partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
+Partitionierte Tabellen sind Tabellen, deren Daten horizontal in Einheiten aufgeteilt sind, die über mehrere Dateigruppen innerhalb einer Datenbank verteilt sein können. Durch die Partitionierung sind große Tabellen oder Indizes leichter zu verwalten, denn Sie können dadurch schnell und effizient auf Datenteilmengen zugreifen und sie verwalten, während die Integrität der gesamten Sammlung erhalten bleibt. Standardmäßig unterstützt [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] bis zu 15.000 Partitionen. Weitere Informationen finden Sie unter [partitionierte Tabellen und Indizes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
 
 ### <a name="temporary-tables"></a>Temporäre Tabellen
 
@@ -47,7 +47,7 @@ Temporäre Tabellen werden in **tempdb** gespeichert. Es gibt zwei Arten von te
 
 #### <a name="reduced-recompilations-for-workloads-using-temporary-tables-across-multiple-scopes"></a><a name="ctp23"></a> Weniger Neukompilierungen für Workloads mit temporären Tabellen für mehrere Bereiche
 
-Bei allen Datenbank-Kompatibilitätsgraden verringert [!INCLUDE[ss2019](../../includes/sssqlv15-md.md)] die Neukompilierungen für Arbeitsauslastungen mit temporären Tabellen für mehrere Bereiche. Dieses Feature ist in Azure SQL-Datenbank beim Datenbank-Kompatibilitätsgrad 150 für alle Bereitstellungsmodelle ebenfalls aktiviert.  Vor der Einführung dieses Features, konnte das Verweisen auf eine temporäre Tabelle mit einer DML-Anweisung (`SELECT`, `INSERT`, `UPDATE`, `DELETE`) zu einer Neukompilierung der DML-Anweisung bei jeder Ausführung führen, wenn die temporäre Tabelle in einem Batch im äußeren Bereich erstellt wurde. Durch dieses Update führt SQL Server zusätzliche einfache Überprüfungen durch, um unnötige Neukompilierungen zu vermeiden:
+Bei allen Datenbank-Kompatibilitätsgraden verringert [!INCLUDE[ss2019](../../includes/sssql19-md.md)] die Neukompilierungen für Arbeitsauslastungen mit temporären Tabellen für mehrere Bereiche. Dieses Feature ist in Azure SQL-Datenbank beim Datenbank-Kompatibilitätsgrad 150 für alle Bereitstellungsmodelle ebenfalls aktiviert.  Vor der Einführung dieses Features, konnte das Verweisen auf eine temporäre Tabelle mit einer DML-Anweisung (`SELECT`, `INSERT`, `UPDATE`, `DELETE`) zu einer Neukompilierung der DML-Anweisung bei jeder Ausführung führen, wenn die temporäre Tabelle in einem Batch im äußeren Bereich erstellt wurde. Durch dieses Update führt SQL Server zusätzliche einfache Überprüfungen durch, um unnötige Neukompilierungen zu vermeiden:
 
 - Überprüfung, ob es sich bei dem Modul im äußeren Bereich, das zur Kompilierzeit zur Erstellung der temporären Tabelle verwendet wurde, um das gleiche Modul handelt, das für nachfolgende Ausführungen verwendet wurde 
 - Nachverfolgung von Änderungen an der Datendefinitionssprache (Data Definition Language, DDL), die bei der ersten Kompilierung vorgenommen wurden, und Vergleich mit den DDL-Vorgängen für nachfolgende Ausführungen

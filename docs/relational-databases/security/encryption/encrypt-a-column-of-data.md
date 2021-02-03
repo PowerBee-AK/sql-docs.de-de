@@ -18,18 +18,18 @@ ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: c09f7f91edf2cada0464b6cfbc1922664a86866f
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: ae34b381a6f1d46329855662d0a796ea6ab3d265
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641020"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250191"
 ---
 # <a name="encrypt-a-column-of-data"></a>Verschlüsseln einer Datenspalte
 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]  
 
-In diesem Artikel wird beschrieben, wie Sie eine Datenspalte mithilfe der symmetrischen Verschlüsselung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)]verschlüsseln können. Dies wird manchmal als Verschlüsselung auf Spaltenebene oder Verschlüsselung auf Zellenebene bezeichnet. Dieses Feature befindet sich in der Vorschau für Azure Synapse Analytics.
+In diesem Artikel wird beschrieben, wie Sie eine Datenspalte mithilfe der symmetrischen Verschlüsselung in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)]verschlüsseln können. Dies wird manchmal als Verschlüsselung auf Spaltenebene oder Verschlüsselung auf Zellenebene bezeichnet. Dieses Feature befindet sich in der Vorschau für Azure Synapse Analytics.
 
 Die Beispiele in diesem Artikel wurden anhand von AdventureWorks2017 überprüft. Informationen zum Abrufen von Beispieldatenbanken finden Sie unter [AdventureWorks-Beispieldatenbanken](../../../samples/adventureworks-install-configure.md).
 

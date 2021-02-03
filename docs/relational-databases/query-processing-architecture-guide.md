@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 303b560a40d5c87e49a8d5d2693aa0f814d03f45
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 05f33d170224ee079b4d23598e88e1802bebfbbb
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170512"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237674"
 ---
 # <a name="query-processing-architecture-guide"></a>Handbuch zur Architektur der Abfrageverarbeitung
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -695,7 +695,7 @@ In den folgenden Beispielen wird erläutert, welche Ausführungspläne aus dem P
 * Auf einen Ausführungsplan wird regelmäßig verwiesen, sodass seine Kosten nie den Wert 0 (null) erreichen. Der Plan verbleibt im Plancache und wird nur dann entfernt, wenn nicht genügend Arbeitsspeicher vorhanden ist und die aktuellen Kosten 0 (null) sind.
 * Ein Ad-hoc-Ausführungsplan wird eingefügt. Auf diesen wird erst wieder verwiesen, wenn nicht ausreichend Speicherplatz zur Verfügung steht. Ad-hoc-Pläne werden mit einem Wert für die aktuellen Kosten von 0 (null) initialisiert. Daher wird der Plan aus dem Plancache entfernt, wenn der Ausführungsplan vom [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] überprüft wird und die aktuellen Kosten 0 (null) betragen. Der Ad-hoc-Ausführungsplan verbleibt im Plancache mit aktuellen Kosten vom Wert 0 (null), wenn genügend Arbeitsspeicher vorhanden ist.
 
-Um einen einzelnen Plan oder alle Pläne manuell aus dem Cache zu entfernen, verwenden Sie [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md). [DBCC FREESYSTEMCACHE](../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md) kann auch verwendet werden, um jeden Cache, einschließlich des Plancaches, zu leeren. Ab [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] ist `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` verfügbar, um den Prozedur-/Plancache für die Datenbank im Bereich zu löschen. Eine Änderung in einigen Konfigurationseinstellungen über [sp_configure](system-stored-procedures/sp-configure-transact-sql.md) und [reconfigure](../t-sql/language-elements/reconfigure-transact-sql.md) führt ebenfalls dazu, dass Pläne aus dem Plancache entfernt werden. Die Liste dieser Konfigurationseinstellungen finden Sie im Abschnitt „Hinweise“ des [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md#remarks)-Artikels. Durch eine Konfigurationsänderung wie diese wird die folgende Infomeldung in das Fehlerprotokoll aufgenommen:
+Um einen einzelnen Plan oder alle Pläne manuell aus dem Cache zu entfernen, verwenden Sie [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md). [DBCC FREESYSTEMCACHE](../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md) kann auch verwendet werden, um jeden Cache, einschließlich des Plancaches, zu leeren. Ab [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] ist `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` verfügbar, um den Prozedur-/Plancache für die Datenbank im Bereich zu löschen. Eine Änderung in einigen Konfigurationseinstellungen über [sp_configure](system-stored-procedures/sp-configure-transact-sql.md) und [reconfigure](../t-sql/language-elements/reconfigure-transact-sql.md) führt ebenfalls dazu, dass Pläne aus dem Plancache entfernt werden. Die Liste dieser Konfigurationseinstellungen finden Sie im Abschnitt „Hinweise“ des [DBCC FREEPROCCACHE](../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md#remarks)-Artikels. Durch eine Konfigurationsänderung wie diese wird die folgende Infomeldung in das Fehlerprotokoll aufgenommen:
 
 > `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations.`
 
@@ -1023,7 +1023,7 @@ Während der Abfrageoptimierung sucht [!INCLUDE[ssNoVersion](../includes/ssnover
 
 Zu den Konstrukten, die Parallelität verhindern, gehören:
 -   **Benutzerdefinierte Skalarfunktionen**        
-    Weitere Informationen zu benutzerdefinierten Skalarfunktionen finden Sie unter [Erstellen benutzerdefinierter Funktionen](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). Ab [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] bietet die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die Möglichkeit, ein Inlining dieser Funktionen vorzunehmen und die Verwendung von Parallelität während der Abfrageverarbeitung zu entsperren. Weitere Informationen zum Inlining benutzerdefinierter Skalarfunktionen finden Sie unter [Intelligente Abfrageverarbeitung in SQL-Datenbanken](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
+    Weitere Informationen zu benutzerdefinierten Skalarfunktionen finden Sie unter [Erstellen benutzerdefinierter Funktionen](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar). Ab [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] bietet die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] die Möglichkeit, ein Inlining dieser Funktionen vorzunehmen und die Verwendung von Parallelität während der Abfrageverarbeitung zu entsperren. Weitere Informationen zum Inlining benutzerdefinierter Skalarfunktionen finden Sie unter [Intelligente Abfrageverarbeitung in SQL-Datenbanken](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).
     
 -   **Remote Query**        
     Weitere Informationen zu Remote Query finden Sie unter [Referenz zu logischen und physischen Showplanoperatoren](../relational-databases/showplan-logical-and-physical-operators-reference.md).
@@ -1098,7 +1098,7 @@ Bis zu [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] wird der Einfügeoperator 
 
 Ab [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] und dem Datenbank-Kompatibilitäts Grad 110 kann die `SELECT … INTO`-Anweisung parallel ausgeführt werden. Andere Formen von Einfügeoperatoren funktionieren genau so, wie es für [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] beschrieben ist.
 
-Ab [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] und dem Datenbank-Kompatibilitätsgrad 130 kann die `INSERT … SELECT`-Anweisung parallel ausgeführt werden, wenn in Heaps oder gruppierte Columnstore-Indizes (CCI) eingefügt und der TABLOCK-Hinweis verwendet wird. Einfügevorgänge in lokale temporäre Tabellen (durch das #-Präfix gekennzeichnet) und in globale temporäre Tabellen (durch das ##-Präfix gekennzeichnet) sind ebenfalls für Parallelität geeignet, wenn der TABLOCK-Hinweis verwendet wird. Weitere Informationen finden Sie unter [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices).
+Ab [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] und dem Datenbank-Kompatibilitätsgrad 130 kann die `INSERT … SELECT`-Anweisung parallel ausgeführt werden, wenn in Heaps oder gruppierte Columnstore-Indizes (CCI) eingefügt und der TABLOCK-Hinweis verwendet wird. Einfügevorgänge in lokale temporäre Tabellen (durch das #-Präfix gekennzeichnet) und in globale temporäre Tabellen (durch das ##-Präfix gekennzeichnet) sind ebenfalls für Parallelität geeignet, wenn der TABLOCK-Hinweis verwendet wird. Weitere Informationen finden Sie unter [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices).
 
 Statische Cursor und keysetgesteuerte Cursor können durch parallele Ausführungspläne aufgefüllt werden. Das spezifische Verhalten dynamischer Cursor kann jedoch nur durch die serielle Ausführung gewährleistet werden. Für eine Abfrage, die Teil eines dynamischen Cursors ist, generiert der Abfrageoptimierer immer einen seriellen Ausführungsplan.
 
@@ -1108,7 +1108,7 @@ Der Grad an Parallelität legt die Anzahl der bei der Ausführung paralleler Pl�
 1.  Auf Serverebene mithilfe der [Serverkonfigurationsoption](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) für den **maximalen Grad an Parallelität (MAXDOP)** .</br> **Gilt für:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
     > [!NOTE]
-    > Mit [!INCLUDE [sssqlv15-md](../includes/sssqlv15-md.md)] wurden automatische Empfehlungen zum Festlegen der MAXDOP-Serverkonfigurationsoption während des Installationsvorgangs eingeführt. Auf der Setupbenutzeroberfläche können Sie entweder die empfohlenen Einstellungen übernehmen oder Ihren eigenen Wert eingeben. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Seite „MaxDOP“](../sql-server/install/instance-configuration.md#maxdop).
+    > Mit [!INCLUDE [sssql19-md](../includes/sssql19-md.md)] wurden automatische Empfehlungen zum Festlegen der MAXDOP-Serverkonfigurationsoption während des Installationsvorgangs eingeführt. Auf der Setupbenutzeroberfläche können Sie entweder die empfohlenen Einstellungen übernehmen oder Ihren eigenen Wert eingeben. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Seite „MaxDOP“](../sql-server/install/instance-configuration.md#maxdop).
 
 2.  Auf Arbeitsauslastungsebene mithilfe der [Resource Governor-Konfigurationsoption **MAX_DOP** für die Arbeitsauslastungsgruppe](../t-sql/statements/create-workload-group-transact-sql.md).</br> **Gilt für:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 
@@ -1273,7 +1273,7 @@ Wenn möglich, verlagert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 
 
 > [!NOTE]
 > Partitionierte Tabellen und Indizes werden bis [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] nur in der Enterprise-, Developer- und Evaluation-Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt.   
-> Ab [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] SP1 werden partitionierte Tabellen und Indizes auch in der Standard-Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt. 
+> Ab [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] SP1 werden partitionierte Tabellen und Indizes auch in der Standard-Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt. 
 
 ### <a name="new-partition-aware-seek-operation"></a>Neuer partitionsgerichteter Suchvorgang (SEEK)
 

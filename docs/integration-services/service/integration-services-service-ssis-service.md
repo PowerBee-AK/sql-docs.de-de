@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a665d78d180d87fe0d412b025bcce75d509285d4
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 30d1635e0d58af970cae609fb2e3a6a7f2335791
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171202"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237737"
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services-Dienst (SSIS-Dienst)
 
@@ -274,7 +274,7 @@ Wenn Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installier
 ```  
   
 ### <a name="modify-the-configuration-file-location"></a>Ändern des Speicherorts der Konfigurationsdatei  
- Der Registrierungsschlüssel **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** gibt den Speicherort und Namen für die Konfigurationsdatei an, die vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst verwendet wird. Der Standardwert des Registrierungsschlüssels lautet **C:\Programme\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**. Sie können den Wert des Registrierungsschlüssels aktualisieren, um einen anderen Namen und Speicherort für die Konfigurationsdatei zu verwenden. Beachten Sie, dass die Versionsnummer im Pfad („120“ für SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)], „130“ für [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] usw.) je nach SQL Server-Version variiert.
+ Der Registrierungsschlüssel **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** gibt den Speicherort und Namen für die Konfigurationsdatei an, die vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst verwendet wird. Der Standardwert des Registrierungsschlüssels lautet **C:\Programme\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**. Sie können den Wert des Registrierungsschlüssels aktualisieren, um einen anderen Namen und Speicherort für die Konfigurationsdatei zu verwenden. Beachten Sie, dass die Versionsnummer im Pfad („120“ für SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)], „130“ für [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] usw.) je nach SQL Server-Version variiert.
   
 > [!CAUTION]  
 >  Unsachgemäßes Bearbeiten der Registrierung kann zu schwerwiegenden Problemen führen, die ein Neuinstallieren des Betriebssystems erforderlich machen können. [!INCLUDE[msCoName](../../includes/msconame-md.md)] garantiert nicht, dass Probleme, die durch unsachgemäßes Bearbeiten der Registrierung entstehen, behoben werden können. Sichern Sie vor dem Bearbeiten der Registrierung alle wichtigen Daten. Weitere Informationen zum Sichern, Wiederherstellen und Bearbeiten der Registrierung finden Sie im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base-Artikel [Windows-Registrierungsinformationen für Benutzer mit fortgeschrittenen Kenntnissen](https://support.microsoft.com/kb/256986).  

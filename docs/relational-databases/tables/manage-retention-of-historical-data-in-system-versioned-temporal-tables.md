@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0dac2b5d344969f96016a86622ee4e07ab8c23d
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 2e37f8234a1b8ee2ab72c76a423ea72ac9d3f14a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98168071"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235827"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Verwalten der Beibehaltung von Verlaufsdaten in temporalen Tabellen mit Systemversionsverwaltung
 
@@ -51,9 +51,9 @@ Nachdem Sie die Beibehaltungsdauer bestimmt haben, ist der nächste Schritt, ein
 ## <a name="using-stretch-database-approach"></a>Verwenden des Stretch Database-Ansatzes
 
 > [!NOTE]
-> Der Ansatz mit Stretch Database kann nur für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwendet werden, aber nicht für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+> Der Ansatz mit Stretch Database kann nur für [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] verwendet werden, aber nicht für [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
-[Stretch Database](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migriert die Verlaufsdaten transparent zu Azure. Zur Erhöhung der Sicherheit können Sie Daten während der Übertragung mit der SQL Server-Funktion [Always Encrypted](../security/encryption/always-encrypted-database-engine.md) verschlüsseln. Darüber hinaus können Sie zum Schutz Ihrer Daten [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md) und andere erweiterte SQL Server-Sicherheitsfeatures für eine temporale Datenbank und Stretch Database verwenden.
+[Stretch Database](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] migriert die Verlaufsdaten transparent zu Azure. Zur Erhöhung der Sicherheit können Sie Daten während der Übertragung mit der SQL Server-Funktion [Always Encrypted](../security/encryption/always-encrypted-database-engine.md) verschlüsseln. Darüber hinaus können Sie zum Schutz Ihrer Daten [Sicherheit auf Zeilenebene](../../relational-databases/security/row-level-security.md) und andere erweiterte SQL Server-Sicherheitsfeatures für eine temporale Datenbank und Stretch Database verwenden.
 
 Mit Stretch Database können Sie für einige oder alle Ihrer temporalen Verlaufstabellen ein Stretching auf Azure durchführen, und SQL Server verschiebt Verlaufsdaten im Hintergrund nach Azure. Durch die Aktivierung von Stretch für eine Verlaufstabelle ändert sich die Interaktion mit der temporalen Tabelle im Hinblick auf Datenänderungen und temporale Abfragen nicht.
 
@@ -70,7 +70,7 @@ Sie können eine temporale Verlaufstabelle für Stretch mit dem Stretch-Assisten
 
 ### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>Verwenden des Stretch-Assistenten für ein Stretching der gesamten Verlaufstabelle
 
-Die einfachste Methode für Anfänger ist, den Stretch-Assistenten zu verwenden, um Stretch für die gesamte Datenbank zu aktivieren. Wählen Sie dann die temporale Verlaufstabelle im Stretch-Assistenten aus (in diesem Beispiel wird davon ausgegangen, dass Sie die Department-Tabelle als eine temporale Tabelle mit Systemversionsverwaltung in einer ansonsten leeren Datenbank konfiguriert haben). In [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]können Sie nicht mit der rechten Maustaste auf die temporale Verlaufstabelle selbst klicken und dann auf „Stretch“ klicken.
+Die einfachste Methode für Anfänger ist, den Stretch-Assistenten zu verwenden, um Stretch für die gesamte Datenbank zu aktivieren. Wählen Sie dann die temporale Verlaufstabelle im Stretch-Assistenten aus (in diesem Beispiel wird davon ausgegangen, dass Sie die Department-Tabelle als eine temporale Tabelle mit Systemversionsverwaltung in einer ansonsten leeren Datenbank konfiguriert haben). In [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]können Sie nicht mit der rechten Maustaste auf die temporale Verlaufstabelle selbst klicken und dann auf „Stretch“ klicken.
 
 1. Klicken Sie mit der rechten Maustaste auf die Datenbank, und zeigen Sie auf **Aufgaben**, zeigen Sie auf **Stretch**, und klicken Sie dann auf **Aktivieren** , um den Assistenten zu starten.
 2. Aktivieren Sie im Fenster **Tabellen auswählen** das Kontrollkästchen für die temporale Verlaufstabelle, und klicken Sie auf „Weiter“.

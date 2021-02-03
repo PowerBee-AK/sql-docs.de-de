@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f2aa24e3ebd335251ad2721444e9f9d8645ef221
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: e6e6dfd3092f4602f652af81e547b63fc1ddc3df
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534881"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236090"
 ---
 # <a name="configure-the-secure-enclave-in-sql-server"></a>Konfigurieren der Secure Enclave-Instanz in SQL Server
 
@@ -27,7 +27,7 @@ Vor der Verwendung von [Always Encrypted mit Secure Enclaves](always-encrypted-e
 > [!NOTE]
 > Die Rolle, die für die Konfiguration der Secure Enclave verantwortlich ist, ist der DBA. Weitere Informationen finden Sie unter [Rollen und Verantwortlichkeiten beim Konfigurieren des Nachweises mit HGS](always-encrypted-enclaves-host-guardian-service-plan.md#roles-and-responsibilities-when-configuring-attestation-with-hgs).
 
-Der unterstützte Enclave-Typ für [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] ist VBS (virtualisierungsbasierte Sicherheit). Vor dem Konfigurieren des VBS-Enclave-Typs wird empfohlen, dass Sie den Nachweis mit dem Host-Überwachungsdienst (Host Guardian Service, HGS) für den Computer einrichten, der Ihre Instanz hostet Informationen zu den ersten Schritten mit HGS finden Sie unter [Planen des Nachweises des Host-Überwachungsdiensts](always-encrypted-enclaves-host-guardian-service-plan.md). Das Einrichten des Nachweises ermöglicht auch die virtualisierungsbasierte Sicherheit, die für eine VBS-Enclave erforderlich ist, damit sie ordnungsgemäß initialisiert werden kann. Weitere Informationen finden Sie unter [Überprüfen, ob die virtualisierungsbasierte Sicherheit ausgeführt wird](always-encrypted-enclaves-host-guardian-service-register.md#step-2-verify-virtualization-based-security-is-running).
+Der unterstützte Enclave-Typ für [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] ist VBS (virtualisierungsbasierte Sicherheit). Vor dem Konfigurieren des VBS-Enclave-Typs wird empfohlen, dass Sie den Nachweis mit dem Host-Überwachungsdienst (Host Guardian Service, HGS) für den Computer einrichten, der Ihre Instanz hostet Informationen zu den ersten Schritten mit HGS finden Sie unter [Planen des Nachweises des Host-Überwachungsdiensts](always-encrypted-enclaves-host-guardian-service-plan.md). Das Einrichten des Nachweises ermöglicht auch die virtualisierungsbasierte Sicherheit, die für eine VBS-Enclave erforderlich ist, damit sie ordnungsgemäß initialisiert werden kann. Weitere Informationen finden Sie unter [Überprüfen, ob die virtualisierungsbasierte Sicherheit ausgeführt wird](always-encrypted-enclaves-host-guardian-service-register.md#step-2-verify-virtualization-based-security-is-running).
 
 Ausführliche Anweisungen zum Konfigurieren des Enclave-Typs finden Sie unter [Konfigurieren des Enclave-Typs für die Always Encrypted-Serverkonfigurationsoption](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md).
 

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - Greater
 - Than
@@ -24,17 +24,17 @@ ms.assetid: 50a7b098-a3fb-4df6-ae42-1272d6346338
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9a41c2123ff477ecf3321d6fa03de4ed8fe27e7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 17d559da1affd2fea887620bc7da3b81d06c53ef
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98085467"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235990"
 ---
 # <a name="gt-greater-than-transact-sql"></a>&gt; (größer als) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Vergleicht zwei Ausdrücke (ein Vergleichsoperator) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Beim Vergleichen von Ausdrücken, die ungleich NULL sind, ist das Ergebnis TRUE, wenn der linke Operand einen höheren Wert als der rechte Operand besitzt; andernfalls ist das Ergebnis FALSE. Wenn einer oder beide Operanden NULL sind, finden Sie weitere Informationen unter [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
+  Vergleicht zwei Ausdrücke (ein Vergleichsoperator) in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Beim Vergleichen von Ausdrücken, die ungleich NULL sind, ist das Ergebnis TRUE, wenn der linke Operand einen höheren Wert als der rechte Operand besitzt; andernfalls ist das Ergebnis FALSE. Wenn einer oder beide Operanden NULL sind, finden Sie weitere Informationen unter [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

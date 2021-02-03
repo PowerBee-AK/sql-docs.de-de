@@ -16,12 +16,12 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fcbc86a73fb6ac70fce78c381a5aac1f1accc108
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 4d1af8a21bd8dc4ac0df08c45665ed37e74f7ef5
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171782"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237691"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Kardinalitätsschätzung (SQL Server)
 
@@ -98,7 +98,7 @@ WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';
 GO
 ```  
  
-Alternativ ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
+Alternativ ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 den [Abfragehinweis](../../t-sql/queries/hints-transact-sql-query.md#use_hint) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
  ```sql  
 SELECT CustomerId, OrderAddedDate  
@@ -107,7 +107,7 @@ WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
-**Abfragespeicher:** Ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] ist der Abfragespeicher ein praktisches Tool zum Untersuchen der Leistung Ihrer Abfragen. In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] wird im **Objekt-Explorer** unterhalb des Knotens Ihrer Datenbank ein Knoten **Abfragespeicher** angezeigt, wenn der Abfragespeicher aktiviert ist.  
+**Abfragespeicher:** Ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] ist der Abfragespeicher ein praktisches Tool zum Untersuchen der Leistung Ihrer Abfragen. In [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] wird im **Objekt-Explorer** unterhalb des Knotens Ihrer Datenbank ein Knoten **Abfragespeicher** angezeigt, wenn der Abfragespeicher aktiviert ist.  
   
 ```sql  
 ALTER DATABASE <yourDatabase>  

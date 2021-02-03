@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8ff53ca4e4118b105eabac256663a8b052e218fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a5e968978dd641f78dfb17d515ab07e3b7e27485
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429052"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250143"
 ---
 # <a name="data-collector-security"></a>Datensammlersicherheit
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88429052"
  In den folgenden Abschnitten werden die Datensammlungssicherheit im Allgemeinen sowie die Rollen beschrieben, die Sie Benutzern erteilen müssen, damit diese den Datensammler konfigurieren und verwenden und mit dem Management Data Warehouse verbundene Tasks ausführen können.  
   
 ## <a name="general-security"></a>Allgemeine Sicherheit  
- Der Datensammler wird gemäß der für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]festgelegten dokumentierten Standards installiert.  
+ Der Datensammler wird gemäß der für [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]festgelegten dokumentierten Standards installiert.  
   
 ### <a name="network-security"></a>Netzwerksicherheit  
  Vertrauliche Informationen können zwischen Zielinstanzen, der mit dem Konfigurationsserver verbundenen relationalen Instanz, den ausgeführten Sammlungssätzen und dem Server, der das Verwaltungs-Data Warehouse hostet, übergeben werden.  
@@ -72,7 +72,7 @@ ms.locfileid: "88429052"
     > [!NOTE]  
     >  Für den Datensammler erstellte Proxys müssen Zugriff auf **dc_admin** erteilen, damit sie erstellt und für alle Schritte eines Auftrags verwendet werden können, für die ein Proxy erforderlich ist.  
   
--   **dc_operator**. Mitglieder von **dc_admin** erben die Berechtigungen, die **dc_operator**erteilt wurden.  
+-   **dc_operator**. Mitglieder von **dc_admin** erben die Berechtigungen, die **dc_operator** erteilt wurden.  
   
 ### <a name="dc_operator-role"></a>dc_operator-Rolle  
  Mitglieder der **dc_operator-Rolle** verfügen über Lese- und Aktualisierungszugriff. Diese Rolle unterstützt Vorgangstasks in Bezug auf das Ausführen und Konfigurieren von Sammlungssätzen. Mitglieder dieser Rolle können die folgenden Vorgänge ausführen:  

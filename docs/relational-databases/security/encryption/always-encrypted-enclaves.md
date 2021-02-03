@@ -11,18 +11,18 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: ed6a0a041cba407b06b26e8b1d800da1f47b2bbb
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: e84635c1f32396e033841c546dafc1796624d5ab
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534669"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237092"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted mit Secure Enclaves
 
 [!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
-Always Encrypted mit Secure Enclaves stellt eine Erweiterung zu den Computingfunktionen von [Always Encrypted](always-encrypted-database-engine.md) dar und umfasst die direkte Verschlüsselung und umfangreichere vertrauliche Abfragen. Always Encrypted mit Secure Enclaves ist in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] und [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] verfügbar (Vorschau).
+Always Encrypted mit Secure Enclaves stellt eine Erweiterung zu den Computingfunktionen von [Always Encrypted](always-encrypted-database-engine.md) dar und umfasst die direkte Verschlüsselung und umfangreichere vertrauliche Abfragen. Always Encrypted mit Secure Enclaves ist in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] und [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] verfügbar (Vorschau).
 
 Always Encrypted wurde 2015 in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] und in [!INCLUDE[sssql16](../../../includes/sssql16-md.md)] eingeführt und schützt vertrauliche Daten vor Schadsoftware und dem Zugriff durch nicht *autorisierte* Benutzer mit umfangreichen Rechten: Datenbankadministratoren, Computeradministratoren, Cloudadministratoren sowie alle anderen Benutzer, die rechtmäßig auf Serverinstanzen, Hardware und Ähnliches zugreifen, aber keinen Zugriff auf einige oder alle tatsächlichen Daten haben sollten.  
 
@@ -44,7 +44,7 @@ Während der Verarbeitung der Anweisung werden weder die Daten noch die Spaltenv
 
 ## <a name="supported-enclave-technologies"></a>Unterstützte Enclavetechnologien
 
-In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] verwendet Always Encrypted über [Virtualisierungsbasierte Sicherheit (VBS)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) abgesicherte Secure Enclaves (auch als VSM-Enclaves bezeichnet) im Windows-Arbeitsspeicher.
+In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] verwendet Always Encrypted über [Virtualisierungsbasierte Sicherheit (VBS)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) abgesicherte Secure Enclaves (auch als VSM-Enclaves bezeichnet) im Windows-Arbeitsspeicher.
 
 In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] verwendet Always Encrypted mit Secure Enclaves [Intel Software Guard Extensions-Enclaves (Intel SGX)](https://itpeernetwork.intel.com/microsoft-azure-confidential-computing/). Intel SGX ist eine hardwarebasierte Trusted Execution Environment-Technologie, die in Datenbanken mit der Hardwarekonfiguration [DC-series](https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series) unterstützt wird.
 
@@ -54,12 +54,12 @@ Die Secure Enclave innerhalb der [!INCLUDE[ssde-md](../../../includes/ssde-md.md
 
 Der Prozess der Überprüfung der Enclave wird als **Enclavenachweis** bezeichnet und erfordert, dass sowohl ein Clienttreiber innerhalb der Anwendung als auch eine [!INCLUDE[ssde-md](../../../includes/ssde-md.md)] einen externen Nachweisdienst kontaktieren. Die genauen Merkmale des Nachweisprozesses richten sich nach dem Enclavetyp (VBS oder SGX) und dem Nachweisdienst.
 
-Der Nachweisprozess für Secure Enclaves vom Typ VBS in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] ist der [Runtimenachweis für die Windows Defender-Systemüberwachung](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/), bei dem der Host-Überwachungsdienst als Nachweisdienst verwendet wird. 
+Der Nachweisprozess für Secure Enclaves vom Typ VBS in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] ist der [Runtimenachweis für die Windows Defender-Systemüberwachung](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/), bei dem der Host-Überwachungsdienst als Nachweisdienst verwendet wird. 
 
 Für die Durchführung des Nachweises für Intel SGX-Enclaves in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] benötigen Sie [Microsoft Azure Attestation](https://docs.microsoft.com/azure/attestation/overview).
 
 > [!NOTE]
-> [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] unterstützt Microsoft Azure Attestation nicht. Der Host-Überwachungsdienst ist die einzige Nachweislösung, die für VBS-Enclaves in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] unterstützt wird.
+> [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] unterstützt Microsoft Azure Attestation nicht. Der Host-Überwachungsdienst ist die einzige Nachweislösung, die für VBS-Enclaves in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] unterstützt wird.
 
 ## <a name="supported-client-drivers"></a>Unterstützte Clienttreiber
 
@@ -104,7 +104,7 @@ Vertrauliche Abfragen sind [DML-Abfragen](../../../t-sql/queries/queries.md), di
 
 In Secure Enclaves werden folgende Vorgänge unterstützt:
 
-| Vorgang| [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] |
+| Vorgang| [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] | [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] |
 |:---|:---|:---|
 | [Comparison Operators (Vergleichsoperatoren)](../../../mdx/comparison-operators.md) | Unterstützt | Unterstützt |
 | [BETWEEN (Transact-SQL)](../../../t-sql/language-elements/between-transact-sql.md) | Unterstützt | Unterstützt |
@@ -122,7 +122,7 @@ In Secure Enclaves werden folgende Vorgänge unterstützt:
 > - [SELECT – GROUP BY](../../../t-sql/queries/select-group-by-transact-sql.md)
 > - [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select)
 >
-> In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] muss für vertrauliche Abfragen, die Enclaves in Zeichenfolgenspalten (`char`, `nchar`) verwenden, eine binary2-Sortierung (BIN2) für die Spalte verwendet werden. In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] muss für vertrauliche Abfragen in Zeichenfolgen eine BIN2- oder eine UTF-8-Sortierung verwendet werden. 
+> In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] muss für vertrauliche Abfragen, die Enclaves in Zeichenfolgenspalten (`char`, `nchar`) verwenden, eine binary2-Sortierung (BIN2) für die Spalte verwendet werden. In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] muss für vertrauliche Abfragen in Zeichenfolgen eine BIN2- oder eine UTF-8-Sortierung verwendet werden. 
 
 ### <a name="indexes-on-enclave-enabled-columns"></a>Indizes in Enclave-fähigen Spalten
 
@@ -141,7 +141,7 @@ Weitere Informationen finden Sie unter [Erstellen und Verwenden von Indizes in S
 Wenn eine SQL Server-Instanz ausfällt, können ihre Datenbanken in einem Zustand verbleiben, in dem die Datendateien einige Änderungen durch unvollständige Transaktionen enthalten können. Wenn die Instanz gestartet wird, führt sie einen Prozess namens [Datenbankwiederherstellung](../../logs/the-transaction-log-sql-server.md#recovery-of-all-incomplete-transactions-when--is-started) aus, bei dem jede im Transaktionsprotokoll gefundene unvollständige Transaktion zurückgesetzt wird, um sicherzustellen, dass die Integrität der Datenbank erhalten bleibt. Wenn eine unvollständige Transaktion Änderungen an einem Index vorgenommen hat, müssen diese ebenfalls rückgängig gemacht werden. Beispielsweise müssen einige Schlüsselwerte im Index entfernt oder neu eingefügt werden.
 
 > [!IMPORTANT]
-> Microsoft empfiehlt dringend, die [Schnellere Datenbankwiederherstellung (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) für Ihre Datenbank zu aktivieren, **bevor** Sie den ersten Index auf einer Enclave-fähigen Spalte verwenden, die mit zufälliger Verschlüsselung verschlüsselt wurde. Die ADR ist standardmäßig in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] aktiviert, in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] jedoch nicht.
+> Microsoft empfiehlt dringend, die [Schnellere Datenbankwiederherstellung (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) für Ihre Datenbank zu aktivieren, **bevor** Sie den ersten Index auf einer Enclave-fähigen Spalte verwenden, die mit zufälliger Verschlüsselung verschlüsselt wurde. Die ADR ist standardmäßig in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] aktiviert, in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] jedoch nicht.
 
 Beim herkömmlichen [Datenbankwiederherstellungsprozess](/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) (gemäß dem [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf)-Wiederherstellungsmodell) muss SQL Server zum Rückgängigmachen einer Änderung an einem Index warten, bis eine Anwendung den Spaltenverschlüsselungsschlüssel für die Spalte an die Enclave übermittelt. Dies kann sehr lange dauern. Die ADR reduziert die Anzahl der Vorgänge zum Rückgängigmachen von Änderungen, die verschoben werden müssen, da ein Spaltenverschlüsselungsschlüssel im Cache innerhalb der Enclave nicht verfügbar ist. Infolgedessen wird die Verfügbarkeit der Datenbank erheblich erhöht, indem die Wahrscheinlichkeit, dass eine neue Transaktion blockiert wird, minimiert wird. Wenn ADR aktiviert ist, benötigt SQL Server möglicherweise immer noch einen Spaltenverschlüsselungsschlüssel, um die Bereinigung alter Datenversionen abzuschließen, aber er erledigt dies als Hintergrundaufgabe, die sich nicht auf die Verfügbarkeit der Datenbank oder Benutzertransaktionen auswirkt. Es kann jedoch vorkommen, dass Fehlermeldungen im Fehlerprotokoll angezeigt werden, die auf fehlgeschlagene Bereinigungsvorgänge aufgrund eines fehlenden Spaltenverschlüsselungsschlüssels hinweisen.
 
@@ -181,7 +181,7 @@ Die folgenden Einschränkungen sind für Always Encrypted mit Secure Enclaves zu
 
 - Gruppierte Indizes können nicht auf Enclave-fähigen Spalten mit zufälliger Verschlüsselung erstellt werden.
 - Enclave-fähige Spalten mit zufälliger Verschlüsselung können keine Primärschlüsselspalten sein und können nicht durch Fremdschlüsselbeschränkungen oder eindeutige Schlüsselbeschränkungen referenziert werden.
-- In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] (diese Einschränkung gilt nicht für [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]) werden nur Joins geschachtelter Schleifen (mit Indizes, falls verfügbar) für Enclave-fähige Spalten mit zufälliger Verschlüsselung unterstützt. Informationen zu anderen Unterschieden zwischen den verschiedenen Produkten finden Sie unter [Vertrauliche Abfragen](#confidential-queries).
+- In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] (diese Einschränkung gilt nicht für [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]) werden nur Joins geschachtelter Schleifen (mit Indizes, falls verfügbar) für Enclave-fähige Spalten mit zufälliger Verschlüsselung unterstützt. Informationen zu anderen Unterschieden zwischen den verschiedenen Produkten finden Sie unter [Vertrauliche Abfragen](#confidential-queries).
 - Direkte Verschlüsselungsvorgänge können nicht mit anderen Änderungen an Spaltenmetadaten kombiniert werden. Ausgenommen hiervon sind Änderungen einer Sortierung innerhalb derselben Codeseite und der NULL-Zulässigkeit. Beispiel: Sie können nicht in einer einzigen `ALTER TABLE`/`ALTER COLUMN`-Transact-SQL-Anweisung eine Spalte verschlüsseln, erneut verschlüsseln oder entschlüsseln UND den Datentyp der Spalte ändern. Sie müssen zwei separate Anweisungen verwenden.
 - Die Verwendung von Enclave-fähigen Schlüsseln für Spalten in In-Memory-Tabellen wird nicht unterstützt.
 - Ausdrücke, die berechnete Spalten definieren, können keine Berechnungen für Enclave-fähige Spalten mit zufälliger Verschlüsselung durchführen – selbst dann nicht, wenn die Berechnungen zu den unter [Vertrauliche Abfragen](#confidential-queries) aufgeführten Vorgängen gehören.

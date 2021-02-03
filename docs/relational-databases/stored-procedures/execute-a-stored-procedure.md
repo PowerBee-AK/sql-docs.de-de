@@ -20,17 +20,17 @@ ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7cff43378cdffd2015040d9de4d8ffb7b014291
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 115220ef0fabbe98a0c4a1bf5f185409c5a82829
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475301"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250268"
 ---
 # <a name="execute-a-stored-procedure"></a>Ausführen einer gespeicherten Prozedur
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ausführen.  
+In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ausführen.  
   
  Zum Ausführen einer gespeicherten Prozedur stehen zwei Möglichkeiten zur Verfügung. Der erste und gebräuchlichste Ansatz besteht darin, dass eine Anwendung oder ein Benutzer die Prozedur aufruft. Der zweite Ansatz ist das Einrichten der Prozedur zur automatischen Ausführung beim Start einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Wenn eine Prozedur von einer Anwendung oder einem Benutzer aufgerufen wird, wird das [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE- oder EXEC-Schlüsselwort explizit im Aufruf angegeben. Falls es sich bei der Prozedur um die erste Anweisung im [!INCLUDE[tsql](../../includes/tsql-md.md)] -Batch handelt, kann sie alternativ ohne das Schlüsselwort aufgerufen und ausgeführt werden.  
   

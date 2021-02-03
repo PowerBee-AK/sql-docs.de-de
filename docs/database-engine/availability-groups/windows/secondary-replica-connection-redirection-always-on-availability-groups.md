@@ -18,24 +18,24 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: 8fb07363cd52de514c646cff3d482b38f76493b3
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: ac4900e284d1e83ef0945e1d0082279c06414b0b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643316"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236682"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Umleitung von Lese-/Schreibverbindungen vom sekundären zum primären Replikat (Always On-Verfügbarkeitsgruppen)
 
 [!INCLUDE[appliesto](../../../includes/applies-to-version/sqlserver2019.md)]
 
-In [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 wird eine *Umleitung von Lese-/Schreibverbindungen vom sekundären zum primären Replikat* für Always On-Verfügbarkeitsgruppen eingeführt. Die Umleitung von Lese-/Schreibverbindungen ist auf jeder Betriebssystemplattform verfügbar. Durch dieses Feature können Clientanwendungsverbindungen zum primären Replikat weitergeleitet werden, unabhängig davon, ob der Zielserver in der Verbindungszeichenfolge angegeben ist. 
+In [!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)] CTP 2.0 wird eine *Umleitung von Lese-/Schreibverbindungen vom sekundären zum primären Replikat* für Always On-Verfügbarkeitsgruppen eingeführt. Die Umleitung von Lese-/Schreibverbindungen ist auf jeder Betriebssystemplattform verfügbar. Durch dieses Feature können Clientanwendungsverbindungen zum primären Replikat weitergeleitet werden, unabhängig davon, ob der Zielserver in der Verbindungszeichenfolge angegeben ist. 
 
 In der Verbindungszeichenfolge kann beispielsweise ein sekundäres Replikat als Ziel angegeben sein. Je nach Konfiguration des Verfügbarkeitsgruppenreplikats und den Einstellungen in der Verbindungszeichenfolge kann die Verbindung automatisch an das primäre Replikat umgeleitet werden. 
 
 ## <a name="use-cases"></a>Anwendungsfälle
 
-Vor [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] leiten der Verfügbarkeitgruppenlistener und die entsprechende Clusterressource den Benutzerdatenverkehr an das primäre Replikat weiter, um die Verbindungswiederherstellung nach einem Failover sicherzustellen. [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] unterstützt die Funktion des Verfügbarkeitgruppenlisteners weiterhin und fügt die Umleitung von Replikatverbindungen für Szenarien hinzu, in denen keine Listener verwendet werden kann. Beispiel:
+Vor [!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)] leiten der Verfügbarkeitgruppenlistener und die entsprechende Clusterressource den Benutzerdatenverkehr an das primäre Replikat weiter, um die Verbindungswiederherstellung nach einem Failover sicherzustellen. [!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)] unterstützt die Funktion des Verfügbarkeitgruppenlisteners weiterhin und fügt die Umleitung von Replikatverbindungen für Szenarien hinzu, in denen keine Listener verwendet werden kann. Beispiel:
 
 * Die Clustertechnologie, in die SQL Server-Verfügbarkeitsgruppen integriert sind, bietet keine Funktion, die einem Listener ähnelt. 
 * Eine Konfiguration mit mehreren Subnetzen wie z.B. die Cloud oder Floating IP mit Pacemaker mit mehreren Subnetzen – solche Konfigurationen können aufgrund der Menge an beteiligten Komponenten sehr komplex, fehleranfällig und schwer zu korrigieren sein.
@@ -52,7 +52,7 @@ Damit ein sekundäres Replikat Lese-/Schreibverbindungsanforderungen umleiten ka
 
 Um die Umleitung von Lese-/Schreibverbindungen zu konfigurieren, legen Sie beim Erstellen der Verfügbarkeitsgruppe `READ_WRITE_ROUTING_URL` für das primäre Replikat fest. 
 
-In [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] wurde `READ_WRITE_ROUTING_URL` zur `<add_replica_option>`-Spezifikation hinzugefügt. Weitere Informationen finden Sie in den folgenden Artikeln: 
+In [!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)] wurde `READ_WRITE_ROUTING_URL` zur `<add_replica_option>`-Spezifikation hinzugefügt. Weitere Informationen finden Sie in den folgenden Artikeln: 
 
 * [CREATE AVAILABILITY GROUP](../../../t-sql/statements/create-availability-group-transact-sql.md)
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
@@ -67,7 +67,7 @@ Standardmäßig ist die Umleitung von Lese-/Schreibverbindungen für ein Replika
 |`ApplicationIntent=ReadWrite`<br/> Standard|Verbindungen werden nicht hergestellt|Verbindungen werden nicht hergestellt|Verbindungen werden erfolgreich hergestellt<br/>Lesevorgänge werden erfolgreich durchgeführt<br/>Schreibvorgänge werden nicht durchgeführt|
 |`ApplicationIntent=ReadOnly`|Verbindungen werden nicht hergestellt|Verbindungen werden erfolgreich hergestellt|Verbindungen werden erfolgreich hergestellt
 
-Die oben gezeigte Tabelle veranschaulicht das Standardverhalten – dies ist das gleiche Verwalten wie in den SQL Server-Versionen vor[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)]. 
+Die oben gezeigte Tabelle veranschaulicht das Standardverhalten – dies ist das gleiche Verwalten wie in den SQL Server-Versionen vor[!INCLUDE[sssql19-md](../../../includes/sssql19-md.md)]. 
 
 ### <a name="primary_roleread_write_routing_url-set"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) festgelegt 
 

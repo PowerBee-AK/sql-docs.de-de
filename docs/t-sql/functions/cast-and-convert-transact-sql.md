@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CAST_TSQL
 - CONVERT_TSQL
@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f17a896316ca0e85f11cf8359aa50a11c35faa5
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 1572028c2aa575078392c34fca37fa8105e25661
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171942"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236381"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST und CONVERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -138,7 +138,7 @@ Wenn *expression* **float** oder **real** ist, kann *style* einen der in der fol
 |**0** (Standardwert)|Maximal 6 Ziffern. Wird ggf. in der wissenschaftlichen Schreibweise verwendet.|  
 |**1**|Immer 8 Ziffern. Wird immer in der wissenschaftlichen Schreibweise verwendet.|  
 |**2**|Immer 16 Ziffern. Wird immer in der wissenschaftlichen Schreibweise verwendet.|  
-|**3**|Immer 17 Ziffern. Wird für die verlustlose Konvertierung verwendet. Mit diesem Format wird garantiert, dass jeder eindeutige „float“- oder „real“-Wert in eine eindeutige Zeichenfolge konvertiert wird.<br /><br /> **Anwendungsbereich:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**3**|Immer 17 Ziffern. Wird für die verlustlose Konvertierung verwendet. Mit diesem Format wird garantiert, dass jeder eindeutige „float“- oder „real“-Wert in eine eindeutige Zeichenfolge konvertiert wird.<br /><br /> **Anwendungsbereich:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**126, 128, 129**|Aufgenommen zur Kompatibilität mit Legacykomponenten, in zukünftigen Releases sind diese Werte möglicherweise als veraltet gekennzeichnet.|  
   
 ## <a name="money-and-smallmoney-styles"></a>money- und smallmoney-Formate

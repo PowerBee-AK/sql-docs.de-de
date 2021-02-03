@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 506abf476e04ab1a40059d04031949fa80b31acf
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: 7a42972d4a0cd5e6b456d72ccdba6786ad66c734
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97559322"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237104"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>Konfigurieren der Spaltenverschlüsselung unter Verwendung von Always Encrypted mit einem DAC-Paket 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ Ein Tool, mit dem Sie eine DACPAC-Datei bereitstellen, muss die Daten aus der Da
 ::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
-> Wenn Sie [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] verwenden und Ihre SQL Server-Instanz mit Secure Enclave konfiguriert ist, können Sie kryptografische Vorgänge direkt ausführen, ohne Daten aus der Datenbank zu verschieben. Informationen hierzu finden Sie unter [Konfigurieren einer direkten Spaltenverschlüsselung mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-configure-encryption.md). Beachten Sie, dass die direkte Verschlüsselung für DACPAC-Bereitstellungen nicht verfügbar ist.
+> Wenn Sie [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] verwenden und Ihre SQL Server-Instanz mit Secure Enclave konfiguriert ist, können Sie kryptografische Vorgänge direkt ausführen, ohne Daten aus der Datenbank zu verschieben. Informationen hierzu finden Sie unter [Konfigurieren einer direkten Spaltenverschlüsselung mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-configure-encryption.md). Beachten Sie, dass die direkte Verschlüsselung für DACPAC-Bereitstellungen nicht verfügbar ist.
 
 ::: moniker-end
 

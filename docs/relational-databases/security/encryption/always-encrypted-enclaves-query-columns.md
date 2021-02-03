@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8aecf4b22cf02ae91d259f45daff1d2cd8414f97
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: bc92b0af972236b588369869afc5b023735ae699
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534689"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237131"
 ---
 # <a name="run-transact-sql-statements-using-secure-enclaves"></a>Ausführen von Transact-SQL-Anweisungen mit Secure Enclaves
 
@@ -45,15 +45,15 @@ Für die folgenden Anweisungen in der [Datenbearbeitungssprache](../../../t-sql/
   - [IN (Transact-SQL)](../../../t-sql/language-elements/in-transact-sql.md)
   - [LIKE (Transact-SQL)](../../../t-sql/language-elements/like-transact-sql.md)
   - [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select)
-  - [Joins](../../performance/joins.md)[!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] unterstützt nur Joins geschachtelter Schleifen. [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] unterstützt Joins geschachtelter Schleifen, Hashjoins und Zusammenführungsjoins.
-  - [SELECT - ORDER BY-Klausel (Transact-SQL):](../../../t-sql/queries/select-order-by-clause-transact-sql.md) Wird in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] unterstützt. Nicht unterstützt in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]
-  - [SELECT - GROUP BY-Klausel (Transact-SQL):](../../../t-sql/queries/select-group-by-transact-sql.md) Wird in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] unterstützt. Nicht unterstützt in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]
+  - [Joins](../../performance/joins.md)[!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] unterstützt nur Joins geschachtelter Schleifen. [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] unterstützt Joins geschachtelter Schleifen, Hashjoins und Zusammenführungsjoins.
+  - [SELECT - ORDER BY-Klausel (Transact-SQL):](../../../t-sql/queries/select-order-by-clause-transact-sql.md) Wird in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] unterstützt. Nicht unterstützt in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]
+  - [SELECT - GROUP BY-Klausel (Transact-SQL):](../../../t-sql/queries/select-group-by-transact-sql.md) Wird in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] unterstützt. Nicht unterstützt in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]
 - Abfragen, mit denen Zeilen eingefügt, aktualisiert oder gelöscht werden, die wiederum das Einfügen und/oder Entfernen eines Indexschlüssels in einen/aus einem Index für eine Enclave-fähige Spalte auslösen. Weitere Informationen finden Sie unter [Erstellen und Verwenden von Indizes in Spalten mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-create-use-indexes.md).
 
 > [!NOTE]
 > Vorgänge für Indizes und vertrauliche DML-Abfragen mithilfe von Enclaves werden nur für Enclave-fähige Spalten unterstützt, für die die zufällige Verschlüsselung verwendet wird. Die deterministische Verschlüsselung wird nicht unterstützt.
 >
-> In [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] muss für vertrauliche Abfragen, die Enclaves in Zeichenfolgenspalten (`char`, `nchar`) verwenden, eine binary2-Sortierung (BIN2) für die Spalten konfiguriert werden. In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] müssen BIN2- oder UTF-8-Sortierungen verwendet werden.
+> In [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] muss für vertrauliche Abfragen, die Enclaves in Zeichenfolgenspalten (`char`, `nchar`) verwenden, eine binary2-Sortierung (BIN2) für die Spalten konfiguriert werden. In [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] müssen BIN2- oder UTF-8-Sortierungen verwendet werden.
 
 ### <a name="dbcc-commands-using-secure-enclaves"></a>DBCC-Befehle mit Secure Enclaves
 
@@ -67,7 +67,7 @@ Ihre Umgebung muss die folgenden Anforderungen erfüllen, damit das Ausführen v
 - Sie benötigen eine Nachweis-URL aus Ihrer Umgebung vom Dienstadministrator, der für Nachweise zuständig ist.
 
   - Wenn Sie [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] und den Host-Überwachungsdienst (Host Guardian Service, HGS) verwenden, finden Sie weitere Informationen unter [Ermitteln und Teilen der Nachweis-URL für HGS](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - Wenn Sie [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] und Microsoft Azure Attestation verwenden, finden Sie weitere Informationen unter [Ermitteln der Nachweis-URL für Ihre Nachweisrichtlinie](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
+  - Wenn Sie [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] und Microsoft Azure Attestation verwenden, finden Sie weitere Informationen unter [Ermitteln der Nachweis-URL für Ihre Nachweisrichtlinie](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation).
 
 - Wenn Sie über Ihre Anwendung eine Verbindung mit der Datenbank herstellen, muss diese einen Clienttreiber verwenden, der Always Encrypted mit Secure Enclaves unterstützt. Die Anwendung muss eine Verbindung mit der Datenbank herstellen. Hierbei muss Always Encrypted für die Datenbankverbindung aktiviert, und das Nachweisprotokoll und die Nachweis-URL müssen ordnungsgemäß konfiguriert sein. Ausführliche Informationen finden Sie unter [Entwickeln von Anwendungen mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-client-development.md).
 - Wenn Sie SQL Server Management Studio (SSMS) oder Azure SQL Data Studio verwenden, müssen Sie Always Encrypted aktivieren und das Nachweisprotokoll und die Nachweis-URL konfigurieren, wenn Sie eine Verbindung mit der Datenbank herstellen. Weitere Informationen hierzu finden Sie in den nachfolgenden Abschnitten.
@@ -104,7 +104,7 @@ Achten Sie darauf, Ihre Anweisungen über ein Abfragefenster auszuführen, das e
 1. Klicken Sie im Dialogfeld **Verbindung** auf **Erweitert...** .
 2. Um Always Encrypted für die Verbindung zu aktivieren, legen Sie das Feld **Always Encrypted** auf **Aktiviert** fest.
 3. Geben Sie das Nachweisprotokoll und die Nachweis-URL an.
-    - Wenn Sie [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] verwenden, legen Sie für **Attestation Protocol** (Nachweisprotokoll) **Host-Überwachungsdienst** fest, und geben Sie die Nachweis-URL für den Host-Überwachungsdienst in das Feld **Enclave Attestation URL** (Nachweis-URL für die Enclave) ein.
+    - Wenn Sie [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] verwenden, legen Sie für **Attestation Protocol** (Nachweisprotokoll) **Host-Überwachungsdienst** fest, und geben Sie die Nachweis-URL für den Host-Überwachungsdienst in das Feld **Enclave Attestation URL** (Nachweis-URL für die Enclave) ein.
     - Wenn Sie [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] verwenden, legen Sie **Attestation Protocol** (Nachweisprotokoll) auf **Azure Attestation** fest, und geben Sie die Nachweis-URL für Ihre Richtlinie in Microsoft Azure Attestation in das Feld **Enclave Attestation URL** (Nachweis-URL für die Enclave) ein.
 
     ![Herstellen einer Verbindung mit dem Server mit einem Nachweis unter Verwendung von Azure Data Studio](./media/always-encrypted-enclaves/azure-data-studio-connect-with-enclaves.png)
@@ -191,7 +191,7 @@ GO
 
 Mit der folgenden Abfrage werden die Mitarbeiterdatensätze basierend auf der verschlüsselten `Salary`-Spalte sortiert, sodass 10 Mitarbeiter mit den höchsten Gehältern abgerufen werden.
 > [!NOTE]
-> Das Sortieren verschlüsselter Spalten wird in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], aber nicht in [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]unterstützt.
+> Das Sortieren verschlüsselter Spalten wird in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], aber nicht in [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]unterstützt.
 
 ```sql
 SELECT TOP(10) * FROM [HR].[Employees]

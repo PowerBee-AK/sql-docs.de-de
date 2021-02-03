@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: sqlfreshmay19
 ms.date: 11/25/2019
-ms.openlocfilehash: 2ef49ed5d3d46e4f5c5602972ea87347b686d9bb
-ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
+ms.openlocfilehash: cd4dae49fb19532e9aee082e4046c4d79dbf0a82
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97617569"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99238001"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Beheben von Verbindungsfehlern mit der SQL Server-Datenbank-Engine
 
@@ -108,7 +108,7 @@ Dieses Verfahren verwendet SQL Server Management Studio. Wenn Sie Management Stu
    > [!NOTE]
    > Einige Fehlermeldungen, die absichtlich an den Client übergeben wurden, stellen nicht genügend Informationen dazu bereit, wie das Problem behoben werden kann. Dies ist eine Sicherheitsfunktion, die verhindern soll, dass Informationen über SQL Server an einen Angreifer übermittelt werden. Sehen Sie sich das SQL Server-Fehlerprotokoll an, um alle Informationen über den Fehler anzuzeigen. Dort finden Sie die Einzelheiten. 
 
-4. Wenn Sie den Fehler `18456 Login failed for user` erhalten, sehen Sie sich das Thema [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) in der Onlinedokumentation an, das weitere Informationen zu Fehlercodes enthält. Auf Aaron Bertrands Blog unter [Troubleshooting Error 18456](https://sqlblog.org/2011/01/14/troubleshooting-error-18456) (Problembehandlung von Fehler 18456) finden Sie ebenfalls eine umfangreiche Liste mit Fehlercodes. Sie können das Fehlerprotokoll mit SSMS (falls Sie eine Verbindung herstellen können) im Abschnitt „Verwaltung“ des Objekt-Explorers anzeigen. Andernfalls können Sie das Fehlerprotokoll mit dem Windows-Editor anzeigen. Der standardmäßige Speicherort variiert je nach Version und kann während des Setups geändert werden. Der Standardspeicherort für [!INCLUDE[ssSQL15_md](../../includes/sssqlv15-md.md)] ist `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log\ERRORLOG`. 
+4. Wenn Sie den Fehler `18456 Login failed for user` erhalten, sehen Sie sich das Thema [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) in der Onlinedokumentation an, das weitere Informationen zu Fehlercodes enthält. Auf Aaron Bertrands Blog unter [Troubleshooting Error 18456](https://sqlblog.org/2011/01/14/troubleshooting-error-18456) (Problembehandlung von Fehler 18456) finden Sie ebenfalls eine umfangreiche Liste mit Fehlercodes. Sie können das Fehlerprotokoll mit SSMS (falls Sie eine Verbindung herstellen können) im Abschnitt „Verwaltung“ des Objekt-Explorers anzeigen. Andernfalls können Sie das Fehlerprotokoll mit dem Windows-Editor anzeigen. Der standardmäßige Speicherort variiert je nach Version und kann während des Setups geändert werden. Der Standardspeicherort für [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] ist `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log\ERRORLOG`. 
 
 5. Wenn Sie keine Verbindung mithilfe von Shared Memory herstellen können, versuchen Sie eine Verbindung mithilfe von TCP herzustellen. Sie können eine TCP-Verbindung erzwingen, indem Sie `tcp:` vor dem Namen angeben. Beispiel:
 

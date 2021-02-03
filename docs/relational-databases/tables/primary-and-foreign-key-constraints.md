@@ -17,12 +17,12 @@ ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 091ebaf16d46cdde5604e532a80f1dd1177586c6
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 8027650e0b161ec590e3af85910d5d1f903a6eaa
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172462"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237664"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Primärschlüssel- und Fremdschlüsseleinschränkungen
 
@@ -64,7 +64,7 @@ ms.locfileid: "98172462"
   
  Nehmen Sie beispielsweise an, die **Sales.SalesOrderHeader** -Tabelle weist eine Fremdschlüsselverknüpfung zur **Sales.SalesPerson** -Tabelle auf, da eine logische Beziehung zwischen „Sales Orders“ (Kaufaufträgen) und „Sales People“ (Vertriebsmitarbeiter) besteht. Die **SalesPersonID** -Spalte der **SalesOrderHeader** -Tabelle stimmt mit der Primärschlüsselspalte der **SalesPerson** -Tabelle überein. Die **SalesPersonID** -Spalte der **SalesOrderHeader** -Tabelle ist der Fremdschlüssel für die **SalesPerson** -Tabelle. Wenn Sie diese Fremdschlüsselbeziehung erstellen, kann ein Wert für **SalesPersonID** nicht in die **SalesOrderHeader** -Tabelle eingefügt werden, wenn er nicht bereits in der **SalesPerson** -Tabelle vorhanden ist.  
   
- Eine Tabelle kann auf maximal 253 andere Tabellen und Spalten als Fremdschlüssel (ausgehende Referenzen) verweisen. [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] erhöht den Grenzwert für die Anzahl der anderen Tabellen und Spalten, die auf Spalten in einer einzelnen Tabelle (eingehende Referenzen) verweisen können, von 253 auf 10.000. (Kompatibilitätsgrad 130 oder höher erforderlich.) Für die Erhöhung gelten folgende Einschränkungen:  
+ Eine Tabelle kann auf maximal 253 andere Tabellen und Spalten als Fremdschlüssel (ausgehende Referenzen) verweisen. [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] erhöht den Grenzwert für die Anzahl der anderen Tabellen und Spalten, die auf Spalten in einer einzelnen Tabelle (eingehende Referenzen) verweisen können, von 253 auf 10.000. (Kompatibilitätsgrad 130 oder höher erforderlich.) Für die Erhöhung gelten folgende Einschränkungen:  
   
 -   Mehr als 253 Fremdschlüsselverweise werden nur für DELETE DML-Operationen unterstützt. UPDATE- und MERGE-Operationen werden nicht unterstützt.  
   

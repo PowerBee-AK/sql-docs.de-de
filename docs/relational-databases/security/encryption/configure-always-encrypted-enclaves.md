@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 481493a50fdefc22f6eb4d77feb13cfc4848388d
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: 73a1c9f3a39ce51ce6ecc347af2e2eb0fb173fb6
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534649"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237301"
 ---
 # <a name="configure-and-use-always-encrypted-with-secure-enclaves"></a>Konfigurieren und Verwenden von Always Encrypted mit Secure Enclaves 
 
@@ -33,7 +33,7 @@ Ein Tutorial für den schnellen Einstieg mit Always Encrypted mit Secure Enclave
 
 Vor der Verwendung von Always Encrypted mit Secure Enclaves müssen Sie in der Konfiguration Ihrer Umgebung sicherstellen, dass die sichere Enklave für die Datenbank verfügbar ist. Außerdem müssen Sie einen [Enclave-Nachweis](always-encrypted-enclaves.md#secure-enclave-attestation) einrichten. 
 
-Der Vorgang zum Einrichten Ihrer Umgebung hängt davon ab, ob Sie [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] oder [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] verwenden.
+Der Vorgang zum Einrichten Ihrer Umgebung hängt davon ab, ob Sie [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] oder [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] verwenden.
 
 ### <a name="set-up-the-secure-enclave-and-attestation-in-ssnoversion-md"></a>Einrichten der Secure Enclave-Instanz und des Nachweises in [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
 
@@ -46,9 +46,9 @@ Details finden Sie in den folgenden Artikeln:
 ### <a name="set-up-the-secure-enclave-and-attestation-in-sssdsfull"></a>Einrichten der Secure Enclave-Instanz und des Nachweises in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]
 
 Details finden Sie in den folgenden Artikeln:
-- [Planen im Hinblick auf Intel SGX-Enclaves und -Nachweis in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]](/azure/azure-sql/database/always-encrypted-enclaves-sqldbmi-plan)
-- [Aktivieren von Intel SGX für Azure SQL-Datenbank](/azure/azure-sql/database/always-encrypted-enclaves-sqldbmi-enable-sgx)
-- [Konfigurieren von Azure Attestation für Ihren logischen Azure SQL-Datenbank-Server](/azure/azure-sql/database/always-encrypted-enclaves-sqldbmi-configure-attestation)
+- [Planen im Hinblick auf Intel SGX-Enclaves und -Nachweis in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]](/azure/azure-sql/database/always-encrypted-enclaves-plan)
+- [Aktivieren von Intel SGX für Azure SQL-Datenbank](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx)
+- [Konfigurieren von Azure Attestation für Ihren logischen Azure SQL-Datenbank-Server](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation)
 
 ## <a name="manage-keys-for-always-encrypted-with-secure-enclaves"></a>Verwalten von Schlüsseln für Always Encrypted mit Secure Enclaves
 Weitere Informationen finden Sie in den folgenden Artikeln:

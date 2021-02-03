@@ -16,16 +16,16 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f421e3a0e07b73037e9b789bd29778791f699561
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 93974ff7f7ef5d0dd28ae8ce6989da2f0b496548
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473071"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250242"
 ---
 # <a name="recompile-a-stored-procedure"></a>Erneutes Kompilieren einer gespeicherten Prozedur
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]erneut kompilieren. Hierzu stehen drei Möglichkeiten zur Verfügung: die **WITH RECOMPILE** -Option in der Prozedurdefinition, beim Aufrufen der Prozedur der **RECOMPILE** -Abfragehinweis in einzelnen Anweisungen oder die gespeicherte Systemprozedur **sp_recompile** . In diesem Thema wird die Verwendung der WITH RECOMPILE-Option beim Erstellen einer Prozedurdefinition und Ausführen einer vorhandenen Prozedur beschrieben. Zudem wird erläutert, wie die gespeicherte Systemprozedur sp_recompile zum erneuten Kompilieren einer vorhandenen Prozedur verwendet wird.  
+  In diesem Thema wird beschrieben, wie Sie eine gespeicherte Prozedur in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)]erneut kompilieren. Hierzu stehen drei Möglichkeiten zur Verfügung: die **WITH RECOMPILE** -Option in der Prozedurdefinition, beim Aufrufen der Prozedur der **RECOMPILE** -Abfragehinweis in einzelnen Anweisungen oder die gespeicherte Systemprozedur **sp_recompile** . In diesem Thema wird die Verwendung der WITH RECOMPILE-Option beim Erstellen einer Prozedurdefinition und Ausführen einer vorhandenen Prozedur beschrieben. Zudem wird erläutert, wie die gespeicherte Systemprozedur sp_recompile zum erneuten Kompilieren einer vorhandenen Prozedur verwendet wird.  
   
  **In diesem Thema**  
   

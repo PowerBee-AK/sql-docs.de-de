@@ -13,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 08e7674819e4dc52a8613e39d1f8ec82a42abc05
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: 2334a132c8d2b56f0eaf0909b9f83544cb6e0af5
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534719"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236505"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-in-sql-server"></a>Tutorial: Erste Schritte mit Always Encrypted mit Secure Enclaves in SQL Server
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -38,7 +38,7 @@ Für die ersten Schritte mit Always Encrypted mit Secure Enclaves benötigen Sie
 
 ### <a name="sql-server-computer-requirements"></a>SQL Server-Computeranforderungen
 
-- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] oder höher.
+- [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] oder höher.
 - Sie benötigen Windows 10 Enterprise, Version 1809 oder höher, oder Windows Server 2019 Datacenter Edition. Andere Editionen von Windows 10 und Windows Server unterstützen keinen HGS-Nachweis.
 - CPU-Unterstützung für Virtualisierungstechnologien:
   - Intel VT-x mit erweiterten Seitentabellen

@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: markingmyname
 ms.author: maghan
 ms.custom: contperf-fy20q4
-ms.openlocfilehash: 7b0e4b8abf21d918e7d4d627c7ed82d5507394ec
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 4006ad1707d30d0a9147056ddfff8b71ae7643e1
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171062"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236971"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Max. Grad an Parallelität
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "98171062"
   In diesem Artikel wird beschrieben, wie Sie die Serverkonfigurationsoption **Max. Grad an Parallelität (MAXDOP)** in SQL Server mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] konfigurieren. Wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Computer mit mehreren Mikroprozessoren oder CPUs ausgeführt wird, erkennt die [!INCLUDE[ssde_md](../../includes/ssde_md.md)], ob Parallelität verwendet werden kann. Mit dem Grad der Parallelität wird die Anzahl der Prozessoren festgelegt, die zur Ausführung einer einzelnen Anweisung für jede Ausführung paralleler Pläne verwendet werden. Mithilfe der Option **Max. Grad an Parallelität** kann die Anzahl der Prozessoren beschränkt werden, die bei der Ausführung paralleler Pläne verwendet werden. Weitere Informationen zu den durch den **maximalen Grad an Parallelität (MAXDOP)** festgelegten Grenzwert finden Sie im Abschnitt [Überlegungen](#Considerations) auf dieser Seite. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] berücksichtigt die Ausführung paralleler Pläne für Abfragen, DDL-Indizierungsvorgänge (Data Definition Language, DDL), parallele Einfügevorgänge, Onlineausführung von ALTER COLUMN, parallele Sammlung von Statistiken sowie die statische und keysetgesteuerte Cursorauffüllung.
 
 > [!NOTE]
-> Mit [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] wurden automatische Empfehlungen zum Festlegen der MAXDOP-Serverkonfigurationsoption während des Installationsvorgangs basierend auf der Anzahl der verfügbaren Prozessoren eingeführt. Auf der Setupbenutzeroberfläche können Sie entweder die empfohlenen Einstellungen übernehmen oder Ihren eigenen Wert eingeben. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Seite „MaxDOP“](../../sql-server/install/instance-configuration.md#maxdop).
+> Mit [!INCLUDE [sssql19-md](../../includes/sssql19-md.md)] wurden automatische Empfehlungen zum Festlegen der MAXDOP-Serverkonfigurationsoption während des Installationsvorgangs basierend auf der Anzahl der verfügbaren Prozessoren eingeführt. Auf der Setupbenutzeroberfläche können Sie entweder die empfohlenen Einstellungen übernehmen oder Ihren eigenen Wert eingeben. Weitere Informationen finden Sie unter [Konfiguration der Datenbank-Engine – Seite „MaxDOP“](../../sql-server/install/instance-configuration.md#maxdop).
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -55,9 +55,9 @@ ms.locfileid: "98171062"
 -   Neben Abfragen und Indexoperationen steuert diese Option auch die Parallelität von DBCC CHECKTABLE, DBCC CHECKDB und DBCC CHECKFILEGROUP. Sie können Pläne für die parallele Ausführung für diese Anweisungen deaktivieren, und zwar mithilfe des Ablaufverfolgungsflags 2528. Weitere Informationen finden Sie unter [Ablaufverfolgungsflags &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 ###  <a name="recommendations"></a><a name="Recommendations"></a><a name="Guidelines"></a>Empfehlungen  
-Ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] werden beim Starten des Diensts standardmäßig automatisch Soft-NUMA-Knoten erstellt, wenn [!INCLUDE[ssde_md](../../includes/ssde_md.md)] beim Startup mehr als acht physische Kerne pro NUMA-Knoten oder Socket erkennt. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] platziert logische Prozessoren aus dem gleichen physischen Kern in verschiedene Soft-NUMA-Knoten. Die Empfehlungen in der folgenden Tabelle sollen alle Arbeitsthreads einer parallelen Abfrage innerhalb des gleichen NUMA-Knotens beibehalten. Dies verbessert die Leistung der Abfragen und die Verteilung von Arbeitsthreads in allen NUMA-Knoten für die Workload. Weitere Informationen finden Sie unter [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md).
+Ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] werden beim Starten des Diensts standardmäßig automatisch Soft-NUMA-Knoten erstellt, wenn [!INCLUDE[ssde_md](../../includes/ssde_md.md)] beim Startup mehr als acht physische Kerne pro NUMA-Knoten oder Socket erkennt. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] platziert logische Prozessoren aus dem gleichen physischen Kern in verschiedene Soft-NUMA-Knoten. Die Empfehlungen in der folgenden Tabelle sollen alle Arbeitsthreads einer parallelen Abfrage innerhalb des gleichen NUMA-Knotens beibehalten. Dies verbessert die Leistung der Abfragen und die Verteilung von Arbeitsthreads in allen NUMA-Knoten für die Workload. Weitere Informationen finden Sie unter [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md).
 
-Verwenden Sie ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] die folgenden Richtlinien beim Konfigurieren des Serverkonfigurationswerts **Max. Grad an Parallelität**:
+Verwenden Sie ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] die folgenden Richtlinien beim Konfigurieren des Serverkonfigurationswerts **Max. Grad an Parallelität**:
 
 |Serverkonfiguration|Anzahl der Prozessoren|Anleitungen|
 |----------------|-----------------|-----------------|
@@ -67,7 +67,7 @@ Verwenden Sie ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] die folgenden
 |Server mit mehreren NUMA-Knoten|Mehr als 16 logische Prozessoren pro NUMA-Knoten|Sorgen Sie dafür, dass MAXDOP der Hälfte der logischen Prozessoren pro NUMA-Knoten mit einem MAX-Wert von 16 entspricht.|
   
 > [!NOTE]
-> Der NUMA-Knoten in der obigen Tabelle bezieht sich auf automatisch von [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] und höheren Versionen erstellte Soft-NUMA-Knoten oder auf hardwarebasierte NUMA-Knoten, wenn Soft-NUMA deaktiviert wurde.   
+> Der NUMA-Knoten in der obigen Tabelle bezieht sich auf automatisch von [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] und höheren Versionen erstellte Soft-NUMA-Knoten oder auf hardwarebasierte NUMA-Knoten, wenn Soft-NUMA deaktiviert wurde.   
 >  Verwenden Sie dieselben Richtlinien, wenn Sie die Option „Max. Grad an Parallelität“ für Resource Governor-Arbeitsauslastungsgruppen festlegen. Weitere Informationen finden Sie unter [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md).
   
 Verwenden Sie von **bis** die folgenden Richtlinien beim Konfigurieren des Serverkonfigurationswerts [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]Max. Grad an Parallelität[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]:

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - INSERT_TSQL
 - INSERT
@@ -33,12 +33,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 206aefdd3cd58b94124a0840cef7e788c5a29390
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: b5a6fd7131b63741a82c120e1e0b222405865a9d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171272"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237178"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -319,7 +319,7 @@ Zeilen, die infolge einer Einfügeaktion in eine MERGE-Anweisung in einen Heap e
   
 Im Gegensatz zur `BULK INSERT`-Anweisung, die eine weniger restriktive Massenupdatesperre (BU-Sperre) enthält, weist `INSERT INTO … SELECT` mit dem `TABLOCK`-Hinweis eine exklusive Sperre (X) für die Tabelle auf. Das bedeutet, dass Sie Zeilen nicht mit mehreren parallel ausgeführten Einfügevorgängen einfügen können. 
 
-Ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] und dem Datenbank-Kompatibilitätsgrad 130 kann die `INSERT INTO … SELECT`-Anweisung jedoch parallel ausgeführt werden, wenn in Heaps oder gruppierte Columnstore-Indizes (CCI) eingefügt wird. Parallele Einfügungen sind möglich, wenn der `TABLOCK`-Hinweis verwendet wird.  
+Ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] und dem Datenbank-Kompatibilitätsgrad 130 kann die `INSERT INTO … SELECT`-Anweisung jedoch parallel ausgeführt werden, wenn in Heaps oder gruppierte Columnstore-Indizes (CCI) eingefügt wird. Parallele Einfügungen sind möglich, wenn der `TABLOCK`-Hinweis verwendet wird.  
 
 Für die Parallelität der obigen Anweisung gelten die folgenden Anforderungen, die den Anforderungen für die minimale Protokollierung ähneln:  
 -   Die Zieltabelle ist ein leerer oder nicht leerer Heap.  
@@ -785,7 +785,7 @@ GO
 #### <a name="p-inserting-into-an-external-table-created-using-polybase"></a>P. Einfügen in eine externe Tabelle mithilfe von PolyBase  
  Exportieren von Daten aus SQL Server in Hadoop oder Azure Storage Erstellen Sie zuerst eine externe Tabelle, die auf die Zieldatei oder das Verzeichnis verweist. Verwenden Sie dann INSERT INTO zum Exportieren von Daten aus einer lokalen SQL Server-Tabelle in eine externe Datenquelle. Die INSERT INTO-Anweisung erstellt die Zieldatei oder das Verzeichnis, falls nicht vorhanden, und die Ergebnisse der SELECT-Anweisung werden zu einem angegebenen Speicherort im angegebenen Dateiformat exportiert.  Weitere Informationen finden Sie unter [Get started with PolyBase](../../relational-databases/polybase/polybase-guide.md)(Erste Schritte mit PolyBase).  
   
-**Gilt für**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Gilt für**: [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ```sql
 -- Create an external table.   

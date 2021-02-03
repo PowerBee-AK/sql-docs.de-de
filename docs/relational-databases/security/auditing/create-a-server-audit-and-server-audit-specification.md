@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: 05f3d283e90affc8a89e32e2e0f249153f2e4935
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3db484c1279546ab76ebf302582dbb984f991fa4
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899080"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250119"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  In diesem Thema wird beschrieben, wie eine Serverüberwachung und Serverüberwachungsspezifikation in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]erstellt wird. Bei der*Überwachung* einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank werden Ereignisse im System verfolgt und protokolliert. Das *SQL Server Audit* -Objekt listet eine einzelne Instanz an Aktionen oder Aktionsgruppen auf Server- oder Datenbankebene auf, die überwacht werden soll. Die Überwachung wird auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzebene ausgeführt. Es können mehrere Überwachungen pro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz vorliegen. Das *Serverüberwachungsspezifikation* -Objekt gehört zu einer Überwachung. Sie können eine Serverüberwachungsspezifikation pro Überwachung erstellen, da beide im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzbereich erstellt werden. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  In diesem Thema wird beschrieben, wie eine Serverüberwachung und Serverüberwachungsspezifikation in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]erstellt wird. Bei der *Überwachung* einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank werden Ereignisse im System verfolgt und protokolliert. Das *SQL Server Audit* -Objekt listet eine einzelne Instanz an Aktionen oder Aktionsgruppen auf Server- oder Datenbankebene auf, die überwacht werden soll. Die Überwachung wird auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzebene ausgeführt. Es können mehrere Überwachungen pro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz vorliegen. Das *Serverüberwachungsspezifikation* -Objekt gehört zu einer Überwachung. Sie können eine Serverüberwachungsspezifikation pro Überwachung erstellen, da beide im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzbereich erstellt werden. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
  **In diesem Thema**  
   
@@ -140,19 +140,19 @@ ms.locfileid: "85899080"
      Gibt die aufzuzeichnenden Überwachungsaktionsgruppen auf Serverebene und Überwachungsaktionen an. Eine Liste der Überwachungsaktionsgruppen auf Serverebene und Überwachungsaktionen sowie eine Beschreibung der darin enthaltenen Ereignisse finden Sie unter [SQL Server Audit-Aktionsgruppen und -Aktionen](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md).  
   
      **Objektschema**  
-     Zeigt das Schema für den angegebenen **Objektnamen**an.  
+     Zeigt das Schema für den angegebenen **Objektnamen** an.  
   
      **Objektnamen**  
      Der Name des zu überwachenden Objekts. Das Objekt ist nur für Überwachungsaktionen verfügbar, es gilt nicht für Überwachungsgruppen.  
   
      **Auslassungspunkte (…)**  
-     Öffnet das Dialogfeld **Objekte auswählen** , in dem Sie anhand des angegebenen **Überwachungsaktionstyps**nach einem verfügbaren Objekt suchen und es auswählen können.  
+     Öffnet das Dialogfeld **Objekte auswählen** , in dem Sie anhand des angegebenen **Überwachungsaktionstyps** nach einem verfügbaren Objekt suchen und es auswählen können.  
   
      **Prinzipalname**  
      Das Konto, anhand dessen die Überwachung für das zu überwachende Objekt gefiltert wird.  
   
      **Auslassungspunkte (…)**  
-     Öffnet das Dialogfeld **Objekte auswählen** , in dem Sie nach einem verfügbaren Objekt anhand des angegebenen **Objektnamens**suchen und es auswählen können.  
+     Öffnet das Dialogfeld **Objekte auswählen** , in dem Sie nach einem verfügbaren Objekt anhand des angegebenen **Objektnamens** suchen und es auswählen können.  
   
 3.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   

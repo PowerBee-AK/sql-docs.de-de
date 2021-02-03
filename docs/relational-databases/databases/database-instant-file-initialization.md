@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 47bb374abb29374fade7a4c2c158ea4e76abe71b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 529949c2bf37526eba6d9042322a658f89880a9d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171742"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237372"
 ---
 # <a name="database-instant-file-initialization"></a>Sofortige Datenbankdateiinitialisierung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ Die schnelle Dateiinitialisierung ist nur verfügbar, wenn dem [!INCLUDE[ssNoVer
 > Die Verwendung bestimmter Features wie [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) kann die schnelle Dateiinitialisierung blockieren.  
 
 > [!NOTE]
-> Ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] kann diese Berechtigung dem Dienstkonto beim Setup im Rahmen einer Installation erteilt werden. <br><br>Wenn Sie eine [Installation über die Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) durchführen, fügen Sie das Argument /SQLSVCINSTANTFILEINIT hinzu oder aktivieren im [Installationsassistenten](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) das Kontrollkästchen *SQL Server-Datenbank-Engine-Dienst Berechtigung zum Ausführen von Volumewartungstasks gewähren*.
+> Ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] kann diese Berechtigung dem Dienstkonto beim Setup im Rahmen einer Installation erteilt werden. <br><br>Wenn Sie eine [Installation über die Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) durchführen, fügen Sie das Argument /SQLSVCINSTANTFILEINIT hinzu oder aktivieren im [Installationsassistenten](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) das Kontrollkästchen *SQL Server-Datenbank-Engine-Dienst Berechtigung zum Ausführen von Volumewartungstasks gewähren*.
   
 So erteilen Sie einem Konto die Berechtigung `Perform volume maintenance tasks` :  
   
@@ -65,7 +65,7 @@ So erteilen Sie einem Konto die Berechtigung `Perform volume maintenance tasks` 
 1. Überprüfen Sie beim Start das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll.
    
   
-    **Anwendungsbereich:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 und [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] und höher)
+    **Anwendungsbereich:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 und [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] und höher)
     1. Wenn *SE_MANAGE_VOLUME_NAME* für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienststartkonto erteilt wurde, wird eine Meldung ähnlich der folgenden protokolliert:
 
         `Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`

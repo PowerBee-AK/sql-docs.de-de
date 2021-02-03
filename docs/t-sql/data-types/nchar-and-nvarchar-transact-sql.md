@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a33a9bfe6409c08eba3d3f212c95619634699a55
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 038cb4e80af0423a5581ef2b7b51c1bbc54bb5cc
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480541"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237626"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar und nvarchar (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ Objekten, die **nchar** or **nvarchar** verwenden, wird die Standardsortierung d
   
 SET ANSI_PADDING hat für **nchar** und **nvarchar** immer den Wert ON. SET ANSI_PADDING OFF gilt nicht für die Datentypen **nchar** oder **nvarchar**.
   
-Stellen Sie einer Unicode-Zeichenfolgenkonstanten den Buchstaben „N“ voran, um UCS-2- oder UTF-16-Eingabe zu markieren, je nachdem, ob eine Sortierung mit zusätzlichen Zeichen verwendet wird. Ohne das Präfix „N“ wird die Zeichenfolge in die Standardcodepage der Datenbank konvertiert, die einige Zeichen ggf. nicht erkennt. Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] gilt Folgendes: Wenn eine Sortierung mit aktiviertem UTF-8 verwendet wird, kann die Standardcodepage einen UNICODE UTF-8-Zeichensatz speichern. 
+Stellen Sie einer Unicode-Zeichenfolgenkonstanten den Buchstaben „N“ voran, um UCS-2- oder UTF-16-Eingabe zu markieren, je nachdem, ob eine Sortierung mit zusätzlichen Zeichen verwendet wird. Ohne das Präfix „N“ wird die Zeichenfolge in die Standardcodepage der Datenbank konvertiert, die einige Zeichen ggf. nicht erkennt. Ab [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] gilt Folgendes: Wenn eine Sortierung mit aktiviertem UTF-8 verwendet wird, kann die Standardcodepage einen UNICODE UTF-8-Zeichensatz speichern. 
  
 > [!NOTE]  
 > Geht einer Zeichenfolgenkonstante der Buchstabe „N“ voraus, gibt die implizite Konvertierung eine UCS-2- oder UTF-16-Zeichenfolge zurück, wenn die Konstante, die konvertiert werden soll, die maximale Länge für den Datentyp für „nvarchar“-Zeichenfolgen (4.000) nicht überschreitet. Andernfalls hat die implizite Konvertierung einen hohen „nvarchar(max)“-Wert zur Folge.

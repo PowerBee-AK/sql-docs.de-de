@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b5f15490744ccfe8bfd47a69892f7033ddae361
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: e2ee07656d1768f57d4154c667280f0464ec3d3c
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171002"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236924"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "98171002"
 >  Während des Setups von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] wird eine Anmeldung für die Gruppe BUILTIN\Users hinzugefügt. Dies ermöglicht allen authentifizierten Benutzern des Computers den Zugriff auf die Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] als Element der öffentlichen Rolle. Die BUILTIN\Users-Anmeldung kann sicher entfernt werden, um den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Zugriff auf Computerbenutzer zu beschränken, die eigene Logins besitzen oder Mitglieder anderer Windows-Gruppen mit Logins sind.  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]- und [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bis [!INCLUDE[sssql14](../../includes/sssql14-md.md)] unterstützen standardmäßig nur TLS 1.0 und SSL 3.0. Wenn Sie durch Änderungen an der SChannel-Betriebssystemebene ein anderes Protokoll (beispielsweise TLS 1.1 oder TLS 1.2) erzwingen, treten bei Ihren Verbindungen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglicherweise Fehler auf, wenn Sie nicht das entsprechende Update installiert haben, um in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Unterstützung für TLS 1.1 und 1.2 hinzuzufügen. Dieses Update finden Sie <a href="https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server">hier</a>. Ab [!INCLUDE[sssql15](../../includes/sssql16-md.md)] bieten alle SQL Server-Versionen TLS 1.2-Unterstützung, ohne dass weitere Updates erforderlich sind.
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]- und [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bis [!INCLUDE[sssql14](../../includes/sssql14-md.md)] unterstützen standardmäßig nur TLS 1.0 und SSL 3.0. Wenn Sie durch Änderungen an der SChannel-Betriebssystemebene ein anderes Protokoll (beispielsweise TLS 1.1 oder TLS 1.2) erzwingen, treten bei Ihren Verbindungen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] möglicherweise Fehler auf, wenn Sie nicht das entsprechende Update installiert haben, um in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Unterstützung für TLS 1.1 und 1.2 hinzuzufügen. Dieses Update finden Sie <a href="https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server">hier</a>. Ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] bieten alle SQL Server-Versionen TLS 1.2-Unterstützung, ohne dass weitere Updates erforderlich sind.
   
  **In diesem Thema**  
   

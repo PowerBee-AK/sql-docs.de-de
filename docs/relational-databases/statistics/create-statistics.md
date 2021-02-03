@@ -19,16 +19,16 @@ ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d5f0cc0ed880cf47d85ea41696b221faedd3d1f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ba784c0c2fc9733f482a5af09870b48951c6079d
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479171"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250301"
 ---
 # <a name="create-statistics"></a>Erstellen von Statistiken
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Sie können Abfrageoptimierungsstatistiken in einer oder mehreren Spalten einer Tabelle oder indizierten Sicht in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erstellen, indem Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]verwenden. Bei den meisten Abfragen generiert der Abfrageoptimierer automatisch die notwendigen Statistiken für einen hochwertigen Abfrageplan. In einigen Fällen müssen Sie weitere Statistiken erstellen.  
+  Sie können Abfrageoptimierungsstatistiken in einer oder mehreren Spalten einer Tabelle oder indizierten Sicht in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] erstellen, indem Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]verwenden. Bei den meisten Abfragen generiert der Abfrageoptimierer automatisch die notwendigen Statistiken für einen hochwertigen Abfrageplan. In einigen Fällen müssen Sie weitere Statistiken erstellen.  
   
  **In diesem Thema**  
   

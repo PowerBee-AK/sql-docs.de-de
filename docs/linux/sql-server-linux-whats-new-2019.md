@@ -7,12 +7,12 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9ec5d4f34d299876614383c79fb79f2c2be9114d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 10a60b3a56b4835f9c6e68918046a6ebb98e31ae
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641273"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235891"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>Neuigkeiten zu SQL Server 2019 für Linux
 
@@ -41,8 +41,8 @@ Die Updates wurden in SQL Server 2019 unter Linux vorgenommen:
 |`tempdb`-Verbesserungen | Standardmäßig erstellt eine neue Installation von SQL Server für Linux mehrere `tempdb`-Datendateien, deren Anzahl sich nach der Anzahl von logischen Kernen richtet (bis zu 8 Datendateien). Das gilt nicht für direkte Upgrades der Neben- oder Hauptversion. Jede `tempdb`-Datei ist 8 MB groß und wird automatisch um 64 MB vergrößert. Dieses Verhalten ähnelt dem der SQL Server-Standardinstallation unter Windows. |
 | PolyBase unter Linux | [Installieren Sie PolyBase](../relational-databases/polybase/polybase-linux-setup.md) für Nicht-Hadoop-Connectors unter Linux.<br/><br/>[PolyBase type mapping (Typzuordnung mit PolyBase)](../relational-databases/polybase/polybase-type-mapping.md) |
 | Unterstützung von Change Data Capture (CDC) | Change Data Capture (CDC) wird jetzt unter Linux für SQL Server 2019 unterstützt. |
-| Microsoft Container Registry | [Microsoft Container Registry](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) ersetzt nun Docker Hub für neue offizielle Microsoft-Containerimages, einschließlich [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
-| Container ohne Root-Berechtigung | Mit [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] wird die Möglichkeit eingeführt, sicherere Container zu erstellen, indem der [!INCLUDE[sql-server](../includes/ssnoversion-md.md)]-Prozess standardmäßig als Nicht-Root-Benutzer gestartet wird. Weitere Informationen finden Sie unter [Erstellen und Ausführen von SQL Server-Containern als Nicht-Root-Benutzer](./sql-server-linux-docker-container-security.md#buildnonrootcontainer). |
+| Microsoft Container Registry | [Microsoft Container Registry](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) ersetzt nun Docker Hub für neue offizielle Microsoft-Containerimages, einschließlich [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]. |
+| Container ohne Root-Berechtigung | Mit [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] wird die Möglichkeit eingeführt, sicherere Container zu erstellen, indem der [!INCLUDE[sql-server](../includes/ssnoversion-md.md)]-Prozess standardmäßig als Nicht-Root-Benutzer gestartet wird. Weitere Informationen finden Sie unter [Erstellen und Ausführen von SQL Server-Containern als Nicht-Root-Benutzer](./sql-server-linux-docker-container-security.md#buildnonrootcontainer). |
 
 ## <a name="next-steps"></a>Nächste Schritte
 

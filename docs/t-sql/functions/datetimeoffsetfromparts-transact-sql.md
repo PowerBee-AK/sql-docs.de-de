@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DATETIMEOFFSETFROMPARTS_TSQL
 - DATETIMEOFFSETFROMPARTS
@@ -19,12 +19,12 @@ ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab37520d60c482afccb40bde7392de2515a79753
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 9f8ce697a414d095e91214626b4ae4f8e1e2a83b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101191"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237915"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -82,7 +82,7 @@ Ein ganzzahliger literaler Wert, der die Genauigkeit des **datetimeoffset**-Wert
   
 Das *fractions*-Argument ist vom precision-Argument abhängig. Wenn „precision“ beispielsweise den Wert 7 aufweist, stellt jeder Bruchteil 100 Nanosekunden dar. Wenn „precision“ jedoch den Wert 3 aufweist, stellt jeder Bruchteil eine Millisekunde dar. Wenn der Wert von „precision“ 0 (null) ist, muss auch der Wert von „fractions“ 0 (null) sein; andernfalls löst `DATETIMEOFFSETFROMPARTS` einen Fehler aus.  
   
-Diese Funktion unterstützt das Remoting zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Servern und höher. Sie unterstützt nicht das Remoting zu Servern mit einer Version unter [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Diese Funktion kann remote auf [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)]-Servern oder höher ausgeführt werden. Eine Remoteausführung auf Servern mit einer Version vor [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] ist nicht möglich.  
   
 ## <a name="examples"></a>Beispiele  
   

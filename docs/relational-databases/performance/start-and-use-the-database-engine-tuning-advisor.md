@@ -19,23 +19,23 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 5b83b5781d8c40c0acc6ee79ab0730c249def7c5
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: da72d129bac65b1b9210e49d33782b257ea9e182
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172522"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236427"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Starten und Verwenden des Datenbankoptimierungsratgebers
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  In diesem Thema wird beschrieben, wie der Datenbankoptimierungsratgeber in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]gestartet und verwendet wird. Informationen zum Anzeigen der Ergebnisse und Arbeiten mit den Ergebnissen nach dem Optimieren einer Datenbank finden Sie unter [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
+  In diesem Thema wird beschrieben, wie der Datenbankoptimierungsratgeber in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]gestartet und verwendet wird. Informationen zum Anzeigen der Ergebnisse und Arbeiten mit den Ergebnissen nach dem Optimieren einer Datenbank finden Sie unter [Anzeigen und Verwenden der Ausgabe des Datenbankoptimierungsratgebers](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="initialize-the-database-engine-tuning-advisor"></a><a name="Initialize"></a> Initialisieren des Datenbankoptimierungsratgebers  
  Bei der ersten Verwendung muss ein Benutzer, der Mitglied der festen Serverrolle **sysadmin** ist, den Datenbankoptimierungsratgeber starten. Das liegt daran, dass mehrere Systemtabellen in der Datenbank **msdb** erstellt werden müssen, um das Optimieren von Vorgängen zu unterstützen. Die Initialisierung ermöglicht darüber hinaus Benutzern, die Mitglieder der festen Datenbankrolle **db_owner** sind, Arbeitsauslastungen für Tabellen in Datenbanken zu optimieren, die sie besitzen.  
   
  Ein Benutzer mit Systemadministratorberechtigungen muss eine der folgenden Aktionen ausführen.  
   
--   Verwenden Sie die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers, um eine Verbindung mit einer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Instanz herzustellen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Starten Sie den Datenbankoptimierungsratgeber](#Start) .  
+-   Verwenden Sie die grafische Benutzeroberfläche des Datenbankoptimierungsratgebers, um eine Verbindung mit einer [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]-Instanz herzustellen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Starten Sie den Datenbankoptimierungsratgeber](#Start) .  
   
 -   Verwenden Sie das Hilfsprogramm **dta** , um die erste Arbeitsauslastung zu optimieren. Weitere Informationen hierzu finden Sie unter [Verwenden des dta-Hilfsprogramms](#dta) an späterer Stelle in diesem Thema.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "98172522"
 
       ||  
       |-|  
-      |**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] und höher.|  
+      |**Gilt für**:  [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] und höher.|  
 
   
 -   Verwenden Sie den Plancache als Arbeitsauslastung. Dadurch können Sie die manuelle Erstellung einer Auslastung vermeiden. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Optimieren einer Datenbank](#Tune) .  

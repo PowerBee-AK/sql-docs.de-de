@@ -7,12 +7,12 @@ ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 434345c505eaab389063fbc5b2c7fffc51708634
-ms.sourcegitcommit: af64e2b8d498af26b973e86db5c00f8d72991295
+ms.openlocfilehash: 56ac6b94c281cd97c53e290b5bc387131518bbcd
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98192997"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235907"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Versionshinweise für SQL Server 2019 für Linux
 
@@ -290,7 +290,7 @@ In den folgenden Abschnitten werden bekannte Probleme mit dem allgemein verfügb
           sudo systemctl restart mssql-server
           ```
 
-- [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]-Datenbanken unter Windows, die In-Memory-OLTP nutzen, können nicht in SQL Server 2019 (15.x) für Linux wiederhergestellt werden. Führen Sie zunächst ein Upgrade auf [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], SQL Server 2017 oder SQL Server 2019 unter Windows für die Datenbanken durch, und verschieben Sie sie anschließend per Backup/Wiederherstellung oder durch Trennen/Anfügen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für Linux, um eine [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]-Datenbank wiederherzustellen, die In-Memory-OLTP nutzt.
+- [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]-Datenbanken unter Windows, die In-Memory-OLTP nutzen, können nicht in SQL Server 2019 (15.x) für Linux wiederhergestellt werden. Führen Sie zunächst ein Upgrade auf [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], SQL Server 2017 oder SQL Server 2019 unter Windows für die Datenbanken durch, und verschieben Sie sie anschließend per Backup/Wiederherstellung oder durch Trennen/Anfügen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für Linux, um eine [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]-Datenbank wiederherzustellen, die In-Memory-OLTP nutzt.
 
 - Unter Linux wird die Benutzerberechtigung **ADMINISTER BULK OPERATIONS** zurzeit nicht unterstützt.
 

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DROP_INDEX_TSQL
 - DROP INDEX
@@ -33,12 +33,12 @@ ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5b63c83c7081819d5020e79c8d199f2a263dedd
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: 163b64d3ecd5f4f21cfbbc5fef6944f7610f78ea
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98689059"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237229"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -111,7 +111,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 
 ## <a name="arguments"></a>Argumente
  *IF EXISTS*  
- **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] bis zur [aktuellen Version](../../sql-server/what-s-new-in-sql-server-2016.md)).  
+ **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] bis zur [aktuellen Version](/troubleshoot/sql/general/determine-version-edition-update-level)).  
   
  Löscht den Standardindex nur, wenn dieser bereits vorhanden ist.  
   
@@ -302,7 +302,7 @@ GO
 ```  
   
 ### <a name="d-dropping-a-clustered-index-online-and-moving-the-table-to-a-new-filegroup"></a>D: Onlinelöschen eines gruppierten Indexes und Verschieben der Tabelle in eine neue Dateigruppe  
- Im folgenden Beispiel wird ein gruppierter Index online gelöscht, und die daraus resultierende Tabelle (Heap) wird in die Dateigruppe `NewGroup` verschoben, wofür die `MOVE TO` -Klausel verwendet wird. Die Katalogsichten `sys.indexes`, `sys.tables`und `sys.filegroups` werden abgefragt, um die Platzierung von Index und Tabelle in den Dateigruppen vor und nach der Verschiebung zu prüfen. (Ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] können Sie die Syntax DROP INDEX IF EXISTS verwenden.)  
+ Im folgenden Beispiel wird ein gruppierter Index online gelöscht, und die daraus resultierende Tabelle (Heap) wird in die Dateigruppe `NewGroup` verschoben, wofür die `MOVE TO` -Klausel verwendet wird. Die Katalogsichten `sys.indexes`, `sys.tables`und `sys.filegroups` werden abgefragt, um die Platzierung von Index und Tabelle in den Dateigruppen vor und nach der Verschiebung zu prüfen. (Ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] können Sie die Syntax DROP INDEX IF EXISTS verwenden.)  
   
 **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   

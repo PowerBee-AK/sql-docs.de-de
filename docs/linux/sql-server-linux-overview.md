@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 593a966baf3565ef2ed6d30eba92901dc8cbcca2
-ms.sourcegitcommit: 86534989f7827f1c36ed1333ad9c4557dfd77f3d
+ms.openlocfilehash: 504dd2ca2e8d1e2527a95830106fc152aec4ec77
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97515345"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237638"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server unter Linux
 
@@ -66,7 +66,7 @@ Wenn Sie bereits mit SQL Server vertraut sind, lesen Sie die [Anmerkungen zu die
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15"
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] verfügt auf allen unterstützten Plattformen, einschließlich Linux, über dieselbe zugrunde liegende Datenbank-Engine. Daher funktionieren viele vorhandene Features und Funktionen unter Linux auf dieselbe Weise. In diesem Bereich der Dokumentation werden einige dieser Features aus der Perspektive von Linux dargestellt. Außerdem werden Bereiche mit besonderen Anforderungen für Linux hervorgehoben.
+[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] verfügt auf allen unterstützten Plattformen, einschließlich Linux, über dieselbe zugrunde liegende Datenbank-Engine. Daher funktionieren viele vorhandene Features und Funktionen unter Linux auf dieselbe Weise. In diesem Bereich der Dokumentation werden einige dieser Features aus der Perspektive von Linux dargestellt. Außerdem werden Bereiche mit besonderen Anforderungen für Linux hervorgehoben.
 
 Wenn Sie bereits mit SQL Server für Linux vertraut sind, lesen Sie die [Anmerkungen zu dieser Version](sql-server-linux-release-notes-2019.md), um sich über allgemeine Richtlinien und bekannte Probleme zu informieren. Finden Sie heraus, was es [Neues in SQL Server 2019 unter Linux](../sql-server/what-s-new-in-sql-server-ver15.md) gibt.
 
@@ -75,7 +75,7 @@ Wenn Sie bereits mit SQL Server für Linux vertraut sind, lesen Sie die [Anmerku
 
 ### <a name="all-versions-of-sql-server"></a>Alle Versionen von SQL Server
 
-SQL Server 2017 und [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] verfügen auf allen unterstützten Plattformen, einschließlich Linux, über dieselbe zugrunde liegende Datenbank-Engine. Daher funktionieren viele vorhandene Features und Funktionen unter Linux auf dieselbe Weise. In diesem Bereich der Dokumentation werden einige dieser Features aus der Perspektive von Linux dargestellt. Außerdem werden Bereiche mit besonderen Anforderungen für Linux hervorgehoben.
+SQL Server 2017 und [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] verfügen auf allen unterstützten Plattformen, einschließlich Linux, über dieselbe zugrunde liegende Datenbank-Engine. Daher funktionieren viele vorhandene Features und Funktionen unter Linux auf dieselbe Weise. In diesem Bereich der Dokumentation werden einige dieser Features aus der Perspektive von Linux dargestellt. Außerdem werden Bereiche mit besonderen Anforderungen für Linux hervorgehoben.
 
 Wenn Sie bereits mit SQL Server für Linux vertraut sind, lesen Sie die Anmerkungen zu dieser Version:
 

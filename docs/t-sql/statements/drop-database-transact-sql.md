@@ -1,13 +1,13 @@
 ---
 description: DROP DATABASE (Transact-SQL)
-title: DROP DATABASE (Transact-SQL) | Microsoft-Dokumentation
+title: DROP DATABASE (Transact-SQL)
 ms.custom: ''
 ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DROP DATABASE
 - DROP_DATABASE_TSQL
@@ -22,16 +22,15 @@ helpviewer_keywords:
 - databases [SQL Server], dropping
 - DROP DATABASE statement
 - database removal [SQL Server], DROP DATABASE statement
-ms.assetid: 477396a9-92dc-43c9-9b97-42c8728ede8e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa18ed40692767751703f72f9e48e91180bf797f
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: ffdf0615671d2f3e019bccde83159bdb75eddcdd
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688833"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236275"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 
@@ -57,8 +56,8 @@ DROP DATABASE database_name [;]
 
 ## <a name="arguments"></a>Argumente
 
-*IF EXISTS*
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]bis [aktuelle Version](../../sql-server/what-s-new-in-sql-server-2016.md)).
+ *IF EXISTS*  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] bis zur [aktuellen Version](/troubleshoot/sql/general/determine-version-edition-update-level)).
 
 Löscht die Datenbank nur, wenn diese bereits vorhanden ist.
 
@@ -80,7 +79,7 @@ Vor dem Löschen einer Datenbank sollte die [Masterdatenbank](../../relational-d
 Beim Löschen einer Datenbank wird die Datenbank von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz entfernt, und die von der Datenbank verwendeten physischen Datenträgerdateien werden gelöscht. Wenn die Datenbank oder eine ihrer Dateien beim Löschen offline ist, werden die Datenträgerdateien nicht gelöscht. Diese Dateien können manuell mit dem Windows-Explorers gelöscht werden. Verwenden Sie [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md), um eine Datenbank vom aktuellen Server zu entfernen, ohne dass die Dateien aus dem Dateisystem gelöscht werden.
 
 > [!WARNING]
-> Sie können zwar eine Datenbankdatei entfernen, der FILE_SNAPSHOT-Sicherungen zugeordnet sind, jedoch werden keine Datenbankdateien gelöscht, denen Momentaufnahmen zugeordnet sind, um zu vermeiden, dass die Sicherungen, die auf die Datenbankdatei verweisen, ungültig gemacht werden. Die Datei wird zwar abgeschnitten, aber nicht physisch gelöscht, damit die FILE_SNAPSHOT-Sicherungen vollständig erhalten bleiben. Weitere Informationen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] bis zur [aktuellen Version](../../sql-server/what-s-new-in-sql-server-2016.md).
+> Sie können zwar eine Datenbankdatei entfernen, der FILE_SNAPSHOT-Sicherungen zugeordnet sind, jedoch werden keine Datenbankdateien gelöscht, denen Momentaufnahmen zugeordnet sind, um zu vermeiden, dass die Sicherungen, die auf die Datenbankdatei verweisen, ungültig gemacht werden. Die Datei wird zwar abgeschnitten, aber nicht physisch gelöscht, damit die FILE_SNAPSHOT-Sicherungen vollständig erhalten bleiben. Weitere Informationen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Gilt für**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] bis zur [aktuellen Version](/troubleshoot/sql/general/determine-version-edition-update-level).
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

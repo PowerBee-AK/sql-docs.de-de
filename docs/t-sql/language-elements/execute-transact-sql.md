@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - EXEC
 - EXECUTE_TSQL
@@ -32,12 +32,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ed27623969b2390f1d5b5b36b51a4c2eb5129e7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 32a9e7f42747c6ddf5ef92f8bde260b4a0b234f0
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100412"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236009"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -374,7 +374,7 @@ Wenn Sie ein einzelnes Wort übergeben, das nicht mit `@` beginnt und nicht in A
  MIT \<execute_option>  
  Mögliche Ausführungsoptionen. Die RESULT SETS-Optionen können nicht in einer INSERT...EXEC-Anweisung angegeben werden.  
  
-AT DATA_SOURCE data_source_name **Gilt für**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] und höher
+AT DATA_SOURCE data_source_name **Gilt für**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] und höher
   
  Gibt an, dass *command_string* für *data_source_name* ausgeführt wird und dass Ergebnisse ggf. an den Client zurückgegeben werden. *data_source_name* muss auf eine vorhandene EXTERNAL DATA SOURCE-Definition in der Datenbank verweisen. Es werden nur Datenquellen unterstützt, die auf SQL Server verweisen. Außerdem werden für SQL Server Big Data-Cluster-Datenquellen unterstützt, die auf einen Computepool, Datenpool oder Speicherpool verweisen. Datenquellen werden mit [CREATE EXTERNAL DATA SOURCE](../statements/create-external-data-source-transact-sql.md) definiert.  
   
@@ -744,7 +744,7 @@ WITH RESULT SETS
   
  Im folgenden Beispiel wird eine Befehlszeichenfolge an eine externe Datenquelle weitergeleitet, die auf eine SQL Server-Instanz verweist. 
   
-**Gilt für**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] und höher
+**Gilt für**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] und höher
   
 ```sql    
 EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE my_sql_server;  
@@ -755,7 +755,7 @@ GO
 
  Im folgenden Beispiel wird eine Befehlszeichenfolge an eine externe Datenquelle weitergeleitet, die auf einen Computepool in einem Big Data-Cluster für SQL Server verweist. Im Beispiel wird eine Datenquelle `SqlComputePool` für einen Computepool in einem Big Data-Cluster für SQL Server erstellt und eine `SELECT`-Anweisung für die Datenquelle ausgeführt. 
   
-**Gilt für**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] und höher
+**Gilt für**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] und höher
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE SqlComputePool 
@@ -767,7 +767,7 @@ GO
 ### <a name="q-using-execute-with-at-data_source-data_source_name-to-query-data-pool-in-sql-server-big-data-cluster"></a>Q. Verwenden von EXECUTE mit AT DATA_SOURCE data_source_name, um einen Datenpool in einem Big Data-Cluster für SQL Server abzufragen 
  Im folgenden Beispiel wird eine Befehlszeichenfolge an eine externe Datenquelle weitergeleitet, die auf einen Computepool in einem Big Data-Cluster für SQL Server verweist. Im Beispiel wird eine Datenquelle `SqlDataPool` für einen Datenpool in einem Big Data-Cluster für SQL Server erstellt und eine `SELECT`-Anweisung für die Datenquelle ausgeführt. 
   
-**Gilt für**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] und höher
+**Gilt für**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] und höher
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE SqlDataPool 
@@ -780,7 +780,7 @@ GO
 
  Im folgenden Beispiel wird eine Befehlszeichenfolge an eine externe Datenquelle weitergeleitet, die auf einen Computepool in einem Big Data-Cluster für SQL Server verweist. Im Beispiel wird eine Datenquelle `SqlStoragePool` für einen Datenpool in einem Big Data-Cluster für SQL Server erstellt und eine `SELECT`-Anweisung für die Datenquelle ausgeführt. 
   
-**Gilt für**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] und höher
+**Gilt für**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] und höher
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE SqlStoragePool

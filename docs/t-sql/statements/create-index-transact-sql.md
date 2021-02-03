@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CREATE INDEX
 - INDEX
@@ -55,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f1322f21ed7ad3f09f30a0f5a5e71e5614a8d47
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: 8591620ce92aca8a6c272539721f20a8a64fd9ae
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98766230"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237094"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -90,7 +90,7 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
 
 **Wichtiges Szenario:**
 
-Verwenden Sie ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] einen nicht gruppierten Index für einen Columnstore-Index, um die Abfrageleistung von Data Warehouse zu verbessern. Weitere Informationen finden Sie unter [Columnstore-Indizes: Data Warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
+Verwenden Sie ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] einen nicht gruppierten Index für einen Columnstore-Index, um die Abfrageleistung von Data Warehouse zu verbessern. Weitere Informationen finden Sie unter [Columnstore-Indizes: Data Warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
 
 Informationen zu weiteren Indextypen finden Sie unter:
 
@@ -250,7 +250,7 @@ Wenn nicht anders angegeben, ist NONCLUSTERED der Standardindextyp.
 *column*      
  Gibt die Spalte(n) an, auf der bzw. denen der Index basiert. Geben Sie zwei oder mehr Spaltennamen an, um einen zusammengesetzten Index für die kombinierten Werte der angegebenen Spalten zu erstellen. Führen Sie die Spalten, die im zusammengesetzten Index enthalten sein sollen, in der Reihenfolge der Sortierpriorität in den Klammern hinter *table_or_view_name* auf.
 
-Es können bis zu 32 Spalten in einem einzigen zusammengesetzten Indexschlüssel kombiniert werden. Alle Spalten in einem zusammengesetzten Indexschlüssel müssen sich in derselben Tabelle oder Sicht befinden. Die maximal zulässige Größe der kombinierten Indexwerte liegt bei 900 Byte für gruppierte Indizes oder 1700 Byte für nicht gruppierte Indizes. Für Versionen vor [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] liegen die Höchstwerte bei 16 Spalten und 900 Byte.
+Es können bis zu 32 Spalten in einem einzigen zusammengesetzten Indexschlüssel kombiniert werden. Alle Spalten in einem zusammengesetzten Indexschlüssel müssen sich in derselben Tabelle oder Sicht befinden. Die maximal zulässige Größe der kombinierten Indexwerte liegt bei 900 Byte für gruppierte Indizes oder 1700 Byte für nicht gruppierte Indizes. Für Versionen vor [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] liegen die Höchstwerte bei 16 Spalten und 900 Byte.
 
 Spalten, die von den Large Object-Datentypen (LOB-Datentyp) **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml** oder **image** sind, können nicht als Schlüsselspalten für einen Index angegeben werden. Darüber hinaus darf eine Sichtdefinition keine Spalten der Datentypen **ntext**, **text** oder **image** enthalten, auch wenn in der CREATE INDEX-Anweisung nicht auf diese Spalten verwiesen wird.
 
@@ -351,7 +351,7 @@ Gibt den Namen der zu indizierenden Tabelle oder Sicht an.
 
 Die Sicht muss mit SCHEMABINDING definiert werden, um einen Index für sie zu erstellten. Ein eindeutiger gruppierter Index muss für eine Sicht erstellt werden, bevor ein nicht gruppierter Index erstellt wird. Weitere Informationen zu indizierten Sichten finden Sie im Abschnitt mit den Hinweisen.
 
-Ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] kann es sich bei dem Objekt um eine Tabelle handeln, die gemeinsam mit einem gruppierten Columnstore-Index gespeichert wird.
+Ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] kann es sich bei dem Objekt um eine Tabelle handeln, die gemeinsam mit einem gruppierten Columnstore-Index gespeichert wird.
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] unterstützt das aus drei Teilen bestehende Namensformat _database_name_.[_schema_name_]._object_name_, wenn *database_name* die aktuelle Datenbank bzw. _database_name_`tempdb` ist und _object_name_ mit # beginnt.
 
@@ -498,7 +498,7 @@ Weitere Informationen finden Sie unter [Funktionsweise von Onlineindexvorgängen
 
 RESUMABLE **=** { ON | **OFF**}      
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
  Gibt an, ob ein Onlineindexvorgang fortsetzbar ist.
 
@@ -510,7 +510,7 @@ Der Indexvorgang ist nicht fortsetzbar.
 
 MAX_DURATION **=** *time* [**MINUTES**] verwendet mit **RESUMABLE = ON** (erfordert **ONLINE = ON**)   
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Gibt die Zeitspanne an (als ganzzahligen Wert in Minuten), in der ein fortsetzbarer Onlineindexvorgang ausgeführt wird, bevor er angehalten wird.
 
@@ -543,7 +543,7 @@ OFF
 Seitensperren werden nicht verwendet.
 
 OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }      
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Gibt an, ob der Konflikt beim Einfügen der letzten Seite optimiert werden soll. Der Standardwert ist OFF. Weitere Informationen finden Sie im Abschnitt [Sequenzielle Schlüssel](#sequential-keys).
 
@@ -621,7 +621,7 @@ Durch Indizes werden erweiterte Eigenschaften unterstützt.
 Für das Erstellen eines gruppierten Index für eine Tabelle (Heap) oder das Löschen und Neuerstellen eines vorhandenen gruppierten Index muss zusätzlicher Arbeitsbereich in der Datenbank verfügbar sein, um das Sortieren von Daten und das Speichern einer temporären Kopie der ursprünglichen Tabelle oder von vorhandenen gruppierten Indexdaten zu ermöglichen. Weitere Informationen zu gruppierten Indizes finden Sie unter [Erstellen gruppierter Indizes](../../relational-databases/indexes/create-clustered-indexes.md) und im [Leitfaden zur Architektur und zum Design von SQL Server-Indizes](../../relational-databases/sql-server-index-design-guide.md).
 
 ## <a name="nonclustered-indexes"></a>Nicht gruppierte Indizes
-Ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] können Sie nicht gruppierte Indizes für eine Tabelle erstellen, die als gruppierter Columnstore-Index gespeichert wurde. Wenn Sie zuerst einen nicht gruppierten Index für eine Tabelle erstellen, die als Head oder gruppierter Index gespeichert ist, bleibt der Index erhalten, wenn Sie später die Tabelle in einen gruppierten Columnstore-Index konvertieren. Außerdem ist es nicht notwendig, den nicht gruppierten Index zu löschen, wenn Sie den gruppierten Columnstore-Index neu erstellen.
+Ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] können Sie nicht gruppierte Indizes für eine Tabelle erstellen, die als gruppierter Columnstore-Index gespeichert wurde. Wenn Sie zuerst einen nicht gruppierten Index für eine Tabelle erstellen, die als Head oder gruppierter Index gespeichert ist, bleibt der Index erhalten, wenn Sie später die Tabelle in einen gruppierten Columnstore-Index konvertieren. Außerdem ist es nicht notwendig, den nicht gruppierten Index zu löschen, wenn Sie den gruppierten Columnstore-Index neu erstellen.
 
 Einschränkungen:
 
@@ -682,7 +682,7 @@ Weitere Informationen zu räumlichen Indizes finden Sie unter [CREATE SPATIAL IN
 Weitere Informationen zu XML-Indizes finden Sie unter [CREATE XML INDEX;](../../t-sql/statements/create-xml-index-transact-sql.md) und [XML-Indizes &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).
 
 ## <a name="index-key-size"></a>Indexschlüsselgröße
-Die maximale Größe für einen Indexschlüssel beträgt 900 Byte für gruppierte Indizes und 1700 Byte für nicht gruppierte Indizes. (Vor [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] lag die maximale Größe bei 900 Byte.) Indizes für Spalten des Datentyps **varchar**, deren Größe das Limit überschreitet, können erstellt werden, wenn die in den Spalten vorhandenen Daten zum Zeitpunkt der Indexerstellung das Größenlimit nicht überschreiten. Allerdings treten bei nachfolgenden Einfüge- oder Updateaktionen für die Spalten Fehler auf, wenn dadurch das Limit überschritten wird. Der Indexschlüssel eines gruppierten Indexes kann keine Spalten des Datentyps **varchar** enthalten, bei denen Daten in der Zuordnungseinheit ROW_OVERFLOW_DATA vorhanden sind. Wird ein gruppierter Index für eine **varchar**-Spalte erstellt, bei der in der Zuordnungseinheit IN_ROW_DATA Daten vorhanden sind, erzeugen alle nachfolgenden Einfügungen und Updates der Spalte einen Fehler, bei der diese Daten aus der Zeile entfernt werden.
+Die maximale Größe für einen Indexschlüssel beträgt 900 Byte für gruppierte Indizes und 1700 Byte für nicht gruppierte Indizes. (Vor [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] lag die maximale Größe bei 900 Byte.) Indizes für Spalten des Datentyps **varchar**, deren Größe das Limit überschreitet, können erstellt werden, wenn die in den Spalten vorhandenen Daten zum Zeitpunkt der Indexerstellung das Größenlimit nicht überschreiten. Allerdings treten bei nachfolgenden Einfüge- oder Updateaktionen für die Spalten Fehler auf, wenn dadurch das Limit überschritten wird. Der Indexschlüssel eines gruppierten Indexes kann keine Spalten des Datentyps **varchar** enthalten, bei denen Daten in der Zuordnungseinheit ROW_OVERFLOW_DATA vorhanden sind. Wird ein gruppierter Index für eine **varchar**-Spalte erstellt, bei der in der Zuordnungseinheit IN_ROW_DATA Daten vorhanden sind, erzeugen alle nachfolgenden Einfügungen und Updates der Spalte einen Fehler, bei der diese Daten aus der Zeile entfernt werden.
 
 Nicht gruppierte Indizes können Nichtschlüsselspalten auf der Blattebene des Indexes enthalten. Diese Spalten werden von [!INCLUDE[ssDE](../../includes/ssde-md.md)] beim Berechnen der Indexschlüsselgröße nicht berücksichtigt. Weitere Informationen finden Sie unter [Erstellen von Indizes mit eingeschlossenen Spalten](../../relational-databases/indexes/create-indexes-with-included-columns.md) und im [Leitfaden zur Architektur und zum Design von SQL Server-Indizes](../../relational-databases/sql-server-index-design-guide.md).
 
@@ -754,7 +754,7 @@ Die folgenden Regeln gelten für das Durchführen von Onlineindexvorgängen:
 Weitere Informationen finden Sie unter [Ausführen von Onlineindexvorgängen](../../relational-databases/indexes/perform-index-operations-online.md) .
 
 ### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a>Fortsetzbare Indexvorgänge
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Die folgenden Richtlinien gelten für fortsetzbare Indexvorgänge:
 
@@ -797,7 +797,7 @@ Wenn `ALLOW_ROW_LOCKS = ON` und `ALLOW_PAGE_LOCK = ON` angegeben sind, sind Sper
 Wenn `ALLOW_ROW_LOCKS = OFF` und `ALLOW_PAGE_LOCK = OFF` angegeben sind, ist nur eine Sperre auf Tabellenebene zulässig, wenn auf den Index zugegriffen wird.
 
 ## <a name="sequential-keys"></a>Sequenzielle Schlüssel
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 Das Leistungsproblem von Speicherkonflikten bei Einfügevorgängen für die letzte Seite tritt häufig auf, wenn eine große Anzahl von gleichzeitigen Threads versucht, Zeilen in einen Index mit einem sequentiellen Schlüssel einzufügen. Ein Index wird als sequentiell betrachtet, wenn die führende Schlüsselspalte Werte enthält, die immer größer (oder kleiner) werden, wie beispielsweise eine Identitätsspalte oder ein Datum, das auf das aktuelle Datum/Uhrzeit voreingestellt ist. Da die einzufügenden Schlüssel sequentiell sind, werden alle neuen Zeilen am Ende der Indexstruktur eingefügt – also auf der gleichen Seite. Dies führt zu Konflikten für die Seite im Speicher, die als mehrere Threads betrachtet werden kann, die auf PAGELATCH_EX für die betreffende Seite warten.
 
@@ -1104,7 +1104,7 @@ GO
 ```
 
 ### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>M. Erstellen, Fortsetzen, Anhalten und Abbrechen von Vorgängen fortsetzbarer Indizes
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
@@ -1133,7 +1133,7 @@ ALTER INDEX test_idx2 ON test_table ABORT;
 ### <a name="n-basic-syntax"></a>N. Grundlegende Syntax
 Erstellen, Fortsetzen, Anhalten und Abbrechen von Vorgängen fortsetzbarer Indizes       
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1

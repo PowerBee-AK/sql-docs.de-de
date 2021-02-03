@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 97e0ea80dcc5cffefc99cbbc928eace94ade942a
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 91eb457beedb4712598b871a9325228c2309f2f2
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172592"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237897"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
 
@@ -37,7 +37,7 @@ ms.locfileid: "98172592"
  Die XML-Validierungsfunktion lässt sich problemlos auch für große XML-Dokumente und eine große Anzahl von Fehlern skalieren. Da die Ausgabedatei selbst im XML-Format ist, können Sie die Ausgabe abfragen und analysieren. Enthält die Ausgabe beispielsweise sehr viele Fehler, so können Sie diese, wie in diesem Thema beschrieben, mit einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage gruppieren.  
   
 > [!NOTE]
->  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 2 von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] ( **) wurde die Eigenschaft** ValidationDetails[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt. Die Eigenschaft ist auch in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]verfügbar.  
+>  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack 2 von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[ssIS](../../includes/ssis-md.md)] ( **) wurde die Eigenschaft** ValidationDetails[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] eingeführt. Die Eigenschaft ist auch in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]verfügbar.  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>Beispielausgabe für eine XML-Datei ohne Fehler  
  Hier ist eine Beispiel-Ausgabedatei mit Validierungsergebnissen für eine gültige XML-Datei.  

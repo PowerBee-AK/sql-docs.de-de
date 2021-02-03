@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06288dc0bc6e16ab8928322005254f5fac1ddc61
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: adc1affe33d1172b3e648c510b2dbc1d00326849
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171482"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237977"
 ---
 # <a name="transparent-data-encryption-tde"></a>TDE (Transparent Data Encryption)
 
@@ -227,7 +227,7 @@ Der asymmetrische Schlüssel muss sich auf einem erweiterbaren Schlüsselverwalt
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] muss einen Verschlüsselungsscan durchführen, damit TDE auf einer Datenbank aktiviert werden kann. Der Scan liest alle Seiten der Datendateien in den Pufferpool und schreib die verschlüsselten Seiten dann wieder auf den Datenträger.
 
-Damit Sie über mehr Kontrolle über den Verschlüsselungsscan verfügen, wurde mit [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] der TDE-Scan eingeführt, der über eine Syntax zum Anhalten und Fortsetzen verfügt. Wenn die Arbeitsauslastung des Systems sehr hoch ist oder während geschäftskritischen Zeiten, können Sie den Scan pausieren und später fortsetzen.
+Damit Sie über mehr Kontrolle über den Verschlüsselungsscan verfügen, wurde mit [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] der TDE-Scan eingeführt, der über eine Syntax zum Anhalten und Fortsetzen verfügt. Wenn die Arbeitsauslastung des Systems sehr hoch ist oder während geschäftskritischen Zeiten, können Sie den Scan pausieren und später fortsetzen.
 
 Verwenden Sie die folgende Syntax, um den TDE-Verschlüsselungsscan anzuhalten:
 
@@ -314,7 +314,7 @@ Wenn Sie eine Datenbank mit TDE verschlüsseln, werden Dateien, die mit der Puff
 
 ## <a name="tde-and-in-memory-oltp"></a>TDE und In-Memory-OLTP
 
-Sie können TDE für eine Datenbank aktivieren, die über In-Memory OLTP-Objekte verfügt. In-Memory-OLTP-Protokolldatensätze in [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] und [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] werden verschlüsselt, wenn Sie TDE aktivieren. In-Memory-OLTP-Protokolldatensätze in [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] werden verschlüsselt, wenn Sie TDE aktivieren, Dateien in der MEMORY_OPTIMIZED_DATA-Dateigruppe werden jedoch nicht verschlüsselt.
+Sie können TDE für eine Datenbank aktivieren, die über In-Memory OLTP-Objekte verfügt. In-Memory-OLTP-Protokolldatensätze in [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] und [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] werden verschlüsselt, wenn Sie TDE aktivieren. In-Memory-OLTP-Protokolldatensätze in [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] werden verschlüsselt, wenn Sie TDE aktivieren, Dateien in der MEMORY_OPTIMIZED_DATA-Dateigruppe werden jedoch nicht verschlüsselt.
 
 ## <a name="related-tasks"></a>Zugehörige Aufgaben
 

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - FULLTEXTCATALOGPROPERTY_TSQL
 - FULLTEXTCATALOGPROPERTY
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 57e53c26b7f1797daf6a1ccc53f7578eabda734a
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: d49757197a66a0af05a0115cf4b16d6d589acc13
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98087327"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237498"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Gibt Informationen zu Volltextkatalog-Eigenschaften in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] zurück.  
+Gibt Informationen zu Volltextkatalog-Eigenschaften in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] zurück.  
   
 ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,7 +71,7 @@ Ein Ausdruck, der den Namen der Volltext-Katalogeigenschaft enthält. In der fol
 ## <a name="exceptions"></a>Ausnahmen  
 Gibt NULL zurück, wenn ein Fehler auftritt oder ein Aufrufer nicht über die Berechtigungen zum Anzeigen des Objekts verfügt.  
   
-In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] kann ein Benutzer nur die Metadaten von sicherungsfähigen Elementen anzeigen. Diese sicherungsfähigen Elemente sind solche Elemente, die der Benutzer besitzt oder für die ihm Berechtigungen erteilt wurden. Daher können integrierte Funktionen, die Metadaten ausgeben (z.B. FULLTEXTCATALOGPROPERTY) NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md).  
+In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] kann ein Benutzer nur die Metadaten von sicherungsfähigen Elementen anzeigen. Diese sicherungsfähigen Elemente sind solche Elemente, die der Benutzer besitzt oder für die ihm Berechtigungen erteilt wurden. Daher können integrierte Funktionen, die Metadaten ausgeben (z.B. FULLTEXTCATALOGPROPERTY) NULL zurückgeben, wenn dem Benutzer für das Objekt keine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md).  
   
 ## <a name="remarks"></a>Bemerkungen  
 FULLTEXTCATALOGPROPERTY ('_catalog\_name_','**IndexSize**') prüft, wie in [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md) dargestellt, nur Fragmente mit dem Status 4 oder 6. Diese Fragmente sind ein Teil des logischen Index. Daher gibt die **IndexSize**-Eigenschaft nur die logische Indexgröße zurück. 

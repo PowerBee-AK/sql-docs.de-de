@@ -17,12 +17,12 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27af6771eeccf660b1eac623f80e663d93e411b8
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bedf502949e206b45bf7e1e332962c8c093d1bcb
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97405924"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236695"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Konfigurieren der Spaltenverschlüsselung mit dem Always Encrypted-Assistenten
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,7 @@ Dabei verschiebt der Assistent Daten aus der Datenbank und führt kryptografisch
 ::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
-> Wenn Sie [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] verwenden und Ihre SQL Server-Instanz mit Secure Enclave konfiguriert ist, können Sie kryptografische Vorgänge direkt ausführen, ohne Daten aus der Datenbank zu verschieben. Informationen hierzu finden Sie unter [Konfigurieren einer direkten Spaltenverschlüsselung mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-configure-encryption.md). Beachten Sie, dass der Assistent keine direkte Verschlüsselung unterstützt.
+> Wenn Sie [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] verwenden und Ihre SQL Server-Instanz mit Secure Enclave konfiguriert ist, können Sie kryptografische Vorgänge direkt ausführen, ohne Daten aus der Datenbank zu verschieben. Informationen hierzu finden Sie unter [Konfigurieren einer direkten Spaltenverschlüsselung mithilfe von Always Encrypted mit Secure Enclaves](always-encrypted-enclaves-configure-encryption.md). Beachten Sie, dass der Assistent keine direkte Verschlüsselung unterstützt.
 
 ::: moniker-end
 

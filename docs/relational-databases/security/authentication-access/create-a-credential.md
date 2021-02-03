@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 541b8fc68dd5ae92864612b017f04d619fe444c6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 98fddc3b614cd53ad88d761365243bb81a3eca10
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900619"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250314"
 ---
 # <a name="create-a-credential"></a>Create a Credential
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  In diesem Thema wird beschrieben, wie Anmeldeinformationen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]erstellt werden.  
+  In diesem Thema wird beschrieben, wie Anmeldeinformationen in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]erstellt werden.  
   
  Anmeldeinformationen ermöglichen Benutzern der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung eine Identität außerhalb von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Hauptsächlich wird dies für die Ausführung von Code in Assemblys mit dem Berechtigungssatz EXTERNAL_ACCESS verwendet. Anmeldeinformationen können auch verwendet werden, wenn ein Benutzer der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung Zugriff auf eine Domänenressource (z. B. auf einen Dateispeicherort zum Speichern einer Sicherung) benötigt.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "85900619"
   
 1.  Erweitern Sie im Objekt-Explorer den Ordner **Sicherheit** .  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Anmeldeinformationen**, und wählen Sie **Neue Anmeldeinformationen**aus.  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Anmeldeinformationen**, und wählen Sie **Neue Anmeldeinformationen** aus.  
   
 3.  Geben Sie im Dialogfeld **Neue Anmeldeinformationen** im Feld **Anmeldungsname** einen Namen für die Anmeldeinformationen ein.  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - ALTER_AVAILABILITY_GROUP_TSQL
 - ALTER_AVAILABILITY_TSQL
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 23cd700fd8b25778118b2141bf0205dcbd87c92e
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: dc5c1829eaa8be1116c07ae8f4cc3e6d80501f60
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170462"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237868"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -228,10 +228,10 @@ ALTER AVAILABILITY GROUP group_name
  Weitere Informationen zu dieser Einstellung finden Sie unter [Integritätserkennung auf Datenbankebene](../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). 
 
 DTC_SUPPORT  **=** { PER_DB | NONE }  
-Legt fest, ob verteilte Transaktionen für diese Verfügbarkeitsgruppe aktiviert sind. Verteilte Transaktionen werden ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] nur für Datenbanken für Verfügbarkeitsgruppen unterstützt, und datenbankübergreifende Transaktionen werden erst ab [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] SP2 unterstützt. Mit `PER_DB` wird die Verfügbarkeitsgruppe mit Unterstützung dieser Transaktionen erstellt und die datenbankübergreifenden Transaktionen im Zusammenhang mit Datenbanken in der Verfügbarkeitsgruppe werden auf verteilte Transaktionen höhergestuft. `NONE` verhindert die automatische Höherstufung der datenbankübergreifenden Transaktionen auf verteilte Transaktionen, und die Datenbank wird nicht mit einer stabilen RMID in DTC registriert. Verteilte Transaktionen werden nicht verhindert, wenn die `NONE`-Einstellung verwendet wird, allerdings schlagen das Datenbankfailover und die automatische Wiederherstellung unter bestimmten Umständen fehl. Weitere Informationen finden Sie unter [Datenbankübergreifende Transaktionen und verteilte Transaktionen für Always On-Verfügbarkeitsgruppen oder Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md). 
+Legt fest, ob verteilte Transaktionen für diese Verfügbarkeitsgruppe aktiviert sind. Verteilte Transaktionen werden ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] nur für Datenbanken für Verfügbarkeitsgruppen unterstützt, und datenbankübergreifende Transaktionen werden erst ab [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] SP2 unterstützt. Mit `PER_DB` wird die Verfügbarkeitsgruppe mit Unterstützung dieser Transaktionen erstellt und die datenbankübergreifenden Transaktionen im Zusammenhang mit Datenbanken in der Verfügbarkeitsgruppe werden auf verteilte Transaktionen höhergestuft. `NONE` verhindert die automatische Höherstufung der datenbankübergreifenden Transaktionen auf verteilte Transaktionen, und die Datenbank wird nicht mit einer stabilen RMID in DTC registriert. Verteilte Transaktionen werden nicht verhindert, wenn die `NONE`-Einstellung verwendet wird, allerdings schlagen das Datenbankfailover und die automatische Wiederherstellung unter bestimmten Umständen fehl. Weitere Informationen finden Sie unter [Datenbankübergreifende Transaktionen und verteilte Transaktionen für Always On-Verfügbarkeitsgruppen oder Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md). 
  
 > [!NOTE]
-> Die Unterstützung zum Ändern der DTC_SUPPORT-Einstellung einer Verfügbarkeitsgruppe wurde in [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Service Pack 2 eingeführt. Diese Option kann nicht mit früheren Versionen verwendet werden. Sie müssen die Verfügbarkeitsgruppe mit DROP und CREATE löschen und erneut erstellen, um diese Einstellung in früheren Versionen von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] zu ändern.
+> Die Unterstützung zum Ändern der DTC_SUPPORT-Einstellung einer Verfügbarkeitsgruppe wurde in [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Service Pack 2 eingeführt. Diese Option kann nicht mit früheren Versionen verwendet werden. Sie müssen die Verfügbarkeitsgruppe mit DROP und CREATE löschen und erneut erstellen, um diese Einstellung in früheren Versionen von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] zu ändern.
  
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
  Eingeführt in SQL Server 2017. Dient zum Festlegen einer minimalen Anzahl synchroner sekundärer Replikate, um einen Commit auszuführen, bevor das primäre Replikat einen Commit für die Transaktion ausführt. Garantiert, dass die SQL Server-Transaktion wartet, bis die Transaktionsprotokolle für die minimale Anzahl von sekundären Replikaten aktualisiert werden. Der Standardwert ist 0. Dies bietet das gleiche Verhalten wie SQL Server 2016. Der Mindestwert beträgt 0. Der maximale Wert ist die Anzahl der Replikate minus 1. Diese Option bezieht sich auf Replikate im synchronen Commitmodus. Wenn sich Replikate im synchronen Commitmodus befinden, warten Schreibvorgänge auf dem primären Replikat, bis Schreibvorgänge auf dem zweiten synchronen Replikat an das Transaktionsprotokoll der Replikatsdatenbank übergeben werden. Wenn ein SQL Server, der ein sekundäres synchronisiertes Replikat hostet, nicht mehr reagiert, markiert der SQL Server, der das erste primäre Replikat hostet, dieses sekundäre Replikat als NOT SYNCHRONIZED (nicht synchronisiert). Wenn die nicht reagierende Datenbank wieder online geschaltet wird, befindet sie sich im Zustand „nicht synchronisiert“ und das Replikat wird als fehlerhaft markiert bis das primäre Replikat den Zustand „synchron“ wieder herstellen kann. Diese Einstellung stellt sicher, dass das primäre Replikat wartet, bis die minimale Anzahl der Replikate ein Commit für jede Transaktion ausgeführt hat. Wenn die minimale Anzahl der Replikate nicht verfügbar ist, schlagen Commits auf dem primären Replikat fehl. Für den Clustertyp `EXTERNAL` wird diese Einstellung geändert, wenn die Verfügbarkeitsgruppe der Clusterressource hinzugefügt wird. Weitere Informationen finden Sie unter [Hochverfügbarkeit und Schutz von Daten für Verfügbarkeitsgruppenkonfigurationen](../../linux/sql-server-linux-availability-group-ha.md).
@@ -406,7 +406,7 @@ Legt fest, ob verteilte Transaktionen für diese Verfügbarkeitsgruppe aktiviert
   
  Verwenden Sie eine durch Trennzeichen getrennte Liste, um alle der Serverinstanzen anzugeben, die ein lesbares sekundäres Replikat hosten könnten. Schreibgeschütztes Routing erfolgt in der Reihenfolge, in der Serverinstanzen in der Liste angegeben werden. Wenn Sie die Hostserverinstanz eines Replikats auf der schreibgeschützten Routingliste des Replikats einschließen, ist es eine empfohlene Vorgehensweise, diese Serverinstanz am Ende der Liste zu platzieren, damit Verbindungen für beabsichtigte Lesevorgänge bei Verfügbarkeit zu einem sekundären Replikat wechseln.  
   
- Beginnend mit [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] können Sie einen Lastenausgleich für Anforderungen von beabsichtigten Lesevorgängen über lesbare sekundäre Replikate durchführen. Dies können Sie angeben, indem Sie die Replikate in geschachtelten Klammern innerhalb der schreibgeschützten Routingliste platzieren. Weitere Informationen und Beispiele finden Sie unter [Configure load-balancing across read-only replicas (Konfigurieren des Lastenausgleichs für mehrere schreibgeschützte Replikate)](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
+ Beginnend mit [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] können Sie einen Lastenausgleich für Anforderungen von beabsichtigten Lesevorgängen über lesbare sekundäre Replikate durchführen. Dies können Sie angeben, indem Sie die Replikate in geschachtelten Klammern innerhalb der schreibgeschützten Routingliste platzieren. Weitere Informationen und Beispiele finden Sie unter [Configure load-balancing across read-only replicas (Konfigurieren des Lastenausgleichs für mehrere schreibgeschützte Replikate)](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing).  
   
  Keine  
  Gibt an, dass, wenn dieses Verfügbarkeitsreplikat das primäre Replikat ist, schreibgeschütztes Routing nicht unterstützt wird. Dies ist das Standardverhalten. Wenn dieser Wert zusammen mit MODIFY REPLICA ON verwendet wird, aktiviert er ggf. die vorhandene Liste.  

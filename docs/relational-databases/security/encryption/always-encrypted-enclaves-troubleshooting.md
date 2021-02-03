@@ -11,12 +11,12 @@ ms.topic: how-to
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: c7bffa36b256b959048953a5438fec6a336c3acc
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: dc6bcbecdb29cdf0cf1fca8c41e971463bb0d6b9
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534870"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236355"
 ---
 # <a name="troubleshoot-common-issues-for-always-encrypted-with-secure-enclaves"></a>Behandeln von häufig auftretenden Problemen bei Always Encrypted mit Secure Enclaves
 
@@ -29,7 +29,7 @@ Informationen zum Ausführen von Abfragen mit Secure Enclaves finden Sie unter [
 Zum Ausführen von Anweisungen mit Secure Enclaves müssen Sie Always Encrypted aktivieren und eine Nachweis-URL für die Datenbankverbindung angeben wie unter [Voraussetzungen für das Ausführen von Anweisungen mit Secure Enclaves](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves) erläutert. Bei der Verbindung tritt jedoch ein Fehler auf, wenn Sie eine Nachweis-URL angeben, aber die Datenbank in [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] oder die [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]-Zielinstanz unterstützt Secure Enclaves nicht oder ist falsch konfiguriert.
 
 - Wenn Sie [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] verwenden, überprüfen Sie, ob die Datenbank die Hardwarekonfiguration der [DC-Serie](https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series) verwendet. Weitere Informationen finden Sie unter [Aktivieren von Intel SGX für die Azure SQL-Datenbank](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx).
-- Wenn Sie [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] verwenden, überprüfen Sie, ob Secure Enclaves für die Instanz richtig konfiguriert ist. Weitere Informationen finden Sie unter [Konfigurieren von Secure Enclaves in SQL Server](always-encrypted-enclaves-configure-enclave-type.md).
+- Wenn Sie [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] verwenden, überprüfen Sie, ob Secure Enclaves für die Instanz richtig konfiguriert ist. Weitere Informationen finden Sie unter [Konfigurieren von Secure Enclaves in SQL Server](always-encrypted-enclaves-configure-enclave-type.md).
 
 ## <a name="attestation-errors-when-using-microsoft-azure-attestation"></a>Nachweisfehler bei der Verwendung von Microsoft Azure Attestation
 
@@ -61,7 +61,7 @@ Aufgrund von Fehlkonfigurationen können in verschiedenen Schritten des obigen W
 ## <a name="attestation-errors-when-using-host-guardian-service"></a>Nachweisfehler bei der Verwendung des Host-Überwachungsdienstes
 
 > [!NOTE]
-> Dieser Abschnitt gilt nur für [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)].
+> Dieser Abschnitt gilt nur für [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)].
 
 Bevor ein Clienttreiber eine T-SQL-Anweisung zur Ausführung an [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] sendet, löst der Treiber mithilfe des Host-Überwachungsdienstes den folgenden Enclave-Nachweisworkflow aus.
 

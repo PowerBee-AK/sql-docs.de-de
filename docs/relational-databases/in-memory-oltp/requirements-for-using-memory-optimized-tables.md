@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cbe2b75a46e63b5e388b91ace3d74c0db3be49b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 5a7c64a949ad4eabfbd02ad78229b04a919ab032
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170732"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237185"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Anforderungen für die Verwendung von speicheroptimierten Tabellen
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "98170732"
   
  Zusätzlich zu den [Hardware- und Softwareanforderungen für die Installation von SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) gilt für die Verwendung von In-Memory-OLTP Folgendes:  
   
--   [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 (oder höher), alle Editionen. Für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] RTM (vor SP1) ist die Enterprise-, Developer- oder Evaluation-Edition erforderlich.
+-   [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 (oder höher), alle Editionen. Für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] RTM (vor SP1) ist die Enterprise-, Developer- oder Evaluation-Edition erforderlich.
     
     > [!NOTE]
     > Für In-Memory OLTP ist die 64-Bit-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erforderlich.  
@@ -46,12 +46,12 @@ ms.locfileid: "98170732"
   
 ## <a name="important-notes-on-using-hek_2"></a>Wichtige Anmerkungen zur Verwendung von [!INCLUDE[hek_2](../../includes/hek-2-md.md)]  
   
--   Von [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] an ist die Größe für speicheroptimierte Tabellen unbeschränkt. Dies gilt jedoch nicht für den verfügbaren Arbeitsspeicher. 
+-   Von [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] an ist die Größe für speicheroptimierte Tabellen unbeschränkt. Dies gilt jedoch nicht für den verfügbaren Arbeitsspeicher. 
 
 -   In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] sollte die Gesamtgröße aller dauerhaften Tabellen in einer Datenbank im Arbeitsspeicher maximal 250 GB betragen. Weitere Informationen finden Sie unter [Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md).  
 
 > [!NOTE]
-> Ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] SP1 unterstützen Standard und Express Edition In-Memory OLTP, aber sie bedingen Kontingente für die Menge an Arbeitsspeicher, die Sie für speicheroptimierte Tabellen in einer bestimmten Datenbank verwenden können. In Standard Edition sind dies 32 GB pro Datenbank. In Express Edition sind dies 352 MB pro Datenbank. 
+> Ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] SP1 unterstützen Standard und Express Edition In-Memory OLTP, aber sie bedingen Kontingente für die Menge an Arbeitsspeicher, die Sie für speicheroptimierte Tabellen in einer bestimmten Datenbank verwenden können. In Standard Edition sind dies 32 GB pro Datenbank. In Express Edition sind dies 352 MB pro Datenbank. 
   
 -   Wenn Sie eine oder mehrere Datenbanken mit speicheroptimierten Tabellen erstellen, sollten Sie die sofortige Dateiinitialisierung für die Instanz aktivieren (also dem Dienststartkonto für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Benutzerrecht *SE_MANAGE_VOLUME_NAME* erteilen). Ohne die sofortige Dateiinitialisierung werden speicheroptimierte Speicherdateien (Daten- und Änderungsdateien) bei der Erstellung initialisiert, was sich negativ auf die Leistung der Arbeitsauslastung auswirken kann. Weitere Informationen zur sofortigen Dateiinitialisierung, einschließlich Informationen, wann sie aktiviert werden sollte, finden Sie unter [Sofortige Datenbankdateiinitialisierung](../../relational-databases/databases/database-instant-file-initialization.md).
   

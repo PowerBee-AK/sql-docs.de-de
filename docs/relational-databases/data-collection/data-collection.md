@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dd4827f08c9e21ccd45f128bcc64ab9e03c1474b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 3dd72fbcc8f46f505e086043800ec68068a3cb5e
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193420"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250104"
 ---
 # <a name="data-collection"></a>Datensammlung
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Der Datensammler ist eine Komponente von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , die verschiedene Datensätze sammelt. Die Datensammlung erfolgt entweder durchgängig oder nach einem benutzerdefinierten Zeitplan. Der Datensammler speichert die gesammelten Daten dann in einer relationalen Datenbank, die als Verwaltungs-Data Warehouse bezeichnet wird.  
+  Der Datensammler ist eine Komponente von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] , die verschiedene Datensätze sammelt. Die Datensammlung erfolgt entweder durchgängig oder nach einem benutzerdefinierten Zeitplan. Der Datensammler speichert die gesammelten Daten dann in einer relationalen Datenbank, die als Verwaltungs-Data Warehouse bezeichnet wird.  
   
 ## <a name="what-is-data-collector"></a>Was ist ein Datensammler? 
- Der Datensammler ist eine Kernkomponente der Datensammlungsplattform von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereitgestellten Tools. Der Datensammler stellt über Datenbankserver und Anwendungen einen zentralen Punkt für die Datensammlung bereit. Dieser Sammlungspunkt kann Daten von einer Vielzahl von Quellen abrufen und ist nicht auf Leistungsdaten beschränkt, wie es bei der SQL-Ablaufverfolgung der Fall ist.  
+ Der Datensammler ist eine Kernkomponente der Datensammlungsplattform von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] und der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereitgestellten Tools. Der Datensammler stellt über Datenbankserver und Anwendungen einen zentralen Punkt für die Datensammlung bereit. Dieser Sammlungspunkt kann Daten von einer Vielzahl von Quellen abrufen und ist nicht auf Leistungsdaten beschränkt, wie es bei der SQL-Ablaufverfolgung der Fall ist.  
   
  Mit dem Datensammler können Sie außerdem den Umfang der Datensammlung an Ihre Test- und Produktionsumgebungen anpassen. Der Datensammler verwendet auch ein Data Warehouse, eine relationale Datenbank, mit der Sie die gesammelten Daten durch Festlegen unterschiedlicher Aufbewahrungsdauern verwalten können.  
   
  Der Datensammler unterstützt eine dynamische Optimierung der Datensammlung und ist durch seine API erweiterbar. Weitere Informationen finden Sie unter [Data Collector Programming](../system-functions/data-collector-functions-transact-sql.md).  
   
- In den folgenden Abbildungen wird dargestellt, wie der Datensammler in die Gesamtstrategie für die Datensammlung und Datenverwaltung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]passt.  
+ In den folgenden Abbildungen wird dargestellt, wie der Datensammler in die Gesamtstrategie für die Datensammlung und Datenverwaltung in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]passt.  
   
  ![Rolle des Datensammlers in der Datenverwaltung](../../relational-databases/data-collection/media/datacollectorroleindatastrategy.gif "Rolle des Datensammlers in der Datenverwaltung")  
   

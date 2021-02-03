@@ -1,13 +1,13 @@
 ---
 description: DATETIMEFROMPARTS (Transact-SQL)
-title: DATETIMEFROMPARTS (Transact-SQL) | Microsoft-Dokumentation
+title: DATETIMEFROMPARTS (Transact-SQL)
 ms.custom: ''
-ms.date: 07/29/2017
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DATETIMEFROMPARTS_TSQL
 - DATETIMEFROMPARTS
@@ -15,16 +15,15 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - DATETIMEFROMPARTS function
-ms.assetid: 6008148b-bf75-4c98-9392-68a89fa0711c
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f86250de50575a37320684b237867c517991b0f7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 8cc7cb964f1cd8b56cbb06aa5bccc97aef76a7b4
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101234"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237904"
 ---
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +68,7 @@ Ein ganzzahliger Ausdruck, der Millisekunden angibt.
 ## <a name="remarks"></a>Bemerkungen  
 `DATETIMEFROMPARTS` gibt einen vollständig initialisierten **datetime**-Wert zurück. `DATETIMEFROMPARTS` löst einen Fehler aus, wenn mindestens ein erforderliches Argument über einen ungültigen Wert verfügt. `DATETIMEFROMPARTS` gibt NULL zurück, wenn mindestens ein erforderliches Argument den Wert NULL enthält.
   
-Diese Funktion unterstützt das Remoting zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Servern und höher. Sie unterstützt nicht das Remoting zu Servern mit einer Version unter [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Diese Funktion kann remote auf [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)]-Servern oder höher ausgeführt werden. Eine Remoteausführung auf Servern mit einer Version vor [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] ist nicht möglich.  
   
 ## <a name="examples"></a>Beispiele  
   

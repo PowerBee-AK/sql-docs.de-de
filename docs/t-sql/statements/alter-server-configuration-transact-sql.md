@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - ALTER SERVER CONFIGURATION
 - ALTER_SERVER_CONFIGURATION_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: ce637e88679747faf40ec7f262ceaea3c0f01f5f
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: 7a61ed11e141376c0b0c769f961fad4e9520c271
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688853"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237050"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -245,7 +245,7 @@ Deaktiviert die Pufferpoolerweiterungsoption. Deaktivieren Sie die Pufferpoolerw
   
 **\<soft_numa>**  
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]).  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]).  
   
 EIN  
 Aktiviert die automatische Partitionierung, um große NUMA-Hardwareknoten in kleine NUMA-Knoten aufzuteilen. Das Ändern des ausgeführten Werts erfordert einen Neustart der Datenbank-Engine.  
@@ -264,7 +264,7 @@ Deaktiviert die automatische Softwarepartitionierung, um große NUMA-Hardwarekno
 
 **\<memory_optimized> ::=**
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]).
 
 EIN <br>
 Aktiviert alle Features auf Instanzebene, die Teil der [In-Memory Database](../../relational-databases/in-memory-database.md)-Featurefamilie sind. Hierzu gehören derzeit [speicheroptimierte tempdb-Metadaten](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) und der [hybride Pufferpool](../../database-engine/configure-windows/hybrid-buffer-pool.md). Diese Option erfordert einen Neustart, um wirksam zu werden.
@@ -447,7 +447,7 @@ GO
 
 ### <a name="setting-in-memory-database-options"></a><a name="MemoryOptimized"></a> Festlegen von In-Memory Database-Optionen
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]).
 
 #### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>A. Aktivieren aller In-Memory Database-Features mit Standardoptionen
 
