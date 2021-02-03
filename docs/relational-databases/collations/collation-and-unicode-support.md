@@ -33,12 +33,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99ef20a9db20238f24361327b79068ed39d430f4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e2a5f205d7182d1ffedf07b885e7411920ca7b27
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465671"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251189"
 ---
 # <a name="collation-and-unicode-support"></a>Unterstützung von Sortierungen und Unicode
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +64,7 @@ Eine Sortierung gibt die Bitmuster an, die die jeweiligen Zeichen in einem Datas
     
 [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungsergebnisse können unterschiedlich sein, wenn die Anweisung im Kontext verschiedener Datenbanken ausgeführt wird, die jeweils andere Sortierungseinstellungen haben. Wenn möglich, sollte in Unternehmen eine standardisierte Sortierung verwendet werden. Auf diese Weise müssen Sie die Sortierung nicht für jedes Zeichen oder jeden Unicode-Ausdruck angeben. Bei Objekten mit abweichenden Sortierungs- oder Codepageeinstellungen codieren Sie Ihre Abfragen so, dass diese den Regeln der Sortierungspriorität entsprechen. Weitere Informationen finden Sie unter [Rangfolge der Sortierungen (Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md).    
     
-Die einer Sortierung zugeordneten Optionen sind die Berücksichtigung von Groß-/Kleinschreibung, Akzenten, Kana, Breite und Variierungsauswahlzeichen. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] führt eine zusätzliche Option für die [UTF-8](https://www.wikipedia.org/wiki/UTF-8)-Codierung ein. 
+Die einer Sortierung zugeordneten Optionen sind die Berücksichtigung von Groß-/Kleinschreibung, Akzenten, Kana, Breite und Variierungsauswahlzeichen. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] führt eine zusätzliche Option für die [UTF-8](https://www.wikipedia.org/wiki/UTF-8)-Codierung ein. 
 
 Sie können diese Optionen festlegen, indem Sie sie an den Namen der Sortierung anfügen. Beispiel: Bei der Sortierung **Japanese_Bushu_Kakusu_100_CS_AS_KS_WS_UTF8** wird nach Groß-/Kleinschreibung, Akzenten, Kana und Breite unterschieden und die UTF-8-Codierung verwendet. Im Gegensatz dazu berücksichtigt die Sortierung **Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS** beispielsweise die Groß-/Kleinschreibung und Akzente nicht, dafür aber Kana, Breite und Variierungsauswahlzeichen, und sie verwendet eine Nicht-Unicode-Codierung. 
 
@@ -76,7 +76,7 @@ In der folgenden Tabelle wird das den verschiedenen Optionen zugeordnete Verhalt
 |Unterscheidung nach Akzent (\_AS)|Unterscheidet zwischen Zeichen mit Akzent und Zeichen ohne Akzent. Beispielsweise entspricht „a“ nicht „ấ“. Wenn diese Option nicht aktiviert wird, wird bei der Sortierung nicht nach Akzenten unterschieden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] betrachtet also beim Sortieren die Versionen von Buchstaben mit und ohne Akzent als identisch. Sie können die Nichtunterscheidung nach Akzent durch Angeben von „\_AI“ explizit auswählen.|    
 |Unterscheidung nach Kana (\_KS)|Unterscheidet zwischen zwei japanischen Kana-Zeichen: Hiragana und Katakana. Wenn diese Option nicht aktiviert wird, wird bei der Sortierung nicht nach Kana unterschieden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] betrachtet also beim Sortieren Hiragana- und Katakana-Zeichen als identisch. Das Auslassen dieser Option ist die einzige Möglichkeit, die Nichtbeachtung von Kana anzugeben.|   
 |Unterscheidung nach Breite (\_WS)|Unterscheidet zwischen Zeichen halber Breite und Zeichen normaler Breite. Wenn diese Option nicht aktiviert wird, betrachtet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Sortieren die Darstellung in halber Breite und in normaler Breite desselben Zeichens als identisch. Das Weglassen dieser Option ist die einzige Möglichkeit, die Nichtbeachtung der Breite anzugeben.|  
-|Mit Unterscheidung nach Variierungsauswahlzeichen (\_VSS)|Unterscheidet zwischen verschiedenen Variierungsauswahlzeichen für Ideogramme in den japanischen Sortierungen **Japanese_Bushu_Kakusu_140** und **Japanese_XJIS_140**, die erstmals in [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] eingeführt wurden. Eine Variierungssequenz besteht aus einem Basiszeichen plus einem ergänzenden Variierungsauswahlzeichen. Wenn diese \_VSS-Option nicht aktiviert ist, berücksichtigt die Sortierung die Variierung nicht, und das Variierungsauswahlzeichen wird im Vergleich nicht berücksichtigt. Das bedeutet, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeichen, die auf dem gleichen Basiszeichen aufbauen, aber verschiedene Variierungsauswahlzeichen aufweisen, für Sortierungszwecke als identisch betrachtet werden. Weitere Informationen finden Sie in der [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/) (Unicode-Datenbank für Ideogrammvariationen).<br/><br/> Variierungsauswahlzeichen unterstützende Sortierungen (\_VSS) werden in Indizes für die Volltextsuche nicht unterstützt. Indizes für die Volltextsuche unterstützen nur Optionen für die Unterscheidung nach Akzent (\_AS), Kana (\_KS) und Breite (\_WS). XML- und CLR-Engines von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützen Variierungsauswahlzeichen (\_VSS) nicht.|      
+|Mit Unterscheidung nach Variierungsauswahlzeichen (\_VSS)|Unterscheidet zwischen verschiedenen Variierungsauswahlzeichen für Ideogramme in den japanischen Sortierungen **Japanese_Bushu_Kakusu_140** und **Japanese_XJIS_140**, die erstmals in [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] eingeführt wurden. Eine Variierungssequenz besteht aus einem Basiszeichen plus einem ergänzenden Variierungsauswahlzeichen. Wenn diese \_VSS-Option nicht aktiviert ist, berücksichtigt die Sortierung die Variierung nicht, und das Variierungsauswahlzeichen wird im Vergleich nicht berücksichtigt. Das bedeutet, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeichen, die auf dem gleichen Basiszeichen aufbauen, aber verschiedene Variierungsauswahlzeichen aufweisen, für Sortierungszwecke als identisch betrachtet werden. Weitere Informationen finden Sie in der [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/) (Unicode-Datenbank für Ideogrammvariationen).<br/><br/> Variierungsauswahlzeichen unterstützende Sortierungen (\_VSS) werden in Indizes für die Volltextsuche nicht unterstützt. Indizes für die Volltextsuche unterstützen nur Optionen für die Unterscheidung nach Akzent (\_AS), Kana (\_KS) und Breite (\_WS). XML- und CLR-Engines von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützen Variierungsauswahlzeichen (\_VSS) nicht.|      
 |Binär (\_BIN)<sup>1</sup>|Sortiert und vergleicht Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabellen basierend auf den für jedes Zeichen definierten Bitmustern. Die binäre Sortierreihenfolge unterscheidet nach Groß- und Kleinschreibung und nach Akzent. Die Option Binär ist zudem die schnellste Sortierreihenfolge. Weitere Informationen finden Sie im Abschnitt [Binäre Sortierungen](#Binary-collations) dieses Artikels.|      
 |Binärcodepunkt (\_BIN2)<sup>1</sup> | Sortiert und vergleicht Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabellen basierend auf Unicode-Codepunkten für Unicode-Daten. Für Nicht-Unicode-Daten verwendet der Binärcodepunkt Vergleiche, die mit denen für binäre Sortierungen identisch sind.<br/><br/> Der Vorteil beim Verwenden einer Binär-Codepunkt-Sortierreihenfolge liegt darin, dass in Anwendungen, die sortierte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten vergleichen, eine Neusortierung der Daten nicht erforderlich ist. Folglich ermöglicht eine Binär-Codepunkt-Sortierreihenfolge eine einfachere Entwicklung von Anwendungen und eine Steigerung der Leistung. Weitere Informationen finden Sie im Abschnitt [Binäre Sortierungen](#Binary-collations) dieses Artikels.|
 |UTF-8 (\_UTF8)|Ermöglicht das Speichern von mit UTF-8 codierten Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn diese Option nicht aktiviert ist, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das standardmäßige Nicht-Unicode-Codierungsformat für die entsprechenden Datentypen. Weitere Informationen finden Sie im Abschnitt [Unterstützung für UTF-8](#utf8) dieses Artikels.| 
@@ -461,7 +461,7 @@ Wenn Sie Zeichendaten speichern, die mehrere Sprachen in [!INCLUDE[ssNoVersion](
 > [!NOTE]
 > Die [!INCLUDE[ssde_md](../../includes/ssde_md.md)] kann bei Unicode-Datentypen bis zu 65.535 Zeichen mit UCS-2 oder den gesamten Unicode-Bereich (1.114.111 Zeichen) darstellen, wenn ergänzende Zeichen verwendet werden. Weitere Informationen zum Aktivieren von ergänzenden Zeichen finden Sie unter [Ergänzende Zeichen](#Supplementary_Characters).
 
-Alternativ dazu gilt ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] Folgendes: Wenn eine für UTF-8 aktivierte Sortierung (\_UTF8) verwendet wird, werden Datentypen, die zuvor kein Unicode waren (**char** und **varchar**) zu Unicode-Datentypen mit UTF-8-Codierung. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ändert das Verhalten der bereits vorhandenen Unicode-Datentypen (**nchar**, **nvarchar** und **ntext**) nicht, die weiterhin USC-2- oder UTF-16-Codierung verwenden. Weitere Informationen finden Sie unter [Speicherunterschiede zwischen UTF-8 und UTF-16](#storage_differences).
+Alternativ dazu gilt ab [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] Folgendes: Wenn eine für UTF-8 aktivierte Sortierung (\_UTF8) verwendet wird, werden Datentypen, die zuvor kein Unicode waren (**char** und **varchar**) zu Unicode-Datentypen mit UTF-8-Codierung. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] ändert das Verhalten der bereits vorhandenen Unicode-Datentypen (**nchar**, **nvarchar** und **ntext**) nicht, die weiterhin USC-2- oder UTF-16-Codierung verwenden. Weitere Informationen finden Sie unter [Speicherunterschiede zwischen UTF-8 und UTF-16](#storage_differences).
 
 ### <a name="unicode-considerations"></a>Weitere Überlegungen
 Nicht-Unicode-Datentypen verfügen über umfassende Einschränkungen. Das liegt daran, dass ein Nicht-Unicode-Computer auf die Verwendung einer einzelnen Codepage beschränkt ist. Es kann sein, dass Sie mit Unicode eine bessere Systemleistung erzielen, da weniger Codepagekonvertierungen erforderlich sind. Unicode-Sortierungen müssen auf der Datenbank-, Spalten- oder Ausdrucksebene einzeln ausgewählt werden, weil sie auf Serverebene nicht unterstützt werden.    
@@ -473,7 +473,7 @@ Wenn Sie Daten von einem Server auf einen Client verschieben, wird die Serversor
 >
 > Sie können eine der Sortierungen mit ergänzenden Zeichen (\_SC) oder eine der Version 140-Sortierungen auswählen, um die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbaren UTF-16-Sortierungen ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher) zu verwenden, um die Suche und die Sortierung einiger Unicode-Zeichen (nur Windows-Sortierungen) zu verbessern.    
  
-Sie müssen Sortierungen mit UTF-8-Codierung (\_UTF8) auswählen, um die in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] verfügbaren UTF-8-Sortierungen verwenden zu können und die Suche und Sortierung einiger Unicode-Zeichen (nur Windows-Sortierungen) zu verbessern.
+Sie müssen Sortierungen mit UTF-8-Codierung (\_UTF8) auswählen, um die in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] verfügbaren UTF-8-Sortierungen verwenden zu können und die Suche und Sortierung einiger Unicode-Zeichen (nur Windows-Sortierungen) zu verbessern.
  
 -   Das UTF8-Flag kann auf folgende Sortierungen angewendet werden:    
     -   Linguistische Sortierungen, die bereits ergänzende Zeichen (\_SC) oder Variierungsauswahlzeichen (\_VSS) unterstützen
@@ -484,8 +484,8 @@ Sie müssen Sortierungen mit UTF-8-Codierung (\_UTF8) auswählen, um die in [!IN
     -   Die binären Sortierungen BIN und BIN2<sup>2</sup>
     -   Die SQL\_*-Sortierungen  
     
-<sup>1</sup> Ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 hat die Sortierung **UTF8_BIN2** durch **Latin1_General_100_BIN2_UTF8** ersetzt.        
-<sup>2</sup> Bis [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3.    
+<sup>1</sup> Ab [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CTP 2.3. [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CTP 3.0 hat die Sortierung **UTF8_BIN2** durch **Latin1_General_100_BIN2_UTF8** ersetzt.        
+<sup>2</sup> Bis [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CTP 2.3.    
     
 Zum Abwägen der Vor- und Nachteile von Unicode- und Nicht-Unicode-Datentypen müssen Sie das Szenario testen und die Leistungsunterschiede in Ihrer Umgebung messen. Es wird empfohlen, die Sortierung zu standardisieren, die auf Systemen in Ihrem Unternehmen verwendet wird, und nach Möglichkeit Unicode-Server und -Clients bereitzustellen.    
     
@@ -512,7 +512,7 @@ Aber das Unicode Consortium hat 16 zusätzliche „Ebenen“ von Zeichen eingeri
 
 Mit [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] wurde eine neue Gruppe von Sortierungen von ergänzenden Zeichen (\_SC) eingeführt, die nur mit den Datentypen **nchar**, **nvarchar** und **sql_variant** verwendet werden können, um den gesamten Unicode-Zeichenbereich (000000 bis 10FFFF) darzustellen. Beispiel: **Latin1_General_100_CI_AS_SC** oder **Japanese_Bushu_Kakusu_100_CI_AS_SC**, wenn Sie eine japanische Sortierung verwenden. 
  
-Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wurde die Unterstützung für ergänzende Zeichen mit den neuen UTF-8-fähigen Sortierungen ([\_UTF8](#utf8)) auf die Datentypen **char** und **varchar** erweitert. Diese Datentypen können auch den gesamten Unicode-Zeichenbereich darstellen.   
+Mit [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] wurde die Unterstützung für ergänzende Zeichen mit den neuen UTF-8-fähigen Sortierungen ([\_UTF8](#utf8)) auf die Datentypen **char** und **varchar** erweitert. Diese Datentypen können auch den gesamten Unicode-Zeichenbereich darstellen.   
 
 > [!NOTE]
 > Ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] unterstützen alle neuen \_140-Sortierungen ergänzende Zeichen automatisch.
@@ -545,7 +545,7 @@ In der folgenden Tabelle wird das Verhalten einiger Zeichenfolgenfunktionen und 
 ## <a name="gb18030-support"></a><a name="GB18030"></a> GB18030-Unterstützung    
 GB18030 ist ein separater Standard, der in der Volksrepublik China zur Codierung von chinesischen Schriftzeichen verwendet wird. In GB18030 können Zeichen 1, 2 oder 4 Bytes lang sein. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet Unterstützung für GB18030-codierte Zeichen, indem diese erkannt werden, wenn Sie den Server von einer clientseitigen Anwendung erreichen, und in systemeigene Unicode-Zeichen konvertiert und als solche gespeichert werden. Nachdem sie auf dem Server gespeichert werden, werden sie in darauffolgenden Vorgängen als Unicode-Zeichen behandelt. 
 
-Sie können eine beliebige chinesische Sortierung verwenden. Empfohlen wird die aktuelle Version 100. Alle \_100-Ebenen-Sortierungen unterstützen die linguistische Sortierung mit GB18030-Zeichen. Wenn die Daten ergänzende Zeichen (Ersatzzeichenpaare) enthalten, können Sie Such- und Sortiervorgänge mithilfe der in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verfügbaren SC-Sortierungen optimieren.    
+Sie können eine beliebige chinesische Sortierung verwenden. Empfohlen wird die aktuelle Version 100. Alle \_100-Ebenen-Sortierungen unterstützen die linguistische Sortierung mit GB18030-Zeichen. Wenn die Daten ergänzende Zeichen (Ersatzzeichenpaare) enthalten, können Sie Such- und Sortiervorgänge mithilfe der in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] verfügbaren SC-Sortierungen optimieren.    
 
 > [!NOTE]
 > Stellen Sie sicher, dass Ihre Clienttools wie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] die Schriftart Dengxian verwenden, um Zeichenfolgen mit GB18030-codierten Zeichen richtig anzuzeigen.
@@ -559,9 +559,9 @@ Sie können eine beliebige chinesische Sortierung verwenden. Empfohlen wird die 
     
 Datenbankanwendungen, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interagieren, müssen über Steuerelemente verfügen, die komplexe Skripts unterstützen. Standardmäßige Windows-Formularsteuerelemente, die in verwaltetem Code erstellt werden, sind für komplexe Skripts aktiviert.    
 
-## <a name="japanese-collations-added-in--sssqlv14_md"></a><a name="Japanese_Collations"></a> In [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] hinzugefügte japanische Sortierungen
+## <a name="japanese-collations-added-in--sssql17-md"></a><a name="Japanese_Collations"></a> In [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] hinzugefügte japanische Sortierungen
  
-Ab [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] werden neue japanische Sortierungsfamilien unterstützt, bei denen es sich um Abwandlungen verschiedener Optionen (\_CS, \_AS, \_KS, \_WS und \_VSS) handelt. 
+Ab [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] werden neue japanische Sortierungsfamilien unterstützt, bei denen es sich um Abwandlungen verschiedener Optionen (\_CS, \_AS, \_KS, \_WS und \_VSS) handelt. 
 
 Um diese Sortierungen aufzulisten, können Sie die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] abfragen:      
 
@@ -577,12 +577,12 @@ Diese Sortierungen werden in Indizes der [!INCLUDE[ssde_md](../../includes/ssde_
 <a name="ctp23"></a>
 
 ## <a name="utf-8-support"></a><a name="utf8"></a> Unterstützung für UTF-8
-Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] wird die vollständige Unterstützung für die weit verbreitete Zeichencodierung UTF-8 als Import- oder Exportcodierung oder als Sortierung für Zeichenfolgedaten auf Datenbank- und Spaltenebene eingeführt. UTF-8 ist für die Datentypen **char** and **varchar** zulässig und aktiviert, wenn Sie die Sortierung eines Objekts erstellen oder in eine Sortierung ändern, die ein *UTF8*-Suffix aufweist. Ein Beispiel hierfür ist das Ändern von **LATIN1_GENERAL_100_CI_AS_SC** in **LATIN1_GENERAL_100_CI_AS_SC_UTF8**. 
+Mit [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] wird die vollständige Unterstützung für die weit verbreitete Zeichencodierung UTF-8 als Import- oder Exportcodierung oder als Sortierung für Zeichenfolgedaten auf Datenbank- und Spaltenebene eingeführt. UTF-8 ist für die Datentypen **char** and **varchar** zulässig und aktiviert, wenn Sie die Sortierung eines Objekts erstellen oder in eine Sortierung ändern, die ein *UTF8*-Suffix aufweist. Ein Beispiel hierfür ist das Ändern von **LATIN1_GENERAL_100_CI_AS_SC** in **LATIN1_GENERAL_100_CI_AS_SC_UTF8**. 
 
 UTF-8 ist nur für Windows-Sortierungen verfügbar, die ergänzende Zeichen gemäß der Einführung in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] unterstützen. Die Datentypen **nchar** und **nvarchar** ermöglichen nur die UCS-2- oder UTF-16-Codierung und bleiben unverändert.
 
 ### <a name="storage-differences-between-utf-8-and-utf-16"></a><a name="storage_differences"></a> Speicherunterschiede zwischen UTF-8 und UTF-16
-Das Unicode Consortium hat jedem Zeichen einen eindeutigen Codepunkt zugeordnet, der einem Wert im Bereich von 000000 bis 10FFFF entspricht. Mit [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] stehen sowohl UTF-8- als auch UTF-16-Codierungen zur Darstellung des gesamten Bereichs zur Verfügung:    
+Das Unicode Consortium hat jedem Zeichen einen eindeutigen Codepunkt zugeordnet, der einem Wert im Bereich von 000000 bis 10FFFF entspricht. Mit [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] stehen sowohl UTF-8- als auch UTF-16-Codierungen zur Darstellung des gesamten Bereichs zur Verfügung:    
 -  Bei der UTF-8-Codierung benötigen Zeichen im ASCII-Bereich (000000 bis 00007F) 1 Byte, die Codepunkte von 000080 bis 0007FF 2 Bytes, die Codepunkte von 000800 bis 00FFFF 3 Bytes und die Codepunkte von 0010000 bis 0010FFFFFF 4 Bytes. 
 -  Bei der UTF-16-Codierung benötigen die Codepunkte von 000000 bis 00FFFF 2 Bytes und die Codepunkte von 0010000 bis 0010FFFF 4 Bytes. 
 

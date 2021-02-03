@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: c333346b0c8ef728966f8e0b6d42a5be53d1b187
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7c95feda5457c3623a893e77771dbdc10ea28257
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895915"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250684"
 ---
 # <a name="back-up-the-service-master-key"></a>Sichern des Diensthauptschlüssels
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  In diesem Artikel wird beschrieben, wie der Diensthauptschlüssel in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)] gesichert wird. Der Diensthauptschlüssel ist der Stamm der Verschlüsselungshierarchie. Er sollte gesichert und an einem sicheren Ort außerhalb der Geschäftsräume aufbewahrt werden. Das Erstellen dieser Sicherung sollte eine der ersten administrativen Aktionen sein, die auf dem Server ausgeführt werden.  
+  In diesem Artikel wird beschrieben, wie der Diensthauptschlüssel in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)] gesichert wird. Der Diensthauptschlüssel ist der Stamm der Verschlüsselungshierarchie. Er sollte gesichert und an einem sicheren Ort außerhalb der Geschäftsräume aufbewahrt werden. Das Erstellen dieser Sicherung sollte eine der ersten administrativen Aktionen sein, die auf dem Server ausgeführt werden.  
 
 ## <a name="before-you-begin"></a>Vorbereitungen  
   

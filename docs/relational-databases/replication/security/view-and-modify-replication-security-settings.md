@@ -18,16 +18,16 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 4eb7b7530c498a6ce590584aa83b3f38684960a7
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 1d7779f3e400345efcd183db16bf0d5780365f69
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170772"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250630"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Anzeigen und Ändern von Replikationssicherheitseinstellungen
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
-  In diesem Thema wird beschrieben, wie die Replikationssicherheitseinstellungen in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) angezeigt und geändert werden. Die Verbindung des Protokolllese-Agents mit dem Verleger ist beispielsweise als SQL Server-Authentifizierung festgelegt, und Sie möchten Sie zu Integrierte Windows-Authentifizierung ändern, oder Sie müssen die zum Ausführen eines Agentauftrags verwendeten Anmeldeinformationen ändern, weil sich das Kennwort eines Windows-Kontos geändert hat. Informationen zu den für die jeweiligen Agents erforderlichen Berechtigungen finden Sie unter [Sicherheitsmodell des Replikations-Agents](../../../relational-databases/replication/security/replication-agent-security-model.md).  
+  In diesem Thema wird beschrieben, wie die Replikationssicherheitseinstellungen in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) angezeigt und geändert werden. Die Verbindung des Protokolllese-Agents mit dem Verleger ist beispielsweise als SQL Server-Authentifizierung festgelegt, und Sie möchten Sie zu Integrierte Windows-Authentifizierung ändern, oder Sie müssen die zum Ausführen eines Agentauftrags verwendeten Anmeldeinformationen ändern, weil sich das Kennwort eines Windows-Kontos geändert hat. Informationen zu den für die jeweiligen Agents erforderlichen Berechtigungen finden Sie unter [Sicherheitsmodell des Replikations-Agents](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
  **In diesem Thema**  
   

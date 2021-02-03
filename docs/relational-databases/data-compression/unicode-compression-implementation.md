@@ -15,12 +15,12 @@ ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0a63694f22f825604e5a3b2d453e58ea73766c4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f78e0bbe469861251c95a0d7fc382be4ed333dd0
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485472"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251110"
 ---
 # <a name="unicode-compression-implementation"></a>Implementierung von Unicode-Komprimierung
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "97485472"
 >  Unicode-Komprimierung wird nicht für **nvarchar(max)** -Daten unterstützt, auch wenn sie in Zeile gespeichert wird. Dieser Datentyp kann immer noch jedoch von der Seitenkomprimierung profitieren.  
   
 ## <a name="upgrading-from-earlier-versions-of-sql-server"></a>Aktualisieren von früheren Versionen von SQL Server  
- Wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisiert wird, werden keine Änderungen im Zusammenhang mit Unicode-Komprimierung für die Datenbankobjekte durchgeführt – unabhängig davon, ob diese komprimiert oder nicht komprimiert sind. Das Datenbankupgrade wirkt sich wie folgt auf Objekte aus:  
+ Wenn eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank auf [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] aktualisiert wird, werden keine Änderungen im Zusammenhang mit Unicode-Komprimierung für die Datenbankobjekte durchgeführt – unabhängig davon, ob diese komprimiert oder nicht komprimiert sind. Das Datenbankupgrade wirkt sich wie folgt auf Objekte aus:  
   
 -   Wenn das Objekt nicht komprimiert ist, werden keine Änderungen durchgeführt, und das Objekt funktioniert wie bisher.  
   

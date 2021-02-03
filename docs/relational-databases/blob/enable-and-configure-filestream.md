@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4e9e0fca818c4988acacfbfa89af718eda8d8ac5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ea678a62f4453232fe8442cf2053c3b951e361ef
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246580"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250659"
 ---
 # <a name="enable-and-configure-filestream"></a>Aktivieren und Konfigurieren von FILESTREAM
 
@@ -28,7 +28,7 @@ ms.locfileid: "87246580"
   
 #### <a name="to-enable-and-change-filestream-settings"></a>So aktivieren und ändern Sie FILESTREAM-Einstellungen  
   
-1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
+1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)], zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
   
 2.  Klicken Sie in der Dienstliste mit der rechten Maustaste auf **SQL Server-Dienste**, und klicken Sie dann auf **Öffnen**.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "87246580"
 ###  <a name="physical-database-design"></a><a name="database"></a> Physischer Datenbankentwurf  
  Beachten Sie beim Entwerfen einer FILESTREAM-Datenbank die folgenden Richtlinien:  
   
--   FILESTREAM-Spalten müssen von einer entsprechenden **uniqueidentifier**ROWGUID-Spalte begleitet werden. Diese Arten von Tabellen müssen auch über einen eindeutigen Index verfügen. In der Regel ist dieser Index kein gruppierter Index. Wenn die Geschäftslogik für Datenbanken einen gruppierten Index erfordert, müssen Sie sicherstellen, dass die im Index gespeicherten Werte nicht zufällig sind. Zufallswerte bewirken, dass der Index neu sortiert wird, sobald in der Tabelle eine Zeile hinzugefügt oder entfernt wird.  
+-   FILESTREAM-Spalten müssen von einer entsprechenden **uniqueidentifier** ROWGUID-Spalte begleitet werden. Diese Arten von Tabellen müssen auch über einen eindeutigen Index verfügen. In der Regel ist dieser Index kein gruppierter Index. Wenn die Geschäftslogik für Datenbanken einen gruppierten Index erfordert, müssen Sie sicherstellen, dass die im Index gespeicherten Werte nicht zufällig sind. Zufallswerte bewirken, dass der Index neu sortiert wird, sobald in der Tabelle eine Zeile hinzugefügt oder entfernt wird.  
   
 -   Aus Leistungsgründen sollten die FILESTREAM-Dateigruppen und -Container nicht auf Volumes gespeichert werden, auf denen sich das Betriebssystem, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokoll, tempdb oder die Auslagerungsdatei befindet.  
   

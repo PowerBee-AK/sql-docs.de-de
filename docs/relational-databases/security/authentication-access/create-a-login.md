@@ -24,17 +24,17 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5c6647b06d058b1b97188810c4a23644d05c4f7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bc69ec8ee89cf994c61450804887b8c60388291f
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468591"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250922"
 ---
 # <a name="create-a-login"></a>Erstellen eines Anmeldenamens
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  In diesem Thema wird beschrieben, wie eine Anmeldung in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] oder [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]erstellt wird. Ein Anmeldename ist die Identität von Personen oder Prozessen, die eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]herstellen.  
+  In diesem Thema wird beschrieben, wie eine Anmeldung in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]erstellt wird. Ein Anmeldename ist die Identität von Personen oder Prozessen, die eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]herstellen.  
   
 ##  <a name="background"></a><a name="Background"></a> Hintergrund  
  Eine Anmeldung ist ein Sicherheitsprinzipal oder eine Entität, die von einem sicheren System authentifiziert werden kann. Benutzer benötigen einen Anmeldenamen, um eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]herstellen zu können. Sie können auf Grundlage eines Windows-Prinzipals (z. B. ein Domänenbenutzer oder eine Windows-Domänengruppe) eine Anmeldung erstellen, oder Sie können eine Anmeldung erstellen, die nicht auf einem Windows-Prinzipal (z. B. eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldung) basiert.  

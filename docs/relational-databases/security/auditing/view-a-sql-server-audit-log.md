@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 02ed692b38f37c5818f7e8a24e5abf32ab1a186a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 869cffd7abd1aef1dd494b82ae8969bdfd58e68a
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85884929"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250349"
 ---
 # <a name="view-a-sql-server-audit-log"></a>Anzeigen eines SQL Server-Überwachungsprotokolls
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]ein SQL Server-Überwachungsprotokoll anzeigen können.  
+  In diesem Thema wird beschrieben, wie Sie in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]ein SQL Server-Überwachungsprotokoll anzeigen können.  
   
  **In diesem Thema**  
   

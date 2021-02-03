@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5b13b4fcc5fd0071a5b008f4fa8186379ffecf41
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 562769cc1f9ce3e895b59811a61026747c0a3724
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193050"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251093"
 ---
 # <a name="data-tier-applications"></a>Datenebenenanwendungen
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,14 +50,14 @@ ms.locfileid: "92193050"
   
     -   Zusätzlich zu SQL Server 2016-Datenbanken können die im Lieferumfang von SQL Server 2016 enthaltenen Tools durch DAC-Tools, die im Lieferumfang von SQL Server 2008 R2 oder SQL Server 2012 enthalten sind, generierte DACPAC-Dateien lesen. Dies schließt Datenbanken von SQL Server 2014, 2012, 2008 R2, 2008 und 2005 ein, aber **nicht** SQL Server 2000.  
   
-    -   DAC-Tools von SQL Server 2008 R2 können keine DACPAC-Dateien lesen, die von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]- oder [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Tools generiert wurden.  
+    -   DAC-Tools von SQL Server 2008 R2 können keine DACPAC-Dateien lesen, die von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]- oder [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]-Tools generiert wurden.  
   
 -   Ein DACPAC ist eine Windows-Datei mit einer Erweiterung DACPAC. Die Datei unterstützt ein offenes Format. Es besteht aus mehreren XML-Abschnitten, die Details der DACPAC-Herkunft bereitstellen, sowie den Objekten in der Datenbank und anderen Eigenschaften. Ein erfahrener Benutzer kann die Datei mit dem Hilfsprogramm "DacUnpack.exe" entpacken, das mit dem Produkt geliefert wird, um jeden Abschnitt genauer zu überprüfen.  
   
 -   Der Benutzer muss Mitglied der Rolle **dbmanager** sein oder über die Berechtigung **CREATE DATABASE** verfügen, um eine Datenbank zu erstellen, einschließlich Erstellen einer Datenbank durch Bereitstellen eines DAC-Pakets. Der Benutzer muss Mitglied der Rolle **dbmanager** sein oder **DROP DATABASE**-Berechtigungen erhalten haben, um eine Datenbank löschen zu können.  
   
 ## <a name="dac-tools"></a>DAC-Tools  
- Ein DACPAC kann nahtlos von mehreren Tools, die im Lieferumfang von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] enthalten sind, verwendet werden. Diese Tools erfüllen die Anforderungen verschiedener physischer Benutzer, indem DACPAC als interoperable Einheit verwendet wird.  
+ Ein DACPAC kann nahtlos von mehreren Tools, die im Lieferumfang von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] enthalten sind, verwendet werden. Diese Tools erfüllen die Anforderungen verschiedener physischer Benutzer, indem DACPAC als interoperable Einheit verwendet wird.  
   
 -   Anwendungsentwickler:  
   

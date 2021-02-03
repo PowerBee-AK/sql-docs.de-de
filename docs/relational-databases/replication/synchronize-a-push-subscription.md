@@ -16,16 +16,16 @@ ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016
-ms.openlocfilehash: 9f20f527694fd0ed33de68fbcbabd93e0ef96683
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 14240f40dcd00f439c0aa5f368ebe4f331641414
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468751"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250560"
 ---
 # <a name="synchronize-a-push-subscription"></a>Synchronisieren eines Pushabonnements
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
-  In diesem Thema wird beschrieben, wie ein Pushabonnement in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [Replikations-Agents](../../relational-databases/replication/agents/replication-agents-overview.md)oder Replikationsverwaltungsobjekten (RMO) synchronisiert wird.  
+  In diesem Thema wird beschrieben, wie ein Pushabonnement in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [Replikations-Agents](../../relational-databases/replication/agents/replication-agents-overview.md)oder Replikationsverwaltungsobjekten (RMO) synchronisiert wird.  
   
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f6d34e2db139a4b38f073f693d3828f9d403c660
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 53ea4630f147ce576ad071d1ac593e00452944a3
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809921"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250626"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM-Kompatibilität mit anderen SQL Server-Features
 
@@ -72,7 +72,7 @@ ms.locfileid: "91809921"
  Eine **varbinary(max)** -Spalte, für die das FILESTREAM-Attribut auf dem Verleger aktiviert ist, kann für einen Abonnenten mit oder ohne FILESTREAM-Attribut repliziert werden. Verwenden Sie das Dialogfeld **Artikeleigenschaften – \<Article>** oder den @schema_option-Parameter von [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) oder [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), um die Methode für die Replikation der Spalte anzugeben. Daten, die in einer **varbinary(max)** -Spalte ohne FILESTREAM-Attribute repliziert werden, dürfen den Grenzwert von 2 GB für diesen Datentyp nicht überschreiten, da anderenfalls ein Laufzeitfehler ausgelöst wird. Wir empfehlen, dass Sie das FILESTREAM-Attribut replizieren, außer wenn Sie Daten für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]replizieren. Das Replizieren von Tabellen mit FILESTREAM-Spalten auf [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] -Abonnenten wird unabhängig von der festgelegten Schemaoption nicht unterstützt.  
   
 > [!NOTE]  
->  Das Replizieren von großen Datenwerten von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nach [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Abonnenten ist auf maximal 256 MB beschränkt. Weitere Informationen finden Sie unter [Maximum Capacity Specifications](../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
+>  Das Replizieren von großen Datenwerten von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] nach [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Abonnenten ist auf maximal 256 MB beschränkt. Weitere Informationen finden Sie unter [Maximum Capacity Specifications](../../sql-server/maximum-capacity-specifications-for-sql-server.md).  
   
 ### <a name="considerations-for-transactional-replication"></a>Überlegungen zur Transaktionsreplikation  
  Wenn Sie FILESTREAM-Spalten in Tabellen verwenden, die zur Transaktionsreplikation veröffentlicht werden, beachten Sie Folgendes:  
@@ -107,7 +107,7 @@ ms.locfileid: "91809921"
  FILESTREAM wird von der Datenbankspiegelung nicht unterstützt. Eine FILESTREAM-Dateigruppe kann nicht auf dem Prinzipalserver erstellt werden. Die Datenbankspiegelung kann nicht für eine Datenbank konfiguriert werden, die FILESTREAM-Dateigruppen enthält.  
   
 ##  <a name="full-text-indexing"></a><a name="FullText"></a> Volltextindizierung  
- Die[Volltextindizierung](../../relational-databases/search/populate-full-text-indexes.md) funktioniert mit einer FILESTREAM-Spalte genauso wie mit einer **varbinary(max)** -Spalte. Die FILESTREAM-Tabelle muss eine Spalte aufweisen, die die Dateinamenerweiterung für jeden FILESTREAM BLOB enthält. Weitere Informationen finden Sie unter [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md),[Konfigurieren und Verwalten von Filtern für die Suche](../../relational-databases/search/configure-and-manage-filters-for-search.md) und [sys.fulltext_document_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md).  
+ Die [Volltextindizierung](../../relational-databases/search/populate-full-text-indexes.md) funktioniert mit einer FILESTREAM-Spalte genauso wie mit einer **varbinary(max)** -Spalte. Die FILESTREAM-Tabelle muss eine Spalte aufweisen, die die Dateinamenerweiterung für jeden FILESTREAM BLOB enthält. Weitere Informationen finden Sie unter [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md),[Konfigurieren und Verwalten von Filtern für die Suche](../../relational-databases/search/configure-and-manage-filters-for-search.md) und [sys.fulltext_document_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md).  
   
  Die Volltext-Engine indiziert den Inhalt der FILESTREAM-BLOBs. Dateien wie beispielsweise Images zu indizieren, ist möglicherweise nicht nützlich. Wenn ein FILESTREAM BLOB aktualisiert wird, wird er neu indiziert.  
   

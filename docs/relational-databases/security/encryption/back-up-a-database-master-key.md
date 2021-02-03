@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 922b921649892673f51876c6e2336e05244a1e17
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 92e8753033e37561b23f2e1d15cb06cef4b662d7
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892428"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250683"
 ---
 # <a name="back-up-a-database-master-key"></a>Sichern eines Datenbank-Hauptschlüssels
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  In diesem Thema wird beschrieben, wie der Datenbank-Hauptschlüssel in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)]gesichert wird. Der Datenbank-Hauptschlüssel wird zur Verschlüsselung anderer Schlüssel und Zertifikate in einer Datenbank verwendet. Wenn dieser Schlüssel beschädigt oder gelöscht wird, können die anderen Schlüssel möglicherweise von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nicht entschlüsselt werden, und die damit verschlüsselten Daten gehen verloren. Aus diesem Grund sollten Sie den Datenbank-Hauptschlüssel sichern und diese Sicherung an einem sicheren Ort außerhalb Ihrer Geschäftsräume aufbewahren.  
+  In diesem Thema wird beschrieben, wie der Datenbank-Hauptschlüssel in [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)]gesichert wird. Der Datenbank-Hauptschlüssel wird zur Verschlüsselung anderer Schlüssel und Zertifikate in einer Datenbank verwendet. Wenn dieser Schlüssel beschädigt oder gelöscht wird, können die anderen Schlüssel möglicherweise von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nicht entschlüsselt werden, und die damit verschlüsselten Daten gehen verloren. Aus diesem Grund sollten Sie den Datenbank-Hauptschlüssel sichern und diese Sicherung an einem sicheren Ort außerhalb Ihrer Geschäftsräume aufbewahren.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
   
