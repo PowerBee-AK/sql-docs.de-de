@@ -6,18 +6,18 @@ ms.date: 08/20/2020
 ms.prod: sql
 ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: reference
 helpviewer_keywords:
 - 856 (Database Engine error)
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: f94f6f4e8f8eebee48bbb0c2a6d0faefa4218c25
-ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
+ms.openlocfilehash: d0cb60c6117ebd17ce566f182c65423537100f04
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92418865"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180961"
 ---
 # <a name="mssqlserver_856"></a>MSSQLSERVER_856
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ Auf Computern mit neuerer Hardware, auf denen Windows Server 2012 oder eine höh
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fügt Unterstützung für diese Benachrichtigungen in Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höheren Versionen hinzu. Während des Starts von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ob die Hardware dieses neue Feature unterstützt. Außerdem wird Ihnen im Fehlerprotokoll die folgende Meldung angezeigt:
 
-> \<Datetime> Server Machine supports memory error recovery. SQL memory protection is enabled to recover from memory corruption. (Der <Datetime>-Servercomputer unterstützt die Wiederherstellung nach einem Arbeitsspeicherfehler. Der SQL-Speicherschutz ist aktiviert, um die Wiederherstellung nach einer Arbeitsspeicherbeschädigung zu ermöglichen.)
+> \<Datetime> Der Server-Computer unterstützt die Wiederherstellung nach einem Arbeitsspeicherfehler. SQL memory protection is enabled to recover from memory corruption. (Der Server-Computer unterstützt die Wiederherstellung nach einem Arbeitsspeicherfehler. Der SQL-Speicherschutz ist aktiviert, um die Wiederherstellung nach einer Arbeitsspeicherbeschädigung zu ermöglichen.)
 
 Derzeit führt nur der Pufferpool Aktionen aus, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diese Benachrichtigungen empfängt. Wenn eine Benachrichtigung empfangen wird, muss [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den gesamten Pufferpool durchlaufen und die Adressen der zugeordneten Puffer ermitteln. Dann verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die `QueryWorkingSetEX`-API, um zu überprüfen, ob eine der Arbeitsspeicherseiten, die die Datenseite stützen, als „fehlerhaft“ gekennzeichnet ist. Die fehlerhaften Member der Ausgabestruktur `PSAPI_WORKING_SET_EX_BLOCK`, die dieser Arbeitsspeicherseite zugeordnet werden kann, werden auf 1 festgelegt, wenn ein Schaden gemeldet wird.
 
@@ -64,9 +64,9 @@ Wenn diese Datenseite nochmals für Abfragen benötigt wird, kann der Pufferpool
 
 Wenn die fehlerhafte Seite nicht vom Pufferpool, sondern von einem anderen zwischengespeicherten Objekt oder einer zwischengespeicherten Struktur verwendet wird, protokolliert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die folgende Meldung:
 
-> Es wurde eine nicht behebbare Beschädigung des Hardwarespeichers festgestellt. Das System kann instabil werden. Weitere Informationen finden Sie im Windows-Ereignisprotokoll.
+> Es wurde eine nicht behebbare Beschädigung des Hardwarespeichers festgestellt. Das System kann instabil werden. Please check the Windows event log for more details (Es wurde eine nicht behebbare Beschädigung des Hardwarespeichers festgestellt. Das System kann instabil werden. Weitere Informationen finden Sie im Windows-Ereignisprotokoll.)
 
-Wenn der Server Speicherfehler meldet, wenden Sie sich an den Hersteller der Computerhardware, und ergreifen Sie angemessene Maßnahmen. Sie können beispielsweise eine Arbeitsspeicherdiagnose durchführen, das BIOS und die Firmware aktualisieren sowie fehlerhafte Arbeitsspeichermodule ersetzen.
+Wenn der Server Arbeitsspeicherfehler meldet, wenden Sie sich an den Hersteller der Computerhardware, und ergreifen Sie passende Maßnahmen. Sie können beispielsweise eine Arbeitsspeicherdiagnose durchführen, das BIOS und die Firmware aktualisieren sowie fehlerhafte Arbeitsspeichermodule ersetzen.
 
 Sie können das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ablaufverfolgungsflag 849 verwenden, um zu verhindern, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Betriebssystem für Benachrichtigungen zu Arbeitsspeicherfehlern registriert wird. Beachten Sie jedoch, dass das Aktivieren des Ablaufverfolgungsflags 849 verhindert, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vom Betriebssystem Benachrichtigungen zu Fehlern im Arbeitsspeicher erhält. Daher wird empfohlen, dieses Ablaufverfolgungsflag im Normalfall nicht zu verwenden.
 
