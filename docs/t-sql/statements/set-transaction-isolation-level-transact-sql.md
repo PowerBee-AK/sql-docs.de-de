@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - LEVEL
 - LEVEL_TSQL
@@ -28,12 +28,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0310498564525293dba5dde525c24d4ffd620aad
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7fd0098e9b4e213619e65973c2367a03f0197852
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98080230"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161096"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -164,12 +164,12 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 |Isolationsstufe|Transact-SQL-Zugriff|Dateisystemzugriff|  
 |---------------------|-------------------------|------------------------|  
-|Read Uncommitted|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Nicht unterstützt|  
-|Read Committed|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
-|Repeatable Read|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Nicht unterstützt|  
-|Serialisierbar|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Nicht unterstützt|  
-|Read committed snapshot|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
-|Momentaufnahme|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|Read Uncommitted|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|Nicht unterstützt|  
+|Read Committed|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|  
+|Repeatable Read|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|Nicht unterstützt|  
+|Serialisierbar|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|Nicht unterstützt|  
+|Read committed snapshot|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|  
+|Momentaufnahme|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird `TRANSACTION ISOLATION LEVEL` für die Sitzung festgelegt. Für alle folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen erhält [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle freigegebenen Sperren bis zum Abschluss der Transaktion aufrecht.  

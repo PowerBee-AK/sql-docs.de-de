@@ -6,7 +6,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7efecb0dbecf4ae7e4d9d142eb6f3bff3f94d616
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 6882fa93bb1d4837f909bc00f74fdf9e83e7c5c4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116542"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174386"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ with Expression2
 Gibt einen Knoten an, dessen Wert aktualisiert werden soll. Der Ausdruck darf nur einen einzelnen Knoten angeben. Das heißt, *Expression1* muss ein statisches Singleton sein. Wenn das XML typisiert ist, muss der Typ des Knotens ein simple-Typ sein. Wenn mehrere Knoten ausgewählt werden, wird ein Fehler ausgelöst. Wenn *Expression1* eine leere Sequenz zurückgibt, tritt keine Wertersetzung auf, und es werden keine Fehler zurückgegeben. *Expression1* muss ein einzelnes Element zurückgeben, das einfachen Typinhalt hat (wie bei den Typen „list“ und „atomic“) oder ein Textknoten bzw. ein Attributknoten ist. *Expression1* kann nicht den Typ „union“ bzw. einem komplexen Typ haben oder eine Verarbeitungsanweisung, ein Dokumentknoten oder ein Kommentarknoten sein. Andernfalls wird ein Fehler zurückgegeben.  
   
 *Expression2*  
-Gibt den neuen Wert des Knotens an. Dabei kann es sich um einen Ausdruck handeln, der einen einfachen Typknoten zurückgibt, weil **data()** implizit verwendet wird. Wenn der Wert eine Werteliste ist, ersetzt die **update** -Anweisung den alten Wert durch die Liste. Beim Ändern einer typisierten XML-Instanz muss *Expression2* den gleichen Typ wie *Expression*1 aufweisen oder ein Untertyp davon sein. Ansonsten wird ein Fehler zurückgegeben. Beim Ändern einer nicht typisierten XML-Instanz muss *Expression2* ein Ausdruck sein, der atomisiert werden kann. Ansonsten wird ein Fehler zurückgegeben.  
+Gibt den neuen Wert des Knotens an. Dabei kann es sich um einen Ausdruck handeln, der einen einfachen Typknoten zurückgibt, weil **data()** implizit verwendet wird. Wenn der Wert eine Werteliste ist, ersetzt die **update** -Anweisung den alten Wert durch die Liste. Beim Ändern einer typisierten XML-Instanz muss *Expression2* den gleichen Typ wie *Expression* 1 aufweisen oder ein Untertyp davon sein. Ansonsten wird ein Fehler zurückgegeben. Beim Ändern einer nicht typisierten XML-Instanz muss *Expression2* ein Ausdruck sein, der atomisiert werden kann. Ansonsten wird ein Fehler zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
 Die folgenden Beispiele der XML DML **replace value of** -Anweisung zeigen, wie Knoten in einem XML-Dokument aktualisiert werden.  
