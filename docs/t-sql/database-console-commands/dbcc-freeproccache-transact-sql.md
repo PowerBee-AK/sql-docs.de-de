@@ -26,12 +26,12 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 635cbfe8b21f60bf2bb9cec49efac62c627a6ae4
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 1efc7b38c4f68a37c9c43b7dd00cfbf09c6dc277
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172622"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99233443"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -89,7 +89,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
  Alle Computerknoten und Steuerknoten werden aus dem Abfrageplancache gelöscht.  
 
 > [!NOTE]
-> Ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] ist `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` verfügbar, um den Prozedur-/Plancache für die Datenbank im Bereich zu löschen.
+> Ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] ist `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` verfügbar, um den Prozedur-/Plancache für die Datenbank im Bereich zu löschen.
 
 ## <a name="remarks"></a>Hinweise  
 Verwenden Sie DBCC FREEPROCCACHE, um den Plancache sorgfältig zu leeren. Durch das Löschen des Prozedur-/Plancaches werden alle Pläne entfernt, und eingehende Abfrageausführungen werden mit einem neuen Plan kompiliert, statt dass alle zuvor zwischengespeicherten Pläne wieder verwendet werden. 

@@ -23,12 +23,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8e1c8af9fbd147c7a20ae773dc1797026240293
-ms.sourcegitcommit: 0576ce6d7c9c5514306a90e27fa621ef25825186
+ms.openlocfilehash: 57eb0bac3a794aaf3b7f84fc8cfb14d0207da1ae
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98575731"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99233254"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Leitfaden zur Architektur und zum Design von SQL Server-Indizes
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -750,7 +750,7 @@ Weitere Informationen zu Zeilengruppenzuständen finden Sie unter [sys.dm_db_col
 > Zu viele kleine Zeilengruppen verschlechtern die Qualität des Columnstore-Index. Ein Neuorganisierungsvorgang führt kleinere Zeilengruppen zusammen, wobei eine interne Schwellenwertrichtlinie eingehalten wird, die bestimmt, wie gelöschte Zeilen entfernt und die komprimierten Zeilengruppen kombiniert werden. Nach einem Mergevorgang sollte sich die Indexqualität verbessert haben. 
 
 > [!NOTE]
-> Ab [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] wird der Tupelverschiebungsvorgang von einem Mergetask im Hintergrund unterstützt, der automatisch kleinere OPEN-Deltazeilengruppen komprimiert, die für einen bestimmten Zeitraum vorhanden waren (wie durch einen internen Schwellenwert festgelegt), oder COMPRESSED-Zeilengruppen mergt, aus denen eine große Anzahl von Zeilen gelöscht wurde.      
+> Ab [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] wird der Tupelverschiebungsvorgang von einem Mergetask im Hintergrund unterstützt, der automatisch kleinere OPEN-Deltazeilengruppen komprimiert, die für einen bestimmten Zeitraum vorhanden waren (wie durch einen internen Schwellenwert festgelegt), oder COMPRESSED-Zeilengruppen mergt, aus denen eine große Anzahl von Zeilen gelöscht wurde.      
 
 Jede Spalte weist einige ihrer Werte in jeder Zeilengruppe auf. Diese Werte werden als **Spaltensegmente** bezeichnet. Jede Zeilengruppe enthält ein Spaltensegment für jede Spalte in der Tabelle. Jede Spalte besitzt ein Spaltensegment in jeder Zeilengruppe.
 
@@ -799,15 +799,15 @@ Jede Partition kann über mehrere Delta-Zeilengruppen verfügen. Wenn der Column
 #### <a name="you-can-combine-columnstore-and-rowstore-indexes-on-the-same-table"></a>Sie können Columnstore und Rowstore-Indizes für dieselbe Tabelle kombinieren
 Der nicht gruppierte Index enthält eine Kopie eines Teils oder aller Zeilen und Spalten der zugrundeliegenden Tabelle. Der Index ist als eine oder mehrere Spalte(n) der Tabelle definiert und weist eine optionale Bedingung auf, die zum Filtern der Zeilen dient. 
 
-Ab [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] können Sie einen aktualisierbaren, **nicht gruppierten Columnstore-Index für eine Rowstore-Tabelle erstellen**. Der Columnstore-Index speichert eine Kopie der Daten, sodass Sie keinen zusätzlichen Speicher benötigen. Allerdings werden die Daten in den Columnstore-Index komprimiert, auf eine kleinere Größe als die Rowstore-Tabelle es erfordert.  Durch dieses Vorgehen können Sie Analysen mit dem Columnstore-Index und Transaktionen mit dem Rowstore-Index zur gleichen Zeit ausführen. Der Spaltenspeicher wird aktualisiert, wenn sich die Daten in der Rowstore-Tabelle ändern, daher arbeiten beide Indizes auf den gleichen Daten.  
+Ab [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] können Sie einen aktualisierbaren, **nicht gruppierten Columnstore-Index für eine Rowstore-Tabelle erstellen**. Der Columnstore-Index speichert eine Kopie der Daten, sodass Sie keinen zusätzlichen Speicher benötigen. Allerdings werden die Daten in den Columnstore-Index komprimiert, auf eine kleinere Größe als die Rowstore-Tabelle es erfordert.  Durch dieses Vorgehen können Sie Analysen mit dem Columnstore-Index und Transaktionen mit dem Rowstore-Index zur gleichen Zeit ausführen. Der Spaltenspeicher wird aktualisiert, wenn sich die Daten in der Rowstore-Tabelle ändern, daher arbeiten beide Indizes auf den gleichen Daten.  
   
-Ab [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] können **nicht gruppierte Rowstore-Indizes für einen oder mehrere Columnstore-Indizes erstellt werden**. Auf diese Weise können effiziente Tabellensuchvorgänge im zugrundeliegenden Columnstore ausgeführt werden. Auch weitere Optionen werden dadurch verfügbar. Beispielsweise können Sie eine Primärschlüsseleinschränkung durchsetzen, indem Sie eine UNIQUE-Bedingung auf die Rowstore-Tabelle anwenden. Da ein nicht eindeutiger Wert nicht in die Rowstore-Tabelle eingefügt werden kann, kann SQL Server den Wert nicht in den Columnstore einfügen.  
+Ab [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] können **nicht gruppierte Rowstore-Indizes für einen oder mehrere Columnstore-Indizes erstellt werden**. Auf diese Weise können effiziente Tabellensuchvorgänge im zugrundeliegenden Columnstore ausgeführt werden. Auch weitere Optionen werden dadurch verfügbar. Beispielsweise können Sie eine Primärschlüsseleinschränkung durchsetzen, indem Sie eine UNIQUE-Bedingung auf die Rowstore-Tabelle anwenden. Da ein nicht eindeutiger Wert nicht in die Rowstore-Tabelle eingefügt werden kann, kann SQL Server den Wert nicht in den Columnstore einfügen.  
  
 ### <a name="performance-considerations"></a>Überlegungen zur Leistung 
 
 -   Die Definition des nicht gruppierten Columnstore-Index unterstützt gefilterte Bedingungen. Um die Auswirkung auf die Leistung beim Hinzufügen eines Columnstore-Indexes in eine OLTP-Tabelle zu verringern, verwenden Sie eine gefilterte Bedingung, um einen nicht gruppierten Columnstore-Index anhand der kalten Daten Ihrer Betriebsworkload zu erstellen. 
   
--   Eine In-Memory-Tabelle kann nur über einen Columnstore-Index verfügen. Sie können ihn bei Erstellung der Tabelle generieren oder später mit [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md) hinzufügen. Vor [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] konnte nur eine datenträgerbasierte Tabelle über einen Columnstore-Index verfügen. 
+-   Eine In-Memory-Tabelle kann nur über einen Columnstore-Index verfügen. Sie können ihn bei Erstellung der Tabelle generieren oder später mit [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md) hinzufügen. Vor [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] konnte nur eine datenträgerbasierte Tabelle über einen Columnstore-Index verfügen. 
 
 Weitere Informationen finden Sie unter [Columnstore-Indizes: Abfrageleistung](../relational-databases/indexes/columnstore-indexes-query-performance.md).
 

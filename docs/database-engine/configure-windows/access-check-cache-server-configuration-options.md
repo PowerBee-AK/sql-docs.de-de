@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0a992ea8-3ec6-4a4d-97b5-460ae7326247
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 893400411c6f3d2faf6313923aa0f6127a3f2cf0
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: dc1ff18d464c03d1eb5e96834f4d753bfead5559
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171072"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99233978"
 ---
 # <a name="access-check-cache-server-configuration-options"></a>Serverkonfigurationsoptionen für den Zugriffsüberprüfungscache
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ Die Option **access check cache bucket count** steuert die Anzahl der Hashbucket
 
 Die Option **access check cache quota** steuert die Anzahl der Einträge, die im Ergebniscache der Zugriffsüberprüfung gespeichert werden. Wenn die maximale Anzahl von Einträgen erreicht ist, werden die ältesten Einträge aus dem Ergebniscache der Zugriffsüberprüfung entfernt.
   
-Die Standardwerte 0 geben an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diese Optionen verwaltet. Ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] werden die Standardwerte in die folgenden internen Konfigurationen übersetzt:
+Die Standardwerte 0 geben an, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diese Optionen verwaltet. Ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] werden die Standardwerte in die folgenden internen Konfigurationen übersetzt:
 -   Bei der Bucketanzahl für den Cache der Zugriffsüberprüfung wird durch den Wert 0 ein Standardwert von 256 Buckets festgelegt.
 -   Beim Cachekontingent der Zugriffsüberprüfung wird durch den Wert 0 ein Standardwert von 1.024 Einträgen festgelegt.
 

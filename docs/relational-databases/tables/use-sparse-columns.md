@@ -16,12 +16,12 @@ ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba2d4bc789c324e3e6153dc971a983638af603f4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 2b2d569c3f37370bd132485e843da005b1769b17
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482343"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211540"
 ---
 # <a name="use-sparse-columns"></a>Verwenden von Spalten mit geringer Dichte
 
@@ -39,7 +39,7 @@ ms.locfileid: "97482343"
   
      Da Sparsespalten viele Zeilen mit NULL-Werten haben, sind sie besonders für gefilterte Indizes geeignet. Ein gefilterter Index für eine Sparsespalte kann nur die Zeilen indizieren, die Werte enthalten. Dadurch wird ein kleinerer und effizienterer Index erstellt. Weitere Informationen finden Sie unter [erstellen gefilterter Indizes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
- Mithilfe von Spalten mit geringer Dichte und von gefilterten Indizes können Anwendungen wie [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]große Mengen an benutzerdefinierten Eigenschaften mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]speichern und darauf zugreifen.  
+ Mithilfe von Spalten mit geringer Dichte und von gefilterten Indizes können Anwendungen wie [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]große Mengen an benutzerdefinierten Eigenschaften mit [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]speichern und darauf zugreifen.  
   
 ## <a name="properties-of-sparse-columns"></a>Eigenschaften von Spalten mit geringer Dichte  
  Spalten mit geringer Dichte haben die folgenden Eigenschaften:  

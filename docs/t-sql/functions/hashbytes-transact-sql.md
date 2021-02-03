@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - HASHBYTES_TSQL
 - HASHBYTES
@@ -20,12 +20,12 @@ ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da6f1b1bdb357a6321207720d2ea64938f4ada41
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: dd4bc13a7d1e6d980ceb391c7dd548bf71a5acd3
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170242"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99233060"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 
@@ -48,7 +48,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ## <a name="arguments"></a>Argumente
 
 `<algorithm>`  
-Identifiziert den für das Hashing der Eingabe zu verwendenden Hashalgorithmus. Dies ist ein erforderliches Argument ohne Standardwert. Die einfachen Anführungszeichen müssen eingegeben werden. Ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] gelten alle anderen Algorithmen als SHA2_256 und SHA2_512 als veraltet.  
+Identifiziert den für das Hashing der Eingabe zu verwendenden Hashalgorithmus. Dies ist ein erforderliches Argument ohne Standardwert. Die einfachen Anführungszeichen müssen eingegeben werden. Ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] gelten alle anderen Algorithmen als SHA2_256 und SHA2_512 als veraltet.  
   
 `@input`  
 Gibt eine Variable mit den Daten an, für die das Hashing ausgeführt werden soll. `@input` ist **varchar**, **nvarchar** oder **varbinary**.  
@@ -68,7 +68,7 @@ Gibt einen Ausdruck an, der zu einer Zeichenfolge oder Binärzeichenfolge ausgew
 ## <a name="remarks"></a>Hinweise  
 Erwägen Sie die Verwendung von `CHECKSUM` oder `BINARY_CHECKSUM` als Alternativen zur Berechnung eines Hashwerts.
 
-Die Algorithmen MD2, MD4, MD5, SHA und SHA1 sind ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] veraltet. Verwenden Sie stattdessen SHA2_256 oder SHA2_512. Ältere Algorithmen funktionieren weiterhin, lösen jedoch ein Ereignis aus, das auf die Veraltung hinweist.
+Die Algorithmen MD2, MD4, MD5, SHA und SHA1 sind ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] veraltet. Verwenden Sie stattdessen SHA2_256 oder SHA2_512. Ältere Algorithmen funktionieren weiterhin, lösen jedoch ein Ereignis aus, das auf die Veraltung hinweist.
 
 ## <a name="examples"></a>Beispiele  
 ### <a name="return-the-hash-of-a-variable"></a>Zurückgeben des Hashcodes einer Variablen  
