@@ -6,19 +6,19 @@ ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Broker:Forwarded Message Dropped event class
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ccb035e127b6476ca18b5745dbaf58b66c8c929e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 14a917d6a6faec85cbc712f612e593fdfe19bc06
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97476251"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197860"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped-Ereignisklasse
 
@@ -52,7 +52,7 @@ ms.locfileid: "97476251"
 |OwnerName|**nvarchar**|Der Brokerinstanzbezeichner für das Ziel der Nachricht.|37|Nein|  
 |RoleName|**nvarchar**|Die Rolle des Konversationshandles. Enthält einen der folgenden Werte:<br /><br /> -Initiator. Dieser Broker hat die Konversation initiiert.<br /><br /> -Target. Der Broker ist das Ziel der Konversation.|38|Nein|  
 |ServerName|**nvarchar**|Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  
-|severity|**int**|Schweregradnummer für den Text im Ereignis.|29|Nein|  
+|Schweregrad|**int**|Schweregradnummer für den Text im Ereignis.|29|Nein|  
 |SPID|**int**|Die Serverprozess-ID, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Prozess zugewiesen wurde, der diesem Client zugeordnet ist.|12|Ja|  
 |StartTime|**datetime**|Der Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar.|14|Ja|  
 |State|**int**|Gibt den Standort im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Quellcode an, der das Ereignis erstellt hat. Jeder Ort, von dem aus dieses Ereignis ggf. erstellt werden kann, besitzt einen anderen Statuscode. Der Microsoft Software Service kann mithilfe dieses Statuscodes herausfinden, wo das Ereignis generiert wurde.|30|Nein|  

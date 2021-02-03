@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - MERGE
 - MERGE_TSQL
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
-ms.openlocfilehash: 664ef8a40e341f52bda0658d532849a278ae49b9
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.openlocfilehash: cbc1286bbbced3a546c1057433dba5bbc4289281
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92679087"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199387"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -146,7 +146,7 @@ Wenn *target_table* eine Sicht ist, müssen alle Aktionen für die Tabelle die B
 *target_table* darf keine Remotetabelle sein. Für *target_table* dürfen keine Regeln definiert sein.  
   
 [ AS ] *table_alias*  
-Dies ist ein alternativer Name zum Verweisen auf eine Tabelle für *target_table* .  
+Dies ist ein alternativer Name zum Verweisen auf eine Tabelle für *target_table*.  
   
 USING \<table_source>  
 Hiermit wird die Datenquelle angegeben, die basierend auf \<merge_search condition> mit den Datenzeilen in *target_table* abgeglichen wird. Das Ergebnis dieser Zuordnung legt die Aktionen fest, die von den WHEN-Klauseln der MERGE-Anweisung ausgeführt werden. \<table_source> kann eine Remotetabelle oder eine abgeleitete Tabelle sein, die auf Remotetabellen zugreift.
@@ -215,10 +215,10 @@ Gibt an, dass die Zeilen, die mit Zeilen in *target_table* übereinstimmen, gel�
 \<merge_not_matched>  
 Gibt die Werte an, die in die Zieltabelle eingefügt werden sollen.  
   
-( *column_list* )  
+(*column_list*)  
 Eine Liste mit einer oder mehreren Spalten der Zieltabelle, in die Daten eingefügt werden sollen. Spalten müssen als einteiliger Name angegeben werden. Andernfalls schlägt die MERGE-Anweisung fehl. *column_list* muss in Klammern eingeschlossen und durch ein Trennzeichen getrennt werden.  
   
-VALUES ( *values_list* )  
+VALUES ( *values_list*)  
 Eine durch Trennzeichen getrennte Liste mit Konstanten, Variablen oder Ausdrücken, die Werte zum Einfügen in die Zieltabelle zurückgeben. Ausdrücke dürfen keine EXECUTE-Anweisung enthalten.  
   
 DEFAULT VALUES  
@@ -255,7 +255,7 @@ Bei Verwendung nach MERGE gibt [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/f
   
 MERGE ist ein vollständig reserviertes Schlüsselwort, wenn der Kompatibilitätsgrad der Datenbank auf 100 oder höher festgelegt ist. Die MERGE-Anweisung ist bei einem Kompatibilitätsgrad von sowohl 90 als auch 100 verfügbar. Bei einem Kompatibilitätsgrad von 90 ist das Schlüsselwort allerdings nicht vollständig reserviert.  
   
-Verwenden Sie die **MERGE** -Anweisung nicht zusammen mit dem Replikationstyp „Verzögertes Update über eine Warteschlange“. **MERGE** und der Trigger für verzögerte Updates über eine Warteschlange sind nicht kompatibel. Ersetzen Sie die **MERGE** -Anweisung durch eine INSERT- oder UPDATE-Anweisung.  
+Verwenden Sie die **MERGE**-Anweisung nicht zusammen mit dem Replikationstyp „Verzögertes Update über eine Warteschlange“. **MERGE** und der Trigger für verzögerte Updates über eine Warteschlange sind nicht kompatibel. Ersetzen Sie die **MERGE**-Anweisung durch eine INSERT- oder UPDATE-Anweisung.  
 
 
 ## <a name="trigger-implementation"></a>Triggerimplementierung
@@ -264,7 +264,7 @@ Für jeden Einfüge-, Update- oder Löschvorgang, der in der MERGE-Anweisung ang
   
 Wenn in der Zieltabelle ein aktivierter INSTEAD OF-Trigger für einen Einfüge-, Update- oder Löschvorgang definiert ist, der durch eine MERGE-Anweisung ausgeführt wird, muss sie einen aktivierten INSTEAD OF-Trigger für alle in der MERGE-Anweisung angegebenen Aktionen enthalten.  
   
-Wenn für *target_table* ein INSTEAD OF UPDATE-Trigger oder INSTEAD OF DELETE-Trigger definiert ist, werden die Update- oder Löschvorgänge nicht ausgeführt. Stattdessen werden die Trigger ausgelöst, und die **inserted** - und **deleted** -Tabelle werden entsprechend aufgefüllt.  
+Wenn für *target_table* ein INSTEAD OF UPDATE-Trigger oder INSTEAD OF DELETE-Trigger definiert ist, werden die Update- oder Löschvorgänge nicht ausgeführt. Stattdessen werden die Trigger ausgelöst, und die **inserted**- und **deleted**-Tabelle werden entsprechend aufgefüllt.  
   
 Wenn für *target_table* der INSTEAD OF INSERT-Trigger definiert ist, wird der Einfügevorgang nicht ausgeführt. Stattdessen wird die Tabelle entsprechend aufgefüllt.  
   

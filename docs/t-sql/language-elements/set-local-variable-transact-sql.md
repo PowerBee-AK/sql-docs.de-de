@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -19,12 +19,12 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: caf0fcb2a9b00c8f391280395629348f055d4039
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 0cf40a6b16c1a2750180a5646e17ad317fe3c1bf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100953"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194287"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -184,7 +184,7 @@ Weitere Informationen finden Sie unter [DECLARE CURSOR &#40;Transact-SQL&#41;](.
   
 Sie können den Verbundzuweisungsoperator stets verwenden, wenn auf der rechten Seite des Operators eine Zuweisung mit einem Ausdruck steht (einschließlich Variablen), und SET in einer UPDATE-, SELECT- oder RECEIVE-Anweisung vorhanden ist.  
   
-Verwenden Sie keine Variable in einer SELECT-Anweisung, um Werte zu verketten (d. h., um Aggregatwerte zu berechnen). Dies kann zu unerwarteten Abfrageergebnissen führen. Dies liegt daran, dass alle Ausdrücke in der SELECT-Liste (einschließlich Zuweisungen) für jede Ausgabezeile nicht zwangsläufig nur einmal ausgeführt werden. Weitere Informationen finden Sie in diesem [KB-Artikel](https://support.microsoft.com/kb/287515).  
+Verwenden Sie keine Variable in einer SELECT-Anweisung, um Werte zu verketten (d. h., um Aggregatwerte zu berechnen). Dies kann zu unerwarteten Abfrageergebnissen führen. Dies liegt daran, dass alle Ausdrücke in der SELECT-Liste (einschließlich Zuweisungen) für jede Ausgabezeile nicht zwangsläufig nur einmal ausgeführt werden. Weitere Informationen finden Sie in diesem [KB-Artikel](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/287515).  
   
 ## <a name="permissions"></a>Berechtigungen  
 Erfordert die Mitgliedschaft in der public-Rolle. Alle Benutzer können SET **@** _local_variable_ verwenden.  
