@@ -12,20 +12,20 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ca8263c5d75fca3bc59164d8d3ff7acaa9c5f2e
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: cf8e82f8ebaa0a8b5b30cc4ffd460f7db7d4d121
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172732"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99234868"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Columnstore-Indizes: Data Warehouse
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Columnstore-Indizes sind in Verbindung mit der Partitionierung unverzichtbar für die Erstellung eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Data Warehouse.  
   
-## <a name="whats-new"></a>Neuigkeiten  
- In[!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] wurden die folgenden Funktionen für Columnstore-Leistungsverbesserungen eingeführt:  
+## <a name="whats-new"></a>Neues  
+ In[!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] wurden die folgenden Funktionen für Columnstore-Leistungsverbesserungen eingeführt:  
   
 -   AlwaysOn unterstützt das Abfragen eines Columnstore-Indexes auf einem lesbaren sekundären Replikat.  
 -   Multiple Active Result Sets (MARS) unterstützt Columnstore-Indizes.  
@@ -39,7 +39,7 @@ ms.locfileid: "98172732"
 -   Momentaufnahmenisolation für den Datenbank-Kompatibilitätsgrad 130 und höher  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>Verbessern der Leistung durch Kombinieren von nicht gruppierten Indizes und Columnstore-Indizes  
- Ab [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] können Sie nicht gruppierte Indizes für einen gruppierten Columnstore-Index definieren.   
+ Ab [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] können Sie nicht gruppierte Indizes für einen gruppierten Columnstore-Index definieren.   
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>Beispiel: Verbessern der Effizienz von Suchabfragen auf Tabellen mit einem nicht gruppierten Index  
  Sie können einen nicht gruppierten Index erstellen, der Abfragen ausführt, die am besten mit Tabellenvorgängen funktionieren, um die Effizienz von Tabellenvorgängen in einem Data Warehouse zu verbessern. Zum Beispiel erzielen Abfragen, die nach übereinstimmenden Werten suchen oder eine kleine Anzahl von Werten zurückgeben, eine bessere Leistung für einen B-Strukturindex als für einen Columnstore-Index. Ein vollständiger Tabellenscan durch den Columnstore-Index ist für die Abfragen nicht erforderlich. Das korrekte Ergebnis wird durch eine binäre Suche in einem B-Strukturindex schneller zurückgeben.  
@@ -101,7 +101,7 @@ WITH CHECK ADD FOREIGN KEY([AccountKey]) REFERENCES my_dimension(Accountkey);
 ```  
   
 ### <a name="improve-performance-by-enabling-row-level-and-row-group-level-locking"></a>Verbessern der Leistung durch das Aktivieren von Sperren auf Zeilenebene und Zeilengruppenebene  
- [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] bietet eine präzise Sperrfunktion für Auswahl-, Update- und Löschvorgänge, um den nicht gruppierten Index für eine Columnstore-Index-Funktion zu ergänzen. Abfragen mit Sperren auf Zeilenebene für Index-Suchvorgänge können für einen nicht gruppierten Index ausgeführt werden. Abfragen mit Sperren auf Zeilengruppenebene für vollständige Tabellenscans können für den Columnstore-Index ausgeführt werden. Verwenden Sie diese Option, um eine höhere Lese/Schreib-Parallelität durch die korrekte Verwendung von Sperren auf Zeilenebene und Zeilengruppenebene zu erzielen.  
+ [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] bietet eine präzise Sperrfunktion für Auswahl-, Update- und Löschvorgänge, um den nicht gruppierten Index für eine Columnstore-Index-Funktion zu ergänzen. Abfragen mit Sperren auf Zeilenebene für Index-Suchvorgänge können für einen nicht gruppierten Index ausgeführt werden. Abfragen mit Sperren auf Zeilengruppenebene für vollständige Tabellenscans können für den Columnstore-Index ausgeführt werden. Verwenden Sie diese Option, um eine höhere Lese/Schreib-Parallelität durch die korrekte Verwendung von Sperren auf Zeilenebene und Zeilengruppenebene zu erzielen.  
   
 ```sql  
 --Granular locking example  

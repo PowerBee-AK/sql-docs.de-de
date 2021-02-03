@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ef3d409ae656776b870119ccd14cb211cc16b32c
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 72bf9910a86d66ac36cbebbb0be66f8a8df832e5
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125559"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235768"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Übersicht über Wiederherstellungsvorgänge (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -179,9 +179,9 @@ Weitere Informationen zum Datenbankwiederherstellungsberater finden Sie in den f
 -   [Wiederherstellungsberater: Verwenden von SSMS zum Erstellen/Wiederherstellen von Teilungssicherungen](/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> Verbesserte Wiederherstellung von Datenbanken
-Die [verbesserte Wiederherstellung von Datenbanken](/azure/sql-database/sql-database-accelerated-database-recovery/) ist in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] verfügbar. Durch die verbesserte Wiederherstellung von Datenbanken wird die Verfügbarkeit von Datenbanken enorm verbessert, insbesondere bei zeitintensiven Transaktionen. Hierfür wurde der [Wiederherstellungsprozess](#TlogAndRecovery) der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vollständig überarbeitet. Eine Datenbank, für die die verbesserte Wiederherstellung von Datenbanken aktiviert wurde, wird nach einem Failover oder einem nicht sauberen Herunterfahren deutlich schneller wiederhergestellt. Ist diese Option aktiviert, wird bei der verbesserten Wiederherstellung von Datenbanken auch das Rollback von abgebrochenen Transaktionen mit langer Ausführungszeit deutlich schneller.
+Die [verbesserte Wiederherstellung von Datenbanken](/azure/sql-database/sql-database-accelerated-database-recovery/) ist in [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] verfügbar. Durch die verbesserte Wiederherstellung von Datenbanken wird die Verfügbarkeit von Datenbanken enorm verbessert, insbesondere bei zeitintensiven Transaktionen. Hierfür wurde der [Wiederherstellungsprozess](#TlogAndRecovery) der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vollständig überarbeitet. Eine Datenbank, für die die verbesserte Wiederherstellung von Datenbanken aktiviert wurde, wird nach einem Failover oder einem nicht sauberen Herunterfahren deutlich schneller wiederhergestellt. Ist diese Option aktiviert, wird bei der verbesserten Wiederherstellung von Datenbanken auch das Rollback von abgebrochenen Transaktionen mit langer Ausführungszeit deutlich schneller.
 
-Sie können die datenbankbasierte beschleunigte Wiederherstellung für [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] mithilfe der folgenden Syntax aktivieren:
+Sie können die datenbankbasierte beschleunigte Wiederherstellung für [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] mithilfe der folgenden Syntax aktivieren:
 
 ```sql
 ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;

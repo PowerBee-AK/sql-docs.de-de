@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4c80a51370de62410367b1225fd85e3ffe7f261
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: d156b2c02d67c947041de268962579d6417202e2
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534799"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235747"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>Planen des Nachweises des Host-Überwachungsdiensts
 
@@ -118,7 +118,7 @@ Die Computer, auf denen [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion
 
 Folgende Anforderungen müssen erfüllt sein:
 
-- [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] oder höher
+- [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] oder höher
 - Sie benötigen Windows 10 Enterprise, Version 1809 oder höher, oder Windows Server 2019 Datacenter Edition. Andere Editionen von Windows 10 und Windows Server unterstützen keinen HGS-Nachweis.
 - CPU-Unterstützung für Virtualisierungstechnologien:
   - Intel VT-x mit erweiterten Seitentabellen

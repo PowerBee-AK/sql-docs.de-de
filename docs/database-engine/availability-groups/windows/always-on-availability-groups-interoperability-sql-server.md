@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 1c0322b1b00b3f5cbff775d3c248ee81916f48a9
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: 928b63c84781b837560e593b56d3c272971f9a23
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98765136"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235800"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On-Verfügbarkeitsgruppen: Interoperabilität (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ In der folgenden Tabelle werden [!INCLUDE[ssNoVersion](../../../includes/ssnover
 
 Die folgenden Features wirken mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] unter bestimmten Einschränkungen zusammen. Weitere Informationen finden Sie in den verknüpften Themen.
 
-- Datenbankübergreifende Transaktionen/verteilte Transaktionen ([!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] und Windows Server 2016). Weitere Informationen finden Sie unter [Datenbankübergreifende Transaktionen und verteilte Transaktionen für Always On-Verfügbarkeitsgruppen oder Datenbankspiegelung &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
+- Datenbankübergreifende Transaktionen/verteilte Transaktionen ([!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] und Windows Server 2016). Weitere Informationen finden Sie unter [Datenbankübergreifende Transaktionen und verteilte Transaktionen für Always On-Verfügbarkeitsgruppen oder Datenbankspiegelung &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
 - Der [Systemdatensammler für Abfragestatistiken](../../../relational-databases/data-collection/system-data-collection-set-reports.md#Query) kann nicht zuverlässig in einer Umgebung mit nicht lesbaren sekundären Replikaten ausgeführt werden. Zur Verwendung des Systemdatensammler für Abfragestatistiken müssen Sie für alle sekundären Verfügbarkeitsgruppenreplikate den [Lesezugriff](configure-read-only-access-on-an-availability-replica-sql-server.md) erlauben. 
 
 ## <a name="features-that-do-not-interoperate-with-always-on-availability-groups"></a><a name="NoInterop"></a> Funktionen, die nicht mit Always On-Verfügbarkeitsgruppen zusammenwirken
