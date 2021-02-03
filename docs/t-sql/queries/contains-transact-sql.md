@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CONTAINS_TSQL
 - CONTAINS
@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7e1e56c9132fe59a91274ff90598ddce3a6fe21c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 680cbfab28064f92d446705de0ca2b2f778735df
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035873"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207788"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 
@@ -230,7 +230,7 @@ Gibt eine Übereinstimmung für ein genaues Wort oder einen genauen Ausdruck an.
  Ein angegebener *\<simple_term>* innerhalb eines *\<generation_term>* kann nicht mit Substantiven und mit Verben gleichzeitig übereinstimmen.  
   
  THESAURUS  
- Gibt an, dass der Thesaurus verwendet wird, der der Volltext-Spaltensprache oder der in der Abfrage angegebenen Sprache entspricht. Die längsten Muster aus *\<simple_term>* werden mit dem Thesaurus verglichen, und weitere Ausdrücke werden generiert, um das ursprüngliche Muster zu erweitern oder zu ersetzen. Wird für den ganzen Ausdruck oder für Teile von *\<simple_term>* keine Übereinstimmung gefunden, wird der nicht übereinstimmende Teil als *simple_term*behandelt. Weitere Informationen zum Thesaurus der Volltextsuche finden Sie unter [Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
+ Gibt an, dass der Thesaurus verwendet wird, der der Volltext-Spaltensprache oder der in der Abfrage angegebenen Sprache entspricht. Die längsten Muster aus *\<simple_term>* werden mit dem Thesaurus verglichen, und weitere Ausdrücke werden generiert, um das ursprüngliche Muster zu erweitern oder zu ersetzen. Wird für den ganzen Ausdruck oder für Teile von *\<simple_term>* keine Übereinstimmung gefunden, wird der nicht übereinstimmende Teil als *simple_term* behandelt. Weitere Informationen zum Thesaurus der Volltextsuche finden Sie unter [Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
  \<generic_proximity_term>  
  Legt eine Übereinstimmung für Wörter oder Ausdrücke fest, die im durchsuchten Dokument vorhanden sein müssen.  
