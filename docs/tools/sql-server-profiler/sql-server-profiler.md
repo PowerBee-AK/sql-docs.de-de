@@ -4,24 +4,23 @@ titleSuffix: SQL Server Profiler
 description: Testen Sie die SQL Server Profiler-Features. Dieses Tool hilft Ihnen beim Beheben von Problemen, sodass Sie Ablaufverfolgungen erstellen und Ablaufverfolgungsergebnisse analysieren und wiedergeben können.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 05/01/2020
-ms.openlocfilehash: 3169f8fbbc86fc95a62631c0cc93d77b6a46b0a4
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 3066ac1b16a1a294955825dc35b40f422bd79df3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643406"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203538"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 
- [!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ist eine Benutzeroberfläche zum Erstellen und Verwalten von Ablaufverfolgungen sowie zum Analysieren und Wiedergeben ihrer Ergebnisse. Ereignisse werden in einer Ablaufverfolgungsdatei gespeichert, die später analysiert oder beim Diagnostizieren eines Problems zur Wiedergabe einer bestimmten Schrittabfolge verwendet werden kann.
 
@@ -46,7 +45,7 @@ Sie können den Profiler auf verschiedene Arten in [!INCLUDE[ssManStudioFull](..
 
 ## <a name="capture-and-replay-trace-data"></a>Aufzeichnen und Wiedergeben von Ablaufverfolgungsdaten
 
-In der folgenden Tabelle werden die Funktionen angezeigt, deren Verwendung wir in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] empfehlen, um Ablaufverfolgungsdaten zu erfassen und wiederzugeben.
+In der folgenden Tabelle werden die Funktionen angezeigt, deren Verwendung wir in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] empfehlen, um Ablaufverfolgungsdaten zu erfassen und wiederzugeben.
 
 ||||
 |-|-|-|

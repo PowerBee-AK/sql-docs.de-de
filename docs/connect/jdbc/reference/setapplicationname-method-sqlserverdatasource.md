@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDataSource.setApplicationName
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 24d6e48d-53c4-4da2-a6de-1cdff463c9cd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e237100c0c1da4ad9188da943412891d808a735c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f49c91bcd43e926f4bdc4a604efccb5ec8ea0b92
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88432662"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174099"
 ---
 # <a name="setapplicationname-method-sqlserverdatasource"></a>setApplicationName-Methode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ public void setApplicationName(java.lang.String applicationName)
   
  Ein **String-Objekt**, das den Namen der Anwendung enthält.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Anhand des Anwendungsnamens wird die jeweilige Anwendung in den verschiedenen Profilerstellungs- und Protokollierungstools von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identifiziert. Ist der Anwendungsname nicht festgelegt, wird von der getApplicationName-Methode die nicht lokalisierte Zeichenfolge „[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]“ zurückgegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

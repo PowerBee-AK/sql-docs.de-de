@@ -18,18 +18,18 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 00caef8ecdd73814d60ce2c98c65ba0fc4083379
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: c180d44cf3ea9a0c878168eba4257e880c1ba965
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037600"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250935"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>Erstellen oder Bearbeiten einer Servergruppe (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-In diesem Thema wird beschrieben, wie Sie die Server in Registrierte Server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] organisieren, indem Sie Servergruppen erstellen und die Server den Servergruppen zuordnen. Servergruppen können jederzeit in Registrierte Server erstellt werden, aber auch beim Registrieren von Servern.  
+In diesem Thema wird beschrieben, wie Sie die Server in Registrierte Server in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] organisieren, indem Sie Servergruppen erstellen und die Server den Servergruppen zuordnen. Servergruppen können jederzeit in Registrierte Server erstellt werden, aber auch beim Registrieren von Servern.  
 
 ## <a name="SSMSProcedure"></a>
 
@@ -46,7 +46,7 @@ In diesem Thema wird beschrieben, wie Sie die Server in Registrierte Server in [
 5. Klicken Sie im Feld **Wählen Sie einen Speicherort für die neue Servergruppe aus** auf einen Speicherort für die Gruppe, und klicken Sie dann auf **Speichern**.  
 
    > [!NOTE]
-   >  Sie können beim Registrieren eines Servers auch eine neue Servergruppe erstellen, indem Sie auf **Neue Gruppe**klicken und die entsprechenden Informationen im Dialogfeld **Neue Gruppe** eingeben.  
+   >  Sie können beim Registrieren eines Servers auch eine neue Servergruppe erstellen, indem Sie auf **Neue Gruppe** klicken und die entsprechenden Informationen im Dialogfeld **Neue Gruppe** eingeben.  
 
 ## <a name="see-also"></a>Weitere Informationen
 

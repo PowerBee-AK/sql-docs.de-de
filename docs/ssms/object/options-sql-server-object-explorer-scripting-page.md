@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 35a255bb4df3779897ec40da29da9cc15f62ba1f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: cbaf09a88e5856bfd5c8f36826d8894b947e3c0d
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037627"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250499"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Optionen (SQL Server-Objekt-Explorer – Seite „Skripterstellung“)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "92037627"
   
 -   Befehl **Ändern** für vom Benutzer erstellte Objekte.  
   
--   Auf dieser Seite werden zudem die Standardwerte der Skripterstellungsoptionen für den **Assistenten zum Generieren von SQL Server-Skripts**festgelegt.  
+-   Auf dieser Seite werden zudem die Standardwerte der Skripterstellungsoptionen für den **Assistenten zum Generieren von SQL Server-Skripts** festgelegt.  
   
 ## <a name="remarks"></a>Bemerkungen  
 Die Befehle **Bearbeiten** und **Ändern** führen möglicherweise zu Ergebnissen, die sich vom Befehl **Skript für <object> erstellen als** für die gleiche Optionseinstellung unterscheiden. Die Befehle **Bearbeiten** und **Ändern** sind für das Ändern von Objekten in der aktuellen Datenbank während einer Abfrage-Editor-Sitzung vorgesehen. Der Befehl **Skript für <object> erstellen als** ist zum Generieren eines Skripts vorgesehen, sodass es später zum Erstellen von Objekten verwendet werden kann.  
@@ -44,7 +44,7 @@ Geben Sie Skriptoptionen an, indem Sie eine Auswahl aus den verfügbaren Einstel
   
 ### <a name="general-scripting-options"></a>Allgemeine Skripterstellungsoptionen  
 **Einzelne Anweisungen begrenzen**  
-Trennt die einzelnen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen mithilfe eines Batchtrennzeichens voneinander ab. Wenn Sie das Standardbatchtrennzeichen für **Abfrage-Editor**ändern möchten, wählen Sie **Extras**/**Optionen**/**Abfrageausführung**/**SQL Server**/**Allgemein**/**Batchtrennzeichen**aus. Der Standardwert lautet False. Weitere Informationen finden Sie unter [GO (Transact-SQL)](../../t-sql/language-elements/sql-server-utilities-statements-go.md).  
+Trennt die einzelnen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen mithilfe eines Batchtrennzeichens voneinander ab. Wenn Sie das Standardbatchtrennzeichen für **Abfrage-Editor** ändern möchten, wählen Sie **Extras**/**Optionen**/**Abfrageausführung**/**SQL Server**/**Allgemein**/**Batchtrennzeichen** aus. Der Standardwert lautet False. Weitere Informationen finden Sie unter [GO (Transact-SQL)](../../t-sql/language-elements/sql-server-utilities-statements-go.md).  
   
 **Beschreibende Header einschließen**  
 Fügt dem Skript beschreibende Kommentare hinzu, indem das Skript in Abschnitte für die einzelnen Objekte aufgeteilt wird. Der Standardwert lautet "True". Weitere Informationen finden Sie unter [/ *...* / (Kommentar) (Transact-SQL)](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
@@ -151,7 +151,7 @@ Schließt vom System generierte Einschränkungsnamen ein, damit die deklarative 
 **Skript für den Datenbankmodultyp** Generierte Skripts werden auf den angegebenen [Database Engine Type (Datenbankmodultyp)](/previous-versions/sql/sql-server-2014/ee642509(v=sql.120)) ausgerichtet.
 
 **Skripterstellung für Serverversion**  
-Generierte Skripts werden auf die angegebene Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgerichtet. Funktionen, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] neu sind, können für eine Skripterstellung für frühere Versionen nicht verwendet werden. Einige für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erstellte Skripts können weder auf Servern, auf denen eine frühere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird, noch in einer Datenbank mit einer früheren [Einstellung des Datenbankkompatibilitätsgrades](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)ausgeführt werden.  
+Generierte Skripts werden auf die angegebene Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgerichtet. Funktionen, die in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] neu sind, können für eine Skripterstellung für frühere Versionen nicht verwendet werden. Einige für [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] erstellte Skripts können weder auf Servern, auf denen eine frühere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt wird, noch in einer Datenbank mit einer früheren [Einstellung des Datenbankkompatibilitätsgrades](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)ausgeführt werden.  
 
 ## <a name="see-also"></a>Weitere Informationen:  
 [Erstellen von Skripts (SQL Server Management Studio)](../scripting/generate-scripts-sql-server-management-studio.md)  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_fetch_array
 apitype: NA
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9067a7ffa6bd6379fb9384b915d07cb64893467
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 6e0df700729db03d2d0dd52ac5d0a251827db7d8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92080640"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195661"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -64,7 +64,7 @@ Weitere Informationen zu diesen Werten finden Sie unter [Festlegen eines Cursort
 ## <a name="return-value"></a>Rückgabewert  
 Wenn eine Datenzeile abgerufen wird, wird ein **Array** zurückgegeben. Wenn keine weiteren Zeilen mehr abgerufen werden können, wird **NULL** zurückgegeben. Wenn ein Fehler auftritt, wird **false** zurückgegeben.  
   
-Basierend auf dem Wert des *$fetchType* -Parameters, kann das zurückgegebene **Array** ein numerisch indiziertes **Array**, ein assoziatives **Array**oder beides sein. In der Standardeinstellung wird ein **Array** mit numerischen und assoziativen Schlüsseln zurückgegeben. Der Datentyp eines Werts im zurückgegebenen Array wird der PHP-Standarddatentyp sein. Informationen zu PHP-Datentypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
+Basierend auf dem Wert des *$fetchType* -Parameters, kann das zurückgegebene **Array** ein numerisch indiziertes **Array**, ein assoziatives **Array** oder beides sein. In der Standardeinstellung wird ein **Array** mit numerischen und assoziativen Schlüsseln zurückgegeben. Der Datentyp eines Werts im zurückgegebenen Array wird der PHP-Standarddatentyp sein. Informationen zu PHP-Datentypen finden Sie unter [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
 ## <a name="remarks"></a>Bemerkungen  
 Wenn eine Spalte ohne Namen zurückgegeben wird, ist der assoziative Schlüssel für das Arrayelement eine leere Zeichenfolge (""). Betrachten Sie beispielsweise diese Transact-SQL-Anweisung, die einen Wert in eine Datenbanktabelle einfügt und den vom Server generierten Primärschlüssel abruft:  
@@ -83,7 +83,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
 Wenn ein Resultset mehrere Spalten ohne Namen enthält, wird der Wert der letzten unbenannten Spalte dem Schlüssel einer leeren Zeichenfolge ("") zugewiesen.  
   
 ## <a name="associative-array-example"></a>Beispiel für ein assoziatives Array  
-Das folgende Beispiel ruft jede Zeile eines Resultsets als assoziatives **Array**auf. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)-Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
+Das folgende Beispiel ruft jede Zeile eines Resultsets als assoziatives **Array** auf. Das Beispiel setzt voraus, dass SQL Server und die [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)-Datenbank auf dem lokalen Computer installiert sind. Wenn das Beispiel über die Befehlszeile ausgeführt wird, werden alle Ausgaben in die Konsole geschrieben.  
   
 ```  
 <?php  

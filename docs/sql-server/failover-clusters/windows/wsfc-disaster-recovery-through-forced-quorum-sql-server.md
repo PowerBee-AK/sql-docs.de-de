@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: fcdd0f1d34ed4107cbe3c90708abe286efbf0837
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 6aa2a07da107a5283a4dacc8323dc5d6a928702a
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642656"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251185"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>WSFC-Notfallwiederherstellung durch erzwungenes Quorum (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "97642656"
 1.  **Bestimmen Sie den Fehlerumfang.** Identifizieren Sie, welche Verfügbarkeitsgruppen oder SQL Server-Instanzen nicht mehr reagieren, welche Clusterknoten online sind und zur Verwendung nach der Katastrophe verfügbar sind, und untersuchen Sie die Windows-Ereignisprotokolle und die SQL Server-Systemprotokolle.  Wo praktikabel, sollten Sie forensische Daten und Systemprotokolle für spätere Analysen beibehalten.  
   
     > [!TIP]  
-    >  Auf einer reagierenden Instanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]können Sie Informationen zum Zustand von Verfügbarkeitsgruppen, die auf der lokalen Serverinstanz ein Verfügbarkeitsreplikat besitzen, abrufen, indem Sie die dynamische Verwaltungssicht (DMV, Dynamic Management View) [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) abfragen.  
+    >  Auf einer reagierenden Instanz von [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]können Sie Informationen zum Zustand von Verfügbarkeitsgruppen, die auf der lokalen Serverinstanz ein Verfügbarkeitsreplikat besitzen, abrufen, indem Sie die dynamische Verwaltungssicht (DMV, Dynamic Management View) [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) abfragen.  
   
 2.  **Starten Sie den WSFC-Cluster mit erzwungenem Quorum auf einem einzelnen Knoten.** Identifizieren Sie einen Knoten mit einer minimalen Anzahl von Komponentenfehlern, auf dem der WSFC-Clusterdienst nicht heruntergefahren wurde.  Überprüfen Sie, ob dieser Knoten mit den meisten anderen Knoten kommunizieren kann.  
   

@@ -1,5 +1,5 @@
 ---
-description: Editionen und unterstützte Funktionen von [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
+description: Editionen und unterstützte Funktionen von [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]
 title: Editionen und unterstützte Features von SQL Server 2019 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/04/2019
@@ -34,18 +34,18 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: e0a8f226602ab41422715368fb12c13809fa6b40
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9987384899eeb9087a938d8fd8e8b156ff8e1962
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477151"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236273"
 ---
-# <a name="editions-and-supported-features-of-sssqlv15-md"></a>Editionen und unterstützte Funktionen von [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
+# <a name="editions-and-supported-features-of-sssql19-md"></a>Editionen und unterstützte Funktionen von [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx](../includes/applies-to-version/sqlserver.md)]
 
-Dieses Thema enthält detaillierte Informationen zu den von den verschiedenen Editionen von [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] unterstützten Features.
+Dieses Thema enthält detaillierte Informationen zu den von den verschiedenen Editionen von [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] unterstützten Features.
 
 Informationen zu früheren Versionen finden Sie unter:
 
@@ -58,10 +58,10 @@ Die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Evaluation Edition st
 
 Die neuesten Versionsanmerkungen und Informationen zu Neuerungen finden Sie über die folgenden Links:
 
-* [Versionshinweise zu [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]](../sql-server/sql-server-version-15-release-notes.md)
+* [Versionshinweise zu [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]](../sql-server/sql-server-version-15-release-notes.md)
 * [Neuerungen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-**Testen Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: [Laden Sie [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] aus dem Evaluation Center](https://www.microsoft.com//evalcenter/evaluate-sql-server) herunter.**
+**Testen Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: [Laden Sie [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] aus dem Evaluation Center](https://www.microsoft.com//evalcenter/evaluate-sql-server) herunter.**
 
 ## <a name="ssnoversion-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Editionen
 
@@ -103,8 +103,8 @@ Anhand der Informationen aus den folgenden Tabellen können Sie ermitteln, welch
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] enthält Server- und Clientkomponenten, mit denen Berichte in Form einer Tabelle, Matrix, Grafik oder Freiform erstellt, verwaltet und bereitgestellt werden können. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ist gleichzeitig eine erweiterbare Plattform, die Sie zum Entwickeln von Berichtsanwendungen verwenden können.|
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt eine Gruppe grafischer Tools und programmierbarer Objekte zum Verschieben, Kopieren und Transformieren von Daten bereit. Es beinhaltet außerdem die [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Komponente für [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].|
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) ist die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Lösung für die Masterdatenverwaltung. MDS kann konfiguriert werden, um jede Domäne (Produkte, Kunden, Konten) zu verwalten und umfasst Hierarchien, präzise Sicherheit, Transaktionen, Datenversionsverwaltung und Geschäftsregeln sowie einen [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] , der verwendet werden kann, um Daten zu verwalten.|
-|Machine Learning-Dienste (datenbankintern)|Machine Learning-Dienste (datenbankintern) unterstützt verteilte, skalierbare Machine Learning-Lösungen mithilfe von Unternehmensdatenquellen. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016 wurde die R-Sprache unterstützt. [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] unterstützt R und Python.|
-|Machine Learning-Server (eigenständig)|Machine Learning Server (eigenständig) unterstützt die Bereitstellung von verteilten, skalierbaren Machine Learning-Lösungen auf mehreren Plattformen und verwendet mehrere Unternehmensdatenquellen, einschließlich Linux und Hadoop. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016 wurde die R-Sprache unterstützt. [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] unterstützt R und Python.|
+|Machine Learning-Dienste (datenbankintern)|Machine Learning-Dienste (datenbankintern) unterstützt verteilte, skalierbare Machine Learning-Lösungen mithilfe von Unternehmensdatenquellen. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016 wurde die R-Sprache unterstützt. [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] unterstützt R und Python.|
+|Machine Learning-Server (eigenständig)|Machine Learning Server (eigenständig) unterstützt die Bereitstellung von verteilten, skalierbaren Machine Learning-Lösungen auf mehreren Plattformen und verwendet mehrere Unternehmensdatenquellen, einschließlich Linux und Hadoop. In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2016 wurde die R-Sprache unterstützt. [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] unterstützt R und Python.|
 
 |Verwaltungstools|Beschreibung|
 |----------------------|-----------------|
@@ -116,7 +116,7 @@ Anhand der Informationen aus den folgenden Tabellen können Sie ermitteln, welch
 |[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]|[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] bietet eine IDE zum Erstellen von Lösungen für die Business Intelligence-Komponenten: [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]und [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].<br /><br /> (Früher Business Intelligence Development Studio genannt).<br /><br /> [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] schließt auch "Datenbankprojekte" ein, die eine integrierte Umgebung für Datenbankentwickler bereitstellen, die ihre ganze Datenbankentwurfsarbeit für eine beliebige [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Plattform (sowohl vor Ort als auch remote) in Visual Studio ausführen möchten. Datenbankentwickler können den verbesserten Server-Explorer in Visual Studio verwenden, um Datenbankobjekte und Daten einfach zu erstellen oder zu bearbeiten und Abfragen auszuführen.|
 |Konnektivitätskomponenten|Installiert Komponenten für die Kommunikation zwischen Clients und Servern, einschließlich Netzwerkbibliotheken für die DB-Library, ODBC und OLE DB.|
 
-|Dokumentation|BESCHREIBUNG|
+|Dokumentation|Beschreibung|
 |-------------------|-----------------|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation|Kerndokumentation für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|
 

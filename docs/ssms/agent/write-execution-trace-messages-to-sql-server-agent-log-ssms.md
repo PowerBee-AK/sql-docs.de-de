@@ -18,12 +18,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016
-ms.openlocfilehash: 79a7b516e7c108cc6e57eca4bf38f959f4ce779a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 17a2e3275aa36f3c65d46430f215563a6940145e
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474331"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251242"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log"></a>Meldungen zur Ablaufverfolgung in das SQL Server-Agent-Fehlerprotokoll schreiben
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "97474331"
 > [!IMPORTANT]  
 > In [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) werden derzeit die meisten, aber nicht alle, SQL Server-Agent-Features unterstützt. Details dazu finden Sie unter [T-SQL-Unterschiede zwischen Azure SQL Managed Instance und SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent mithilfe von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] konfigurieren müssen, damit Meldungen zur Ablaufverfolgung in das entsprechende Fehlerprotokoll in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aufgenommen werden.  
+In diesem Thema wird beschrieben, wie Sie den [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent mithilfe von [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] konfigurieren müssen, damit Meldungen zur Ablaufverfolgung in das entsprechende Fehlerprotokoll in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aufgenommen werden.  
   
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a>Vorbereitungen  
   

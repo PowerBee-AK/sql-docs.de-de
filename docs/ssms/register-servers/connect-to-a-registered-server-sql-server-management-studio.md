@@ -14,18 +14,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: c684e2fd784c6b12c2512f2ceef59946ede90101
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c16a849f9bff99059415bbd4027d376b3dee717b
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468563"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250444"
 ---
 # <a name="connect-to-a-registered-server-sql-server-management-studio"></a>Herstellen einer Verbindung zu einem registrierten Server (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-In diesem Thema wird beschrieben, wie Sie eine Verbindung mit einem registrierten Server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]herstellen. Wenn der Server nicht ausgeführt wird oder nicht im Netzwerk gefunden wird, zeigt Registrierte Server einen Fehler an.  
+In diesem Thema wird beschrieben, wie Sie eine Verbindung mit einem registrierten Server in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]herstellen. Wenn der Server nicht ausgeführt wird oder nicht im Netzwerk gefunden wird, zeigt Registrierte Server einen Fehler an.  
 
 ##  <a name="SSMSProcedure"></a>
 
