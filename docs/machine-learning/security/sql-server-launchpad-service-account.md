@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15'
-ms.openlocfilehash: fe74893641ae7aa69b7e388631a418a1ab973cd3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0aff998d79d79c2ac2ef06c37ffba4b01eb73973
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97470721"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076858"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>Dienstkonfiguration von SQL Server-Launchpad
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -61,7 +61,7 @@ Einige Eigenschaften können nur mithilfe der Launchpad-Konfigurationsdatei geä
 
 Sie müssen Administrator auf dem Computer sein, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, um diese Datei ändern zu können. Für die Bearbeitung der Datei wird empfohlen, dass Sie eine Sicherungskopie erstellen, bevor Sie Änderungen speichern.
 
-Die folgende Tabelle führt die erweiterten Einstellungen für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit den zulässigen Werten auf.
+Die folgende Tabelle führt die erweiterten Einstellungen für [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mit den zulässigen Werten auf.
 
 |**Einstellungsname**|**Typ**|**Beschreibung**|
 |----|----|----|

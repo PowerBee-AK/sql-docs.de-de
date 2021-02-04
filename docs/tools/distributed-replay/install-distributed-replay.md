@@ -11,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 29c96381f9781df7cb1cbedb351cce1524f440fd
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 4909975e83ea4438d969685ed9b76ae9f02a5631
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642630"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99077078"
 ---
 # <a name="install-distributed-replay"></a>Installieren von Distributed Replay
 
@@ -31,7 +31,7 @@ Sie können Distributed Replay auf eine von drei Weisen installieren:
 -   [Installieren von Distributed Replay mithilfe einer Konfigurationsdatei](#bkmk_configuration_file)  
   
 ##  <a name="install-distributed-replay-from-the-installation-wizard"></a><a name="bkmk_wizard"></a> Installieren von Distributed Replay über den Installations-Assistenten  
- Installieren Sie die [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Features mit dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Installations-Assistenten. Beachten Sie Folgendes, bevor Sie sich für ein Verzeichnis für die Installation der Funktionen entscheiden:  
+ Installieren Sie die [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Features mit dem [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Installations-Assistenten. Beachten Sie Folgendes, bevor Sie sich für ein Verzeichnis für die Installation der Funktionen entscheiden:  
   
 -   Sie können das Verwaltungstool auf demselben Computer wie den Distributed Replay-Controller oder auf anderen Computern installieren.  
   
@@ -46,7 +46,7 @@ Sie können Distributed Replay auf eine von drei Weisen installieren:
 -   Nach der Installation muss der Controllerdienst, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller, ausgeführt werden, bevor Sie den Distributed Replay Client-Dienst auf den Clients starten.  
   
 > [!NOTE]  
->  Um die Distributed Replay-Funktionen zu entfernen oder zu ändern, verwenden Sie das Fenster **Programme und Funktionen** in der **Systemsteuerung**. Wählen Sie im **Programm deinstallieren oder ändern**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aus, und klicken Sie anschließend auf **Entfernen** , um den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Installations-Assistenten zu öffnen. Kontrollieren Sie auf der Seite **Funktionen auswählen** die Distributed Replay-Funktionen, die Sie entfernen möchten.  
+>  Um die Distributed Replay-Funktionen zu entfernen oder zu ändern, verwenden Sie das Fenster **Programme und Funktionen** in der **Systemsteuerung**. Wählen Sie im **Programm deinstallieren oder ändern**[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] aus, und klicken Sie anschließend auf **Entfernen** , um den [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Installations-Assistenten zu öffnen. Kontrollieren Sie auf der Seite **Funktionen auswählen** die Distributed Replay-Funktionen, die Sie entfernen möchten.  
   
  **Voraussetzungen:**  
   
@@ -79,7 +79,7 @@ Sie können Distributed Replay auf eine von drei Weisen installieren:
   
 #### <a name="to-install-distributed-replay-features"></a>So installieren Sie Distributed Replay-Funktionen  
   
-1.  Um die Installation einer der Distributed Replay-Funktionen zu starten, öffnen Sie den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Installations-Assistenten.  
+1.  Um die Installation einer der Distributed Replay-Funktionen zu starten, öffnen Sie den [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Installations-Assistenten.  
   
 2.  Auf der Seite **Setupunterstützungsregeln** werden Probleme erkannt, die auftreten können, wenn die SQL Server-Setupunterstützungsdateien installiert werden. Sie müssen vor dem Fortfahren mit Setup alle Setupunterstützungsfehler korrigieren.  
   
@@ -87,7 +87,7 @@ Sie können Distributed Replay auf eine von drei Weisen installieren:
   
 4.  Lesen Sie auf der Seite **Lizenzbedingungen** den Lizenzvertrag, und aktivieren Sie dann das Kontrollkästchen, um den Lizenzbestimmungen zuzustimmen. Falls Sie zur Verbesserung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beitragen möchten, können Sie auch die Option zur Funktionsverwendung aktivieren und Berichte an [!INCLUDE[msCoName](../../includes/msconame-md.md)]senden.  
   
-5.  Klicken Sie auf der Seite **Setup-Unterstützungsdateien** auf **Installieren** , um die Setup-Unterstützungsdateien für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]zu installieren oder zu aktualisieren.  
+5.  Klicken Sie auf der Seite **Setup-Unterstützungsdateien** auf **Installieren** , um die Setup-Unterstützungsdateien für [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]zu installieren oder zu aktualisieren.  
   
 6.  Wählen Sie auf der Seite **Setuprolle** die **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionsinstallation** aus, und klicken Sie dann auf **Weiter** , um mit der Seite für die **Funktionsauswahl** fortzufahren.  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: reneye
 ms.author: v-reye
-ms.openlocfilehash: 4016f3eb5d725673b1e4149d43dc21d20cdc627f
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: 3970374537cc3491a0d8d624c3eccd31db0134e7
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534639"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076968"
 ---
 # <a name="using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver"></a>Verwenden von Always Encrypted mit Secure Enclaves mit dem JDBC-Treiber
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ Um Enclaveberechnungen für eine Datenbankverbindung zu ermöglichen, müssen Si
 
 - **enclaveAttestationUrl**: gibt eine Nachweis-URL (einen Endpunkt für den Nachweisdienst) an. Sie benötigen für Ihre Umgebung eine Nachweis-URL von dem Dienstadministrator, der für Nachweise zuständig ist.
   - Wenn Sie [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] und den Host-Überwachungsdienst verwenden, finden Sie weitere Informationen unter [Ermitteln und Freigeben der HGS-Nachweis-URL](../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - Wenn Sie [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und Microsoft Azure Attestation verwenden, finden Sie weitere Informationen unter [Ermitteln der Nachweis-URL für Ihre Nachweisrichtlinie](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
+  - Wenn Sie [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] und Microsoft Azure Attestation verwenden, finden Sie weitere Informationen unter [Ermitteln der Nachweis-URL für Ihre Nachweisrichtlinie](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation).
 
 Benutzer müssen **columnEncryptionSetting** aktivieren und **beide** der oben genannten Verbindungszeichenfolgen-Eigenschaften richtig festlegen, um Always Encrypted mit Secure Enclaves aus dem [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] zu aktivieren.
 

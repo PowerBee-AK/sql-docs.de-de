@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: a2ed61eb89deb29b22f82f39de4091f65be43cea
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 87294a8d20bf1c297c1629509a85cde7493b6ef5
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98595319"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076608"
 ---
 # <a name="before-installing-failover-clustering"></a>Vor dem Installieren des Failoverclusterings
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "98595319"
   
 -   Installieren Sie erforderliche Software. Installieren Sie vor dem Ausführen des Setups zum Installieren von oder Aktualisieren auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]die folgenden erforderlichen Komponenten, um die Installationsdauer zu verkürzen. Sie können die erforderliche Software auf jedem Failoverclusterknoten installieren und die Knoten anschließend einmal neu starten, bevor Sie Setup ausführen.  
   
-    -   Windows PowerShell wird nicht mehr vom Setup für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert. Windows PowerShell ist eine erforderliche Komponente zum Installieren von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Komponenten und [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Wenn Windows PowerShell nicht auf dem Computer vorhanden ist, können Sie die Komponente aktivieren, indem Sie die Anweisungen auf der Seite [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) befolgen.  
+    -   Windows PowerShell wird nicht mehr vom Setup für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert. Windows PowerShell ist eine erforderliche Komponente zum Installieren von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Komponenten und [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Wenn Windows PowerShell nicht auf dem Computer vorhanden ist, können Sie die Komponente aktivieren, indem Sie die Anweisungen auf der Seite [Windows Management Framework](/powershell/scripting/windows-powershell/wmf/overview) befolgen.  
   
     -   .NET Framework 3.5 SP1 wird vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup nicht mehr installiert; diese Version kann jedoch für die Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter älteren Windows-Betriebssystemen erforderlich sein. Weitere Informationen finden Sie in den [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Versionshinweise](/previous-versions/sql/sql-server-15/dn169381(v=sql.15)).  
   
@@ -145,7 +145,7 @@ ms.locfileid: "98595319"
   
 -   Lesen Sie [Security Considerations for a SQL Server Installation](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
--   Informationen zum Aktivieren der Kerberos-Authentifizierung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]finden Sie in der [Knowledge Base unter](https://support.microsoft.com/kb/319723) Verwenden der Kerberos-Authentifizierung in SQL Server [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
+-   Informationen zum Aktivieren der Kerberos-Authentifizierung in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]finden Sie in der [Knowledge Base unter](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/319723) Verwenden der Kerberos-Authentifizierung in SQL Server [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
 
 -   Die SQL Server-Failoverclusterinstanz (FCI) erfordert, dass die Clusterknoten einer Domäne beigetreten sind. Die folgenden Konfigurationen werden **nicht unterstützt**: 
     *   SQL-FCI in Arbeitsgruppenclustern. 
