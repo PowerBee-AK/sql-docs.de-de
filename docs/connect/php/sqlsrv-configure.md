@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_configure
 apitype: NA
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c99aff2e8453a2c2d16db34894935d5b1f7e5ff5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d54957aa83af94e4c139c52a59a31f542b4e3e77
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88413866"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158207"
 ---
 # <a name="sqlsrv_configure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ sqlsrv_configure( string $setting, mixed $value )
 |WarningsReturnAsErrors<sup>3</sup>|**true** (1) oder **false** (0)|**TRUE** (1)|  
   
 ## <a name="return-value"></a>Rückgabewert  
-Wenn **sqlsrv_configure** mit nicht unterstützten Einstellungen oder Werten aufgerufen wird, gibt die Funktion **false**zurück. Andernfalls gibt die Funktion **true**zurück.  
+Wenn **sqlsrv_configure** mit nicht unterstützten Einstellungen oder Werten aufgerufen wird, gibt die Funktion **false** zurück. Andernfalls gibt die Funktion **true** zurück.  
   
 ## <a name="remarks"></a>Bemerkungen  
 (1) Weitere Informationen zu clientseitigen Abfragen finden Sie unter [Cursortypen &#40;SQLSRV-Treiber&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  

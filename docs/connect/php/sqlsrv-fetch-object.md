@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_fetch_object
 apitype: NA
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1bcc9b0f7303a24bdd02d959e9b30044f3da26f2
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 6b173c2676f25b4866e1981611c1375e4cd1bf6b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92080669"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99154470"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 *$className* (optional): Eine Zeichenfolge, die den Namen der zu instanziierenden Klassen angibt. Falls der Wert für den *$className* -Parameter nicht festgelegt ist, wird eine Instanz der PHP **stdClass** instanziiert.  
   
-*$ctorParams* (optional): Ein Array, das Werte enthält, die an den Konstruktor der Klasse übergeben werden, die durch den *$className*-Parameter angegeben wird. Falls der Konstruktor der angegebenen Klasse Parameterwerte akzeptiert, muss der *$ctorParams* -Parameter verwendet werden, wenn **sqlsrv_fetch_object**aufgerufen wird.  
+*$ctorParams* (optional): Ein Array, das Werte enthält, die an den Konstruktor der Klasse übergeben werden, die durch den *$className*-Parameter angegeben wird. Falls der Konstruktor der angegebenen Klasse Parameterwerte akzeptiert, muss der *$ctorParams* -Parameter verwendet werden, wenn **sqlsrv_fetch_object** aufgerufen wird.  
   
 *row* (optional): Einer der folgenden Werte, der die Zeile angibt, auf die in einem Resultset zugegriffen wird, das einen scrollfähigen Cursor verwendet. (Wenn *row* angegeben ist, müssen *$className* und *$ctorParams* explizit angegeben werden, selbst wenn Sie für *$className* und *$ctorParams* NULL angeben müssen.)  
   
@@ -86,7 +86,7 @@ INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);
 SELECT SCOPE_IDENTITY()
 ```
   
-Falls die Ergebnisse dieser Abfrage mit **sqlsrv_fetch_object**abgerufen werden, wird der von `SELECT SCOPE_IDENTITY()` zurückgegebene Wert verworfen und eine Warnung ausgegeben. Um dies zu vermeiden, können Sie einen Namen für das zurückgegebene Feld in der Transact-SQL-Anweisung spezifizieren. Im Folgenden finden Sie eine Möglichkeit, einen Spaltennamen in Transact-SQL anzugeben:  
+Falls die Ergebnisse dieser Abfrage mit **sqlsrv_fetch_object** abgerufen werden, wird der von `SELECT SCOPE_IDENTITY()` zurückgegebene Wert verworfen und eine Warnung ausgegeben. Um dies zu vermeiden, können Sie einen Namen für das zurückgegebene Feld in der Transact-SQL-Anweisung spezifizieren. Im Folgenden finden Sie eine Möglichkeit, einen Spaltennamen in Transact-SQL anzugeben:  
   
 ```sql
 SELECT SCOPE_IDENTITY() AS PictureID
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="class-example"></a>Klassenbeispiel  
-Im folgenden Beispiel wird jede Zeile eines Resultsets als eine Instanz der im Skript definierten *Product* -Klasse abgerufen. Im Beispiel werden Produktinformationen aus den Tabellen *Purchasing.PurchaseOrderDetail* und *Production.Product* der AdventureWorks-Datenbank für Produkte mit einem angegebenen Fälligkeitsdatum (*DueDate*) und einer gelagerten Menge (*StockQty*), die kleiner als ein angegebener Wert ist, abgerufen. In diesem Beispiel sind einige der Regeln, die beim Spezifizieren einer Klasse in einem Aufruf an **sqlsrv_fetch_object**zur Anwendung kommen, noch einmal deutlich herausgestellt:  
+Im folgenden Beispiel wird jede Zeile eines Resultsets als eine Instanz der im Skript definierten *Product* -Klasse abgerufen. Im Beispiel werden Produktinformationen aus den Tabellen *Purchasing.PurchaseOrderDetail* und *Production.Product* der AdventureWorks-Datenbank für Produkte mit einem angegebenen Fälligkeitsdatum (*DueDate*) und einer gelagerten Menge (*StockQty*), die kleiner als ein angegebener Wert ist, abgerufen. In diesem Beispiel sind einige der Regeln, die beim Spezifizieren einer Klasse in einem Aufruf an **sqlsrv_fetch_object** zur Anwendung kommen, noch einmal deutlich herausgestellt:  
   
 -   Die *$product* -Variable ist eine Instanz der *Product* -Klasse, da „Produkt“ mit dem *$className* -Parameter spezifiziert wurde und die *Product* -Klasse existiert.  
   
@@ -243,7 +243,7 @@ INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);
 SELECT SCOPE_IDENTITY()
 ```
   
-Falls die Ergebnisse dieser Abfrage mit **sqlsrv_fetch_object**abgerufen werden, wird der von `SELECT SCOPE_IDENTITY()` zurückgegebene Wert verworfen und eine Warnung ausgegeben. Um dies zu vermeiden, können Sie einen Namen für das zurückgegebene Feld in der Transact-SQL-Anweisung spezifizieren. Im Folgenden finden Sie eine Möglichkeit, einen Spaltennamen in Transact-SQL anzugeben:  
+Falls die Ergebnisse dieser Abfrage mit **sqlsrv_fetch_object** abgerufen werden, wird der von `SELECT SCOPE_IDENTITY()` zurückgegebene Wert verworfen und eine Warnung ausgegeben. Um dies zu vermeiden, können Sie einen Namen für das zurückgegebene Feld in der Transact-SQL-Anweisung spezifizieren. Im Folgenden finden Sie eine Möglichkeit, einen Spaltennamen in Transact-SQL anzugeben:  
   
 ```sql
 SELECT SCOPE_IDENTITY() AS PictureID
