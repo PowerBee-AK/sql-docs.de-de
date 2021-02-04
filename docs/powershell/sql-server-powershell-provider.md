@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: matteot, drskwier
 ms.custom: ''
 ms.date: 07/31/2019
-ms.openlocfilehash: 68546680f73674b416aa42d141c7ea5d2f8b51b7
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 67ad8b940787f50f36ea6798282b651c290d4fca
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081909"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076202"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell-Anbieter
 
@@ -40,7 +40,7 @@ Die vom [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter impleme
 
 Produkte, deren Daten oder Objektmodelle in einer Hierarchie dargestellt werden können, verwenden Windows PowerShell-Anbieter, um die Hierarchien verfügbar zu machen. Die Hierarchie wird mithilfe einer Laufwerks- und Pfadstruktur verfügbar gemacht, die der für das Windows-Dateisystem verwendeten Struktur ähnelt.  
   
- Jeder Windows PowerShell-Anbieter implementiert ein oder mehrere Laufwerke. Jedes Laufwerk ist der Stammknoten einer Hierarchie verwandter Objekte. Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter implementiert ein Laufwerk mit der Bezeichnung SQLSERVER: Der Anbieter definiert auch einen Satz von primären Ordnern für das SQLSERVER:-Laufwerk. Jeder Ordner und seine Unterordner stellen den Satz von Objekten dar, auf die über ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object-Modell zugegriffen werden kann. Wenn sich der Fokus auf einem Unterordner in einem Pfad befindet, der mit einem dieser primären Ordner beginnt, können Sie die Methoden des zugeordneten Objektmodells verwenden, um Aktionen für das vom Knoten dargestellte Objekt auszuführen. Die vom [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Anbieter implementierten Windows PowerShell-Ordner werden in der folgenden Tabelle aufgeführt:  
+ Jeder Windows PowerShell-Anbieter implementiert ein oder mehrere Laufwerke. Jedes Laufwerk ist der Stammknoten einer Hierarchie verwandter Objekte. Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter implementiert ein Laufwerk mit der Bezeichnung SQLSERVER: Der Anbieter definiert auch einen Satz von primären Ordnern für das SQLSERVER:-Laufwerk. Jeder Ordner und seine Unterordner stellen den Satz von Objekten dar, auf die über ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object-Modell zugegriffen werden kann. Wenn sich der Fokus auf einem Unterordner in einem Pfad befindet, der mit einem dieser primären Ordner beginnt, können Sie die Methoden des zugeordneten Objektmodells verwenden, um Aktionen für das vom Knoten dargestellte Objekt auszuführen. Die vom [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]-Anbieter implementierten Windows PowerShell-Ordner werden in der folgenden Tabelle aufgeführt:  
   
 |Ordner|Namespace des SQL Server-Objektmodells|Objekte|  
 |------------|---------------------------------------|-------------|  
@@ -55,7 +55,7 @@ Produkte, deren Daten oder Objektmodelle in einer Hierarchie dargestellt werden 
 |`SQLSERVER:\DatabaseXEvent`|[Microsoft.SqlServer.Management.XEventDbScoped](/dotnet/api/microsoft.sqlserver.management.xeventdbscoped)|Erweiterte Ereignisse von SQL Server|
 |`SQLSERVER:\SQLAS`|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekte, z. B. Cubes, Aggregationen und Dimensionen|  
   
- Sie können z. B. mit dem Ordner "SQLSERVER:\SQL" Pfade beginnen, die jedes vom SMO-Objektmodell unterstützte Objekt darstellen können. Der erste Teil eines SQLSERVER:\SQL-Pfads ist SQLSERVER:\SQL\\*Computername*\\*Instanzname*. Die Knoten nach dem Instanznamen sind Objektsammlungen (wie *Datenbanken* oder *Sichten*) und Objektnamen (wie AdventureWorks2012). Schemas werden nicht als Objektklassen dargestellt. Wenn Sie den Knoten für ein Objekt der höchsten Ebene in einem Schema angeben, wie beispielsweise eine Tabelle oder eine Sicht, müssen Sie den Objektnamen im Format *Schemaname.Objektname*angeben.  
+ Sie können z. B. mit dem Ordner "SQLSERVER:\SQL" Pfade beginnen, die jedes vom SMO-Objektmodell unterstützte Objekt darstellen können. Der erste Teil eines SQLSERVER:\SQL-Pfads ist SQLSERVER:\SQL\\*Computername*\\*Instanzname*. Die Knoten nach dem Instanznamen sind Objektsammlungen (wie *Datenbanken* oder *Sichten*) und Objektnamen (wie AdventureWorks2012). Schemas werden nicht als Objektklassen dargestellt. Wenn Sie den Knoten für ein Objekt der höchsten Ebene in einem Schema angeben, wie beispielsweise eine Tabelle oder eine Sicht, müssen Sie den Objektnamen im Format *Schemaname.Objektname* angeben.  
   
  Im folgenden Beispiel wird der Pfad der Vendor-Tabelle im Purchasing-Schema der AdventureWorks2012-Datenbank in einer Standardinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] auf dem lokalen Computer angezeigt:  
   

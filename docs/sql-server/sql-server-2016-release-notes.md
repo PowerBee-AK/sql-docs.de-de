@@ -14,12 +14,12 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016
-ms.openlocfilehash: 720da25fe19f064c6a6eb3b363832b76113e2c5b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: dad7665ffa825a80aa6bcb3050b04a96060c3f65
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97409696"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076042"
 ---
 # <a name="sql-server-2016-release-notes"></a>Versionsanmerkungen zu SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -60,7 +60,7 @@ Unterstützbarkeit und Diagnose betreffende Verbesserungen sind in SQL Server 20
 |Vollständige DTC-Unterstützung für Datenbanken in einer Verfügbarkeitsgruppe   |   Datenbankübergreifende Transaktionen für Datenbanken, die Teil einer Verfügbarkeitsgruppe sind, werden für SQL Server 2016 nicht unterstützt. Mit SQL Server 2016 SP2 führen wir die vollständige Unterstützung für verteilte Transaktionen mit Datenbanken der Verfügbarkeitsgruppe ein.   |      |
 |Update für die Spalte „is_encrypted“ in „sys.database“ zur genauen Wiedergabe des Verschlüsselungsstatus für TempDB   |   Der Wert der Spalte „is_encrypted“ in „sys.databases“ beträgt 1 für tempdb, auch wenn Sie die Verschlüsselung für alle Benutzerdatenbanken deaktivieren und SQL Server neu starten. Das erwartete Verhalten ist, dass der Wert 0 (null) ist, da tempdb in dieser Situation nicht länger verschlüsselt ist. Beginnend mit SQL Server 2016 SP2 gibt „is_encrypted“ in „sys.databases“ nun den Verschlüsselungsstatus für tempdb genau wieder.   |      |
 |Neue DBCC CLONEDATABASE-Optionen zum Generieren verifizierter Klone und Sicherungsklone   |   Mit SQL Server 2016 SP2 lässt DBCC CLONEDATABASE jetzt zwei neue Optionen zu: das Erstellen eines verifizierten Klons oder eines Sicherungsklons. Wenn eine Klondatenbank mithilfe der Option WITH VERIFY_CLONEDB erstellt wird, wird auch ein konsistenter Datenbankklon erstellt und geprüft, der von Microsoft in der Produktion unterstützt wird. Eine neue Eigenschaft wird eingeführt, um zu überprüfen, ober der Klon die verifizierte Eigenschaft SELECT DATABASEPROPERTYEX(‘clone_database_name’, ‘IsVerifiedClone’) ist. Wenn ein Klon mit der Option BACKUP_CLONEDB erstellt wird, wird eine Sicherung im selben Ordner, in dem sich auch die Datendatei befindet, erstellt. Dadurch können Kunden den Klon leichter auf unterschiedliche Server verschieben oder an den Microsoft-Kundenservice (CSS) zur Problembehandlung senden.   |      |
-|Unterstützung für Service Broker (SSB) für DBCC CLONEDATABASE   |   Der erweiterte DBCC CLONEDATABASE-Befehl zum Zulassen der Skripterstellung von SSB-Objekten   |   [KB4092075](https://support.microsoft.com/help/4092075)   |
+|Unterstützung für Service Broker (SSB) für DBCC CLONEDATABASE   |   Der erweiterte DBCC CLONEDATABASE-Befehl zum Zulassen der Skripterstellung von SSB-Objekten   |      |
 |Neue dynamische Verwaltungssicht (DMV) zur Überwachung des tempdb-Speicherplatzverbrauchs   |   Die neue DMV „sys.dm_tran_version_store_space_usage“ wird in SQL Server 2016 SP2 eingeführt, um die Überwachung von tempdb für die Versionsspeichernutzung zu aktivieren. Datenbankadministratoren können tempdb-Größen basierend auf der Anforderung an die Versionsspeichernutzung pro Datenbank proaktiv planen. Dies geschieht ohne Mehraufwand an Leistung, wenn die Ausführung auf Produktionsservern erfolgt.   |      |
 |Unterstützung von vollständigen Speicherabbildern für Replikations-Agents | Wenn Replikations-Agents auf Ausnahmefehler stoßen, erstellen sie aktuell standardmäßig ein Miniabbild der Ausnahmesymptome. Dadurch wird die Problembehandlung von Ausnahmefehlern sehr schwierig. Mit dieser Änderung führen wir einen neuen Registrierungsschlüssel ein, der die Erstellung eines vollständigen Speicherabbilds für Replikations-Agents ermöglicht.   |      |
 |Verbesserung für erweiterte Ereignisse zum Lesen von Routingfehlern für eine Verfügbarkeitsgruppe   |   Derzeit wird „read_only_rout_fail xEvent“ nur ausgelöst, wenn zwar eine Routingliste besteht, jedoch zu keinem der Server auf der Liste eine Verbindung hergestellt werden kann. SQL Server 2016 SP2 beinhaltet zusätzliche Informationen zur Unterstützung bei der Problembehandlung und Erweiterungen zu den Codepunkten, bei denen xEvent ausgelöst wird.   |      |
@@ -106,7 +106,7 @@ Die folgenden Features sind in der Standard, Web, Express und Local DB Edition v
 
 In der folgenden Tabelle werden wichtige Verbesserungen in SQL Server 2016 SP1 zusammengefasst.
 
-|Funktion|BESCHREIBUNG|Weitere Informationen|
+|Funktion|Beschreibung|Weitere Informationen|
 |---|---|---|
 |Masseneinfügung in Heaps mit automatischem TABLOCK unter TF 715| Das Ablaufverfolgungsflag 715 aktiviert Tabellensperren für Massenladevorgänge in einen Heap ohne nicht gruppierte Indizes.|[Migrating SAP workloads to SQL Server just got 2.5x faster (Beschleunigung der Migration von SAP-Workloads zu SQL Server um das 2,5-fache)](/archive/blogs/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster)|
 |CREATE OR ALTER|Bereitstellen von Objekten wie gespeicherten Prozeduren, Triggern, benutzerdefinierten Funktionen und Ansichten.|[Blog der SQL Server-Datenbank-Engine](/archive/blogs/sqlserverstorageengine/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1)|

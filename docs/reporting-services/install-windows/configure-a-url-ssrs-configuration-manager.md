@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b0ff8cd92d090424bbf7a17315dc09dfb7b8a06f
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 7a58a11e71c471bf02ca68ddaf4a416c3d9c554b
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934782"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075702"
 ---
 # <a name="configure-a-url--report-server-configuration-manager"></a>Konfigurieren einer URL (Berichtsserver-Konfigurations-Manager)
   Bevor Sie das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] oder den Berichtsserver-Webdienst verwenden können, müssen Sie mindestens eine URL für jede Anwendung konfigurieren. Die Konfiguration der URLs ist obligatorisch, wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im Modus zur ausschließlichen Installation von Dateien installiert haben (also durch Auswahl der Option **Server installieren, jedoch nicht konfigurieren** auf der Seite mit den Berichtsserver-Installationsoptionen im Installations-Assistenten). Wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der Standardkonfiguration installiert haben, sind die URLs bereits für jede Anwendung konfiguriert.  
@@ -59,11 +59,11 @@ ms.locfileid: "91934782"
   
      Beim Report Server-Webdienst lautet der Standardname für das virtuelle Verzeichnis **reportserver**.  
   
-4.  Geben Sie die IP-Adresse an, die den Berichtsservercomputer im Netzwerk eindeutig identifiziert. Wenn Sie einen Hostheader angeben oder weitere URLs für dieselbe Anwendungsinstanz definieren möchten, müssen Sie auf **Erweitert**klicken. Anweisungen zur Einrichtung erweiterter Eigenschaften für die URL finden Sie weiter unten in diesem Thema. Verwenden Sie andernfalls die Seite **Webdienst-URL** , um eine Auswahl aus folgenden Werten zu treffen:  
+4.  Geben Sie die IP-Adresse an, die den Berichtsservercomputer im Netzwerk eindeutig identifiziert. Wenn Sie einen Hostheader angeben oder weitere URLs für dieselbe Anwendungsinstanz definieren möchten, müssen Sie auf **Erweitert** klicken. Anweisungen zur Einrichtung erweiterter Eigenschaften für die URL finden Sie weiter unten in diesem Thema. Verwenden Sie andernfalls die Seite **Webdienst-URL** , um eine Auswahl aus folgenden Werten zu treffen:  
   
-    -   Der Wert**Alle zugewiesenen** gibt an, dass alle IP-Adressen, die dem Computer zugewiesen sind, in einer URL verwendet werden können, die auf eine Berichtsserveranwendung verweist. Dieser Wert umfasst auch Host-Anzeigenamen (z. B. Computernamen), die durch einen Domänennamenserver in eine IP-Adresse aufgelöst werden können, die dem Computer zugewiesen ist. Dies ist der Standardwert für eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URL.  
+    -   Der Wert **Alle zugewiesenen** gibt an, dass alle IP-Adressen, die dem Computer zugewiesen sind, in einer URL verwendet werden können, die auf eine Berichtsserveranwendung verweist. Dieser Wert umfasst auch Host-Anzeigenamen (z. B. Computernamen), die durch einen Domänennamenserver in eine IP-Adresse aufgelöst werden können, die dem Computer zugewiesen ist. Dies ist der Standardwert für eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URL.  
   
-    -   Mit**Alle nicht zugewiesenen** wird angegeben, dass der Berichtsserver alle Anforderungen erhält, die nicht von einer anderen Anwendung bearbeitet werden. Sie sollten diese Option vermeiden. Wenn Sie diese Option auswählen, kann eine andere Anwendung, die eine stärkere URL-Reservierung aufweist, Anforderungen abfangen, die für den Berichtsserver gedacht waren.  
+    -   Mit **Alle nicht zugewiesenen** wird angegeben, dass der Berichtsserver alle Anforderungen erhält, die nicht von einer anderen Anwendung bearbeitet werden. Sie sollten diese Option vermeiden. Wenn Sie diese Option auswählen, kann eine andere Anwendung, die eine stärkere URL-Reservierung aufweist, Anforderungen abfangen, die für den Berichtsserver gedacht waren.  
   
     -   **127.0.0.1** ist die für den Zugriff auf localhost verwendete IPv4-Adresse. Sie unterstützt die lokale Verwaltung auf dem Berichtsservercomputer. Wenn Sie nur diesen Wert auswählen, haben nur Benutzer, die lokal auf dem Berichtsservercomputer angemeldet sind, Zugriff auf die Anwendung.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "91934782"
   
          `netstat -anp tcp`  
   
-    -   Im Microsoft-Support-Artikel [Informationen zur Zuweisung von TCP/IP-Ports](https://support.microsoft.com/kb/174904)finden Sie Informationen zur Zuweisung von TCP-Ports und zu den Unterschieden zwischen bekannten Ports (0 bis 1023), registrierten Ports (1024 bis 49151) und dynamischen bzw. privaten Ports (49152 bis 65535).  
+    -   Im Microsoft-Support-Artikel [Informationen zur Zuweisung von TCP/IP-Ports](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/174904)finden Sie Informationen zur Zuweisung von TCP-Ports und zu den Unterschieden zwischen bekannten Ports (0 bis 1023), registrierten Ports (1024 bis 49151) und dynamischen bzw. privaten Ports (49152 bis 65535).  
   
     -   Bei Verwendung der Windows-Firewall müssen Sie den Port öffnen. Anweisungen finden Sie unter [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   

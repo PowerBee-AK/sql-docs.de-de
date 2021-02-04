@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 968de0f9cf8c95b13a67f3fb2b0f36e3d8c09ced
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 74bf6f0da0daa0df248243ffbce505c75c55db5e
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91986112"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076322"
 ---
 # <a name="troubleshoot-server--database-connection-problems-with-reporting-services"></a>Beheben von Problemen mit Server- und Datenbankverbindungen mithilfe von Reporting Services
 Verwenden Sie dieses Thema, um Probleme zu behandeln, die beim Herstellen einer Verbindung mit einem Berichtsserver auftreten. In diesem Thema werden außerdem Informationen zu "Unerwartete Fehler"-Meldungen bereitgestellt. Weitere Informationen zum Konfigurieren von Datenquellen und Konfigurieren von Verbindungsinformationen des Berichtsservers finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) und [Konfigurieren einer Berichtsserver-Datenbankverbindung (Berichtsserver-Konfigurations-Manager)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="cannot-create-a-connection-to-data-source-datasourcename-rserroropeningconnection"></a>Es kann keine Verbindung mit der 'datasourcename'-Datenquelle hergestellt werden. (rsErrorOpeningConnection)  
-Dies ist eine generischer Fehler, der auftritt, wenn vom Berichtsserver keine Verbindung mit einer externen Datenquelle hergestellt werden kann, die Daten für einen Bericht bereitstellt. Dieser Fehler wird mit einer zweiten Fehlermeldung angezeigt, in der die zugrunde liegende Ursache angegeben wird. Bei **rsErrorOpeningConnection**können die folgenden weiteren Fehler angezeigt werden.  
+Dies ist eine generischer Fehler, der auftritt, wenn vom Berichtsserver keine Verbindung mit einer externen Datenquelle hergestellt werden kann, die Daten für einen Bericht bereitstellt. Dieser Fehler wird mit einer zweiten Fehlermeldung angezeigt, in der die zugrunde liegende Ursache angegeben wird. Bei **rsErrorOpeningConnection** können die folgenden weiteren Fehler angezeigt werden.  
   
 ### <a name="login-failed-for-user-username"></a>Fehler bei der Anmeldung für den Benutzer 'UserName'  
 Der Benutzer verfügt nicht über Berechtigungen zum Zugreifen auf die Datenquelle. Überprüfen Sie, ob der Benutzer über einen gültigen Benutzeranmeldenamen für die Datenbank verfügt, wenn Sie eine SQL Server-Datenbank verwenden. Weitere Informationen zum Erstellen eines Datenbankbenutzers oder einer SQL Server-Anmeldung finden Sie unter [Erstellen eines Datenbankbenutzers](../../relational-databases/security/authentication-access/create-a-database-user.md) und [Erstellen einer SQL Server-Anmeldung](../../relational-databases/security/authentication-access/create-a-login.md).  
@@ -35,7 +35,7 @@ Beim Herstellen einer Verbindung mit SQL Server kann dieser Fehler durch den Ums
 * Überprüfen Sie, ob die Berichtsserver-URL und die Verbindungszeichenfolge für die Berichtsserver-Datenbank richtig sind. Wenn Reporting Services oder die Datenbank-Engine als benannte Instanz installiert wurde, beinhaltet die bei der Installation erstellte Standard-Verbindungszeichenfolge den Instanznamen. Wenn Sie z.B. eine Standardinstanz von SQL Server Express with Advanced Services auf einem Server mit dem Namen DEVSRV01 installiert haben, lautet die Webportal-URL „DEVSRV01\Reports$SQLEXPRESS“. Außerdem lautet der Datenbank-Servername in der Verbindungszeichenfolge ähnlich wie DEVSRV01\SQLEXPRESS. Weitere Informationen über URLs und Datenquellen-Verbindungszeichenfolgen für SQL Server Express finden Sie unter [Reporting Services in SQL Server Express with Advanced Services](/previous-versions/sql/sql-server-2008-r2/ms365166(v=sql.105)). Starten Sie zum Überprüfen der Verbindungszeichenfolge für die Berichtsserver-Datenbank das Reporting Services-Konfigurationstool, und überprüfen Sie die Seite „Setup der Datenbank“.  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>Es kann keine Verbindung hergestellt werden. Stellen Sie sicher, dass der Server ausgeführt wird.  
-Dieser Fehler wird vom ADOMD.NET-Anbieter zurückgegeben. Es gibt verschiedene Gründe für das Auftreten dieses Fehlers. Wenn Sie den Server als "localhost" angegeben haben, versuchen Sie, stattdessen den Servernamen anzugeben. Dieser Fehler kann auch auftreten, wenn der neuen Verbindung kein Arbeitsspeicher zugeordnet werden kann. Weitere Informationen finden Sie unter [Knowledge Base-Artikel 912017 – Fehlermeldung beim Herstellen einer Verbindung mit einer Instanz von SQL Server 2005 Analysis Services](https://support.microsoft.com/kb/912017).  
+Dieser Fehler wird vom ADOMD.NET-Anbieter zurückgegeben. Es gibt verschiedene Gründe für das Auftreten dieses Fehlers. Wenn Sie den Server als "localhost" angegeben haben, versuchen Sie, stattdessen den Servernamen anzugeben. Dieser Fehler kann auch auftreten, wenn der neuen Verbindung kein Arbeitsspeicher zugeordnet werden kann. Weitere Informationen finden Sie unter [Knowledge Base-Artikel 912017 – Fehlermeldung beim Herstellen einer Verbindung mit einer Instanz von SQL Server 2005 Analysis Services](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/912017).  
   
 Wenn die Fehlermeldung auch "Der angegebene Host ist unbekannt." enthält, ist dies ein Hinweis darauf, dass der Analysis Services-Server nicht verfügbar ist oder die Verbindung ablehnt. Möglicherweise müssen Sie den SQL Server-Browserdienst ausführen, um die von dieser Instanz verwendete Portnummer abzurufen, wenn der Analysis Services-Server als eine benannte Instanz auf einem Remotecomputer installiert ist.  
   
@@ -48,10 +48,10 @@ Um diesen Fehler zu beheben, können Sie entweder die Verbindungszeichenfolge so
   
 1. Starten Sie den SQL Server-Konfigurations-Manager.  
 2. Erweitern Sie **SQL Server-Netzwerkkonfiguration**.  
-3. Wählen Sie **Protokolle für MSSQLSERVER**aus.  
-4. Klicken Sie mit der rechten Maustaste auf **TCP/IP**, und wählen Sie dann **Aktivieren**aus.  
-5. Wählen Sie **SQL Server-Dienste**aus.  
-6. Klicken Sie mit der rechten Maustaste auf **SQL Server (MSSQLSERVER)** , und wählen Sie dann **Neu starten**aus.  
+3. Wählen Sie **Protokolle für MSSQLSERVER** aus.  
+4. Klicken Sie mit der rechten Maustaste auf **TCP/IP**, und wählen Sie dann **Aktivieren** aus.  
+5. Wählen Sie **SQL Server-Dienste** aus.  
+6. Klicken Sie mit der rechten Maustaste auf **SQL Server (MSSQLSERVER)** , und wählen Sie dann **Neu starten** aus.  
   
 ## <a name="wmi-error-when-connecting-to-a-report-server-in-management-studio"></a>WMI-Fehler beim Herstellen einer Verbindung mit einem Berichtsserver in Management Studio  
 Standardmäßig verwendet Management Studio den Reporting Services-WMI-Anbieter (Windows Management Instrumentation, Windows-Verwaltungsinstrumentation), um eine Verbindung mit dem Berichtsserver herzustellen. Wenn der WMI-Anbieter nicht ordnungsgemäß installiert ist, tritt beim Versuch, eine Verbindung mit dem Berichtsserver herzustellen, der folgende Fehler auf:  
@@ -60,7 +60,7 @@ Es kann keine Verbindung mit \<your server name> hergestellt werden. Der WMI-Anb
   
 Um diesen Fehler zu beheben, sollten Sie die Software neu installieren. In allen anderen Fällen können Sie das Problem zeitweilig umgehen, indem Sie über den SOAP-Endpunkt eine Verbindung mit dem Berichtsserver herstellen:  
   
-* Geben Sie in Management Studio im Dialogfeld **Verbindung mit Server herstellen** unter **Servername**die URL des Berichtsservers ein. Standardmäßig ist dies `https://<your server name>/reportserver`. Wenn Sie SQL Server 2008 Express with Advanced Services verwenden, ist die Standardeinstellung `https://<your server name>/reportserver$sqlexpress`.  
+* Geben Sie in Management Studio im Dialogfeld **Verbindung mit Server herstellen** unter **Servername** die URL des Berichtsservers ein. Standardmäßig ist dies `https://<your server name>/reportserver`. Wenn Sie SQL Server 2008 Express with Advanced Services verwenden, ist die Standardeinstellung `https://<your server name>/reportserver$sqlexpress`.  
   
 Um den Fehler zu beheben, damit Sie über den WMI-Anbieter eine Verbindung herstellen können, führen Sie das Installationsprogramm aus, um Reporting Services zu reparieren oder neu zu installieren.  
   
@@ -108,7 +108,7 @@ Es gibt zwei Lösungen für dieses Problem:
 * WSS_Content_Application_Pools-Rolle in der Datenbank SharePoint_Config  
   
 ## <a name="unable-to-connect-to-the-reports-and-reportserver-directories-when-the-report-server-databases-are-created-on-a-virtual-sql-server-that-runs-in-a-microsoft-cluster-services-mscs-cluster"></a>Die Verbindung mit den Verzeichnissen /reports und /reportserver ist nicht möglich, wenn die Berichtsserverdatenbanken auf einem virtuellen SQL Server erstellt werden, der auf einem MSCS-Cluster (Microsoft-Clusterdienste) ausgeführt wird.  
-Wenn Sie die Berichtsserverdatenbanken **ReportServer** und **ReportServerTempDB**auf einem virtuellen SQL Server erstellen, der in einem MSCS-Cluster ausgeführt wird, wird der Remotename im Format `<domain>\<computer_name>$` möglicherweise nicht als Anmeldung auf dem SQL Server registriert. Wenn Sie das Berichtsserver-Dienstkonto als ein Konto konfiguriert haben, das diesen Remotenamen für Verbindungen erfordert, können Benutzer keine Verbindung mit den Verzeichnissen „/reports“ und „/reportserver“ in Reporting Services herstellen. Zum Beispiel erfordert das integrierte Windows-Konto NetworkService diesen Remotenamen. Um dieses Problem zu vermeiden, verwenden Sie ein explizites Domänenkonto oder eine SQL Server-Anmeldung, um eine Verbindung mit den Berichtsserverdatenbanken herzustellen.  
+Wenn Sie die Berichtsserverdatenbanken **ReportServer** und **ReportServerTempDB** auf einem virtuellen SQL Server erstellen, der in einem MSCS-Cluster ausgeführt wird, wird der Remotename im Format `<domain>\<computer_name>$` möglicherweise nicht als Anmeldung auf dem SQL Server registriert. Wenn Sie das Berichtsserver-Dienstkonto als ein Konto konfiguriert haben, das diesen Remotenamen für Verbindungen erfordert, können Benutzer keine Verbindung mit den Verzeichnissen „/reports“ und „/reportserver“ in Reporting Services herstellen. Zum Beispiel erfordert das integrierte Windows-Konto NetworkService diesen Remotenamen. Um dieses Problem zu vermeiden, verwenden Sie ein explizites Domänenkonto oder eine SQL Server-Anmeldung, um eine Verbindung mit den Berichtsserverdatenbanken herzustellen.  
     
   ## <a name="see-also"></a>Weitere Informationen  
 [Browser Support for Reporting Services and Power View (Browserunterstützung für Reporting Services und Power View)](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  

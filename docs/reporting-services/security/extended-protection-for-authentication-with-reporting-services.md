@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 72e29a5be172bdf00f9c57358cbbaa1e9bae5a09
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: b13ca53aad69647aee5158d86de2cfb16ac04710
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98594823"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076102"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Erweiterter Schutz für die Authentifizierung mit Reporting Services
 
@@ -25,7 +25,7 @@ ms.locfileid: "98594823"
 SQL Server Reporting Services (SSRS) unterstützt und erzwingt erweiterten Schutz, der im Betriebssystem aktiviert und in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] konfiguriert wurde. Standardmäßig akzeptiert [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Anforderungen, die Negotiate- oder NTLM-Authentifizierung angeben und daher im Betriebssystem von der Unterstützung des erweiterten Schutzes und der erweiterten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Schutzfunktionen profitieren könnten.  
   
 > [!IMPORTANT]  
->  Windows aktiviert den erweiterten Schutz nicht standardmäßig. Informationen zum Aktivieren des erweiterten Schutzes in Windows finden Sie unter [Erweiterter Schutz für die Authentifizierung](https://go.microsoft.com/fwlink/?LinkID=178431). Sowohl das Betriebssystem als auch der Clientauthentifizierungsstapel müssen den erweiterten Schutz unterstützen, damit die Authentifizierung erfolgreich ist. Bei älteren Betriebssystemen müssen Sie möglicherweise mehr als ein Update für einen Computer mit vollständigem erweiterten Schutz installieren. Informationen zu aktuellen Entwicklungen mit erweitertem Schutz finden Sie in den [aktualisierten Informationen mit erweitertem Schutz](/previous-versions/sql/sql-server-2008/dd146365(v=sql.100)).  
+>  Windows aktiviert den erweiterten Schutz nicht standardmäßig. Informationen zum Aktivieren des erweiterten Schutzes in Windows finden Sie unter [Erweiterter Schutz für die Authentifizierung](https://support.microsoft.com/topic/microsoft-security-advisory-extended-protection-for-authentication-7dd2ee6d-c2e9-3484-2d8e-466261d3f0c7). Sowohl das Betriebssystem als auch der Clientauthentifizierungsstapel müssen den erweiterten Schutz unterstützen, damit die Authentifizierung erfolgreich ist. Bei älteren Betriebssystemen müssen Sie möglicherweise mehr als ein Update für einen Computer mit vollständigem erweiterten Schutz installieren. Informationen zu aktuellen Entwicklungen mit erweitertem Schutz finden Sie in den [aktualisierten Informationen mit erweitertem Schutz](/previous-versions/sql/sql-server-2008/dd146365(v=sql.100)).  
 
 ## <a name="reporting-services-extended-protection-overview"></a>Übersicht über Reporting Services mit erweitertem Schutz
 

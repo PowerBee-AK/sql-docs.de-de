@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 67f25ef21a7d4897bba7242da796bd41f9fc655e
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 9422651db34ab9c423a960b9d945d1c748f25d93
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642202"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075952"
 ---
 # <a name="sqlservr-application"></a>sqlservr (Anwendung)
 
@@ -81,7 +81,7 @@ Mit **-s** *instance_name* wird die Instanz von [!INCLUDE[ssNoVersion](../includ
 In den meisten Fällen wird das Programm sqlserver.exe nur zur Problembehandlung oder für größere Wartungsarbeiten verwendet. Wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mithilfe von „sqlservr.exe“ von der Eingabeaufforderung aus gestartet wird, wird [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht als Dienst gestartet. Es ist daher nicht möglich, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mithilfe von **net** -Befehlen zu beenden. Benutzer können eine Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]herstellen, aber die Tools von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zeigen den Status des Dienstes an. Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager gibt daher vollkommen richtig an, dass der Dienst beendet wurde. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] kann eine Verbindung zum Server herstellen, gibt jedoch ebenfalls an, dass der Dienst beendet wurde.
 
 ## <a name="compatibility-support"></a>Kompatibilitätsunterstützung
-Die folgenden Parameter sind veraltet und werden in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] nicht unterstützt.
+Die folgenden Parameter sind veraltet und werden in [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] nicht unterstützt.
 
 |Parameter | Weitere Informationen|
 |:-----|:-----|

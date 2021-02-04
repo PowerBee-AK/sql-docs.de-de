@@ -11,12 +11,12 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016
-ms.openlocfilehash: adfd91c6771626aa0979da622d95766a2e4e5613
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ad4cdfc2ba27051b5186a4934b2afceb42245b49
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97409626"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076022"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ Zudem sollten Sie folgende Problembehandlungen beachten:
 SQL Server 2014 SP1 enthält in SQL Server 2014 CU 1 bis einschließlich CU 5 bereitgestellte Fehlerbehebungen sowie ein Rollup mit Fehlerbehebungen, die in SQL Server 2012 SP2 bereits veröffentlicht wurden.
 
 > [!NOTE]
-> Wenn der SSISDB-Katalog auf Ihrer SQL Server-Instanz aktiviert ist und beim Durchführen eines Upgrades auf SP1 ein Fehler auftritt, sollten Sie die unter [Fehler 912 oder 3417 bei der Installation von SQL Server 2014 SP1](https://support.microsoft.com/help/3018269/error-912-or-3417-when-you-install-sql-server-2014-sp1-build-12-0-4050/) zu diesem Fehler beschriebenen Anweisungen befolgen.
+> Wenn der SSISDB-Katalog auf Ihrer SQL Server-Instanz aktiviert ist und beim Durchführen eines Upgrades auf SP1 ein Fehler auftritt, sollten Sie die unter [Fehler 912 oder 3417 bei der Installation von SQL Server 2014 SP1](https://support.microsoft.com/topic/kb3018269-error-912-or-3417-when-you-install-sql-server-2014-sp1-build-12-0-4050-0-7f34525c-d517-6399-a31b-e7033db13706) zu diesem Fehler beschriebenen Anweisungen befolgen.
 
 ### <a name="download-pages-and-more-information-for-sp1"></a>Downloadseiten und weitere Informationen zu SP1
 

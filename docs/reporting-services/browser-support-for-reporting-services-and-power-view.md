@@ -1,7 +1,7 @@
 ---
 title: Browserunterstützung für Reporting Services und Power View | Microsoft-Dokumentation
 description: Erfahren Sie, welche Browserversionen zum Verwalten und Anzeigen von SQL Server Reporting Services, der ReportViewer-Steuerelemente und Power View unterstützt werden.
-ms.date: 07/02/2017
+ms.date: 01/28/2021
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aa8a9fbbcadfcdd3c266de4b1453ea7e5402e1af
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e246db4f2a7b2a94ce17f8a48acf05b16aebbdf4
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466651"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049019"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Browserunterstützung für Reporting Services und Power View
 
@@ -95,8 +95,8 @@ Im Folgenden finden Sie die aktuelle Liste der unterstützten Browser für das W
 
 |**Browsertyp**|**Unterstützt**|**Browserstandard**|**Serverstandard**|
 |----------------------|------------------|-------------------------|------------------------|
-|**Microsoft Edge** (+)|Negotiate, Kerberos, NTLM, Basic|Aushandeln|Ja. Die Standardauthentifizierungseinstellungen können mit Edge verwendet werden.|
-|**Microsoft Internet Explorer**|Negotiate, Kerberos, NTLM, Basic|Aushandeln|Ja. Die Standardauthentifizierungseinstellungen können mit Internet Explorer verwendet werden.|
+|**Microsoft Edge** (+)|Negotiate, NTLM, Basic|Aushandeln|Ja. Die Standardauthentifizierungseinstellungen können mit Edge verwendet werden.|
+|**Microsoft Internet Explorer**|Negotiate, NTLM, Basic|Aushandeln|Ja. Die Standardauthentifizierungseinstellungen können mit Internet Explorer verwendet werden.|
 |**Google Chrome**(+)|Negotiate, NTLM, Basic|Aushandeln|Ja. Die Standardauthentifizierungseinstellungen können mit Chrome verwendet werden.|
 |**Mozilla Firefox**(+)|NTLM, Standard|NTLM|Ja. Die Standardauthentifizierungseinstellungen können mit Firefox verwendet werden.|
 |**Apple Safari**(+)|NTLM, Standard|Basic|Ja. Die Standardauthentifizierungseinstellungen können mit Safari verwendet werden.|
