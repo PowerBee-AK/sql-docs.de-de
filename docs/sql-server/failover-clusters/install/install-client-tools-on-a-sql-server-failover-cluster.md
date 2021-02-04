@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: a596212e17e6fb273b9a6c4f5a2548aff1bc1e7f
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 12703b6b6103646cafdcf42a12837041c3b20567
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642840"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251383"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>Installieren von Clienttools auf einem SQL Server-Failovercluster
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "97642840"
   
 3.  Die Systemkonfigurationsprüfung überprüft den Systemstatus des Computers, bevor Setup fortgesetzt wird.  
   
-4.  Klicken Sie auf der Seite **Installationstyp** auf **Neuinstallation von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ausführen**.  
+4.  Klicken Sie auf der Seite **Installationstyp** auf **Neuinstallation von [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] ausführen**.  
   
 5.  Wählen Sie auf der Seite **Funktionsauswahl** die zu installierenden Tools aus, und führen Sie die restlichen Schritte des Setupvorgangs durch.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "97642840"
 3.  Führen Sie den folgenden Befehl aus, um alle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verwaltungstools zu installieren: Setup.exe/q/Action=Install /Features=ADV_SSMS. Weitere Informationen zu den Parameterwerten für die Funktionen finden Sie unter [Installieren von SQL Server 2016 von der Eingabeaufforderung](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ### <a name="uninstalling-ssnoversion-client-tools"></a>Deinstallieren von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clienttools  
- Sie werden in der Systemsteuerung unter Software als **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** angezeigt und können dort auch entfernt werden. Wenn Sie die Option Knoten entfernen zum Deinstallieren einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] im Failovercluster verwenden, werden die Clientkomponenten nicht gleichzeitig deinstalliert.  
+ Sie werden in der Systemsteuerung unter Software als **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]** angezeigt und können dort auch entfernt werden. Wenn Sie die Option Knoten entfernen zum Deinstallieren einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] im Failovercluster verwenden, werden die Clientkomponenten nicht gleichzeitig deinstalliert.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
