@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: e15751fb064d2843770d72f26db94b29de28f199
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 1f9b85e3d2f14eb534956c218d38f98b634dc89c
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867596"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813284"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Verschieben einer TDE-geschützten Datenbank auf einen anderen SQL-Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91867596"
   
 ##  <a name="to-create-a-database-protected-by-transparent-data-encryption"></a><a name="SSMSProcedure"></a> So erstellen Sie eine durch transparente Datenverschlüsselung geschützte Datenbank  
 
-Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mithilfe von SQL Server Management Studio und Transact-SQL erstellen sollten.
+Die folgenden Verfahren zeigen, wie Sie eine von TDE geschützte Datenbank mithilfe von SQL Server Management Studio und Transact-SQL erstellen.
   
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> Verwenden von SQL Server Management Studio  
   
@@ -58,12 +58,12 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
   
 6.  Klicken Sie im Objekt-Explorer auf das Pluszeichen, um den Ordner **Datenbank** zu erweitern.  
   
-7.  Klicken Sie mit der rechten Maustaste auf die Datenbank, die Sie erstellt haben, zeigen Sie auf **Tasks**, und wählen Sie **Datenbankverschlüsselung verwalten**aus.  
+7.  Klicken Sie mit der rechten Maustaste auf die Datenbank, die Sie erstellt haben, zeigen Sie auf **Tasks**, und wählen Sie **Datenbankverschlüsselung verwalten** aus.  
   
      Die folgenden Optionen sind im Dialogfeld **Datenbankverschlüsselung verwalten** verfügbar.  
   
      **Verschlüsselungsalgorithmus**  
-     Zeigt den für die Datenbankverschlüsselung zu verwendenden Algorithmus an oder legt ihn fest. Der Standardalgorithmus ist**AES128** . Dieses Feld darf nicht leer sein. Weitere Informationen zur Verschlüsselung von Algorithmen finden Sie unter [Choose an Encryption Algorithm](../../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).  
+     Zeigt den für die Datenbankverschlüsselung zu verwendenden Algorithmus an oder legt ihn fest. Der Standardalgorithmus ist **AES128** . Dieses Feld darf nicht leer sein. Weitere Informationen zur Verschlüsselung von Algorithmen finden Sie unter [Choose an Encryption Algorithm](../../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).  
   
      **Serverzertifikat verwenden**  
      Legt fest, dass die Verschlüsselung durch ein Zertifikat gesichert wird. Wählen Sie einen Eintrag aus der Liste aus. Wenn Sie nicht über die Berechtigung **VIEW DEFINITION** verfügen, ist diese Liste leer. Wenn als Verschlüsselungsmethode das Zertifikat ausgewählt wird, darf dieser Wert nicht leer sein. Weitere Informationen zu Zertifikaten finden Sie unter [SQL Server Certificates and Asymmetric Keys](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
@@ -138,7 +138,7 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
   
 ##  <a name="to-move-a-database-protected-by-transparent-data-encryption"></a><a name="TsqlProcedure"></a> So verschieben Sie eine durch transparente Datenverschlüsselung geschützte Datenbank 
 
-Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mithilfe von SQL Server Management Studio und Transact-SQL verschieben sollten.
+Die folgenden Verfahren zeigen, wie Sie eine von TDE geschützte Datenbank mithilfe von SQL Server Management Studio und Transact-SQL verschieben.
   
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSMove"></a> Verwenden von SQL Server Management Studio  
   
@@ -170,9 +170,9 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
      **Meldung**  
      Unter **Meldung** können folgende Informationen zur Datenbank angezeigt werden:  
   
-    -   Wenn eine Datenbank an einer Replikation beteiligt ist, hat der **Status** den Wert **Nicht bereit** , und unter **Meldung** wird **Die Datenbank wurde repliziert**angezeigt.  
+    -   Wenn eine Datenbank an einer Replikation beteiligt ist, hat der **Status** den Wert **Nicht bereit** , und unter **Meldung** wird **Die Datenbank wurde repliziert** angezeigt.  
   
-    -   Wenn eine Datenbank mindestens über eine aktive Verbindung verfügt, weist **Status** den Wert **Nicht bereit** auf, und in der Spalte **Meldung** wird der Text _\<number\_of\_active\_connections\>_ **Aktive Verbindung(en)** angezeigt – Beispiel: **1 Aktive Verbindung(en)** . Bevor Sie die Datenbank trennen können, müssen Sie durch Auswählen der Option **Verbindungen löschen**alle aktiven Verbindungen trennen.  
+    -   Wenn eine Datenbank mindestens über eine aktive Verbindung verfügt, weist **Status** den Wert **Nicht bereit** auf, und in der Spalte **Meldung** wird der Text _\<number\_of\_active\_connections\>_ **Aktive Verbindung(en)** angezeigt – Beispiel: **1 Aktive Verbindung(en)** . Bevor Sie die Datenbank trennen können, müssen Sie durch Auswählen der Option **Verbindungen löschen** alle aktiven Verbindungen trennen.  
   
      Weitere Informationen zu einer Meldung erhalten Sie, indem Sie auf den Linktext klicken, um den Aktivitätsmonitor zu öffnen.  
   
@@ -188,7 +188,7 @@ Die folgenden Verfahren zeigen, dass Sie eine von TDE geschützte Datenbank mith
   
 7.  Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] mit der rechten Maustaste auf den Ordner **Datenbanken**, und klicken Sie anschließend auf **Anfügen...** .  
   
-8.  Klicken Sie im Dialogfeld **Datenbanken anfügen** unter **Anzufügende Datenbanken**auf **Hinzufügen**.  
+8.  Klicken Sie im Dialogfeld **Datenbanken anfügen** unter **Anzufügende Datenbanken** auf **Hinzufügen**.  
   
 9. Wählen Sie im Dialogfeld **Lokale Datenbankdateien –** _server\_name_ die Datenbankdatei aus, die an den neuen Server angefügt werden soll, und klicken Sie auf **OK**.  
   

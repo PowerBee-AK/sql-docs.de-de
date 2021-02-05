@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: 43a5cc755eb07fe80a0d33d6b5b892e2a65ab21e
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: fb52e9e869c0210e8e320c11dfec21aa8f7d585e
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97638800"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076808"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -402,7 +402,7 @@ WITH (
 ## <a name="faq"></a>Häufig gestellte Fragen
 
 ### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>Wie hoch ist die Leistung des COPY-Befehls im Vergleich zu PolyBase?
-Der COPY-Befehl hat abhängig von der Workload eine bessere Leistung. Für eine optimale Ladeleistung empfiehlt es sich, Ihre Eingaben beim Laden von CSV in mehrere Dateien aufzuteilen.
+Der COPY-Befehl hat abhängig von der Workload eine bessere Leistung. Für eine optimale Ladeleistung empfiehlt es sich, Ihre Eingaben beim Laden von CSV in mehrere Dateien aufzuteilen. Diese Anleitung gilt auch für die komprimierten gzip-Daten.
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>Welche Anweisungen gibt es zur Dateiaufteilung für den COPY-Befehl beim Laden von CSV-Dateien?
 Anweisungen zur Anzahl der Dateien sind in der Tabelle unten aufgeführt. Sobald die empfohlene Dateianzahl erreicht ist, erzielen Sie eine umso bessere Leistung, je größer die Dateien sind. Eine einfache Oberfläche zur Dateiaufteilung finden Sie in der folgenden [Dokumentation](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474). 

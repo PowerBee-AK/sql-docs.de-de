@@ -12,12 +12,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016'
 manager: erikre
-ms.openlocfilehash: 03041d41745e51d858f56bfcd21407ad58530dd9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 2f034ac2223b15a3b66883a3ce3dbc434bcf07db
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460693"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813248"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Upgraden von PowerPivot für SharePoint
 
@@ -57,7 +57,7 @@ ms.locfileid: "97460693"
   
 -   Die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstools gehören zu den freigegebenen Funktionen von SQL Server. Alle freigegebenen Funktionen führen gleichzeitig ein Upgrade durch. Wenn Sie während eines Upgradevorgangs andere SQL Server-Instanzen oder -Funktionen auswählen, die ein Upgrade für freigegebene Funktionen erfordern, wird für das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool ebenfalls ein Upgrade durchgeführt. Wenn für das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool ein Upgrade durchgeführt wird, für die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Instanz jedoch nicht, können Probleme auftreten. Weitere Informationen zu gemeinsamen Features von SQL Server finden Sie unter [Aktualisieren auf SQL Server 2016 mithilfe des Installations-Assistenten &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
--   Das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Add-In (**spPowerPivot.msi**) wird parallel zu den Vorgängerversionen installiert. Das [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Add-In wird z.B. im Ordner `c:\Program Files\Microsoft SQL Server\130\Tools\PowerPivotTools`installiert.  
+-   Das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Add-In (**spPowerPivot.msi**) wird parallel zu den Vorgängerversionen installiert. Das Add-In wird z. B. im Ordner `c:\Program Files\Microsoft SQL Server\nnn\Tools\PowerPivotTools`installiert. Informationen zu SQL Server-Installationsdateien finden Sie unter [Dateispeicherorte](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md#shared-files-for-all-instances-of-).
   
 ##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Voraussetzungen  
  **Berechtigungen**  

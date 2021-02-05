@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ad867768d72d9e03b7d76761bd371dd369c7161b
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: e89a3638dc304bdda8bc11c55897975fb006e3ca
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "94384729"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076838"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Bekannte Fehler und Lösungen bei Change Data Capture für Oracle von Attunity
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ Bevor Sie allzu viel Zeit für Problembehandlung aufwenden, achten Sie darauf, d
 - Einige Änderungen fehlen und werden nicht in die SQL Server-Datenbank repliziert. Dieses Problem tritt auf, wenn eine Tabelle mehr als ein CLOB (Character Large Binary Object) enthält und eins der CLOBs einen großen Wert aufweist. 
     - Behoben in _Kumulatives Update 1 für SQL Server 2014 SP1_ und _Kumulatives Update 8 für SQL Server 2014 RTM_, wie in KB [3029096](https://support.microsoft.com/kb/3029096) beschrieben. 
 - Change Data Capture für Oracle von Attunity funktioniert nicht mehr, wenn Oracle-Tabellen Spalten mit Long-Datentyp aufweisen.
-    - Behoben in _Kumulatives Update 5 für SQL Server 2014 SP1_ und _Kumulatives Update 12 für SQL Server 2014 RTM_, wie in KB [3145983](https://support.microsoft.com/kb/3145983) beschrieben.
+    - Behoben in _Kumulatives Update 5 für SQL Server 2014 SP1_ und _Kumulatives Update 12 für SQL Server 2014 RTM_, wie in KB [KB4017793](https://support.microsoft.com/topic/kb4017793-cumulative-update-12-for-sql-server-2014-sp1-bc24907b-afe2-6703-ccd9-99d6cb76a74d) beschrieben.
 
 ### <a name="sql-server-2012"></a>SQL Server 2012
 
@@ -89,7 +89,7 @@ Bevor Sie allzu viel Zeit für Problembehandlung aufwenden, achten Sie darauf, d
 - Fehler bei der Überprüfung der Metadaten für die Oracle-Tabelle „cdc.table_name“. Der column_name-Spaltenindex liegt außerhalb des zulässigen Bereichs. Behoben in _Kumulatives Update 7 für SQL Server 2012 SP1_, wie in KB [2883524](https://support.microsoft.com/kb/2883524) beschrieben.
 - Der Oracle CDC-Dienst zeigt den Status „abgebrochen“ an, wenn CDC für Oracle von Attunity in SQL Server 2012 verwendet wird. Behoben in _Kumulatives Update 8 für SQL Server 2012 SP1_, wie in KB [2923839](https://support.microsoft.com/kb/2923839) beschrieben.  
 - Einige Änderungen fehlen und werden nicht in die SQL Server-Datenbanken repliziert. Dieses Problem tritt auf, wenn eine Tabelle mehr als ein CLOB (Character Large Binary Object) enthält und eins der CLOBs einen großen Wert aufweist. Behoben in _Kumulatives Update 8 für SQL Server 2012 SP1_, wie in KB [2923839](https://support.microsoft.com/kb/2923839) beschrieben.   
-- Change Data Capture für Oracle von Attunity funktioniert nicht mehr, wenn Oracle-Tabellen Spalten mit Long-Datentyp aufweisen. Behoben in _Kumulatives Update 2 für SQL Server 2012 SP3_ und _Kumulatives Update 11 für SQL Server 2012 SP2_, wie in KB [3145983](https://support.microsoft.com/kb/3145983) beschrieben. 
+- Change Data Capture für Oracle von Attunity funktioniert nicht mehr, wenn Oracle-Tabellen Spalten mit Long-Datentyp aufweisen. Behoben in _Kumulatives Update 2 für SQL Server 2012 SP3_ und _Kumulatives Update 11 für SQL Server 2012 SP2_, wie in KB [KB4017793](https://support.microsoft.com/topic/kb4017793-cumulative-update-12-for-sql-server-2014-sp1-bc24907b-afe2-6703-ccd9-99d6cb76a74d) beschrieben. 
 
 ## <a name="collect-detailed-logs"></a>Erfassen ausführlicher Protokolle 
 

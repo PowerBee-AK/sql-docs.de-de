@@ -9,12 +9,12 @@ ms.topic: how-to
 author: bluefooted
 ms.author: pamela
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75f999052eecd750d548cb6d383eafe5375ed130
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: af2caf850d3f7facb61a7484c5af44e4ba785fa3
+ms.sourcegitcommit: 5f9d682924624fe1e1a091995cd3a673605a4e31
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440145"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98860913"
 ---
 # <a name="diagnose-and-resolve-latch-contention-on-sql-server"></a>Diagnostizieren und Lösen von Latchkonflikten in SQL Server
 
@@ -58,7 +58,7 @@ Latches werden in einem von fünf Modi abgerufen, die sich auf das Ausmaß des Z
 
 * **KP** (Keep latch, Beibehaltungslatch): Dieser Latch stellt sicher, dass die referenzierte Struktur nicht gelöscht werden kann. Er wird verwendet, wenn ein Thread eine Pufferstruktur überprüfen möchte. Da der KP-Latch mit allen Latches außer dem DT-Latch (Destroy latch, Löschlatch) kompatibel ist, gilt der KP-Latch als „lightweight“. Das bedeutet, dass seine Auswirkungen auf die Leistung minimal ausfallen. Da der KP-Latch nicht mit dem DT-Latch kompatibel ist, wird verhindert, dass andere Threads die referenzierte Struktur löschen. Ein KP-Latch verhindert beispielsweise, dass die referenzierte Struktur vom Prozess für verzögertes Schreiben gelöscht wird. Weitere Informationen dazu, wie der Prozess für verzögertes Schreiben mit der SQL Server-Pufferseitenverwaltung verwendet wird, finden Sie unter [Schreiben von Seiten](./writing-pages.md).
 
-* **SH** (Shared latch, gemeinsamer Latch): Dieser Latch ist zum Lesen einer Seitenstruktur erforderlich. 
+* **SH**: Der freigegebene Latch, der zum Lesen der referenzierten Struktur (z. B. Lesen einer Datenseite) erforderlich ist. Mehrere Threads können gleichzeitig auf eine Ressource zum Lesen unter einem freigegebenen Latch zugreifen.
 * **UP** (Updatelatch): Dieser Latch ist mit SH- und KP-Latches kompatibel, aber mit keinen anderen. Daher wird es einem EX-Latch nicht erlaubt, in die referenzierte Struktur zu schreiben. 
 * **EX** (Exclusive latch, Exklusiver Latch): Dieser Latch hindert andere Latches daran, in die referenzierte Struktur zu schreiben oder aus dieser zu lesen. Ein Beispiel hierfür ist die Verwendung zum Ändern der Inhalte einer Seite für den Schutz vor zerrissenen Seiten. 
 * **DT** (Destroy latch, Löschlatch): Dieser Latch muss abgerufen werden, bevor Inhalte aus der referenzierten Struktur gelöscht werden. Ein DT-Latch muss beispielsweise vom Prozess für verzögertes Schreiben abgerufen werden, um eine bereinigte Seite freizugeben, bevor sie zur Liste der freien Puffer hinzugefügt wird, die von anderen Threads verwendet werden können.

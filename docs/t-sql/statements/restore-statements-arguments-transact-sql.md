@@ -1,27 +1,26 @@
 ---
 description: RESTORE-Anweisungen – Argumente (Transact-SQL)
-title: RESTORE-Argumente (Transact-SQL) | Microsoft-Dokumentation
+title: RESTORE-Argumente (Transact-SQL)
 ms.custom: ''
 ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
-ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 19c71e5beb3b192615f57e620870dec66b2d645f
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: c07e6ba84a511d81e1fb17718552a0ca2738271a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688819"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236243"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE-Anweisungen – Argumente (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -255,7 +254,7 @@ CREDENTIAL
  Wird nur verwendet, wenn eine Sicherung vom Microsoft Azure Blob-Speicherdienst wiederhergestellt wird.  
   
 > [!NOTE]  
->  Bei [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 bis [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] ist eine Wiederherstellung von einem einzelnen Gerät nur dann möglich, wenn Sie die Wiederherstellung über eine URL durchführen. Wenn Sie die Wiederherstellung über eine URL durchführen, müssen Sie [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] bis zur [aktuellen Version](../../sql-server/what-s-new-in-sql-server-2016.md) und die SAS-Token (SAS = Shared Access Signature) verwenden, damit eine Wiederherstellung von mehreren Geräten möglich ist. Weitere Informationen finden Sie unter [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) (Aktivieren einer von SQL Server verwalteten Sicherung für Microsoft Azure) und unter [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell) (Vereinfachen der Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature-Token in Azure Storage mit PowerShell).  
+>  Bei [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 bis [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] ist eine Wiederherstellung von einem einzelnen Gerät nur dann möglich, wenn Sie die Wiederherstellung über eine URL durchführen. Wenn Sie eine Wiederherstellung von mehreren Geräten durchführen möchten, müssen Sie [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] oder höher und Shared Access Signature-Token (SAS) verwenden, wenn Sie die Wiederherstellung über eine URL durchführen. Weitere Informationen finden Sie unter [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) (Aktivieren einer von SQL Server verwalteten Sicherung für Microsoft Azure) und unter [Simplifying creation of SQL Credentials with Shared Access Signature ( SAS ) tokens on Azure Storage with Powershell](/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell) (Vereinfachen der Erstellung von SQL-Anmeldeinformationen mit Shared Access Signature-Token in Azure Storage mit PowerShell).  
   
  REPLACE  
  **Unterstützt von:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  

@@ -1,5 +1,5 @@
 ---
-title: Sicherheit auf Zeilenebene | Microsoft-Dokumentation
+title: Sicherheit auf Zeilenebene
 description: Mithilfe der Sicherheit auf Zeilenebene können Sie den Zugriff auf Zeilen in einer Datenbanktabelle in SQL Server anhand der Gruppenmitgliedschaft oder des Ausführungskontext steuern.
 ms.custom: ''
 ms.date: 09/01/2020
@@ -14,16 +14,15 @@ helpviewer_keywords:
 - security [SQL Server], predicate based access control
 - row level security described
 - predicate based security
-ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6eb3fe21d1b5ea41e1f7c70818a7b998f0d3ca42
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 828218dcebe5f2e5ab6c0759083f497876dae6b2
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172712"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813528"
 ---
 # <a name="row-level-security"></a>Sicherheit auf Zeilenebene
 
@@ -39,7 +38,7 @@ Die Datenbeschränkungszugriffslogik befindet sich auf der Datenbankebene, statt
   
 Implementieren Sie RLS, indem Sie die [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung und Prädikate verwenden, die als [Inline-Tabellenwertfunktionen](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md) erstellt werden.  
 
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] bis [aktuelle Version](../../sql-server/what-s-new-in-sql-server-2016.md)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([hier herunterladen](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Abrufen](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
   
 > [!NOTE]
 > Azure Synapse unterstützt nur Filterprädikate. Blockprädikate werden in Azure Synapse derzeit nicht unterstützt.

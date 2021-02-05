@@ -19,12 +19,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 872d40262da465bac6e336472e8beca402482b5f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0cc0d86dbdce6e3618957551a1059c0178a23d61
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484372"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236294"
 ---
 # <a name="create-indexed-views"></a>Erstellen von indizierten Sichten
 
@@ -39,8 +39,9 @@ Die folgenden Schritte sind zum Erstellen einer indizierten Sicht erforderlich u
 1. Stellen Sie sicher, dass die SET-Optionen für alle vorhandenen Tabellen korrekt sind, auf die in der Sicht verwiesen wird.
 2. Stellen Sie sicher, dass die SET-Optionen für die Sitzung richtig festgelegt sind, bevor Sie Tabellen und die Sicht erstellen.
 3. Stellen Sie sicher, dass die Sichtdefinition deterministisch ist.
-4. Erstellen Sie die Sicht mithilfe der Option `WITH SCHEMABINDING`.
-5. Erstellen Sie den eindeutigen gruppierten Index für die Sicht.
+4. Vergewissern Sie sich, dass die Basistabelle denselben Besitzer wie die Ansicht hat.
+5. Erstellen Sie die Sicht mithilfe der Option `WITH SCHEMABINDING`.
+6. Erstellen Sie den eindeutigen gruppierten Index für die Sicht.
 
 > [!IMPORTANT]
 > Wenn Sie DML<sup>1</sup> für eine Tabelle ausführen, auf die durch eine große Anzahl von indizierten Sichten oder durch wenige, jedoch sehr komplexe indizierte Sichten verwiesen wird, müssen diese indizierten Sichten ebenfalls aktualisiert werden. Als Folge daraus kann die DML-Abfrageleistung erheblich beeinträchtigt werden. In einigen Fällen kann kein Abfrageplan erstellt werden.
@@ -156,7 +157,10 @@ Indizes für Tabellen und Sichten können deaktiviert werden. Wenn ein gruppiert
 
 #### <a name="permissions"></a><a name="Permissions"></a> Berechtigungen
 
-Erfordert die **CREATE VIEW**-Berechtigung in der Datenbank und die **ALTER**-Berechtigung in dem Schema, in dem die Sicht erstellt wird.
+Erfordert die **CREATE VIEW**-Berechtigung in der Datenbank und die **ALTER**-Berechtigung in dem Schema, in dem die Sicht erstellt wird. Wenn sich die Basistabelle in einem anderen Schema befindet, ist mindestens die **REFERENCES**-Berechtigung für die Tabelle erforderlich.
+
+    > [!NOTE]  
+    > For the creation of the index on top of the view, the base table must have the same owner as the view. This is also called ownership-chain. This is usually the case when table and view reside within the same schema, but it is possible that individual objects have different owners. The column **principal_id** in sys.tables contains a value if the owner is different from the schema-owner.
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL
 
