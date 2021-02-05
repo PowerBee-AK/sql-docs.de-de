@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSet.updateAsciiStream
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4959a0a9-ae55-4c4e-80a8-21119aaceb92
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 474393f609e1e02e6e384931306df40b2b995733
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 80a0042b5125e6e3ac1f8b38238eba1b4bef9a2e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478437"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192134"
 ---
 # <a name="updateasciistream-method-sqlserverresultset"></a>updateAsciiStream-Methode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88478437"
   
 ## <a name="overload-list"></a>Überladungsliste  
   
-|Name|BESCHREIBUNG|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[updateAsciiStream-Methode &#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/updateasciistream-method-int-java-io-inputstream.md)|Aktualisiert die angegebene Spalte mit einem ASCII-Datenstromwert.|  
 |[updateAsciiStream (int, java.io.InputStream, int)](../../../connect/jdbc/reference/updateasciistream-method-int-java-io-inputstream-int.md)|Aktualisiert den angegebenen Spaltenindex mit einem für den Spaltenindex spezifischen ASCII-Datenstromwert.|  

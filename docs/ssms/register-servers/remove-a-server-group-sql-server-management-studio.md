@@ -17,18 +17,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
-ms.openlocfilehash: 9188b822e7bf0e0024e6c6fcdbe81db7ea05002f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 2066f5a90f27b892827c1a36034a3f9e57f4f0ea
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037543"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250463"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>Entfernen einer Servergruppe (SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-In diesem Thema wird beschrieben, wie Sie eine Servergruppe in Registrierte Server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]entfernen. Sie können eine Servergruppe jederzeit löschen. Wenn die Servergruppe nicht leer ist, werden auch alle in der gelöschten Servergruppe enthaltenen Server oder Servergruppen gelöscht. Vor dem Löschen einer Servergruppe sollten Sie alle Server oder Servergruppen, die beibehalten werden sollen, in eine neue Servergruppe verschieben.  
+In diesem Thema wird beschrieben, wie Sie eine Servergruppe in Registrierte Server in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]entfernen. Sie können eine Servergruppe jederzeit löschen. Wenn die Servergruppe nicht leer ist, werden auch alle in der gelöschten Servergruppe enthaltenen Server oder Servergruppen gelöscht. Vor dem Löschen einer Servergruppe sollten Sie alle Server oder Servergruppen, die beibehalten werden sollen, in eine neue Servergruppe verschieben.  
   
 ##  <a name="SSMSProcedure"></a>  
   

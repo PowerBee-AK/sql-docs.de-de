@@ -15,12 +15,12 @@ helpviewer_keywords:
 - GetParameterProperties method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8631c9c1beed054b57fd368dd567e3568c213b50
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: b820f2bb9fe248b8ca4645024214b19112c56ad8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862147"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183697"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>'ISSCommandWithParameters::GetParameterProperties' (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ HRESULT GetParameterProperties(
   
 ## <a name="arguments"></a>Argumente  
  *pcParams*[out] [in]  
- Ein Zeiger auf den Arbeitsspeicher, der die Anzahl von SSPARAMPROPS-Strukturen enthält, die in *prgParamProperties*zurückgegeben werden.  
+ Ein Zeiger auf den Arbeitsspeicher, der die Anzahl von SSPARAMPROPS-Strukturen enthält, die in *prgParamProperties* zurückgegeben werden.  
   
  *prgParamProperties*[out]  
  Ein Zeiger auf den Arbeitsspeicher, in den ein Array aus SSPARAMPROPS-Strukturen zurückgegeben wird. Der Anbieter teilt Arbeitsspeicher für die Strukturen zu und gibt die Adresse an diesen Arbeitsspeicher zurück. Der Consumer gibt diesen Arbeitsspeicher mit `IMalloc::Free` frei, wenn er die Strukturen nicht mehr benötigt. Bevor der Consumer `IMalloc::Free` für *prgParamProperties* aufrufen kann, muss er auch für die *vValue*-Eigenschaft jeder DBPROP-Struktur `VariantClear` aufrufen, um einem Arbeitsspeicherverlust vorzubeugen. Zu diesem kann es kommen, wenn die Variante einen Verweistyp wie z. B. BSTR enthält. Wenn *pcParams* bei der Ausgabe 0 (null) ist oder ein anderer Fehler als DB_E_ERRORSOCCURRED auftritt, teilt der Anbieter keinen Arbeitsspeicher zu und stellt sicher, dass *prgParamProperties* bei Ausgabe ein NULL-Zeiger ist.  

@@ -10,22 +10,22 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9020f8745c22a9e6382b6538d5bf650c17e923e4
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: a526f4d1da472a8d5bae9c5bceb296978d24986b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196124"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235712"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>Verwalten von SQL Server-Big Data-Clustern mit Azure Data Studio-Notebooks
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] stellt eine Erweiterung für Azure Data Studio bereit, die Notebooks umfasst. Ein Notebook stellt Dokumentation und Code bereit, die Sie in Azure Data Studio verwenden können, um Big Data-Cluster für SQL Server 2019 zu verwalten.
+[!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] stellt eine Erweiterung für Azure Data Studio bereit, die Notebooks umfasst. Ein Notebook stellt Dokumentation und Code bereit, die Sie in Azure Data Studio verwenden können, um Big Data-Cluster für SQL Server 2019 zu verwalten.
 
 [Notebooks](../azure-data-studio/notebooks/notebooks-guidance.md), die ursprünglich als Open-Source-Projekt implementiert wurden, wurden in [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) integriert. Sie können Markdown für Text in den Textzellen und einen der verfügbaren Kernel verwenden, um Code in den Codezellen zu schreiben.
 
-Sie können Notebooks verwenden, um Big Data-Cluster für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] bereitzustellen.
+Sie können Notebooks verwenden, um Big Data-Cluster für [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] bereitzustellen.
 
 Zusätzlich zu Notebooks können Sie eine Sammlung von Notebooks anzeigen, die als Jupyter-Book bezeichnet wird. Ein Jupyter-Book stellt ein Inhaltsverzeichnis bereit, das Ihnen bei der Navigation durch eine Sammlung von Notebooks hilft, sodass Sie das gewünschte Notebook leicht finden können, egal ob zur Problembehandlung in SQL Server oder zum Anzeigen des Clusterstatus.
 
@@ -34,7 +34,7 @@ Zusätzlich zu Notebooks können Sie eine Sammlung von Notebooks anzeigen, die a
 Zum Öffnen eines Notebooks benötigen Sie Folgendes:
 
 * Die neueste Version von [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
-* die [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]-Erweiterung, die in Azure Data Studio installiert ist
+* die [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]-Erweiterung, die in Azure Data Studio installiert ist
 
 Zusätzlich zu diesen Voraussetzungen benötigen Sie für die Bereitstellung von SQL Server 2019-Big Data-Clustern:
 
@@ -58,7 +58,7 @@ Das Viewlet „Jupyter Books“ mit dem Jupyter-Book, das die Fehlerbehebung fü
 
 1. Nachdem Sie Azure Data Studio-Insider-Build installiert haben, stellen Sie eine Verbindung mit einer SQL Server-Big Data-Clusterinstanz her.
 
-2. Nachdem Sie mit der Instanz verbunden sind, klicken Sie mit der rechten Maustaste auf Ihren Servernamen unter **Verbindungen** , und wählen Sie **Verwalten** aus.
+2. Nachdem Sie mit der Instanz verbunden sind, klicken Sie mit der rechten Maustaste auf Ihren Servernamen unter **Verbindungen**, und wählen Sie **Verwalten** aus.
 
 3. Wählen Sie im Dashboard **SQL Server-Big Data-Cluster** aus. Klicken Sie auf **SQL Server 2019 Guide** (SQL Server 2019-Leitfaden), um das Jupyter-Book mit den Notebooks zu öffnen, die Sie benötigen.
     ![Jupyter-Notebooks im Dashboard](media/manage-notebooks/jupyter-book-button.png)
@@ -87,7 +87,7 @@ Das Viewlet „Jupyter Books“ mit dem Jupyter-Book, das die Fehlerbehebung fü
 
 So ändern Sie den SQL Server-Big Data-Cluster für ein Notebook:
 
-1. Klicken Sie in der Symbolleiste des Notebooks auf das Menü **Anfügen an** .
+1. Klicken Sie in der Symbolleiste des Notebooks auf das Menü **Anfügen an**.
 
    ![Klicken auf das Menü „Anfügen an“ in der Symbolleiste des Notebooks](./media/notebooks-how-to-manage/select-attach-to-1.png)
 

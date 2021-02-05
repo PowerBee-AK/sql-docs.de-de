@@ -10,23 +10,23 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15
-ms.openlocfilehash: 9762de193eae8ad4e67e77ae54c9778e92357c45
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bcd105fac1dcb534d6c287c0daa8b0fa0e692db2
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97402600"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237841"
 ---
-# <a name="sql-server-2019-release-notes"></a>Versionshinweise zu [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]
+# <a name="sql-server-2019-release-notes"></a>Versionshinweise zu [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)]
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-In diesem Artikel werden Einschränkungen und bekannte Probleme für [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] beschrieben. Verwandte Informationen
+In diesem Artikel werden Einschränkungen und bekannte Probleme für [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] beschrieben. Verwandte Informationen
 
-> [Neues in [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]](../sql-server/what-s-new-in-sql-server-ver15.md)
+> [Neues in [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)]](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-## [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
+## [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] ist das neueste öffentliche Release von [!INCLUDE[SQL Server 2019](../includes/ssnoversion-md.md)].
+[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] ist das neueste öffentliche Release von [!INCLUDE[SQL Server 2019](../includes/ssnoversion-md.md)].
 
 Ausführliche Informationen zur Lizenzierung finden Sie im Ordner `License Terms` des Installationsmediums.
 
@@ -42,16 +42,16 @@ Die RTM-Buildnummer für SQL Server 2019 lautet `15.0.2000.5`.
 
 ## <a name="sql-server-installation-may-fail-if-ssms-18x-is-installed"></a>Die SQL Server-Installation schlägt möglicherweise fehl, wenn SSMS 18.x installiert ist
 
-- **Problem und Kundenbeeinträchtigung:** : Die Installation von [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] schlägt fehl, wenn die folgenden Installationen in dieser Reihenfolge erfolgen:
+- **Problem und Kundenbeeinträchtigung:** : Die Installation von [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] schlägt fehl, wenn die folgenden Installationen in dieser Reihenfolge erfolgen:
   1. SQL Server Management Studio (SSMS) 18.0, 18.1, 18.2 oder 18.3 ist auf dem Server installiert.
-  1. Die Installation von [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] wird über Wechselmedien versucht. Das Installationsmedium ist beispielsweise eine DVD.
+  1. Die Installation von [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] wird über Wechselmedien versucht. Das Installationsmedium ist beispielsweise eine DVD.
 
 - **Problemumgehung**:
   1. Deinstallieren Sie alle Versionen von SSMS vor SSMS 18.3.1.
   1. Installieren Sie eine neuere Version von SSMS (ab 18.3.1). Die neueste Version finden Sie unter [Herunterladen von SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
-  1. Installieren Sie [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] normal.
+  1. Installieren Sie [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] normal.
 
-- **Gilt für:** [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]
+- **Gilt für:** [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)]
 
 ## <a name="utf-8-collations"></a>UTF-8-Sortierungen
 
@@ -65,7 +65,7 @@ Die RTM-Buildnummer für SQL Server 2019 lautet `15.0.2000.5`.
   > [!NOTE]
   > Derzeit gibt es keine Benutzeroberflächenunterstützung, um UTF-8-fähige Sortierungen in Azure Data Studio oder SQL Server Data Tools (SSDT) auszuwählen. Die neueste [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]-Version (SSMS) 18 unterstützt die Auswahl von UTF-8-fähigen Sortierungen auf der Benutzeroberfläche.
 
-- **Gilt für**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RTM
+- **Gilt für**: [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] RTM
 
 ## <a name="master-data-service-notification-email-contains-broken-link"></a>Benachrichtigungs-E-Mail von Master Data Services enthält fehlerhaften Link
 
@@ -75,7 +75,7 @@ Die RTM-Buildnummer für SQL Server 2019 lautet `15.0.2000.5`.
 
 - **Problemumgehung**: Öffnen Sie das MDS-Portal, und wechseln Sie manuell zu der Ressource.
 
-- **Gilt für**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RTM
+- **Gilt für**: [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] RTM
 
 ## <a name="see-also"></a>Weitere Informationen
 

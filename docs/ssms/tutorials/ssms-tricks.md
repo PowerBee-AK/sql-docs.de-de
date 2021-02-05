@@ -19,12 +19,12 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 9d480496cad6dafddc428c6049601521ebba88b8
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 2b292ededa319d6e28e8447bd464c30af73f5787
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596447"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250069"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Tipps und Tricks zur Verwendung von SQL Server Management Studio (SSMS)
 
@@ -42,7 +42,7 @@ Dieser Artikel enthält einige Tipps und Tricks für die Verwendung des [!INCLUD
 Zum Testen der in diesem Artikel beschriebenen Schritte benötigen Sie das [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Zugriff auf eine SQL Server-Instanz und eine AdventureWorks-Datenbank. 
 
 * Installieren Sie [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
-* Installieren Sie [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+* Installieren Sie [[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 * Laden Sie eine [AdventureWorks-Beispieldatenbank](https://github.com/Microsoft/sql-server-samples/releases) herunter. Weitere Informationen zum Wiederherstellen einer Datenbank in SSMS finden Sie unter [Restoring a database (Wiederherstellen einer Datenbank)](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md). 
 
 ## <a name="commentuncomment-your-t-sql-code"></a>Kommentieren und Aufheben der Auskommentierung in T-SQL-Code

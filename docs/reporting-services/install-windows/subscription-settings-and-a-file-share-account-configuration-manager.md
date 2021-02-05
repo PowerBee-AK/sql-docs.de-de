@@ -11,19 +11,19 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 90e585e887e9415a8cf1f9d0104595547f2d1c87
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 5239174f08c9922a31204b4f476f923a7e931567
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171982"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236228"
 ---
 # <a name="subscription-settings-and-a-file-share-account-report-server-configuration-manager"></a>Abonnementeinstellungen und ein Dateifreigabekonto (Berichtsserver-Konfigurations-Manager)
   Verwenden Sie die Seite **Abonnementeinstellungen** im Konfigurations-Manager für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , um ein Dateifreigabekonto für Berichtsserver im einheitlichen Modus und Dateifreigabeabonnements zu konfigurieren. Mit dem Dateifreigabekonto können Sie einen einzelnen Anmeldeinformationssatz in mehreren Abonnements verwenden, die Berichte an eine Dateifreigabe übermitteln. Wenn die Anmeldeinformationen geändert werden müssen, konfigurieren Sie die Änderung für das Dateifreigabekonto. So müssen Sie nicht jedes einzelne Abonnement aktualisieren.  
   
  Es gibt zwei Workflows für Dateifreigabeabonnements in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
--   Im [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] -Release kann Ihr [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Administrator neuerdings eine einzelne Dateifreigabe konfigurieren, die für ein oder mehrere Abonnements verwendet wird. Konfigurieren Sie dazu **Ein Dateifreigabekonto angeben**, und wählen Sie auf den Seiten für die Abonnementkonfiguration **Dateifreigabekonto verwenden** aus.  
+-   Im [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] -Release kann Ihr [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Administrator neuerdings eine einzelne Dateifreigabe konfigurieren, die für ein oder mehrere Abonnements verwendet wird. Konfigurieren Sie dazu **Ein Dateifreigabekonto angeben**, und wählen Sie auf den Seiten für die Abonnementkonfiguration **Dateifreigabekonto verwenden** aus.  
   
 -   Sie können einzelne Abonnements mit spezifischen Anmeldeinformationen für die Zieldateifreigabe konfigurieren.  
   

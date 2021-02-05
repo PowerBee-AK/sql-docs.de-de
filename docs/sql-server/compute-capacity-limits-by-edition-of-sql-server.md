@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f169f8a88c13cc6b12b060405285c963dd9524e3
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: fd76f7fb9da663c5768ec9d60679a14b797655fc
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988053"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250374"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Rechenkapazitätsgrenzen von bestimmten Editionen von SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
-  In diesem Artikel wird erläutert, wie Sie Kapazitätsgrenzen für Editionen von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] berechnen und wie diese sich in physischen und virtuellen Umgebungen mit Hyperthread-Prozessoren unterscheiden.  
+  In diesem Artikel wird erläutert, wie Sie Kapazitätsgrenzen für Editionen von [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] berechnen und wie diese sich in physischen und virtuellen Umgebungen mit Hyperthread-Prozessoren unterscheiden.  
   
  ![Zuordnungen zu Rechenkapazitätsgrenzen](../sql-server/media/compute-capacity-limits.gif "Zuordnungen zu Rechenkapazitätsgrenzen")  
   
@@ -76,7 +76,7 @@ Jede Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hat zwei
   
 Diese Begrenzungen gelten für eine einzelne Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sie stellen die maximale Rechenkapazität dar, die eine einzelne Instanz verwendet. Sie schränken den Server nicht ein, auf dem die Instanz möglicherweise bereitgestellt wird. Vielmehr stellt die Bereitstellung mehrerer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanzen auf demselben physischen Server eine effiziente Möglichkeit dar, die Rechenkapazität eines physischen Servers mit mehr Sockets und/oder Kernen zu nutzen, als es die Kapazitätsgrenzen zulassen.  
   
-Die folgende Tabelle gibt die Rechenkapazitätsgrenzen für eine einzelne Instanz jeder Edition von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]an:  
+Die folgende Tabelle gibt die Rechenkapazitätsgrenzen für eine einzelne Instanz jeder Edition von [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]an:  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Edition|Maximale Rechenkapazität für eine einzelne Instanz ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Maximale Rechenkapazität für eine einzelne Instanz (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  

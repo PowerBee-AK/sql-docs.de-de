@@ -17,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
-ms.openlocfilehash: d433b5816919642b0d7b25b580f4314a949cf0c2
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: ba1ed37292b3b92ead4af84cb3f00d4b51e3372d
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036910"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250918"
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>Verschieben eines registrierten Servers bzw. einer registrierte Servergruppe
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-In diesem Thema wird beschrieben, wie Sie die Server in Registrierte Server organisieren, indem Sie in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]einen registrierten Server oder Servergruppen verschieben. Servergruppen können registrierte Server oder weitere Servergruppen enthalten. Sowohl Server als auch Servergruppen können von einer Servergruppe in die andere verschoben werden.  
+In diesem Thema wird beschrieben, wie Sie die Server in Registrierte Server organisieren, indem Sie in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]einen registrierten Server oder Servergruppen verschieben. Servergruppen können registrierte Server oder weitere Servergruppen enthalten. Sowohl Server als auch Servergruppen können von einer Servergruppe in die andere verschoben werden.  
 
 ## <a name="SSMSProcedure"></a>  
 
