@@ -11,19 +11,16 @@ ms.topic: language-reference
 ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b76045d5f901fa1444fd016d1c7673f46170332d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1a6894bc1dee54ec5fa66014ed363409ebb150b6
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495330"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835279"
 ---
 # <a name="catalogenvironment_variables-ssisdb-database"></a>catalog.environment_variables (SSISDB-Datenbank)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Zeigt die Umgebungsvariablendetails für alle Umgebungen im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog an.  
   
@@ -37,7 +34,7 @@ ms.locfileid: "88495330"
 |sensitive|**bit**|Wenn der Wert `1`lautet, ist die Variable vertraulich und wird beim Speichern verschlüsselt. Lautet der Wert `0`, ist die Variable nicht vertraulich, und der Wert wird als Nur-Text gespeichert.|  
 |value|**sql_variant**|Der Wert der Umgebungsvariablen. Wenn `0` vertraulich ist, wird der Nur-Text-Wert angezeigt. Wenn `1` vertraulich ist, wird der Wert **NULL** angezeigt.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Sicht wird eine Zeile für jede Umgebungsvariable im Katalog angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  

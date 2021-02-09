@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 146a75e907131d5faae03da46419b3b4137c01ca
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 4ae905d868554c20948af3eb0191937382eff56f
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194872"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536375"
 ---
 # <a name="ado-net-destination"></a>ADO NET-Ziel
 
@@ -70,23 +70,23 @@ ms.locfileid: "92194872"
   
 2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf das ADO NET-Ziel.  
   
-3.  Klicken Sie im **ADO.NET-Ziel-Editor**auf **Verbindungs-Manager**.  
+3.  Klicken Sie im **ADO.NET-Ziel-Editor** auf **Verbindungs-Manager**.  
   
 ### <a name="static-options"></a>Statische Optionen  
  **Connection manager**  
- Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
+ Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu** klicken.  
   
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **ADO.NET-Verbindungs-Manager konfigurieren** einen neuen Verbindungs-Manager.  
   
  **Tabelle oder Sicht verwenden**  
- Wählen Sie eine vorhandene Tabelle oder Sicht aus der Liste aus, oder erstellen Sie eine neue Tabelle, indem Sie auf **Neu**klicken.  
+ Wählen Sie eine vorhandene Tabelle oder Sicht aus der Liste aus, oder erstellen Sie eine neue Tabelle, indem Sie auf **Neu** klicken.  
   
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **Tabelle erstellen** eine neue Tabelle oder Sicht.  
   
 > [!NOTE]  
->  Wenn Sie auf **Neu**klicken, generiert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] eine Standard-CREATE TABLE-Anweisung auf Grundlage der verbundenen Datenquelle. Diese Standard-CREATE TABLE-Anweisung enthält nicht das FILESTREAM-Attribut, selbst wenn die Quelltabelle eine Spalte mit der Erklärung des FILESTREAM-Attributs enthält. Um eine [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponente mit dem FILESTREAM-Attribut auszuführen, implementieren Sie zunächst die FILESTREAM-Speicherung in der Zieldatenbank. Fügen Sie dann das FILESTREAM-Attribut der CREATE TABLE-Anweisung im Dialogfeld **Tabelle erstellen** hinzu. Weitere Informationen finden Sie unter [Blob-Daten &#40;Binary Large Object, SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  Wenn Sie auf **Neu** klicken, generiert [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] eine Standard-CREATE TABLE-Anweisung auf Grundlage der verbundenen Datenquelle. Diese Standard-CREATE TABLE-Anweisung enthält nicht das FILESTREAM-Attribut, selbst wenn die Quelltabelle eine Spalte mit der Erklärung des FILESTREAM-Attributs enthält. Um eine [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponente mit dem FILESTREAM-Attribut auszuführen, implementieren Sie zunächst die FILESTREAM-Speicherung in der Zieldatenbank. Fügen Sie dann das FILESTREAM-Attribut der CREATE TABLE-Anweisung im Dialogfeld **Tabelle erstellen** hinzu. Weitere Informationen finden Sie unter [Blob-Daten &#40;Binary Large Object, SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
  **Vorschau**  
  Zeigen Sie mithilfe des Dialogfelds **Vorschau der Abfrageergebnisse anzeigen** eine Vorschau der Ergebnisse an. In der Vorschau können bis zu 200 Zeilen angezeigt werden.  
@@ -98,7 +98,7 @@ ms.locfileid: "92194872"
   
  Sie können den .NET-Datenanbieter für SQL Server (SqlClient) verwenden, um eine Verbindung mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]herzustellen.  
   
- Wenn Sie **Masseneinfügung verwenden, falls verfügbar**auswählen und für **Zeile umleiten** die Option **Fehler**festlegen, enthält der Datenbatch, der vom Ziel an die Fehlerausgabe umgeleitet wird, möglicherweise intakte Zeilen. Weitere Informationen zur Behandlung von Fehlern in Massenvorgängen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md). Weitere Informationen zur Option **Zeile umleiten** finden Sie unter [Ziel-Editor für ADO.NET &#40;Seite „Fehlerausgabe“&#41;]().  
+ Wenn Sie **Masseneinfügung verwenden, falls verfügbar** auswählen und für **Zeile umleiten** die Option **Fehler** festlegen, enthält der Datenbatch, der vom Ziel an die Fehlerausgabe umgeleitet wird, möglicherweise intakte Zeilen. Weitere Informationen zur Behandlung von Fehlern in Massenvorgängen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md). Weitere Informationen zur Option **Zeile umleiten** finden Sie unter [Ziel-Editor für ADO.NET &#40;Seite „Fehlerausgabe“&#41;]().  
   
 > [!NOTE]
 >  Wenn eine SQL Server- oder Sybase-Quelltabelle eine Identitätsspalte enthält, müssen Sie SQL ausführen-Tasks zum Aktivieren von IDENTITY_INSERT vor dem ADO NET-Ziel und zum Deaktivieren danach verwenden. (Die Identitätsspalteneigenschaft gibt einen inkrementellen Wert für die Spalte an. Die SET IDENTITY_INSERT-Anweisung ermöglicht das Einfügen expliziter Werte aus der Quelltabelle in die Identitätsspalte der Zieltabelle.)  
@@ -111,7 +111,7 @@ ms.locfileid: "92194872"
 >  Weitere Informationen finden Sie unter [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) und [IDENTITY &#40;Eigenschaft&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- Technischer Artikel [Schnelles Laden von Daten in eine Azure SQL-Datenbank](https://go.microsoft.com/fwlink/?LinkId=244333) auf sqlcat.com  
+ Technischer Artikel [Schnelles Laden von Daten in eine Azure SQL-Datenbank](https://techcommunity.microsoft.com/t5/datacat/loading-data-to-sql-azure-the-fast-way/ba-p/305066) auf sqlcat.com  
   
 ## <a name="ado-net-destination-editor-mappings-page"></a>ADO.NET-Ziel-Editor (Seite 'Zuordnungen')
   Auf der Seite **Zuordnungen** des Dialogfelds **ADO.NET-Ziel-Editor** können Sie eine Zuordnung von Eingabe- zu Zielspalten vornehmen.  
@@ -122,7 +122,7 @@ ms.locfileid: "92194872"
   
 2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf das ADO NET-Ziel.  
   
-3.  Klicken Sie im **ADO.NET-Ziel-Editor**auf **Zuordnungen**.  
+3.  Klicken Sie im **ADO.NET-Ziel-Editor** auf **Zuordnungen**.  
   
 ### <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
@@ -146,7 +146,7 @@ ms.locfileid: "92194872"
   
 2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf das ADO NET-Ziel.  
   
-3.  Klicken Sie im **ADO.NET-Ziel-Editor**auf **Fehlerausgabe**.  
+3.  Klicken Sie im **ADO.NET-Ziel-Editor** auf **Fehlerausgabe**.  
   
 ### <a name="options"></a>Tastatur  
  **Eingabe oder Ausgabe**  

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3176e2d97a4a38172dc540a57b87006f599e29c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae083f7e594025449da685ce5f18ed777f88a8a1
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449870"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835110"
 ---
 # <a name="integration-services-programming-overview"></a>Übersicht über die Programmierung von 'Integration Services'
 
@@ -63,7 +63,7 @@ ms.locfileid: "88449870"
 >  Die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Anwendungsprogrammierschnittstellen sind mit COM-basierten Skriptsprachen, z. B. VBScript, nicht kompatibel.  
   
 ## <a name="locating-assemblies"></a>Suchen von Assemblys  
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]wurden die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Assemblys auf .NET 4.0 aktualisiert. Es ist ein separater globaler Assemblycache für .NET 4 unter „ *\<drive>* :\Windows\Microsoft.NET\assembly“ verfügbar. Normalerweise befinden sich alle [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Assemblys unter diesem Pfad im Ordner GAC_MSIL.  
+ In [!INCLUDE[ssSQL19](../includes/sssql19-md.md)]wurden die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Assemblys auf .NET 4.0 aktualisiert. Es ist ein separater globaler Assemblycache für .NET 4 unter „ *\<drive>* :\Windows\Microsoft.NET\assembly“ verfügbar. Normalerweise befinden sich alle [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Assemblys unter diesem Pfad im Ordner GAC_MSIL.  
   
  Wie in früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] befinden sich die zentralen DLL-Dateien für die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Erweiterbarkeit unter „ *\<drive>* :\Programme\Microsoft SQL Server\100\SDK\Assemblies“.  
   

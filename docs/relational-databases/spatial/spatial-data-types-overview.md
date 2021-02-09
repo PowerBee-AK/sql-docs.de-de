@@ -16,12 +16,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 668d1fda7e4b979e52377c03daaddb0cb2286cdd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 87ed2882d8276b3a92add3349b73bf38fe821dc9
+ms.sourcegitcommit: 10ae200635b9e8554e6bc6f658125e1a80d4d5ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462961"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99589301"
 ---
 # <a name="spatial-data-types-overview"></a>Übersicht über räumliche Datentypen
 
@@ -84,7 +84,7 @@ In einem ellipsenförmigen System hat ein Polygon ohne Ausrichtung keine Bedeutu
 
 Das Innere des Polygons in einem ellipsoidischen System wird über die „Linksregel“ definiert: Wenn Sie sich vorstellen, dass Sie auf dem Ring eines geography-Polygons die Punkte in der Reihenfolge ablaufen, in der sie aufgeführt sind, wird der Bereich links als das Innere des Polygons und der Bereich rechts als das Äußere des Polygons behandelt.
 
-Wenn der Kompatibilitätsgrad in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 100 oder niedriger ist, weist der **geography** -Datentyp die folgenden Einschränkungen auf:
+Wenn der Kompatibilitätsgrad in [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 100 oder niedriger ist, weist der **geography** -Datentyp die folgenden Einschränkungen auf:
 
 - Jede **geography** -Instanz muss in genau eine Hemisphäre passen. Es können keine räumlichen Objekte gespeichert werden, die größer als eine Hemisphäre sind.
 
@@ -92,7 +92,7 @@ Wenn der Kompatibilitätsgrad in [!INCLUDE[ssCurrent](../../includes/sscurrent-m
 
 - Die Methoden des **geography** -Datentyps, die Eingaben von zwei **geography** -Instanzen wie STIntersection(), STUnion(), STDifference() und STSymDifference() erfordern, geben NULL zurück, wenn das Ergebnis der Methode nicht in eine Hemisphäre passt. STBuffer() gibt ebenfalls NULL zurück, wenn die Ausgabe eine Hemisphäre überschreitet.  
 
-In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ist **FullGlobe** ein spezieller Polygontyp, der den gesamten Globus abdeckt. Es verfügt über einen Bereich, aber nicht über Rahmen oder Scheitelpunkte.  
+In [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]ist **FullGlobe** ein spezieller Polygontyp, der den gesamten Globus abdeckt. Es verfügt über einen Bereich, aber nicht über Rahmen oder Scheitelpunkte.  
 
 ### <a name="outer-and-inner-rings-in-geography-data-type"></a>Äußere und innere Ringe beim `geography`-Datentyp
 

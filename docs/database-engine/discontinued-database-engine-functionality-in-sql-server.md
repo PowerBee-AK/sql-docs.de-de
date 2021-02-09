@@ -36,19 +36,19 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016'
-ms.openlocfilehash: 2d265fa2ed17f10485bb3d9009eef25375fb2de4
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 093e20773376cddeea566e202d9f18605f1a1c13
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170872"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552592"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server"></a>Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-  In diesem Thema werden die [!INCLUDE[ssDE](../includes/ssde-md.md)] -Funktionen beschrieben, die in [!INCLUDE[ssCurrent](../includes/ssnoversion-md.md)]nicht mehr verfügbar sind.  
+  In diesem Thema werden die [!INCLUDE[ssDE](../includes/ssde-md.md)] -Funktionen beschrieben, die in [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]nicht mehr verfügbar sind.  
 
-## <a name="discontinued-features-in-sssqlv15"></a>Nicht mehr unterstützte Funktionen in [!INCLUDE[ssSQLv15](../includes/sssqlv15-md.md)]  
+## <a name="discontinued-features-in-sssql19"></a>Nicht mehr unterstützte Funktionen in [!INCLUDE[sssql19](../includes/sssql19-md.md)]  
 
 - Die folgenden datenbankweit gültigen Konfigurationsoptionen werden nicht mehr unterstützt:
 
@@ -59,11 +59,11 @@ ms.locfileid: "98170872"
 Aktuelle Konfigurationsoptionen finden Sie unter [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 >[!NOTE]
->In [!INCLUDE[ssSQLv14](../includes/sssqlv14-md.md)] werden alle Funktionen weiterhin unterstützt.
+>In [!INCLUDE[sssql14](../includes/sssql17-md.md)] werden alle Funktionen weiterhin unterstützt.
 
-## <a name="discontinued-features-in-sssql15"></a>Nicht mehr unterstützte Funktionen in [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]
+## <a name="discontinued-features-in-sssql15-md"></a>Nicht mehr unterstützte Funktionen in [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]
 
-- [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] ist eine 64-Bit-Anwendung. Die 32-Bit-Installation wird eingestellt, obwohl einige Elemente als 32-Bit-Komponenten ausgeführt werden.  
+- [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] ist eine 64-Bit-Anwendung. Die 32-Bit-Installation wird eingestellt, obwohl einige Elemente als 32-Bit-Komponenten ausgeführt werden.  
 
 - Kompatibilitätsgrad 90 wird nicht mehr unterstützt. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 

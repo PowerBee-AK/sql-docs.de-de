@@ -11,21 +11,18 @@ ms.topic: language-reference
 ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e7052caddf7087239e734d6474c4d829f13e9948
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 63db338fa18e3efbf0739acca2c1b97ad388e985
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422084"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835204"
 ---
 # <a name="catalogexplicit_object_permissions-ssisdb-database"></a>catalog.explicit_object_permissions (SSISDB-Datenbank)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-
-  Zeigt nur die Berechtigungen an, die dem Benutzer explizit zugewiesen wurden.  
+ Zeigt nur die Berechtigungen an, die dem Benutzer explizit zugewiesen wurden.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +40,7 @@ ms.locfileid: "88422084"
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|Ermöglicht es dem Prinzipal, Informationen zu lesen, die als Teil des Objekts angesehen werden, z. B. Eigenschaften. Ermöglicht es dem Prinzipal nicht, den Inhalt von anderen Objekten innerhalb des Objekts aufzuzählen oder zu lesen.|Ordner, Projekt, Umgebung, Vorgang|  
 |`2`|MODIFY|Ermöglicht es dem Prinzipal, Informationen zu ändern, die als Teil des Objekts angesehen werden, z. B. Eigenschaften. Ermöglicht es dem Prinzipal nicht, andere Objekte innerhalb des Objekts zu ändern.|Ordner, Projekt, Umgebung, Vorgang|  
-|`3`|Führen Sie|Ermöglicht es dem Prinzipal, alle Pakete im Projekt auszuführen.|Projekt|  
+|`3`|Führen Sie|Ermöglicht es dem Prinzipal, alle Pakete im Projekt auszuführen.|Project|  
 |`4`|MANAGE_PERMISSIONS|Ermöglicht es dem Prinzipal, den Objekten Berechtigungen zuzuweisen.|Ordner, Projekt, Umgebung, Vorgang|  
 |`100`|CREATE_OBJECTS|Ermöglicht es dem Prinzipal, Objekte im Ordner zu erstellen.|Ordner|  
 |`101`|READ_OBJECTS|Ermöglicht es dem Prinzipal, alle Objekte im Ordner zu lesen.|Ordner|  

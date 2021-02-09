@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: f208b424272644f3d66146014401a1343f00e576
-ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
+ms.openlocfilehash: 398d8d1aaf626fdc65674ee1d5eb959951dcd5e2
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94674197"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552623"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Editionen und unterstützte Funktionen von SQL Server 2019 unter Linux
 
@@ -97,7 +97,7 @@ Die Developer Edition unterstützt weiterhin nur einen Client für [SQL Server D
 |-------------|----------------|--------------|---------|------------------------|  
 |Protokollversand|Ja|Ja|Ja|Nein |  
 |Sicherungskomprimierung|Ja|Ja|Nein |Nein | 
-|Datenbankmomentaufnahme|Ja|Nein |Nein |Nein |
+|Datenbankmomentaufnahme|Ja|Ja|Nein |Nein |
 |Always On-Failoverclusterinstanzen<sup>1</sup>|Ja|Ja|Nein |Nein | 
 |AlwaysOn-Verfügbarkeitsgruppen<sup>2</sup>|Ja|Nein |Nein |Nein |
 |Basis-Verfügbarkeitsgruppen<sup>3</sup>|Nein |Ja|Nein |Nein |

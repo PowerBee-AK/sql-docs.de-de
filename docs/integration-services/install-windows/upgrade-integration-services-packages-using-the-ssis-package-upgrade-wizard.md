@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0a9e27d3d7379ad4e0c16d47bcdb97abab38741e
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 8f893df24e74e0367ab98545a9003de6d93f47f0
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88346396"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835670"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Aktualisieren von Integration Services-Paketen mit dem SSIS-Paketupgrade-Assistenten
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Sie können Pakete, die in früheren Versionen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erstellt wurden, auf das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Format aktualisieren, das [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwendet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt zu diesem Zweck den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketupgrade-Assistenten bereit. Da Sie den Assistenten so konfigurieren können, dass er die ursprünglichen Pakete sichert, können Sie die ursprünglichen Pakete weiter verwenden, falls Probleme beim Upgrade auftreten.  
+  Sie können Pakete, die in früheren Versionen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erstellt wurden, auf das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Format aktualisieren, das [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] verwendet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt zu diesem Zweck den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketupgrade-Assistenten bereit. Da Sie den Assistenten so konfigurieren können, dass er die ursprünglichen Pakete sichert, können Sie die ursprünglichen Pakete weiter verwenden, falls Probleme beim Upgrade auftreten.  
   
  Der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketupgrade-Assistent ist installiert, wenn [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert ist.  
   

@@ -11,19 +11,16 @@ ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 856676c6ad5330e6039711d7a391bdd264a2b062
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 423f96cba79018230b7121bf25f93337a48a2fd6
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422044"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835183"
 ---
 # <a name="catalogobject_parameters-ssisdb-database"></a>catalog.object_parameters (SSISDB-Datenbank)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Zeigt die Parameter für alle Pakete und Projekte im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Katalog an.  
   
@@ -43,8 +40,8 @@ ms.locfileid: "88422044"
 |value_type|**char(1)**|Gibt den Typ des Parameterwerts an. In diesem Feld wird `V` angezeigt, wenn „parameter_value“ ein Literalwert ist, und `R` wird angezeigt, wenn der Wert durch Verweis auf eine Umgebungsvariable zugewiesen wird.|  
 |value_set|**bit**|Wenn der Wert `1`ist, wurde der Parameterwert zugewiesen. Wenn der Wert `0`ist, wurde der Parameterwert nicht zugewiesen.|  
 |referenced_variable_name|**nvarchar(128)**|Der Name der Umgebungsvariablen, die dem Wert des Parameters zugewiesen wird. Der Standardwert ist **NULL**.|  
-|validation_status|**char(1)**|Nur für Informationszwecke identifiziert. Wird in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nicht verwendet.|  
-|last_validation_time|**datetimeoffset(7)**|Nur für Informationszwecke identifiziert. Wird in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] nicht verwendet.|  
+|validation_status|**char(1)**|Nur für Informationszwecke identifiziert. Wird in [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] nicht verwendet.|  
+|last_validation_time|**datetimeoffset(7)**|Nur für Informationszwecke identifiziert. Wird in [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] nicht verwendet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Zum Anzeigen von Zeilen in dieser Sicht benötigten Sie eine der folgenden Berechtigungen:  

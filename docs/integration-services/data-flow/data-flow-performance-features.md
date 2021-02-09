@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1956aeb1fc5895eea47ef46eb093a1eea435078b
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 600ab1bce27f4fa53c2e25ae7562a870f2ccf6a6
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196437"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536353"
 ---
 # <a name="data-flow-performance-features"></a>Funktionen für die Datenflussleistung
 
@@ -115,7 +115,7 @@ ms.locfileid: "92196437"
   
  Manchmal sind die Quelldaten bereits sortiert, bevor sie von einer Downstreamkomponente verwendet werden. Eine solche Vorsortierung kann auftreten, wenn die SELECT-Abfrage eine ORDER BY-Klausel verwendet hat oder wenn die Daten in sortierter Reihenfolge in die Quelle eingefügt wurden. Für solche vorsortierten Quelldaten können Sie einen Hinweis angeben, dass die Daten sortiert sind, und so die Verwendung einer Transformation zum Sortieren vermeiden, die anderenfalls zum Erfüllen der Sortieranforderungen von bestimmten Downstream-Transformationen erforderlich wäre. (Beispielsweise erfordern die Transformationen für Zusammenführen und Zusammenführungsjoin sortierte Eingaben.) Wenn Sie einen Hinweis geben möchten, dass die Daten sortiert sind, müssen Sie die folgenden Aufgaben ausführen:  
   
--   Legen Sie die **IsSorted** -Eigenschaft auf der Ausgabe einer Upstreamdatenfluss-Komponente auf **True**fest.  
+-   Legen Sie die **IsSorted** -Eigenschaft auf der Ausgabe einer Upstreamdatenfluss-Komponente auf **True** fest.  
   
 -   Geben Sie die Sortierschlüsselspalten an, in denen die Daten sortiert werden.  
   
@@ -185,9 +185,9 @@ ms.locfileid: "92196437"
   
 -   Technischer Artikel mit [Empfehlungen zum schnellen Laden großer Datenmengen (1 TB in 30 Minuten)](/previous-versions/sql/sql-server-2008/dd537533(v=sql.100))auf msdn.microsoft.com  
   
--   Technischer Artikel mit den [Top 10-Empfehlungen für SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=220818)auf sqlcat.com  
+-   Technischer Artikel mit den [Top 10-Empfehlungen für SQL Server Integration Services](https://techcommunity.microsoft.com/t5/datacat/top-10-sql-server-integration-services-best-practices/ba-p/305163)auf sqlcat.com  
   
--   Technischer Artikel und Beispiel, [The "Balanced Data Distributor" for SSIS (Ausgeglichene Datenverteilung für SSIS)](https://go.microsoft.com/fwlink/?LinkId=220822) auf sqlcat.com  
+-   Technischer Artikel und Beispiel, [The "Balanced Data Distributor" for SSIS (Ausgeglichene Datenverteilung für SSIS)](https://www.sqlshack.com/ssis-balanced-data-distributor-overview/) auf sqlcat.com  
   
 -   Blogbeitrag [Beheben von Leistungsproblemen bei SSIS-Paketen](https://techcommunity.microsoft.com/t5/sql-server-integration-services/api-sample-oledb-source-and-oledb-destination/ba-p/387553)auf blogs.msdn.com  
   
@@ -201,7 +201,7 @@ ms.locfileid: "92196437"
   
 -   Video [Leistungsentwurfsmuster zu Microsoft SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409)auf channel9.msdn.com  
   
--   Präsentation zur [Nutzung der Verbesserungen am SQL Server 2008 SSIS-Datenfluss-Engine bei Microsoft IT](https://go.microsoft.com/fwlink/?LinkId=217660)auf sqlcat.com  
+-   Präsentation zur [Nutzung der Verbesserungen am SQL Server 2008 SSIS-Datenfluss-Engine bei Microsoft IT](https://channel9.msdn.com/Shows/TechNet+Radio/TechNet-Radio-How-Microsoft-IT-Leverages-SQL-Server-2008-SSIS-Dataflow-Engine-Enhancements)auf sqlcat.com  
   
 -   Video [Ausgeglichener Datenverteiler](/previous-versions/dn912438(v=msdn.10))auf technet.microsoft.com  
   

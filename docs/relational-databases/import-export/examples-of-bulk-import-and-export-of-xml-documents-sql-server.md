@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fef5768f72f45bf388ccd5878d56dc480371aecd
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 5e2a52bcfa2e95aa364bbdf3079e2f8666f0e1e0
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646058"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978788"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Beispiele für den Massenimport und -export von XML-Dokumenten (SQL Server)
 
@@ -46,7 +46,7 @@ Verwenden Sie für den Massenimport von Daten aus einer Datendatei in eine [!INC
 Weitere Informationen finden Sie in den nachfolgenden Themen.
 - [Importieren und Exportieren von Massendaten mithilfe des Hilfsprogramms bcp (SQL Server).](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
 - [Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET(BULK...) (SQL Server).](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
-- [Importieren von XML in SQL Server mit der Komponente zum XML-Massenladen.](https://support.microsoft.com/kb/316005)
+- [Importieren von XML in SQL Server mit der Komponente zum XML-Massenladen.](https://mskb.pkisolutions.com/kb/316005)
 - [XML-Schemaauflistungen (SQL Server)](../xml/xml-schema-collections-sql-server.md)
   
 ## <a name="examples"></a>Beispiele  

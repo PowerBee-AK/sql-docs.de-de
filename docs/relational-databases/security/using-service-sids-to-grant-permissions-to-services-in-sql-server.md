@@ -8,12 +8,12 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: ab9af4d073cbec00736bab6a24817502d353ffd8
-ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
+ms.openlocfilehash: b7d5336bd6f4ad37fba6cf44865d49721b3cbb80
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92175930"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978809"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>Verwenden von Dienst-SIDs zum Erteilen von Berechtigungen für Dienste in SQL Server
 
@@ -105,7 +105,7 @@ GO
   > [!NOTE]
   > Das Entfernen der Dienst-SID-Anmeldungen oder ihre Entfernung aus der sysadmin-Serverrolle kann zu Problemen für verschiedene Komponenten von SQL Server führen, die Verbindungen mit der SQL Server-Datenbank-Engine herstellen. Die folgenden sind einige dieser Probleme:
   > - SQL Server Agent kann nicht gestartet werden oder keine Verbindung mit einem SQL Server-Dienst herstellen
-  > - SQL Server-Setupprogramme stoßen auf ein Problem, das im folgenden Microsoft Knowledge Base-Artikel erwähnt wird: https://support.microsoft.com/help/955813/you-may-be-unable-to-restart-the-sql-server-agent-service-after-you-re
+  > - SQL Server-Setupprogramme stoßen auf ein Problem, das im folgenden Microsoft Knowledge Base-Artikel erwähnt wird: https://mskb.pkisolutions.com/kb/955813
   >
   > Für eine Standardinstanz von SQL Server lässt sich diese Situation korrigieren, indem die Dienst-SID mithilfe der folgenden Transact-SQL-Befehle hinzugefügt wird:
   >
