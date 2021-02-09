@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 2c82514c12ec3ba496e288454d87750e0c91a5f8
-ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
+ms.openlocfilehash: 5b59930023da1279e2db18d9e9fce4186c677f8d
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "99835675"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978582"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Ermitteln der richtigen Azure SQL-Datenbank/verwaltete Instanz-SKU für Ihre lokale Datenbank
 
@@ -207,12 +207,15 @@ Um Bereitstellungs Informationen einzugeben und Änderungen an den Empfehlungen 
     - **Ressourcengruppe** : die Ressourcengruppe, in der Sie die Datenbanken bereitstellen möchten. Geben Sie eine Ressourcengruppe ein, die vorhanden ist.
     - **Region** : die Region, in der Datenbanken bereitgestellt werden. Stellen Sie sicher, dass Ihr Abonnement die SELECT-Region unterstützt.
     - **Server Name** : der Azure SQL-Datenbankserver, auf dem die Datenbanken bereitgestellt werden sollen. Wenn Sie einen Servernamen eingeben, der nicht vorhanden ist, wird er erstellt.
-    - **Administrator Benutzername** : der Benutzername des Server Administrators. Stellen Sie sicher, dass Ihr Anmelde Name die folgenden Anforderungen erfüllt: Ihr Anmelde Name darf keinen SQL-Bezeichner oder einen typischen Systemnamen (z. b. admin, Administrator, Sa, root, DBManager, loginmanager usw.) oder einen integrierten Datenbankbenutzer oder eine integrierte Rolle (z. b. dbo, Gast, Public usw.) enthalten. Ihr Anmelde Name darf keine nicht alphanumerischen Zeichen (einschließlich Leerzeichen, Unicode-Zeichen) enthalten, und der Anmelde Name darf nicht mit Zahlen oder Symbolen beginnen.
+    - **Administrator Benutzername** : der Benutzername des Server Administrators. Stellen Sie sicher, dass Ihr Anmelde Name die folgenden Anforderungen erfüllt:
+      - Ihr Anmelde Name darf keinen SQL-Bezeichner oder einen typischen Systemnamen (z. b. admin, Administrator, Sa, root, DBManager, loginmanager usw.) oder einen integrierten Datenbankbenutzer oder eine integrierte Rolle (z. b. dbo, Gast, Public usw.) enthalten.
+      - Der Anmelde Name darf keine nicht alphanumerischen Zeichen (einschließlich Leerzeichen, Unicode-Zeichen) enthalten.
+      - Der Anmelde Name darf nicht mit Zahlen oder Symbolen beginnen.
 
-    - **Administrator Kennwort** : das Server Administrator Kennwort. Ihr Kennwort muss mindestens 8 Zeichen lang sein.
-Ihr Kennwort darf nicht mehr als 128 Zeichen lang sein.
-Ihr Kennwort muss Zeichen aus drei der folgenden Kategorien enthalten: englische Großbuchstaben, englische Kleinbuchstaben, Zahlen (0-9) und nicht alphanumerische Zeichen (!, $, #, % usw.).
-Ihr Kennwort darf den Anmelde Namen nicht ganz oder teilweise enthalten. (Ein Teil eines Anmelde namens ist als drei oder mehr aufeinander folgende alphanumerische Zeichen definiert.)
+    - **Administrator Kennwort** : das Server Administrator Kennwort. 
+      - Ihr Kennwort muss mindestens 8 Zeichen lang sein und darf nicht mehr als 128 Zeichen lang sein.
+      - Ihr Kennwort muss Zeichen aus drei der folgenden Kategorien enthalten: englische Großbuchstaben, englische Kleinbuchstaben, Zahlen (0-9) und nicht alphanumerische Zeichen (!, $, #, % usw.).
+      - Ihr Kennwort darf den Anmelde Namen nicht ganz oder teilweise enthalten. (Ein Teil eines Anmelde namens ist als drei oder mehr aufeinander folgende alphanumerische Zeichen definiert.)
 
 2. Überprüfen Sie die Empfehlungen für jede Datenbank, und ändern Sie den Tarif, die computeebene und die maximale Datengröße nach Bedarf. Stellen Sie sicher, dass Sie alle Datenbanken deaktivieren, die Sie zurzeit nicht bereitstellen möchten.
 
@@ -229,12 +232,15 @@ Ihr Kennwort darf den Anmelde Namen nicht ganz oder teilweise enthalten. (Ein Te
     - **Ressourcengruppe** : die Ressourcengruppe, in der Sie die Datenbanken bereitstellen möchten. Geben Sie eine Ressourcengruppe ein, die vorhanden ist.
     - **Region** : die Region, in der Datenbanken bereitgestellt werden. Stellen Sie sicher, dass Ihr Abonnement die SELECT-Region unterstützt.
     - **Instanzname** – die Instanz von Azure SQL verwaltete Instanz, zu der Sie die Datenbanken migrieren möchten. Der Instanzname darf nur Kleinbuchstaben, Ziffern und "-" enthalten. er darf jedoch nicht mit "-" beginnen oder enden oder mehr als 63 Zeichen enthalten.
-    - **Instanzadministrator-Benutzername** – der Administrator Benutzername der Instanz. Stellen Sie sicher, dass Ihr Anmelde Name die folgenden Anforderungen erfüllt: Ihr Anmelde Name darf keinen SQL-Bezeichner oder einen typischen Systemnamen (z. b. admin, Administrator, Sa, root, DBManager, loginmanager usw.) oder einen integrierten Datenbankbenutzer oder eine integrierte Rolle (z. b. dbo, Gast, Public usw.) enthalten. Ihr Anmelde Name darf keine nicht alphanumerischen Zeichen (einschließlich Leerzeichen, Unicode-Zeichen) enthalten, und der Anmelde Name darf nicht mit Zahlen oder Symbolen beginnen.
+    - **Instanzadministrator-Benutzername** – der Administrator Benutzername der Instanz. Stellen Sie sicher, dass Ihr Anmelde Name die folgenden Anforderungen erfüllt:
+      - Ihr Anmelde Name darf keinen SQL-Bezeichner oder einen typischen Systemnamen (z. b. admin, Administrator, Sa, root, DBManager, loginmanager usw.) oder einen integrierten Datenbankbenutzer oder eine integrierte Rolle (z. b. dbo, Gast, Public usw.) enthalten.
+      - Der Anmelde Name darf keine nicht alphanumerischen Zeichen (einschließlich Leerzeichen, Unicode-Zeichen) enthalten.
+      - Der Anmelde Name darf nicht mit Zahlen oder Symbolen beginnen.
 
-    - **Instanzadministratorkennwort** : das Instanz-Administrator Kennwort. Ihr Kennwort muss mindestens 16 Zeichen lang sein.
-Ihr Kennwort darf nicht mehr als 128 Zeichen lang sein.
-Ihr Kennwort muss Zeichen aus drei der folgenden Kategorien enthalten: englische Großbuchstaben, englische Kleinbuchstaben, Zahlen (0-9) und nicht alphanumerische Zeichen (!, $, #, % usw.).
-Ihr Kennwort darf den Anmelde Namen nicht ganz oder teilweise enthalten. (Ein Teil eines Anmelde namens ist als drei oder mehr aufeinander folgende alphanumerische Zeichen definiert.)
+    - **Instanzadministratorkennwort** : das Instanz-Administrator Kennwort. 
+      - Ihr Kennwort muss mindestens 16 Zeichen lang sein und darf nicht mehr als 128 Zeichen lang sein.
+      - Ihr Kennwort muss Zeichen aus drei der folgenden Kategorien enthalten: englische Großbuchstaben, englische Kleinbuchstaben, Zahlen (0-9) und nicht alphanumerische Zeichen (!, $, #, % usw.).
+      - Ihr Kennwort darf den Anmelde Namen nicht ganz oder teilweise enthalten. (Ein Teil eines Anmelde namens ist als drei oder mehr aufeinander folgende alphanumerische Zeichen definiert.)
 
     - **Vnet-Name** – der Name des vnets, unter dem die verwaltete Instanz bereitgestellt werden soll. Geben Sie einen vorhandenen vnet-Namen ein.
     - **Subnetzname** – der Name des Subnetzes, unter dem die verwaltete Instanz bereitgestellt werden soll. Geben Sie einen vorhandenen Subnetznamen ein.
