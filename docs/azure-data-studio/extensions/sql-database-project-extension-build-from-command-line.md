@@ -9,16 +9,16 @@ ms.author: drskwier
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 08/07/2020
-ms.openlocfilehash: 060039496d5877951e5255fce5e6cac2321731c6
-ms.sourcegitcommit: 31f3405be08441471f441395f1d0f0017ebc0ad5
+ms.openlocfilehash: 1233b8319c4fbd893159ba88fbcd1c3401f05ce0
+ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94617928"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495718"
 ---
 # <a name="build-a-database-project-from-command-line"></a>Erstellen eines Datenbankprojekts über die Befehlszeile
 
-Die SQL Database Project-Erweiterung für Azure Data Studio stellt eine grafische Benutzeroberfläche zum [Erstellen eines Datenbankprojekts](sql-database-project-extension-build.md) bereit. Für Windows-, macOS- und Linux-Umgebungen steht aber auch eine Buildoption über die Befehlszeile zur Verfügung. In diesem Artikel werden die Voraussetzungen und die Syntax für die Erstellung eines SQL-Projekts in einer DACPAC-Datei über die Befehlszeile beschrieben.
+Die Erweiterung „SQL Database Projects“ (SQL-Datenbank-Projekte) (Vorschauversion) für Azure Data Studio stellt eine grafische Benutzeroberfläche zum [Erstellen eines Datenbankprojekts](sql-database-project-extension-build.md) bereit. Für Windows-, macOS- und Linux-Umgebungen steht aber auch eine Buildoption über die Befehlszeile zur Verfügung. In diesem Artikel werden die Voraussetzungen und die Syntax für die Erstellung eines SQL-Projekts in einer DACPAC-Datei über die Befehlszeile beschrieben.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 

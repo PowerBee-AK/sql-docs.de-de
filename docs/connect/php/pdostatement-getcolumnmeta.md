@@ -2,21 +2,21 @@
 title: PDOStatement::getColumnMeta
 description: API-Referenz für die PDOStatement::getColumnMeta-Funktion im Microsoft PDO_SQLSRV-Treiber für PHP für SQL Server.
 ms.custom: ''
-ms.date: 08/10/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b76e7c6201226c13ae057e8ac182b7ab0a9c6b13
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: c5793f486b43fe4c2d12ec9be004dbb2b3346020
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92082019"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179930"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -131,7 +131,64 @@ Wenn Sie den obigen Codeausschnitt ändern, indem Sie `PDO::SQLSRV_ATTR_DATA_CLA
 {"flags":0,"sqlsrv:decl_type":"date","native_type":"string","table":"","pdo_type":2,"name":"BirthDate","len":10,"precision":0}
 ```
 
-      
+## <a name="sensitivity-rank-using-a-predefined-set-of-values"></a>Vertraulichkeitsbewertung mithilfe vordefinierter Werte
+
+Ab 5.9.0 können PHP-Treiber bei Verwendung von ODBC-Treibern mit Version 17.4.2 und höher Klassifizierungsbewertungen abrufen. Mithilfe von [ADD SENSITIVITY CLASSIFICATION](/sql/t-sql/statements/add-sensitivity-classification-transact-sql) können Benutzer eine Bewertung definieren, um Datenspalten zu klassifizieren. 
+
+Wenn ein Benutzer beispielsweise `NONE` und `LOW` jeweils BirthDate und SSN zuweist, sieht die JSON-Darstellung folgendermaßen aus:
+
+```
+{"0":{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""},"rank":0},"rank":0}
+{"0":{"Label":{"name":"Highly Confidential - secure privacy","id":""},"Information Type":{"name":"Credentials","id":""},"rank":10},"rank":10}
+```
+
+Wie bei der [Vertraulichkeitsklassifizierung](/sql/relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql) ersichtlich wird, lauten die numerischen Werte für die Bewertungen wie folgt:
+
+```
+0 for NONE
+10 for LOW
+20 for MEDIUM
+30 for HIGH
+40 for CRITICAL
+```
+
+Deshalb lauten die Klassifizierungsmetadaten folgendermaßen, wenn der Benutzer `RANK=CRITICAL` anstelle von `RANK=NONE` beim Klassifizieren der Spalte BirthDate definiert:
+
+```
+array(1) {
+  ["Data Classification"]=>
+  array(2) {
+    [0]=>
+    array(3) {
+      ["Label"]=>
+      array(2) {
+        ["name"]=>
+        string(26) "Confidential Personal Data"
+        ["id"]=>
+        string(0) ""
+      }
+      ["Information Type"]=>
+      array(2) {
+        ["name"]=>
+        string(9) "Birthdays"
+        ["id"]=>
+        string(0) ""
+      }
+      ["rank"]=>
+      int(40)
+    }
+    ["rank"]=>
+    int(40)
+  }
+}
+```
+
+Unten sehen Sie die aktualisierte JSON-Darstellung:
+
+```
+{"0":{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""},"rank":40},"rank":40}
+```
+
 ## <a name="see-also"></a>Weitere Informationen  
 [PDOStatement-Klasse](../../connect/php/pdostatement-class.md)
 

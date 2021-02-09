@@ -2,7 +2,7 @@
 title: Systemanforderungen für Microsoft-Treiber für PHP
 description: Die Microsoft-Treiber für PHP für SQL Server unterstützen eine Vielzahl von PHP-Versionen, Betriebssystemen und SQL Server-Versionen.
 ms.custom: ''
-ms.date: 08/06/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e0ae11dd3a13ac8b2071943c49ef1ae4b8c400f4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 06824f62740653eddeee6d3484e7eb8914404110
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540464"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076442"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Systemanforderungen für Microsoft-Treiber für PHP für SQL Server
 
@@ -25,20 +25,20 @@ ms.locfileid: "89540464"
 
 In diesem Artikel werden die Komponenten aufgeführt, die für den Zugriff auf Daten in einer SQL Server- oder Azure SQL-Datenbank-Instanz mithilfe der [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] auf Ihrem System installiert werden müssen.
 
-Die Versionen 3.2 und höher der Microsoft-PHP-Treiber für SQL Server werden offiziell unterstützt. Ausführliche Informationen zu Supportlebenszyklen und Anforderungen der PHP-Treiber finden Sie in der [Unterstützungsmatrix](microsoft-php-drivers-for-sql-server-support-matrix.md).
+Die Versionen 4.0 und höher der Microsoft-PHP-Treiber für SQL Server werden offiziell unterstützt. Ausführliche Informationen zu Supportlebenszyklen und Anforderungen der PHP-Treiber finden Sie in der [Unterstützungsmatrix](microsoft-php-drivers-for-sql-server-support-matrix.md).
 
 ## <a name="php"></a>PHP
 
 Weitere Informationen zum Herunterladen und Installieren von stabilen PHP-Binärdateien finden Sie [auf der PHP-Website](https://php.net).  Die Microsoft-PHP-Treiber für SQL Server erfordern die richtigen PHP-Versionen, wie in [Unterstützung von PHP-Versionen](microsoft-php-drivers-for-sql-server-support-matrix.md#php-version-support) beschrieben.
 
--   Die richtige Version der Treiberdatei muss mit der entsprechenden PHP-Version aktiviert werden. Weiter unten finden Sie unter [Treiberversionen](#driver-versions) weitere Informationen zu den verschiedenen Treiberdateien.  Die Treiber können Sie unter [Download the Microsoft Drivers for PHP for SQL Server (Herunterladen der Microsoft-Treiber für PHP für SQL Server)](download-drivers-php-sql-server.md) herunterladen. Unter [Loading the Microsoft Drivers for PHP for SQL Server (Laden der Microsoft-Treiber für PHP für SQL Server)](loading-the-php-sql-driver.md) finden Sie weitere Informationen zur Konfiguration der Treiber für PHP.
+-   Die richtige Version der Treiberdatei muss mit der entsprechenden PHP-Version aktiviert werden. Weiter unten finden Sie unter [Treiberversionen](#driver-versions) weitere Informationen zu den verschiedenen Treiberdateien. Die Treiber können Sie unter [Download the Microsoft Drivers for PHP for SQL Server (Herunterladen der Microsoft-Treiber für PHP für SQL Server)](download-drivers-php-sql-server.md) herunterladen. Unter [Loading the Microsoft Drivers for PHP for SQL Server (Laden der Microsoft-Treiber für PHP für SQL Server)](loading-the-php-sql-driver.md) finden Sie weitere Informationen zur Konfiguration der Treiber für PHP.
 
 -   Ein Webserver ist erforderlich. Ihr Webserver muss für die Ausführung von PHP konfiguriert sein. Weitere Informationen zum Hosting von PHP-Anwendungen mit IIS finden Sie im [Tutorial auf der PHP-Website](http://docs.php.net/manual/da/install.windows.iis7.php).
 
     [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] wurde auf IIS 10 mit FastCGI getestet.
 
-    > [!NOTE]
-    > Microsoft bietet lediglich für IIS Support.
+> [!NOTE]
+> Microsoft bietet lediglich für IIS Support.
 
 ## <a name="odbc-driver"></a>ODBC-Treiber
 
@@ -46,12 +46,12 @@ Die richtige Version des Microsoft ODBC Driver for SQL Server ist auf dem Comput
 
 Wenn Sie die Windows-Version des Treibers auf eine 64-Bit-Version von Windows herunterladen, installiert das ODBC-64-Bit-Installationsprogramm sowohl 32-Bit- als auch 64-Bit-ODBC-Treiber. Wenn Sie eine 32-Bit-Version von Windows verwenden, verwenden Sie das ODBC-x86-Installationsprogramm. Auf Nicht-Windows-Plattformen sind nur 64-Bit-Versionen des Treibers verfügbar.
 
-|Version des PHP-Treibers &#8594;<br />&#8595; Version des ODCB-Treibers|5.8|5.6|5.3|5,2|4.3|4,0|3.2|
+|Version des PHP-Treibers &#8594;<br />&#8595; Version des ODCB-Treibers|5.9|5.8|5.6|5.3|5,2|4.3|4,0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|ODBC-Treiber 17 und höher |Ja|Ja|Ja|Ja|   |   |   |
-|ODBC-Treiber 13.1|Ja|Ja|Ja|Ja|Ja|Ja|   |
-|ODBC-Treiber 13  |   |   |   |   |   |Ja|   |
-|ODBC-Treiber 11  |Ja|Ja|Ja|Ja|Ja|Ja|Ja|
+|ODBC-Treiber 17 und höher |Ja|Ja|Ja|Ja|Ja|   |   |   |
+|ODBC-Treiber 13.1|Ja|Ja|Ja|Ja|Ja|Ja|Ja|   |
+|ODBC-Treiber 13  |   |   |   |   |   |   |Ja|   |
+|ODBC-Treiber 11  |Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|
 
 Falls Sie den SQLSRV-Treiber verwenden, teilt [sqlsrv_client_info](sqlsrv-client-info.md) Ihnen mit, welche Version des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] verwendet wird. Fall Sie den PDO_SQLSRV-Treiber verwenden, können Sie die Version mithilfe von [PDO::getAttribute](pdo-getattribute.md) abrufen.
 
@@ -68,6 +68,36 @@ Ausführliche Informationen dazu, welche Betriebssysteme unterstützt werden, fi
 Dieser Abschnitt listet die in den einzelnen Versionen von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] enthaltenen Treiber auf. Jedes Installationspaket enthält SQLSRV- und PDO_SQLSRV-Treiberdateien in Varianten mit und ohne Threads. Unter Windows sind auch 32-Bit- und 64-Bit-Varianten verfügbar. Um den Treiber für die Verwendung mit der PHP-Runtime zu konfigurieren, folgen Sie den Installationsanweisungen in [Laden von Microsoft Drivers for PHP for SQL Server](loading-the-php-sql-driver.md).
 
 Auf den unterstützten Versionen von Linux und macOS können die entsprechenden Treiber mithilfe des PECL-Paketsystems von PHP mit den [Linux- und macOS-Installationsanweisungen](installation-tutorial-linux-mac.md) installiert werden. Alternativ können Sie vorgefertigte Binärdateien für Ihre Plattform von der GitHub-Projektseite [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) (Microsoft-Treiber für PHP für SQL Server) herunterladen. In den folgenden Tabellen sind die in den vorgefertigten Binärpaketen enthaltenen Dateien aufgelistet.
+
+**Microsoft-Treiber 5.9 für PHP für SQL Server:**
+
+Unter Windows werden die folgenden Treiberdateien bereitgestellt:
+
+|Treiberdatei|PHP-Version|Threadsicher?|Zu verwendende PHP .dll|
+|---------------|:---------------:|:----------------:|---------------------|
+|32-Bit-Version von „php_sqlsrv_73_nts.dll“<br />32-bit php_pdo_sqlsrv_73_nts.dll|7.3|nein |32-Bit-Version von „php7.dll“|
+|32-Bit-Version von „php_sqlsrv_73_ts.dll“ <br />32-bit php_pdo_sqlsrv_73_ts.dll |7.3|ja|32-Bit-Version von „php7ts.dll“|
+|64-Bit-Version von „php_sqlsrv_73_nts.dll“<br />64-bit php_pdo_sqlsrv_73_nts.dll|7.3|nein |64-Bit-Version von „php7.dll“|
+|64-Bit-Version von „php_sqlsrv_73_ts.dll“ <br />64-bit php_pdo_sqlsrv_73_ts.dll |7.3|ja|64-Bit-Version von „php7ts.dll“|
+|32-Bit-Version von „php_sqlsrv_74_nts.dll“<br />32-Bit-Version von „php_pdo_sqlsrv_74_nts.dll“|7.4|nein |32-Bit-Version von „php7.dll“|
+|32-Bit-Version von „php_sqlsrv_74_ts.dll“ <br />32-Bit-Version von „php_pdo_sqlsrv_74_ts.dll“ |7.4|ja|32-Bit-Version von „php7ts.dll“|
+|64-Bit-Version von „php_sqlsrv_74_nts.dll“<br />64-Bit-Version von „php_pdo_sqlsrv_74_nts.dll“|7.4|nein |64-Bit-Version von „php7.dll“|
+|64-Bit-Version von „php_sqlsrv_74_ts.dll“ <br />64-Bit-Version von „php_pdo_sqlsrv_74_ts.dll |7.4|ja|64-Bit-Version von „php7ts.dll“|
+|32-Bit-Version von „php_sqlsrv_80_nts.dll“<br />32-Bit-Version von „php_pdo_sqlsrv_80_nts.dll“|8.0|nein |32-Bit-Version von „php8.dll“|
+|32-Bit-Version von „php_sqlsrv_80_ts.dll“ <br />32-Bit-Version von „php_pdo_sqlsrv_80_ts.dll“ |8.0|ja|32-Bit-Version von „php8ts.dll“|
+|64-Bit-Version von „php_sqlsrv_80_nts.dll“<br />64-Bit-Version von „php_pdo_sqlsrv_80_nts.dll“|8.0|nein |64-Bit-Version von „php8.dll“|
+|64-Bit-Version von „php_sqlsrv_80_ts.dll“ <br />64-Bit-Version von „php_pdo_sqlsrv_80_ts.dll“ |8.0|ja|64-Bit-Version von „php8ts.dll“|
+
+Unter Linux werden die folgenden Treiberdateien bereitgestellt:
+
+|Treiberdatei|PHP-Version|Threadsicher?|
+|---------------|:---------------:|:----------------:|
+|php_sqlsrv_73_nts.so<br />php_pdo_sqlsrv_73_nts.so|7.3|nein |
+|php_sqlsrv_73_ts.so <br />php_pdo_sqlsrv_73_ts.so |7.3|ja|
+|php_sqlsrv_74_nts.so<br />php_pdo_sqlsrv_74_nts.so|7.4|nein |
+|php_sqlsrv_74_ts.so <br />php_pdo_sqlsrv_74_ts.so |7.4|ja|
+|php_sqlsrv_80_nts.so<br />php_pdo_sqlsrv_80_nts.so|8.0|nein |
+|php_sqlsrv_80_ts.so <br />php_pdo_sqlsrv_80_ts.so |8.0|ja|
 
 **Microsoft-Treiber 5.8 für PHP für SQL Server:**
 

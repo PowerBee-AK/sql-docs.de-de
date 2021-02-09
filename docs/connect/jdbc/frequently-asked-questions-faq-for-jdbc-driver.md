@@ -2,7 +2,7 @@
 title: Häufig gestellte Fragen (FAQ) zum JDBC-Treiber
 description: Dieser Artikel enthält Antworten auf häufig gestellte Fragen zum Microsoft JDBC-Treiber für SQL Server.
 ms.custom: ''
-ms.date: 08/24/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f1fe92ec4216998d36826c518a5dce40c26253c0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 634bbd66e2ad00ccda3b60f6f2fccfea976d09b0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725461"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163619"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Häufig gestellte Fragen (FAQ) zum JDBC-Treiber
 
@@ -36,6 +36,15 @@ Detaillierte Informationen hierzu finden Sie auf der Seite [Supportmatrix für d
 Die im GitHub-Repository für den Microsoft JDBC-Treiber verfügbaren JDBC-Treiberdateien bilden den Kern des JDBC-Treibers und stehen unter der im Repository aufgeführten Open-Source-Lizenz. Die Treiberpakete im [Microsoft Download Center](download-microsoft-jdbc-driver-for-sql-server.md) enthalten zusätzliche Bibliotheken für die integrierte Windows-Authentifizierung und die Aktivierung von XA-Transaktionen mit dem JDBC-Treiber. Diese zusätzliche Bibliotheken stehen unter der Lizenz, die im herunterladbaren Paket enthalten ist.
 
 **Was sollte ich wissen, bevor ich meinen Treiber aktualisiere?**  
+Der Microsoft JDBC-Treiber 9.2 unterstützt die JDBC-Spezifikationen 4.2 und 4.3 (teilweise), und das Installationspaket enthält die folgenden drei JAR-Klassenbibliotheken:
+
+| JAR                        | JDBC-Spezifikation            | JDK-Version |
+| -------------------------- | ----------------------------- | ----------- |
+| mssql-jdbc-9.2.0.jre15.jar | JDBC 4.3 (teilweise) und 4.2 | JDK 15.0    |
+| mssql-jdbc-9.2.0.jre11.jar | JDBC 4.3 (teilweise) und 4.2 | JDK 11.0    |
+| mssql-jdbc-9.2.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| &nbsp;                     | &nbsp;                        | &nbsp;      |
+
 Der Microsoft JDBC-Treiber 8.4 unterstützt die JDBC-Spezifikationen 4.2 sowie 4.3 (teilweise), und das Installationspaket enthält die folgenden drei JAR-Klassenbibliotheken:
 
 | JAR                        | JDBC-Spezifikation            | JDK-Version |

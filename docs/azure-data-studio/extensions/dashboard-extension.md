@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: c7402c8dd0d2d85d38536a0bcfea3ce8cd780657
-ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
+ms.openlocfilehash: d933f9bdff4279b841522f8a0e09f66e01364630
+ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96900873"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495754"
 ---
 # <a name="create-an-azure-data-studio-dashboard-extension"></a>Erstellen einer Azure Data Studio-Dashboarderweiterung
 
@@ -37,7 +37,7 @@ Azure Data Studio ist auf dem gleichen Framework wie Visual Studio Code aufgebau
 - [Node.js](https://nodejs.org) – installiert und in Ihrem `$PATH` verfügbar. Node.js enthält [npm](https://www.npmjs.com/), den Node.js-Paket-Manager, der zum Installieren des Erweiterungsgenerators verwendet wird.
 - [Visual Studio Code](https://code.visualstudio.com) zum Debuggen der Erweiterung.
 - Die [Debugerweiterung](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) von Azure Data Studio (optional). Mit der Debugerweiterung können Sie Ihre Erweiterung testen, ohne sie zu packen und in Azure Data Studio zu installieren.
-- Stellen Sie sicher, dass sich `azuredatastudio` in Ihrem Pfad befindet. Wenn Sie unter Windows arbeiten, wählen Sie in „setup.exe“ die Option **Zu PATH hinzufügen** aus. Wenn Sie unter Mac oder Linux arbeiten, führen Sie die Option **azuredatastudio-Befehl in PATH installieren** aus.
+- Stellen Sie sicher, dass sich `azuredatastudio` in Ihrem Pfad befindet. Wenn Sie unter Windows arbeiten, wählen Sie in „setup.exe“ die Option **Zu PATH hinzufügen** aus. Führen Sie unter macOS oder Linux über die Befehlspalette in Azure Data Studio **Befehl 'azuredatastudio' in PATH installieren** aus.
 
 ## <a name="install-the-extension-generator"></a>Installieren des Erweiterungsgenerators
 

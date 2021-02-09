@@ -2,7 +2,7 @@
 title: Dialogfeld „SQL Server-Anmeldung“ (ODBC)
 description: Das Dialogfeld „SQL Server-Anmeldung“ kann angezeigt werden, wenn von einer Anwendung eine ODBC-Verbindung hergestellt wird und nicht genügend Informationen für die Verbindung mit der Datenbank angegeben werden.
 ms.custom: ''
-ms.date: 03/21/2018
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-jizho2
-ms.openlocfilehash: 7c0a2be5961e4fab07941d999da1a2b2fe5f9dbe
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 9a2ba6a75457b2c4742603368d153f5636d3b541
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87898807"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158217"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Dialogfeld „SQL Server-Anmeldung“ (ODBC)
 
@@ -41,6 +41,7 @@ Wählen Sie hier einen der folgenden Authentifizierungsmodi aus:
 - **Integrierte Active Directory Authentifizierung** mit dem Konto des aktuell angemeldeten Benutzers
 - **Interaktive Active Directory-Authentifizierung** mit Anmelde-ID
 - Authentifizierung mithilfe der **verwalteten Dienstidentität** (verwalteten Identität)
+- **Authentifizierung mit Dienstprinzipal für Active Directory** mit Azure Active Directory-Dienstprinzipal
 
 Weitere Informationen zu den Authentifizierungsmodi finden Sie unter [Datenquellen-Assistent (Bildschirm 2)](../../../connect/odbc/windows/dsn-wizard-2.md).
 
@@ -50,7 +51,7 @@ Wenn Sie eine vertrauenswürdige Verbindung verwenden, können Sie einen Dienstp
 
 ### <a name="login-id"></a>Login ID
 
-Wenn Sie als **Authentifizierungsmodus** die Option **SQL Server**, **Active Directory-Kennwort**, **Interaktive Active Directory-Authentifizierung** oder **Verwaltete Dienstidentität** ausgewählt haben, geben Sie hier die SQL Server- oder Azure Active Directory-Anmelde-ID an, die für die Verbindung verwendet werden soll. Haben Sie eine andere Option ausgewählt, ist das Feld **Anmelde-ID** deaktiviert.
+Wenn Sie als **Authentifizierungsmodus** die Option **SQL Server**, **Active Directory-Kennwort**, **Interaktive Active Directory-Authentifizierung**, **Verwaltete Dienstidentität** oder **Active Directory-Dienstprinzipal** ausgewählt haben, geben Sie hier die SQL Server- oder Azure Active Directory-Anmelde-ID an, die für die Verbindung verwendet werden soll. Haben Sie eine andere Option ausgewählt, ist das Feld **Anmelde-ID** deaktiviert.
 
 ### <a name="password"></a>Kennwort
 

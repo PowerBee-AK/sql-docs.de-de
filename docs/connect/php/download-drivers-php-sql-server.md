@@ -2,7 +2,7 @@
 title: Herunterladen von Microsoft-Treibern für PHP für SQL Server
 description: Laden Sie die Microsoft-Treiber für PHP für SQL Server herunter, um PHP-Anwendungen zu entwickeln, die eine Verbindung mit SQL Server und Azure SQL-Datenbank herstellen.
 ms.custom: ''
-ms.date: 08/10/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,30 +10,30 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 24dfef1b33b2a61c0d82c07ce6306e0b0449b8f3
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: bc1cc9339fa0f5a53f8781bc0afecc0fd614e0dd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680765"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198333"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Herunterladen von Microsoft-Treibern für PHP für SQL Server
 
-Die Microsoft-Treiber für PHP für SQL Server ermöglichen die Integration in SQL Server für PHP-Anwendungen. Die Treiber sind PHP-Erweiterungen, die das Lesen und Schreiben von SQL Server-Daten aus PHP-Skripts ermöglichen. Die Treiber stellen Schnittstellen für den Zugriff auf Daten in Azure SQL-Datenbank und allen SQL Server-Editionen ab 2005 (einschließlich Express-Editionen) bereit. Die Treiber verwenden PHP-Features, einschließlich PHP-Streams, um große Objekte zu lesen und zu schreiben.
+Die Microsoft-Treiber für PHP für SQL Server ermöglichen die Integration in SQL Server für PHP-Anwendungen. Die Treiber sind PHP-Erweiterungen, die das Lesen und Schreiben von SQL Server-Daten aus PHP-Skripts ermöglichen. Die Treiber stellen Schnittstellen für den Zugriff auf Daten in Azure SQL-Datenbank und allen SQL Server-Versionen ab 2012 (einschließlich Express Edition-Versionen) bereit. Die Treiber verwenden PHP-Features, einschließlich PHP-Streams, um große Objekte zu lesen und zu schreiben.
 
 Unter Linux und macOS können die Treiber für PHP ganz einfach über die PECL heruntergeladen und installiert werden. Weitere Informationen finden Sie im [Tutorial zur Linux- und macOS-Installation](installation-tutorial-linux-mac.md). Wenn Sie die Treiber für PHP unter Linux und macOS manuell herunterladen und installieren müssen, finden Sie Pakete für diese Plattformen unter den entsprechenden Releasetags auf GitHub.
 
 ## <a name="download"></a>Download
 
-Version 5.8 der Microsoft-Treiber für PHP für SQL Server ist die neueste allgemein verfügbare Version.
+Version 5.9 der Microsoft-Treiber für PHP für SQL Server ist die aktuelle allgemein verfügbare Version.
 
-**[![Download](../../ssms/media/download-icon.png) Microsoft-Treiber für PHP für SQL Server (Windows) herunterladen](https://go.microsoft.com/fwlink/?linkid=2120362)**  
-[GitHub-Releasetag v5.8.0 (hier sind Pakete für Linux und macOS verfügbar)](https://github.com/Microsoft/msphpsql/releases/tag/v5.8.0)
+**[![Download](../../ssms/media/download-icon.png) Microsoft-Treiber für PHP für SQL Server (Windows) herunterladen](https://go.microsoft.com/fwlink/?linkid=2152937)**  
+[GitHub-Releasetag v5.9.0 (hier sind Pakete für Linux und macOS verfügbar)](https://github.com/Microsoft/msphpsql/releases/tag/v5.9.0)
 
 ### <a name="version-information"></a>Versionsinformationen
 
-- Releasenummer: 5.8.0
-- Veröffentlichung: 31. Januar 2019
+- Releasenummer: 5.9.0
+- Veröffentlichung: 29. Januar 2021
 
 Wenn Sie Feedback bereitstellen möchten, wenden Sie sich am besten an das für die Microsoft-Treiber für PHP für SQL Server zuständige Team, indem Sie im [GitHub-Repository](https://github.com/Microsoft/msphpsql/issues) ein Issue eröffnen.
 

@@ -2,7 +2,7 @@
 title: Versionshinweise für Microsoft ODBC Driver for SQL Server für Windows
 description: In diesem Artikel mit Versionshinweisen werden die Änderungen in jedem Release von Microsoft ODBC Driver for SQL Server unter Windows beschrieben.
 ms.custom: ''
-ms.date: 10/29/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 6c19be21aebb6a8480fb51f396530e6843ac2861
-ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
+ms.openlocfilehash: e587d8938cd5c63172f9e27622b680de62cb7cea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93043813"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168005"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Versionshinweise für Microsoft ODBC Driver for SQL Server für Windows
 
@@ -43,6 +43,28 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="177"></a>17,7
+
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x64-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2153471)  
+![Download](../../../ssms/media/download-icon.png) [Herunterladen des x86-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2153469)  
+
+Versionsnummer: 17.7.1.1  
+Veröffentlichung: 29. Januar 2021
+
+Wenn Sie das Installationsprogramm in einer anderen Sprache als der für Sie erkannten herunterladen möchten, können Sie hierfür einen der folgenden direkten Links verwenden.  
+Für den x64-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x40a)  
+Für den x86-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x40a)
+
+| Neues Feature | Details |
+| :------- | :------ |
+| Interaktive Azure Key Vault-Authentifizierung | Weitere Informationen finden Sie unter [Verwenden von Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
+| Dienstprinzipalauthentifizierung | Siehe [Schlüsselwörter und Attribute von DSN- und Verbindungszeichenfolgen](../dsn-connection-string-attribute.md). |
+| Einfügen in verschlüsselte money- und smallmoney-Spalten | Weitere Informationen finden Sie unter [Verwenden von Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
+| Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
+| &nbsp; | &nbsp; |
+
+## <a name="previous-releases"></a>Vorgängerversionen
+
 ## <a name="176"></a>17.6
 
 ![Download](../../../ssms/media/download-icon.png) [Herunterladen des x64-Installationsprogramms](https://go.microsoft.com/fwlink/?linkid=2137027)  
@@ -61,8 +83,6 @@ Für den x86-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink
 | SQL_COPT_SS_AUTOBEGINTXN-Verbindungsattribut, das steuert, ob die automatische BEGIN TRANSACTION-Anweisung nach ROLLBACK oder COMMIT auftritt | Siehe [Schlüsselwörter und Attribute von DSN- und Verbindungszeichenfolgen](../dsn-connection-string-attribute.md). |
 | Fehlerbehebungen. | Siehe [Fehlerbehebungen](../bug-fixes.md) |
 | &nbsp; | &nbsp; |
-
-## <a name="previous-releases"></a>Vorgängerversionen
 
 ## <a name="1752"></a>17.5.2
 

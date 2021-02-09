@@ -1,8 +1,8 @@
 ---
-description: Beispiel für Azure Key Vault
-title: Beispiel für Azure Key Vault | Microsoft-Dokumentation
+description: Beispiel für Azure Key Vault 7.0, 8.0
+title: Beispiel für Azure Key Vault 7.0, 8.0 | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,20 +10,20 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9c3eefb724be4c92abed09b4fee6ff94968d6a36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b29bbc9423fc4f88f2acf907229d3a7e93ae6b80
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438432"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166078"
 ---
-# <a name="azure-key-vault-sample"></a>Beispiel für Azure Key Vault
+# <a name="azure-key-vault-sample-70-80"></a>Beispiel für Azure Key Vault 7.0, 8.0
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 ## <a name="sample-application-using-azure-key-vault-feature"></a>Beispielanwendung mit Azure Key Vault-Feature
 
-Diese Anwendung ist mit dem JDBC-Treiber 7.0 und höher, Azure Key Vault (Version 1.0.0), Adal4j (Version 1.6.0) und den jeweiligen Abhängigkeiten ausführbar.  Die zugrunde liegenden Abhängigkeiten können aufgelöst werden, indem Sie diese Bibliotheken so wie [hier](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) beschrieben der POM-Datei des Projekts hinzufügen:
+Diese Anwendung ist mit dem JDBC-Treiber 7.0, 8.0, Azure-keyvault (Version 1.0.0), Adal4j (Version 1.6.0) und den jeweiligen Abhängigkeiten ausführbar. Die zugrunde liegenden Abhängigkeiten können aufgelöst werden, indem Sie diese Bibliotheken der POM-Datei (Project Object Model) des Projekts hinzufügen. Weitere Informationen zu Featureabhängigkeiten finden Sie unter [Featureabhängigkeiten des Microsoft JDBC-Treibers für SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ```java
 import java.net.URISyntaxException;
@@ -244,7 +244,8 @@ public class AKV {
 }
 ```
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 
+[Azure Key Vault-Beispielversion 9.2](../../connect/jdbc/azure-key-vault-sample-version-9.2.md)  
 [Azure Key Vault-Beispielversion 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  
 [Azure Key Vault-Beispielversion 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)  

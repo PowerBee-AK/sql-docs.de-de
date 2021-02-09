@@ -2,7 +2,7 @@
 title: Anmerkungen zu dieser Version für die Microsoft-Treiber für PHP
 description: Auf dieser Seite wird erläutert, was in den einzelnen Versionen des Microsoft-Treibers für PHP für SQL Server geändert wurde.
 ms.custom: ''
-ms.date: 09/11/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be2317f95adc1a94ee85805aecfaed37d05e875a
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 2d62068af3e6ec4a8f2711a5c11ab1f01388be8e
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005726"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076302"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Versionshinweise für die Microsoft-Treiber für PHP für SQL Server
 
@@ -39,6 +39,36 @@ TO  :  'release-notes-php-sql-driver.md'
 For any questions, ask GeneMi or CraigG.
 Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
+
+## <a name="59"></a>5.9
+
+![Download](../../ssms/media/download-icon.png) [Windows-Paket herunterladen](https://go.microsoft.com/fwlink/?linkid=?????)
+[GitHub-Releasetag (Linux- und macOS-Pakete hier verfügbar)](https://github.com/Microsoft/msphpsql/releases/tag/v5.9.0)
+
+### <a name="version-information"></a>Versionsinformationen
+
+- Releasenummer: 5.9.0<sup>1</sup>
+- Veröffentlichung: 29. Januar 2021
+
+### <a name="whats-new-in-59"></a>Neuerungen in 5.9
+
+| Neues Element | Details |
+| :------- | :------ |
+| Unterstützung für PHP 8.0 hinzugefügt | &nbsp; |
+| Unterstützung für PHP 7.2 eingestellt | &nbsp; |
+| Unterstützung für den Microsoft ODBC-Treiber 17.7 auf allen Plattformen hinzugefügt | &nbsp; |
+| Unterstützung für macOS Big Sur, Ubuntu 20.04, Ubuntu 20.10 und Alpine 3.12 hinzugefügt | Einige erfordern den ODBC-Treiber 17.5 oder höher |
+| Unterstützung für macOS High Sierra, Debian 8 und Ubuntu 19.10 eingestellt | &nbsp; |
+| Unterstützung für das Gebietsschema GB18030 | &nbsp; |
+| PDO-Fehlerinformationen um zusätzliche ODBC-Meldungen erweitert, falls verfügbar | &nbsp; |
+| Unterstützung der Datenklassifizierung durch Ranginformationen | Für diese Funktion ist SQL Server 2019 und der ODBC-Treiber 17.4.2 oder höher erforderlich. |
+| Unterstützung der Azure Active Directory-Authentifizierung mit einem Dienstprinzipal hinzugefügt | Erfordert ODBC-Treiber 17.7 oder höher |
+| Leistung bei der Verarbeitung von Dezimalzahlen als Ein- oder Ausgaben verbessert und unnötige Konvertierungen von numerischen Werten entfernt | &nbsp; |
+| Verbesserte Leistung beim Abrufen von Zahlen mithilfe von Clientpuffern | &nbsp; |
+| Festlegen des Abfragetimeouts ohne LOCK TIMEOUT, wodurch ein zusätzlicher Trip zum Server gespart wird | &nbsp; |
+| &nbsp; | &nbsp; |
+
+<sup>1</sup> Dieses Release erfordert den ODBC-Treiber 17.4.2 oder höher. Andernfalls wird eine Warnung mit dem Hinweis angezeigt, dass ein Attribut nicht festgelegt werden kann. Diese Warnung kann unterdrückt werden, wenn ein älterer ODBC-Treiber verwendet wird. Wenn Sie SQLSRV verwenden, lesen Sie [Vorgehensweise: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers](https://docs.microsoft.com/sql/connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver). Wenn Sie PDO_SQLSRV verwenden, werden Warnungen standardmäßig unterdrückt. Sie können jedoch protokolliert werden. Weitere Informationen finden Sie unter [Protokollieraktivität](https://docs.microsoft.com/sql/connect/php/logging-activity).
 
 ## <a name="581"></a>5.8.1
 

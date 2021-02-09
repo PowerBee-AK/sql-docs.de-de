@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 11/4/2020
-ms.openlocfilehash: 8555a183dc1f888e6ae80b78999b5fc234b431cf
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: ef49071f97d255d98f8086b9ff329c77d7b4afad
+ms.sourcegitcommit: 5ceafd29b8f22edb800cec150f0ccddea43313e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98594411"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98983663"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -23,13 +23,13 @@ ms.locfileid: "98594411"
   
 - [Version](#version): Gibt die Buildnummer der SqlPackage-Anwendung zurück.  In Version 18.6 hinzugefügt.
 
-- [Extract:](sqlpackage-extract.md) Erstellt eine Datenbankmomentaufnahme (DACPAC-Datei) von einer SQL Server- oder Azure SQL-Livedatenbank.  
+- [Extract:](sqlpackage-extract.md) Erstellt eine Datenschichtanwendungsdatei (.dacpac), die das Schema oder das Schema und die Benutzerdaten aus einer verbundenen SQL-Datenbank enthält  
   
 - [Veröffentlichen](sqlpackage-publish.md): Aktualisiert ein Datenbankschema inkrementell, sodass dieses dem Schema einer DACPAC-Quelldatei entspricht Wenn die Datenbank auf dem Server nicht vorhanden ist, wird sie durch den Veröffentlichungsvorgang erstellt. Andernfalls wird eine vorhandene Datenbank aktualisiert.  
   
-- [Export](sqlpackage-export.md): Exportiert eine Livedatenbank – einschließlich des Datenbankschemas und der Benutzerdaten – aus SQL Server oder Azure SQL-Datenbank in ein BACPAC-Paket (BACPAC-Datei).  
+- [Export](sqlpackage-export.md): Exportiert eine verbundene SQL-Datenbank, einschließlich des Datenbankschemas und der Benutzerdaten, in eine BACPAC-Datei (.bacpac)  
   
-- [Import](sqlpackage-import.md): Importiert das Schema und die Tabellendaten aus einem BACPAC-Paket in eine neue Benutzerdatenbank einer Instanz von SQL Server oder Azure SQL-Datenbank.  
+- [Import](sqlpackage-import.md): Importiert das Schema und die Tabellendaten aus einer BACPAC-Datei in eine neue Benutzerdatenbank  
   
 - [DeployReport:](sqlpackage-deploy-drift-report.md) Erstellt einen XML-Bericht der Änderungen, die durch eine Veröffentlichungsaktion vorgenommen würden  
   

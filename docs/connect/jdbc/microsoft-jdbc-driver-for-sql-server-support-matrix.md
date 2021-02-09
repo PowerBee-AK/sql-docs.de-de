@@ -2,7 +2,7 @@
 title: Supportmatrix für den Microsoft JDBC-Treiber für SQL Server
 description: Auf dieser Seite finden Sie die Supportmatrix und die Supportlebenszyklus-Richtlinie für den Microsoft JDBC-Treiber für SQL Server.
 ms.custom: ''
-ms.date: 08/27/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 341b021bbc582b2273f7601bfb993b4db40a4590
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 21b977b950babad552246925d78878c08cd36af3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725451"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163611"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Supportmatrix für den Microsoft JDBC-Treiber für SQL Server
 
@@ -26,7 +26,7 @@ ms.locfileid: "91725451"
   
 ## <a name="microsoft-jdbc-driver-support-lifecycle-matrix-and-policy"></a>Support Lifecycle-Matrix und -Richtlinie für Microsoft JDBC-Treiber  
 
-Die Microsoft Support Lifecycle-Richtlinie (MLS) bietet transparente, vorhersagbare Informationen hinsichtlich der Supportdauer bei Microsoft-Produkten. Für die Versionen 3.0, 4.x, 6.x, 7.x und 8.x des JDBC-Treibers wird ab dem Veröffentlichungsdatum fünf Jahre grundlegender Support (Mainstream-Support) geleistet. Die Definition für den grundlegenden Support finden Sie auf der Website der Microsoft Support Lifecycle-Richtlinie.  
+Die Microsoft Support Lifecycle-Richtlinie (MLS) bietet transparente, vorhersagbare Informationen hinsichtlich der Supportdauer bei Microsoft-Produkten. Für die Versionen 4.x, 6.x, 7.x, 8.x und 9.x des JDBC-Treibers wird ab dem Veröffentlichungsdatum fünf Jahre Mainstream-Support geleistet. Die Definition für den grundlegenden Support finden Sie auf der Website der Microsoft Support Lifecycle-Richtlinie.  
   
 Erweiterte und benutzerdefinierte Support-Optionen sind für den Microsoft JDBC-Treiber nicht verfügbar.  
 
@@ -34,6 +34,7 @@ Die folgenden Microsoft JDBC-Treiber werden bis zum angegebenen Supportende unte
   
 |Treibername|Version des Treiberpakets|Zutreffende JAR-Datei(en)|Ende des grundlegenden Supports|
 |-|-|-|-|  
+|Microsoft JDBC-Treiber 9.2 für SQL Server|9.2|mssql-jdbc-9.2.0.jre15.jar<br> mssql-jdbc-9.2.0.jre11.jar<br> mssql-jdbc-9.2.0.jre8.jar|29. Januar 2026|
 |Microsoft JDBC-Treiber 8.4 für SQL Server|8,4|mssql-jdbc-8.4.1.jre14.jar<br> mssql-jdbc-8.4.1.jre11.jar<br> mssql-jdbc-8.4.1.jre8.jar|31. Juli 2025|
 |Microsoft JDBC-Treiber 8.2 für SQL Server|8,2|mssql-jdbc-8.2.2.jre13.jar<br> mssql-jdbc-8.2.2.jre11.jar<br> mssql-jdbc-8.2.2.jre8.jar|31. Januar 2025|
 |Microsoft JDBC-Treiber 7.4 für SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|31. Juli 2024|
@@ -42,12 +43,12 @@ Die folgenden Microsoft JDBC-Treiber werden bis zum angegebenen Supportende unte
 |Microsoft JDBC-Treiber 6.4 für SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27. Februar 2023|
 |Microsoft JDBC-Treiber 6.2 für SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|30. Juni 2022|
 |Microsoft JDBC-Treiber 6.0 für SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|14. Juli 2021|
-|Der Microsoft JDBC-Treiber 4.2 für SQL Server|4,2|sqljdbc42.jar<br>sqljdbc41.jar|24. August 2020|
   
  Die folgenden Microsoft JDBC-Treiber werden nicht länger unterstützt.  
 
 |Treibername|Version des Treiberpakets|Ende des grundlegenden Supports|  
 |-|-|-|
+|Der Microsoft JDBC-Treiber 4.2 für SQL Server|4,2|24. August 2020|
 |Microsoft JDBC-Treiber 4.1 für SQL Server|4,1|12. Dezember 2019|  
 |Microsoft JDBC-Treiber 4.0 für SQL Server|4,0|6\. März 2017|  
 |Microsoft SQL Server JDBC Driver 3.0|3.0|23. April 2015|  
@@ -61,6 +62,7 @@ Die folgenden Microsoft JDBC-Treiber werden bis zum angegebenen Supportende unte
   
 |Datenbankversion&nbsp;&#8594;<br />&#8595; Treiberversion|Azure SQL-Datenbank|Azure Synapse Analytics|Verwaltete Azure SQL-Instanz|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2008 R2|SQL Server 2008|
 |---|---|---|---|---|---|---|---|---|---|---|---|
+|9.2|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|   |   |   |
 |8,4|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|   |   |
 |8,2|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|   |   |
 |7.4|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|Ja|   |   |
@@ -91,6 +93,7 @@ Die folgenden Microsoft JDBC-Treiber werden bis zum angegebenen Supportende unte
   
 |Version des JDCB-Treibers|JRE-Version|JDBC-API-Version|
 |-|-|-|
+|[9.2](release-notes-for-the-jdbc-driver.md#92)|1.8, 11, 15|4.2, 4.3 (teilweise)|
 |[8,4](release-notes-for-the-jdbc-driver.md#84)|1.8, 11, 14|4.2, 4.3 (teilweise)|
 |[8.2](release-notes-for-the-jdbc-driver.md#82)|1.8, 11, 13|4.2, 4.3 (teilweise)|
 |[7.4](release-notes-for-the-jdbc-driver.md#74)|1.8, 11, 12|4.2, 4.3 (teilweise)|
@@ -100,7 +103,7 @@ Die folgenden Microsoft JDBC-Treiber werden bis zum angegebenen Supportende unte
 |[6.2](release-notes-for-the-jdbc-driver.md#62)|1.7, 1.8|4.1, 4.2|
 |[6.1](release-notes-for-the-jdbc-driver.md#61)|1.7, 1.8|4.1, 4.2|
 |[6.0](release-notes-for-the-jdbc-driver.md#60)|1.7, 1.8|4.1, 4.2|
-|[4.2](release-notes-for-the-jdbc-driver.md#42)|1.7, 1.8|4.1, 4.2|
+|4,2|1.7, 1.8|4.1, 4.2|
 |4,1|1.7|4,0|
 |4,0|1.5, 1.6, 1.7|3.0, 4.0|
 |3.0|1.5, 1.6,|3.0, 4.0|

@@ -29,12 +29,12 @@ ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: 2be72374a13dbedb444b2661cf0e53a0d555d98c
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: 9c732f7be3a25752c16e8e09e483097c8b9cac18
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688970"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536411"
 ---
 # <a name="bcp-utility"></a>Hilfsprogramms bcp
 
@@ -56,7 +56,7 @@ Mit dem Hilfsprogramm **bcp** (**B** ulk **C** opy **P** rogram) werden Daten pe
 **[![bcp für x64 herunterladen](../ssdt/media/download.png) Microsoft Befehlszeilen-Hilfsprogramme 15 für SQL Server (x64) herunterladen](https://go.microsoft.com/fwlink/?linkid=2142258)**
 <br>**[![bcp für x86 herunterladen](../ssdt/media/download.png) Microsoft Befehlszeilen-Hilfsprogramme 15 für SQL Server (x86) herunterladen](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
-Die Befehlszeilentools sind allgemein verfügbar (GA-Version), sie werden jedoch mit dem Installationspaket für [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] veröffentlicht.
+Die Befehlszeilentools sind allgemein verfügbar (GA-Version), sie werden jedoch mit dem Installationspaket für [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] veröffentlicht.
 
 ### <a name="version-information"></a>Versionsinformationen
 
@@ -71,7 +71,7 @@ Die neue BCP unterstützt die Azure AD-Authentifizierung, einschließlich der Mu
 
 Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
 
-Für diese Komponente sind sowohl [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) als auch [Microsoft ODBC Driver for SQL Server 17](../connect/odbc/download-odbc-driver-for-sql-server.md) erforderlich.
+Für diese Komponente sind sowohl [Windows Installer 4.5](https://windows-installer.soft32.com/) als auch [Microsoft ODBC Driver for SQL Server 17](../connect/odbc/download-odbc-driver-for-sql-server.md) erforderlich.
 
 Führen Sie zum Überprüfen der BCP-Version den Befehl `bcp /v` aus, und vergewissern Sie sich, dass Version 15.0.2000.5 oder höher verwendet wird.
 
@@ -174,7 +174,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252).|  
 |OEM|Standardcodepage, die vom Client verwendet wird. Die Standardcodepage, die verwendet wird, wenn **-C** nicht angegeben wird.|  
 |RAW|Es erfolgt keine Konvertierung von einer Codepage zu einer anderen. Dies ist die schnellste Option, da keine Konvertierung vorgenommen wird.|  
-|*Codepage*|Bestimmte Codepagenummer, z. B. 850.<br /><br /> In Versionen vor Version 13 ([!INCLUDE[ssSQL15](../includes/sssql16-md.md)]) wird die Codepage 65001 (UTF-8-Codierung) nicht unterstützt. Ab Version 13 kann die UTF-8-Codierung in frühere Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]importiert werden.|  
+|*Codepage*|Bestimmte Codepagenummer, z. B. 850.<br /><br /> In Versionen vor Version 13 ([!INCLUDE[sssql15-md](../includes/sssql16-md.md)]) wird die Codepage 65001 (UTF-8-Codierung) nicht unterstützt. Ab Version 13 kann die UTF-8-Codierung in frühere Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]importiert werden.|  
 |||
   
  **-d** _**Datenbankname**_<a name="d"></a>   
@@ -429,7 +429,7 @@ Führt den Massenkopiervorgang mithilfe der systemeigenen (Datenbank-)Datentypen
   
  **120** = [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
   
- **130** = [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]  
+ **130** = [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]  
   
  Verwenden Sie die Option "-V80", um beispielsweise Daten für Typen zu erstellen, die nicht von [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]unterstützt werden, jedoch in spätere Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]integriert wurden.  
   
@@ -445,7 +445,7 @@ Führt den Massenkopiervorgang mithilfe der systemeigenen (Datenbank-)Datentypen
 
 ## <a name="remarks"></a>Hinweise<a name="remarks"></a>
 
-- Der **bcp** 13.0-Client wird bei der Installation der [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Tools installiert. Wenn sowohl Tools für [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] als auch für eine frühere Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]installiert sind, verwenden Sie, abhängig von der Reihenfolge der Werte in der PATH-Umgebungsvariablen, möglicherweise den früheren **bcp** -Client anstelle des **bcp** 13.0-Clients. Diese Umgebungsvariable definiert die Verzeichnisse, in denen von Windows nach ausführbaren Dateien gesucht wird. Führen Sie über die Windows-Befehlszeile den Befehl **bcp /v** oder **bcp -v** aus, um zu ermitteln, welche Version Sie verwenden. Weitere Informationen dazu, wie Sie den Befehlspfad in der PATH-Umgebungsvariablen festlegen, finden Sie unter [Umgebungsvariablen](/windows/win32/shell/user-environment-variables). Alternativ können Sie die Windows-Hilfe nach „Umgebungsvariablen“ durchsuchen.
+- Der Client für **bcp** 13.0 wird bei der Installation der Tools für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[sssql19-md.md](../includes/sssql19-md.md)] installiert. Wenn Tools für mehrere Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] installiert sind, verwenden Sie, je nach Reihenfolge der Werte in der PATH-Umgebungsvariablen, möglicherweise den früheren **bcp**-Client anstelle des Clients für **bcp** 13.0. Diese Umgebungsvariable definiert die Verzeichnisse, in denen von Windows nach ausführbaren Dateien gesucht wird. Führen Sie über die Windows-Befehlszeile den Befehl **bcp /v** oder **bcp -v** aus, um zu ermitteln, welche Version Sie verwenden. Weitere Informationen dazu, wie Sie den Befehlspfad in der PATH-Umgebungsvariablen festlegen, finden Sie unter [Umgebungsvariablen](/windows/win32/shell/user-environment-variables). Alternativ können Sie die Windows-Hilfe nach „Umgebungsvariablen“ durchsuchen.
 
     Sie müssen ältere Versionen des bcp-Hilfsprogramms entfernen, um sicherzustellen, dass die neueste Version ordnungsgemäß ausgeführt wird.
 
@@ -471,7 +471,7 @@ Führt den Massenkopiervorgang mithilfe der systemeigenen (Datenbank-)Datentypen
 
 ## <a name="native-data-file-support"></a>Systemeigene Datendateiunterstützung
 
- In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]unterstützt das **bcp** -Hilfsprogramm nur native Datendateien, die mit [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]und [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]kompatibel sind.  
+ In [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] unterstützt das Hilfsprogramm **bcp** native Datendateien, die mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Versionen ab [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)] und höher kompatibel sind.
 
 ## <a name="computed-columns-and-timestamp-columns"></a>Berechnete Spalten und Zeitstempel-Spalten
 

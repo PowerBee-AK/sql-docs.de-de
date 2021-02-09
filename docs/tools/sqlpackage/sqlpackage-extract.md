@@ -10,15 +10,15 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/11/2020
-ms.openlocfilehash: abefb39814213426d863fa3839c4095eadc82249
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: c4a9947520ef3914a2ccb34aba5ffaacc1bc6bb2
+ms.sourcegitcommit: 5ceafd29b8f22edb800cec150f0ccddea43313e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577850"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98983643"
 ---
 # <a name="sqlpackage-extract-parameters-and-properties"></a>Parameter und Eigenschaften für die Extract-Aktion von SqlPackage
-Die Extract-Aktion von „SqlPackage.exe“ erstellt ein Schema einer Livedatenbank von SQL Server oder Azure SQL-Datenbank in einem DACPAC-Paket (DACPAC-Datei). Standardmäßig sind in der DACPAC-Datei keine Daten enthalten. Verwenden Sie die [Exportaktion](sqlpackage-export.md), wenn die Daten mit einbezogen werden sollen. 
+Mit der Aktion „SqlPackage.exe Extract“ wird ein Schema einer verbundenen Datenbank in einer DACPAC-Datei (.dacpac) erstellt. Standardmäßig sind in der DACPAC-Datei keine Daten enthalten. Verwenden Sie zum Einschließen von Daten die [Exportaktion](sqlpackage-export.md) oder die Extraktionseigenschaften *ExtractAllTableData*/*TableData*. 
 
 ## <a name="command-line-syntax"></a>Befehlszeilensyntax
 

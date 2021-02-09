@@ -2,7 +2,7 @@
 title: Verbindungsoptionen
 description: In diesem Thema werden die Optionen aufgelistet, die im assoziativen Array sqlsrv_connect im SQLSRV-Treiber, oder die Schlüsselwörter, die im Datenquellennamen des PDO_SQLSRV-Treibers zulässig sind.
 ms.custom: ''
-ms.date: 12/12/2019
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 98f6899c1bfc7652c4a2facee95cf5fd62e4e521
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a8718cc04972e74ffc39b1528ed73eb00664eda8
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632960"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076252"
 ---
 # <a name="connection-options"></a>Verbindungsoptionen
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +31,7 @@ In diesem Thema werden die Optionen aufgelistet, die im assoziativen Array zulä
 |APP|String|Gibt den Namen der Anwendung an, der in der Ablaufverfolgung verwendet wird.|Nicht festgelegt.|  
 |ApplicationIntent|String|Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Mögliche Werte sind **ReadOnly** und **ReadWrite**.<br /><br />Weitere Informationen zur [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]-Unterstützung für [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] finden Sie unter [Unterstützung für hohe Verfügbarkeit bei Notfallwiederherstellung](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|ReadWrite|
 |AttachDBFileName|String|Gibt an, welche Datenbankdatei der Server anfügen soll.|Nicht festgelegt.|
-|Authentifizierung|Eine der folgenden Zeichenfolgen:<br /><br />**SqlPassword**<br /><br />**ActiveDirectoryPassword**<br /><br />**ActiveDirectoryMsi**|Gibt den Authentifizierungsmodus an.<br /><br />Weitere Informationen finden Sie unter [Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung](azure-active-directory.md).|Nicht festgelegt.|
+|Authentifizierung|Eine der folgenden Zeichenfolgen:<br /><br />**SqlPassword**<br /><br />**ActiveDirectoryPassword**<br /><br />**ActiveDirectoryMsi**<br /><br />**ActiveDirectoryServicePrincipal**|Gibt den Authentifizierungsmodus an.<br /><br />Weitere Informationen finden Sie unter [Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung](azure-active-directory.md).|Nicht festgelegt.|
 |CharacterSet<br /><br />(vom PDO_SQLSRV-Treiber nicht unterstützt)|String|Gibt den Zeichensatz an, mit dem Daten an den Server gesendet werden.<br /><br />Mögliche Werte sind SQLSRV_ENC_CHAR und UTF-8. Weitere Informationen finden Sie unter [Vorgehensweise: Senden und Abrufen von UTF-8-Daten mithilfe der integrierten UTF-8-Unterstützung](how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
 |ColumnEncryption|Eine der folgenden Zeichenfolgen:<br /><br />**Aktiviert**<br /><br />**Disabled**<br /><br />Eine Zeichenfolge, die das Nachweisprotokoll und die URL zum Nachweis der Enclave identifiziert|Gibt an, ob das Always Encrypted-Feature aktiviert ist. Wenn ein Nachweisprotokoll und eine URL angegeben werden, wird Always Encrypted mit Secure Enclaves aktiviert, sofern die anderen Anforderungen wie [hier](always-encrypted-secure-enclaves.md) beschrieben erfüllt sind.|Disabled|  
 |ConnectionPooling|1 oder **true** , um Verbindungspooling zu aktivieren.<br /><br />0 oder **false** , um Verbindungspooling zu deaktivieren.|Gibt an, ob die Verbindung aus einem Verbindungspool zugewiesen wird (1 oder **TRUE**) oder nicht (0 oder **FALSE**).<sup>1</sup>|**TRUE** (1)|  

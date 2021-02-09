@@ -2,7 +2,7 @@
 title: Verwenden von Always Encrypted mit dem JDBC-Treiber
 description: Erfahren Sie, wie Sie Always Encrypted in Ihrer Java-Anwendung mit dem JDBC-Treiber für SQL Server verwenden, um sensible Daten auf dem Server zu verschlüsseln.
 ms.custom: ''
-ms.date: 08/24/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52fc716acb62ea82a6a29c1cceaa73a30cc93c44
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a89deba9ed124587899bc915fa86ef74074ed761
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727505"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195277"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Verwenden von Always Encrypted mit dem JDBC-Treiber
 
@@ -126,9 +126,9 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >
 >  [azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java)
 >
->  [azure-activedirectory-library-for-java libraries](https://github.com/AzureAD/azure-activedirectory-library-for-java)
+>  [microsoft-authentication-library-for-java libraries](https://github.com/AzureAD/microsoft-authentication-library-for-java)
 >
-> Ein Beispiel für das Einbeziehen dieser Abhängigkeiten in ein Maven-Projekt finden Sie unter [Download ADAL4J And AKV Dependencies with Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven) (Herunterladen von ADAL4J- und AKV-Abhängigkeiten mit Apache Maven).
+> Ein Beispiel für das Einbeziehen dieser Abhängigkeiten in ein Maven-Projekt finden Sie unter [Herunterladen von MSAL4J- und AKV-Abhängigkeiten mit Apache Maven](https://github.com/microsoft/mssql-jdbc/wiki/Download-MSAL4J-And-AKV-Dependencies-with-Apache-Maven).
 
 ### <a name="using-azure-key-vault-authentication-with-managed-identities"></a>Verwenden der Azure Key Vault-Authentifizierung mit verwalteten Identitäten
 
@@ -639,13 +639,13 @@ Um das Verhalten von Always Encrypted für einzelne Abfragen zu steuern, müssen
 
 - Wenn für die meisten Abfragen eine Clientanwendung über eine Datenbankverbindung auf verschlüsselte Spalten zugreift, verwenden Sie die folgenden Richtlinien:
 
-    - Legen Sie für das Verbindungszeichenfolgen-Kennwort für **columnEncryptionSetting** den Wert **Aktiviert**fest.
+    - Legen Sie für das Verbindungszeichenfolgen-Kennwort für **columnEncryptionSetting** den Wert **Aktiviert** fest.
     - Legen Sie „SqlCommandColumnEncryptionSetting.Disabled“ für einzelne Abfragen fest, die nicht auf verschlüsselte Spalten zugreifen müssen. Durch diese Einstellung werden sowohl der Aufruf von „sys.sp_describe_parameter_encryption“ als auch der Versuch deaktiviert, Werte im Resultset zu entschlüsseln.
     - Legen Sie „SqlCommandColumnEncryptionSetting.ResultSet“ für einzelne Abfragen fest, die keine Parameter besitzen, für die eine Verschlüsselung erforderlich ist, die aber Daten aus verschlüsselten Spalten abrufen. Durch diese Einstellung werden der Aufruf von „sys.sp_describe_parameter_encryption“ und die Parameterverschlüsselung deaktiviert. Die Abfrage ist in der Lage, die Ergebnisse von Spaltenverschlüsselungen zu entschlüsseln.
 
 - Wenn für die meisten Abfragen eine Clientanwendung nicht über eine Datenbankverbindung auf verschlüsselte Spalten zugreift, verwenden Sie die folgenden Richtlinien:
 
-    - Legen Sie für das Verbindungszeichenfolgen-Kennwort für **columnEncryptionSetting** den Wert **Deaktiviert**fest.
+    - Legen Sie für das Verbindungszeichenfolgen-Kennwort für **columnEncryptionSetting** den Wert **Deaktiviert** fest.
     - Legen Sie „SQLServerStatementColumnEncryptionSetting.Enabled“ für einzelne Abfragen mit Parametern fest, die verschlüsselt werden müssen. Durch diese Einstellung werden sowohl der Aufruf von „sys.sp_describe_parameter_encryption“ als auch die Entschlüsselung von Abfrageergebnissen aktiviert, die aus verschlüsselten Spalten abgerufen werden.
     - Legen Sie „SQLServerStatementColumnEncryptionSetting.ResultSet“ für Abfragen fest, die keine Parameter besitzen, für die eine Verschlüsselung erforderlich ist, die jedoch Daten aus verschlüsselten Spalten abrufen. Durch diese Einstellung werden der Aufruf von „sys.sp_describe_parameter_encryption“ und die Parameterverschlüsselung deaktiviert. Die Abfrage ist in der Lage, die Ergebnisse von Spaltenverschlüsselungen zu entschlüsseln.
 

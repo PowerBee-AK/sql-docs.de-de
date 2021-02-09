@@ -2,7 +2,7 @@
 title: Versionshinweise für den JDBC-Treiber
 description: In diesem Artikel werden die Releases des Microsoft JDBC-Treibers für SQL Server aufgeführt. Für jede Version werden die Änderungen benannt und beschrieben.
 ms.custom: ''
-ms.date: 08/27/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,16 +11,71 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1bcbaee78dc7dcb0de053756aacfe2e1711679fe
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 0ffc7d8e4090673f3fc8feb96aa3650d35361281
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005672"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99234854"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Versionshinweise zum Microsoft JDBC-Treiber für SQL Server
 
 In diesem Artikel werden die Versionen des _Microsoft JDBC-Treibers für SQL Server_ aufgeführt. Für jede Version werden die Änderungen benannt und beschrieben.
+
+## <a name="92"></a><a id="92"></a> 9.2
+
+**[![Download](../../ssms/media/download-icon.png) Microsoft JDBC-Treiber 9.2 für SQL Server herunterladen (zip)](https://go.microsoft.com/fwlink/?linkid=2153622)**  
+**[![Download](../../ssms/media/download-icon.png) Microsoft JDBC-Treiber 9.2 für SQL Server herunterladen (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2153521)**  
+
+Versionsnummer: 9.2.0. veröffentlicht: 29. Januar 2021
+
+Wenn Sie den Treiber in einer anderen Sprache als der für Sie erkannten herunterladen möchten, können Sie hierfür einen der folgenden direkten Links verwenden.  
+Treiber in einer ZIP-Datei: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40a)  
+Treiber in einer tar.gz-Datei: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x804) | [Chinesisch (traditionell)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x404) | [Englisch (Vereinigte Staaten)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x409) | [Französisch](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40c) | [Deutsch](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x407) | [Italienisch](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x410) | [Japanisch](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x411) | [Koreanisch](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x412) | [Portugiesisch (Brasilien)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x416) | [Russisch](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x419) | [Spanisch](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40a)  
+
+### <a name="compliance"></a>Kompatibilität
+
+| Kompatibilitäts-/Konformitätsänderung | Details |
+| :---------------- | :------ |
+| Download der neuesten Updates für den JDBC-Treiber 9.2 | &bull; &nbsp; [GitHub, 9.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v9.2.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Vollständig konform mit JDBC-API-Spezifikation 4.2. | Die JAR-Dateien im 9.2-Paket sind der Java-Versionskompatibilität entsprechend benannt.<br/><br/>Beispielsweise sollte die Datei „mssql-jdbc-9.2.0.jre15.jar“ aus dem 9.2-Paket mit Java 15 verwendet werden. |
+| Kompatibel mit dem Java Development Kit (JDK) der Versionen 15.0, 11.0 und 1.8 | Der Microsoft JDBC-Treiber 9.2 für SQL Server ist jetzt nicht nur mit JDK 11.0 und 1.8, sondern auch mit Version 15.0 kompatibel. |
+| &nbsp; | &nbsp; |
+
+### <a name="releases"></a>Releases
+
+Versionsnummer: 9.2.0. veröffentlicht: 29. Januar 2021
+
+### <a name="support-for-jdk-15"></a>Unterstützung für JDK 15
+
+Der Microsoft JDBC-Treiber 9.2 für SQL Server ist jetzt nicht nur mit JDK 11.0 und 1.8, sondern auch mit Version 15.0 kompatibel.
+
+### <a name="added-support-for-azure-active-directory-interactive-authentication"></a>Unterstützung für die interaktive Azure Active Directory-Authentifizierung hinzugefügt
+| Zusätzlicher Authentifizierungstyp | Details |
+| :---------- | :------ |
+| Der Microsoft JDBC-Treiber 9.2 für SQL Server unterstützt jetzt die Authentifizierung bei Azure Key Vault über die interaktive Authentifizierung. | Weitere Informationen finden Sie unter [Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
+| &nbsp; | &nbsp; |
+
+### <a name="added-support-for-azure-active-directory-service-principal-authentication"></a>Unterstützung der Azure Active Directory-Authentifizierung mit einem Dienstprinzipal hinzugefügt
+| Zusätzlicher Authentifizierungstyp | Details |
+| :---------- | :------ |
+| Der Microsoft JDBC-Treiber 9.2 für SQL Server unterstützt jetzt die Authentifizierung bei Azure Key Vault mit der Client-ID und dem Geheimnis einer Dienstprinzipalidentität. | Weitere Informationen finden Sie unter [Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
+| &nbsp; | &nbsp; |
+
+### <a name="updated-azure-key-vault-library-to-use-modern-azure-key-vault-library"></a>Update auf die Verwendung einer moderneren Azure Key Vault-Bibliothek
+| Bibliotheksänderungen für Azure Key Vault | Details |
+| :------------------- | :------ |
+| Der Microsoft JDBC-Treiber 9.2 wurde von der Azure Key Vault-Bibliothek der früheren Generation und von ADAL-Bibliotheken auf die moderneren Varianten von Azure Key Vault und der Azure-Identität migriert. | **ABHÄNGIGKEITSÄNDERUNG:** Achten Sie darauf, Ihre Anwendungsabhängigkeiten zu aktualisieren, wenn Sie die Azure Active Directory-Authentifizierung oder Azure Key Vault nutzen. Weitere Informationen finden Sie in den Abhängigkeitsanforderungen beim [Arbeiten mit dem Azure Key Vault-Anbieter](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#working-with-the-azure-key-vault-provider) oder der [Azure Active Directory-Authentifizierung](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#working-with-azure-active-directory-authentication) |
+| &nbsp; | &nbsp; |
+
+### <a name="enabled-usebulkcopyforbatchinsert-for-non-azure-synapse-analytics-servers"></a>useBulkCopyForBatchInsert für Server außerhalb von Azure Synapse Analytics aktiviert
+| Änderungen an useBulkCopyForBatchInsert für Server außerhalb von Azure Synapse Analytics | Details |
+| :------------------- | :------ |
+| Der Microsoft JDBC-Treiber 9.2 erlaubt jetzt die API für das Massenkopieren bei Batcheinfügungsvorgängen für Server, die nicht in Azure Synapse Analytics gehostet werden. | Weitere Informationen finden Sie unter [Verwenden der API für das Massenkopieren für Batcheinfügungsvorgänge](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md). |
+| &nbsp; | &nbsp; |
+
+
+## <a name="previous-releases"></a>Vorgängerversionen
 
 ## <a name="84"></a><a id="84"></a> 8.4
 
@@ -93,8 +148,6 @@ Der Microsoft JDBC-Treiber 8.4 für SQL Server ist jetzt zusätzlich zum JDK 1
 | Clientzertifikatsauthentifizierung | Details |
 | :------------------- | :------ |
 | Mit dem Microsoft JDBC-Treiber 8.4 für SQL Server wurde eine neue Authentifizierungsmethode, die so genannte Clientzertifikatauthentifizierung für Loopbackszenarios, eingeführt. | Weitere Informationen finden Sie unter [Clientzertifikatauthentifizierung für Loopbackszenarios](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md). |
-
-## <a name="previous-releases"></a>Vorgängerversionen
 
 ## <a name="82"></a><a id="82"></a> 8.2
 
