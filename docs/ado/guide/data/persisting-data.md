@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 86789dbce8ab86035f815f36f8eff369b55401a3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f9a2ad809efbc847a2dfaf2292a15c1c7376e9b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980101"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037210"
 ---
 # <a name="persisting-data"></a>Beibehalten von Daten
 Portable Computing (z. b. die Verwendung von Laptops) hat den Bedarf an Anwendungen generiert, die sowohl in einem verbundenen als auch in einem getrennten Zustand ausgeführt werden können. ADO bietet zusätzliche Unterstützung, da der Entwickler die Möglichkeit hat, ein Client Cursor- **Recordset** auf einem Datenträger zu speichern und später neu zu laden.  
@@ -30,11 +30,11 @@ Portable Computing (z. b. die Verwendung von Laptops) hat den Bedarf an Anwendun
   
 -   **Unterwegs:** Wenn Sie die Anwendung auf dem Weg nehmen, ist es wichtig, dass Sie die Möglichkeit bereitstellen, Änderungen vorzunehmen und neue Datensätze hinzuzufügen, die dann später wieder mit der Datenbank verbunden und committet werden können.  
   
--   **Selten aktualisierte Suchvorgänge:** Häufig werden Tabellen in einer Anwendung als Suchvorgänge verwendet, z. b. Zustands Steuertabellen. Sie werden nur selten aktualisiert und sind schreibgeschützt. Anstatt diese Daten bei jedem Start der Anwendung vom Server erneut zu lesen, kann die Anwendung die Daten einfach aus einem lokal beibehaltenen **Recordset**laden.  
+-   **Selten aktualisierte Suchvorgänge:** Häufig werden Tabellen in einer Anwendung als Suchvorgänge verwendet, z. b. Zustands Steuertabellen. Sie werden nur selten aktualisiert und sind schreibgeschützt. Anstatt diese Daten bei jedem Start der Anwendung vom Server erneut zu lesen, kann die Anwendung die Daten einfach aus einem lokal beibehaltenen **Recordset** laden.  
   
- Verwenden Sie zum Speichern und Laden von **Recordsets**in ADO die Methoden **Recordset. Save** und **Recordset. Open (,,,, adcmdfile)** für das ADO- **Recordset** -Objekt.  
+ Verwenden Sie zum Speichern und Laden von **Recordsets** in ADO die Methoden **Recordset. Save** und **Recordset. Open (,,,, adcmdfile)** für das ADO- **Recordset** -Objekt.  
   
- Mit der **Recordset** -Methode Save können Sie das ADO- **Recordset** in einer Datei auf einem Datenträger speichern. (Sie können auch ein **Recordset** in einem ADO- **Streamobjekt** speichern. **Stream** -Objekte werden später in diesem Handbuch erläutert.) Später können Sie die **Open** -Methode verwenden, um das **Recordset** erneut zu öffnen, wenn Sie zur Verwendung bereit sind. Standardmäßig speichert ADO das **Recordset** im proprietären Microsoft-Format für erweiterte Daten tablegrams (ADTG). Dieses Binärformat wird mit dem Wert **adPersistADTG PersistFormatEnum** angegeben. Alternativ dazu können Sie auch auswählen, dass Sie das **Recordset** als XML speichern möchten, indem Sie stattdessen **adpersistxml**verwenden. Weitere Informationen zum Speichern von Recordsets als XML finden Sie unter [persistente Datensätze im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md).  
+ Mit der **Recordset** -Methode Save können Sie das ADO- **Recordset** in einer Datei auf einem Datenträger speichern. (Sie können auch ein **Recordset** in einem ADO- **Streamobjekt** speichern. **Stream** -Objekte werden später in diesem Handbuch erläutert.) Später können Sie die **Open** -Methode verwenden, um das **Recordset** erneut zu öffnen, wenn Sie zur Verwendung bereit sind. Standardmäßig speichert ADO das **Recordset** im proprietären Microsoft-Format für erweiterte Daten tablegrams (ADTG). Dieses Binärformat wird mit dem Wert **adPersistADTG PersistFormatEnum** angegeben. Alternativ dazu können Sie auch auswählen, dass Sie das **Recordset** als XML speichern möchten, indem Sie stattdessen **adpersistxml** verwenden. Weitere Informationen zum Speichern von Recordsets als XML finden Sie unter [persistente Datensätze im XML-Format](../../../ado/guide/data/persisting-records-in-xml-format.md).  
   
  Die Syntax der **Save** -Methode lautet wie folgt:  
   
@@ -46,21 +46,21 @@ Destination, PersistFormat
   
 ```  
   
- Wenn Sie das **Recordset**zum ersten Mal speichern, ist es optional, das *Ziel*anzugeben. Wenn Sie das *Ziel*weglassen, wird eine neue Datei mit einem Namen erstellt, der auf den Wert der [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) -Eigenschaft des **Recordsets**festgelegt ist.  
+ Wenn Sie das **Recordset** zum ersten Mal speichern, ist es optional, das *Ziel* anzugeben. Wenn Sie das *Ziel* weglassen, wird eine neue Datei mit einem Namen erstellt, der auf den Wert der [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) -Eigenschaft des **Recordsets** festgelegt ist.  
   
- Wenn Sie den **Vorgang nach dem ersten Speichern oder** einem Laufzeitfehler ausführen, lassen Sie das *Ziel* aus. Wenn Sie anschließend **Speichern** mit einem neuen *Ziel*aufzurufen, wird das **Recordset** im neuen Ziel gespeichert. Allerdings sind das neue Ziel und das ursprüngliche Ziel beide geöffnet.  
+ Wenn Sie den **Vorgang nach dem ersten Speichern oder** einem Laufzeitfehler ausführen, lassen Sie das *Ziel* aus. Wenn Sie anschließend **Speichern** mit einem neuen *Ziel* aufzurufen, wird das **Recordset** im neuen Ziel gespeichert. Allerdings sind das neue Ziel und das ursprüngliche Ziel beide geöffnet.  
   
- Durch **Speichern** wird das **Recordset** oder das *Ziel*nicht geschlossen, sodass Sie weiterhin mit dem **Recordset** arbeiten und die neuesten Änderungen speichern können. Das *Ziel* bleibt geöffnet, bis das **Recordset** geschlossen ist. während dieser Zeit können andere Anwendungen lesen, aber nicht in das *Ziel*schreiben.  
+ Durch **Speichern** wird das **Recordset** oder das *Ziel* nicht geschlossen, sodass Sie weiterhin mit dem **Recordset** arbeiten und die neuesten Änderungen speichern können. Das *Ziel* bleibt geöffnet, bis das **Recordset** geschlossen ist. während dieser Zeit können andere Anwendungen lesen, aber nicht in das *Ziel* schreiben.  
   
  Aus Sicherheitsgründen ermöglicht die **Save** -Methode nur die Verwendung von niedrigen und benutzerdefinierten Sicherheitseinstellungen aus einem Skript, das von Microsoft Internet Explorer ausgeführt wird.  
   
  Wenn die **Save** -Methode während des asynchronen **Recordsets** zum Abrufen, ausführen oder Aktualisieren aufgerufen wird, wird die Wartezeit bis zum Abschluss des asynchronen Vorgangs **gespeichert** .  
   
- Datensätze werden ab der ersten Zeile des **Recordsets**gespeichert. Wenn die **Save** -Methode abgeschlossen ist, wird die aktuelle Zeilen Position in die erste Zeile des **Recordsets**verschoben.  
+ Datensätze werden ab der ersten Zeile des **Recordsets** gespeichert. Wenn die **Save** -Methode abgeschlossen ist, wird die aktuelle Zeilen Position in die erste Zeile des **Recordsets** verschoben.  
   
- Um optimale Ergebnisse zu erzielen, legen Sie die [Cursor Location](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschaft mit **Save**auf **adUseClient** fest. Wenn Ihr Anbieter nicht alle Funktionen unterstützt, die zum Speichern von **Recordset** -Objekten erforderlich sind, stellt der Cursor Dienst diese Funktionalität bereit.  
+ Um optimale Ergebnisse zu erzielen, legen Sie die [Cursor Location](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschaft mit **Save** auf **adUseClient** fest. Wenn Ihr Anbieter nicht alle Funktionen unterstützt, die zum Speichern von **Recordset** -Objekten erforderlich sind, stellt der Cursor Dienst diese Funktionalität bereit.  
   
- Wenn ein **Recordset** persistent ist und die Eigenschaft **Cursor Location** auf **adeeserver**festgelegt ist, ist die Aktualisierungs Funktion für das **Recordset** eingeschränkt. In der Regel sind nur Aktualisierungen der einzelnen Tabelle, Einfügungen und Löschungen zulässig (abhängig von der Anbieter Funktionalität). Die [Resync](../../../ado/reference/ado-api/resync-method.md) -Methode ist in dieser Konfiguration ebenfalls nicht verfügbar.  
+ Wenn ein **Recordset** persistent ist und die Eigenschaft **Cursor Location** auf **adeeserver** festgelegt ist, ist die Aktualisierungs Funktion für das **Recordset** eingeschränkt. In der Regel sind nur Aktualisierungen der einzelnen Tabelle, Einfügungen und Löschungen zulässig (abhängig von der Anbieter Funktionalität). Die [Resync](../../../ado/reference/ado-api/resync-method.md) -Methode ist in dieser Konfiguration ebenfalls nicht verfügbar.  
   
  Da der *Destination* -Parameter jedes Objekt akzeptieren kann, das die OLE DB **IStream** -Schnittstelle unterstützt, können Sie ein **Recordset** direkt im ASP- **Antwort** Objekt speichern.  
   

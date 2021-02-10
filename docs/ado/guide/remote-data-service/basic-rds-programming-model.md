@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b43d18127717ae58b4db2c8fb33c5d173ab160af
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 81d789c003921b4e8359df281cb9fa51dbdf1f26
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724831"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036579"
 ---
 # <a name="basic-rds-programming-model"></a>Grundlegendes RDS-Programmiermodell
 > [!IMPORTANT]
@@ -26,7 +26,7 @@ ms.locfileid: "91724831"
   
  RDS adressiert Anwendungen, die in der folgenden Umgebung vorhanden sind: eine Client Anwendung gibt ein Programm an, das auf einem Server ausgeführt wird, und die Parameter, die zum Zurückgeben der gewünschten Informationen erforderlich sind. Das auf dem Server aufgerufene Programm erhält Zugriff auf die angegebene Datenquelle, ruft die Informationen ab, verarbeitet optional die Daten und gibt die resultierenden Informationen an die Client Anwendung in einem Formular zurück, das leicht verwendet werden kann. RDS bietet Ihnen die Möglichkeit, die folgende Aktions Sequenz auszuführen:  
   
--   Geben Sie das Programm an, das auf dem Server aufgerufen werden soll, und erhalten Sie eine Möglichkeit, vom Client darauf zu verweisen. (Dieser Verweis wird manchmal als *Proxy*bezeichnet. Es stellt das Remote Serverprogramm dar. Die Client Anwendung wird den Proxy so aufrufen, als ob es sich um ein lokales Programm handelt, aber tatsächlich das Remote Serverprogramm aufruft.)  
+-   Geben Sie das Programm an, das auf dem Server aufgerufen werden soll, und erhalten Sie eine Möglichkeit, vom Client darauf zu verweisen. (Dieser Verweis wird manchmal als *Proxy* bezeichnet. Es stellt das Remote Serverprogramm dar. Die Client Anwendung wird den Proxy so aufrufen, als ob es sich um ein lokales Programm handelt, aber tatsächlich das Remote Serverprogramm aufruft.)  
   
 -   Rufen Sie das Serverprogramm auf. Übergeben Sie Parameter an das Serverprogramm, mit dem die Datenquelle und der auszugebende Befehl identifiziert werden. (Das Serverprogramm verwendet ADO, um Zugriff auf die Datenquelle zu erhalten. ADO stellt eine Verbindung mit einem der angegebenen Parameter her und gibt dann den im anderen Parameter angegebenen Befehl aus.)  
   

@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac4febc789aca18401380ee8ada7b2ab7f9d30a3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 09b79b0001ff448ecd333a4ec601c4ff42febf6d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991451"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037660"
 ---
 # <a name="data-section"></a>Datenabschnitt
 Der Daten Abschnitt definiert die Daten des Rowsets sowie alle ausstehenden Updates, Einfügungen oder Löschungen. Der Daten Abschnitt kann NULL oder mehr Zeilen enthalten. Es können nur Daten aus einem Rowset enthalten sein, in dem die Zeile durch das Schema definiert ist. Auch, wie bereits erwähnt, können Spalten ohne Daten ausgelassen werden. Wenn ein Attribut oder ein Unterelement im Daten Abschnitt verwendet wird und dieses Konstrukt nicht im Schema Abschnitt definiert wurde, wird es automatisch ignoriert.  
   
-## <a name="string"></a>Zeichenfolge  
+## <a name="string"></a>String  
  Reservierte XML-Zeichen in Textdaten müssen durch entsprechende Zeichen Entitäten ersetzt werden. Beispielsweise muss das einfache Anführungszeichen im Firmennamen "Joe es Garage" durch eine Entität ersetzt werden. Die tatsächliche Zeile ähnelt der folgenden:  
   
 ```  
@@ -36,11 +36,11 @@ Der Daten Abschnitt definiert die Daten des Rowsets sowie alle ausstehenden Upda
  Binäre Daten sind bin. Hex-codiert (d. h. ein Byte ist zwei Zeichen zugeordnet, ein Zeichen pro Nibble).  
   
 ## <a name="datetime"></a>Datetime  
- Das Variant VT_DATE-Format wird von XML-Daten Datentypen nicht direkt unterstützt. Das richtige Format für Datumsangaben mit einer Daten-und Zeitkomponente lautet yyyy-mm-ddThh: mm: SS.  
+ Das Variant VT_DATE-Format wird nicht direkt von XML-Data-Datentypen unterstützt. Das richtige Format für Datumsangaben mit einer Daten-und Zeitkomponente lautet yyyy-mm-ddThh: mm: SS.  
   
- Weitere Informationen zu den von XML angegebenen Datumsformaten finden Sie in der [W3C-Spezifikation für XML-Daten](https://go.microsoft.com/fwlink/?LinkId=5692).  
+ Weitere Informationen zu den von XML angegebenen Datumsformaten finden Sie in der [Spezifikation des W3C-XML-Data](https://go.microsoft.com/fwlink/?LinkId=5692).  
   
- Wenn in der XML-Data-Spezifikation zwei äquivalente Datentypen (z. b. I4 = = int) definiert sind, schreibt ADO den anzeigen Amen, aber beide werden gelesen.  
+ Wenn in der XML-Data Spezifikation zwei äquivalente Datentypen (z. b. I4 = = int) definiert sind, schreibt ADO den anzeigen Amen, aber beide werden gelesen.  
   
 ## <a name="managing-pending-changes"></a>Verwalten von ausstehenden Änderungen  
  Ein Recordset kann direkt oder im Batch Aktualisierungs Modus geöffnet werden. Wenn Sie mit Client seitigen Cursorn im Batch Aktualisierungs Modus geöffnet werden, sind alle am Recordset vorgenommenen Änderungen in einem ausstehenden Zustand, bis die UpdateBatch-Methode aufgerufen wird. Ausstehende Änderungen werden auch beibehalten, wenn das Recordset gespeichert wird. In XML werden Sie durch die Verwendung der "Update"-Elemente dargestellt, die in urn: Schemas-Microsoft-com: Rowset definiert sind. Wenn ein Rowset aktualisiert werden kann, muss die aktualisierbare Eigenschaft in der Definition der Zeile auf true festgelegt werden. Um z. b. zu definieren, dass die Tabelle "Spediteure" ausstehende Änderungen enthält, sieht die Zeilen Definition wie folgt aus.  

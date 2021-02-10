@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5affe90da5a982a6e01bd5719793581fb3c5f13
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4a8c7c3867d7e133428ff8e17cca8e54e5a54297
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991611"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037810"
 ---
 # <a name="anticipating-errors"></a>Vorhersehen von Fehlern
 Die Fehler Verhinderung ist mindestens so wichtig wie die Fehlerbehandlung. Dieser letzte Abschnitt enthält eine kurze Liste der Vorsichtsmaßnahmen, die Ihre Anwendung ausführen kann, um die Wahrscheinlichkeit von Fehlern zu verringern.  
   
- Überprüfen Sie den Zustand von Objekten, indem Sie den Wert in der **State** -Eigenschaft überprüfen, bevor Sie versuchen, einen Vorgang mit diesen Objekten auszuführen. Wenn Ihre Anwendung z. b. eine globale **Verbindung**verwendet, überprüfen Sie die **Status** -Eigenschaft, um festzustellen, ob Sie bereits geöffnet ist, bevor Sie die **Open** -Methode aufrufen.  
+ Überprüfen Sie den Zustand von Objekten, indem Sie den Wert in der **State** -Eigenschaft überprüfen, bevor Sie versuchen, einen Vorgang mit diesen Objekten auszuführen. Wenn Ihre Anwendung z. b. eine globale **Verbindung** verwendet, überprüfen Sie die **Status** -Eigenschaft, um festzustellen, ob Sie bereits geöffnet ist, bevor Sie die **Open** -Methode aufrufen.  
   
 -   Jedes Programm, das Daten von einem Benutzer akzeptiert, muss Code enthalten, um diese Daten vor dem Senden an den Datenspeicher zu überprüfen. Sie können sich nicht auf den Datenspeicher, den Anbieter, ADO oder sogar Ihre Programmiersprache verlassen, um Sie über Probleme zu informieren. Sie müssen jedes Byte überprüfen, das von Ihren Benutzern eingegeben wurde, und sicherstellen, dass die Daten der richtige Typ für das Feld sind und dass erforderliche Felder nicht leer sind.  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff36542abb462ffc63e8704a5c6c3cdd6670d280
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e3bcc0d4d436afcc10b4d079938adf2bad237d88
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980701"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037410"
 ---
 # <a name="handling-ado-events"></a>Behandeln von ADO-Ereignissen
-Das ADO-Ereignis Modell unterstützt bestimmte synchrone und asynchrone ADO-Vorgänge, durch die *Ereignisse*oder Benachrichtigungen ausgegeben werden, bevor der Vorgang gestartet oder abgeschlossen wird. Ein Ereignis ist tatsächlich ein Aufrufen einer Ereignishandlerroutine, die Sie in der Anwendung definieren.  
+Das ADO-Ereignis Modell unterstützt bestimmte synchrone und asynchrone ADO-Vorgänge, durch die *Ereignisse* oder Benachrichtigungen ausgegeben werden, bevor der Vorgang gestartet oder abgeschlossen wird. Ein Ereignis ist tatsächlich ein Aufrufen einer Ereignishandlerroutine, die Sie in der Anwendung definieren.  
   
  Wenn Sie Handlerfunktionen oder-Prozeduren für die Gruppe von Ereignissen bereitstellen, die vor dem Starten des Vorgangs auftreten, können Sie die Parameter, die an den Vorgang übermittelt wurden, überprüfen oder ändern. Da es noch nicht ausgeführt wurde, können Sie entweder den Vorgang abbrechen oder zulassen, dass er abgeschlossen wird.  
   

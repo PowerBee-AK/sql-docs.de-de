@@ -1,6 +1,6 @@
 ---
 description: Datensätze und von Anbietern bereitgestellte Felder
-title: Datensätze und vom Anbieter bereitgestellte Felder | Microsoft-Dokumentation
+title: Datensätze und Provider-Supplied Felder | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
@@ -14,32 +14,32 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7cc7b8c4fb0116f96a2470a7161f9fbd30c7efb9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a64168a8a1fec81d47c337978ea75664fec0a10c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979951"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037110"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Datensätze und von Anbietern bereitgestellte Felder
 Wenn ein [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekt geöffnet wird, kann seine Quelle die aktuelle Zeile eines geöffneten [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md), eine absolute URL oder eine relative URL in Verbindung mit einem geöffneten [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt sein.  
   
- Wenn der **Datensatz** von einem **Recordset**aus geöffnet wird, enthält die Auflistung der **Datensatz** -Objekt [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) alle Felder aus dem **Recordset**sowie alle Felder, die vom zugrunde liegenden Anbieter hinzugefügt werden.  
+ Wenn der **Datensatz** von einem **Recordset** aus geöffnet wird, enthält die Auflistung der **Datensatz** -Objekt [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) alle Felder aus dem **Recordset** sowie alle Felder, die vom zugrunde liegenden Anbieter hinzugefügt werden.  
   
- Der Anbieter kann zusätzliche Felder einfügen, die als ergänzende Merkmale des **Datensatzes**fungieren. Folglich kann ein **Datensatz** eindeutige Felder enthalten, die sich nicht im **Recordset** als Ganzes befinden, oder einen **Datensatz** , der aus einer anderen Zeile des **Recordsets**abgeleitet ist.  
+ Der Anbieter kann zusätzliche Felder einfügen, die als ergänzende Merkmale des **Datensatzes** fungieren. Folglich kann ein **Datensatz** eindeutige Felder enthalten, die sich nicht im **Recordset** als Ganzes befinden, oder einen **Datensatz** , der aus einer anderen Zeile des **Recordsets** abgeleitet ist.  
   
- Beispielsweise können alle Zeilen eines **Recordsets** , die aus einer e-Mail-Datenquelle abgeleitet sind, Spalten wie z. b. from, to und Subject enthalten. Ein **Datensatz** , der von diesem **Recordset** abgeleitet wird, hat dieselben Felder. Der **Datensatz** kann jedoch auch andere Felder aufweisen, die für die von diesem **Datensatz**dargestellte Nachricht eindeutig sind, wie z. b. Anhang und CC (Kohlendioxid Kopie).  
+ Beispielsweise können alle Zeilen eines **Recordsets** , die aus einer e-Mail-Datenquelle abgeleitet sind, Spalten wie z. b. from, to und Subject enthalten. Ein **Datensatz** , der von diesem **Recordset** abgeleitet wird, hat dieselben Felder. Der **Datensatz** kann jedoch auch andere Felder aufweisen, die für die von diesem **Datensatz** dargestellte Nachricht eindeutig sind, wie z. b. Anhang und CC (Kohlendioxid Kopie).  
   
  Obwohl das **Datensatz** -Objekt und die aktuelle Zeile des **Recordsets** die gleichen Felder aufweisen, unterscheiden Sie sich, weil **Datensatz** -und **Recordset** -Objekte über unterschiedliche Methoden und Eigenschaften verfügen.  
   
  Ein Feld, das vom **Datensatz** und **Recordset** gemeinsam gehalten wird, kann für jedes Objekt geändert werden. Allerdings kann das Feld für das **Daten Satz** Objekt nicht gelöscht werden, obwohl der zugrunde liegende Anbieter das Festlegen des Felds auf NULL unterstützen kann.  
   
- Nachdem der **Datensatz** geöffnet wurde, können Sie Felder Programm gesteuert hinzufügen. Sie können auch Felder löschen, die Sie hinzugefügt haben, aber Sie können keine Felder aus dem ursprünglichen **Recordset**löschen.  
+ Nachdem der **Datensatz** geöffnet wurde, können Sie Felder Programm gesteuert hinzufügen. Sie können auch Felder löschen, die Sie hinzugefügt haben, aber Sie können keine Felder aus dem ursprünglichen **Recordset** löschen.  
   
- Sie können das **Datensatz** -Objekt auch direkt über eine URL öffnen. In diesem Fall hängen die dem **Datensatz** hinzugefügten Felder vom zugrunde liegenden Anbieter ab. Derzeit fügen die meisten Anbieter einen Satz von Feldern hinzu, die die durch den **Datensatz**dargestellte Entität beschreiben. Wenn die Entität aus einem Bytestream besteht (z. b. einer einfachen Datei), kann normalerweise ein [Streamobjekt](../../../ado/reference/ado-api/stream-object-ado.md) aus dem **Datensatz**geöffnet werden.  
+ Sie können das **Datensatz** -Objekt auch direkt über eine URL öffnen. In diesem Fall hängen die dem **Datensatz** hinzugefügten Felder vom zugrunde liegenden Anbieter ab. Derzeit fügen die meisten Anbieter einen Satz von Feldern hinzu, die die durch den **Datensatz** dargestellte Entität beschreiben. Wenn die Entität aus einem Bytestream besteht (z. b. einer einfachen Datei), kann normalerweise ein [Streamobjekt](../../../ado/reference/ado-api/stream-object-ado.md) aus dem **Datensatz** geöffnet werden.  
   
 ## <a name="special-fields-for-document-source-providers"></a>Besondere Felder für Dokument Quellen Anbieter  
- Eine spezielle Klasse von Anbietern, die als *Dokument Quellen Anbieter*bezeichnet werden, verwaltet Ordner und Dokumente. Wenn ein **Datensatz** -Objekt ein Dokument darstellt oder ein **Recordset** -Objekt einen Ordner mit Dokumenten darstellt, füllt der Dokument Quellen Anbieter diese Objekte mit einem eindeutigen Satz von Feldern auf, die die Merkmale des Dokuments anstelle des eigentlichen Dokuments selbst beschreiben. In der Regel enthält ein Feld einen Verweis auf den **Stream** , der das Dokument darstellt.  
+ Eine spezielle Klasse von Anbietern, die als *Dokument Quellen Anbieter* bezeichnet werden, verwaltet Ordner und Dokumente. Wenn ein **Datensatz** -Objekt ein Dokument darstellt oder ein **Recordset** -Objekt einen Ordner mit Dokumenten darstellt, füllt der Dokument Quellen Anbieter diese Objekte mit einem eindeutigen Satz von Feldern auf, die die Merkmale des Dokuments anstelle des eigentlichen Dokuments selbst beschreiben. In der Regel enthält ein Feld einen Verweis auf den **Stream** , der das Dokument darstellt.  
   
  Diese Felder bilden einen Ressourcen **Daten Satz** oder ein **Recordset** und werden für die jeweiligen Anbieter aufgelistet, die Sie in [Anhang a: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)unterstützen.  
   
@@ -56,7 +56,7 @@ Wenn ein [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objek
 ## <a name="resource-recordset-columns"></a>Ressourcen-Recordsetspalten  
  Ein *Ressourcen-Recordset* besteht aus den folgenden Spalten.  
   
-|Spaltenname|Typ|Beschreibung|  
+|Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWchar|Schreibgeschützt. Gibt die URL der Ressource an.|  
 |RESOURCE_PARENTNAME|AdVarWchar|Schreibgeschützt. Gibt die absolute URL des übergeordneten Datensatzes an.|  

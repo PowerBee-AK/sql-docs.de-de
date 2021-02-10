@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2d0130d00c86830614242363914105605031ef4
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: bf3a704b26e35c77d9ba7ba059978091002cc424
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979431"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036939"
 ---
 # <a name="the-field-object"></a>Das Field-Objekt
-Jedes **Feld** Objekt entspricht in der Regel einer Spalte in einer Datenbanktabelle. Ein **Feld** kann jedoch auch einen Zeiger auf ein anderes **Recordset**darstellen, das als Kapitel bezeichnet wird. Ausnahmen, wie z. b. Kapitel Spalten, werden später in diesem Handbuch behandelt.  
+Jedes **Feld** Objekt entspricht in der Regel einer Spalte in einer Datenbanktabelle. Ein **Feld** kann jedoch auch einen Zeiger auf ein anderes **Recordset** darstellen, das als Kapitel bezeichnet wird. Ausnahmen, wie z. b. Kapitel Spalten, werden später in diesem Handbuch behandelt.  
   
  Verwenden Sie die **value** -Eigenschaft von **Feld** Objekten, um Daten für den aktuellen Datensatz festzulegen oder zurückzugeben. Abhängig von der vom Anbieter verfügbar gemachten Funktionalität sind einige Auflistungen, Methoden oder Eigenschaften eines **Feld** Objekts möglicherweise nicht verfügbar.  
   
@@ -31,7 +31,7 @@ Jedes **Feld** Objekt entspricht in der Regel einer Spalte in einer Datenbanktab
   
 -   Anzeigen oder Ändern der Daten im Feld mithilfe der **value** -Eigenschaft. **Value** ist die Standard Eigenschaft des **Field** -Objekts.  
   
--   Gibt die grundlegenden Eigenschaften eines Felds zurück, indem die Eigenschaften **Type**, **Precision**und **NumericScale** verwendet werden.  
+-   Gibt die grundlegenden Eigenschaften eines Felds zurück, indem die Eigenschaften **Type**, **Precision** und **NumericScale** verwendet werden.  
   
 -   Gibt die deklarierte Größe eines Felds mithilfe der **DefinedSize** -Eigenschaft zurück.  
   
@@ -44,27 +44,27 @@ Jedes **Feld** Objekt entspricht in der Regel einer Spalte in einer Datenbanktab
  Auflösen von Abweichungen in Feldwerten beim Aktualisieren von Batches mithilfe der Eigenschaften **OriginalValue** und **UnderlyingValue** , wenn der Anbieter Batch Updates unterstützt.  
   
 ## <a name="describing-a-field"></a>Beschreiben eines Felds  
- In den folgenden Themen werden die Eigenschaften des [Field](../../../ado/reference/ado-api/field-object.md) -Objekts erläutert, die Informationen darstellen, die das **Feld** Objekt selbst beschreiben, d. h. Metadaten zu dem Feld. Diese Informationen können verwendet werden, um viel über das Schema des **Recordsets**zu bestimmen. Zu diesen Eigenschaften zählen **Type**, **DefinedSize** und **ActualSize**, **Name**und **NumericScale** und **Precision**.  
+ In den folgenden Themen werden die Eigenschaften des [Field](../../../ado/reference/ado-api/field-object.md) -Objekts erläutert, die Informationen darstellen, die das **Feld** Objekt selbst beschreiben, d. h. Metadaten zu dem Feld. Diese Informationen können verwendet werden, um viel über das Schema des **Recordsets** zu bestimmen. Zu diesen Eigenschaften zählen **Type**, **DefinedSize** und **ActualSize**, **Name** und **NumericScale** und **Precision**.  
   
 ### <a name="discovering-the-data-type"></a>Ermitteln des Datentyps  
- Die **Type** -Eigenschaft gibt den Datentyp des Felds an. Die von ADO unterstützten Enumerationskonstanten des Datentyps werden in der *ADO-Programmier Referenz*unter " [datatypeer](../../../ado/reference/ado-api/datatypeenum.md) Enumeration" beschrieben.  
+ Die **Type** -Eigenschaft gibt den Datentyp des Felds an. Die von ADO unterstützten Enumerationskonstanten des Datentyps werden in der *ADO-Programmier Referenz* unter " [datatypeer](../../../ado/reference/ado-api/datatypeenum.md) Enumeration" beschrieben.  
   
- Für numerische Gleit Komma Typen, z. b. **adNumeric**, können Sie weitere Informationen abrufen. Die **NumericScale** -Eigenschaft gibt an, wie viele Ziffern rechts vom Dezimaltrennzeichen verwendet werden, um Werte für das **Feld**darzustellen. Die **Precision** -Eigenschaft gibt die maximale Anzahl von Ziffern an, die zum Darstellen von Werten für das **Feld**verwendet werden.  
+ Für numerische Gleit Komma Typen, z. b. **adNumeric**, können Sie weitere Informationen abrufen. Die **NumericScale** -Eigenschaft gibt an, wie viele Ziffern rechts vom Dezimaltrennzeichen verwendet werden, um Werte für das **Feld** darzustellen. Die **Precision** -Eigenschaft gibt die maximale Anzahl von Ziffern an, die zum Darstellen von Werten für das **Feld** verwendet werden.  
   
 ### <a name="determining-field-size"></a>Festlegen der Feldgröße  
  Verwenden Sie die **DefinedSize** -Eigenschaft, um die Datenkapazität eines **Feld** Objekts zu bestimmen.  
   
- Verwenden Sie die **ActualSize** -Eigenschaft, um die tatsächliche Länge des Werts eines **Feld** Objekts zurückzugeben. Die **ActualSize** -Eigenschaft ist für alle Felder schreibgeschützt. Wenn ADO die Länge des **Feld** Objekt Werts nicht ermitteln kann, gibt die **ActualSize** -Eigenschaft **adunknown**zurück.  
+ Verwenden Sie die **ActualSize** -Eigenschaft, um die tatsächliche Länge des Werts eines **Feld** Objekts zurückzugeben. Die **ActualSize** -Eigenschaft ist für alle Felder schreibgeschützt. Wenn ADO die Länge des **Feld** Objekt Werts nicht ermitteln kann, gibt die **ActualSize** -Eigenschaft **adunknown** zurück.  
   
  Die **DefinedSize-Eigenschaft** und die **ActualSize** -Eigenschaft haben unterschiedliche Zwecke. Nehmen Sie beispielsweise ein **Feld** Objekt mit einem deklarierten Typ von **adVarChar** und einen **DefinedSize** -Eigenschafts Wert von 50, der ein einzelnes Zeichen enthält. Der Wert der **ActualSize** -Eigenschaft, der zurückgegeben wird, ist die Länge des einzelnen Zeichens in Byte.  
   
 ### <a name="determining-field-contents"></a>Bestimmen von Feldinhalten  
- Der Bezeichner der Spalte aus der Datenquelle wird durch die **Name** -Eigenschaft des **Felds**dargestellt. Die **value** -Eigenschaft des **Field** -Objekts gibt den tatsächlichen Dateninhalt des Felds zurück oder legt ihn fest. Dies ist die Standard Eigenschaft.  
+ Der Bezeichner der Spalte aus der Datenquelle wird durch die **Name** -Eigenschaft des **Felds** dargestellt. Die **value** -Eigenschaft des **Field** -Objekts gibt den tatsächlichen Dateninhalt des Felds zurück oder legt ihn fest. Dies ist die Standard Eigenschaft.  
   
  Um die Daten in einem Feld zu ändern, legen Sie die **value** -Eigenschaft auf einen neuen Wert des richtigen Typs fest. Der Cursortyp muss Aktualisierungen unterstützen, um den Inhalt eines Felds zu ändern. Die Daten Bank Überprüfung wird hier nicht im Batch Modus durchgeführt. Daher müssen Sie beim Aufrufen von **UpdateBatch** in einem solchen Fall nach Fehlern suchen. Einige Anbieter unterstützen auch die Eigenschaften **UnderlyingValue** und **OriginalValue** des ADO- **Feld** Objekts, um Sie bei der Behebung von Konflikten bei der Ausführung von Batch Updates zu unterstützen. Ausführliche Informationen zum Beheben solcher Konflikte finden Sie unter [Bearbeiten von Daten](../../../ado/guide/data/editing-data.md).  
   
 > [!NOTE]
->  **Recordset-Feldwerte** können nicht festgelegt werden, wenn neue **Felder** an ein **Recordset**angehängt werden. Stattdessen können neue **Felder** an ein geschlossenes **Recordset**angehängt werden. Anschließend muss das **Recordset** geöffnet werden, und nur dann können diesen **Feldern**Werte zugewiesen werden.  
+>  **Recordset-Feldwerte** können nicht festgelegt werden, wenn neue **Felder** an ein **Recordset** angehängt werden. Stattdessen können neue **Felder** an ein geschlossenes **Recordset** angehängt werden. Anschließend muss das **Recordset** geöffnet werden, und nur dann können diesen **Feldern** Werte zugewiesen werden.  
   
 ### <a name="getting-more-field-information"></a>Weitere Feldinformationen  
  ADO-Objekte verfügen über zwei Arten von Eigenschaften: integrierte und dynamische Eigenschaften. Bis zu diesem Punkt wurden nur die integrierten Eigenschaften des **Field** -Objekts erläutert.  
@@ -110,7 +110,7 @@ Jedes **Feld** Objekt entspricht in der Regel einer Spalte in einer Datenbanktab
   
  Verwenden Sie die **GetChunk** -Methode für ein **Field** -Objekt, um einen Teil oder alle langen Binär-oder Zeichendaten abzurufen. In Situationen, in denen der System Arbeitsspeicher eingeschränkt ist, können Sie die **GetChunk** -Methode verwenden, um lange Werte in Teilen zu bearbeiten, anstatt sie vollständig zu verwenden.  
   
- Die Daten, die von einem **GetChunk** -Rückruf zurückgegeben werden, werden einer *Variablen*zugewiesen. Wenn die *Größe* größer ist als die verbleibenden Daten, gibt die **GetChunk** -Methode nur die verbleibenden Daten ohne Auffüll *Variable* mit leeren Leerzeichen zurück. Wenn das Feld leer ist, gibt die **GetChunk** -Methode einen NULL-Wert zurück.  
+ Die Daten, die von einem **GetChunk** -Rückruf zurückgegeben werden, werden einer *Variablen* zugewiesen. Wenn die *Größe* größer ist als die verbleibenden Daten, gibt die **GetChunk** -Methode nur die verbleibenden Daten ohne Auffüll *Variable* mit leeren Leerzeichen zurück. Wenn das Feld leer ist, gibt die **GetChunk** -Methode einen NULL-Wert zurück.  
   
  Jeder nachfolgende **GetChunk** -Befehl ruft Daten ab, von denen der vorherige **GetChunk** -Rückruf unterbrochen wurde. Wenn Sie jedoch Daten aus einem Feld abrufen und dann den Wert eines anderen Felds im aktuellen Datensatz festlegen oder lesen, geht ADO davon aus, dass Sie das Abrufen von Daten aus dem ersten Feld abgeschlossen haben. Wenn Sie die **GetChunk** -Methode erneut für das erste Feld aufrufen, interpretiert ADO den-Befehl als neuen **GetChunk** -Vorgang und beginnt mit dem Lesen vom Anfang der Daten. Durch den Zugriff auf Felder in anderen **Recordset** -Objekten, die keine Klone des ersten **Recordset** -Objekts sind, werden keine **GetChunk** -Vorgänge unterbrochen.  
   

@@ -1,6 +1,6 @@
 ---
 description: Fehlerinformationen im Zusammenhang mit Feldern
-title: Feldbezogene Fehlerinformationen | Microsoft-Dokumentation
+title: Field-Related Fehlerinformationen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af7aee82f8568cafcc35ac0e78d13386822888fb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cce74cf105aa7b38c2a3d7b157ef0fa17a1e8c1f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991261"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037470"
 ---
 # <a name="field-related-error-information"></a>Fehlerinformationen im Zusammenhang mit Feldern
 Wenn ein Fehler direkt mit einem Feld verknüpft ist, z. b. wenn die Daten fehlen oder der falsche Typ für das Feld vorliegt, können Sie weitere Informationen zur Ursache des Problems abrufen, indem Sie die Eigenschaft **Status** des **Field** -Objekts untersuchen. Diese Eigenschaft wurde erweitert, um bestimmte Informationen über das Problem bereitzustellen. Wenn z. b. beim Aufrufen von **UpdateBatch** ein Fehler auftritt, kann die Ursache des Problems durch Untersuchen der **Status** -Eigenschaft der **Felder** in jedem der betroffenen Datensätze ermittelt werden. Die-Eigenschaft enthält einen der Werte in der **fieldstatuusenum** -Konstante. In der folgenden Tabelle sind die Werte enthalten, die bei Auftreten eines Fehlers besonders interessant sind.  
   
-|Konstante|Wert|Beschreibung|  
+|Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**adfieldcantconvertvalue**|2|Gibt an, dass das Feld ohne Datenverlust nicht abgerufen oder gespeichert werden kann.|  
 |**adfielddataoverflow**|6|Gibt an, dass die vom Anbieter zurückgegebenen Daten zu einem Überlauf des Datentyps des Felds geführt haben.|  

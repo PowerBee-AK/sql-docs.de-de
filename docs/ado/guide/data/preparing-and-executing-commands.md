@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a4265124c2f86870d84ee703d228d5a760c4735
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fd88799bce8f3b8a0842c9f2d2752eac062dc4b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979991"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037180"
 ---
 # <a name="preparing-and-executing-commands"></a>Vorbereiten und Ausführen von Befehlen
 Befehle sind Anweisungen, die an einen Anbieter ausgegeben werden, um einige Vorgänge für die zugrunde liegende Datenquelle auszuführen. Eine SQL-Anweisung ist z. b. ein Befehl für den Microsoft SQL-Datenanbieter. In ADO werden Befehle in der Regel durch **Befehls** Objekte dargestellt, obwohl einfache Befehle auch über **Verbindungs** -oder **Recordsetobjekte** ausgegeben werden können.  
@@ -28,7 +28,7 @@ Befehle sind Anweisungen, die an einen Anbieter ausgegeben werden, um einige Vor
  Zusätzlich zur Verwendung von **Command** -Objekten können Sie die **Execute** -Methode für das **Verbindungs** Objekt oder die **Open** -Methode des **Recordset** -Objekts verwenden, um einen Befehl auszugeben und ihn auszuführen. Sie sollten jedoch ein **Befehls** Objekt verwenden, wenn Sie einen Befehl in Ihrem Code wieder verwenden müssen, oder wenn Sie ausführliche Parameterinformationen mit dem Befehl übergeben müssen. Diese Szenarios werden weiter unten in diesem Abschnitt ausführlicher behandelt.  
   
 > [!NOTE]
->  Bestimmte **Befehle**können ein Resultset als binären Stream oder als einen einzelnen **Datensatz** und nicht als **Recordset**zurückgeben, wenn dies vom Anbieter unterstützt wird. Außerdem sind einige **Befehle**nicht für das Zurückgeben eines Resultsets (z. b. eine SQL-Aktualisierungs Abfrage) vorgesehen. In diesem Abschnitt wird das üblichste Szenario behandelt: das Ausführen von **Befehlen**, die Ergebnisse als **Recordset** -Objekt zurückgeben. Weitere Informationen zum Zurückgeben von Ergebnissen in **Datensatz**s oder **Stream**s finden Sie unter [Datensätze und Streams](../../../ado/guide/data/records-and-streams.md).  
+>  Bestimmte **Befehle** können ein Resultset als binären Stream oder als einen einzelnen **Datensatz** und nicht als **Recordset** zurückgeben, wenn dies vom Anbieter unterstützt wird. Außerdem sind einige **Befehle** nicht für das Zurückgeben eines Resultsets (z. b. eine SQL-Aktualisierungs Abfrage) vorgesehen. In diesem Abschnitt wird das üblichste Szenario behandelt: das Ausführen von **Befehlen**, die Ergebnisse als **Recordset** -Objekt zurückgeben. Weitere Informationen zum Zurückgeben von Ergebnissen in **Datensatz** s oder **Stream** s finden Sie unter [Datensätze und Streams](../../../ado/guide/data/records-and-streams.md).  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   

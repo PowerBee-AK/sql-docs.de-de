@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c52989f83608b33756ae90778485bfddab08173
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: caa8fe846651f65e4316c81f29f2f18078628658
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724801"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036570"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Konfigurieren von RDS unter Windows 2000
 Wenn Sie Schwierigkeiten haben, RDS nach dem Upgrade auf Windows 2000 ordnungsgemäß zu verwenden, führen Sie die folgenden Schritte aus, um das Problem zu beheben:  
@@ -27,11 +27,11 @@ Wenn Sie Schwierigkeiten haben, RDS nach dem Upgrade auf Windows 2000 ordnungsge
   
 2.  Wählen Sie im Menü Start die Option Ausführen aus. Geben Sie msdfmap.ini ein, und klicken Sie dann auf OK, um die msdfmap.ini Datei in Editor zu öffnen. Überprüfen Sie den Abschnitt [Connect default], und wenn der Access-Parameter auf "NoAccess" festgelegt ist, ändern Sie ihn in "schreibgeschützt".  
   
-3.  Navigieren Sie mithilfe des Hilfsprogramms regedit zu "HKEY_LOCAL_MACHINE \software\microsoft\datafactor \handlerinfo", und stellen Sie sicher, dass " **HandlerRequired** " auf "0" und " **DefaultHandler** " auf "" (NULL-Zeichenfolge) festgelegt ist.  
+3.  Navigieren Sie mithilfe des Hilfsprogramms regedit zu "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DataFactory\HandlerInfo", und stellen Sie sicher, dass **HandlerRequired** auf 0 und **DefaultHandler** auf "" (NULL-Zeichenfolge) festgelegt ist.  
   
      **Hinweis** Wenn Sie Änderungen an diesem Abschnitt der Registrierung vornehmen, müssen Sie den World Wide Web Publishing-Dienst starten und neu starten, indem Sie die folgenden Befehle an einer Eingabeaufforderung eingeben: "NET stoppt W3SVC" und "net start W3SVC".  
   
-4.  Navigieren Sie mithilfe des Hilfsprogramms regedit in der Registrierung zu "HKEY_LOCAL_MACHINE \system\currentcontrolset\services\w3svc\parameters\adclaunch", und vergewissern Sie sich, dass ein Schlüssel mit dem Namen **RDSServer. DataFactory**vorhanden ist. Falls nicht, erstellen Sie ihn.  
+4.  Navigieren Sie mithilfe des Hilfsprogramms regedit in der Registrierung zu "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch", und vergewissern Sie sich, dass ein Schlüssel mit dem Namen **RDSServer. DataFactory** vorhanden ist. Falls nicht, erstellen Sie ihn.  
   
 5.  Suchen Sie mithilfe Internetdienste-Manager die Standard Website, und zeigen Sie die Eigenschaften des virtuellen MSADC-Stamm Verzeichnisses an. Überprüfen Sie die Einschränkungen für Verzeichnis Sicherheit/IP-Adresse und Domänen Name. Wenn die Option "Zugriff verweigert" aktiviert ist, wählen Sie "erteilt" aus.  
   

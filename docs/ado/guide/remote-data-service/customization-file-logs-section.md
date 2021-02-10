@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc65c6d9ad0b97f6d7f98a26fec173fc0fd630c3
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 34485c91a20b8c5df668e5eddd11e442418844a9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724771"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036530"
 ---
 # <a name="customization-file-logs-section"></a>Logs-Abschnitt der Anpassungsdatei
-Der Abschnitt " **Logs** " enthält einen Eintrag für die Protokolldatei, der den Namen einer Datei angibt, die Fehler während des Vorgangs des **DataFactory**aufzeichnet.  
+Der Abschnitt " **Logs** " enthält einen Eintrag für die Protokolldatei, der den Namen einer Datei angibt, die Fehler während des Vorgangs des **DataFactory** aufzeichnet.  
   
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](/dotnet/framework/wcf/)migriert werden.  

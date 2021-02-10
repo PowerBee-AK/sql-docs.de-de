@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 11d2c02d24753460f90452ddd6cc6b1e1589b80b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7c6d62d410e6709c93ad6e3d04db627f14f091a1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979621"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036990"
 ---
 # <a name="shape-append-clause"></a>SHAPE APPEND-Klausel
-Die Form Befehl-Append-Klausel fügt eine Spalte oder Spalten an ein **Recordset**an. Häufig handelt es sich bei diesen Spalten um Kapitel Spalten, die auf ein untergeordnetes **Recordset**verweisen.  
+Die Form Befehl-Append-Klausel fügt eine Spalte oder Spalten an ein **Recordset** an. Häufig handelt es sich bei diesen Spalten um Kapitel Spalten, die auf ein untergeordnetes **Recordset** verweisen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,7 +44,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
 -   Das Tabellen Schlüsselwort, gefolgt vom Namen einer Tabelle im Datenanbieter.  
   
  *übergeordneter Alias*  
- Ein optionaler Alias, der auf das übergeordnete **Recordset**verweist.  
+ Ein optionaler Alias, der auf das übergeordnete **Recordset** verweist.  
   
  *Spaltenliste*  
  Eine oder mehrere der folgenden:  
@@ -76,13 +76,13 @@ SHAPE [parent-command [[AS] parent-alias]]
 -   Das Tabellen Schlüsselwort, gefolgt vom Namen einer Tabelle im Datenanbieter.  
   
  *untergeordneter Alias*  
- Ein Alias, der auf das untergeordnete **Recordset**verweist.  
+ Ein Alias, der auf das untergeordnete **Recordset** verweist.  
   
  *übergeordnete Spalte*  
  Eine Spalte in dem **Recordset** , das vom über *geordneten-Befehl* zurückgegeben wird.  
   
  *untergeordnete Spalte*  
- Eine Spalte in dem **Recordset** , das vom untergeordneten *Befehl*zurückgegeben wird.  
+ Eine Spalte in dem **Recordset** , das vom untergeordneten *Befehl* zurückgegeben wird.  
   
  *param-Nummer*  
  Siehe [Vorgang von parametrisierten Befehlen](../../../ado/guide/data/operation-of-parameterized-commands.md).  

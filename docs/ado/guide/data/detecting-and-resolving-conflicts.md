@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a28fa775c834725504075907f09dc00e95bce1ee
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4c92b847b95aacd5cf642c9646f4618dc5986abf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991391"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037630"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Erkennen und Lösen von Konflikten
 Wenn Sie mit dem Recordset im unmittelbaren Modus arbeiten, ist die Wahrscheinlichkeit, dass Parallelitäts Probleme auftreten, weitaus geringer. Wenn Ihre Anwendung dagegen eine Batch Modus-Aktualisierung verwendet, kann es sinnvoll sein, dass ein Benutzer einen Datensatz ändert, bevor Änderungen, die von einem anderen Benutzer bearbeitet wurden, der denselben Datensatz bearbeitet hat, gespeichert werden. In einem solchen Fall möchten Sie, dass Ihre Anwendung den Konflikt ordnungsgemäß behandeln kann. Möglicherweise möchten Sie, dass die letzte Person ein Update an den Server "WINS" sendet. Oder Sie möchten dem aktuellen Benutzer gestatten, sich zu entscheiden, welches Update Vorrang haben sollte, indem er eine Auswahl zwischen den beiden in Konflikt stehenden Werten bietet.  

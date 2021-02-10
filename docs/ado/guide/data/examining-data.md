@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f13e39dd6c1740fb29fc0347a835d568aee352a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e43e974d8ae280af4ff045caae61c2d16b3b9034
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991291"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037480"
 ---
 # <a name="examining-data"></a>Untersuchen von Daten
 Der Abschnitt " [Daten](./getting-data.md) abrufen" erläutert, wie Daten aus einer Datenquelle als ein oder mehrere **Recordset** -Objekte abgerufen werden. In diesem Abschnitt wird **Recordset** ausführlicher erläutert, einschließlich der Navigation durch das **Recordset** und Anzeigen der zugehörigen Daten.  

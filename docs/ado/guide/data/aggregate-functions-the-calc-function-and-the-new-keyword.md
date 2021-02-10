@@ -16,35 +16,35 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b62e392325306bc358283874f4638077d8a4178
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 458a0f051e9bbf21c04b0c84125a1c438693f00d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991631"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037836"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Aggregatfunktionen, die CALC-Funktion und das NEW-Schlüsselwort
 Die Daten Strukturierung unterstützt die folgenden Funktionen. Der Name, der dem Kapitel mit der zu verwendenden Spalte zugewiesen ist, ist das *Kapitel-Alias*.  
   
  Ein Kapitel-Alias kann voll qualifiziert sein, bestehend aus jedem Kapitel Spaltennamen, der zu dem Kapitel mit dem *Spaltennamen führt,* der alle durch Zeiträume getrennt ist. Wenn das übergeordnete Kapitel chap1 beispielsweise ein untergeordnetes Kapitel chap2 enthält, das eine Spalte Amount (Amt) aufweist, lautet der qualifizierte Name chap1. chap2. Amt.  
   
-|Aggregatfunktionen|Beschreibung|  
+|Aggregatfunktionen|BESCHREIBUNG|  
 |-------------------------|-----------------|  
-|Sum (*Chapter-Alias*.* Spaltenname*)|Berechnet die Summe aller Werte in der angegebenen Spalte.|  
-|AVG (*Chapter-Alias*.* Spaltenname*)|Berechnet den Durchschnitt aller Werte in der angegebenen Spalte.|  
-|Max (*Chapter-Alias*.* Spaltenname*)|Berechnet den maximalen Wert in der angegebenen Spalte.|  
-|MIN (*Kapitel-Alias*).* Spaltenname*)|Berechnet den minimalen Wert in der angegebenen Spalte.|  
-|COUNT (*Chapter-Alias*[.* Spaltenname*])|Zählt die Anzahl der Zeilen im angegebenen Alias. Wenn eine Spalte angegeben wird, werden nur Zeilen, für die diese Spalte nicht NULL ist, in die Anzahl eingeschlossen.|  
-|StDev (*Chapter-Alias*.* Spaltenname*)|Berechnet die Standardabweichung in der angegebenen Spalte.|  
-|Any (*Chapter-Alias*.* Spaltenname*)|Ein Wert der angegebenen Spalte. ANY hat nur dann einen vorhersagbaren Wert, wenn der Wert der-Spalte für alle Zeilen im Kapitel gleich ist.<br /><br /> **Hinweis** Wenn die Spalte nicht denselben Wert für alle Zeilen im Kapitel enthält, gibt der Shape-Befehl willkürlich einen der-Werte als Wert der any-Funktion zurück.|  
+|Sum (*Chapter-Alias*.*Spaltenname*)|Berechnet die Summe aller Werte in der angegebenen Spalte.|  
+|AVG (*Chapter-Alias*.*Spaltenname*)|Berechnet den Durchschnitt aller Werte in der angegebenen Spalte.|  
+|Max (*Chapter-Alias*.*Spaltenname*)|Berechnet den maximalen Wert in der angegebenen Spalte.|  
+|MIN (*Kapitel-Alias*).*Spaltenname*)|Berechnet den minimalen Wert in der angegebenen Spalte.|  
+|COUNT (*Chapter-Alias*[.*Spaltenname*])|Zählt die Anzahl der Zeilen im angegebenen Alias. Wenn eine Spalte angegeben wird, werden nur Zeilen, für die diese Spalte nicht NULL ist, in die Anzahl eingeschlossen.|  
+|StDev (*Chapter-Alias*.*Spaltenname*)|Berechnet die Standardabweichung in der angegebenen Spalte.|  
+|Any (*Chapter-Alias*.*Spaltenname*)|Ein Wert der angegebenen Spalte. ANY hat nur dann einen vorhersagbaren Wert, wenn der Wert der-Spalte für alle Zeilen im Kapitel gleich ist.<br /><br /> **Hinweis** Wenn die Spalte nicht denselben Wert für alle Zeilen im Kapitel enthält, gibt der Shape-Befehl willkürlich einen der-Werte als Wert der any-Funktion zurück.|  
   
-|Berechneter Ausdruck|Beschreibung|  
+|Berechneter Ausdruck|BESCHREIBUNG|  
 |---------------------------|-----------------|  
 |Calc (*Ausdruck*)|Berechnet einen beliebigen Ausdruck, aber nur in der Zeile des **Recordsets** , das die Calc-Funktion enthält. Jeder Ausdruck, der diese [Visual Basic for Applications Funktionen (VBA)](./visual-basic-for-applications-functions.md) verwendet, ist zulässig.|  
   
-|New-Schlüsselwort|Beschreibung|  
+|New-Schlüsselwort|BESCHREIBUNG|  
 |-----------------|-----------------|  
-|Neuer *Feldtyp* [(*Breite* &#124; *Skala* &#124; *Genauigkeit* &#124; *Fehler* [, *skalieren* &#124; *Fehler*])]|Fügt dem **Recordset**eine leere Spalte vom angegebenen Typ hinzu.|  
+|Neuer *Feldtyp* [(*Breite* &#124; *Skala* &#124; *Genauigkeit* &#124; *Fehler* [, *skalieren* &#124; *Fehler*])]|Fügt dem **Recordset** eine leere Spalte vom angegebenen Typ hinzu.|  
   
  Der *Feldtyp* , der mit dem New-Schlüsselwort übermittelt wird, kann einen der folgenden Datentypen aufweisen.  
   

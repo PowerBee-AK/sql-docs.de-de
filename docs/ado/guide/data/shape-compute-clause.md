@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 67411cf8d9be50571a515b5e7cf906fd19a650ec
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b246b1e70f18836455008f8d9e3c1b972e71f183
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979601"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037000"
 ---
 # <a name="shape-compute-clause"></a>SHAPE COMPUTE-Klausel
-Eine Shape-COMPUTE-Klausel generiert ein übergeordnetes **Recordset**, dessen Spalten aus einem Verweis auf das untergeordnete **Recordset**bestehen. optionale Spalten, deren Inhalt Kapitel, neue oder berechnete Spalten ist, oder das Ergebnis der Ausführung von Aggregatfunktionen für das untergeordnete **Recordset** oder ein zuvor geformtes **Recordset**. und alle Spalten aus dem untergeordneten **Recordset** , die in der optionalen BY-Klausel aufgeführt sind.  
+Eine Shape-COMPUTE-Klausel generiert ein übergeordnetes **Recordset**, dessen Spalten aus einem Verweis auf das untergeordnete **Recordset** bestehen. optionale Spalten, deren Inhalt Kapitel, neue oder berechnete Spalten ist, oder das Ergebnis der Ausführung von Aggregatfunktionen für das untergeordnete **Recordset** oder ein zuvor geformtes **Recordset**. und alle Spalten aus dem untergeordneten **Recordset** , die in der optionalen BY-Klausel aufgeführt sind.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,29 +51,29 @@ SHAPE child-command [AS] child-alias
  Ein Alias, mit dem auf das **Recordset** verwiesen wird, das vom untergeordneten Befehl zurückgegeben wird *.* Der untergeordnete Alias ist in der Liste der Spalten in der COMPUTE *-* Klausel erforderlich und definiert die Beziehung zwischen dem übergeordneten und dem untergeordneten **Recordset** -Objekt.  
   
  *angefügte Spaltenliste*  
- Eine Liste, in der jedes Element eine Spalte im generierten übergeordneten Element definiert. Jedes Element enthält entweder eine Kapitel Spalte, eine neue Spalte, eine berechnete Spalte oder einen Wert, der sich aus einer Aggregatfunktion für das untergeordnete **Recordset**ergibt.  
+ Eine Liste, in der jedes Element eine Spalte im generierten übergeordneten Element definiert. Jedes Element enthält entweder eine Kapitel Spalte, eine neue Spalte, eine berechnete Spalte oder einen Wert, der sich aus einer Aggregatfunktion für das untergeordnete **Recordset** ergibt.  
   
  *GRP-Feldliste*  
  Eine Liste von Spalten in den übergeordneten und untergeordneten **Recordset** -Objekten, die angibt, wie Zeilen im untergeordneten Element gruppiert werden sollen.  
   
- Für jede Spalte in der " *GRP-field-list* " gibt es eine entsprechende Spalte in den untergeordneten und übergeordneten **Recordset** -Objekten. Für jede Zeile im übergeordneten **Recordset**verfügen die *GRP-field-list-* Spalten über eindeutige Werte, und das untergeordnete **Recordset** , auf das von der übergeordneten Zeile verwiesen wird, besteht nur aus untergeordneten Zeilen, deren *GRP-field-list-* Spalten dieselben Werte wie die übergeordnete Zeile aufweisen.  
+ Für jede Spalte in der " *GRP-field-list* " gibt es eine entsprechende Spalte in den untergeordneten und übergeordneten **Recordset** -Objekten. Für jede Zeile im übergeordneten **Recordset** verfügen die *GRP-field-list-* Spalten über eindeutige Werte, und das untergeordnete **Recordset** , auf das von der übergeordneten Zeile verwiesen wird, besteht nur aus untergeordneten Zeilen, deren *GRP-field-list-* Spalten dieselben Werte wie die übergeordnete Zeile aufweisen.  
   
- Wenn die by-Klausel eingeschlossen ist, werden die Zeilen des untergeordneten **Recordsets**basierend auf den Spalten in der COMPUTE-Klausel gruppiert. Das übergeordnete **Recordset** enthält eine Zeile für jede Gruppe von Zeilen im untergeordneten **Recordset**.  
+ Wenn die by-Klausel eingeschlossen ist, werden die Zeilen des untergeordneten **Recordsets** basierend auf den Spalten in der COMPUTE-Klausel gruppiert. Das übergeordnete **Recordset** enthält eine Zeile für jede Gruppe von Zeilen im untergeordneten **Recordset**.  
   
- Wenn die by-Klausel weggelassen wird, wird das gesamte untergeordnete **Recordset** als eine einzelne Gruppe behandelt, und das übergeordnete **Recordset** enthält genau eine Zeile. Diese Zeile verweist auf das gesamte untergeordnete **Recordset**. Das Weglassen der by-Klausel ermöglicht es Ihnen, "Gesamtsumme"-Aggregate für das gesamte untergeordnete **Recordset**zu berechnen.  
+ Wenn die by-Klausel weggelassen wird, wird das gesamte untergeordnete **Recordset** als eine einzelne Gruppe behandelt, und das übergeordnete **Recordset** enthält genau eine Zeile. Diese Zeile verweist auf das gesamte untergeordnete **Recordset**. Das Weglassen der by-Klausel ermöglicht es Ihnen, "Gesamtsumme"-Aggregate für das gesamte untergeordnete **Recordset** zu berechnen.  
   
  Beispiel:  
   
 ```  
-SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
+SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
 ```  
   
- Unabhängig davon, wie das übergeordnete **Recordset** (mithilfe von COMPUTE oder mithilfe von Append) formatiert wird, enthält es eine Kapitel Spalte, die verwendet wird, um es mit einem untergeordneten **Recordset**zu verknüpfen. Wenn Sie möchten, kann das übergeordnete **Recordset** auch Spalten enthalten, die Aggregate (Sum, min, Max usw.) für die untergeordneten Zeilen enthalten. Sowohl das übergeordnete als auch das untergeordnete **Recordset** enthalten möglicherweise Spalten, die einen Ausdruck in der Zeile im **Recordset**enthalten, sowie neue und Anfangs leere Spalten.  
+ Unabhängig davon, wie das übergeordnete **Recordset** (mithilfe von COMPUTE oder mithilfe von Append) formatiert wird, enthält es eine Kapitel Spalte, die verwendet wird, um es mit einem untergeordneten **Recordset** zu verknüpfen. Wenn Sie möchten, kann das übergeordnete **Recordset** auch Spalten enthalten, die Aggregate (Sum, min, Max usw.) für die untergeordneten Zeilen enthalten. Sowohl das übergeordnete als auch das untergeordnete **Recordset** enthalten möglicherweise Spalten, die einen Ausdruck in der Zeile im **Recordset** enthalten, sowie neue und Anfangs leere Spalten.  
   
 ## <a name="operation"></a>Vorgang  
- Der untergeordnete *Befehl* wird an den Anbieter ausgegeben, der ein untergeordnetes **Recordset**zurückgibt.  
+ Der untergeordnete *Befehl* wird an den Anbieter ausgegeben, der ein untergeordnetes **Recordset** zurückgibt.  
   
- Die COMPUTE-Klausel gibt die Spalten des übergeordneten **Recordsets**an. Hierbei kann es sich um einen Verweis auf das untergeordnete **Recordset**, ein oder mehrere Aggregate, einen berechneten Ausdruck oder neue Spalten handeln. Wenn eine by-Klausel vorhanden ist, werden die definierten Spalten auch an das übergeordnete **Recordset**angehängt. Die by-Klausel gibt an, wie die Zeilen des untergeordneten **Recordsets** gruppiert werden.  
+ Die COMPUTE-Klausel gibt die Spalten des übergeordneten **Recordsets** an. Hierbei kann es sich um einen Verweis auf das untergeordnete **Recordset**, ein oder mehrere Aggregate, einen berechneten Ausdruck oder neue Spalten handeln. Wenn eine by-Klausel vorhanden ist, werden die definierten Spalten auch an das übergeordnete **Recordset** angehängt. Die by-Klausel gibt an, wie die Zeilen des untergeordneten **Recordsets** gruppiert werden.  
   
  Nehmen Sie beispielsweise an, Sie verfügen über eine Tabelle mit dem Namen Demographics, die aus den Feldern State, City und Population besteht. (Die Bevölkerungszahlen in der Tabelle werden ausschließlich als Beispiel bereitgestellt.)  
   
@@ -97,7 +97,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
  Dieser Befehl öffnet ein geformtes **Recordset** mit zwei Ebenen. Die übergeordnete Ebene ist ein generiertes **Recordset** mit einer Aggregat Spalte ( `SUM(rs.population)` ), eine Spalte, die auf das untergeordnete **Recordset** ( `rs` ) verweist, und eine Spalte zum Gruppieren des untergeordneten **Recordsets** ( `state` ). Die untergeordnete Ebene ist das **Recordset** , das vom Abfragebefehl zurückgegeben wird ( `select * from demographics` ).  
   
- Die Detail Zeilen des untergeordneten **Recordsets** werden nach dem Zustand gruppiert, aber andernfalls in keiner bestimmten Reihenfolge. Das heißt, die Gruppen werden nicht in alphabetischer oder numerischer Reihenfolge angegeben. Wenn Sie möchten, dass das übergeordnete **Recordset** sortiert wird, können Sie das übergeordnete **Recordset**mit der **Recordset-Sortiermethode sortieren** .  
+ Die Detail Zeilen des untergeordneten **Recordsets** werden nach dem Zustand gruppiert, aber andernfalls in keiner bestimmten Reihenfolge. Das heißt, die Gruppen werden nicht in alphabetischer oder numerischer Reihenfolge angegeben. Wenn Sie möchten, dass das übergeordnete **Recordset** sortiert wird, können Sie das übergeordnete **Recordset** mit der **Recordset-Sortiermethode sortieren** .  
   
  Sie können jetzt im geöffneten übergeordneten **Recordset** navigieren und auf die untergeordneten Detail- **Recordset** -Objekte zugreifen. Weitere Informationen finden Sie unter [zugreifen auf Zeilen in einem hierarchischen Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   
@@ -108,7 +108,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |Sum (RS). Bevölkerungs|rs|State|  
 |---------------------------|--------|-----------|  
 |1,3 Millionen|Verweis auf child1|CA|  
-|1,2 Millionen|Verweis auf child2|WA|  
+|1\.200.000|Verweis auf child2|WA|  
 |1,1 Millionen|Verweis auf Child3|oder|  
   
 ## <a name="child1"></a>Child1  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f0c89d8a7f83bebfa77fb02a282fc21cb6f2dd0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 11e105becc0d62e315b4d44de9d26c093bb27326
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724941"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037020"
 ---
 # <a name="service-providers-and-components"></a>Dienstanbieter und -komponenten
 Dienstanbieter sind Komponenten, die die Funktionalität von Datenanbietern durch die Implementierung erweiterter Schnittstellen erweitern, die vom Datenspeicher nicht nativ unterstützt werden.  

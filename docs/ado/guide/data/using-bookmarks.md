@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 34fc17275609dbf08ffa02a1bc89902c904cac85
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f07ad3e4f5dc69da31a74af96842b1c8aab97eda
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979038"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036770"
 ---
 # <a name="using-bookmarks"></a>Verwenden von Textmarken
-Es ist häufig nützlich, nach dem Verschieben in das **Recordset** direkt zu einem bestimmten Datensatz zurückzukehren, ohne durch jeden Datensatz scrollen und Werte vergleichen zu müssen. Wenn Sie z. b. versuchen, mit der **Find** -Methode nach einem Datensatz zu suchen, die Suche jedoch keine Datensätze zurückgibt, werden Sie automatisch an jedem Ende des **Recordsets**platziert. Wenn Ihr Anbieter diese unterstützt, können Sie Lesezeichen verwenden, um die Position zu markieren, bevor Sie die **Find** -Methode verwenden, um zu ihrem Speicherort zurückzukehren. Ein Lesezeichen ist ein **Variant** -Typwert, der einen Datensatz in einem **Recordset** -Objekt eindeutig identifiziert.  
+Es ist häufig nützlich, nach dem Verschieben in das **Recordset** direkt zu einem bestimmten Datensatz zurückzukehren, ohne durch jeden Datensatz scrollen und Werte vergleichen zu müssen. Wenn Sie z. b. versuchen, mit der **Find** -Methode nach einem Datensatz zu suchen, die Suche jedoch keine Datensätze zurückgibt, werden Sie automatisch an jedem Ende des **Recordsets** platziert. Wenn Ihr Anbieter diese unterstützt, können Sie Lesezeichen verwenden, um die Position zu markieren, bevor Sie die **Find** -Methode verwenden, um zu ihrem Speicherort zurückzukehren. Ein Lesezeichen ist ein **Variant** -Typwert, der einen Datensatz in einem **Recordset** -Objekt eindeutig identifiziert.  
   
  Sie können auch ein Variant-Array von Lesezeichen mit der **Recordset-Filter** Methode verwenden, um nach einem ausgewählten Satz von Datensätzen zu filtern. Weitere Informationen zu diesem Verfahren finden Sie unter Filtern der Ergebnisse im Thema [Arbeiten mit Recordsets](../../../ado/guide/data/working-with-recordsets.md)weiter unten in diesem Abschnitt.  
   
@@ -49,4 +49,4 @@ End If
   
  Die [unterstützte](../../../ado/reference/ado-api/supports-method.md) Methode wird später ausführlicher behandelt.  
   
- Mit Ausnahme der Groß-/Kleinschreibung von geklonten **Recordsets**sind Lesezeichen für das **Recordset** , in dem Sie erstellt wurden, eindeutig, auch wenn derselbe Befehl verwendet wird. Dies bedeutet, dass Sie kein **Lesezeichen** , das aus einem **Recordset** abgerufen wurde, verwenden können, um in einem zweiten **Recordset** , das mit demselben Befehl geöffnet wurde, zum gleichen Datensatz zu wechseln.
+ Mit Ausnahme der Groß-/Kleinschreibung von geklonten **Recordsets** sind Lesezeichen für das **Recordset** , in dem Sie erstellt wurden, eindeutig, auch wenn derselbe Befehl verwendet wird. Dies bedeutet, dass Sie kein **Lesezeichen** , das aus einem **Recordset** abgerufen wurde, verwenden können, um in einem zweiten **Recordset** , das mit demselben Befehl geöffnet wurde, zum gleichen Datensatz zu wechseln.

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c826b9b5-0d78-43a2-8174-5844db62a93c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5073aa8334f1f86689085ec87dc5a5d9c832fd44
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d2d99315d0cef54709d8c5313f2961dc0e43cfe7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978601"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036640"
 ---
 # <a name="programming-with-ado-md"></a>Programmieren mit ADO MD
 Wenn Sie ADO MD mit dem Entwicklungs Tool verwenden möchten, sollten Sie einen Verweis auf die ADO MD Typbibliothek einrichten. Die Beschreibung der ADO MD Bibliothek ist die Bibliothek von Microsoft ActiveX Data Objects (mehrdimensional). Der Dateiname der ADO MD Bibliothek ist msadomd.dll, und die Programm-ID (ProgID) ist "ADOMD". Weitere Informationen zum Erstellen von Verweisen auf Bibliotheken finden Sie in der Dokumentation zu Ihrem Entwicklungs Tool.  

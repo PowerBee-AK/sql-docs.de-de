@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2ae54835836fecdfbf3b026fe9e6a701a5602d3d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1c0872f20754d093020ece2830d389de32f09032
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991541"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037740"
 ---
 # <a name="command-streams"></a>Command-Datenströme
 ADO hat die Befehls Eingabe im von der **CommandText** -Eigenschaft angegebenen Zeichen folgen Format immer unterstützt. Als Alternative können Sie mit ADO 2,7 oder höher auch einen Informationsstrom für Befehlseingaben verwenden, indem Sie den Stream der **CommandStream** -Eigenschaft zuweisen. Sie können ein ADO- **Stream** -Objekt oder ein beliebiges Objekt zuweisen, das die com **IStream** -Schnittstelle unterstützt.  
@@ -64,7 +64,7 @@ Set adoCmd  = Server.CreateObject("ADODB.Command"")
 adoCmd.CommandStream = adoStreamQuery  
 ```  
   
- Geben Sie den **Dialekt**der Befehlssprache an, der angibt, wie der SQL Server OLE DB Anbieters den Befehlsdaten Strom interpretieren soll. Der durch eine anbieterspezifische GUID angegebene Dialekt:  
+ Geben Sie den **Dialekt** der Befehlssprache an, der angibt, wie der SQL Server OLE DB Anbieters den Befehlsdaten Strom interpretieren soll. Der durch eine anbieterspezifische GUID angegebene Dialekt:  
   
 ```  
 adoCmd.Dialect = "{5D531CB2-E6Ed-11D2-B252-00C04F681B71}"  

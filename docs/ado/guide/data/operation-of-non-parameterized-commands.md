@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4e1187a319b086f7a28d3b282869271cd444ab5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e9ee255f895e934c4405d888d72f15b8cee9159d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980161"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037200"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Verarbeitung nicht-parametrisierter Befehle
-Bei nicht parametrisierten Befehlen werden alle Anbieter Befehle ausgeführt, und die **Recordsets** werden während der Ausführung des Befehls erstellt. Wenn der Befehl synchron ausgeführt wird, werden alle **Recordsets** vollständig aufgefüllt. Wenn ein asynchroner auffüllungs Modus ausgewählt wurde, hängt der auffüllungs Status der **Recordsets** vom auffüllungs Modus und der Größe der **Recordsets**ab.  
+Bei nicht parametrisierten Befehlen werden alle Anbieter Befehle ausgeführt, und die **Recordsets** werden während der Ausführung des Befehls erstellt. Wenn der Befehl synchron ausgeführt wird, werden alle **Recordsets** vollständig aufgefüllt. Wenn ein asynchroner auffüllungs Modus ausgewählt wurde, hängt der auffüllungs Status der **Recordsets** vom auffüllungs Modus und der Größe der **Recordsets** ab.  
   
  Der über *geordnete Befehl* könnte z. b. eine **recordmenge** von Kunden für ein Unternehmen aus einer Customers-Tabelle zurückgeben, und der untergeordnete Befehl könnte ein **Recordset** von Bestellungen für alle Kunden aus einer Orders *-* Tabelle zurückgeben.  
   
@@ -32,15 +32,15 @@ SHAPE {SELECT * FROM Customers}
    RELATE customerID TO customerID)  
 ```  
   
- Bei nicht parametrisierten Beziehungen zwischen übergeordneten und untergeordneten Elementen muss jedes übergeordnete und untergeordnete **Recordset** -Objekt über eine gemeinsame Spalte verfügen, um diese zuzuordnen. Die Spalten werden in der Beziehung Klausel, der über *geordneten Spalte* First und der untergeordneten *Spalte*benannt. Die Spalten können unterschiedliche Namen in den jeweiligen **recordsetobjekten** aufweisen, müssen jedoch auf dieselben Informationen verweisen, um eine sinnvolle Beziehung anzugeben. Beispielsweise könnten die **Kunden** -und **Orders-Recordset** -Objekte über ein CustomerID-Feld verfügen. Da die Mitgliedschaft des untergeordneten **Recordsets** durch den Anbieter Befehl bestimmt wird, kann das untergeordnete **Recordset** verwaiste Zeilen enthalten. Auf diese verwaisten Zeilen kann ohne zusätzliche Umgestaltung nicht zugegriffen werden.  
+ Bei nicht parametrisierten Beziehungen zwischen übergeordneten und untergeordneten Elementen muss jedes übergeordnete und untergeordnete **Recordset** -Objekt über eine gemeinsame Spalte verfügen, um diese zuzuordnen. Die Spalten werden in der Beziehung Klausel, der über *geordneten Spalte* First und der untergeordneten *Spalte* benannt. Die Spalten können unterschiedliche Namen in den jeweiligen **recordsetobjekten** aufweisen, müssen jedoch auf dieselben Informationen verweisen, um eine sinnvolle Beziehung anzugeben. Beispielsweise könnten die **Kunden** -und **Orders-Recordset** -Objekte über ein CustomerID-Feld verfügen. Da die Mitgliedschaft des untergeordneten **Recordsets** durch den Anbieter Befehl bestimmt wird, kann das untergeordnete **Recordset** verwaiste Zeilen enthalten. Auf diese verwaisten Zeilen kann ohne zusätzliche Umgestaltung nicht zugegriffen werden.  
   
- Die Daten Strukturierung fügt eine Kapitel Spalte an das übergeordnete **Recordset**an. Die Werte in der Spalte "Chapter" sind Verweise auf Zeilen im untergeordneten **Recordset**, die die Klausel "Verwandte Beziehung" erfüllen. Das heißt, der gleiche Wert befindet sich in der über *geordneten Spalte* einer angegebenen übergeordneten Zeile, die sich in der untergeordneten *Spalte* aller Zeilen des untergeordneten Elements befindet. Wenn mehrere to-Klauseln in derselben Beziehung Klausel verwendet werden, werden Sie implizit mithilfe eines and-Operators kombiniert. Wenn die übergeordneten Spalten in der Beziehung-Klausel keinen Schlüssel für das übergeordnete **Recordset**bilden, kann eine einzelne untergeordnete Zeile über mehrere übergeordnete Zeilen verfügen.  
+ Die Daten Strukturierung fügt eine Kapitel Spalte an das übergeordnete **Recordset** an. Die Werte in der Spalte "Chapter" sind Verweise auf Zeilen im untergeordneten **Recordset**, die die Klausel "Verwandte Beziehung" erfüllen. Das heißt, der gleiche Wert befindet sich in der über *geordneten Spalte* einer angegebenen übergeordneten Zeile, die sich in der untergeordneten *Spalte* aller Zeilen des untergeordneten Elements befindet. Wenn mehrere to-Klauseln in derselben Beziehung Klausel verwendet werden, werden Sie implizit mithilfe eines and-Operators kombiniert. Wenn die übergeordneten Spalten in der Beziehung-Klausel keinen Schlüssel für das übergeordnete **Recordset** bilden, kann eine einzelne untergeordnete Zeile über mehrere übergeordnete Zeilen verfügen.  
   
  Wenn Sie auf den Verweis in der Kapitel-Spalte zugreifen, ruft ADO automatisch das **Recordset** ab, das durch den Verweis dargestellt wird. Beachten Sie, dass in einem nicht parametrisierten Befehl, obwohl das gesamte untergeordnete **Recordset** abgerufen wurde, das Kapitel nur eine Teilmenge der Zeilen darstellt.  
   
- Wenn die angefügte Spalte keinen *Chapter-Alias*hat, wird automatisch ein Name generiert. Ein [Feld](../../reference/ado-api/field-object.md) Objekt für die Spalte wird an die [Fields](../../reference/ado-api/fields-collection-ado.md) -Auflistung des **Recordset** -Objekts angehängt, und sein Datentyp **lautet adChapter**.  
+ Wenn die angefügte Spalte keinen *Chapter-Alias* hat, wird automatisch ein Name generiert. Ein [Feld](../../reference/ado-api/field-object.md) Objekt für die Spalte wird an die [Fields](../../reference/ado-api/fields-collection-ado.md) -Auflistung des **Recordset** -Objekts angehängt, und sein Datentyp **lautet adChapter**.  
   
- Informationen zum Navigieren in einem hierarchischen **Recordset**finden Sie unter [zugreifen auf Zeilen in einem hierarchischen Recordset](./accessing-rows-in-a-hierarchical-recordset.md).  
+ Informationen zum Navigieren in einem hierarchischen **Recordset** finden Sie unter [zugreifen auf Zeilen in einem hierarchischen Recordset](./accessing-rows-in-a-hierarchical-recordset.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Beispiel für Daten Strukturierung](./data-shaping-example.md)   
