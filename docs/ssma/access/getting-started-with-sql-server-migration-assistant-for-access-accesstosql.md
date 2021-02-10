@@ -20,15 +20,15 @@ ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: d622396e9e650aa3e9fc1b3855e1dfc1634bc34e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e05bc860ec1cc9f3703a1d1c17441c4e1ad3de15
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938809"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044620"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Ersten Schritte mit SQL Server Migration Assistant für den Zugriff (Access Token)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) für den Zugriff ermöglicht Ihnen das schnelle Konvertieren von Access-Datenbankobjekten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbankobjekte, das Hochladen der resultierenden Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank sowie das Migrieren von Daten aus dem Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank. Bei Bedarf können Sie auch Zugriffs Tabellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit oder Azure SQL-Datenbanktabellen verknüpfen, sodass Sie weiterhin Ihre vorhandenen Access-Front-End-Anwendungen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank verwenden können.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) für den Zugriff ermöglicht Ihnen das schnelle Konvertieren von Access-Datenbankobjekten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbankobjekte, das Hochladen der resultierenden Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank sowie das Migrieren von Daten aus dem Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank. Bei Bedarf können Sie auch Zugriffs Tabellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit oder Azure SQL-Datenbanktabellen verknüpfen, sodass Sie weiterhin Ihre vorhandenen Access-Front-End-Anwendungen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank verwenden können.  
   
 Dieses Thema enthält eine Einführung in den Installationsvorgang und hilft Ihnen, Sie mit der SSMA-Benutzeroberfläche vertraut zu machen.  
   
@@ -82,14 +82,14 @@ Sie können den Zugriff auf den Metadaten-Explorer verwenden, um die folgenden A
 -   Verknüpfen und Aufheben der Verknüpfung von Access und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen.  
   
 #### <a name="sql-server-or-azure-sql-database-metadata-explorer"></a>SQL Server oder Metadaten-Explorer von Azure SQL-Datenbank  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oder der Metadaten-Explorer von Azure SQL-Datenbank zeigt Informationen zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank an. Wenn Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder mit Azure SQL-Datenbank herstellen, ruft SSMA Metadaten zu dieser Instanz ab und speichert Sie in der Projektdatei.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder der Metadaten-Explorer von Azure SQL-Datenbank zeigt Informationen zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank an. Wenn Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder mit Azure SQL-Datenbank herstellen, ruft SSMA Metadaten zu dieser Instanz ab und speichert Sie in der Projektdatei.  
   
 Sie können die SQL Server oder den metadatenexplorer von Azure SQL-Datenbank verwenden, um konvertierte Access-Datenbankobjekte auszuwählen und diese Objekte in die Instanz von oder Azure SQL-Datenbank zu laden (zu synchronisieren) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Weitere Informationen finden Sie unter [Laden von konvertierten Datenbankobjekten in SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md).  
   
 ### <a name="metadata"></a>Metadaten  
-Auf der rechten Seite jedes metadatenexplorers sind Registerkarten, die das ausgewählte Objekt beschreiben. Wenn Sie z. b. eine Tabelle in Access Metadata Explorer auswählen, werden vier Registerkarten angezeigt: **Table**, **Type Mapping**, **Properties**und **Data**. Wenn Sie eine Tabelle im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadatenexplorer auswählen, werden drei Registerkarten angezeigt: **Table**, **SQL**und **Data**.  
+Auf der rechten Seite jedes metadatenexplorers sind Registerkarten, die das ausgewählte Objekt beschreiben. Wenn Sie z. b. eine Tabelle in Access Metadata Explorer auswählen, werden vier Registerkarten angezeigt: **Table**, **Type Mapping**, **Properties** und **Data**. Wenn Sie eine Tabelle im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadatenexplorer auswählen, werden drei Registerkarten angezeigt: **Table**, **SQL** und **Data**.  
   
 Die meisten metadateneinstellungen sind schreibgeschützt. Sie können jedoch die folgenden Metadaten ändern:  
   
@@ -106,7 +106,7 @@ Die Projektsymbol Leiste enthält Schaltflächen zum Arbeiten mit Projekten, zum
 #### <a name="the-migration-toolbar"></a>Die Migrations Symbolleiste  
 Die Migrations Symbolleiste enthält die folgenden Befehle:  
   
-|Schaltfläche|Funktion|  
+|Taste|Funktion|  
 |----------|------------|  
 |**Konvertieren, Laden und Migrieren**|Konvertiert Zugriffs Datenbanken, lädt die konvertierten Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank und migriert Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einem einzigen Schritt in oder Azure SQL-Datenbank.|  
 |**Erstellen von Berichten**|Konvertiert das ausgewählte Zugriffs Schema in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Daten Bank Syntax und erstellt dann einen Bericht, der die erfolgreiche Konvertierung der Konvertierung anzeigt.<br /><br />Dieser Befehl ist nur verfügbar, wenn Objekte im Access Metadata Explorer ausgewählt werden.|  

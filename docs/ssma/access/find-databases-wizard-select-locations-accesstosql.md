@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1babfbf6364371cbd1f96b310f29416b84f2b031
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 9ab968b72ccffacb776985c8aa43b4210e98324a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984946"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044591"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Assistent zum Suchen von Datenbanken (Speicherorte auswählen) (accesstosql)
 Geben Sie auf der Seite Speicherorte auswählen des Assistenten zum Suchen von Datenbanken die Suchparameter für die Suche nach Access-Datenbanken ein.  
@@ -40,7 +40,7 @@ Fügt die Position im Textfeld Pfad der Liste der Speicherorte hinzu.
 **Replace**  
 Wenn ein Element in der Liste der Speicherorte ausgewählt ist, ersetzt das Element im Textfeld Pfad das ausgewählte Element.  
   
-**Entfernen**  
+**Remove**  
 Entfernt das ausgewählte Element aus der Liste der zu durchsuchenden Speicherorte.  
   
 **Ganz oder teilweise der Dateiname**  
@@ -56,7 +56,7 @@ Um Datenbanken zu suchen, die in einem bestimmten Datumsbereich zuletzt aktualis
 Wenn Sie Datenbanken suchen möchten, die mit einem Größen Kriterium übereinstimmen, wählen Sie im ersten Feld ein Vergleichs Zeichen aus, geben Sie eine Zahl für die Größe ein, und wählen Sie dann bytes, Kilobytes oder Megabyte aus dem dritten Feld aus.  
   
 **Besitzer**  
-Geben Sie den vollständigen Windows-Benutzernamen des Besitzers ein. Dies kann als *Domänen* \\ *Benutzer*formatiert sein.  
+Geben Sie den vollständigen Windows-Benutzernamen des Besitzers ein. Dies kann als *Domänen* \\ *Benutzer* formatiert sein.  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Hinzufügen und Entfernen von Access-Datenbankdateien](adding-and-removing-access-database-files-accesstosql.md)  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: edfc6abf85e1d703ff175032acb65a5652df1ae7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 501c7db2fada266e414f9c6cb4527793950c2df0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167145"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041790"
 ---
 # <a name="marshaloptions-property-example-vb"></a>MarshalOptions-Eigenschaft – Beispiel (VB)
 In diesem Beispiel wird die [MarshalOptions](./marshaloptions-property-ado.md) -Eigenschaft verwendet, um anzugeben, welche Zeilen an den Server zurückgesendet werden, und zwar alle Zeilen oder nur geänderte Zeilen.  

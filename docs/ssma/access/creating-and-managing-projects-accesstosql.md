@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ee6cf3bea905b169503851efe375fd614c4589e9
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: ba2e567c5675e602cc80382d42adfcbb89bce90a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988196"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100045051"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>Erstellen und Verwalten von Projekten (accesstosql)
 Wenn Sie Access-Datenbanken zu oder SQL Azure migrieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , müssen Sie zunächst ein SSMA-Projekt erstellen. Das Projekt ist eine Datei mit Metadaten zu den Access-Datenbanken, die Sie zu migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, Metadaten zur Ziel Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, die die migrierten Objekte und Daten, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verbindungsinformationen und Projekteinstellungen empfängt.  
@@ -33,7 +33,7 @@ SSMA enthält mehrere Optionen zum umrechnen und Synchronisieren von Datenbankob
   
 **So überprüfen Sie die Standard Projekteinstellungen**  
   
-1.  Wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen**aus.  
+1.  Wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen** aus.  
   
 2.  Wählen Sie in der Dropdown Liste **Migrations Ziel Version** den Projekttyp aus, für den Einstellungen angezeigt/geändert werden sollen, und klicken Sie auf die Registerkarte **Allgemein**  
   
@@ -82,11 +82,11 @@ Wenn Sie ein Projekt speichern, speichert SSMA die Projekteinstellungen und opti
   
 **So speichern Sie ein Projekt**  
   
--   Wählen Sie im Menü **Datei** die Option **Projekt speichern**aus.  
+-   Wählen Sie im Menü **Datei** die Option **Projekt speichern** aus.  
   
     Wenn sich Datenbanken innerhalb des Projekts geändert haben oder nicht konvertiert wurden, werden Sie von SSMA aufgefordert, Metadaten im Projekt zu speichern. Durch das Speichern von Metadaten können Sie offline arbeiten. Außerdem können Sie eine komplette Projektdatei an andere Personen senden, einschließlich der technischen Supportmitarbeiter. Wenn Sie zum Speichern von Metadaten aufgefordert werden, gehen Sie wie folgt vor:  
   
-    1.  Aktivieren Sie für jede Datenbank, die den Status **fehlender Metadaten**anzeigt, das Kontrollkästchen neben dem Datenbanknamen.  
+    1.  Aktivieren Sie für jede Datenbank, die den Status **fehlender Metadaten** anzeigt, das Kontrollkästchen neben dem Datenbanknamen.  
   
         Das Speichern von Metadaten kann einige Minuten dauern. Wenn Sie an diesem Punkt keine Metadaten speichern möchten, aktivieren Sie keine Kontrollkästchen.  
   
@@ -103,7 +103,7 @@ Wenn Sie ein Projekt öffnen, wird es getrennt von [!INCLUDE[ssNoVersion](../../
   
     -   Zeigen Sie im Menü **Datei** auf **zuletzt verwendete Projekte**, und wählen Sie dann das Projekt aus, das Sie öffnen möchten.  
   
-    -   Wählen Sie im Menü **Datei** die Option **Projekt öffnen**aus, suchen Sie die Projektdatei. a2ssproj, wählen Sie die Datei aus, und klicken Sie dann auf **Öffnen**.  
+    -   Wählen Sie im Menü **Datei** die Option **Projekt öffnen** aus, suchen Sie die Projektdatei. a2ssproj, wählen Sie die Datei aus, und klicken Sie dann auf **Öffnen**.  
   
 2.  Um erneut eine Verbindung mit herzustellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wählen Sie im Menü **Datei** die Option **Verbindung wiederherstellen mit SQL Server**.  
   

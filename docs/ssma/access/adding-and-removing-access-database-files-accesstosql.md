@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 12c51ce9a3b4bdd83a1d1c4c7295f2ff438bc707
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: d8443eaceb150bd0cf2c936e44cb29fc2292f89c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987716"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042030"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Hinzufügen und Entfernen von Access-Datenbankdateien (accesstosql)
 Zum Migrieren von Zugriffsdaten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure müssen Sie dem SSMA-Projekt eine oder mehrere Access-Datenbanken hinzufügen. Diese Datenbanken müssen auf 97 oder höhere Versionen zugreifen. Wenn Sie über Datenbanken aus einer früheren Zugriffs Version verfügen, müssen Sie die Datenbanken in eine neuere Version konvertieren. Hierzu öffnen und speichern Sie die Datenbanken in Access 97 oder einer höheren Version, bevor Sie Sie SSMA hinzufügen.  
@@ -87,7 +87,7 @@ Wenn Sie einem SSMA-Projekt mehrere Zugriffs Datenbanken aus unterschiedlichen O
   
 7.  Klicken Sie auf **Weiter**.  
   
-8.  Klicken Sie auf der Seite überprüfen auf **Fertig**stellen.  
+8.  Klicken Sie auf der Seite überprüfen auf **Fertig** stellen.  
   
 ## <a name="browsing-access-metadata"></a>Durchsuchen von Zugriffs Metadaten  
 Nachdem Sie einem Projekt eine Access-Datenbank hinzugefügt haben, werden die Projekt Metadaten in Access Metadata Explorer angezeigt. Sie können die Hierarchie von Datenbanken und Datenbankobjekten im Explorer durchsuchen.  
@@ -102,7 +102,7 @@ Nachdem Sie einem Projekt eine Access-Datenbank hinzugefügt haben, werden die P
   
 3.  Erweitern Sie **Tabellen** , und wählen Sie dann eine Tabelle aus.  
   
-    Beachten Sie, dass vier Registerkarten angezeigt werden: **Table**, **Type Mapping**, **Properties**und **Data**.  
+    Beachten Sie, dass vier Registerkarten angezeigt werden: **Table**, **Type Mapping**, **Properties** und **Data**.  
   
 4.  Erweitern Sie eine Tabelle, erweitern Sie **Schlüssel**, und wählen Sie dann einen Schlüssel aus.  
   
@@ -126,7 +126,7 @@ Sie können eine Access-Datenbank aus einem-Projekt entfernen, indem Sie die fol
   
 1.  Erweitern Sie in Access Metadata Explorer den Eintrag **Access-Metabase**, und erweitern Sie dann **Datenbanken**.  
   
-2.  Klicken Sie mit der rechten Maustaste auf die Datenbank, und wählen Sie dann **Datenbank entfernen**aus.  
+2.  Klicken Sie mit der rechten Maustaste auf die Datenbank, und wählen Sie dann **Datenbank entfernen** aus.  
   
 ## <a name="next-step"></a>Nächster Schritt  
 Der nächste Schritt des Migrations Vorgangs besteht darin, eine [Verbindung mit SQL Server herzustellen](../sybase/connecting-to-sql-server-sybasetosql.md).  

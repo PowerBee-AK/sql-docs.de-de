@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 112452e9e6c31810dbf26d9aa1e7b36959c192d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 10bff5f86bec26994c143195fcbb97aa30ba709e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488333"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044750"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportieren einer Zugriffs Inventur (accesstosql)
 Wenn Sie über mehrere Access-Datenbanken verfügen und nicht sicher sind, in welche migriert werden sollen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie ein Inventar aller Access-Datenbanken in einem Projekt exportieren. Sie können dann die Inventar Metadaten überprüfen und Abfragen, um zu bestimmen, welche Datenbanken und Objekte innerhalb dieser Datenbanken migriert werden sollen. Diese Inventur ermöglicht Ihnen das schnelle Auffinden von Antworten auf Fragen wie die folgenden:  
@@ -93,13 +93,13 @@ Weitere Informationen zum Erstellen von Projekten finden Sie unter [Erstellen un
   
 7.  Klicken Sie auf **Weiter**.  
   
-8.  Klicken Sie auf der Seite überprüfen auf **Fertig**stellen.  
+8.  Klicken Sie auf der Seite überprüfen auf **Fertig** stellen.  
   
 Weitere Informationen zum Hinzufügen von Datenbanken zu Projekten finden Sie unter [Hinzufügen und Entfernen von Access-Datenbankdateien](adding-and-removing-access-database-files-accesstosql.md).  
   
 **So stellen Sie eine Verbindung mit SQL Server her**  
   
-1.  Wählen Sie im Menü **Datei** die Option **mit SQL Server verbinden**aus.  
+1.  Wählen Sie im Menü **Datei** die Option **mit SQL Server verbinden** aus.  
   
 2.  Geben Sie im Dialogfeld Verbindung den Namen der Instanz von ein, oder wählen Sie ihn aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -113,7 +113,7 @@ Weitere Informationen zum Hinzufügen von Datenbanken zu Projekten finden Sie un
   
 4.  Wenn die Instanz von für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Annahme von Verbindungen an einem nicht standardmäßigen Port konfiguriert ist, geben Sie die Portnummer ein, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Feld **Serverport** für Verbindungen verwendet wird. Die Standard Portnummer für die Standard Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist 1433. Bei benannten Instanzen wird von SSMA versucht, die Portnummer vom- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser Dienst abzurufen.  
   
-5.  Wählen Sie im Dropdown Menü **Authentifizierung** den Authentifizierungstyp aus, der für die Verbindung verwendet werden soll. Um das aktuelle Windows-Konto zu verwenden, wählen Sie **Windows-Authentifizierung**aus. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Wählen Sie **SQL Server Authentifizierung**aus, und geben Sie einen Benutzernamen und ein Kennwort ein, um einen Anmelde Namen zu verwenden.  
+5.  Wählen Sie im Dropdown Menü **Authentifizierung** den Authentifizierungstyp aus, der für die Verbindung verwendet werden soll. Um das aktuelle Windows-Konto zu verwenden, wählen Sie **Windows-Authentifizierung** aus. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Wählen Sie **SQL Server Authentifizierung** aus, und geben Sie einen Benutzernamen und ein Kennwort ein, um einen Anmelde Namen zu verwenden.  
   
 Weitere Informationen zum Herstellen einer Verbindung mit finden Sie unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Herstellen einer Verbindung mit SQL Server &#40;accesstosql&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md).  
   
@@ -227,6 +227,6 @@ WHERE ColumnName LIKE '%salary%';
 ```  
 Wenn Sie den Spaltennamen nicht kennen, können Sie eine Abfrage schreiben, um alle Spalten zurückzugeben. Entfernen Sie zu diesem Zweck die WHERE-Klausel aus der vorherigen Abfrage.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Vorbereiten der Zugriffs Datenbanken für die Migration](preparing-access-databases-for-migration-accesstosql.md)  
   

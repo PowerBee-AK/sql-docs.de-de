@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
-ms.openlocfilehash: 1d28458896d4ae4806db1b0f705c5e33badddfb7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fb21fdc7da82d6dae2390ddcf0884ea1e8ac8a58
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932751"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044390"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Migrieren eines Oracle-Schemas zu SQL Server 2017 unter Linux mit dem SQL Server Migration Assistant
 
@@ -57,9 +57,9 @@ SSMA für Oracle verwendet standardmäßig nicht die Oracle-Beispiel Schemas. F�
 
 1. Wählen Sie in SSMA das **Menü** Extras aus.
 
-1. Wählen Sie **Standard Projekteinstellungen**aus, und wählen Sie dann **System Objekte laden**aus.
+1. Wählen Sie **Standard Projekteinstellungen** aus, und wählen Sie dann **System Objekte laden** aus.
 
-1. Stellen Sie sicher, dass **HR** aktiviert ist, und wählen Sie **OK**aus.
+1. Stellen Sie sicher, dass **HR** aktiviert ist, und wählen Sie **OK** aus.
 
 ## <a name="connect-to-oracle"></a>Herstellen einer Verbindung mit Oracle
 
@@ -77,7 +77,7 @@ Verbinden Sie als nächstes SSMA mit Oracle.
 
 Führen Sie die folgenden Schritte aus, um einen Migrationsbericht zu generieren.
 
-1. Erweitern Sie im **Oracle-metadatenexplorer**den Knoten des Servers.
+1. Erweitern Sie im **Oracle-metadatenexplorer** den Knoten des Servers.
 
 1. Erweitern Sie **Schemas**, klicken Sie mit der rechten Maustaste auf **HR**, und wählen Sie **Bericht erstellen**.
 
@@ -108,7 +108,7 @@ Synchronisieren Sie als nächstes die Datenbank.
 
 1. Nachdem die Konvertierung abgeschlossen ist, verwenden Sie den **SQL Server Metadaten-Explorer** , um zur Datenbank zu wechseln, die Sie im vorherigen Schritt erstellt haben.
 
-1. Klicken Sie mit der rechten Maustaste auf die Datenbank, wählen Sie **mit Datenbank synchronisieren**aus, und klicken Sie dann auf OK.
+1. Klicken Sie mit der rechten Maustaste auf die Datenbank, wählen Sie **mit Datenbank synchronisieren** aus, und klicken Sie dann auf OK.
 
    ![Mit Datenbank synchronisieren](./media/sql-server-linux-convert-from-oracle/SynchronizeWithDatabase.png)
 
@@ -116,7 +116,7 @@ Synchronisieren Sie als nächstes die Datenbank.
 
 Der letzte Schritt besteht darin, Ihre Daten zu migrieren.
 
-1. Klicken Sie im **Oracle-metadatenexplorer**mit der rechten Maustaste auf **HR**, und wählen Sie **Daten migrieren**aus.
+1. Klicken Sie im **Oracle-metadatenexplorer** mit der rechten Maustaste auf **HR**, und wählen Sie **Daten migrieren** aus.
 
 1. Der Daten Migrationsschritt erfordert, dass Sie Ihre Oracle-und SQL Server-Anmelde Informationen erneut eingeben.
 

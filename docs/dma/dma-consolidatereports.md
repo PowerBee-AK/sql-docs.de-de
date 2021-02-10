@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4d1bcf2cdc9997ea33be87184c38447b7cd62973
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c2804bbc185a3aa17d7f50d85b9ef6c2cc84d002
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98091606"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044647"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Bewerten eines Unternehmens und Konsolidieren der Bewertungsberichte mit DMA
 
@@ -123,7 +123,7 @@ Nachdem Sie die PowerShell-Module in das Verzeichnis "modules" geladen und eine 
 
 Die der dmadatacollector-Funktion zugeordneten Parameter werden in der folgenden Tabelle beschrieben.
 
-|Parameter  |Beschreibung |
+|Parameter  |BESCHREIBUNG |
 |---------|---------|
 |**getserverlistfrom** | Ihre Inventur. Mögliche Werte sind **SQLServer** und **CSV**.<br/>Weitere Informationen finden Sie unter [Erstellen eines Inventars von SQL-Servern](#create-inventory). |
 |**csvpath** | Der Pfad zu Ihrer CSV-Inventur Datei.  Wird nur verwendet, wenn **getserverlistfrom** auf  **CSV** festgelegt ist. |
@@ -147,7 +147,7 @@ Nachdem Ihre Bewertung abgeschlossen ist, können Sie die Daten für die Analyse
 
 Die der dmaprocessor-Funktion zugeordneten Parameter werden in der folgenden Tabelle beschrieben.
 
-|Parameter  |Beschreibung |
+|Parameter  |BESCHREIBUNG |
 |---------|---------|
 |**processto** | Der Speicherort, an dem die JSON-Datei verarbeitet wird. Mögliche Werte sind **SQLServer** und **azuresqldatabase**. |
 |**serverName** | Die SQL Server Instanz, in die die Daten verarbeitet werden.  Wenn Sie für den **processto** -Parameter **azuresqldatabase** angeben, schließen Sie nur den SQL Server Namen ein (nicht include. Database.Windows.net). Sie werden zur Eingabe von zwei Anmeldungen aufgefordert, wenn Sie die Azure SQL-Datenbank als Ziel haben. die erste ist Ihre Azure-Mandanten-Anmelde Informationen, während die zweite die Administrator Anmeldung für den Azure-SQL Server ist. |

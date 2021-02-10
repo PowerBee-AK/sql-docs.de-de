@@ -12,12 +12,12 @@ author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 7a50504923a825a437ea4456a1bb9394cd0635db
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 931e013a84cd808d75a50edafdcf73d105f51827
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951325"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100045110"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>Erstellen von Analyseberichten in Assistent für Datenbankexperimente (SQL Server)
 
@@ -25,11 +25,11 @@ Nachdem Sie die Quell Ablauf Verfolgung auf beiden Ziel Servern wiedergegeben ha
 
 ## <a name="create-an-analysis-report"></a>Erstellen eines Analyse Berichts
 
-1. Wählen Sie in der ddea das Listen Symbol aus, geben Sie den Servernamen und den Authentifizierungstyp an, aktivieren bzw. deaktivieren Sie die Kontrollkästchen **Verbindung verschlüsseln** und **Serverzertifikat vertrauen** entsprechend ihren Szenarios, und wählen Sie dann **verbinden**aus.
+1. Wählen Sie in der ddea das Listen Symbol aus, geben Sie den Servernamen und den Authentifizierungstyp an, aktivieren bzw. deaktivieren Sie die Kontrollkästchen **Verbindung verschlüsseln** und **Serverzertifikat vertrauen** entsprechend ihren Szenarios, und wählen Sie dann **verbinden** aus.
 
    ![Herstellen einer Verbindung mit dem Server mit Ablauf Verfolgungs Dateien](./media/database-experimentation-assistant-create-report/dea-connect-to-server-with-trace-files.png)
 
-2. Wählen Sie auf dem Bildschirm **Analyseberichte** die Option **neuer Analysebericht**aus.
+2. Wählen Sie auf dem Bildschirm **Analyseberichte** die Option **neuer Analysebericht** aus.
 
    ![Neuen Analysebericht erstellen](./media/database-experimentation-assistant-create-report/dea-create-an-analysis-report.png)
 
@@ -52,7 +52,7 @@ Von der DEA werden statistische Tests verwendet, um die Arbeitsauslastung zu ana
 
 **F: kann ich einen neuen Analysebericht erstellen, während ein anderer Bericht generiert wird?**
 
-Nein  Derzeit kann jeweils nur ein Bericht generiert werden, um Konflikte zu verhindern. Sie können jedoch mehr als eine Erfassung und Wiedergabe gleichzeitig ausführen.
+Nein.  Derzeit kann jeweils nur ein Bericht generiert werden, um Konflikte zu verhindern. Sie können jedoch mehr als eine Erfassung und Wiedergabe gleichzeitig ausführen.
 
 **F: kann ich mithilfe der Eingabeaufforderung einen Analysebericht generieren?**
 
@@ -67,7 +67,7 @@ Der Benutzer, der bei DEA angemeldet ist, muss über sysadmin-Rechte auf dem Ana
 |Mögliche Fehler|Lösung|  
 |---|---|  
 |Es kann keine Verbindung mit der Datenbank hergestellt werden. Stellen Sie sicher, dass Sie über Systemadministrator Rechte zum Analysieren und Anzeigen der Berichte verfügen.|Sie verfügen möglicherweise nicht über Zugriffs-oder sysadmin-Rechte für den Server oder die Datenbank. Bestätigen Sie Ihre Anmelde Rechte, und versuchen Sie es erneut.|  
-|Der **Berichts Name** kann nicht auf dem Server **Servernamen**generiert werden. Weitere Informationen finden Sie im Bericht Berichts **Name** .|Möglicherweise verfügen Sie nicht über die sysadmin-Rechte, die zum Generieren eines neuen Berichts erforderlich sind. Wenn Sie ausführliche Fehler anzeigen möchten, wählen Sie den Bericht mit dem Fehlerbericht aus, und überprüfen Sie die Protokolle in% Temp% \\ Dea.|  
+|Der **Berichts Name** kann nicht auf dem Server **Servernamen** generiert werden. Weitere Informationen finden Sie im Bericht Berichts **Name** .|Möglicherweise verfügen Sie nicht über die sysadmin-Rechte, die zum Generieren eines neuen Berichts erforderlich sind. Wenn Sie ausführliche Fehler anzeigen möchten, wählen Sie den Bericht mit dem Fehlerbericht aus, und überprüfen Sie die Protokolle in% Temp% \\ Dea.|  
 |Der aktuelle Benutzer verfügt nicht über die erforderlichen Berechtigungen zum Ausführen des Vorgangs. Stellen Sie sicher, dass Sie über Systemadministrator Rechte zum Durchführen der Ablauf Verfolgung und zum Analysieren der Berichte verfügen.|Sie verfügen nicht über die sysadmin-Rechte, die erforderlich sind, um einen neuen Bericht zu generieren.|  
 
 **F: Ich kann keine Verbindung mit dem Computer herstellen, auf dem SQL Server**

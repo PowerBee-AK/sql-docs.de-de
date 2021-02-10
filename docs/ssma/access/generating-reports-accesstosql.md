@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a39eb77ce3247aa72874ab5f3dfbaa4e80f0050c
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 1e80761c63aec6461af497af696a059ab7b86f60
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984886"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044538"
 ---
 # <a name="generating-reports-accesstosql"></a>Erstellen von Berichten (accesstosql)
 Die Berichte bestimmter Aktivitäten, die mithilfe von Befehlen ausgeführt werden, werden in der SSMA-Konsole auf Objektstruktur Ebene generiert.  
   
 Verwenden Sie das folgende Verfahren, um Berichte zu generieren:  
   
-1.  Geben Sie den Parameter " **Write-Summary-Report-to" an** . Der zugehörige Bericht wird als Dateiname (sofern angegeben) oder in dem von Ihnen angegebenen Ordner gespeichert. Der Dateiname ist vom System vordefiniert, wie in der folgenden Tabelle erwähnt, wobei ** &lt; n &gt; ** die eindeutige Dateinummer ist, die bei jeder Ausführung desselben Befehls mit einer Ziffer schrittweise erhöht wird.  
+1.  Geben Sie den Parameter " **Write-Summary-Report-to" an** . Der zugehörige Bericht wird als Dateiname (sofern angegeben) oder in dem von Ihnen angegebenen Ordner gespeichert. Der Dateiname ist vom System vordefiniert, wie in der folgenden Tabelle erwähnt, wobei **&lt; n &gt;** die eindeutige Dateinummer ist, die bei jeder Ausführung desselben Befehls mit einer Ziffer schrittweise erhöht wird.  
   
     Die Berichte vis-a-vis-Befehle lauten:  
   
-    |SL. Nein.|Get-Help|Berichtstitel|  
+    |SL. Nein.|Befehl|Berichtstitel|  
     |-|-|-|  
     |1|generieren-Assessment-Bericht|Gutamentreport &lt; n &gt; . Basi|  
     |2|Convert-Schema|Schemaconversionreport &lt; n &gt; . Basi|  
@@ -82,7 +82,7 @@ Verwenden Sie das folgende Verfahren, um Berichte zu generieren:
 ```  
   
 ### <a name="synchronize-target"></a>Synchronisieren-Ziel:  
-Der Befehl " **Synchronisieren-Target** " weist einen **Report-Errors-to-Parameter auf** , der den Speicherort des Fehlerberichts für den Synchronisierungs Vorgang angibt. Anschließend wird eine Datei namens **targetsynchronizationreport &lt; n angezeigt &gt; . XML** wird an der angegebenen Position erstellt, wobei ** &lt; n &gt; ** die eindeutige Dateinummer ist, die mit jeder Ausführung desselben Befehls mit einer Ziffer Inkrementen erhöht.  
+Der Befehl " **Synchronisieren-Target** " weist einen **Report-Errors-to-Parameter auf** , der den Speicherort des Fehlerberichts für den Synchronisierungs Vorgang angibt. Anschließend wird eine Datei namens **targetsynchronizationreport &lt; n angezeigt &gt; . XML** wird an der angegebenen Position erstellt, wobei **&lt; n &gt;** die eindeutige Dateinummer ist, die mit jeder Ausführung desselben Befehls mit einer Ziffer Inkrementen erhöht.  
   
 **Hinweis:** Wenn der Ordner Pfad angegeben ist, wird der Parameter "Report-Errors-to" ein optionales Attribut für den Befehl "Synchronisieren-Ziel".  
   
@@ -110,7 +110,7 @@ Der Befehl " **Synchronisieren-Target** " weist einen **Report-Errors-to-Paramet
 -   Fehler-Skript  
   
 ### <a name="refresh-from-database"></a>Refresh-from-Database:  
-Der Befehl **Refresh-from-Database** weist einen **Report-Errors-to-Parameter auf** , der den Speicherort des Fehlerberichts für den Aktualisierungs Vorgang angibt. Anschließend wird eine Datei namens **sourcedbrefreshreport &lt; n angezeigt &gt; . XML** wird an der angegebenen Position erstellt, wobei ** &lt; n &gt; ** die eindeutige Dateinummer ist, die mit jeder Ausführung desselben Befehls mit einer Ziffer Inkrementen erhöht.  
+Der Befehl **Refresh-from-Database** weist einen **Report-Errors-to-Parameter auf** , der den Speicherort des Fehlerberichts für den Aktualisierungs Vorgang angibt. Anschließend wird eine Datei namens **sourcedbrefreshreport &lt; n angezeigt &gt; . XML** wird an der angegebenen Position erstellt, wobei **&lt; n &gt;** die eindeutige Dateinummer ist, die mit jeder Ausführung desselben Befehls mit einer Ziffer Inkrementen erhöht.  
   
 **Hinweis:** Wenn der Ordner Pfad angegeben ist, wird der Parameter "Report-Errors-to" ein optionales Attribut für den Befehl "Synchronisieren-Ziel".  
   
