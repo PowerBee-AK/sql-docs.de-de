@@ -1,6 +1,6 @@
 ---
 description: Treiberspezifische Datentypen, Deskriptortypen, Informationstypen, Diagnosetypen und Attribute
-title: 'Treiber spezifische Typen: Daten, Deskriptor, Informationen, Diagnose | Microsoft-Dokumentation'
+title: 'Driver-Specific Typen: Daten, Deskriptor, Informationen, Diagnose | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,25 +15,25 @@ helpviewer_keywords:
 ms.assetid: ad4c76d3-5191-4262-b47c-5dd1d19d1154
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a0ac3fd67e07f23f14420ee46ccda5cd409f87a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03cd6b0ed9a424a161f88f4bd525941895d3d201
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483003"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062565"
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>Treiberspezifische Datentypen, Deskriptortypen, Informationstypen, Diagnosetypen und Attribute
 Treiber können Treiber spezifische Werte für Folgendes zuweisen:  
   
--   **SQL-Datentyp Indikatoren** Diese werden in *ParameterType* in **SQLBindParameter** und in *DataType* in **SQLGetTypeInfo** verwendet und von **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**, **SQLDescribeParam**, **sqlprocedurecolrens**und **SQLSpecialColumns**zurückgegeben.  
+-   **SQL-Datentyp Indikatoren** Diese werden in *ParameterType* in **SQLBindParameter** und in *DataType* in **SQLGetTypeInfo** verwendet und von **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**, **SQLDescribeParam**, **sqlprocedurecolrens** und **SQLSpecialColumns** zurückgegeben.  
   
--   **Deskriptorfelder** Diese werden in " *fieldidentifier* " in **SQLColAttribute**, **SQLGetDescField**und **SQLSetDescField**verwendet.  
+-   **Deskriptorfelder** Diese werden in " *fieldidentifier* " in **SQLColAttribute**, **SQLGetDescField** und **SQLSetDescField** verwendet.  
   
--   **Diagnose Felder** Diese werden in *DiagIdentifier* in **SQLGetDiagField** und **SQLGetDiagRec**verwendet.  
+-   **Diagnose Felder** Diese werden in *DiagIdentifier* in **SQLGetDiagField** und **SQLGetDiagRec** verwendet.  
   
--   **Informationstypen** Diese werden in *InfoType* in **SQLGetInfo**verwendet.  
+-   **Informationstypen** Diese werden in *InfoType* in **SQLGetInfo** verwendet.  
   
--   **Verbindungs-und Anweisungs Attribute** Diese werden im- *Attribut* in **SQLGetConnectAttr**, **SQLGetStmtAttr**, **SQLSetConnectAttr**und **SQLSetStmtAttr**verwendet.  
+-   **Verbindungs-und Anweisungs Attribute** Diese werden im- *Attribut* in **SQLGetConnectAttr**, **SQLGetStmtAttr**, **SQLSetConnectAttr** und **SQLSetStmtAttr** verwendet.  
   
  Für jedes dieser Elemente gibt es zwei Sätze von Werten: Werte, die für die Verwendung durch ODBC reserviert sind, und Werte, die für die Verwendung durch Treiber reserviert sind. Vor der Implementierung von treiberspezifischen Werten muss ein treiberwriter einen Wert für die einzelnen treiberspezifischen Typen, Felder oder Attribute der geöffneten Gruppe anfordern. Verwenden Sie für die Entwicklung neuer Treiber den in der folgenden Tabelle beschriebenen Bereich. Der Treiber-Manager von ODBC 3,8 generiert keinen Fehler, wenn ein unbekannter Wert verwendet wird, der nicht im unten beschriebenen Bereich liegt. Spätere Versionen des Treiber-Managers generieren jedoch möglicherweise einen Fehler, wenn unbekannte Werte empfangen werden, die nicht im Bereich liegen.  
   

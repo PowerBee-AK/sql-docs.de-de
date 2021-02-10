@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c6e5a3878011de396568c4649ea5575635e96aec
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 4c59fb5228ef46a693e343716d1e58e56c042a53
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489554"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061555"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Bewerten Sie die Bereitschaft einer SQL Server-Datenbankmigration zu Azure SQL-Datenbank mithilfe des Datenmigrations-Assistent
 
@@ -59,7 +59,7 @@ Ein Azure Migrate-Projekt wird zum Speichern von Ermittlungs-, Bewertungs- und M
 
     | **Geografie**  | **Region des Speicherorts** |
     | ------------- | ------------- |
-    | Asien | „Asien, Südosten“ und „Asien, Osten“ |
+    | Asia | „Asien, Südosten“ und „Asien, Osten“ |
     | Europa | Europa, Süden oder Europa, Westen |
     | United Kingdom | „Vereinigtes Königreich, Süden“ oder „Vereinigtes Königreich, Westen“ |
     | USA | „USA, Mitte“ oder „USA, Westen 2“ |
@@ -101,7 +101,7 @@ Nachdem Sie erfolgreich ein Migrationsprojekt erstellt haben, können Sie unter 
 
     Wenn Sie die lokale SQL Server Instanz auf eine höhere Version von SQL Server oder auf SQL Server, die auf einer Azure-VM gehostet wird, aktualisieren, legen Sie den Quell-und den Ziel Servertyp auf **SQL Server** fest. Legen Sie den Ziel Servertyp auf **Azure SQL-verwaltete Instanz** für eine Ziel Bereitschafts Bewertung von Azure SQL-Datenbank (PAS) fest.
 
-3. Klicken Sie auf **Erstellen**.
+3. Wählen Sie **Erstellen** aus.
 
    ![Azure migrate-Datenmigrations-Assistent-Schnittstelle](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-interface.png)
 

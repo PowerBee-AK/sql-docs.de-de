@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b506f7ae063964bc1667b4425028cd35fbc9c91e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: af91274d4e48ce99894316c730a58d68fd633242
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985120"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062881"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Umstellen von DB2-Schemas (DB2ToSQL)
 Nachdem Sie eine Verbindung mit DB2 hergestellt, eine Verbindung mit hergestellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Projekt-und Daten Zuordnungsoptionen festgelegt haben, können Sie DB2-Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbankobjekte konvertieren.  
@@ -44,7 +44,7 @@ Die folgende Tabelle zeigt, welche DB2-Objekte konvertiert werden, und die resul
 |SELECT-Anweisung|**SSMA Maps wählen Sie mit den folgenden Ausnahmen aus:**<br /><br />Data-Change-Table-Reference-Klausel: teilweise zugeordnet, aber endgültige Tabellen werden nicht unterstützt.<br /><br />Tabellen Verweis Klausel: teilweise zugeordnet, aber nur-Table-Reference, Outer-Table-Reference, analyze_table-Expression, Collection-abgeleitete Tabelle, XMLTable-Expression ist nicht der SQL Server-Semantik zugeordnet.<br /><br />Die Period-Specification-Klausel ist nicht zugeordnet.<br /><br />Die Continue-Handler-Klausel ist nicht zugeordnet.<br /><br />Die typisierte Korrelations Klausel ist nicht zugeordnet.<br /><br />Die Klausel für die gleichzeitige Zugriffs Auflösung ist nicht zugeordnet.|  
 |Values-Anweisung|Wird zugeordnet.|  
 |INSERT-Anweisung|Wird zugeordnet.|  
-|Update-Anweisung|S**SMA ordnet Updates mit den folgenden Ausnahmen zu:**<br /><br />Table-Reference-Klausel-only: der Tabellen Verweis ist nicht der SQL Server-Semantik zugeordnet.<br /><br />Period-Klausel-ist nicht zugeordnet.|  
+|Update-Anweisung|S **SMA ordnet Updates mit den folgenden Ausnahmen zu:**<br /><br />Table-Reference-Klausel-only: der Tabellen Verweis ist nicht der SQL Server-Semantik zugeordnet.<br /><br />Period-Klausel-ist nicht zugeordnet.|  
 |MERGE-Anweisung|**SSMA ordnet die Zusammenführung mit den folgenden Ausnahmen zu:**<br /><br />Einzelne im Vergleich zu mehreren Vorkommen jeder Klausel: wird der SQL Server-Semantik für begrenzte Vorkommen der einzelnen Klauseln zugeordnet.<br /><br />Signal-Klausel-nicht SQL Server Semantik zugeordnet<br /><br />Gemischte Update-und DELETE-Klauseln: SQL Server Semantik nicht zugeordnet<br /><br />Period-clause: wird nicht SQL Server Semantik zugeordnet.|  
 |DELETE-Anweisung|**SSMA ordnet DELETE mit den folgenden Ausnahmen zu:**<br /><br />Table-Reference-Klausel-only: der Tabellen Verweis ist nicht der SQL Server-Semantik zugeordnet.<br /><br />Period-Klausel-wird nicht SQL Server Semantik zugeordnet|  
 |Isolationsstufe und Sperrentyp|Wird zugeordnet.|  
@@ -67,21 +67,21 @@ Die folgende Tabelle zeigt, welche DB2-Objekte konvertiert werden, und die resul
 |While-Anweisung|Wird zugeordnet.|  
 |Get Diagnostics-Anweisung|**SSMA ordnet die Diagnose mit den folgenden Ausnahmen zu:**<br /><br />Row_count-ist zugeordnet.<br /><br />DB2_RETURN_STATUS-ist zugeordnet.<br /><br />MESSAGE_TEXT-ist zugeordnet.<br /><br />DB2_SQL_NESTING_LEVEL-keine Zuordnung zu SQL Server Semantik<br /><br />DB2_TOKEN_STRING-keine Zuordnung zu SQL Server Semantik|  
 |Cursor|**SSMA ordnet Cursor mit den folgenden Ausnahmen zu:**<br /><br />Anweisung zum Zuordnen von Cursorn-entspricht nicht SQL Server Semantik<br /><br />Zuordnung der Locators-Anweisung-entspricht nicht SQL Server Semantik<br /><br />DECLARE CURSOR-Anweisung: die returnability-Klausel ist nicht der SQL Server-Semantik zugeordnet.<br /><br />FETCH-Anweisung-partielle Zuordnung. Variablen als Ziel werden nur unterstützt. Der SQLDA-Deskriptor ist nicht der SQL Server-Semantik zugeordnet.|  
-|Variables|Sind zugeordnet.|  
+|Variablen|Sind zugeordnet.|  
 |Ausnahmen, Handler und Bedingungen|**SSMA ordnet die "Ausnahmebehandlung" mit den folgenden Ausnahmen zu:**<br /><br />Exit-Handler-werden zugeordnet.<br /><br />Rückgängig-Handler-werden zugeordnet.<br /><br />Continue-Handler-werden nicht zugeordnet.<br /><br />Bedingungen: Es wird nicht der SQL Server-Semantik zugeordnet.|  
 |Dynamische SQL-Anweisungen|Nicht zugeordnet.|  
 |Aliase|Sind zugeordnet.|  
 |Spitznamen|Partielle Zuordnung. Für das zugrunde liegende Objekt ist eine manuelle Verarbeitung erforderlich.|  
 |Synonyme|Sind zugeordnet.|  
 |Standard Funktionen in DB2|SSMA ordnet DB2-Standardfunktionen zu, wenn eine äquivalente Funktion in SQL Server verfügbar ist:|  
-|Authorization|Nicht zugeordnet.|  
+|Autorisierung|Nicht zugeordnet.|  
 |Prädikate|Sind zugeordnet.|  
 |SELECT INTO-Anweisung|Nicht zugeordnet.|  
 |VALUES into-Anweisung|Nicht zugeordnet.|  
 |Transaktions Steuerung|Nicht zugeordnet.|  
   
 ## <a name="converting-db2-database-objects"></a>Umstellen von DB2-Datenbankobjekten  
-Zum Konvertieren von DB2-Datenbankobjekten wählen Sie zunächst die Objekte aus, die Sie konvertieren möchten, und lassen Sie dann die Konvertierung von SSMA durchführen. Wenn Sie während der Konvertierung Ausgabemeldungen anzeigen möchten, wählen Sie im Menü **Ansicht** die Option **Ausgabe**aus.  
+Zum Konvertieren von DB2-Datenbankobjekten wählen Sie zunächst die Objekte aus, die Sie konvertieren möchten, und lassen Sie dann die Konvertierung von SSMA durchführen. Wenn Sie während der Konvertierung Ausgabemeldungen anzeigen möchten, wählen Sie im Menü **Ansicht** die Option **Ausgabe** aus.  
   
 **So konvertieren Sie DB2-Objekte in SQL Server Syntax**  
   
@@ -99,14 +99,14 @@ Zum Konvertieren von DB2-Datenbankobjekten wählen Sie zunächst die Objekte aus
   
 3.  Um alle ausgewählten Objekte zu konvertieren, klicken Sie mit der rechten Maustaste auf **Schemas** , und wählen Sie **Schema konvertieren**.  
   
-    Sie können auch einzelne Objekte oder Kategorien von Objekten konvertieren, indem Sie mit der rechten Maustaste auf das Objekt oder seinen übergeordneten Ordner klicken und dann **Schema konvertieren**auswählen.  
+    Sie können auch einzelne Objekte oder Kategorien von Objekten konvertieren, indem Sie mit der rechten Maustaste auf das Objekt oder seinen übergeordneten Ordner klicken und dann **Schema konvertieren** auswählen.  
   
 ## <a name="viewing-conversion-problems"></a>Anzeigen von Konvertierungs Problemen  
 Einige DB2-Objekte werden möglicherweise nicht konvertiert. Sie können die Erfolgsraten der Konvertierung ermitteln, indem Sie den Zusammenfassungs Bericht für die Zusammenfassung anzeigen  
   
 **So zeigen Sie einen Zusammenfassungs Bericht an**  
   
-1.  Wählen Sie im DB2-metadatenexplorer **Schemas**aus.  
+1.  Wählen Sie im DB2-metadatenexplorer **Schemas** aus.  
   
 2.  Wählen Sie im rechten Bereich die Registerkarte **Bericht** aus.  
   
@@ -130,7 +130,7 @@ Bei Objekten, die nicht erfolgreich konvertiert werden konnten, können Sie die 
   
 5.  Klicken Sie im rechten Bereich auf die Registerkarte **Bericht** .  
   
-6.  Am oberen Rand der Registerkarte **Bericht** befindet sich eine Dropdown Liste. Wenn in der Liste **Statistiken**angezeigt werden, ändern Sie die Auswahl in **Quelle**.  
+6.  Am oberen Rand der Registerkarte **Bericht** befindet sich eine Dropdown Liste. Wenn in der Liste **Statistiken** angezeigt werden, ändern Sie die Auswahl in **Quelle**.  
   
     SSMA zeigt den Quellcode und mehrere Schaltflächen direkt oberhalb des Codes an.  
   

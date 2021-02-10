@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 67c14205590ccdf9d20a30f44c13aa2da5abbe8d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9bb65299be2778897b72303cccb99043a3b01406
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99212569"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061105"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Anhang B: ODBC-Statusübergangstabellen
 Die Tabellen in diesem Anhang veranschaulichen, wie ODBC-Funktionen Übergänge der Umgebungs-, Verbindungs-, Anweisungs-und deskriptorzustände verursachen. Der Zustand der Umgebung, der Verbindung, der Anweisung oder des Deskriptors gibt in der Regel an, wann Funktionen aufgerufen werden können, die den entsprechenden Typ des Handles (Umgebung, Verbindung, Anweisung oder Deskriptor) verwenden. Die Umgebungs-, Verbindungs-, Anweisungs-und deskriptorzustände überlappen sich ungefähr wie in den folgenden Abbildungen dargestellt. Beispiel: die genaue Überschneidung der Verbindungszustände C5 und C6 und der Anweisungs Status S1 bis S12 ist Datenquellen abhängig, da Transaktionen zu unterschiedlichen Zeiten in verschiedenen Datenquellen beginnen und der deskriptorstatus D1i (implizit zugeordneter Deskriptor) vom Zustand der Anweisung abhängt, der der Deskriptor zugeordnet ist, während State D1e (explizit zugeordneter Deskriptor) unabhängig vom Status einer beliebigen Anweisung ist Eine Beschreibung jedes Zustands finden Sie unter [Umgebungs Übergänge](../../../odbc/reference/appendixes/environment-transitions.md), [Verbindungs Übergänge](../../../odbc/reference/appendixes/connection-transitions.md), [Anweisungs Übergänge](../../../odbc/reference/appendixes/statement-transitions.md)und [deskriptorübergänge](../../../odbc/reference/appendixes/descriptor-transitions.md)weiter unten in diesem Anhang.  
@@ -62,7 +62,7 @@ Die Tabellen in diesem Anhang veranschaulichen, wie ODBC-Funktionen Übergänge 
   
 |Fußnote|Bedeutung|  
 |--------------|-------------|  
-|k|Vor oder nach. Der Cursor befindet sich vor dem Anfang des Resultsets oder nach dem Ende des Resultsets.|  
+|b|Vor oder nach. Der Cursor befindet sich vor dem Anfang des Resultsets oder nach dem Ende des Resultsets.|  
 |c|Aktuelle Funktion. Die aktuelle Funktion wurde asynchron ausgeführt.|  
 |T|Benötigen Sie Daten. Die Funktion, die SQL_NEED_DATA zurückgegeben.|  
 |e|Fehler. Die Funktion, die SQL_ERROR zurückgegeben.|  
@@ -75,7 +75,7 @@ Die Tabellen in diesem Anhang veranschaulichen, wie ODBC-Funktionen Übergänge 
 |r|Ergebnisse. Mit der-Anweisung wird ein (möglicherweise leeres) Resultset erstellt.|  
 |s|Erfolg. Die Funktion, die SQL_SUCCESS_WITH_INFO oder SQL_SUCCESS zurückgegeben wurde.|  
 |v|Gültige Zeile. Der Cursor wurde in einer Zeile im Resultset positioniert, und die Zeile wurde erfolgreich eingefügt, erfolgreich aktualisiert, oder ein anderer Vorgang in der Zeile wurde erfolgreich abgeschlossen. Wenn das Zeilen Status Array vorhanden war, lautete der Wert im Zeilen Status Array für die Zeile SQL_ROW_ADDED, SQL_ROW_SUCCESS oder SQL_ROW_UPDATED. (Auf das Zeilen Status Array wird durch das SQL_ATTR_ROW_STATUS_PTR Statement-Attribut verwiesen.)|  
-|x|Ausführ. Die Funktion, die SQL_STILL_EXECUTING zurückgegeben.|  
+|w|Ausführ. Die Funktion, die SQL_STILL_EXECUTING zurückgegeben.|  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
  In diesem Beispiel ist die Zeile in der Umgebungs Status Übergangs Tabelle für **SQLFreeHandle** , wenn der- *Typ* SQL_HANDLE_ENV lautet, wie folgt.  

@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56b1a2e50f26da8ce5ef581f8eda7c6a96afd741
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea801de44e1fce175ac549402e17b9fcc2e9f020
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449112"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061125"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Unterstützung für Regeln, Trigger, Standardwerte und gespeicherte Prozeduren (Visual FoxPro-ODBC-Treiber)
 Mithilfe des Visual FoxPro-ODBC-Treibers können keine Visual FoxPro-Regeln, Trigger, Standardwerte oder gespeicherten Prozeduren erstellt werden. Die Anwendung kann jedoch mit vorhandenen Regeln, Triggern, Standardwerten oder gespeicherten Prozeduren interagieren, wenn Sie in einer Datenbank gespeicherte Visual FoxPro-Daten einfügt, aktualisiert oder löscht.  
@@ -189,7 +189,7 @@ Mithilfe des Visual FoxPro-ODBC-Treibers können keine Visual FoxPro-Regeln, Tri
     :::column-end:::
     :::column:::
         DELETE-Befehl  
-        Befehl DELETE TAG  
+        DELETE TAG-Befehl  
         DELETED ()-Funktion  
         Absteigende ()-Funktion  
         Difference ()-Funktion  
@@ -199,8 +199,8 @@ Mithilfe des Visual FoxPro-ODBC-Treibers können keine Visual FoxPro-Regeln, Tri
     :::column-end:::
     :::column:::
         Do-Befehl  
-        Do Case... ENDCASE-Befehl  
-        Do While... ENDDO-Befehl  
+        Do Case... ENDCASE-Befehl  
+        Do While... ENDDO-Befehl  
         Dow ()-Funktion  
         Dto c ()-Funktion  
         Dtor ()-Funktion  
@@ -243,7 +243,7 @@ Mithilfe des Visual FoxPro-ODBC-Treibers können keine Visual FoxPro-Regeln, Tri
         Floor ()-Funktion  
         Flush-Befehl  
         FOR ()-Funktion  
-        Für... Endfor-Befehl  
+        Für... Endfor-Befehl  
         Found ()-Funktion  
     :::column-end:::
     :::column:::
@@ -290,10 +290,10 @@ Mithilfe des Visual FoxPro-ODBC-Treibers können keine Visual FoxPro-Regeln, Tri
 :::row:::
     :::column:::
         Idxcollate ()-Funktion  
-        Wenn... Befehl "umdif"  
+        Wenn... Befehl "umdif"  
         IIf ()-Funktion  
         Einzbc ()-Funktion  
-        Befehl INDEX  
+        INDEX-Befehl  
         InList ()-Funktion  
     :::column-end:::
     :::column:::
@@ -473,7 +473,7 @@ Mithilfe des Visual FoxPro-ODBC-Treibers können keine Visual FoxPro-Regeln, Tri
 
 :::row:::
     :::column:::
-        Scan Vorgang... Endscan-Befehl  
+        Scan Vorgang... Endscan-Befehl  
         Punkt Befehl  
         SEC ()-Funktion  
         SECONDS ()-Funktion  
@@ -483,16 +483,16 @@ Mithilfe des Visual FoxPro-ODBC-Treibers können keine Visual FoxPro-Regeln, Tri
         Select ()-Funktion  
         SELECT-SQL-Befehl  
         Set ()-Funktion  
-        Befehl SET BLOCKSIZE  
+        SET BLOCKSIZE-Befehl  
         Befehl "ausführen" festlegen  
         Jahrhundert festlegen  
-        Befehl SET COLLATE  
+        SET COLLATE-Befehl  
         Datenbankbefehl festlegen  
         Befehl "Datum festlegen"  
         Standardbefehl festlegen  
-        Befehl SET DELETED  
-        Befehl SET EXACT  
-        Befehl SET EXCLUSIVE  
+        SET DELETED-Befehl  
+        SET EXACT-Befehl  
+        SET EXCLUSIVE-Befehl  
         Befehl "f" festlegen  
     :::column-end:::
     :::column:::
@@ -508,19 +508,19 @@ Mithilfe des Visual FoxPro-ODBC-Treibers können keine Visual FoxPro-Regeln, Tri
         Near-Befehl festlegen  
         Befehl "nocptrans" festlegen  
         Benachrichtigungs Befehl festlegen  
-        Befehl SET NULL  
+        SET NULL-Befehl  
         Befehl "optimieren" festlegen  
         Befehl "Bestellung festlegen"  
-        Befehl SET PATH  
+        SET PATH-Befehl  
         Befehl "Prozedur festlegen"  
         Beziehungs Befehl festlegen  
         Befehl "Beziehung aus festlegen"  
-        Befehl SET REPROCESS  
+        SET REPROCESS-Befehl  
         Befehl "Skip" festlegen  
     :::column-end:::
     :::column:::
         Befehl "udfparser festlegen"  
-        Befehl SET UNIQUE  
+        SET UNIQUE-Befehl  
         Befehl "Volume festlegen"  
         Setfldstate ()-Funktion  
         Sign ()-Funktion  

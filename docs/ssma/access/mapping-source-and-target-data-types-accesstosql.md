@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 92ce9298b6d3752a4b60e98918404c2116423973
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: f5a725d0e2c6d9651884c399caabe2a8833826f3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988676"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100059047"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Zuordnung von Quell-und Ziel Datentypen (accesstosql)
 Zugriffsdaten Bank Typen unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanktypen. Wenn Sie Access-Datenbankobjekte in- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte konvertieren, müssen Sie angeben, wie Datentypen aus dem Zugriff zugeordnet werden sollen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können die standardmäßigen Datentyp Zuordnungen akzeptieren, oder Sie können die Zuordnungen anpassen, wie in den folgenden Prozeduren gezeigt.  
@@ -40,9 +40,9 @@ Im folgenden Verfahren wird gezeigt, wie Datentypen auf der Projekt-, Datenbank-
   
 1.  Um die Datentyp Zuordnung für das gesamte Projekt anzupassen, öffnen Sie das Dialogfeld **Projekteinstellungen** :  
   
-    1.  Wählen Sie **im Menü Extras** die Option **Projekteinstellungen**aus.  
+    1.  Wählen Sie **im Menü Extras** die Option **Projekteinstellungen** aus.  
   
-    2.  Wählen Sie im linken Bereich **Typzuordnung**aus.  
+    2.  Wählen Sie im linken Bereich **Typzuordnung** aus.  
   
         Das Typmapping-Diagramm und die Schaltflächen werden im rechten Bereich angezeigt.  
   
@@ -58,13 +58,13 @@ Im folgenden Verfahren wird gezeigt, wie Datentypen auf der Projekt-, Datenbank-
   
     1.  Klicken Sie im Bereich Typzuordnung auf **Hinzufügen**.  
   
-    2.  Wählen Sie im Dialogfeld **neue Typzuordnung** unter **Quelltyp**den zuzuordnenden Zuordnungs Datentyp aus.  
+    2.  Wählen Sie im Dialogfeld **neue Typzuordnung** unter **Quelltyp** den zuzuordnenden Zuordnungs Datentyp aus.  
   
     3.  Wenn der Typ eine Länge erfordert, geben Sie die minimalen und maximalen Daten Längen für die Zuordnung an, indem Sie die Kontrollkästchen **aus** und **auf** aktivieren und dann die Werte eingeben.  
   
         Auf diese Weise können Sie die Datenzuordnung für kleinere und größere Werte desselben Datentyps anpassen.  
   
-    4.  Wählen Sie unter **Zieltyp**den Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp aus.  
+    4.  Wählen Sie unter **Zieltyp** den Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp aus.  
   
         Einige Typen erfordern eine Länge des Ziel Datentyps. Wenn dies erforderlich ist, geben Sie die neue Daten Länge im Feld **Ersetzen durch** ein, und klicken Sie dann auf **OK**.  
   
@@ -72,13 +72,13 @@ Im folgenden Verfahren wird gezeigt, wie Datentypen auf der Projekt-, Datenbank-
   
     1.  Klicken Sie im Bereich Typzuordnung auf **Bearbeiten**.  
   
-    2.  Wählen Sie im Dialogfeld **typzuordnungs Liste** unter **Quelltyp**den zuzuordnenden Zuordnungs Datentyp aus.  
+    2.  Wählen Sie im Dialogfeld **typzuordnungs Liste** unter **Quelltyp** den zuzuordnenden Zuordnungs Datentyp aus.  
   
     3.  Wenn der Typ eine Länge erfordert, geben Sie die minimalen und maximalen Daten Längen für die Zuordnung an, indem Sie die Kontrollkästchen **aus** und **auf** aktivieren und dann die Werte eingeben.  
   
         Auf diese Weise können Sie die Datenzuordnung für kleinere und größere Werte desselben Datentyps anpassen.  
   
-    4.  Wählen Sie unter **Zieltyp**den Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp aus.  
+    4.  Wählen Sie unter **Zieltyp** den Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentyp aus.  
   
         Einige Typen erfordern eine Länge des Ziel Datentyps. Wenn dies erforderlich ist, geben Sie die neue Daten Länge im Feld **Ersetzen durch** ein, und klicken Sie dann auf **OK**.  
   

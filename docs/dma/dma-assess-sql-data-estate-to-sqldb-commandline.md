@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: ''
-ms.openlocfilehash: 35465a761258fb5a7865e711e2809d740b9b9fee
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: 8688fa61a1ccaede3bd370e1d19ccd66531f5739
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496815"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100060935"
 ---
 # <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql"></a>Dmacmd: Bewerten der Bereitschaft einer SQL Server-Datenbankmigration zu Azure SQL 
 
@@ -40,7 +40,7 @@ Weitere Informationen finden Sie im folgenden channel9-Video:
 Um dmacmd zum Durchführen einer Bewertung und zum Hochladen der Ergebnisse in Azure migrate Hub zu verwenden, benötigen Sie Folgendes: 
 
 - Die [neueste Version von Datenmigrations-Assistent (DMA)](https://www.microsoft.com/en-us/download/details.aspx?id=53595).
-- Ein [Azure migrate-Projekt](dma-assess-sql-data-estate-to-sqldb.md#create-a-project-and-add-a-tool). 
+- ein [Azure Migrate-Projekt](dma-assess-sql-data-estate-to-sqldb.md#create-a-project-and-add-a-tool) 
 - Zugriff der Rolle "Mitwirkender" auf die Azure migrate Projekt Ressource.
 
 ## <a name="use-dmacmd"></a>Verwenden von dmacmd

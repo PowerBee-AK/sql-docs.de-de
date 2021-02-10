@@ -11,12 +11,12 @@ ms.assetid: d63aa7e2-62c6-4c84-b3da-dcf2d89ee134
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 6a8db3e4025ddbb434c07448d576ec18828a403e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cee9e42386aa76616e049261a4d1f5b6d965fe26
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468888"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058673"
 ---
 # <a name="data-migration-report--oracletosql"></a>Bericht zur Datenmigration (OracleToSQL)
 Das Dialogfeld **Daten Migrationsbericht** wird angezeigt, nachdem Sie Daten zu migriert haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -37,7 +37,7 @@ Die Anzahl der Daten Zeilen in der Quell Tabelle.
 **Anzahl der erfolgreich migrierten Zeilen**  
 Die Anzahl der Daten Zeilen, die erfolgreich in die Ziel Tabelle migriert wurden.  
   
-**Verhältnis**  
+**Seitenverhältnis**  
 Der Prozentsatz der erfolgreich migrierten Zeilen.  
   
 **Details**  

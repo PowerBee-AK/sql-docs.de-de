@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3da213467ad6513d4c25e6888bd095e80746cba7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 92fb1bec694ca29ffe0591eb03012e1ed2ab3f2f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038273"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064367"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Arbeiten mit SSMA-Projekten (MySqlToSql)
 Um MySQL-Datenbanken zu SQL Server oder SQL Azure zu migrieren, müssen Sie zunächst ein SSMA-Projekt erstellen. Das Projekt ist eine Datei, die die folgenden Informationen enthält:  
@@ -104,7 +104,7 @@ Die Funktion zum Speichern von Projekten ermöglicht dem Benutzer das Speichern 
   
 Wenn sich Datenbanken innerhalb des Projekts geändert haben oder nicht konvertiert wurden, werden Sie von SSMA aufgefordert, Metadaten zu laden und zu speichern. Durch das Laden und Speichern von Metadaten können Sie offline arbeiten. Außerdem können Sie eine komplette Projektdatei an andere Personen senden, z. b. technische Supportmitarbeiter. Wenn Sie zum Speichern von Metadaten aufgefordert werden, gehen Sie wie folgt vor:  
   
-1.  Aktivieren Sie für jede Datenbank, die den Status **fehlender Metadaten**anzeigt, das Kontrollkästchen neben dem Datenbanknamen. Das Speichern von Metadaten kann einige Minuten dauern. Wenn Sie an diesem Punkt keine Metadaten speichern möchten, aktivieren Sie keine Kontrollkästchen.  
+1.  Aktivieren Sie für jede Datenbank, die den Status **fehlender Metadaten** anzeigt, das Kontrollkästchen neben dem Datenbanknamen. Das Speichern von Metadaten kann einige Minuten dauern. Wenn Sie an diesem Punkt keine Metadaten speichern möchten, aktivieren Sie keine Kontrollkästchen.  
   
 2.  Klicken Sie auf **Speichern**.  
   
@@ -121,9 +121,9 @@ Wenn Sie ein Projekt öffnen, wird es von MySQL und von SQL Server oder SQL Azur
   
     2.  Wählen Sie das Projekt aus, das Sie öffnen möchten.  
   
-    3.  Wählen Sie im Menü **Datei** die Option **Projekt öffnen**aus, suchen Sie die Projektdatei. m2ssproj, wählen Sie die Datei aus, und klicken Sie dann auf **Öffnen**.  
+    3.  Wählen Sie im Menü **Datei** die Option **Projekt öffnen** aus, suchen Sie die Projektdatei. m2ssproj, wählen Sie die Datei aus, und klicken Sie dann auf **Öffnen**.  
   
-2.  Um erneut eine Verbindung mit MySQL herzustellen, wählen Sie im Menü **Datei** die Option **Verbindung mit MySQL wieder**herstellen aus.  
+2.  Um erneut eine Verbindung mit MySQL herzustellen, wählen Sie im Menü **Datei** die Option **Verbindung mit MySQL wieder** herstellen aus.  
   
 3.  Um die Verbindung mit SQL Server wiederherzustellen, wählen Sie im Menü **Datei** die Option **Verbindung wiederherstellen mit SQL Server**.  
   

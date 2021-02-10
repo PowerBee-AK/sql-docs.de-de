@@ -10,18 +10,18 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 ms.author: alexiva
-ms.openlocfilehash: 72c6797bfc8d673069cab41002a4a93596d7e5d9
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 8d43e6a48746fbb1587327b430b67c6959731013
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779412"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064095"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Herstellen einer Verbindung mit Sybase (SybaseToSQL)
 
 Verwenden Sie das Dialogfeld **mit Sybase verbinden** , um eine Verbindung mit der Instanz von Sybase Adaptive Server Enterprise (ASE) herzustellen, die Sie migrieren möchten.
 
-Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **mit Sybase verbinden**aus. Wenn Sie bereits eine Verbindung hergestellt haben, stellt der Befehl **erneut eine Verbindung mit Sybase**her.
+Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **mit Sybase verbinden** aus. Wenn Sie bereits eine Verbindung hergestellt haben, stellt der Befehl **erneut eine Verbindung mit Sybase** her.
 
 ## <a name="options"></a>Tastatur
 
@@ -56,7 +56,7 @@ Verbindungs Zeichenfolgen bestehen aus Parameter Name-Wert-Paaren. Die Parameter
    |-----------|-------------------------|-----------------------|
    |Servername|Servername|Server|
    |Port|Server Port Adresse|Port|
-   |Benutzername|Benutzer-ID|Benutzer-ID|
+   |Benutzername|Benutzerkennung|Benutzerkennung|
    |Kennwort|Kennwort|Kennwort|
    |Anbieter|Anbieter|Anbieter|
 

@@ -14,12 +14,12 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 20f216b920eb16651ca0d06a6b8090e431f8c592
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: a893ad7e086abfdf0cc61c785ad6d93c3eeed184
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439404"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061525"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Durchführen einer SQL Server Integration Service-Migrations Bewertung mit Datenmigrations-Assistent
 
@@ -36,13 +36,13 @@ DMA muss mit **Administrator** Zugriff ausgeführt werden, um SSIS-Pakete im Pak
 
 Die folgenden Schritt-für-Schritt-Anweisungen unterstützen Sie bei der ersten Bewertung der Migration von SSIS-Paketen (SQL Server Integration Service) zu Azure SQL-Datenbank oder Azure SQL verwaltete Instanz mithilfe von Datenmigrations-Assistent.
 
-## <a name="create-an-assessment"></a>Erstellen einer Bewertung
+## <a name="create-an-assessment"></a>Erstellen einer Beurteilung
 
-1. Wählen Sie das Symbol **neu** (+) aus, und wählen Sie dann den Projekttyp **Bewertung** als **Integrations Dienst**aus.
+1. Wählen Sie das Symbol **neu** (+) aus, und wählen Sie dann den Projekttyp **Bewertung** als **Integrations Dienst** aus.
 
 1. Legen Sie den Typ von Quell- und Zielserver fest.
 
-    Wählen Sie die Quelle als **SQL Server**aus, und legen Sie den Ziel Servertyp als **Azure SQL-Datenbank** oder **Azure SQL-verwaltete Instanz**fest.
+    Wählen Sie die Quelle als **SQL Server** aus, und legen Sie den Ziel Servertyp als **Azure SQL-Datenbank** oder **Azure SQL-verwaltete Instanz** fest.
 
 1. Klicken Sie auf **Erstellen**.
 

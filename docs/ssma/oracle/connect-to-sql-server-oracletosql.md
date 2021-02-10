@@ -11,12 +11,12 @@ ms.assetid: 4ef384ea-5f3e-4f70-ad7c-b62d7b0da628
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 1d97fd4a9aa4c92fe1e6376b4b472519b89e4bc7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db938314a0c0700c72ac23580d36a5fc0f0c6633
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492414"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100059345"
 ---
 # <a name="connect-to-sql-server--oracletosql"></a>Herstellen einer Verbindung mit SQL Server (OracleToSQL)
 Verwenden Sie das Dialogfeld **mit SQL Server verbinden** , um eine Verbindung mit der Instanz von herzustellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , zu der Sie migrieren möchten. Um auf das Dialogfeld **Verbindung mit SQL Server herstellen** zuzugreifen, klicken Sie im Menü **Datei** auf **Verbinden mit SQL Server**.  
@@ -53,5 +53,5 @@ Wenn Sie eine sichere Verbindung mit SQL Server herstellen möchten, verwenden S
 Wenn Sie diese Option verwenden möchten, aktivieren Sie das Kontrollkästchen **Server Zertifikat vertrauen** .  
   
 > [!NOTE]  
-> Zum Aktivieren des **Trust Server-Zertifikats**muss "verschlüsseln" auf " **true**" festgelegt sein.  
+> Zum Aktivieren des **Trust Server-Zertifikats** muss "verschlüsseln" auf " **true**" festgelegt sein.  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Refreshing Oracle Metadata
 ms.assetid: e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6
 ms.author: alexiva
-ms.openlocfilehash: d6fc63d62e9761f167eb70165c6f9324f56253a8
-ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
+ms.openlocfilehash: 4354a4e2726151177c48c27ce37a74e5b4ac335e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84454533"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058796"
 ---
 # <a name="connecting-to-oracle-database-oracletosql"></a>Herstellen einer Verbindung mit Oracle Database (OracleToSQL)
 
@@ -92,27 +92,27 @@ Wenn Sie eine Verbindung mit einer Datenbank herstellen, liest SSMA die Metadate
 
 **Zum Herstellen einer Verbindung mit Oracle**
 
-1. Wählen Sie im Menü **Datei** die Option **mit Oracle verbinden**aus.  
-   Wenn Sie zuvor eine Verbindung mit Oracle hergestellt haben, wird der Befehls Name **erneut mit Oracle**verbunden.
+1. Wählen Sie im Menü **Datei** die Option **mit Oracle verbinden** aus.  
+   Wenn Sie zuvor eine Verbindung mit Oracle hergestellt haben, wird der Befehls Name **erneut mit Oracle** verbunden.
   
-2. Wählen Sie im Feld **Anbieter** die Option **Oracle-Client Anbieter** oder **OLE DB Anbieter**aus, je nachdem, welcher Anbieter installiert ist. Der Standardwert ist Oracle Client.
+2. Wählen Sie im Feld **Anbieter** die Option **Oracle-Client Anbieter** oder **OLE DB Anbieter** aus, je nachdem, welcher Anbieter installiert ist. Der Standardwert ist Oracle Client.
 
-3. Wählen Sie im Feld **Modus** entweder den **Standard Modus**, den **TNSNAME-Modus**oder den **Verbindungs Zeichen folgen Modus**aus.  
+3. Wählen Sie im Feld **Modus** entweder den **Standard Modus**, den **TNSNAME-Modus** oder den **Verbindungs Zeichen folgen Modus** aus.  
    Verwenden Sie den Standardmodus, um den Servernamen und den Port anzugeben. Verwenden Sie den Dienstnamen Modus, um den Oracle-Dienstnamen manuell anzugeben. Verwenden Sie den Verbindungs Zeichen folgen Modus, um eine vollständige Verbindungs Zeichenfolge
 
-4. Wenn Sie den **Standard Modus**auswählen, geben Sie die folgenden Werte an:
+4. Wenn Sie den **Standard Modus** auswählen, geben Sie die folgenden Werte an:
    1. Geben Sie im Feld **Server Name** den Namen oder die IP-Adresse des Datenbankservers ein, oder wählen Sie ihn aus.
    2. Wenn der Datenbankserver nicht für die Annahme von Verbindungen über den Standardport (1521) konfiguriert ist, geben Sie im Feld **Serverport** die Portnummer ein, die für Oracle-Verbindungen verwendet wird.
    3. Geben Sie im Feld **Oracle sid** den System Bezeichner ein.
    4. Geben Sie im Feld **Benutzername** ein Oracle-Konto ein, das über die erforderlichen Berechtigungen verfügt.
    5. Geben Sie im Feld **Kennwort** das Kennwort für den angegebenen Benutzernamen ein.
 
-5. Wenn Sie den **TNSNAME-Modus**auswählen, geben Sie die folgenden Werte an:
+5. Wenn Sie den **TNSNAME-Modus** auswählen, geben Sie die folgenden Werte an:
    1. Geben Sie im Feld **Verbindungs Bezeichner** den Verbindungs Bezeichner (TNS-Alias) der Datenbank ein.
    2. Geben Sie im Feld **Benutzername** ein Oracle-Konto ein, das über die erforderlichen Berechtigungen verfügt.
    3. Geben Sie im Feld **Kennwort** das Kennwort für den angegebenen Benutzernamen ein.
   
-6. Wenn Sie den **Verbindungs Zeichen folgen Modus**auswählen, geben Sie im Feld **Verbindungs Zeichenfolge** eine Verbindungs Zeichenfolge an.  
+6. Wenn Sie den **Verbindungs Zeichen folgen Modus** auswählen, geben Sie im Feld **Verbindungs Zeichenfolge** eine Verbindungs Zeichenfolge an.  
    Das folgende Beispiel zeigt eine OLE DB Verbindungs Zeichenfolge:
 
    `Provider=OraOLEDB.Oracle;Data Source=MyOracleDB;User Id=myUsername;Password=myPassword;`
@@ -137,7 +137,7 @@ Metadaten über die Oracle-Datenbank werden nicht automatisch aktualisiert. Bei 
 
 2. Aktivieren Sie im Oracle-metadatenexplorer das Kontrollkästchen neben jedem Schema oder Datenbankobjekt, das Sie aktualisieren möchten.
 
-3. Klicken Sie mit der rechten Maustaste auf **Schemas**oder das einzelne Schema oder Datenbankobjekt, und wählen Sie dann **aus Datenbank aktualisieren aus**.  
+3. Klicken Sie mit der rechten Maustaste auf **Schemas** oder das einzelne Schema oder Datenbankobjekt, und wählen Sie dann **aus Datenbank aktualisieren aus**.  
    Wenn Sie nicht über eine aktive Verbindung verfügen, zeigt SSMA das Dialogfeld **Verbindung mit Oracle herstellen an** , sodass Sie eine Verbindung herstellen können.
 
 4. Geben Sie im Dialogfeld aus Datenbank aktualisieren an, welche Objekte aktualisiert werden sollen.

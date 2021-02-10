@@ -24,12 +24,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: d19ed1ddfa2c64b653c02d887b9605ea132ae1bc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 53fbbd5a865594f46eacb75c9799b9c956efb2da
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938413"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100059037"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>Verknüpfen von Zugriffs Anwendungen mit SQL Server Azure SQL-Datenbank (Access Token)
 Wenn Sie die vorhandenen Access-Anwendungen mit verwenden möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie die ursprünglichen Zugriffs Tabellen mit den migrierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen oder den SQL Azure Tabellen verknüpfen. Durch die Verknüpfung wird die Access-Datenbank geändert, sodass Ihre Abfragen, Formulare, Berichte und Datenzugriffsseiten die Daten in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank anstelle der Daten in der Access-Datenbank verwenden.  
@@ -49,7 +49,7 @@ Wenn Sie eine Zugriffs Tabelle mit einer- [!INCLUDE[ssNoVersion](../../includes/
   
 2.  Klicken Sie mit der rechten Maustaste auf **Tabellen**, und wählen Sie dann **Verknüpfen**.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) für den Zugriff sichert die ursprüngliche Zugriffs Tabelle und erstellt eine verknüpfte Tabelle.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) für den Zugriff sichert die ursprüngliche Zugriffs Tabelle und erstellt eine verknüpfte Tabelle.  
   
 Nachdem Sie die Tabellen verknüpft haben, werden die Tabellen in SSMA mit einem kleinen Link Symbol angezeigt. In Access werden die Tabellen mit einem "verknüpften" Symbol angezeigt. Hierbei handelt es sich um einen Globus mit einem Pfeil, der darauf zeigt.  
   
@@ -66,7 +66,7 @@ Wenn Sie die Verknüpfung einer Zugriffs Tabelle mit einer [!INCLUDE[ssNoVersion
   
 1.  Wählen Sie unter Access Metadata Explorer die Tabellen aus, deren Verknüpfung Sie aufheben möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf **Tabellen**, und wählen Sie **Verknüpfung**aufheben aus.  
+2.  Klicken Sie mit der rechten Maustaste auf **Tabellen**, und wählen Sie **Verknüpfung** aufheben aus.  
   
 ## <a name="linking-tables-to-a-different-server"></a>Verknüpfen von Tabellen mit einem anderen Server  
 Wenn Sie die Zugriffs Tabellen mit einer SQL Server Instanz verknüpft haben und die Verknüpfungen später zu einer anderen Instanz ändern möchten, müssen Sie die Tabellen neu verknüpfen.  
@@ -75,7 +75,7 @@ Wenn Sie die Zugriffs Tabellen mit einer SQL Server Instanz verknüpft haben und
   
 1.  Wählen Sie unter Access Metadata Explorer die Tabellen aus, deren Verknüpfung Sie aufheben möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf **Tabellen** , und wählen Sie **Verknüpfung**aufheben.  
+2.  Klicken Sie mit der rechten Maustaste auf **Tabellen** , und wählen Sie **Verknüpfung** aufheben.  
   
 3.  Klicken Sie auf die Schaltfläche **Verbindung mit SQL Server wiederherstellen** .  
   
