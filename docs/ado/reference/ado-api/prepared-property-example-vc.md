@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8dbdff171e7c1052e84e080aa5a11d37ef9055e6
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c439bde9ef6ee225354a1a3064ac730b4768c526
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170539"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040980"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared-Eigenschaft – Beispiel (VC++)
 Dieses Beispiel veranschaulicht die [vorbereitete](./prepared-property-ado.md) Eigenschaft, indem zwei [Befehls](./command-object-ado.md) Objekte geöffnet werden: eine vorbereitete und eine nicht vorbereitete.  

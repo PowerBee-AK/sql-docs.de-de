@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 839c2cb27fc14546523272c1c5b6d69f233557fa
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 60fb0e98e2adbd57ad9fa3a98d4d04f7def8d30d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166949"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041290"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Optimize – dynamische Eigenschaft (ADO)
 Gibt an, ob für ein [Feld](./field-object.md)ein Index erstellt werden soll.  
@@ -34,7 +34,7 @@ Gibt an, ob für ein [Feld](./field-object.md)ein Index erstellt werden soll.
   
  **Optimieren** ist eine dynamische Eigenschaft, die an die Auflistung der [Feld](./field-object.md) Objekt [Eigenschaften](./properties-collection-ado.md) angehängt wird, wenn die [Cursor Location](./cursorlocation-property-ado.md) -Eigenschaft auf **adUseClient** festgelegt ist.  
   
-## <a name="usage"></a>Verbrauch  
+## <a name="usage"></a>Verwendung  
   
 ```  
 Dim rs As New Recordset  

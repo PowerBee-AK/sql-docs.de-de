@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8ac6ec9cb5b32a7c0494a1955b4115d72f959d0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 185a0df6347748d71ec621940250e682e4c0eca6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170684"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041350"
 ---
 # <a name="openschema-method-example-vb"></a>OpenSchema-Methode – Beispiel (VB)
-In diesem Beispiel wird die [OpenSchema](./openschema-method.md) -Methode verwendet, um den Namen und den Typ der einzelnen Tabellen in der ***Pubs** _-Datenbank anzuzeigen.  
+In diesem Beispiel wird die [OpenSchema](./openschema-method.md) -Methode verwendet, um den Namen und den Typ der einzelnen Tabellen in der ***Pubs*** -Datenbank anzuzeigen.  
   
 ```  
 'BeginOpenSchemaVB  
@@ -79,7 +79,7 @@ End Sub
 'EndOpenSchemaVB  
 ```  
   
- In diesem Beispiel wird eine TABLE_TYPE Query-Einschränkung im _*OpenSchema** method **_Criteria_*_ -Argument angegeben. Folglich werden nur Schema Informationen für die in der _ *_Pubs_**-Datenbank angegebenen Sichten zurückgegeben. Im Beispiel werden dann die Namen und Typen der einzelnen (n) Tabelle (n) angezeigt.  
+ In diesem Beispiel wird eine TABLE_TYPE Query-Einschränkung im **OpenSchema** method **_Kriterium_*_-Argument angegeben. Folglich werden nur Schema Informationen für die in der _*_Pubs_ -Datenbank angegebenen Sichten** zurückgegeben. Im Beispiel werden dann die Namen und Typen der einzelnen (n) Tabelle (n) angezeigt.  
   
 ```  
 Attribute VB_Name = "OpenSchema"  

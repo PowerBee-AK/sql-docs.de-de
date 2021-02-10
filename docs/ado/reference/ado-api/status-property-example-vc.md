@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3406eec9b98c8b339f3b0edea21479897a219bc7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 91ad5dd78fbdac5fb434c5af86ed45dd25545be9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166443"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040400"
 ---
 # <a name="status-property-example-vc"></a>Status-Eigenschaft – Beispiel (VC++)
 In diesem Beispiel wird die [Status](./status-property-ado-recordset.md) -Eigenschaft verwendet, um anzuzeigen, welche Datensätze in einem Batch Vorgang vor einem Batch Update geändert wurden.  

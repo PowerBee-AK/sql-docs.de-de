@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7889a43427c8752ba30a4ccae1b6fc5db77db549
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6be85fef5e69e879034536c8785eccfd72c9f331
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166769"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040760"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>"Read", "Read", "Write" und "Write-Text"-Methoden Beispiel (VB)
 In diesem Beispiel wird veranschaulicht, wie der Inhalt eines Textfelds in einem [Textstream](./stream-object-ado.md) und einem binären **Stream** gelesen wird. Weitere Eigenschaften und Methoden, die angezeigt werden, sind [Position](./position-property-ado.md), [Größe](./size-property-ado-parameter.md), Zeichen [Satz](./charset-property-ado.md)und [SetEOS](./seteos-method.md).  

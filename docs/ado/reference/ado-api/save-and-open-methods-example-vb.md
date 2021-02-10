@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c76d26032d9986cba52442d62bb7ef8c10db5419
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0eafd067cdad9c107c591d09b5b5f50fdc6bc501
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166610"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040690"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save- und Open-Methode – Beispiel (VB)
 Diese drei Beispiele veranschaulichen, wie die [Save](./save-method.md) -Methode und die [Open](./open-method-ado-recordset.md) -Methode gleichzeitig verwendet werden können.  
   
  Nehmen wir an, dass Sie einen geschäftlichen Trip ausführen und eine Tabelle aus einer Datenbank aufnehmen möchten. Bevor Sie fortfahren, greifen Sie auf die Daten als [Recordset](./recordset-object-ado.md) zu, und speichern Sie Sie in einem austauschen-Format. Wenn Sie das Ziel erreichen, greifen Sie als lokales, nicht verbundenes **Recordset** auf das **Recordset** zu. Sie nehmen Änderungen am **Recordset** vor und speichern es dann erneut. Wenn Sie zu Hause zurückkehren, stellen Sie erneut eine Verbindung mit der Datenbank her, und aktualisieren Sie Sie mit den Änderungen, die Sie auf dem Weg vorgenommen haben.  
   
- Greifen Sie zuerst auf die Tabelle **_Authors_* _ zu, und speichern Sie Sie.  
+ Greifen Sie zuerst auf die ***Autoren*** Tabelle zu, und speichern Sie Sie.  
   
 ```  
 'BeginSaveVB  
@@ -85,7 +85,7 @@ End Sub
 'EndSaveVB  
 ```  
   
- An diesem Punkt haben Sie Ihr Ziel erreicht. Sie greifen auf die _*_Autoren_*_ Tabelle als lokales, nicht verbundenes _ * Recordset * * zu. Sie müssen über den **MSPersist** -Anbieter auf dem Computer verfügen, den Sie für den Zugriff auf die gespeicherte Datei verwenden, a:\Pubs.xml.  
+ An diesem Punkt haben Sie Ihr Ziel erreicht. Der Zugriff auf die Tabelle ***Authors** _ erfolgt als lokales, nicht verbundenes _ * Recordset * *. Sie müssen über den **MSPersist** -Anbieter auf dem Computer verfügen, den Sie für den Zugriff auf die gespeicherte Datei verwenden, a:\Pubs.xml.  
   
 ```  
 Attribute VB_Name = "Save"  

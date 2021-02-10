@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b5b7e99548e156126455a66be7fdf73a9c00ebbc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ab4d7c462e0e205050eed2b873a0071ac82ea936
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166828"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040970"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Prompt – dynamische Eigenschaft (ADO)
 Gibt an, ob der OLE DB Anbieter den Benutzer zur Eingabe von Initialisierungs Informationen auffordern soll.  
@@ -35,7 +35,7 @@ Gibt an, ob der OLE DB Anbieter den Benutzer zur Eingabe von Initialisierungs In
 > [!NOTE]
 >  Geben Sie nicht an, dass der Anbieter den Benutzer in Szenarios auffordern soll, in denen der Benutzer nicht auf das Dialogfeld reagieren kann. Der Benutzer kann beispielsweise nicht Antworten, wenn die Anwendung auf einem Server System statt auf dem Client des Benutzers ausgeführt wird oder wenn die Anwendung auf einem System ausgeführt wird, auf dem kein Benutzer angemeldet ist. In diesen Fällen wartet die Anwendung unbegrenzt auf eine Antwort und scheint eine Sperre zu erhalten.  
   
-## <a name="usage"></a>Verbrauch  
+## <a name="usage"></a>Verwendung  
   
 ```  
 Set cn = New Connection  
