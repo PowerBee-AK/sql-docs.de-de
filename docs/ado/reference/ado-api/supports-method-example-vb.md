@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ebd897f7c3de447afe13dea57c9e41e5b6b494fe
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: faaa4aaba30a37c8c13ff2d3b189f425595d6ee7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170099"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056489"
 ---
 # <a name="supports-method-example-vb"></a>Supports-Methode – Beispiel (VB)
 In diesem Beispiel werden die [unter](./supports-method.md) stützten Methoden verwendet, um die von einem Recordset unterstützten Optionen anzuzeigen, die mit verschiedenen Cursor Typen geöffnet wurden. Die Prozedur "DisplaySupport" ist erforderlich, damit diese Prozedur ausgeführt werden kann.  

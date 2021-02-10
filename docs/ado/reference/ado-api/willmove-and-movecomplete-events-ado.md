@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46c28cd74fcf7a580d6695e21cd1e5e2750f0519
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a2476447e5da8baa89a2df326eba3d41225c698e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166258"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056055"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove- und MoveComplete-Ereignis (ADO)
 Das Ereignis " **WillMove** " wird aufgerufen, bevor die aktuelle Position im [Recordset](./recordset-object-ado.md)durch einen ausstehenden Vorgang geändert wird. Das Ereignis " **muvecomplete** " wird aufgerufen, nachdem sich die aktuelle Position im **Recordset** geändert hat.  

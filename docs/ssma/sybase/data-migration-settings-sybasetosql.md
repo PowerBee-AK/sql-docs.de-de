@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6fcca84f52f5a6b9b8c033c00980374a0c17d7be
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 6b3598ebd679a85b8965babccfee4fc3658a08b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036684"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056605"
 ---
 # <a name="data-migration-settings-sybasetosql"></a>Einstellungen für die Datenmigration (SybaseToSQL)
   
@@ -40,7 +40,7 @@ ms.locfileid: "92036684"
     -   Wenn dieses Textfeld nicht aktiviert ist, werden die migrierten Daten den vorhandenen Daten in der Zieldatenbank hinzugefügt.  
   
 2.  **Benutzerdefinierte Select-Option verwenden:**  
-     Mit dieser Option kann der Benutzer die vorhandene **Select** -Anweisung ändern (die**Select** -Anweisung ermöglicht es Benutzern, die Daten auszuwählen, die in der Zieldatenbank angezeigt werden sollen).  
+     Mit dieser Option kann der Benutzer die vorhandene **Select** -Anweisung ändern (die **Select** -Anweisung ermöglicht es Benutzern, die Daten auszuwählen, die in der Zieldatenbank angezeigt werden sollen).  
   
     1.  Standardmäßig ist dieses Textfeld deaktiviert.  
   

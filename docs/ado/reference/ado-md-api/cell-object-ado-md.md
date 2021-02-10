@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c1fd0cdb2322b3cad507745a97faa6b74f245b40
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 88c9adb5ec2167bba4183d2040b16d19d5b25711
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169962"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100057045"
 ---
 # <a name="cell-object-ado-md"></a>Cell-Objekt (ADO MD)
 Stellt die Daten an der Schnittmenge von Achsen Koordinaten dar, die in einem CellSet enthalten sind.  

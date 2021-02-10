@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ed3add4b0920c493e7f83ccad14032a1ff227166
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: bed4948faafc02def05964eca19653d5373560dd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170008"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100055845"
 ---
 # <a name="ado-md-properties"></a>ADO MD-Eigenschaften
 
 |Eigenschaft|BESCHREIBUNG|  
 |-|-|  
 |[ActiveConnection](./activeconnection-property-ado-md.md)|Gibt an, zu welchem ADO- **Verbindungs** Objekt das aktuelle Cellset oder der aktuelle Katalog gehört.|  
-|[Beschriftung](./caption-property-ado-md.md)|Gibt den Beschriftungs Text an, der beim Anzeigen einer **Ebene** **oder eines** Element Objekts verwendet werden soll.|  
+|[Caption](./caption-property-ado-md.md)|Gibt den Beschriftungs Text an, der beim Anzeigen einer **Ebene** **oder eines** Element Objekts verwendet werden soll.|  
 |[ChildCount](./childcount-property-ado-md.md)|Gibt die Anzahl der Elemente an, für die **das aktuelle Element** Objekt das übergeordnete Element in einer Hierarchie ist.|  
 |[Children](./children-property-ado-md.md)|Gibt eine **Auflistung von** Membern zurück, für die **das aktuelle Element** das übergeordnete Element in der Hierarchie ist.|  
-|[Anzahl](../ado-api/count-property-ado.md)|Gibt die Anzahl der-Objekte in einer Auflistung an.|  
+|[Count](../ado-api/count-property-ado.md)|Gibt die Anzahl der-Objekte in einer Auflistung an.|  
 |[Depth](./depth-property-ado-md.md)|Gibt die Anzahl der Ebenen zwischen der **Ebene** und dem Stamm der Hierarchieebene an.|  
 |[Beschreibung](./description-property-ado-md.md)|Gibt eine Text Erklärung des aktuellen-Objekts zurück.|  
 |[DimensionCount](./dimensioncount-property-ado-md.md)|Gibt die Anzahl der Dimensionen auf einer Achse an.|  
@@ -47,7 +47,7 @@ ms.locfileid: "99170008"
 |[ParentSameAsPrev](./parentsameasprev-property-ado-md.md)|Gibt an, ob das übergeordnete Element dieses Positions Elements dem übergeordneten Element des unmittelbar vorangehenden Elements entspricht.|  
 |[Quelle](./source-property-ado-md.md)|Gibt die Quelle für die Daten im Cellset an.|  
 |[Zustand](./state-property-ado-md.md)|Gibt den aktuellen Status des Cellsets an.|  
-|[Type](./type-property-ado-md.md)|Gibt den Typ des aktuellen Elements an.|  
+|[Typ](./type-property-ado-md.md)|Gibt den Typ des aktuellen Elements an.|  
 |[UniqueName](./uniquename-property-ado-md.md)|Gibt einen eindeutigen Namen für das aktuelle-Objekt an.|  
 |[Wert](./value-property-ado-md.md)|Gibt den Wert der aktuellen Zelle an.|  
   

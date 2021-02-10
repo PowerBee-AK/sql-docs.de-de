@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d90763b8-ba3f-48f8-95b2-e6a0e52296e1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df2199275a5a1e5067b29133d3b61ac82cbc7340
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d60e1cc3620956085ab63d88bc31493b721ed78d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169974"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100055755"
 ---
 # <a name="caption-property-ado-md"></a>Caption-Eigenschaft (ADO MD)
 Gibt den Beschriftungs Text an, der beim Anzeigen einer [Ebene](./level-object-ado-md.md) [oder eines](./member-object-ado-md.md) Element Objekts verwendet werden soll.  

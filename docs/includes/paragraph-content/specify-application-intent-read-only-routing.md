@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
-ms.openlocfilehash: a443b615a6a04b588ed6dc84c6a8a4f6ed12e2f0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7086a69625b6ba365e5efb8ce3422799442cb05d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726756"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058399"
 ---
 ## <a name="specifying-application-intent"></a>Angeben des Anwendungszwecks
 
@@ -48,7 +48,7 @@ Das schreibgeschützte Routing ist eine Funktion, die die Verfügbarkeit des sch
 
 - Sie müssen eine Verbindung zum Verfügbarkeitsgruppenlistener einer AlwaysOn-Verfügbarkeitsgruppe herstellen.
 
-- Das Schlüsselwort der **ApplicationIntent** -Verbindungszeichenfolge muss auf **ReadOnly**festgelegt werden.
+- Das Schlüsselwort der **ApplicationIntent** -Verbindungszeichenfolge muss auf **ReadOnly** festgelegt werden.
 
 - Die Verfügbarkeitsgruppe muss vom Datenbankadministrator konfiguriert werden, um schreibgeschütztes Routing zu aktivieren.
 

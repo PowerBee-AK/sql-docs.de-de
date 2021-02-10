@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 647eca0b17066d46ff8ae3f9a39e22c87d4c07fa
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 39941627af5bdbcbcacac123ee3543f8963eb6d6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170053"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056405"
 ---
 # <a name="type-property-example-property-vc"></a>Type-Eigenschaft – Beispiel (Property) (VC++)
 In diesem Beispiel wird die [Type](./type-property-ado.md) -Eigenschaft veranschaulicht. Es handelt sich um ein Modell eines Hilfsprogramms zum Auflisten der Namen und Typen einer Auflistung, wie z. b. [Eigenschaften](./properties-collection-ado.md), [Felder](./fields-collection-ado.md)usw.  

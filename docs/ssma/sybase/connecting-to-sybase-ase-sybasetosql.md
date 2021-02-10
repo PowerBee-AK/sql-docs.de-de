@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2583ef86a84158e0398265799f90633de8c76d7f
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7afb893d194b874da4cbb6482df4ba8a16e8c0a7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932361"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056865"
 ---
 # <a name="connecting-to-sap-ase-sybasetosql"></a>Herstellen einer Verbindung mit SAP ASE (sybaseto SQL)
 
@@ -50,24 +50,24 @@ Wenn Sie eine Verbindung mit einem adaptiven Server herstellen, liest SSMA die M
   
 **So stellen Sie eine Verbindung mit Sybase ASE her**
   
-1. Wählen Sie im Menü **Datei** die Option **mit Sybase verbinden**aus.  
+1. Wählen Sie im Menü **Datei** die Option **mit Sybase verbinden** aus.  
   
-   Wenn Sie zuvor eine Verbindung mit Sybase hergestellt haben, stellt der Befehls Name **erneut eine Verbindung mit Sybase**her.  
+   Wenn Sie zuvor eine Verbindung mit Sybase hergestellt haben, stellt der Befehls Name **erneut eine Verbindung mit Sybase** her.  
   
 2. Wählen Sie im Feld **Anbieter** einen der auf dem Computer installierten Anbieter aus, um eine Verbindung mit dem Sybase-Server herzustellen.  
   
-3. Wählen Sie im Feld **Modus** entweder **Standard Modus** oder erweiterter **Modus**aus.  
+3. Wählen Sie im Feld **Modus** entweder **Standard Modus** oder erweiterter **Modus** aus.  
   
    Verwenden Sie den Standardmodus, um den Servernamen, den Port, den Benutzernamen und das Kennwort anzugeben. Verwenden Sie den erweiterten Modus, um eine Verbindungs Zeichenfolge anzugeben. Dieser Modus wird in der Regel nur für die Problembehandlung oder die Arbeit mit dem technischen Support verwendet.  
   
-4. Wenn Sie den **Standard Modus**auswählen, geben Sie die folgenden Werte an:  
+4. Wenn Sie den **Standard Modus** auswählen, geben Sie die folgenden Werte an:  
   
     1. Geben Sie im Feld **Server Name** den Namen oder die IP-Adresse des Datenbankservers ein, oder wählen Sie ihn aus.  
     2. Wenn der Datenbankserver nicht für die Annahme von Verbindungen über den Standardport (5000) konfiguriert ist, geben Sie im Feld **Serverport** die Portnummer ein, die für Sybase-Verbindungen verwendet wird.  
     3. Geben Sie im Feld **Benutzername** ein Sybase-Konto ein, das über die erforderlichen Berechtigungen verfügt.  
     4. Geben Sie im Feld **Kennwort** das Kennwort für den angegebenen Benutzernamen ein.  
   
-5. Wenn Sie den **erweiterten Modus**auswählen, geben Sie im Feld **Verbindungs Zeichenfolge** eine Verbindungs Zeichenfolge an.  
+5. Wenn Sie den **erweiterten Modus** auswählen, geben Sie im Feld **Verbindungs Zeichenfolge** eine Verbindungs Zeichenfolge an.  
   
     Beispiele für verschiedene Verbindungs Zeichenfolgen:  
   

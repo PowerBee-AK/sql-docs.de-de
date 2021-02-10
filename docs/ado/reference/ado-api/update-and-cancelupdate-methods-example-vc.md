@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e87cbfc84180ba025b6a95090ccd0cbb7ed8f43
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1149356cb1e90c607f48c8156b15c664d9091826
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170022"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056306"
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Update- und CancelUpdate-Methode – Beispiel (VC++)
 In diesem Beispiel wird die [Update](./update-method.md) -Methode in Verbindung mit der [CancelUpdate](./cancelupdate-method-ado.md) -Methode veranschaulicht.  

@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3717cce895ca602a550d47ea5c569af4c80963a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 93d1901cd5701cbdea537b947aa93de64fe59661
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492313"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056715"
 ---
 # <a name="connect-to-azure-sql-database--sybasetosql"></a>Herstellen einer Verbindung mit Azure SQL-Datenbank (sybaseto SQL)
 Verwenden Sie das Dialogfeld Verbindung mit Azure SQL-Datenbank herstellen, um eine Verbindung mit der Azure SQL-DatenbankDatenbank herzustellen, die Sie migrieren möchten.  
   
-Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **mit Azure SQL-Datenbank verbinden**aus. Wenn Sie bereits eine Verbindung hergestellt haben, stellt der Befehl **erneut eine Verbindung mit der Azure SQL-Datenbank her.**  
+Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **mit Azure SQL-Datenbank verbinden** aus. Wenn Sie bereits eine Verbindung hergestellt haben, stellt der Befehl **erneut eine Verbindung mit der Azure SQL-Datenbank her.**  
   
 ## <a name="options"></a>Tastatur  
 **Servername**  

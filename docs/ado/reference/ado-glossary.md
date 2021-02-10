@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36ca4b14058b2728e60856f3c848452ad922107d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1c4d4b0a07042fd06a4fc2300c03f43d0e131f5e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166238"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056015"
 ---
 # <a name="ado-glossary"></a>ADO-Glossar
 In diesem Thema werden die für ADO relevanten Begriffe definiert.  
@@ -264,7 +264,7 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
  Ein Satz von Zeilen aus einer Datenquelle, die alle über das gleiche Feld Schema verfügen. Ein Rowset kann alle oder einige Felder aus einer Tabelle darstellen. Ein Rowset kann auch eine virtuelle Tabelle darstellen, die durch eine Abfrage oder einen Join von mindestens zwei Tabellen erstellt wird. In ADO werden Rowsets durch **Recordset** -Objekte dargestellt.  
   
 ## <a name="s"></a>E  
- Bereich  
+ `Scope`  
  Der Verweis Bereich für ein Objekt oder eine Variable oder einen Bereich von Datensätzen in einer Sicht oder Tabelle. Beispielsweise kann auf lokale Variablen nur innerhalb der Prozedur verwiesen werden, in der Sie definiert wurden. Auf öffentliche Variablen kann von überall in der Anwendung aus zugegriffen werden. -Objekte, z. b. die aktuelle Datenbank, befinden sich im Gültigkeitsbereich, wenn Sie sich im definierten Suchpfad befinden. Daten Satz Bereiche können in vielen Befehlen mit einer Scope-Klausel angegeben werden.  
   
  Dienstanbieter  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4f8147a6fdba9101c846b58f83e7ac8d25aa79ef
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 5515aaf6d3080057a725d40b1bd6cbcbe4c0c945
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99174332"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100055705"
 ---
 # <a name="childcount-property-ado-md"></a>ChildCount-Eigenschaft (ADO MD)
 Gibt die Anzahl der Elemente an, für die [das aktuelle Element](./member-object-ado-md.md) Objekt das übergeordnete Element in einer Hierarchie ist.  

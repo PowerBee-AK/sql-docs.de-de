@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 66384c27490bbc9d330f5f2d186bad1b4f4b97ee
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 07560faaa3fb3316864216859f79cd5e1b7ff950
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038862"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056835"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>Umstellen von SAP ASE-Datenbankobjekten (sybaseto SQL)
 Nachdem Sie eine Verbindung mit SAP Adaptive Server Enterprise (ASE) hergestellt, eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL hergestellt und Projekt-und Daten Zustellungs Optionen festgelegt haben, können Sie SAP Adaptive Server Enterprise-Datenbankobjekte (ASE) in- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbankobjekte konvertieren  
@@ -31,7 +31,7 @@ Während der Konvertierung druckt SSMA Ausgabemeldungen im Ausgabebereich und Fe
 Überprüfen Sie vor dem Konvertieren von Objekten die Projekt Konvertierungsoptionen im Dialogfeld **Projekteinstellungen** . Mit diesem Dialogfeld können Sie festlegen, wie SSMA Funktionen und globale Variablen konvertiert. Weitere Informationen finden Sie unter [Project Settings &#40;Conversion&#41; &#40;sybasedesql&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md).  
   
 ## <a name="converting-ase-database-objects"></a>Umstellen von ASE-Datenbankobjekten  
-Zum Konvertieren von ASE-Datenbankobjekten wählen Sie zunächst die Objekte aus, die Sie konvertieren möchten, und lassen Sie dann die Konvertierung von SSMA durchführen. Wenn Sie während der Konvertierung Ausgabemeldungen anzeigen möchten, wählen Sie im Menü **Ansicht** die Option **Ausgabe**aus.  
+Zum Konvertieren von ASE-Datenbankobjekten wählen Sie zunächst die Objekte aus, die Sie konvertieren möchten, und lassen Sie dann die Konvertierung von SSMA durchführen. Wenn Sie während der Konvertierung Ausgabemeldungen anzeigen möchten, wählen Sie im Menü **Ansicht** die Option **Ausgabe** aus.  
   
 **So konvertieren Sie ASE-Objekte in SQL Server-oder SQL Azure-Syntax**  
   
@@ -49,9 +49,9 @@ Zum Konvertieren von ASE-Datenbankobjekten wählen Sie zunächst die Objekte aus
   
     -   Wenn Sie einzelne Objekte konvertieren oder weglassen möchten, erweitern Sie den Ordner Category, und aktivieren oder deaktivieren Sie das Kontrollkästchen neben dem Objekt.  
   
-3.  Zum Konvertieren aller ausgewählten Objekte klicken Sie mit der rechten Maustaste auf **Datenbanken**, und wählen Sie dann **Schema konvertieren**aus.  
+3.  Zum Konvertieren aller ausgewählten Objekte klicken Sie mit der rechten Maustaste auf **Datenbanken**, und wählen Sie dann **Schema konvertieren** aus.  
   
-    Sie können auch einzelne Objekte oder Kategorien von Objekten konvertieren, indem Sie mit der rechten Maustaste auf das Objekt oder den enthaltenden Ordner klicken und dann **Schema konvertieren**auswählen.  
+    Sie können auch einzelne Objekte oder Kategorien von Objekten konvertieren, indem Sie mit der rechten Maustaste auf das Objekt oder den enthaltenden Ordner klicken und dann **Schema konvertieren** auswählen.  
   
 > [!NOTE]  
 > Einige der SAP ASE-Systemfunktionen entsprechen nicht exakt den entsprechenden SQL Server Systemfunktionen im Verhalten. Um das SAP ASE-Verhalten zu emulieren, generiert SSMA benutzerdefinierte Funktionen in der konvertierten SQL Server Datenbank unter einem Schema, das als 2SS "bezeichnet wird. Abhängig von den Projekteinstellungen werden einige der SQL Server Systemfunktionen durch diese emulierten Funktionen ersetzt. SSMA erstellt die folgenden benutzerdefinierten Funktionen:  
@@ -111,7 +111,7 @@ Einige SAP ASE-Objekte werden möglicherweise nicht konvertiert. Sie können die
   
 **So zeigen Sie einen Zusammenfassungs Bericht an**  
   
-1.  Wählen Sie im Sybase-metadatenexplorer **Datenbanken**aus.  
+1.  Wählen Sie im Sybase-metadatenexplorer **Datenbanken** aus.  
   
 2.  Wählen Sie im rechten Bereich die Registerkarte **Bericht** aus.  
   
@@ -137,11 +137,11 @@ Bei Objekten, die nicht erfolgreich konvertiert werden konnten, können Sie die 
   
 6.  Wählen Sie im rechten Bereich die Registerkarte **Bericht** aus.  
   
-7.  Am oberen Rand der Registerkarte **Bericht** befindet sich eine Dropdown Liste. Wenn in der Liste **Statistiken**angezeigt werden, ändern Sie die Auswahl in **Quelle**.  
+7.  Am oberen Rand der Registerkarte **Bericht** befindet sich eine Dropdown Liste. Wenn in der Liste **Statistiken** angezeigt werden, ändern Sie die Auswahl in **Quelle**.  
   
     SSMA zeigt den Quellcode und mehrere Schaltflächen direkt oberhalb des Codes an.  
   
-8.  Wählen Sie **nächstes Problem**aus, ein rotes Fehler Symbol, wenn ein Pfeil nach rechts zeigt.  
+8.  Wählen Sie **nächstes Problem** aus, ein rotes Fehler Symbol, wenn ein Pfeil nach rechts zeigt.  
   
     SSMA für SAP ASE hebt den ersten problematischen Quell Code hervor, der im aktuellen-Objekt gefunden wird.  
   
@@ -156,5 +156,5 @@ Sie müssen für jedes Element, das nicht konvertiert werden konnte, bestimmen, 
 ## <a name="next-steps"></a>Nächste Schritte  
 Der nächste Schritt des Migrations Vorgangs besteht darin, [konvertierte Datenbankobjekte in SQL Server/SQL Azure (sybasedesql) zu laden](./loading-converted-database-objects-into-sql-server-sybasetosql.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Migrieren von SAP ASE-Datenbanken zu SQL Server Azure SQL-Datenbank &#40;sybaseto SQL-&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
