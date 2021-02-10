@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3554898451228afee73914a82907f6348ad1cff0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: dbcf0b6aef651e90c90df1cb49af2dbe6a29c674
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991131"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029434"
 ---
 # <a name="datacontrol-object-error-codes"></a>Fehler Codes für DataControl-Objekte
 In der folgenden Tabelle sind die [RDS aufgeführt. Fehlercodes des DataControl](../../reference/rds-api/datacontrol-object-rds.md) -Objekts. Die positive Dezimal Übersetzung der unteren zwei Bytes, die negative Dezimal Übersetzung des vollständigen Fehlercodes und die hexadezimalen Werte werden angezeigt.

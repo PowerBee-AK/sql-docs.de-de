@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e29b092ea7c11dc9729986c342c96b2022fbf58
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 116c0ae4c3ec291b30b3d3d7d98a49db759bb055
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164677"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034920"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>Auflistungen (Visual C++ Syntax Index mit #Import)
 Es ist hilfreich zu wissen, dass Auflistungen bestimmte allgemeine Methoden und Eigenschaften erben.  

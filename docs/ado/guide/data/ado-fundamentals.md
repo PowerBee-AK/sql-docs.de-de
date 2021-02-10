@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dedb841f9889d71da89107766ff26e3f870d1193
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fdf7580f3a04a15fd75fb6d2c7712a694dfd2175
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991661"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033760"
 ---
 # <a name="ado-fundamentals"></a>ADO-Grundlagen
 ADO bietet Entwicklern ein leistungsfähiges, logisches Objektmodell für den programmgesteuerten Zugriff auf, das Bearbeiten und Aktualisieren von Daten aus einer Vielzahl von Datenquellen über OLE DB Systemschnittstellen. Die häufigste Verwendung von ADO besteht darin, eine Tabelle oder Tabellen in einer relationalen Datenbank abzufragen, die Ergebnisse in einer Anwendung abzurufen und anzuzeigen und möglicherweise Benutzer Änderungen an den Daten vorzunehmen. Andere Aufgaben umfassen Folgendes:  
@@ -39,7 +39,7 @@ ADO bietet Entwicklern ein leistungsfähiges, logisches Objektmodell für den pr
   
 -   Ausführen gespeicherter Prozeduren.  
   
--   Dynamisches Erstellen einer flexiblen Struktur, die als **Recordset**bezeichnet wird, um Daten zu speichern, zu navigieren und zu bearbeiten.  
+-   Dynamisches Erstellen einer flexiblen Struktur, die als **Recordset** bezeichnet wird, um Daten zu speichern, zu navigieren und zu bearbeiten.  
   
 -   Ausführen von transaktionalen Daten Bank Vorgängen.  
   

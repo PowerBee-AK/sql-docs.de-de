@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: wiassaf
 manager: amitban
-ms.openlocfilehash: fad0a1121d9d7d9e8cc37970022f1c5bbf028e10
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 636a16d8656572e6fe2505f58bafc9eca9f6ce18
+ms.sourcegitcommit: 78b3096c2be89bcda92244f78663d8b38811bec5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184778"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100009288"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
@@ -131,7 +131,7 @@ GO
 |DIGEST_CACHE|Nur zur internen Verwendung.|
 |Dinpbuf|Nur zur internen Verwendung.|
 |Directlogconsumer|Nur zur internen Verwendung.|
-|DP_LIST|Steuert den Zugriff auf die Liste der geänderten Seiten für eine Datenbank, für die ein indirekter Prüfpunkt aktiviert ist. Weitere Informationen finden Sie in [diesem Artikel](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510).|
+|DP_LIST|Steuert den Zugriff auf die Liste der geänderten Seiten für eine Datenbank, für die ein indirekter Prüfpunkt aktiviert ist. Anwenden von Korrekturen aus [Artikel 4497928](https://support.microsoft.com/kb/4497928), [Artikel 4040276](https://support.microsoft.com/kb/4040276) oder Verwenden des Ablaufverfolgungsflags [3468](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Weitere Informationen finden Sie in [diesem Artikel](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510).|
 |DROP|Nur zur internen Verwendung.|
 |DROP_TEMPO|Nur zur internen Verwendung.|
 |DROPPED_ALLOC_UNIT|Nur zur internen Verwendung.|

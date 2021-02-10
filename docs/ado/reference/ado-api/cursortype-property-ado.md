@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 703c89fb8f5e1479e09162429ac93fa43c66e0be
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7dc8d34ccc631d9ecea19fdfceb36743adbaa5e0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167614"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034450"
 ---
 # <a name="cursortype-property-ado"></a>CursorType-Eigenschaft (ADO)
 Gibt den Typ des Cursors an, der in einem [Recordset](./recordset-object-ado.md) -Objekt verwendet wird.  

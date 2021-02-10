@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ac96c1d-d0d8-4bf8-b165-533818d0f590
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 019282bb5926a1bae4c409a98158b56a86bfabd2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b2c1e9350d01f744b30b42531f9e68205265fe27
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164701"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034977"
 ---
 # <a name="clone-method-example-vc"></a>Clone-Methode – Beispiel (VC++)
 In diesem Beispiel wird die [Clone](./clone-method-ado.md) -Methode verwendet, um Kopien eines [Recordsets](./recordset-object-ado.md) zu erstellen. Anschließend kann der Benutzer den Daten Satz Zeiger jeder Kopie unabhängig positionieren.  

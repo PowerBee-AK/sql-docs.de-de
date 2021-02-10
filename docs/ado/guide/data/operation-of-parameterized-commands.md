@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91fe315304cc2be0ccfb8c638665ce699c75e248
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 55eaf3798ee8d14a776da14010b4b6617d0e2723
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980171"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032652"
 ---
 # <a name="operation-of-parameterized-commands"></a>Verarbeitung parametrisierter Befehle
-Wenn Sie mit einem großen untergeordneten **Recordset**arbeiten, besonders im Vergleich zur Größe des übergeordneten **Recordsets**, aber nur auf ein paar untergeordneter Kapitel zugreifen müssen, ist es möglicherweise effizienter, einen parametrisierten Befehl zu verwenden.  
+Wenn Sie mit einem großen untergeordneten **Recordset** arbeiten, besonders im Vergleich zur Größe des übergeordneten **Recordsets**, aber nur auf ein paar untergeordneter Kapitel zugreifen müssen, ist es möglicherweise effizienter, einen parametrisierten Befehl zu verwenden.  
   
- Ein *nicht parametrisierter Befehl* ruft sowohl das gesamte übergeordnete als auch das untergeordnete **Recordset**ab, fügt eine Kapitel Spalte an das übergeordnete Element an und weist dann einen Verweis auf das verwandte untergeordnete Kapitel für jede übergeordnete Zeile zu.  
+ Ein *nicht parametrisierter Befehl* ruft sowohl das gesamte übergeordnete als auch das untergeordnete **Recordset** ab, fügt eine Kapitel Spalte an das übergeordnete Element an und weist dann einen Verweis auf das verwandte untergeordnete Kapitel für jede übergeordnete Zeile zu.  
   
- Ein *parametrisierter Befehl* Ruft das gesamte übergeordnete **Recordset**ab, ruft jedoch nur das Kapitel **Recordset** ab, wenn auf die Kapitel Spalte zugegriffen wird. Dieser Unterschied in der Abruf Strategie kann zu erheblichen Leistungsvorteilen führen.  
+ Ein *parametrisierter Befehl* Ruft das gesamte übergeordnete **Recordset** ab, ruft jedoch nur das Kapitel **Recordset** ab, wenn auf die Kapitel Spalte zugegriffen wird. Dieser Unterschied in der Abruf Strategie kann zu erheblichen Leistungsvorteilen führen.  
   
  Sie können z. b. Folgendes angeben:  
   
@@ -45,13 +45,13 @@ SHAPE {SELECT * FROM customer}
   
 1.  Der über *geordnete-Befehl* wird ausgeführt, und es wird ein übergeordnetes **Recordset** aus der Customers-Tabelle zurückgegeben.  
   
-2.  Eine Kapitel Spalte wird an das übergeordnete **Recordset**angehängt.  
+2.  Eine Kapitel Spalte wird an das übergeordnete **Recordset** angehängt.  
   
-3.  Wenn auf die Kapitel-Spalte einer übergeordneten Zeile zugegriffen wird, wird der untergeordnete *-Befehl* mit dem Wert von Customer. cust_id als Wert des-Parameters ausgeführt.  
+3.  Wenn auf die Kapitel-Spalte einer übergeordneten Zeile zugegriffen wird, wird der untergeordnete *-Befehl* mit dem Wert des-Customer.cust_id als Wert des-Parameters ausgeführt.  
   
-4.  Alle Zeilen im Datenanbieter-Rowset, das in Schritt 3 erstellt wurde, werden verwendet, um das untergeordnete **Recordset aufzufüllen**. In diesem Beispiel handelt es sich dabei um alle Zeilen in der Orders-Tabelle, in der die cust_id dem Wert von Customer. cust_id entspricht. Standardmäßig werden die untergeordneten **Recordsets**auf dem Client zwischengespeichert, bis alle Verweise auf das übergeordnete **Recordset** freigegeben werden. Um dieses Verhalten zu ändern, legen Sie die untergeordneten Zeilen des **Recordset** [Dynamic Property](../../reference/ado-api/ado-dynamic-property-index.md) **Cache** auf **false**fest.  
+4.  Alle Zeilen im Datenanbieter-Rowset, das in Schritt 3 erstellt wurde, werden verwendet, um das untergeordnete **Recordset aufzufüllen**. In diesem Beispiel handelt es sich dabei um alle Zeilen in der Orders-Tabelle, in der die cust_id dem Wert Customer.cust_id entspricht. Standardmäßig werden die untergeordneten **Recordsets** auf dem Client zwischengespeichert, bis alle Verweise auf das übergeordnete **Recordset** freigegeben werden. Um dieses Verhalten zu ändern, legen Sie die untergeordneten Zeilen des **Recordset** [Dynamic Property](../../reference/ado-api/ado-dynamic-property-index.md) **Cache** auf **false** fest.  
   
-5.  Ein Verweis auf die abgerufenen untergeordneten Zeilen (d. h. das Kapitel des untergeordneten **Recordsets**) wird in der Spalte Kapitel der aktuellen Zeile des übergeordneten **Recordsets**platziert.  
+5.  Ein Verweis auf die abgerufenen untergeordneten Zeilen (d. h. das Kapitel des untergeordneten **Recordsets**) wird in der Spalte Kapitel der aktuellen Zeile des übergeordneten **Recordsets** platziert.  
   
 6.  Die Schritte 3-5 werden wiederholt, wenn auf die Kapitel-Spalte einer anderen Zeile zugegriffen wird.  
   

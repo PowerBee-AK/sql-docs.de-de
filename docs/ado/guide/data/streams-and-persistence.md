@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60e006733fd8ef5bd958328420ab43c1cbabc50e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1b554afa949acea4f816ce66e92e897477c2fe00
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979421"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032422"
 ---
 # <a name="streams-and-persistence"></a>Datenströme und Persistenz
-Das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) - [Objekt speichert](../../../ado/reference/ado-api/save-method.md) Method speichert oder speichert ein **Recordset** in einer *Datei, und*die [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode stellt das **Recordset** aus dieser Datei wieder her.  
+Das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) - [Objekt speichert](../../../ado/reference/ado-api/save-method.md) Method speichert oder speichert ein **Recordset** in einer *Datei, und* die [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode stellt das **Recordset** aus dieser Datei wieder her.  
   
  Mit ADO 2,7 oder höher können die Methoden " **Save** " und " **Open** " auch ein **Recordset** in einem [Streamobjekt](../../../ado/reference/ado-api/stream-object-ado.md) speichern. Diese Funktion ist besonders nützlich, wenn Sie mit Remote Data Service (RDS) und Active Server Seiten (ASP) arbeiten.  
   
@@ -31,7 +31,7 @@ Das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) - [Objek
  Im folgenden finden Sie einige Szenarien, die zeigen, wie **Streamobjekte** und Persistenz verwendet werden können.  
   
 ## <a name="scenario-1"></a>Szenario 1  
- In diesem Szenario wird einfach ein **Recordset** in einer Datei und dann in einem **Stream**gespeichert. Anschließend wird der persistente Stream in einem anderen **Recordset**geöffnet.  
+ In diesem Szenario wird einfach ein **Recordset** in einer Datei und dann in einem **Stream** gespeichert. Anschließend wird der persistente Stream in einem anderen **Recordset** geöffnet.  
   
 ```  
 Dim rs1 As ADODB.Recordset  
@@ -101,9 +101,9 @@ Set rs = nothing
 ```  
   
 ## <a name="scenario-4"></a>Szenario 4  
- In diesem Szenario schreibt der ASP-Code den Inhalt des **Recordsets** im ADTG-Format in den Client. Der [Microsoft-Cursor Dienst für OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) kann diese Daten verwenden, um ein nicht verbundenes **Recordset**zu erstellen.  
+ In diesem Szenario schreibt der ASP-Code den Inhalt des **Recordsets** im ADTG-Format in den Client. Der [Microsoft-Cursor Dienst für OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) kann diese Daten verwenden, um ein nicht verbundenes **Recordset** zu erstellen.  
   
- Eine neue Eigenschaft in der RDS- [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md), [URL](../../../ado/reference/rds-api/url-property-rds.md), verweist auf die ASP-Seite, die das **Recordset**generiert. Dies bedeutet, dass ein **Recordset** -Objekt ohne RDS abgerufen werden kann, indem das serverseitige [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt verwendet wird, oder der Benutzer, der ein Geschäftsobjekt schreibt. Dadurch wird das RDS-Programmiermodell erheblich vereinfacht.  
+ Eine neue Eigenschaft in der RDS- [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md), [URL](../../../ado/reference/rds-api/url-property-rds.md), verweist auf die ASP-Seite, die das **Recordset** generiert. Dies bedeutet, dass ein **Recordset** -Objekt ohne RDS abgerufen werden kann, indem das serverseitige [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt verwendet wird, oder der Benutzer, der ein Geschäftsobjekt schreibt. Dadurch wird das RDS-Programmiermodell erheblich vereinfacht.  
   
  Server seitiger Code, benannt https://server/directory/recordset.asp:  
   

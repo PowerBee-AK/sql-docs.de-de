@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36c914ecdcf216c3f11f6e4afae3efbfb167c18e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e9f928cccd455af05804e35efe25fb1aa537cd25
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159287"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031658"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>Eigenschaften von "AbsolutePosition" und "Cursor Location" (JScript)
 In diesem Beispiel wird veranschaulicht, wie die [AbsolutePosition](./absoluteposition-property-ado.md) -Eigenschaft den Fortschritt einer Schleife verfolgen kann, in der alle Datensätze eines [Recordsets](./recordset-object-ado.md)aufgelistet werden. Er verwendet die [CursorLocation](./cursorlocation-property-ado.md) -Eigenschaft, um die **AbsolutePosition** -Eigenschaft zu aktivieren, indem der Cursor auf einen Client Cursor festgelegt wird. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **AbsolutePositionJS. ASP**.  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e87c17de8cc9b5fcede937c3678cb5b7b499712
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 928a49f833a95ab6911b04b3270cbf86378f1ac4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161798"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031507"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>Beispiel für ActualSize und DefinedSize-Eigenschaften (VC + +)
 In diesem Beispiel werden die Eigenschaften [ActualSize](./actualsize-property-ado.md) und [DefinedSize](./definedsize-property.md) verwendet, um die definierte Größe und die tatsächliche Größe eines Felds anzuzeigen.  

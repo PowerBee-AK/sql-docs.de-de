@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 337d31ae8b52457df2d54ddc73a7615e78752bb0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3771ecab9a598c0cd3e40f316ce00ba95cbce2f6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171046"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100024606"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Filter-und RecordCount-Eigenschaften (Beispiel) (VC + +)
 In diesem Beispiel wird die [Filter](./filter-property.md) -Eigenschaft zum Öffnen eines neuen [Recordsets](./recordset-object-ado.md) basierend auf einer angegebenen Bedingung verwendet, die auf ein vorhandenes **Recordset** angewendet wird. Er verwendet die [RecordCount](./recordcount-property-ado.md) -Eigenschaft, um die Anzahl der Datensätze in den beiden **Recordsets** anzuzeigen. Die FilterField-Funktion ist erforderlich, damit diese Prozedur ausgeführt werden kann.  

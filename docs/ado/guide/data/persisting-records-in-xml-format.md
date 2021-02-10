@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31512fd9843ae5ff15fc2f7c6981fccdc926dbb5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6f29f624fe9f55287dcd8944fd04da0426d9552c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980061"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032622"
 ---
 # <a name="persisting-records-in-xml-format"></a>Beibehalten von Datensätzen im XML-Format
-Ebenso wie das ADTG-Format wird die **recordsetpersistenz** im XML-Format mit dem Microsoft OLE DB Dauerhaftigkeits Anbieter implementiert. Dieser Anbieter generiert ein Schreib geschütztes vorwärts-Rowset aus einer gespeicherten XML-Datei oder einem Datenstrom, der die von ADO generierten Schema Informationen enthält. Ebenso kann Sie ein ADO- **Recordset**verwenden, XML generieren und in einer Datei oder einem beliebigen Objekt speichern, das die com- **IStream** -Schnittstelle implementiert. (Tatsächlich ist eine Datei nur ein weiteres Beispiel für ein Objekt, das **IStream**unterstützt.) Bei Version 2,5 und höher stützt ADO den Microsoft XML-Parser (MSXML), um den XML-Code in das **Recordset**zu laden. Daher ist msxml.dll erforderlich.  
+Ebenso wie das ADTG-Format wird die **recordsetpersistenz** im XML-Format mit dem Microsoft OLE DB Dauerhaftigkeits Anbieter implementiert. Dieser Anbieter generiert ein Schreib geschütztes vorwärts-Rowset aus einer gespeicherten XML-Datei oder einem Datenstrom, der die von ADO generierten Schema Informationen enthält. Ebenso kann Sie ein ADO- **Recordset** verwenden, XML generieren und in einer Datei oder einem beliebigen Objekt speichern, das die com- **IStream** -Schnittstelle implementiert. (Tatsächlich ist eine Datei nur ein weiteres Beispiel für ein Objekt, das **IStream** unterstützt.) Bei Version 2,5 und höher stützt ADO den Microsoft XML-Parser (MSXML), um den XML-Code in das **Recordset** zu laden. Daher ist msxml.dll erforderlich.  
   
 > [!NOTE]
->  Wenn hierarchische **Recordsets** (Daten Formen) im XML-Format gespeichert werden, gelten einige Einschränkungen. In XML kann nicht gespeichert werden, wenn das hierarchische **Recordset** ausstehende Updates enthält, und Sie können kein parametrisiertes hierarchisches **Recordset**speichern. Weitere Informationen finden Sie unter [persistente gefilterte und hierarchische Recordsets](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md).  
+>  Wenn hierarchische **Recordsets** (Daten Formen) im XML-Format gespeichert werden, gelten einige Einschränkungen. In XML kann nicht gespeichert werden, wenn das hierarchische **Recordset** ausstehende Updates enthält, und Sie können kein parametrisiertes hierarchisches **Recordset** speichern. Weitere Informationen finden Sie unter [persistente gefilterte und hierarchische Recordsets](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md).  
   
  Die einfachste Möglichkeit zum Speichern von Daten in XML und zum erneuten Laden der Daten über ADO besteht darin, die Methoden zum Speichern und **Öffnen** zu **Speichern** . Im folgenden ADO-Codebeispiel wird veranschaulicht, wie die Daten in der **Titel** Tabelle in einer Datei mit dem Namen "Titeln. SAV" gespeichert werden.  
   
@@ -67,7 +67,7 @@ rs.Filter "title_id like 'B*'"
 rs.Save "btitles.sav", adPersistXML  
 ```  
   
- ADO verwendet immer das Clientcursormodul-Rowset, um ein scrollbares, Lese **Recordset** markerbares Recordsetobjekt zusätzlich zu den vorwärts Daten zu erzeugen, die vom Persistenzanbieter generiert werden.  
+ ADO verwendet immer das Clientcursormodul-Rowset, um ein scrollbares, Lese  markerbares Recordsetobjekt zusätzlich zu den vorwärts Daten zu erzeugen, die vom Persistenzanbieter generiert werden.  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   

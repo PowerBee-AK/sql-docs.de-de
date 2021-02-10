@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9563782851575970d9f2ab9a5fcabce5efa32d1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9919489df58853a3fa8eea3711583cdf57a0849f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980531"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033710"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>Hierarchische Recordsets im XML-Format
 ADO ermöglicht die Persistenz hierarchischer Recordsetobjekte in XML. Bei hierarchischen recordsetobjekten ist der Wert eines Felds im übergeordneten Recordset ein weiteres Recordset. Diese Felder werden als untergeordnete Elemente im XML-Stream anstelle eines Attributs dargestellt.  
@@ -33,7 +33,7 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
  Im folgenden finden Sie das XML-Format des beibehaltenen Recordsets:  
   
 ```  
-<xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"     xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"     xmlns:rs="urn:schemas-microsoft-com:rowset"   
+<xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"     xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"     xmlns:rs="urn:schemas-microsoft-com:rowset"   
     xmlns:z="#RowsetSchema">   
   <s:Schema id="RowsetSchema">   
     <s:ElementType name="row" content="eltOnly" rs:updatable="true">   

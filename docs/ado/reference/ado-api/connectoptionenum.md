@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 257dd82d5740c89fd8ca9f8f8d1969d27b9301ba
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e159309a0fb1875851ff6ae0a7bf56ade908bafd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171429"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100026075"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
 Gibt an, ob die [Open](./open-method-ado-connection.md) -Methode eines [Connection](./connection-object-ado.md) -Objekts zurückgegeben werden soll, nachdem die Verbindung (synchron) oder vor (asynchron) hergestellt wurde.  

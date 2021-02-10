@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d52e6926-5c22-43dc-9f32-7b32c1a071e2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 659ae835cb14a71018de651db83d5d7b934b43ae
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b17e1b7bdac37e6f170833fda83233017643526b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979131"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032312"
 ---
 # <a name="updating-joined-results-unique-table"></a>Aktualisieren von verknüpften Ergebnissen: eindeutige Tabelle
 ADO ermöglicht es Ihnen, Änderungen an einer bestimmten Basistabelle in einem Recordset, das durch eine Joinoperation in mehreren Basistabellen gebildet wurde, mithilfe der dynamischen Eigenschaft Unique Table genau zu steuern. Ausführliche Informationen zur Verwendung der eindeutigen Tabelle finden Sie in den Referenz Themen zu den ADO-Programmierern in den dynamischen Eigenschaften der Tabelle und zum erneuten Synchronisieren von Updates.  

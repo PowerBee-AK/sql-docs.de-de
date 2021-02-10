@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bde1338e56f4685359f8d1260b36c39a24455083
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f534d38ea52e942a00e2e95f837b096ed6fef0f1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979331"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032382"
 ---
 # <a name="transaction-processing"></a>Verarbeiten von Transaktionen
 Eine *Transaktion* begrenzt den Anfang und das Ende einer Reihe von Datenzugriffs Vorgängen, die über eine Verbindung ausgeführt werden. Gemäß den Transaktionsfunktionen der Datenquelle ermöglicht das **Verbindungs** Objekt auch das Erstellen und Verwalten von Transaktionen. Wenn Sie z. b. den Microsoft OLE DB-Anbieter für SQL Server verwenden, um auf Microsoft SQL Server auf eine Datenbank zuzugreifen, können Sie für die Befehle, die Sie ausführen.  
@@ -30,7 +30,7 @@ Eine *Transaktion* begrenzt den Anfang und das Ende einer Reihe von Datenzugriff
   
  Wenn Sie die Transaktion abbrechen oder einer der Vorgänge fehlschlägt, wird das Ergebnis so lauten, als ob keine der Vorgänge in der Transaktion erfolgt ist. Die Datenquelle bleibt unverändert, bevor die Transaktion gestartet wurde.  
   
- ADO bietet die folgenden Methoden zum Steuern von Transaktionen: **BeginTrans**, **CommitTrans**und **RollbackTrans**. Verwenden Sie diese Methoden mit einem **Verbindungs** Objekt, wenn Sie eine Reihe von Änderungen, die an den Quelldaten vorgenommen wurden, als einzelne Einheit speichern oder abbrechen möchten. Wenn Sie z. b. Geld zwischen Konten übertragen möchten, subtrahieren Sie einen Betrag von einem-Wert, und fügen Sie dem anderen denselben Betrag hinzu. Wenn ein Update fehlschlägt, werden die Konten nicht mehr ausgeglichen. Durch die Durchführung dieser Änderungen innerhalb einer geöffneten Transaktion wird sichergestellt, dass entweder alle oder keine der Änderungen durchlaufen werden.  
+ ADO bietet die folgenden Methoden zum Steuern von Transaktionen: **BeginTrans**, **CommitTrans** und **RollbackTrans**. Verwenden Sie diese Methoden mit einem **Verbindungs** Objekt, wenn Sie eine Reihe von Änderungen, die an den Quelldaten vorgenommen wurden, als einzelne Einheit speichern oder abbrechen möchten. Wenn Sie z. b. Geld zwischen Konten übertragen möchten, subtrahieren Sie einen Betrag von einem-Wert, und fügen Sie dem anderen denselben Betrag hinzu. Wenn ein Update fehlschlägt, werden die Konten nicht mehr ausgeglichen. Durch die Durchführung dieser Änderungen innerhalb einer geöffneten Transaktion wird sichergestellt, dass entweder alle oder keine der Änderungen durchlaufen werden.  
   
 > [!NOTE]
 >  Nicht alle Anbieter unterstützen Transaktionen. Vergewissern Sie sich, dass die vom Anbieter definierte Eigenschaft "**Transaction DDL**" in der [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung des **Verbindungs** Objekts angezeigt wird. Dies deutet darauf hin, dass der Anbieter Transaktionen unterstützt. Wenn der Anbieter keine Transaktionen unterstützt, wird beim Aufrufen einer dieser Methoden ein Fehler zurückgegeben.  
@@ -39,7 +39,7 @@ Eine *Transaktion* begrenzt den Anfang und das Ende einer Reihe von Datenzugriff
   
  Durch Aufrufen der **CommitTrans** -Methode werden Änderungen gespeichert, die innerhalb einer geöffneten Transaktion für die Verbindung vorgenommen werden, und die Transaktion wird beendet. Durch Aufrufen der **RollbackTrans** -Methode werden alle Änderungen, die innerhalb einer geöffneten Transaktion vorgenommen wurden, zurückgesetzt und die Transaktion beendet. Wenn Sie eine der Methoden aufrufen, wenn keine geöffnete Transaktion vorhanden ist, wird ein Fehler generiert.  
   
- Abhängig von der Eigenschaft [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) des **Verbindungs** Objekts wird durch das Aufrufen der **CommitTrans** -Methode oder der **RollbackTrans** -Methode möglicherweise automatisch eine neue Transaktion gestartet. Wenn die Eigenschaft **Attribute** auf **adxactcommitbehält**festgelegt ist, startet der Anbieter nach einem **CommitTrans** -Rückruf automatisch eine neue Transaktion. Wenn die Eigenschaft **Attribute** auf **adxactabortretribute**festgelegt ist, startet der Anbieter nach einem **RollbackTrans** -Rückruf automatisch eine neue Transaktion.  
+ Abhängig von der Eigenschaft [Attribute](../../../ado/reference/ado-api/attributes-property-ado.md) des **Verbindungs** Objekts wird durch das Aufrufen der **CommitTrans** -Methode oder der **RollbackTrans** -Methode möglicherweise automatisch eine neue Transaktion gestartet. Wenn die Eigenschaft **Attribute** auf **adxactcommitbehält** festgelegt ist, startet der Anbieter nach einem **CommitTrans** -Rückruf automatisch eine neue Transaktion. Wenn die Eigenschaft **Attribute** auf **adxactabortretribute** festgelegt ist, startet der Anbieter nach einem **RollbackTrans** -Rückruf automatisch eine neue Transaktion.  
   
 ## <a name="transaction-isolation-level"></a>Transaktionsisolationsstufe  
  Verwenden Sie die **IsolationLevel** -Eigenschaft, um die Isolationsstufe einer Transaktion für ein **Verbindungs** Objekt festzulegen. Die-Einstellung wird erst beim nächsten Aufrufen der [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) -Methode wirksam. Wenn die Isolationsstufe, die Sie anfordern, nicht verfügbar ist, kann der Anbieter die nächsthöhere Isolationsstufe zurückgeben. Weitere Informationen zu gültigen Werten finden Sie unter der **IsolationLevel** -Eigenschaft in der ADO-Programmier Referenz.  

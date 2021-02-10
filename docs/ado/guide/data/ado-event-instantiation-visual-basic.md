@@ -13,15 +13,15 @@ dev_langs:
 ms.assetid: dce0a2a3-326f-4aaf-a822-6c5549833afa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 32b4c4e9da14c264913ed477059fa00eed093e1b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 764c1d06be70c808881d74c8e458b74a432ddfe3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991681"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033350"
 ---
 # <a name="ado-event-instantiation-visual-basic"></a>ADO-Ereignisinstanziierung: Visual Basic
-Um ADO-Ereignisse in Microsoft® Visual Basic® behandeln zu können, müssen Sie eine Variable auf Modulebene mithilfe des **widervents** -Schlüssel Worts deklarieren. Die Variable kann nur als Teil eines Klassen Moduls deklariert werden und muss auf Modulebene deklariert werden. Dies ist jedoch nicht so restriktiv wie anscheinend, da Visual Basic **Form** -Objekte auch Klassen sind. Die einfachste Möglichkeit, ADO-Ereignisse zu verarbeiten, besteht darin, eine Variable mithilfe von **wiwitvents**zu deklarieren. Im folgenden Beispiel wird das **ConnectComplete** -Ereignis für ein **Verbindungs** Objekt behandelt:  
+Um ADO-Ereignisse in Microsoft® Visual Basic® behandeln zu können, müssen Sie eine Variable auf Modulebene mithilfe des **widervents** -Schlüssel Worts deklarieren. Die Variable kann nur als Teil eines Klassen Moduls deklariert werden und muss auf Modulebene deklariert werden. Dies ist jedoch nicht so restriktiv wie anscheinend, da Visual Basic **Form** -Objekte auch Klassen sind. Die einfachste Möglichkeit, ADO-Ereignisse zu verarbeiten, besteht darin, eine Variable mithilfe von **wiwitvents** zu deklarieren. Im folgenden Beispiel wird das **ConnectComplete** -Ereignis für ein **Verbindungs** Objekt behandelt:  
   
 ```  
 ' BeginEventExampleVB02  

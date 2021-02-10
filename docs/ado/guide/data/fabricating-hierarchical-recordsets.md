@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24941f8fbf2aedb5fb61cea176ef26d3172012cc
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 836c1e0091166485f68c04226c632e9999038469
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991281"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033112"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Herstellen hierarchischer Recordsets
-Im folgenden Beispiel wird gezeigt, wie ein hierarchisches Recordset ohne eine zugrunde liegende Datenquelle mit der Daten Strukturierungs Grammatik zum Definieren von Spalten für übergeordnete, untergeordnete und untergeordnete **Recordsets**von untergeordneten Elementen fabriziert werden kann.  
+Im folgenden Beispiel wird gezeigt, wie ein hierarchisches Recordset ohne eine zugrunde liegende Datenquelle mit der Daten Strukturierungs Grammatik zum Definieren von Spalten für übergeordnete, untergeordnete und untergeordnete **Recordsets** von untergeordneten Elementen fabriziert werden kann.  
   
- Zum fabrizieren eines hierarchischen **Recordsets**müssen Sie den Microsoft-Daten Strukturierungs [Dienst für OLE DB (ADO-Dienstanbieter)](../appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) angeben, und Sie können im Verbindungs Zeichen folgen Parameter der [Open](../../reference/ado-api/open-method-ado-connection.md) -Methode des [Connection](../../reference/ado-api/connection-object-ado.md) -Objekts den Datenanbieter Wert None angeben. Weitere Informationen finden Sie unter [erforderliche Anbieter für die Daten Strukturierung](./required-providers-for-data-shaping.md).  
+ Zum fabrizieren eines hierarchischen **Recordsets** müssen Sie den Microsoft-Daten Strukturierungs [Dienst für OLE DB (ADO-Dienstanbieter)](../appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) angeben, und Sie können im Verbindungs Zeichen folgen Parameter der [Open](../../reference/ado-api/open-method-ado-connection.md) -Methode des [Connection](../../reference/ado-api/connection-object-ado.md) -Objekts den Datenanbieter Wert None angeben. Weitere Informationen finden Sie unter [erforderliche Anbieter für die Daten Strukturierung](./required-providers-for-data-shaping.md).  
   
 ```  
 Dim cn As New ADODB.Connection  

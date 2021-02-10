@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7556d3857142a4762fd411f5175a38c2e4d58cf3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9282bdc81d71ecd938f3d115678769915f8e3367
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979361"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032402"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>Der OLE DB-Anbieter für die Veröffentlichung im Internet
-Die ADO- [Daten Satz](../../../ado/reference/ado-api/record-object-ado.md) -und [Streamobjekte](../../../ado/reference/ado-api/stream-object-ado.md) können mit dem Microsoft OLE DB-Anbieter für die Internetveröffentlichung (Internet Publishing Provider) verwendet werden, um auf Ressourcen zuzugreifen und Sie zu bearbeiten, wie z. b. Webordner oder von Microsoft FrontPage bereitgestellte Dateien Mit ADO können Sie die Quelle eines **Datensatzes**, **Streams**oder [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) als URL angeben. Anschließend können Sie Ressourcen hochladen, herunterladen, verschieben, kopieren und löschen oder Ressourcen Eigenschaften direkt bearbeiten.  
+Die ADO- [Daten Satz](../../../ado/reference/ado-api/record-object-ado.md) -und [Streamobjekte](../../../ado/reference/ado-api/stream-object-ado.md) können mit dem Microsoft OLE DB-Anbieter für die Internetveröffentlichung (Internet Publishing Provider) verwendet werden, um auf Ressourcen zuzugreifen und Sie zu bearbeiten, wie z. b. Webordner oder von Microsoft FrontPage bereitgestellte Dateien Mit ADO können Sie die Quelle eines **Datensatzes**, **Streams** oder [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) als URL angeben. Anschließend können Sie Ressourcen hochladen, herunterladen, verschieben, kopieren und löschen oder Ressourcen Eigenschaften direkt bearbeiten.  
   
  Beispielcode, der **Datensätze** und **Streams** mit dem Internet Publishing Provider verwendet, finden Sie im [Internet Publishing-Szenario](../../../ado/guide/data/internet-publishing-scenario.md).  
   

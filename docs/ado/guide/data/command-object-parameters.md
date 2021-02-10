@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2adb1e8d6dc516de2077416ce7e866efa6a03c54
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a49f7099e45e92cac31653f5c3f08442dda2459b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991551"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033320"
 ---
 # <a name="command-object-parameters"></a>Parameter für Command-Objekt
-Im vorherigen Thema wurde erläutert, wie [ein einfacher Befehl erstellt und ausgeführt](./creating-and-executing-a-simple-command.md)wird. Eine interessantere Verwendung für das [Command](../../reference/ado-api/command-object-ado.md) -Objekt wird im nächsten Beispiel veranschaulicht, in dem der SQL-Befehl parametrisiert wurde. Diese Änderung ermöglicht es, den Befehl wiederzuverwenden und jedes Mal einen anderen Wert für den Parameter zu übergeben. Da die Eigenschaft [vorbereitete Eigenschaft](../../reference/ado-api/prepared-property-ado.md) für das **Command** -Objekt auf **true**festgelegt ist, muss der Anbieter den in [CommandText](../../reference/ado-api/commandtext-property-ado.md) angegebenen Befehl kompilieren, bevor er zum ersten Mal ausgeführt wird. Außerdem wird der kompilierte Befehl im Arbeitsspeicher beibehalten. Dadurch wird die Ausführung des Befehls bei der ersten Ausführung bei der ersten Ausführung verlangsamt, da der Aufwand für die Vorbereitung erforderlich ist, was jedoch bei jedem Aufruf des Befehls zu einer Leistungssteigerung führt. Daher sollten Befehle nur vorbereitet werden, wenn Sie mehr als einmal verwendet werden.  
+Im vorherigen Thema wurde erläutert, wie [ein einfacher Befehl erstellt und ausgeführt](./creating-and-executing-a-simple-command.md)wird. Eine interessantere Verwendung für das [Command](../../reference/ado-api/command-object-ado.md) -Objekt wird im nächsten Beispiel veranschaulicht, in dem der SQL-Befehl parametrisiert wurde. Diese Änderung ermöglicht es, den Befehl wiederzuverwenden und jedes Mal einen anderen Wert für den Parameter zu übergeben. Da die Eigenschaft [vorbereitete Eigenschaft](../../reference/ado-api/prepared-property-ado.md) für das **Command** -Objekt auf **true** festgelegt ist, muss der Anbieter den in [CommandText](../../reference/ado-api/commandtext-property-ado.md) angegebenen Befehl kompilieren, bevor er zum ersten Mal ausgeführt wird. Außerdem wird der kompilierte Befehl im Arbeitsspeicher beibehalten. Dadurch wird die Ausführung des Befehls bei der ersten Ausführung bei der ersten Ausführung verlangsamt, da der Aufwand für die Vorbereitung erforderlich ist, was jedoch bei jedem Aufruf des Befehls zu einer Leistungssteigerung führt. Daher sollten Befehle nur vorbereitet werden, wenn Sie mehr als einmal verwendet werden.  
   
 ```  
 'BeginManualParamCmd  
@@ -119,4 +119,4 @@ End Function
 'EndNewConnection  
 ```  
   
- Nicht alle Anbieter unterstützen vorbereitete Befehle. Wenn der Anbieter die Befehls Vorbereitung nicht unterstützt, gibt er möglicherweise einen Fehler zurück, sobald diese Eigenschaft auf " **true**" festgelegt ist. Wenn kein Fehler zurückgegeben wird, wird die Anforderung zum Vorbereiten des Befehls ignoriert und die **vorbereitete** Eigenschaft auf **false**festgelegt.
+ Nicht alle Anbieter unterstützen vorbereitete Befehle. Wenn der Anbieter die Befehls Vorbereitung nicht unterstützt, gibt er möglicherweise einen Fehler zurück, sobald diese Eigenschaft auf " **true**" festgelegt ist. Wenn kein Fehler zurückgegeben wird, wird die Anforderung zum Vorbereiten des Befehls ignoriert und die **vorbereitete** Eigenschaft auf **false** festgelegt.

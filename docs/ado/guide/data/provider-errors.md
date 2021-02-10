@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b31f530bafd69d59c98893cc2ead29039372dea9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a13bcc83c360533b1137af69b688221157dc0dc0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979981"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032607"
 ---
 # <a name="provider-errors"></a>Anbieterfehler
 Wenn ein Anbieter Fehler auftritt, wird ein Laufzeitfehler von-2147467259 zurückgegeben. Wenn Sie diesen Fehler erhalten, überprüfen Sie die **Fehler** Sammlung des aktiven **Verbindungs** Objekts, das mindestens einen Fehler enthält, der beschreibt, was aufgetreten ist.  
@@ -30,7 +30,7 @@ Wenn ein Anbieter Fehler auftritt, wird ein Laufzeitfehler von-2147467259 zurüc
 ## <a name="the-ado-errors-collection"></a>Die ADO Errors-Auflistung  
  Da ein bestimmter ADO-Vorgang mehrere Anbieter Fehler verursachen kann, macht ADO eine Auflistung von Fehler Objekten über das **Verbindungs** Objekt verfügbar. Diese Sammlung enthält keine Objekte, wenn ein Vorgang erfolgreich abgeschlossen wurde und mindestens ein **Fehler** Objekt enthält, wenn ein Fehler aufgetreten ist und der Anbieter mindestens einen Fehler ausgelöst hat. Überprüfen Sie jedes Fehler Objekt, um die genaue Ursache des Fehlers zu ermitteln.  
   
- Sobald Sie alle aufgetretenen Fehler verarbeitet haben, können Sie die Sammlung löschen, indem Sie die **Clear** -Methode aufrufen. Es ist besonders wichtig, die **Fehler** Auflistung explizit zu löschen, bevor Sie die Methode **Resync**, **UpdateBatch**oder **CancelBatch** für ein **Recordset** -Objekt, **die Open** -Methode für ein **Verbindungs** Objekt oder die **Filter** -Eigenschaft für ein **Recordset** -Objekt aufrufen. Wenn Sie die Auflistung explizit löschen, können Sie sicher sein, dass alle **Fehler** Objekte in der Auflistung nicht von einem vorherigen Vorgang ausgelassen werden.  
+ Sobald Sie alle aufgetretenen Fehler verarbeitet haben, können Sie die Sammlung löschen, indem Sie die **Clear** -Methode aufrufen. Es ist besonders wichtig, die **Fehler** Auflistung explizit zu löschen, bevor Sie die Methode **Resync**, **UpdateBatch** oder **CancelBatch** für ein **Recordset** -Objekt, **die Open** -Methode für ein **Verbindungs** Objekt oder die **Filter** -Eigenschaft für ein **Recordset** -Objekt aufrufen. Wenn Sie die Auflistung explizit löschen, können Sie sicher sein, dass alle **Fehler** Objekte in der Auflistung nicht von einem vorherigen Vorgang ausgelassen werden.  
   
  Einige Vorgänge können zusätzlich zu Fehlern Warnungen generieren. Warnungen werden auch durch **Fehler** Objekte in der **Fehler** Auflistung dargestellt. Wenn ein Anbieter der Auflistung eine Warnung hinzufügt, generiert er keinen Laufzeitfehler. Überprüfen Sie die **count** -Eigenschaft der **Errors** -Auflistung, um zu bestimmen, ob eine Warnung von einem bestimmten Vorgang erzeugt wurde. Wenn die Anzahl ein oder größer ist, wurde der Auflistung ein **Fehler** Objekt hinzugefügt. Sobald Sie festgestellt haben, dass die **Fehler** Auflistung Fehler oder Warnungen enthält, können Sie die Auflistung durchlaufen und Informationen zu jedem **Fehler** Objekt abrufen, das in der Sammlung enthalten ist. Im folgenden kurzen Visual Basic Beispiel wird Folgendes veranschaulicht:  
   
@@ -65,18 +65,18 @@ End Function
 ## <a name="the-error-object"></a>Das Error-Objekt  
  Durch Untersuchen eines **Fehler** Objekts können Sie feststellen, welcher Fehler aufgetreten ist und was wichtiger ist, welche Anwendung oder welches Objekt den Fehler verursacht hat. Das **Error** -Objekt verfügt über die folgenden Eigenschaften:  
   
-|Eigenschaftenname|Beschreibung|  
+|Eigenschaftenname|BESCHREIBUNG|  
 |-------------------|-----------------|  
 |**Beschreibung**|Eine Textbeschreibung des Fehlers, der aufgetreten ist.|  
 |**HelpContext, HelpFile**|Bezieht sich auf das Hilfethema und die Hilfedatei, die eine Beschreibung des aufgetretenen Fehlers enthalten.|  
 |**NativeError**|Die anbieterspezifische Fehlernummer.|  
-|**Number**|Eine lange ganze Zahl, die die Zahl (in der **errorvalueenumeration**aufgelistet) des aufgetretenen Fehlers darstellt.|  
+|**Number**|Eine lange ganze Zahl, die die Zahl (in der **errorvalueenumeration** aufgelistet) des aufgetretenen Fehlers darstellt.|  
 |**Quelle**|Gibt den Namen des Objekts oder der Anwendung an, das einen Fehler generiert hat.|  
 |**SQLSTATE**|Ein aus fünf Zeichen bestehende Fehlercode, der vom Anbieter während der Verarbeitung einer SQL-Anweisung zurückgegeben wird.|  
   
  Das ADO- **Fehler** Objekt ähnelt dem Standard Visual Basic **Err** -Objekt. Die Eigenschaften beschreiben den aufgetretenen Fehler. Zusätzlich zur Fehlernummer erhalten Sie auch zwei verwandte Informationen. Die **NativeError** -Eigenschaft enthält eine spezifische Fehlernummer für den von Ihnen verwendeten Anbieter. Im vorherigen Beispiel ist der Anbieter der Anbieter von Microsoft OLE DB für SQL Server. **NativeError** enthält daher spezifische Fehler für SQL Server. Die **SQLSTATE** -Eigenschaft verfügt über einen aus fünf Buchstaben bestehenden Code, der einen Fehler in einer SQL-Anweisung beschreibt.  
   
-## <a name="event-related-errors"></a>Ereignisbezogene Fehler  
+## <a name="event-related-errors"></a>Event-Related Fehler  
  Das **Error** -Objekt wird auch verwendet, wenn ereignisbezogene Fehler auftreten. Sie können bestimmen, ob ein Fehler beim Prozess aufgetreten ist, der ein ADO-Ereignis ausgelöst hat, indem Sie das als Ereignis Parameter übergebene **Fehler** Objekt überprüfen.  
   
- Wenn der Vorgang, der ein Ereignis auslöst, erfolgreich abgeschlossen wird, wird der *adStatus* -Parameter des Ereignis Handlers auf *adStatusOK*festgelegt. Wenn andererseits der Vorgang, der das Ereignis ausgelöst hat, nicht erfolgreich war, wird der Parameter *adStatus* auf *adstatuserrorsoccurrred*festgelegt. In diesem Fall enthält der *perror* -Parameter ein **Fehler** Objekt, das den Fehler beschreibt.
+ Wenn der Vorgang, der ein Ereignis auslöst, erfolgreich abgeschlossen wird, wird der *adStatus* -Parameter des Ereignis Handlers auf *adStatusOK* festgelegt. Wenn andererseits der Vorgang, der das Ereignis ausgelöst hat, nicht erfolgreich war, wird der Parameter *adStatus* auf *adstatuserrorsoccurrred* festgelegt. In diesem Fall enthält der *perror* -Parameter ein **Fehler** Objekt, das den Fehler beschreibt.

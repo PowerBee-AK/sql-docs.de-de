@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2226406e3fc10a2e1dadd19020f9fcb243f442b7
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 45c5b0f925503431ed91e52b68c4aa8723c6461c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991141"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029464"
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Anhang D: ADO-Beispiele im Windows SDK
 Die Windows SDK enthält mehrere Beispielanwendungen, die die Verwendung von ADO-und RDS-Code veranschaulichen. Diese Beispiele sollen Ihnen dabei helfen zu erfahren, wie ADO und RDS verwendet werden, aber nicht für die Bereitstellung auf Produktionsservern vorgesehen ist.

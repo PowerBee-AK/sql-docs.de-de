@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 05ca0196ef59df1f67d5f65f3abc52133b81869a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 90ea623d429a17db86040675b1b0112cda4237e6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979171"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032322"
 ---
 # <a name="updating-and-persisting-data"></a>Aktualisieren und Beibehalten von Daten
 In den obigen Kapiteln wurde erläutert, wie ADO verwendet wird, um Daten in einer Datenquelle zu erhalten, wie die Daten verschoben werden und wie die Daten bearbeitet werden können. Wenn das Ziel Ihrer Anwendung darin besteht, Benutzern Änderungen an den Daten zu ermöglichen, müssen Sie natürlich wissen, wie Sie diese Änderungen speichern können. Sie können entweder die Änderungen an den **Recordsets** in einer Datei **Speichern** , indem Sie die Save-Methode verwenden, oder Sie können die Änderungen mithilfe der **Update** -oder **UpdateBatch** -Methoden an die Datenquelle für den Speicher zurücksenden.  
   
- In den vorstehenden Kapiteln haben Sie die Daten in mehreren Zeilen des **Recordsets**geändert. ADO unterstützt zwei grundlegende Konzepte im Zusammenhang mit dem Hinzufügen, löschen und Ändern von Daten Zeilen.  
+ In den vorstehenden Kapiteln haben Sie die Daten in mehreren Zeilen des **Recordsets** geändert. ADO unterstützt zwei grundlegende Konzepte im Zusammenhang mit dem Hinzufügen, löschen und Ändern von Daten Zeilen.  
   
- Der erste Gedanke ist, dass Änderungen nicht sofort am **Recordset**vorgenommen werden. Stattdessen werden Sie an einem internen *Kopier Puffer*erstellt. Wenn Sie sich entscheiden, dass Sie die Änderungen nicht wünschen, werden die Änderungen im Kopier Puffer verworfen. Wenn Sie die Änderungen beibehalten möchten, werden die Änderungen im Kopier Puffer auf das **Recordset**angewendet.  
+ Der erste Gedanke ist, dass Änderungen nicht sofort am **Recordset** vorgenommen werden. Stattdessen werden Sie an einem internen *Kopier Puffer* erstellt. Wenn Sie sich entscheiden, dass Sie die Änderungen nicht wünschen, werden die Änderungen im Kopier Puffer verworfen. Wenn Sie die Änderungen beibehalten möchten, werden die Änderungen im Kopier Puffer auf das **Recordset** angewendet.  
   
- Das zweite Konzept ist, dass Änderungen an die Datenquelle weitergegeben werden, sobald Sie die Arbeit für eine Zeile vollständig (also den *unmittelbaren* Modus) deklarieren oder alle Änderungen an einem Satz von Zeilen gesammelt werden, bis Sie die Arbeit für den vollständigen Satz deklarieren (also den *Batch* Modus). Die **LockType** -Eigenschaft bestimmt, wann die Änderungen an der zugrunde liegenden Datenquelle vorgenommen werden. **adlockoptimistisch** oder **adlockpessimigibt** den unmittelbaren Modus an, während **adlockbatchoptimiden** Batch Modus angibt. Die **Cursor Location** -Eigenschaft kann sich darauf auswirken, welche **LockType** -Einstellungen verfügbar sind. Beispielsweise wird die Einstellung **adlockpessiminicht** unterstützt, wenn die Eigenschaft **Cursor Location** auf **adUseClient**festgelegt ist.  
+ Das zweite Konzept ist, dass Änderungen an die Datenquelle weitergegeben werden, sobald Sie die Arbeit für eine Zeile vollständig (also den *unmittelbaren* Modus) deklarieren oder alle Änderungen an einem Satz von Zeilen gesammelt werden, bis Sie die Arbeit für den vollständigen Satz deklarieren (also den *Batch* Modus). Die **LockType** -Eigenschaft bestimmt, wann die Änderungen an der zugrunde liegenden Datenquelle vorgenommen werden. **adlockoptimistisch** oder **adlockpessimigibt** den unmittelbaren Modus an, während **adlockbatchoptimiden** Batch Modus angibt. Die **Cursor Location** -Eigenschaft kann sich darauf auswirken, welche **LockType** -Einstellungen verfügbar sind. Beispielsweise wird die Einstellung **adlockpessiminicht** unterstützt, wenn die Eigenschaft **Cursor Location** auf **adUseClient** festgelegt ist.  
   
  Im unmittelbaren Modus gibt jeder Aufruf der **Update** -Methode die Änderungen an die Datenquelle weiter. Im Batch Modus speichert jeder Aufruf von **Update** oder Bewegung der aktuellen Zeilen Position die Änderungen am Kopier Puffer, aber nur die **UpdateBatch** -Methode gibt die Änderungen an die Datenquelle weiter.  
   

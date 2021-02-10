@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3b910450302c83486979f59d019405b97013c22
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 15d8a58584a70be849050d32733a73149e865f69
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171386"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100026027"
 ---
 # <a name="count-property-example-vb"></a>Count-Eigenschaft – Beispiel (VB)
 In diesem Beispiel wird die [count](./count-property-ado.md) -Eigenschaft mit zwei Auflistungen in der ***Employee** _-Datenbank veranschaulicht. Die-Eigenschaft ruft die Anzahl der-Objekte in jeder Auflistung ab und legt die Obergrenze für Schleifen fest, die diese Auflistungen auflisten. Eine andere Möglichkeit, diese Auflistungen ohne Verwendung der _ *count**-Eigenschaft aufzulisten, wäre die Verwendung von- `For Each...Next` Anweisungen.  
