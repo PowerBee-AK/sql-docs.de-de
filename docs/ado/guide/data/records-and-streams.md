@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38bf8e44ec6b9521a1608c6081697295e6d9aedf
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2de6347377cbdeb464941d766d732c23443efa2a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979911"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032562"
 ---
 # <a name="records-and-streams"></a>Datensätze und Datenströme
 ADO stellt derzeit das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt als primäres Mittel für den Zugriff auf Informationen in Datenquellen, z. b. relationale Datenbanken, bereit. Einige Anbieter unterstützen jedoch die [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -und [Streamobjekte](../../../ado/reference/ado-api/stream-object-ado.md) als Alternative oder ergänzende Objekte, mit denen Daten von Anbietern bearbeitet werden können. Einzelheiten zum **Daten Satz** Verhalten finden Sie in der Dokumentation Ihres Anbieters.  
@@ -39,7 +39,7 @@ ADO stellt derzeit das [Recordset](../../../ado/reference/ado-api/recordset-obje
 ## <a name="streams"></a>Datenströme  
  Das **Stream** -Objekt bietet die Möglichkeit, einen Bytestream zu lesen, zu schreiben und zu verwalten. Dieser Bytestream kann Text oder binär sein und ist nur durch Systemressourcen beschränkt. In der Regel werden ADO- **Streamobjekte** für folgende Zwecke verwendet:  
   
--   , Wenn die Daten eines im XML-Format gespeicherten **Recordsets** enthalten sein sollen. Diese XML-Streams aus gespeicherten **Recordsets**können als Quelle beim Öffnen eines neuen **Recordsets**verwendet werden. Weitere Informationen finden Sie unter [Streams und Persistenz](../../../ado/guide/data/streams-and-persistence.md).  
+-   , Wenn die Daten eines im XML-Format gespeicherten **Recordsets** enthalten sein sollen. Diese XML-Streams aus gespeicherten **Recordsets** können als Quelle beim Öffnen eines neuen **Recordsets** verwendet werden. Weitere Informationen finden Sie unter [Streams und Persistenz](../../../ado/guide/data/streams-and-persistence.md).  
   
 -   , Um [commandstreams](../../../ado/reference/ado-api/commandstream-property-ado.md) zu enthalten, die für den Anbieter als Alternative zu [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)ausgeführt werden sollen. XML-Update grams können z. b. als Quelle für einen Befehl für den Microsoft OLE DB-Anbieter für SQL Server verwendet werden.  
   

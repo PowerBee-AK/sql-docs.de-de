@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 774ff9b0728d362822c72047b573ab9def944d18
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f7affce9c8596b9155f691ccf2ef61f9f0eca35d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979034"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032272"
 ---
 # <a name="using-ado-for-internet-publishing"></a>Verwenden von ADO für die Veröffentlichung im Internet
 [Der OLE DB Anbieter für die Internet Veröffentlichung](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) zeigt ein bestimmtes Beispiel für den Zugriff auf heterogene Daten mit ADO. Obwohl die Beispiele in diesem Abschnitt speziell für die Verwendung des Internet Publishing Anbieters gelten, sollten die gezeigten Prinzipien ähnlich sein, wenn Sie ADO mit anderen Anbietern für heterogene Daten verwenden, z. b. ein Anbieter in einem e-Mail-Speicher.  
@@ -32,12 +32,12 @@ ms.locfileid: "88979034"
  Weitere Informationen zur Verwendung von URLs finden Sie unter [absolute und relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="record-fields"></a>Daten Satz Felder  
- Der Unterschied zwischen heterogenen Daten und homogenen Daten besteht darin, dass für die erste, jede Daten Zeile oder jeden **Datensatz**eine andere Gruppe von Spalten oder **Feldern**vorhanden sein kann. Bei homogenen Daten hat jede Zeile denselben Satz von Spalten. Weitere Informationen zu den Feldern, die für den Internet Publishing Provider spezifisch sind, finden Sie unter [Datensätze und vom Anbieter bereitgestellte zusätzliche Felder](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
+ Der Unterschied zwischen heterogenen Daten und homogenen Daten besteht darin, dass für die erste, jede Daten Zeile oder jeden **Datensatz** eine andere Gruppe von Spalten oder **Feldern** vorhanden sein kann. Bei homogenen Daten hat jede Zeile denselben Satz von Spalten. Weitere Informationen zu den Feldern, die für den Internet Publishing Provider spezifisch sind, finden Sie unter [Datensätze und Provider-Supplied zusätzlicher Felder](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
   
 ### <a name="appending-new-fields"></a>Anhängen neuer Felder  
  Mehrere ADO-Objekte wurden verbessert, um zusammen mit **Datensatz** -und **Streamobjekten** zusammenzuarbeiten.  
   
--   Die [Append](../../../ado/reference/ado-api/append-method-ado.md) -Methode der [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung, mit der der Auflistung ein [Feld](../../../ado/reference/ado-api/field-object.md) Objekt erstellt und hinzugefügt wird, kann auch den Wert des **Felds**angeben.  
+-   Die [Append](../../../ado/reference/ado-api/append-method-ado.md) -Methode der [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung, mit der der Auflistung ein [Feld](../../../ado/reference/ado-api/field-object.md) Objekt erstellt und hinzugefügt wird, kann auch den Wert des **Felds** angeben.  
   
 -   Die [Update](../../../ado/reference/ado-api/update-method.md) -Methode schließt das Hinzufügen oder Löschen von Feldern zur Auflistung ab.  
   

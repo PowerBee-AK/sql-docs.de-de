@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 431ff25d49c4a45055d796aba98f229564872a4e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2dcd54dfb8ba5797588c615f987830dcb8aa5736
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978641"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032182"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Übersicht über mehrdimensionale Schemas und Daten
 ## <a name="understanding-multidimensional-schemas"></a>Grundlegendes zu mehrdimensionalen Schemas  
@@ -54,7 +54,7 @@ Hamburg, Munich, Stuttgart}
 ### <a name="hierarchies"></a>Hierarchien  
  Hierarchien definieren die Möglichkeiten, mit denen die Ebenen einer Dimension "hochskalieren" oder gruppiert werden können. Eine Dimension kann über mehr als eine Hierarchie verfügen. In der Geography-Dimension ist eine natürliche Hierarchie vorhanden:  
   
-### <a name="levels"></a>Ebenen  
+### <a name="levels"></a>Levels  
  In der in der vorherigen Abbildung abgebildeten geography-Beispiel Dimension stellt jedes Feld eine Ebene in der Hierarchie dar.  
   
  Jede Ebene verfügt über eine Reihe von Membern, wie im folgenden dargestellt:  
@@ -82,7 +82,7 @@ Hamburg, Munich, Stuttgart}
   
  Member können in einer oder mehreren Hierarchien pro Dimension konsolidiert werden. Stellen Sie sich eine Zeitdimension vor, in der es zwei Möglichkeiten gibt, ein Rollup auf die Year-Ebene von der Days-Ebene auszuführen  
   
- Dieses Beispiel veranschaulicht auch ein weiteres Merkmal: einige Member der Wochen-Hierarchie werden in keiner Ebene der Year-Quarter-Hierarchie angezeigt. Daher muss eine Hierarchie nicht alle Elemente einer Dimension enthalten.  
+ Dieses Beispiel veranschaulicht auch ein weiteres Merkmal: einige Member der Wochen Ebene der Year-Week Hierarchie werden nicht auf einer Ebene der Year-Quarter Hierarchie angezeigt. Daher muss eine Hierarchie nicht alle Elemente einer Dimension enthalten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [ADO MD-Objektmodell](../../reference/ado-md-api/ado-md-object-model.md)   

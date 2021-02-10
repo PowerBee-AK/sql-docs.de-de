@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9238fa208a5ce415986fee05045dc7ea34e0d67
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: ccccbbc0d634b1044569c4787b8e7bb60c2c3275
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723001"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031722"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Schritt 2: Serverprogramm aufrufen (RDS-Tutorial)
-Wenn Sie eine Methode auf dem Client *Proxy*aufrufen, führt das eigentliche Programm auf dem Server die-Methode aus. In diesem Schritt führen Sie eine Abfrage auf dem Server aus.  
+Wenn Sie eine Methode auf dem Client *Proxy* aufrufen, führt das eigentliche Programm auf dem Server die-Methode aus. In diesem Schritt führen Sie eine Abfrage auf dem Server aus.  
   
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](/dotnet/framework/wcf/)migriert werden.  

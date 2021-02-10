@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91066d8dd42d1bcd4a11aab093661a9061a7d7d1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: bbad3ddcfd8c34be6ea911f4cef580832f1c55b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978821"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032222"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Beibehaltungsszenario für XML-Recordsets
 In diesem Szenario erstellen Sie eine ASP-Anwendung (Active Server Pages), mit der der Inhalt eines Recordset-Objekts direkt in das ASP-Antwortobjekt gespeichert wird.  
@@ -111,7 +111,7 @@ In diesem Szenario erstellen Sie eine ASP-Anwendung (Active Server Pages), mit d
 </HTML>  
 ```  
   
- Schließen Sie die Datei default.htm, und speichern Sie Sie im selben Ordner, in dem Sie "XMLResponse. asp" gespeichert haben. Öffnen Sie in Internet Explorer 4,0 oder höher die URL https://*SQLServer*default.htm/XMLPersist/, und beobachten Sie die Ergebnisse. Die Daten werden in einer gebundenen DHTML-Tabelle angezeigt. Öffnen Sie nun die URL https:// *SQLServer* /XMLPersist/XMLResponse.ASP, und beobachten Sie die Ergebnisse. Der XML-Code wird angezeigt.  
+ Schließen Sie die Datei default.htm, und speichern Sie Sie im selben Ordner, in dem Sie "XMLResponse. asp" gespeichert haben. Öffnen Sie in Internet Explorer 4,0 oder höher die URL https://*SQLServer* default.htm/XMLPersist/, und beobachten Sie die Ergebnisse. Die Daten werden in einer gebundenen DHTML-Tabelle angezeigt. Öffnen Sie nun die URL https:// *SQLServer* /XMLPersist/XMLResponse.ASP, und beobachten Sie die Ergebnisse. Der XML-Code wird angezeigt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Save-Methode](../../reference/ado-api/save-method.md)   

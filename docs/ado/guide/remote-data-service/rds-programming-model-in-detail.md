@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2b307c89d5e4a25d6963ef100083015ffe6ce74
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8421340798a308204a0961340e06216f3b0cb24a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724921"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031892"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS-Programmiermodell im Detail
 Im folgenden sind die wichtigsten Elemente des RDS-Programmiermodells aufgeführt:  
@@ -39,7 +39,7 @@ Im folgenden sind die wichtigsten Elemente des RDS-Programmiermodells aufgeführ
   
  Das RDS-Objektmodell verkörpert diese Funktionalität mit dem [RDS. DataSpace](../../reference/rds-api/dataspace-object-rds.md) -Objekt.  
   
- Das Serverprogramm wird mit einer Programm Kennung oder *ProgID*angegeben. Der Server verwendet die *ProgID* und die Registrierung des Server Computers, um Informationen zum eigentlichen Programm zu finden, das initiiert werden soll.  
+ Das Serverprogramm wird mit einer Programm Kennung oder *ProgID* angegeben. Der Server verwendet die *ProgID* und die Registrierung des Server Computers, um Informationen zum eigentlichen Programm zu finden, das initiiert werden soll.  
   
  RDS unterscheidet sich intern, abhängig davon, ob sich das Serverprogramm auf einem Remote Server über das Internet oder ein Intranet befindet. ein Server in einem lokalen Netzwerk; oder nicht auf einem Server, sondern in einer lokalen Dynamic Link Library (dll). Dieser Unterschied bestimmt, wie Informationen zwischen dem Client und dem Server ausgetauscht werden, und macht einen konkreten Unterschied in der Art des Verweises, der an die Client Anwendung zurückgegeben wird. Allerdings hat diese Unterscheidung aus ihrer Sicht keine besondere Bedeutung. Alles, was wichtig ist, ist, dass Sie einen verwendbaren Programm Verweis erhalten.  
   
@@ -52,7 +52,7 @@ Im folgenden sind die wichtigsten Elemente des RDS-Programmiermodells aufgeführ
   
  Mit ADO können Sie einige der standardmäßigen Verbindungs-und Befehls Verhalten von **RDSServer. DataFactory** mit einem **DataFactory** -Handler und einer Anpassungs Datei überschreiben, die Verbindungs-, Befehls-und Sicherheitsparameter enthält.  
   
- Das Serverprogramm wird manchmal als *Geschäftsobjekt*bezeichnet. Sie können Ihr eigenes benutzerdefiniertes Geschäftsobjekt schreiben, mit dem komplizierter Datenzugriff, Gültigkeits Prüfungen usw. durchgeführt werden können. Selbst beim Schreiben eines benutzerdefinierten Geschäftsobjekts können Sie eine Instanz eines **RDSServer. DataFactory** -Objekts erstellen und einige der zugehörigen Methoden verwenden, um Ihre eigenen Aufgaben auszuführen.  
+ Das Serverprogramm wird manchmal als *Geschäftsobjekt* bezeichnet. Sie können Ihr eigenes benutzerdefiniertes Geschäftsobjekt schreiben, mit dem komplizierter Datenzugriff, Gültigkeits Prüfungen usw. durchgeführt werden können. Selbst beim Schreiben eines benutzerdefinierten Geschäftsobjekts können Sie eine Instanz eines **RDSServer. DataFactory** -Objekts erstellen und einige der zugehörigen Methoden verwenden, um Ihre eigenen Aufgaben auszuführen.  
   
 ## <a name="rdsdatacontrol"></a>RDS. DataControl  
  RDS bietet die Möglichkeit, die Funktionalität des RDS zu kombinieren **. DataSpace** und **RDSServer. DataFactory.** Außerdem können visuelle Steuerelemente problemlos das **Recordset** -Objekt verwenden, das von einer Abfrage aus einer Datenquelle zurückgegeben wird. RDS-Versuche, für den häufigsten Fall, so weit wie möglich zu tun, um automatisch Zugriff auf Informationen auf einem Server zu erhalten und in einem visuellen Steuerelement anzuzeigen.  

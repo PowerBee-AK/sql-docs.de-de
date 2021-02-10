@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9f75190ae5375b357d6baba93aac7aa2959e188
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 44fc7a242887419ba3013113632c8d1acd2a3337
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979101"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032302"
 ---
 # <a name="using-a-recordset-object"></a>Verwenden eines Recordset-Objekts
 Alternativ können Sie " **Recordset. Open** " verwenden, um implizit eine Verbindung herzustellen und in einem einzelnen Vorgang einen Befehl über diese Verbindung auszugeben. Beispielsweise in Visual Basic:  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6d761b781e7de4225f51fb3600ac467015a0c274
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f2c62c8b12435ec70166b66416f343fa835f6158
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722721"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032606"
 ---
 # <a name="writing-your-own-customized-handler"></a>Schreiben Ihres eigenen benutzerdefinierten Handlers
 Möglicherweise möchten Sie einen eigenen Handler schreiben, wenn Sie ein IIS-Server Administrator sind, der die standardmäßige RDS-Unterstützung wünscht, aber mehr Kontrolle über Benutzer Anforderungen und Zugriffsrechte hat.  
@@ -30,7 +30,7 @@ Möglicherweise möchten Sie einen eigenen Handler schreiben, wenn Sie ein IIS-S
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](/dotnet/framework/wcf/)migriert werden.  
   
 ## <a name="idatafactoryhandler-interface"></a>Idatafactoriyhandler-Schnittstelle  
- Diese Schnittstelle verfügt über zwei Methoden: **GetRecordSet** und **Reconnect**. Beide Methoden erfordern, dass die [Cursor Location](../../reference/ado-api/cursorlocation-property-ado.md) -Eigenschaft auf **adUseClient**festgelegt ist.  
+ Diese Schnittstelle verfügt über zwei Methoden: **GetRecordSet** und **Reconnect**. Beide Methoden erfordern, dass die [Cursor Location](../../reference/ado-api/cursorlocation-property-ado.md) -Eigenschaft auf **adUseClient** festgelegt ist.  
   
  Beide Methoden verwenden Argumente, die nach dem ersten Komma im Schlüsselwort "**Handler =**" angezeigt werden. Beispielsweise `"Handler=progid,arg1,arg2;"` übergibt eine Argument Zeichenfolge von `"arg1,arg2"` und `"Handler=progid"` übergibt ein NULL-Argument.  
   
@@ -44,17 +44,17 @@ Möglicherweise möchten Sie einen eigenen Handler schreiben, wenn Sie ein IIS-S
   
  ***Abfrage***  Der Befehls Text zum Erstellen einer Abfrage.  
   
- ***PPRS***  Der Zeiger, an dem das **Recordset** zurückgegeben werden soll.  
+ ***PPRS** _ der Zeiger, an dem das _ *Recordset** zurückgegeben werden soll.  
   
 ## <a name="reconnect-method"></a>Reconnect-Methode  
- Mit dieser Methode wird die Datenquelle aktualisiert. Es wird ein neues [Verbindungs](../../reference/ado-api/connection-object-ado.md) Objekt erstellt und das angegebene **Recordset**angefügt.  
+ Mit dieser Methode wird die Datenquelle aktualisiert. Es wird ein neues [Verbindungs](../../reference/ado-api/connection-object-ado.md) Objekt erstellt und das angegebene **Recordset** angefügt.  
   
 ### <a name="arguments"></a>Argumente  
  ***conn***  Die Verbindungs Zeichenfolge.  
   
  ***args***  Die Argumente für den Handler.  
   
- ***pRS***  Ein **Recordset** -Objekt.  
+ ***pRS** _ A _ *Recordset**-Objekt.  
   
 ## <a name="msdfhdlidl"></a>msdfhdl. idl  
  Dies ist die Schnittstellen Definition für " **idatafactor Handler** ", die in der Datei " **msdfhdl. idl** " angezeigt wird.  

@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9929177baaf1efd486cb9f628034158b370badc7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d6a769a22a86e145727079af6fc067b1552f2bbf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722861"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031712"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Schritt 6: Änderungen werden an den Server gesendet (RDS-Tutorial)
 Wenn das **Recordset** -Objekt bearbeitet wird, können alle Änderungen (d. h. hinzugefügte, geänderte oder gelöschte Zeilen) an den Server zurückgesendet werden.  
   
 > [!NOTE]
->  Das Standardverhalten von RDS kann implizit mit ADO-Objekten und dem Microsoft OLE DB Remoting-Anbieter aufgerufen werden. Abfragen können **Recordsets**zurückgeben, und bearbeitete **Recordsets**können die Datenquelle aktualisieren. In diesem Lernprogramm wird RDS nicht mit ADO-Objekten aufgerufen, aber dies sieht wie folgt aus:  
+>  Das Standardverhalten von RDS kann implizit mit ADO-Objekten und dem Microsoft OLE DB Remoting-Anbieter aufgerufen werden. Abfragen können **Recordsets** zurückgeben, und bearbeitete **Recordsets** können die Datenquelle aktualisieren. In diesem Lernprogramm wird RDS nicht mit ADO-Objekten aufgerufen, aber dies sieht wie folgt aus:  
   
 ```vb
 Dim rs as New ADODB.Recordset  

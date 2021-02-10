@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f97f5b9c9a947362edffaa88f878c96d63b270f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 41bc6310f5fe9e75a57032bc13bc64cba62306f1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979881"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032552"
 ---
 # <a name="recordset-positioning"></a>Positionieren von Recordsets
 Verwenden Sie die **AbsolutePosition** -Eigenschaft, um zu einem Datensatz zu wechseln, der auf seiner Ordinalposition im **Recordset** -Objekt basiert, oder, um die Ordinalposition des aktuellen Datensatzes zu bestimmen. Der Anbieter muss die entsprechende Funktionalität unterstützen, damit diese Eigenschaft verfügbar ist.  
   
- **AbsolutePosition** ist 1-basiert und entspricht 1, wenn der aktuelle Datensatz der erste Datensatz im **Recordset**ist. Wie bereits erwähnt, können Sie die Gesamtanzahl der Datensätze im **Recordset** -Objekt aus der **RecordCount** -Eigenschaft abrufen.  
+ **AbsolutePosition** ist 1-basiert und entspricht 1, wenn der aktuelle Datensatz der erste Datensatz im **Recordset** ist. Wie bereits erwähnt, können Sie die Gesamtanzahl der Datensätze im **Recordset** -Objekt aus der **RecordCount** -Eigenschaft abrufen.  
   
  Wenn Sie die **AbsolutePosition** -Eigenschaft festlegen, auch wenn Sie sich in einem Datensatz im aktuellen Cache befindet, lädt ADO den Cache mit einer neuen Gruppe von Datensätzen neu, beginnend mit dem von Ihnen angegebenen Datensatz. Die **CacheSize** -Eigenschaft bestimmt die Größe dieser Gruppe.  
   

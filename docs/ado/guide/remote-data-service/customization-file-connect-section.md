@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4350cb9aad6e2ef1d9381cffb6e05b13d09c43c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 0b3508479d6d52799f286421c1bb2c67683088f9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724781"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032012"
 ---
 # <a name="customization-file-connect-section"></a>Connect-Abschnitt der Anpassungsdatei
 Das Standardverhalten des Handlers besteht darin, alle Verbindungen abzulehnen. Der Abschnitt " **Connect** " gibt Ausnahmen für dieses Verhalten an. Wenn z. b. alle **Connect** -Abschnitte nicht vorhanden oder leer waren, können standardmäßig keine Verbindungen hergestellt werden.  
@@ -61,7 +61,7 @@ connectionString
 |**zugreifen**|Eine Literalzeichenfolge, die angibt, dass dies ein Zugriffs Eintrag ist|  
 |**_accessright_**|Eine der folgenden Zugriffsrechte:<br /><br /> -   **NoAccess** : der Benutzer kann nicht auf die Datenquelle zugreifen.<br />-   Schreib **geschützt: der** Benutzer kann die Datenquelle lesen.<br />-   " **Lesewrite** ": der Benutzer kann die Datenquelle lesen oder in diese schreiben.|  
   
- Wenn Sie eine beliebige Verbindung zulassen möchten (damit das Standardverhalten des Handlers deaktiviert wird), legen Sie den Zugriffs Eintrag im Abschnitt **Connect default** auf fest `Access=ReadWrite` , und löschen Sie alle anderen **Verbindungs** _identifier_ -ID-Abschnitte, oder kommentieren Sie Sie aus.  
+ Wenn Sie eine beliebige Verbindung zulassen möchten (damit das Standardverhalten des Handlers deaktiviert wird), legen Sie den Zugriffs Eintrag im Abschnitt **Connect default** auf fest `Access=ReadWrite` , und löschen Sie alle anderen **Verbindungs**  -ID-Abschnitte, oder kommentieren Sie Sie aus.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Abschnitt "Anpassungs Datei Protokolle"](./customization-file-logs-section.md)   

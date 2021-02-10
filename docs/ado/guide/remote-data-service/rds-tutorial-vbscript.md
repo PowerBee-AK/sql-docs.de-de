@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ad7fcb2bb63d77bd50c89f11e9b818439b0d1d0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 693f5858a80d5bc986dc16f993aa5c5a78c54d7c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721401"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031872"
 ---
 # <a name="rds-tutorial-vbscript"></a>RDS-Tutorial (VBScript)
 Dies ist das RDS-Tutorial, das in Microsoft Visual Basic Scripting Edition geschrieben wurde. Eine Beschreibung des Zwecks dieses Tutorials finden Sie im RDS- [Tutorial](./rds-tutorial.md).  
@@ -59,7 +59,7 @@ Set DC = Server.CreateObject("RDS.DataControl")
  Verwenden Sie für dieses Tutorial jedoch den imaginären Server "yourServer".  
   
 > [!NOTE]
->  Achten Sie auf den Datentyp der **ByRef** -Argumente. Mit VBScript können Sie den Variablentyp nicht angeben, sodass Sie immer eine **Variante**übergeben müssen. Wenn Sie http verwenden, können Sie mit RDS eine Variante an eine Methode übergeben, die eine nicht-Variant erwartet, wenn Sie Sie mit **RDS aufrufen. DataSpace** -Objekt (Methode " [kreateobject](../../reference/rds-api/createobject-method-rds.md) "). Wenn Sie DCOM oder einen in-Process-Server verwenden, müssen Sie die Parametertypen auf den Client-und Server Seiten vergleichen, oder Sie erhalten den Fehler "Typkonflikt".  
+>  Achten Sie auf den Datentyp der **ByRef** -Argumente. Mit VBScript können Sie den Variablentyp nicht angeben, sodass Sie immer eine **Variante** übergeben müssen. Wenn Sie http verwenden, können Sie mit RDS eine Variante an eine Methode übergeben, die eine nicht-Variant erwartet, wenn Sie Sie mit **RDS aufrufen. DataSpace** -Objekt (Methode " [kreateobject](../../reference/rds-api/createobject-method-rds.md) "). Wenn Sie DCOM oder einen in-Process-Server verwenden, müssen Sie die Parametertypen auf den Client-und Server Seiten vergleichen, oder Sie erhalten den Fehler "Typkonflikt".  
   
 ```vb
 Set DF1 = DS1.CreateObject("RDSServer.DataFactory", "https://yourServer")  

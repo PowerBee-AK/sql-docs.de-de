@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6681a0b40890db9c344a91adc26694f3e122710d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1866d72f438e263ec6cdb1f66cccb247d460a270
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721502"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031922"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>Markieren von Geschäftsobjekten als sicher für das Skripting
 > [!IMPORTANT]
@@ -44,4 +44,4 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  Im letzten Schritt erstellt der Anwendungssetup-Assistent eine htm-und eine CAB-Datei. Anschließend können Sie diese beiden Dateien auf den Zielcomputer kopieren und auf die HTM-Datei doppelklicken, um die Seite zu laden und den Server ordnungsgemäß zu registrieren.  
   
- Da das Geschäftsobjekt standardmäßig im Verzeichnis Windows\System32\Occache installiert wird, verschieben Sie es in das Verzeichnis Windows\System32, und ändern Sie den Registrierungsschlüssel **HKEY_CLASSES_ROOT \\ \CLSID**InprocServer32 so, dass er mit \<*MyActiveXGUID*> \\ **InprocServer32** dem richtigen Pfad identisch ist.
+ Da das Geschäftsobjekt standardmäßig im Verzeichnis Windows\System32\Occache installiert wird, verschieben Sie es in das Verzeichnis Windows\System32, und ändern Sie den Registrierungsschlüssel **HKEY_CLASSES_ROOT\CLSID\\** InprocServer32 so, dass er mit \<*MyActiveXGUID*> \\  dem richtigen Pfad identisch ist.

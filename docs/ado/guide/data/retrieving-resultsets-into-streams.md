@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13aeddcf9a826cff5caa33172f785f2e42747a3f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f625a4f96aa5ec083057af4118315d9df494530e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979751"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032542"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Abrufen von Resultsets in Datenströme
 Anstatt Ergebnisse im herkömmlichen **Recordset** -Objekt zu empfangen, kann ADO Abfrageergebnisse stattdessen in einen Stream abrufen. Das ADO- **Streamobjekt** (oder andere Objekte, die die com **IStream** -Schnittstelle unterstützen, z. b. asp- **Anforderungs** -und- **Antwort** Objekte), kann verwendet werden, um diese Ergebnisse zu enthalten Eine Verwendung für diese Funktion ist das Abrufen von Ergebnissen im XML-Format. Mit SQL Server beispielsweise können XML-Ergebnisse auf verschiedene Weise zurückgegeben werden, z. b. die Verwendung der for XML-Klausel mit einer SQL SELECT-Abfrage oder eine XPath-Abfrage.  
   
- Wenn Sie Abfrageergebnisse im Streamformat anstelle eines **Recordsets**empfangen möchten, müssen Sie die **adExecuteStream** -Konstante von **ExecuteOptionEnum** als Parameter der **Execute** -Methode eines **Befehls** Objekts angeben. Wenn Ihr Anbieter dieses Feature unterstützt, werden die Ergebnisse bei der Ausführung in einem Stream zurückgegeben. Sie müssen möglicherweise zusätzliche anbieterspezifische Eigenschaften angeben, bevor der Code ausgeführt wird. Beispielsweise müssen bei Verwendung des Microsoft OLE DB-Anbieters für SQL Server Eigenschaften wie der **Ausgabestream** in der **Properties** -Auflistung des **Command** -Objekts angegeben werden. Weitere Informationen zu SQL Server spezifischen dynamischen Eigenschaften im Zusammenhang mit diesem Feature finden Sie unter XML-bezogene Eigenschaften in der SQL Server-Onlinedokumentation.  
+ Wenn Sie Abfrageergebnisse im Streamformat anstelle eines **Recordsets** empfangen möchten, müssen Sie die **adExecuteStream** -Konstante von **ExecuteOptionEnum** als Parameter der **Execute** -Methode eines **Befehls** Objekts angeben. Wenn Ihr Anbieter dieses Feature unterstützt, werden die Ergebnisse bei der Ausführung in einem Stream zurückgegeben. Sie müssen möglicherweise zusätzliche anbieterspezifische Eigenschaften angeben, bevor der Code ausgeführt wird. Beispielsweise müssen bei Verwendung des Microsoft OLE DB-Anbieters für SQL Server Eigenschaften wie der **Ausgabestream** in der **Properties** -Auflistung des **Command** -Objekts angegeben werden. Weitere Informationen zu SQL Server spezifischen dynamischen Eigenschaften im Zusammenhang mit diesem Feature finden Sie unter XML-Related Eigenschaften in der SQL Server-Onlinedokumentation.  
   
 ## <a name="for-xml-query-example"></a>Beispiel für XML Query  
  Das folgende Beispiel wird in VBScript in die Northwind-Datenbank geschrieben:  
@@ -157,7 +157,7 @@ FOR XML [RAW|AUTO|EXPLICIT]
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
- Der Befehl kann in einer Zeichenfolge angegeben werden, wie zuvor gezeigt, **CommandText**zugewiesen, oder in Form einer XML-Vorlagen Abfrage, die **CommandStream**zugewiesen ist. Weitere Informationen zu XML-Vorlagen Abfragen finden Sie unter [Befehlsdaten Ströme](../../../ado/guide/data/command-streams.md) in ADO oder Verwenden von Streams für Befehlseingaben in der SQL Server-Onlinedokumentation.  
+ Der Befehl kann in einer Zeichenfolge angegeben werden, wie zuvor gezeigt, **CommandText** zugewiesen, oder in Form einer XML-Vorlagen Abfrage, die **CommandStream** zugewiesen ist. Weitere Informationen zu XML-Vorlagen Abfragen finden Sie unter [Befehlsdaten Ströme](../../../ado/guide/data/command-streams.md) in ADO oder Verwenden von Streams für Befehlseingaben in der SQL Server-Onlinedokumentation.  
   
  Als XML-Vorlagen Abfrage sieht die for XML-Abfrage wie folgt aus:  
   
@@ -171,7 +171,7 @@ SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO
 adoCmd.Properties("Output Stream") = Response  
 ```  
   
- Geben Sie als nächstes den **adExecuteStream** -Parameter von **Execute**an. In diesem Beispiel wird der Datenstrom in XML-Tags eingeschlossen, um eine XML-Daten Insel zu erstellen:  
+ Geben Sie als nächstes den **adExecuteStream** -Parameter von **Execute** an. In diesem Beispiel wird der Datenstrom in XML-Tags eingeschlossen, um eine XML-Daten Insel zu erstellen:  
   
 ```vb
 Response.write "<XML ID=MyDataIsle>"  

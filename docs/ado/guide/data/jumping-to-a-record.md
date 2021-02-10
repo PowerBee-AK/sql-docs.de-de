@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 96987a5c51d7a888672609aa28f3fd223ccfffa1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1a8a34ac8cafffe9f22595a76c5389369290a2b4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980401"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032722"
 ---
 # <a name="jumping-to-a-record"></a>Springen zu einem Datensatz
 Die [Move](../../reference/ado-api/move-method-ado.md) -Methode ermöglicht es Ihnen, im **Recordset** eine angegebene Anzahl von Datensätzen vorwärts oder rückwärts zu verschieben, indem Sie die folgende Syntax verwenden:  

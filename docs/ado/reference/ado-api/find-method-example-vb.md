@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3030af273aa317677bec5c975bbfe27d7bc248f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 31ada97d604afd176e0ac8dc7596d1550762e7b2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167308"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033926"
 ---
 # <a name="find-method-example-vb"></a>Find-Methode – Beispiel (VB)
 In diesem Beispiel wird die [Find](./find-method-ado.md) -Methode des [Recordset](./recordset-object-ado.md) -Objekts verwendet, um die Anzahl von Geschäfts Titeln in der ***Pubs*** -Datenbank zu suchen und zu zählen. Im Beispiel wird davon ausgegangen, dass der zugrunde liegende Anbieter keine ähnliche Funktionalität unterstützt.  
