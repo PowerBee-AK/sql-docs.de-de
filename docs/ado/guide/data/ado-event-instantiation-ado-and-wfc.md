@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 906f895eade7120b57d401851a0e19203f943980
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b7ed585adcfc9542e3d396f2b0fd1a82d65cdcf4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991711"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028352"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO-Ereignisinstanziierung: ADO und WFC
 ADO für Windows Foundation Classes (ADO/WFC) baut auf dem ADO-Ereignis Modell auf und stellt eine vereinfachte Anwendungsprogrammierschnittstelle dar. Im allgemeinen fängt ADO/WFC ADO-Ereignisse ab, konsolidiert die Ereignis Parameter in einer einzelnen Ereignisklasse und ruft dann Ihren Ereignishandler auf.  
@@ -32,7 +32,7 @@ ADO für Windows Foundation Classes (ADO/WFC) baut auf dem ADO-Ereignis Modell a
     }  
     ```  
   
-2.  Definieren Sie ein Handlerobjekt, das Ihren Ereignishandler darstellt. Das Handlerobjekt muss vom Datentyp **ConnectEventHandler** für ein Ereignis des Typs **ConnectionEvent**oder der Datentyp **RecordsetEventHandler** für ein Ereignis vom Typ **RecordsetEvent**sein. Beispielsweise können Sie Folgendes für Ihren **ConnectComplete** -Ereignishandler programmieren:  
+2.  Definieren Sie ein Handlerobjekt, das Ihren Ereignishandler darstellt. Das Handlerobjekt muss vom Datentyp **ConnectEventHandler** für ein Ereignis des Typs **ConnectionEvent** oder der Datentyp **RecordsetEventHandler** für ein Ereignis vom Typ **RecordsetEvent** sein. Beispielsweise können Sie Folgendes für Ihren **ConnectComplete** -Ereignishandler programmieren:  
   
     ```  
     ConnectionEventHandler handler =   

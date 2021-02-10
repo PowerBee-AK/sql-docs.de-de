@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f924e1bec97ed399f4d6d3351c8d18b1d8dad5b1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e769310609ebae9c7df8cfe0d518acce058d32e7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991061"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029284"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Übersicht über Microsoft OLE DB-Anbieter für Internet Publishing
 Der Microsoft OLE DB-Anbieter für die Internet Veröffentlichung ermöglicht ADO den Zugriff auf Ressourcen, die von Microsoft FrontPage oder Microsoft Internet Information Server bereitgestellt werden. Zu den Ressourcen gehören webquell Dateien, z. b. HTML-Dateien oder Windows 2000-Webordner.
@@ -49,7 +49,7 @@ MSDAIPP.DSO
 
  Die Zeichenfolge besteht aus folgenden Schlüsselwörtern:
 
-|Schlüsselwort|Beschreibung|
+|Schlüsselwort|BESCHREIBUNG|
 |-------------|-----------------|
 |**Anbieter**|Gibt den OLE DB Anbieter für die Internet Veröffentlichung an.|
 |**Datenquelle** -oder- **URL**|Gibt die URL einer Datei oder eines Verzeichnisses an, die in einem Webordner veröffentlicht wird.|

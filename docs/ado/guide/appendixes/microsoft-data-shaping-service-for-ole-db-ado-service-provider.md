@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07e5747e11cf3393e51c66a24c4c6fd5e6ade887
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a83d37c301d34c273514e4d6eb0551bc86429bd4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991081"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029374"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Übersicht über den Microsoft-Daten Strukturierungs Dienst für OLE DB
 > [!IMPORTANT]
@@ -37,9 +37,9 @@ ms.locfileid: "88991081"
 ## <a name="dynamic-properties"></a>Dynamische Eigenschaften
  Wenn dieser Dienstanbieter aufgerufen wird, werden die folgenden dynamischen Eigenschaften der [Properties](../../reference/ado-api/properties-collection-ado.md) -Auflistung des[Connection](../../reference/ado-api/connection-object-ado.md) -Objekts hinzugefügt.
 
-|Name der dynamischen Eigenschaft|Beschreibung|
+|Name der dynamischen Eigenschaft|BESCHREIBUNG|
 |---------------------------|-----------------|
-|**Eindeutige neushape-Namen**|Gibt an, ob **Recordset** -Objekte mit doppelten Werten für die Eigenschaften von **Reshape-Namen** zulässig sind. Wenn diese dynamische Eigenschaft auf **true** festgelegt ist und ein neues **Recordset** mit dem gleichen benutzerdefinierten umstrukturieren-Namen wie ein vorhandenes **Recordset**erstellt wird, wird der umstrukturieren-Name des neuen **Recordset** -Objekts geändert, um ihn eindeutig zu machen. Wenn diese Eigenschaft auf " **false** " festgelegt ist und ein neues **Recordset** mit dem gleichen benutzerdefinierten Namen der erneuten Form wie das vorhandene **Recordset**erstellt wird, haben beide **Recordset** -Objekte denselben umstrukturieren-Namen. Daher kann keines der **Recordsets** umgestaltet werden, solange beide Recordsets vorhanden sind.<br /><br /> Der Standardwert der-Eigenschaft ist **false**.|
+|**Eindeutige neushape-Namen**|Gibt an, ob **Recordset** -Objekte mit doppelten Werten für die Eigenschaften von **Reshape-Namen** zulässig sind. Wenn diese dynamische Eigenschaft auf **true** festgelegt ist und ein neues **Recordset** mit dem gleichen benutzerdefinierten umstrukturieren-Namen wie ein vorhandenes **Recordset** erstellt wird, wird der umstrukturieren-Name des neuen **Recordset** -Objekts geändert, um ihn eindeutig zu machen. Wenn diese Eigenschaft auf " **false** " festgelegt ist und ein neues **Recordset** mit dem gleichen benutzerdefinierten Namen der erneuten Form wie das vorhandene **Recordset** erstellt wird, haben beide **Recordset** -Objekte denselben umstrukturieren-Namen. Daher kann keines der **Recordsets** umgestaltet werden, solange beide Recordsets vorhanden sind.<br /><br /> Der Standardwert der-Eigenschaft ist **false**.|
 |**Datenanbieter**|Gibt den Namen des Anbieters an, der die zu formatierender Zeilen bereitstellt. Dieser Wert kann "None" lauten, wenn ein Anbieter nicht zum Bereitstellen von Zeilen verwendet wird.|
 
  Sie können auch beschreibbare dynamische Eigenschaften festlegen, indem Sie Ihre Namen als Schlüsselwörter in der Verbindungs Zeichenfolge angeben. Legen Sie z. b. in Microsoft Visual Basic die **Datenanbieter** dynamische Eigenschaft auf "MSDASQL" fest, indem Sie Folgendes angeben:

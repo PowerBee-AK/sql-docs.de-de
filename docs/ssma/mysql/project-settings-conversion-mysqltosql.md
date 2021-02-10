@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4c2c4c093fec21723584538dfb5585a74e15c8fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7cdbc6ac65fa24f8130bc92c03b62145370bedea
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492433"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017420"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Projekteinstellungen (Konvertierung) (MySqlToSql)
 Die Seite Konvertierung des Dialog Felds **Projekteinstellungen** enthält Einstellungen, mit denen Sie anpassen können, wie SSMA die MySQL-Syntax in SQL Server oder SQL Azure Syntax konvertiert.  
   
 Der Bereich Konvertierung ist in den Dialogfeldern **Projekteinstellungen** und **Standard Projekteinstellungen** verfügbar.  
   
--   Verwenden Sie das Dialogfeld **Standard Projekteinstellungen** , um Konfigurationsoptionen für alle Projekte festzulegen. Um auf die Konvertierungs Einstellungen zuzugreifen, wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen**aus, wählen Sie den Migrations Projekttyp, für den die Einstellungen angezeigt werden müssen/Changed in der Dropdown Liste **Migrations Ziel Version** aus, klicken Sie unten im linken Bereich auf **Allgemein** , und klicken Sie dann auf **Konvertierung**.  
+-   Verwenden Sie das Dialogfeld **Standard Projekteinstellungen** , um Konfigurationsoptionen für alle Projekte festzulegen. Um auf die Konvertierungs Einstellungen zuzugreifen, wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen** aus, wählen Sie den Migrations Projekttyp, für den die Einstellungen angezeigt werden müssen/Changed in der Dropdown Liste **Migrations Ziel Version** aus, klicken Sie unten im linken Bereich auf **Allgemein** , und klicken Sie dann auf **Konvertierung**.  
   
 -   Um Einstellungen für das aktuelle Projekt anzugeben, klicken Sie **im Menü Extras** auf **Projekteinstellungen**, klicken Sie dann unten im linken Bereich auf **Allgemein** , und klicken Sie dann auf **Konvertierung**.  
   
@@ -111,6 +111,6 @@ Der Bereich Konvertierung ist in den Dialogfeldern **Projekteinstellungen** und 
 |**Numerische Literale mit einer Genauigkeit von mehr als 38**|Gibt an, wie numerische Literale mit einer Genauigkeit konvertiert werden, die 38 überschreitet.<br /><br />**Standardmodus**: Runden, wenn möglich<br /><br />**Optimistischer Modus**: Runden, wenn möglich<br /><br />**Vollständiger Modus**: Round, wenn möglich|  
 |**NULL-Date in NOT NULL-Spalten**|Gibt an, wie die Zuweisung zu NOT NULL-Spalten mit NULL-Date-, Zero-in-Date-oder ungültigen Datums-/Uhrzeitwerten behandelt werden soll.<br /><br />**Standardmodus**: GETDATE ()<br /><br />**Optimistischer Modus**: GETDATE ()<br /><br />**Vollständiger Modus**: GETDATE ()|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Referenz zur Benutzeroberfläche &#40;mysqltosql&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
   

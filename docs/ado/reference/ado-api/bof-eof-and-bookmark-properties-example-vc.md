@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7cfc7d8ffa447beccf4597beb63f54d5ba958f29
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ae45fb2eea6c971fe72d152d0ee6058dbfc81db5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164780"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027560"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF-, EOF-und Bookmark-Eigenschaften Beispiel (VC + +)
 Die erste Funktion in diesem Beispiel verwendet die [BOF](./bof-eof-properties-ado.md) -und [EOF](./bof-eof-properties-ado.md) -Eigenschaften, um eine Meldung anzuzeigen, wenn ein Benutzer versucht, nach dem ersten oder letzten Datensatz eines [Recordsets](./recordset-object-ado.md)zu wechseln. Er verwendet die [Bookmark](./bookmark-property-ado.md) -Eigenschaft, damit der Benutzer einen Datensatz in einem **Recordset** markieren und später zurückkehren kann.  

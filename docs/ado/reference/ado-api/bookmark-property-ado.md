@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd484230ba2801abcb553fa8f9013dce53799b09
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 218303ca86738ce4fab8b944dec6d1bfe114cf30
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171562"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027550"
 ---
 # <a name="bookmark-property-ado"></a>Bookmark-Eigenschaft (ADO)
 Gibt ein Lesezeichen an, das den aktuellen Datensatz in einem [Recordset](./recordset-object-ado.md) -Objekt eindeutig identifiziert, oder legt den aktuellen Datensatz in einem **Recordset** -Objekt auf den Datensatz fest, der durch ein gültiges Lesezeichen identifiziert wird.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19192cdf3d85e2b25297f59d91e64be4653441ac
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 00000e6e053cc7782f234f1e59005c831402dc46
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170983"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100020854"
 ---
 # <a name="getrows-method-example-vb"></a>GetRows-Methode – Beispiel (VB)
 In diesem Beispiel wird die [GetRows](./getrows-method-ado.md) -Methode verwendet, um eine angegebene Anzahl von Zeilen aus einem [Recordset](./recordset-object-ado.md) abzurufen und ein Array mit den resultierenden Daten auszufüllen. Die **GetRows** -Methode gibt weniger als die gewünschte Anzahl von Zeilen in zwei Fällen zurück: entweder wenn [EOF](./bof-eof-properties-ado.md) erreicht wurde oder **GetRows** versucht hat, einen Datensatz abzurufen, der von einem anderen Benutzer gelöscht wurde. Die Funktion gibt nur dann **false** zurück, wenn der zweite Fall auftritt. Die getrowsok-Funktion ist erforderlich, damit diese Prozedur ausgeführt werden kann.  

@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: ec6b5ad0ab2047e72a1f3e3e5dfcd9fc49b954d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7bd846f4c4abd2a6b9fbcdc434964b789f32d047
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749786"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030638"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migrieren von lokalen SQL Server oder SQL Server auf Azure-VMS zu Azure SQL-Datenbank mithilfe des Datenmigrations-Assistent
 
@@ -31,24 +31,24 @@ Dieser Artikel enthält Schritt-für-Schritt-Anleitungen zum Migrieren von SQL S
 
 1. Klicken Sie im linken Bereich auf **neu** (+), und wählen Sie dann den Projekttyp **Migration** aus.
 
-2. Legen Sie den Quelltyp auf **SQL Server** und den Ziel Servertyp auf **Azure SQL-Datenbank**fest.
+2. Legen Sie den Quelltyp auf **SQL Server** und den Ziel Servertyp auf **Azure SQL-Datenbank** fest.
 
-3. Klicken Sie auf **Erstellen**.
+3. Wählen Sie **Erstellen** aus.
 
    ![Migrationsprojekt erstellen](../dma/media/NewCreate1.png)
 
 ## <a name="specify-the-source-server-and-database"></a>Angeben des Quellservers und der Datenbank
 
-1. Geben Sie für die Quelle unter **Verbindung mit Quell Server herstellen**im Textfeld **Servername** den Namen der Quell SQL Server-Instanz ein.
+1. Geben Sie für die Quelle unter **Verbindung mit Quell Server herstellen** im Textfeld **Servername** den Namen der Quell SQL Server-Instanz ein.
 
 2. Wählen Sie den **Authentifizierungstyp** aus, der von der SQL Server-Quellinstanz unterstützt wird.
 
    > [!NOTE]
-   > Es wird empfohlen, die Verbindung zu verschlüsseln, indem Sie unter **Verbindungs-poperties**das Kontrollkästchen **Verbindung verschlüsseln** aktivieren.
+   > Es wird empfohlen, die Verbindung zu verschlüsseln, indem Sie unter **Verbindungs-poperties** das Kontrollkästchen **Verbindung verschlüsseln** aktivieren.
 
     ![Quell Server auswählen](../dma/media/select-source-server.png)
 
-3. Wählen Sie **Verbinden**.
+3. Wählen Sie **Verbinden** aus.
 
 4. Wählen Sie eine einzelne Quelldatenbank aus, um zu Azure SQL-Datenbank zu migrieren.
 
@@ -61,16 +61,16 @@ Dieser Artikel enthält Schritt-für-Schritt-Anleitungen zum Migrieren von SQL S
 
 ## <a name="specify-the-target-server-and-database"></a>Angeben des Zielservers und der Datenbank
 
-1. Geben Sie für das Ziel unter **Verbindung mit Zielserver herstellen**im Textfeld **Servername** den Namen der Azure SQL-Daten Bank Instanz ein. 
+1. Geben Sie für das Ziel unter **Verbindung mit Zielserver herstellen** im Textfeld **Servername** den Namen der Azure SQL-Daten Bank Instanz ein. 
 
 2. Wählen Sie den **Authentifizierungstyp** aus, der von der Azure SQL-Datenbank-Ziel Instanz
 
    > [!NOTE]
-   > Es wird empfohlen, die Verbindung zu verschlüsseln, indem Sie unter **Verbindungs-poperties**das Kontrollkästchen **Verbindung verschlüsseln** aktivieren.
+   > Es wird empfohlen, die Verbindung zu verschlüsseln, indem Sie unter **Verbindungs-poperties** das Kontrollkästchen **Verbindung verschlüsseln** aktivieren.
 
      ![Zielserver auswählen](../dma/media/select-target-server.png)
 
-3. Wählen Sie **Verbinden**.
+3. Wählen Sie **Verbinden** aus.
 
 4. Wählen Sie eine Zieldatenbank aus, zu der migriert werden soll.
 
@@ -92,7 +92,7 @@ Dieser Artikel enthält Schritt-für-Schritt-Anleitungen zum Migrieren von SQL S
 
     ![Vorgeschlagene Lösung](../dma/media/suggested-fix.png)
 
-2. Wählen Sie **Allgemeines SQL-Skript**aus.
+2. Wählen Sie **Allgemeines SQL-Skript** aus.
 
 3. Überprüfen Sie das generierte Skript.
 
@@ -100,7 +100,7 @@ Dieser Artikel enthält Schritt-für-Schritt-Anleitungen zum Migrieren von SQL S
 
 ## <a name="deploy-schema"></a>Bereitstellen des Schemas
 
-1. Wählen Sie **Schema**bereitstellen aus.
+1. Wählen Sie **Schema** bereitstellen aus.
 
 2. Sehen Sie sich die Ergebnisse der Schemabereitstellung an.
 
@@ -112,7 +112,7 @@ Dieser Artikel enthält Schritt-für-Schritt-Anleitungen zum Migrieren von SQL S
 
     ![Tabellen für die Migration auswählen](../dma/media/select-tables-to-migrate.png) 
 
-5. Wählen Sie **Datenmigration starten**aus.
+5. Wählen Sie **Datenmigration starten** aus.
 
 Auf dem letzten Bildschirm wird der allgemeine Status angezeigt.
 

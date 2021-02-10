@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8006f9a0-394d-4238-8dc5-44255134628b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7f42e460be6dd4f4b36b0ddaf3c52880775df8e0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2f4599389fd313447a926cfbc898735fc60f4823
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935259"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014650"
 ---
 # <a name="migrating-mysql-databases-to-sql-server---azure-sql-database-mysqltosql"></a>Migrieren von MySQL-Datenbanken zu SQL Server Azure SQL-Datenbank (mysqlto SQL)
 SQL Server Migration Assistant (SSMA) für MySQL ist eine umfassende Umgebung, die Sie beim schnellen Migrieren von MySQL-Datenbanken zu SQL Server oder SQL Azure unterstützt. Mithilfe von SSMA für MySQL können Sie Datenbankobjekte und-Daten überprüfen, Datenbanken für die Migration bewerten, Datenbankobjekte zu SQL Server oder SQL Azure migrieren und dann Daten zu SQL Server oder SQL Azure migrieren.  
@@ -37,7 +37,7 @@ Verwenden Sie den folgenden Prozess, um Objekte und Daten aus MySQL-Datenbanken 
   
 6.  Optional: [bewerten der MySQL-Datenbanken für die Konvertierung &#40;mysqltoisql&#41;](../../ssma/mysql/assessing-mysql-databases-for-conversion-mysqltosql.md) , um Datenbankobjekte für die Konvertierung zu bewerten und die Konvertierungs Zeit einzuschätzen.  
   
-7.  [MySQL-Datenbanken &#40;mysqlto SQL-&#41;werden umgerechnet](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+7.  [MySQL-Datenbanken &#40;mysqlto SQL-&#41;werden umgerechnet ](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 8.  [Synchronisierung](loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   

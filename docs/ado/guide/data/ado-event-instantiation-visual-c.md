@@ -13,12 +13,12 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68ccc1f5cc173f4ebd80ed093e88968c137c954f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fd479847766b8682025b2e4c6f047a5f4549d077
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991651"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028046"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO-Ereignisinstanziierung: Visual C++
 Dies ist eine Schema bezogene Beschreibung, wie ADO-Ereignisse in Microsoft® Visual C++® instanziiert werden. Eine umfassende Beschreibung finden Sie unter Beispiel für das [ADO-Ereignis Modell (VC + +)](../../reference/ado-api/ado-events-model-example-vc.md) .  
@@ -50,7 +50,7 @@ class CRstEvent : public RecordsetEventsVt
 // EndEventExampleVC01  
 ```  
   
- Implementieren Sie jede Ereignishandlermethode in beiden Klassen. Es genügt, dass jede Methode nur ein HRESULT von S_OK zurückgibt. Wenn Sie jedoch wissen, dass Ihre Ereignishandler verfügbar sind, werden Sie standardmäßig fortlaufend aufgerufen. Stattdessen möchten Sie möglicherweise nach dem ersten Mal keine weitere Benachrichtigung anfordern, indem Sie **adStatus** auf **adStatusUnwantedEvent**festlegen.  
+ Implementieren Sie jede Ereignishandlermethode in beiden Klassen. Es genügt, dass jede Methode nur ein HRESULT von S_OK zurückgibt. Wenn Sie jedoch wissen, dass Ihre Ereignishandler verfügbar sind, werden Sie standardmäßig fortlaufend aufgerufen. Stattdessen möchten Sie möglicherweise nach dem ersten Mal keine weitere Benachrichtigung anfordern, indem Sie **adStatus** auf **adStatusUnwantedEvent** festlegen.  
   
 ```  
 // BeginEventExampleVC02  
@@ -66,7 +66,7 @@ STDMETHODIMP CConnEvent::ConnectComplete(
 // EndEventExampleVC02  
 ```  
   
- Die Ereignis Klassen erben von **IUnknown**, sodass Sie auch die Methoden **QueryInterface**, **adressf**und **Release** implementieren müssen. Implementieren Sie auch Klassenkonstruktoren und Dekonstruktoren. Wählen Sie die Visual C++ Tools, mit denen Sie diesen Teil der Aufgabe am bequemsten können.  
+ Die Ereignis Klassen erben von **IUnknown**, sodass Sie auch die Methoden **QueryInterface**, **adressf** und **Release** implementieren müssen. Implementieren Sie auch Klassenkonstruktoren und Dekonstruktoren. Wählen Sie die Visual C++ Tools, mit denen Sie diesen Teil der Aufgabe am bequemsten können.  
   
  Legen Sie fest, dass Ihre Ereignishandler verfügbar sind, indem **Sie QueryInterface** für das [Recordset](../../reference/ado-api/recordset-object-ado.md) und [Verbindungs](../../reference/ado-api/connection-object-ado.md) Objekte für die Schnittstellen **IConnectionPointContainer** und **IConnectionPoint** ausgeben. Geben Sie dann **IConnectionPoint:: Rat** für jede Klasse aus.  
   

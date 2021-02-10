@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 02a6d49202ad2607d862246eee232e599788244a
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 9f427c7d706e3665cc5cbca092bfbc99a333a1ea
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885857"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030628"
 ---
 # <a name="save-and-load-assessments-with-data-migration-assistant"></a>Speichern und Laden von Bewertungen mit Datenmigrations-Assistent
 
@@ -30,7 +30,7 @@ Die folgenden Schritt-für-Schritt-Anweisungen helfen Ihnen bei der Verwendung d
 
 ## <a name="saving-an-assessment-to-a-file"></a>Speichern einer Bewertung in einer Datei
 
-1. Wählen Sie nach dem Ausführen einer Bewertung mithilfe Datenmigrations-Assistent die Option **Bewertung speichern**aus.
+1. Wählen Sie nach dem Ausführen einer Bewertung mithilfe Datenmigrations-Assistent die Option **Bewertung speichern** aus.
 
    ![Öffnen des Dialog Felds "Bewertung speichern"](../dma/media/dma-save-load-assessments/dma-open-save-dialog.png)
 
@@ -45,11 +45,11 @@ Die folgenden Schritt-für-Schritt-Anweisungen helfen Ihnen bei der Verwendung d
 
 ## <a name="loading-an-assessment-saved-to-a-file"></a>Laden einer in eine Datei gespeicherten Bewertung
 
-1. Zum Laden einer Bewertung, die Sie zuvor in einer Datei gespeichert haben, starten Sie Datenmigrations-Assistent, und wählen Sie dann auf der Registerkarte **Alle Bewertungen** die Option **Auslastungs Bewertung**aus.
+1. Zum Laden einer Bewertung, die Sie zuvor in einer Datei gespeichert haben, starten Sie Datenmigrations-Assistent, und wählen Sie dann auf der Registerkarte **Alle Bewertungen** die Option **Auslastungs Bewertung** aus.
 
    ![Öffnen des Dialog Felds "Auslastungs Bewertung"](../dma/media/dma-save-load-assessments/dma-open-load-dialog.png)
 
-2. Navigieren Sie zur gespeicherten Bewertungs Datei, die Sie laden möchten, wählen Sie die Datei aus, und wählen Sie dann **Öffnen**aus.
+2. Navigieren Sie zur gespeicherten Bewertungs Datei, die Sie laden möchten, wählen Sie die Datei aus, und wählen Sie dann **Öffnen** aus.
 
    ![Öffnen einer Bewertungs Datei](../dma/media/dma-save-load-assessments/dma-open-assessment.png)
 
@@ -57,7 +57,7 @@ Die folgenden Schritt-für-Schritt-Anweisungen helfen Ihnen bei der Verwendung d
 
    ![Anzeigen des Bewertungs Eintrags](../dma/media/dma-save-load-assessments/dma-display-assessment-entry.png)
 
-3. Wählen Sie den Eintrag Bewertung aus, und wählen Sie dann **Bewertung öffnen**aus.
+3. Wählen Sie den Eintrag Bewertung aus, und wählen Sie dann **Bewertung öffnen** aus.
 
    ![Öffnen der Bewertungs Details](../dma/media/dma-save-load-assessments/dma-open-assessment-detail.png)
 
