@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: efcb376c9ad27dff5a0c85d73f70ae4000385e3d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 318bb7478bdbc6f3b4007f788045438cdb91dfe3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159240"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035920"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection-Eigenschaft (ADO)
 Gibt an, zu welchem [Verbindungs](./connection-object-ado.md) Objekt der angegebene [Befehl](./command-object-ado.md), das [Recordset](./recordset-object-ado.md)oder das [Datensatz](./record-object-ado.md) -Objekt derzeit gehört.  
@@ -34,7 +34,7 @@ Gibt an, zu welchem [Verbindungs](./connection-object-ado.md) Objekt der angegeb
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die **ActiveConnection** -Eigenschaft, um das **Verbindungs** Objekt zu ermitteln, über das das angegebene **Befehls** Objekt ausgeführt wird oder das angegebene **Recordset** geöffnet wird.  
   
-## <a name="command"></a>Get-Help  
+## <a name="command"></a>Befehl  
  Für **Befehls** Objekte ist die **ActiveConnection** -Eigenschaft Lese-/Schreibzugriff.  
   
  Wenn Sie versuchen, die [Execute](./execute-method-ado-command.md) -Methode für ein **Befehls** Objekt aufzurufen, bevor Sie diese Eigenschaft auf ein offenes **Verbindungs** Objekt oder eine gültige Verbindungs Zeichenfolge festlegen, tritt ein Fehler auf.  

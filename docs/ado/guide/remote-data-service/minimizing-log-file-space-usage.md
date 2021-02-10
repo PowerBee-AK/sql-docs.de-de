@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26d8a458b9bc1b477dd74ade09ad742c15ac73e8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c0be8adfc9fdcf85df12768571567ce832c2f69a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721431"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036470"
 ---
 # <a name="minimizing-log-file-space-usage"></a>Minimieren des Verbrauchs an Protokolldatei-Speicherplatz
 Eine Protokolldatei wird möglicherweise schnell gefüllt (wodurch der Server angehalten wird), wenn eine große Menge an Aktivität für eine SQL Server Datenbank vorhanden ist. Sie können festlegen, dass die Protokolldatei an einem Prüfpunkt **abgeschnitten** wird, um die Lebensdauer der Protokolldatei für eine Datenbank erheblich zu verlängern.  
@@ -32,17 +32,17 @@ Eine Protokolldatei wird möglicherweise schnell gefüllt (wodurch der Server an
   
 2.  Doppelklicken Sie auf den Namen der Datenbank, für die dieses Feature aktiviert wird.  
   
-3.  Wählen Sie auf der Registerkarte **Datenbank** die Option **Abschneiden**aus.  
+3.  Wählen Sie auf der Registerkarte **Datenbank** die Option **Abschneiden** aus.  
   
-4.  Wählen Sie auf der Registerkarte **Optionen die Option** **Protokoll bei**Prüfpunkt abschneiden aus, und klicken Sie dann auf **OK**.  
+4.  Wählen Sie auf der Registerkarte **Optionen die Option** **Protokoll bei** Prüfpunkt abschneiden aus, und klicken Sie dann auf **OK**.  
   
 ### <a name="to-enable-truncate-on-checkpoint-in-microsoft-sql-server-70"></a>So aktivieren Sie das Abschneiden für einen Prüfpunkt in Microsoft SQL Server 7,0  
   
 1.  Starten Sie Microsoft SQL Server Enterprise-Manager, öffnen Sie die Struktur für den Server, und öffnen Sie dann die Struktur der Datenbanken.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Namen der Datenbank, für die dieses Feature aktiviert werden soll, und wählen Sie **Eigenschaften**aus.  
+2.  Klicken Sie mit der rechten Maustaste auf den Namen der Datenbank, für die dieses Feature aktiviert werden soll, und wählen Sie **Eigenschaften** aus.  
   
-3.  Wählen Sie auf der Registerkarte **Optionen die Option** **Protokoll bei**Prüfpunkt abschneiden aus, und klicken Sie dann auf **OK**.  
+3.  Wählen Sie auf der Registerkarte **Optionen die Option** **Protokoll bei** Prüfpunkt abschneiden aus, und klicken Sie dann auf **OK**.  
   
  Weitere Informationen zum Feature " **TRUNCATE on Checkpoint** " finden Sie in der Microsoft SQL Server-Dokumentation.  
   

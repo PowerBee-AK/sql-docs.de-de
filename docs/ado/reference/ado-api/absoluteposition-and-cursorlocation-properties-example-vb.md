@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c4755799-c60a-4b5e-a01f-b85dd0e0a7f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8aa5915ac2ea13b03964f58c5421102101afffb
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9e710b1df8c7d7215190de9f4fefc0df16649bba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161038"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035974"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>Beispiel für AbsolutePosition und Cursor Location-Eigenschaften (VB)
 In diesem Beispiel wird veranschaulicht, wie die [AbsolutePosition](./absoluteposition-property-ado.md) -Eigenschaft den Fortschritt einer Schleife verfolgen kann, in der alle Datensätze eines [Recordsets](./recordset-object-ado.md)aufgelistet werden. Er verwendet die [CursorLocation](./cursorlocation-property-ado.md) -Eigenschaft, um die **AbsolutePosition** -Eigenschaft zu aktivieren, indem der Cursor auf einen Client Cursor festgelegt wird.  

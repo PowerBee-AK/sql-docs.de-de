@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1138d00d291ffdabf415177a948bf87b1c6502a8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a13cf110fe4b7bd13ad5ce69da23794f5e6d76f9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171590"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035640"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction-Schnittstelle
 Die **adostreamconstruction** -Schnittstelle wird verwendet, um **ein ADO-Streamobjekt** aus einem OLE DB **IStream** -Objekt in einer C/C++-Anwendung zu erstellen.  
@@ -33,7 +33,7 @@ Die **adostreamconstruction** -Schnittstelle wird verwendet, um **ein ADO-Stream
 |[STREAM](./stream-property.md)|Lesen/Schreiben Ruft ein OLE DB **Stream** -Objekt ab oder legt es fest.|  
   
 ## <a name="methods"></a>Methoden  
- Keine.  
+ Keine  
   
 ## <a name="events"></a>Ereignisse  
  Keine.  
@@ -66,7 +66,7 @@ adoStrConstruct->put_Stream(pUnk);
   
  Das resultierende `adoStr` Objekt stellt nun das ADO- **Stream** -Objekt dar, das aus dem OLE DB **IStream** -Objekt erstellt wurde.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  **Version:** ADO 2,0 oder eine höhere Version  
   
  **Bibliothek:** msado15.dll  

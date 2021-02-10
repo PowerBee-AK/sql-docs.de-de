@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d3d765cbeba49a5c34bbc5529d833cefc5bb1ab
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0a074ca1e5f50e9d9b634fd67cfceeae353c436e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167909"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035750"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO – Index für dynamische Eigenschaften
 Datenanbieter, Dienstanbieter und Dienst Komponenten können den **Eigenschaften** Auflistungen der nicht geöffneten [Verbindungs](./connection-object-ado.md) -und [Recordset](./recordset-object-ado.md) -Objekte dynamische Eigenschaften hinzufügen. Ein bestimmter Anbieter kann auch zusätzliche Eigenschaften einfügen, wenn diese Objekte geöffnet werden. Einige dieser Eigenschaften werden im Abschnitt " [Eigenschaften](./ado-dynamic-properties.md) von ADO.net" aufgeführt. Weitere Informationen finden Sie unter den jeweiligen Anbietern im Abschnitt [Anhang A: Anbieter](../../guide/appendixes/appendix-a-providers.md) .  
@@ -57,7 +57,7 @@ Datenanbieter, Dienstanbieter und Dienst Komponenten können den **Eigenschaften
 |Maximale Zeilengröße|DBPROP_MAXROWSIZE|  
 |Maximale Zeilengröße schließt BLOB ein|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |Maximale Anzahl von Tabellen in SELECT|DBPROP_MAXTABLESINSELECT|  
-|Mode|DBPROP_INIT_MODE|  
+|Modus|DBPROP_INIT_MODE|  
 |Mehrere Parameter Sätze|DBPROP_MULTIPLEPARAMSETS|  
 |Mehrere Ergebnisse|DBPROP_MULTIPLERESULTS|  
 |Mehrere Speicher Objekte|DBPROP_MULTIPLESTORAGEOBJECTS|  
@@ -77,7 +77,7 @@ Datenanbieter, Dienstanbieter und Dienst Komponenten können den **Eigenschaften
 |Abbruch Verhalten vorbereiten|DBPROP_PREPAREABORTBEHAVIOR|  
 |Commit-Verhalten vorbereiten|DBPROP_PREPARECOMMITBEHAVIOR|  
 |Prozedur Begriff|DBPROP_PROCEDURETERM|  
-|Eingabeaufforderung|DBPROP_INIT_PROMPT|  
+|Prompt|DBPROP_INIT_PROMPT|  
 |Anzeige Name des Anbieters|DBPROP_PROVIDERFRIENDLYNAME|  
 |Anbietername|DBPROP_PROVIDERFILENAME|  
 |Anbieterversion|DBPROP_PROVIDERVER|  

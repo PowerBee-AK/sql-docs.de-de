@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc5e30aef0162ecc2ffe9016e14fdfa36644aca5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 76f3311a622abbd249aa942e1ebdbda33ad06966
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724881"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036420"
 ---
 # <a name="registering-a-custom-business-object"></a>Registrieren eines benutzerdefinierten Geschäftsobjekts
 Damit ein benutzerdefiniertes Geschäftsobjekt (. dll oder. exe) über den Webserver erfolgreich gestartet werden kann, muss die ProgID des Geschäftsobjekts in die Registrierung eingegeben werden, wie in diesem Verfahren erläutert. Diese RDS-Funktion schützt die Sicherheit Ihres Webservers, indem nur sanktionierte ausführbare Dateien ausgeführt werden.  
@@ -37,8 +37,8 @@ Damit ein benutzerdefiniertes Geschäftsobjekt (. dll oder. exe) über den Webse
   
 2.  Geben Sie **Regedit** ein und klicken Sie auf **OK**.  
   
-3.  Navigieren Sie im Registrierungs-Editor zum **HKEY_LOCAL_MACHINE \system\currentcontrolset\services\w3svc\parameters\adclaunch** Registry Key.  
+3.  Navigieren Sie im Registrierungs-Editor zum Registrierungsschlüssel **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch** .  
   
-4.  Wählen Sie **adclaunch** Key aus, und zeigen Sie dann im Menü **Bearbeiten**auf **neu** , und klicken Sie auf **Schlüssel**.  
+4.  Wählen Sie **adclaunch** Key aus, und zeigen Sie dann im Menü **Bearbeiten** auf **neu** , und klicken Sie auf **Schlüssel**.  
   
-5.  Geben Sie die ProgID Ihres benutzerdefinierten Geschäftsobjekts ein, und drücken Sie die **Eingabe**Taste. Lassen Sie den **Wert** Eintrag leer.
+5.  Geben Sie die ProgID Ihres benutzerdefinierten Geschäftsobjekts ein, und drücken Sie die **Eingabe** Taste. Lassen Sie den **Wert** Eintrag leer.

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25f4837fb73f15c8626a0b2a558f38badb1f36ed
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1d2b674e5ecc927989873c82303f2b2410c31d31
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721291"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036060"
 ---
 # <a name="understanding-the-customization-file"></a>Grundlegendes zur Anpassungsdatei
-Jeder Abschnitts Header in der Anpassungs Datei besteht aus eckigen Klammern (**[]**), die einen Typ und einen Parameter enthalten. Die vier Abschnitts Typen werden durch die Literalzeichenfolgen **Connect**, **SQL**, **userlist**oder **Logs**angegeben. Der-Parameter ist die Literalzeichenfolge, der Standardwert, ein vom Benutzer angegebener Bezeichner oder Nothing.  
+Jeder Abschnitts Header in der Anpassungs Datei besteht aus eckigen Klammern (**[]**), die einen Typ und einen Parameter enthalten. Die vier Abschnitts Typen werden durch die Literalzeichenfolgen **Connect**, **SQL**, **userlist** oder **Logs** angegeben. Der-Parameter ist die Literalzeichenfolge, der Standardwert, ein vom Benutzer angegebener Bezeichner oder Nothing.  
   
 > [!IMPORTANT]
 >  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](/dotnet/framework/wcf/)migriert werden.  

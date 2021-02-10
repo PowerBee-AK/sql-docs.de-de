@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bdacd558161c09d1d43f590f9f355e14da262b14
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f29b56b54c2800a77ac76134f0c946f09e34a621
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164889"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035720"
 ---
 # <a name="ado-properties"></a>ADO-Eigenschaften
 
@@ -42,7 +42,7 @@ ms.locfileid: "99164889"
 |[CommandType](./commandtype-property-ado.md)|Gibt den Typ eines **Befehls** Objekts an.|  
 |[ConnectionString-Eigenschaft](./connectionstring-property-ado.md)|Gibt die Informationen an, die zum Herstellen einer Verbindung mit einer Datenquelle verwendet werden.|  
 |[ConnectionTimeout](./connectiontimeout-property-ado.md)|Gibt an, wie lange beim Herstellen einer Verbindung gewartet werden soll, bevor der Versuch beendet und ein Fehler erzeugt wird.|  
-|[Anzahl](./count-property-ado.md)|Gibt die Anzahl der-Objekte in einer Auflistung an.|  
+|[Count](./count-property-ado.md)|Gibt die Anzahl der-Objekte in einer Auflistung an.|  
 |[CursorLocation –](./cursorlocation-property-ado.md)|Gibt den Speicherort des Cursor Dienstanbieter an.|  
 |[CursorType](./cursortype-property-ado.md)|Gibt den Typ des Cursors an, der in einem **Recordset** -Objekt verwendet wird.|  
 |[DataMember](./datamember-property.md)|Gibt den Namen des Datenmembers an, der aus dem Objekt abgerufen wird, auf das von der **DataSource** -Eigenschaft verwiesen wird.|  
@@ -91,7 +91,7 @@ ms.locfileid: "99164889"
 |[Status (ADO-Recordset)](./status-property-ado-recordset.md)|Gibt den Status des aktuellen Datensatzes zu Batch Aktualisierungen oder anderen Massen Vorgängen an.|  
 |[StayInSync](./stayinsync-property.md)|Gibt in einem hierarchischen **Recordsetobjekt** an, ob sich der Verweis auf die zugrunde liegenden untergeordneten Datensätze (d. h. das *Kapitel*) ändert, wenn sich die Position der übergeordneten Zeile ändert.|  
 |[Stream-Eigenschaft](./stream-property.md)|Ruft ein OLE DB **Stream** -Objekt von/für ein **adostreamconstruction** -Objekt ab oder legt es fest.|  
-|[Type](./type-property-ado.md)|Gibt den Betriebs Typ oder den Datentyp eines **Parameters**, **Felds** oder **Eigenschafts** Objekts an.|  
+|[Typ](./type-property-ado.md)|Gibt den Betriebs Typ oder den Datentyp eines **Parameters**, **Felds** oder **Eigenschafts** Objekts an.|  
 |[Type (ADO-Stream)](./type-property-ado-stream.md)|Gibt den Datentyp an, der im Daten **Strom** (binär oder Text) enthalten ist.|  
 |[UnderlyingValue –](./underlyingvalue-property.md)|Gibt den aktuellen Wert in der Datenbank für ein **Feld** Objekt an.|  
 |[Wert](./value-property-ado.md)|Gibt den Wert an, der einem **Feld**, einem **Parameter** oder einem **Eigenschafts** Objekt zugewiesen ist.|  
