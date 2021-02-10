@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 69753bb7f8b873ebdd74a8c18262034557844c55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0139d7583a06f9e197504cf15b5b59974a92d90d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463490"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065905"
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>Erstellen von Variablen Wert Dateien (DB2ToSQL)
 Die Variable Wert Datei ist eine XML-Datei, die die Parameterwerte von Befehlen wie, dem Quell-oder Zielserver Namen, der sich häufig von einer Servermigration in eine andere ändert, umfasst. Wenn eine große Anzahl von Datenbankmigrationen auftritt, werden mehrere Variablen Dateien zum Speichern des Werts jedes Quell Servers erstellt und in einer Master Skriptdatei mit dem Schalter **-v** in der Befehlszeile referenziert. Dies trägt dazu bei, statische Werte in einigen Skriptdateien mit den Variablen Werten in mehreren Variablen Dateien beizubehalten.  
@@ -87,6 +87,6 @@ Die Variable Wert Datei ist eine XML-Datei, die die Parameterwerte von Befehlen 
 ## <a name="next-step"></a>Nächster Schritt  
 Der nächste Schritt bei der Betriebs Konsole besteht darin, [die Server Verbindungs Dateien &#40;DB2ToSQL zu erstellen&#41;](../../ssma/db2/creating-the-server-connection-files-db2tosql.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Erstellen der Serververbindungsdateien](../oracle/creating-the-server-connection-files-oracletosql.md)  
   

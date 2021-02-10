@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cc9a5328095f2ef839eb0c9617798299e46371fd
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 154eaa42bf08f622f3e08359f025284752134bc5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987682"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066316"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>Festlegen von Konvertierungs-und Migrations Optionen (accesstosql)
 Für jedes SSMA-Projekt können Sie Optionen auf Projektebene festlegen. Diese Optionen geben an, wie Objekte konvertiert werden, wie Daten migriert werden und wie Quell Datentypen den Ziel Datentypen zugeordnet werden. Vergewissern Sie sich, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dass die Konfigurationsoptionen für das Projekt geeignet sind, bevor Sie Objekte in oder SQL Azure oder Daten in oder SQL Azure migrieren.  
@@ -47,16 +47,16 @@ In SSMA können Sie die Standardeinstellungen für alle Projekte konfigurieren. 
   
 **So legen Sie Standard Projektoptionen fest**  
   
-1.  Wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen**aus.  
+1.  Wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen** aus.  
   
 2.  Führen Sie im Dialogfeld **Standard Projekteinstellungen** einen der folgenden Schritte aus:  
   
-    -   Wählen Sie den Migrations Projekttyp aus, für den die Einstellungen in der Dropdown Liste **Migrations Ziel Version** angezeigt/geändert werden müssen, klicken Sie unten im linken Bereich auf **Allgemein** , und wählen Sie dann **Konvertierung oder Migration oder SQL Azure**aus.  
+    -   Wählen Sie den Migrations Projekttyp aus, für den die Einstellungen in der Dropdown Liste **Migrations Ziel Version** angezeigt/geändert werden müssen, klicken Sie unten im linken Bereich auf **Allgemein** , und wählen Sie dann **Konvertierung oder Migration oder SQL Azure** aus.  
   
         > [!NOTE]  
         > SQL Azure Option ist auf der Registerkarte **Allgemein** nur verfügbar, wenn der erstellte Projekttyp SQL Azure ist.  
   
-    -   Um einen vordefinierten Modus auszuwählen, wählen Sie im Dropdown Feld **Modus** die Option **Standard**, **optimistische**oder **vollständig** aus.  
+    -   Um einen vordefinierten Modus auszuwählen, wählen Sie im Dropdown Feld **Modus** die Option **Standard**, **optimistische** oder **vollständig** aus.  
   
     -   Um einen benutzerdefinierten Modus anzugeben, wählen Sie im Feld **Modus** die Option **Benutzer** definiert aus, wählen Sie im linken Bereich eine Option aus, klicken Sie im rechten Bereich auf die Einstellung oder den Wert, und wählen Sie dann die neue Einstellung oder den Wert aus.  
   
@@ -66,11 +66,11 @@ Sie können auch die Einstellungen für das aktuelle Projekt anpassen. Diese Ein
   
 **So passen Sie die Einstellungen für das aktuelle Projekt an**  
   
-1.  Wählen Sie **im Menü Extras** die Option **Projekteinstellungen**aus.  
+1.  Wählen Sie **im Menü Extras** die Option **Projekteinstellungen** aus.  
   
 2.  Führen Sie im Dialogfeld **Projekteinstellungen** einen der folgenden Schritte aus:  
   
-    -   Um einen vordefinierten Modus auszuwählen, wählen Sie im Dropdown Feld **Modus** die Option **Standard**, **optimistische**oder **vollständig** aus.  
+    -   Um einen vordefinierten Modus auszuwählen, wählen Sie im Dropdown Feld **Modus** die Option **Standard**, **optimistische** oder **vollständig** aus.  
   
     -   Um einen benutzerdefinierten Modus anzugeben, wählen Sie im Feld **Modus** die Option **Benutzer** definiert aus, wählen Sie im linken Bereich eine Option aus, klicken Sie im rechten Bereich auf die Einstellung oder den Wert, und wählen Sie dann die neue Einstellung oder den Wert aus.  
   

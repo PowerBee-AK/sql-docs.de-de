@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 13b0775dd7a20d37e80eaddb39f649f65c43b129
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: f56976c9140cb4ac18c048d7d57d6949fc4ae74d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886177"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065159"
 ---
 # <a name="assess-an-apps-data-access-layer-with-data-migration-assistant"></a>Bewerten Sie die Datenzugriffs Ebene einer APP mit Datenmigrations-Assistent
 
@@ -106,7 +106,7 @@ Neben der Daten Bank Perspektive der Migration haben Benutzer nun auch eine Ansi
 
 ## <a name="see-also"></a>Weitere Informationen
 
-* [Übersicht über Datenmigrations-Assistent](../dma/dma-overview.md)
+* [Übersicht über den Datenmigrations-Assistenten](../dma/dma-overview.md)
 * [Datenmigrations-Assistent: Konfigurationseinstellungen](../dma/dma-configurationsettings.md)
 * [Datenmigrations-Assistent: bewährte Methoden](../dma/dma-bestpractices.md)
 * [Data Access Migration Toolkit](https://marketplace.visualstudio.com/items?itemName=ms-databasemigration.data-access-migration-toolkit)

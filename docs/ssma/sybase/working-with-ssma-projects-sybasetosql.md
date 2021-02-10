@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a1a73e1dbc1c494080427ae5dfd686dd3c18abc1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b0276efc988eca1674410c31a2f83379ee1e875b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497632"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064978"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>Arbeiten mit SSMA-Projekten (SybaseToSQL)
 Zum Migrieren von Sybase-Datenbanken vom Typ Adaptive Server Enterprise (ASE) zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure erstellen Sie zunächst ein SSMA-Projekt. Das Projekt ist eine Datei mit Metadaten zu den ASE-Datenbanken, die zu migriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden sollen, oder SQL Azure, Metadaten zur Ziel Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, die die migrierten Objekte und Daten empfängt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Verbindungsinformationen und Projekteinstellungen.  
@@ -27,7 +27,7 @@ SSMA enthält mehrere Optionen zum umrechnen und Laden von Datenbankobjekten, zu
   
 **So überprüfen Sie die Standard Projekteinstellungen**  
   
-1.  Wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen**aus.  
+1.  Wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen** aus.  
   
 2.  Wählen Sie in der Dropdown Liste **Migrations Ziel Version** den Projekttyp aus, für den Einstellungen angezeigt oder geändert werden müssen, und klicken Sie dann auf die Registerkarte **Allgemein**  
   
@@ -89,11 +89,11 @@ Wenn Sie ein Projekt speichern, behält SSMA die Projekteinstellungen und option
   
 **So speichern Sie ein Projekt**  
   
--   Wählen Sie im Menü **Datei** die Option **Projekt speichern**aus.  
+-   Wählen Sie im Menü **Datei** die Option **Projekt speichern** aus.  
   
     Wenn sich Datenbanken innerhalb des Projekts geändert haben oder nicht konvertiert wurden, werden Sie von SSMA aufgefordert, Metadaten im Projekt zu speichern. Wenn Sie Metadaten speichern, können Sie offline arbeiten und eine komplette Projektdatei an andere Personen, einschließlich technischer Supportmitarbeiter, senden. Wenn Sie zum Speichern von Metadaten aufgefordert werden, gehen Sie wie folgt vor:  
   
-    1.  Aktivieren Sie für jede Datenbank, die den Status **fehlender Metadaten**anzeigt, das Kontrollkästchen neben dem Datenbanknamen.  
+    1.  Aktivieren Sie für jede Datenbank, die den Status **fehlender Metadaten** anzeigt, das Kontrollkästchen neben dem Datenbanknamen.  
   
         Das Speichern von Metadaten kann einige Minuten dauern. Wenn Sie an diesem Punkt keine Metadaten speichern möchten, aktivieren Sie keine Kontrollkästchen.  
   
@@ -110,11 +110,11 @@ Wenn Sie ein Projekt öffnen, wird es von ASE und von [!INCLUDE[ssNoVersion](../
   
     -   Zeigen Sie im Menü **Datei** auf **zuletzt verwendete Projekte**, und wählen Sie dann das Projekt aus, das Sie öffnen möchten.  
   
-    -   Wählen Sie im Menü **Datei** die Option **Projekt öffnen**aus, suchen Sie die Projektdatei. s2ssproj, wählen Sie die Datei aus, und klicken Sie dann auf **Öffnen**.  
+    -   Wählen Sie im Menü **Datei** die Option **Projekt öffnen** aus, suchen Sie die Projektdatei. s2ssproj, wählen Sie die Datei aus, und klicken Sie dann auf **Öffnen**.  
   
-2.  Um die Verbindung mit der ASE wiederherzustellen, wählen Sie im Menü **Datei** die Option **Verbindung mit Sybase wiederherstellen**aus.  
+2.  Um die Verbindung mit der ASE wiederherzustellen, wählen Sie im Menü **Datei** die Option **Verbindung mit Sybase wiederherstellen** aus.  
   
-3.  Wählen Sie zum erneuten Herstellen der Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure im Menü **Datei** die Option **Verbindung wieder**herstellen aus, um die Verbindung mit SQL Azure wiederherzustellen SQL Server  /  **Reconnect to SQL Azure**.  
+3.  Wählen Sie zum erneuten Herstellen der Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure im Menü **Datei** die Option **Verbindung wieder** herstellen aus, um die Verbindung mit SQL Azure wiederherzustellen SQL Server  /  .  
   
 ## <a name="next-step"></a>Nächster Schritt  
 Der nächste Schritt des Migrations Vorgangs besteht darin, eine [Verbindung mit der Sybase-ASE herzustellen](connecting-to-sybase-ase-sybasetosql.md).  

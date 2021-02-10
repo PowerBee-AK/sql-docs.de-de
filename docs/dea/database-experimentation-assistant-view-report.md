@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 017b7a1e06fca4a1f682050b99f8c8412b44aaf4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d1666d4ba2279623065dd3c0d8faf5e0653de82e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951125"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065945"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Anzeigen von Analyseberichten in Assistent für Datenbankexperimente
 
@@ -25,7 +25,7 @@ Nachdem Sie mit Assistent für Datenbankexperimente (DEA) [einen Analysebericht 
 
 ## <a name="open-an-existing-analysis-report"></a>Öffnen eines vorhandenen Analyse Berichts
 
-1. Wählen Sie in der ddea das Listen Symbol aus, geben Sie den Servernamen und den Authentifizierungstyp an, aktivieren bzw. deaktivieren Sie die Kontrollkästchen **Verbindung verschlüsseln** und **Serverzertifikat vertrauen** entsprechend ihren Szenarios, und wählen Sie dann **verbinden**aus.
+1. Wählen Sie in der ddea das Listen Symbol aus, geben Sie den Servernamen und den Authentifizierungstyp an, aktivieren bzw. deaktivieren Sie die Kontrollkästchen **Verbindung verschlüsseln** und **Serverzertifikat vertrauen** entsprechend ihren Szenarios, und wählen Sie dann **verbinden** aus.
 
    ![Herstellen einer Verbindung mit dem Server mit dem Bericht](./media/database-experimentation-assistant-view-report/dea-connect-to-server-with-report-files.png)
 
@@ -50,7 +50,7 @@ Sie können die Daten im Bericht in eine CSV-Datei exportieren, indem Sie auf di
   - Herunter **gestuft: Abfragen**, die auf Ziel 2 schlechter ausgeführt wurden als auf Ziel 1.
   - **Fehler**: Abfragen, die mindestens einmal Fehler in mindestens einem der Ziele angezeigt haben.
   - **Verbessert**: Abfragen, die auf Ziel 2 bessere Ergebnisse als auf Ziel 1 durchgeführt haben.
-  - **Auswerten nicht**möglich: Abfragen mit einer Stichprobengröße zu klein für statistische Analysen. Für eine/B-Test Analyse benötigt DEA die gleichen Abfragen, damit für jedes Ziel mindestens 15 Ausführungen vorhanden sind.
+  - **Auswerten nicht** möglich: Abfragen mit einer Stichprobengröße zu klein für statistische Analysen. Für eine/B-Test Analyse benötigt DEA die gleichen Abfragen, damit für jedes Ziel mindestens 15 Ausführungen vorhanden sind.
   - **Identisch**: Abfragen ohne statistischen Unterschied Zwischenziel 1 und Ziel 2.
 
   Fehler Abfragen werden ggf. in separaten Diagrammen angezeigt. ein Balkendiagramm, das Fehler nach Typ klassifiziert, und ein Kreis Diagramm, in dem Fehler nach Fehler-ID klassifiziert werden.

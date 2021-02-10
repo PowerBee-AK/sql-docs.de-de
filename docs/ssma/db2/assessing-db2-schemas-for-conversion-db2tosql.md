@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7516b8abce9e5a3d147796ec0acb101a92fc18f0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4fd80f6dda35ffbdbb28bbe783047bd787bc81ac
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480525"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065975"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>Bewerten von DB2-Schemas für die Konvertierung (DB2ToSQL)
 Vor dem Laden von Objekten und dem Migrieren von Daten zu müssen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie bestimmen, wie komplex die Migration ist und wie viel Zeit die Migration dauern wird. SSMA kann einen Bewertungsbericht erstellen, in dem der Prozentsatz der Objekte angezeigt wird, die erfolgreich konvertiert werden. Mit SSMA können Sie auch die spezifischen Probleme anzeigen, die Konvertierungs Fehler verursachen.  
@@ -29,9 +29,9 @@ Beim Erstellen dieses Bewertungsberichts konvertiert SSMA die ausgewählten DB2-
   
 2.  Deaktivieren Sie die Kontrollkästchen neben den Kontrollkästchen, um einzelne Objekte auszulassen.  
   
-3.  Klicken Sie mit der rechten Maustaste auf **Schemas**, und wählen Sie dann **Bericht erstellen**aus.  
+3.  Klicken Sie mit der rechten Maustaste auf **Schemas**, und wählen Sie dann **Bericht erstellen** aus.  
   
-    Sie können einzelne Objekte auch analysieren, indem Sie mit der rechten Maustaste auf ein Objekt klicken und dann **Bericht erstellen**auswählen.  
+    Sie können einzelne Objekte auch analysieren, indem Sie mit der rechten Maustaste auf ein Objekt klicken und dann **Bericht erstellen** auswählen.  
   
     SSMA zeigt den Fortschritt in der Statusleiste am unteren Rand des Fensters an. Wenn der Ausgabebereich sichtbar ist, werden im Ausgabebereich auch Meldungen angezeigt.  
   
@@ -54,7 +54,7 @@ Das Fenster "Bewertungsbericht" enthält drei Bereiche:
   
     -   Der Zielbereich zeigt den konvertierten Code. Roter Text zeigt problematische Code und Fehlermeldungen an.  
   
--   Der untere Bereich zeigt Konvertierungs Meldungen nach Nachrichtennummer gruppiert an. Sie können auf **Fehler**, **Warnungen**oder **Informationen** klicken, um Kategorien von Nachrichten anzuzeigen und dann eine Gruppe von Nachrichten zu erweitern. Klicken Sie auf eine einzelne Nachricht, um das Objekt im linken Bereich auszuwählen, und zeigen Sie die Details im rechten Bereich an.  
+-   Der untere Bereich zeigt Konvertierungs Meldungen nach Nachrichtennummer gruppiert an. Sie können auf **Fehler**, **Warnungen** oder **Informationen** klicken, um Kategorien von Nachrichten anzuzeigen und dann eine Gruppe von Nachrichten zu erweitern. Klicken Sie auf eine einzelne Nachricht, um das Objekt im linken Bereich auszuwählen, und zeigen Sie die Details im rechten Bereich an.  
   
 ## <a name="analyzing-conversion-problems-by-using-the-assessment-report"></a>Analysieren von Konvertierungs Problemen mithilfe des Bewertungsberichts  
 Im Bereich Konvertierungs Statistik werden die Konvertierungsstatistiken angezeigt. Wenn der Prozentsatz für eine Kategorie weniger als 100 Prozent beträgt, sollten Sie bestimmen, warum die Konvertierung nicht erfolgreich war.  

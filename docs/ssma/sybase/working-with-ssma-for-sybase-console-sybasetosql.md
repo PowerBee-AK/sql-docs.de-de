@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6ec67a6dd1346efc4199d3ebec22589ae8ee741b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 6cb1be080bfcbe51f693c9904e0e570d4ed996d7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036614"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064991"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Arbeiten mit SSMA für die Sybase-Konsole (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA), Release für Sybase Adaptive Server Enterprise (ASE), ist jetzt über eine Konsolenanwendung in der Befehlszeile verfügbar. Die Skriptdateien bilden die Eingabe für die Anwendung zum Ausführen der Befehle. Als Konsolenanwendung ermöglicht SSMA die Interaktion auf Skript Ebene, reduziert den Migrations Zyklen und skaliert den Migrations Aufwand.  
@@ -24,7 +24,7 @@ In diesem Abschnitt wird die Vorgehensweise zum Migrieren der ASE-Datenbank mith
   
 Zu den in diesem Abschnitt behandelten Themen gehören:  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-|-|  
 |[Informationen zu den ersten Schritten mit SSMA für die Sybase-Konsole &#40;sybasedesql&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md)|Erläutert das Verfahren zum Ausführen der Konsolenanwendung.|  
 |[Befehlszeilenoptionen in der SSMA-Konsole &#40;sybasedesql&#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md)|Beschreibt die Befehlszeilenoptionen und Parameter für den Betrieb der SSMA-Konsolenanwendung.|  

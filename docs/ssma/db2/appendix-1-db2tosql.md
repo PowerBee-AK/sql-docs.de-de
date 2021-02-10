@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c6a30367-d56f-4fcc-8920-c6a6b0335a67
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9b1d9148572823e8cd274fe2812e46b2a84320a3
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 751e0b7b55c9d6fa6a5f0a9d0d1d93a222e59ed4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988156"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065965"
 ---
 # <a name="appendix---1-db2tosql"></a>Anhang-1 (DB2ToSQL)
 Schnellansicht der Befehlszeilenoptionen der SSMA-Konsole:  

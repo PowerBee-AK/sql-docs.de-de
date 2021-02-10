@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 34e0a493140a31099dc4b9ed9f6234743bf0c8c1
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: 19fca27ba0606a8e56c1594df852edbc439e7a92
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235367"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064965"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Ersten Schritte mit SSMA für die Sybase-Konsole (sybasedesql)
 In diesem Abschnitt wird das Verfahren zum Starten von und ersten Schritten mit SSMA für die Sybase-Konsolenanwendung beschrieben. Auch hier sind die Konventionen aufgeführt, die in einem typischen Ausgabefenster der SSMA-Konsole verwendet werden.  
@@ -61,10 +61,10 @@ In der folgenden Tabelle wird die Farb Interpretation der Konsolenausgabe angeze
 |---------|---------------|  
 |Red|Schwerwiegender Fehler während der Ausführung|  
 |Grau|Datums-und Zeitstempel, Meldung an den Benutzer|  
-|White|Skriptdatei Befehle, Nachrichtentyp|  
+|Weiß|Skriptdatei Befehle, Nachrichtentyp|  
 |Gelb|Warnung|  
 |Grün|Eingabeaufforderung für Benutzereingabe|  
 |Cyan|Starten, beenden und Ergebnis eines Vorgangs|  
   
-## <a name="see-also"></a>Weitere Informationen:  
+## <a name="see-also"></a>Weitere Informationen  
 [Installieren von SSMA für SAP ASE &#40;sybasedesql&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
