@@ -11,12 +11,12 @@ author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 7362bc8069291d2e7d99399180cc147a38217d93
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 09d334d7cfcc313cd36d3b59a6b47c64d441f3ee
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951245"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017070"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Übersicht über Assistent für Datenbankexperimente
 
@@ -50,7 +50,7 @@ Es folgen einige Voraussetzungen für die Ausführung von DEA:
 
 ## <a name="configure-dea"></a>Konfigurieren von DEA
 
-In der Architektur der Voraussetzungs Umgebung wird empfohlen, dass Sie *die ddea auf demselben Computer wie den Distributed Replay Controller*installieren. Bei dieser Vorgehensweise werden Computer übergreifende Aufrufe vermieden und die Konfiguration vereinfacht.
+In der Architektur der Voraussetzungs Umgebung wird empfohlen, dass Sie *die ddea auf demselben Computer wie den Distributed Replay Controller* installieren. Bei dieser Vorgehensweise werden Computer übergreifende Aufrufe vermieden und die Konfiguration vereinfacht.
 
 ### <a name="required-configuration-for-workload-comparison-using-dea"></a>Erforderliche Konfiguration für den workloadvergleich mithilfe von DEA
 
@@ -106,9 +106,9 @@ Das erfassen und Senden von Telemetriedaten ist optional. Führen Sie die folgen
 
 1. Wechseln Sie zu dem Speicherort, an dem die DEA installiert ist (z. b. C: \\ Program Files (x86) \\ Microsoft Corporation \\ Assistent für Datenbankexperimente).
 2. Öffnen und ändern Sie die. config-Dateien **DEA.exe.config** (für die Anwendung) und **DEACmd.exe.config** (für die CLI), um Ihr Szenario entsprechend zu beheben:
-    - Legen Sie den Wert des *Ereignisses* (z. b. **TraceEvent**) auf **false**fest, um die Erfassung eines Ereignis Typs zu verhindern. Legen Sie den Wert auf " **true**" fest, um die erneute Erfassung des Ereignisses zu beginnen.
-    - Legen Sie den Wert von **traceloggerfähig** auf **false**fest, um das Speichern von lokalen Kopien von Ereignissen zu verhindern. Legen Sie den Wert auf **true**fest, damit die lokalen Kopien erneut gespeichert werden.
-    - Um das Senden von Ereignissen an Microsoft zu verhindern, legen Sie den Wert von **appinsightloggeraktiviauf** **false**fest. Legen Sie den Wert auf " **true**" fest, um erneut Ereignisse an Microsoft zu senden.
+    - Legen Sie den Wert des *Ereignisses* (z. b. **TraceEvent**) auf **false** fest, um die Erfassung eines Ereignis Typs zu verhindern. Legen Sie den Wert auf " **true**" fest, um die erneute Erfassung des Ereignisses zu beginnen.
+    - Legen Sie den Wert von **traceloggerfähig** auf **false** fest, um das Speichern von lokalen Kopien von Ereignissen zu verhindern. Legen Sie den Wert auf **true** fest, damit die lokalen Kopien erneut gespeichert werden.
+    - Um das Senden von Ereignissen an Microsoft zu verhindern, legen Sie den Wert von **appinsightloggeraktiviauf** **false** fest. Legen Sie den Wert auf " **true**" fest, um erneut Ereignisse an Microsoft zu senden.
 
 Die [Microsoft-Datenschutzbestimmungen unterliegen der Microsoft-Datenschutzerklärung](https://aka.ms/dea-privacy)
 

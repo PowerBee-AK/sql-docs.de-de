@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1bce53fd000baace86d32542d9b9cc843ee68296
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5a6cfdda6072f8ed51d55569ed68b113a4148642
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991021"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029264"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Übersicht über Microsoft OLE DB-Anbieter für ODBC
 Für einen ADO-oder RDS-Programmierer wäre eine ideale Welt eine ideale Welt, bei der jede Datenquelle eine OLE DB-Schnittstelle verfügbar macht, sodass ADO direkt in der Datenquelle aufgerufen werden kann. Obwohl immer mehr Datenbankanbieter OLE DB-Schnittstellen implementieren, sind einige Datenquellen auf diese Weise noch nicht verfügbar. Allerdings kann auf die meisten derzeit verwendeten DBMS-Systeme über ODBC zugegriffen werden.
@@ -50,7 +50,7 @@ MSDASQL
 
  Die Zeichenfolge besteht aus folgenden Schlüsselwörtern:
 
-|Schlüsselwort|Beschreibung|
+|Schlüsselwort|BESCHREIBUNG|
 |-------------|-----------------|
 |**Anbieter**|Gibt den OLE DB Anbieter für ODBC an.|
 |**DSN**|Gibt den Namen der Datenquelle an.|
@@ -82,18 +82,18 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ```
 
 ## <a name="remarks"></a>Bemerkungen
- Wenn Sie einen **DSN** oder eine **FILEDSN**verwenden, muss er in der Windows-Systemsteuerung über den ODBC-Datenquellen-Administrator definiert werden. In Microsoft Windows 2000 befindet sich der ODBC-Administrator unter "Verwaltung". In früheren Versionen von Windows hat das ODBC-Administrator Symbol den Namen " **32-Bit-ODBC** " oder "nur **ODBC**".
+ Wenn Sie einen **DSN** oder eine **FILEDSN** verwenden, muss er in der Windows-Systemsteuerung über den ODBC-Datenquellen-Administrator definiert werden. In Microsoft Windows 2000 befindet sich der ODBC-Administrator unter "Verwaltung". In früheren Versionen von Windows hat das ODBC-Administrator Symbol den Namen " **32-Bit-ODBC** " oder "nur **ODBC**".
 
- Als Alternative zum Festlegen eines **DSN**können Sie den ODBC-Treiber angeben (**Driver =**), z. b. "SQL Server;" den Servernamen (**Server =**); und den Datenbanknamen (**Database =**).
+ Als Alternative zum Festlegen eines **DSN** können Sie den ODBC-Treiber angeben (**Driver =**), z. b. "SQL Server;" den Servernamen (**Server =**); und den Datenbanknamen (**Database =**).
 
  Sie können auch einen Benutzerkonto Namen (**UID =**) und das Kennwort für das Benutzerkonto (**pwd =**) in den ODBC-spezifischen Parametern oder in den standardmäßigen ADO-definierten *Benutzer* -und Kenn *Wort* Parametern angeben.
 
- Obwohl eine **DSN** -Definition bereits eine Datenbank angibt, können Sie zusätzlich zu einem **DSN** *einen* *Daten Bank* Parameter angeben, um eine Verbindung mit einer anderen Datenbank herzustellen. Wenn Sie einen **DSN**verwenden, empfiehlt es sich, immer *den* *Database* -Parameter einzubeziehen. Dadurch wird sichergestellt, dass Sie eine Verbindung mit der richtigen Datenbank herstellen, wenn ein anderer Benutzer den Standarddaten Bank Parameter seit der letzten Überprüfung der **DSN** -Definition geändert hat
+ Obwohl eine **DSN** -Definition bereits eine Datenbank angibt, können Sie zusätzlich zu einem **DSN** *einen* *Daten Bank* Parameter angeben, um eine Verbindung mit einer anderen Datenbank herzustellen. Wenn Sie einen **DSN** verwenden, empfiehlt es sich, immer *den* *Database* -Parameter einzubeziehen. Dadurch wird sichergestellt, dass Sie eine Verbindung mit der richtigen Datenbank herstellen, wenn ein anderer Benutzer den Standarddaten Bank Parameter seit der letzten Überprüfung der **DSN** -Definition geändert hat
 
-## <a name="provider-specific-connection-properties"></a>Anbieterspezifische Verbindungs Eigenschaften
+## <a name="provider-specific-connection-properties"></a>Eigenschaften der Provider-Specific Verbindung
  Der OLE DB Anbieter für ODBC fügt der [Properties](../../reference/ado-api/properties-collection-ado.md) -Sammlung des **Connection** -Objekts mehrere Eigenschaften hinzu. In der folgenden Tabelle werden diese Eigenschaften mit dem entsprechenden OLE DB-Eigenschaftsnamen in Klammern aufgelistet.
 
-|Eigenschaftenname|Beschreibung|
+|Eigenschaftenname|BESCHREIBUNG|
 |-------------------|-----------------|
 |Barrierefreie Prozeduren (KAGPROP_ACCESSIBLEPROCEDURES)|Gibt an, ob der Benutzer Zugriff auf gespeicherte Prozeduren hat.|
 |Barrierefreie Tabellen (KAGPROP_ACCESSIBLETABLES)|Gibt an, ob der Benutzer über die Berechtigung zum Ausführen von SELECT-Anweisungen für die Datenbanktabellen verfügt.|
@@ -117,18 +117,18 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Datums-/Uhrzeitfunktionen (KAGPROP_TIMEDATEFUNCTIONS)|Gibt an, welche Zeit-und Datumsfunktionen vom ODBC-Treiber unterstützt werden. Eine Auflistung der Funktionsnamen und der zugeordneten Werte, die in dieser Bitmaske verwendet werden, finden Sie in der ODBC-Dokumentation unter [Anhang E: Skalarfunktionen](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).|
 |SQL-Grammatik Unterstützung (KAGPROP_ODBCSQLCONFORMANCE)|Gibt die SQL-Grammatik an, die der ODBC-Treiber unterstützt.|
 
-## <a name="provider-specific-recordset-and-command-properties"></a>Anbieterspezifische Recordset-und Befehls Eigenschaften
+## <a name="provider-specific-recordset-and-command-properties"></a>Provider-Specific Recordset-und Befehls Eigenschaften
  Der OLE DB Anbieter für ODBC fügt der **Properties** -Auflistung der **Recordset** -und **Command** -Objekte mehrere Eigenschaften hinzu. In der folgenden Tabelle werden diese Eigenschaften mit dem entsprechenden OLE DB-Eigenschaftsnamen in Klammern aufgelistet.
 
-|Eigenschaftenname|Beschreibung|
+|Eigenschaftenname|BESCHREIBUNG|
 |-------------------|-----------------|
 |Abfrage basierte Updates/Löschungen/Einfügungen (KAGPROP_QUERYBASEDUPDATES)|Gibt an, ob Aktualisierungen, Löschungen und Einfügungen mithilfe von SQL-Abfragen ausgeführt werden können.|
 |ODBC-Parallelitäts Typ (KAGPROP_CONCURRENCY)|Gibt die Methode an, mit der potenzielle Probleme reduziert werden, die dazu geführt haben, dass zwei Benutzer gleichzeitig versuchen, auf dieselben Daten von der Datenquelle zuzugreifen.|
-|BLOB-Barrierefreiheit bei Vorwärts Cursor (KAGPROP_BLOBSONFOCURSOR)|Gibt an, ob auf BLOB- **Felder** zugegriffen werden kann, wenn ein Vorwärts Cursor verwendet wird.|
+|Blobzugriff auf Forward-Only Cursor (KAGPROP_BLOBSONFOCURSOR)|Gibt an, ob auf BLOB- **Felder** zugegriffen werden kann, wenn ein Vorwärts Cursor verwendet wird.|
 |Einschließen von SQL_FLOAT, SQL_DOUBLE und SQL_REAL in qbu WHERE-Klauseln (KAGPROP_INCLUDENONEXACT)|Gibt an, ob die Werte SQL_FLOAT, SQL_DOUBLE und SQL_REAL in eine qbu WHERE-Klausel eingeschlossen werden können.|
 |Position in der letzten Zeile nach dem Einfügen (KAGPROP_POSITIONONNEWROW)|Gibt an, dass die letzte Zeile in der Tabelle in der aktuellen Zeile angezeigt wird, nachdem ein neuer Datensatz in eine Tabelle eingefügt wurde.|
 |Irowsetchangeextinfo (KAGPROP_IROWSETCHANGEEXTINFO)|Gibt an, ob die **IRowsetChange** -Schnittstelle erweiterte Informationsunterstützung bereitstellt.|
-|ODBC-Cursortyp (KAGPROP_CURSOR)|Gibt den Typ des Cursors an, der vom **Recordset**verwendet wird.|
+|ODBC-Cursortyp (KAGPROP_CURSOR)|Gibt den Typ des Cursors an, der vom **Recordset** verwendet wird.|
 |Generieren eines Rowsets, das gemarshallt werden kann (KAGPROP_MARSHALLABLE)|Gibt an, dass der ODBC-Treiber ein Recordset generiert, das gemarshallt werden kann.|
 
 ## <a name="command-text"></a>Befehlstext
@@ -179,7 +179,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md)|nicht verfügbar|nicht verfügbar|Lesen/Schreiben|Lesen/Schreiben|
 |[ActiveConnection](../../reference/ado-api/activeconnection-property-ado.md)|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|
 |[BOF](../../reference/ado-api/bof-eof-properties-ado.md)|schreibgeschützt|schreibgeschützt|schreibgeschützt|schreibgeschützt|
-|[Lesezeichen](../../reference/ado-api/bookmark-property-ado.md)|nicht verfügbar|nicht verfügbar|Lesen/Schreiben|Lesen/Schreiben|
+|[Textmarke](../../reference/ado-api/bookmark-property-ado.md)|nicht verfügbar|nicht verfügbar|Lesen/Schreiben|Lesen/Schreiben|
 |[CacheSize](../../reference/ado-api/cachesize-property-ado.md)|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|
 |[CursorLocation –](../../reference/ado-api/cursorlocation-property-ado.md)|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|
 |[CursorType](../../reference/ado-api/cursortype-property-ado.md)|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|
@@ -192,7 +192,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[PageSize](../../reference/ado-api/pagesize-property-ado.md)|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|
 |[RecordCount](../../reference/ado-api/recordcount-property-ado.md)|Lesen/Schreiben|nicht verfügbar|schreibgeschützt|schreibgeschützt|
 |[Quelle](../../reference/ado-api/source-property-ado-recordset.md)|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|Lesen/Schreiben|
-|[State](../../reference/ado-api/state-property-ado.md)|schreibgeschützt|schreibgeschützt|schreibgeschützt|schreibgeschützt|
+|[Zustand](../../reference/ado-api/state-property-ado.md)|schreibgeschützt|schreibgeschützt|schreibgeschützt|schreibgeschützt|
 |[Status](../../reference/ado-api/status-property-ado-recordset.md)|schreibgeschützt|schreibgeschützt|schreibgeschützt|schreibgeschützt|
 
  Die Eigenschaften " [AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md) " und " [AbsolutePage](../../reference/ado-api/absolutepage-property-ado.md) " sind schreibgeschützt, wenn ADO mit Version 1,0 des Microsoft OLE DB-Anbieters für ODBC verwendet wird.
@@ -202,7 +202,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Methode|Nur Weiterleitung|Dynamisch|Keyset|statischen|
 |------------|-----------------|-------------|------------|------------|
 |[AddNew](../../reference/ado-api/addnew-method-ado.md)|Ja|Ja|Ja|Ja|
-|[Abbrechen](../../reference/ado-api/cancel-method-ado.md)|Ja|Ja|Ja|Ja|
+|[Kündigen](../../reference/ado-api/cancel-method-ado.md)|Ja|Ja|Ja|Ja|
 |[CancelBatch](../../reference/ado-api/cancelbatch-method-ado.md)|Ja|Ja|Ja|Ja|
 |[CancelUpdate](../../reference/ado-api/cancelupdate-method-ado.md)|Ja|Ja|Ja|Ja|
 |[Klonen](../../reference/ado-api/clone-method-ado.md)|Nein|Nein|Ja|Ja|
@@ -252,7 +252,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Group by-Unterstützung|DBPROP_GROUPBY|
 |Unterstützung heterogener Tabellen|DBPROP_HETEROGENEOUSTABLES|
 |Sensitivität bei Bezeichnern|DBPROP_IDENTIFIERCASE|
-|Anfangskatalog|DBPROP_INIT_CATALOG|
+|Initial Catalog|DBPROP_INIT_CATALOG|
 |Isolationsstufen|DBPROP_SUPPORTEDTXNISOLEVELS|
 |Isolations Beibehaltung|DBPROP_SUPPORTEDTXNISORETAIN|
 |Locale Identifier|DBPROP_INIT_LCID|
@@ -261,7 +261,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Maximale Zeilengröße|DBPROP_MAXROWSIZE|
 |Maximale Zeilengröße schließt BLOB ein|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Maximale Anzahl von Tabellen in SELECT|DBPROP_MAXTABLESINSELECT|
-|Mode|DBPROP_INIT_MODE|
+|Modus|DBPROP_INIT_MODE|
 |Mehrere Parameter Sätze|DBPROP_MULTIPLEPARAMSETS|
 |Mehrere Ergebnisse|DBPROP_MULTIPLERESULTS|
 |Mehrere Speicher Objekte|DBPROP_MULTIPLESTORAGEOBJECTS|
@@ -276,7 +276,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Verfügbarkeit der Ausgabe Parameter|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |Kennwort|DBPROP_AUTH_PASSWORD|
 |Pass-by-Verweis-Accessoren|DBPROP_BYREFACCESSORS|
-|Sicherheitsinformationen permanent speichern|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
+|Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
 |Persistente ID-Typ|DBPROP_PERSISTENTIDTYPE|
 |Abbruch Verhalten vorbereiten|DBPROP_PREPAREABORTBEHAVIOR|
 |Commit-Verhalten vorbereiten|DBPROP_PREPARECOMMITBEHAVIOR|
@@ -285,7 +285,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Anzeige Name des Anbieters|DBPROP_PROVIDERFRIENDLYNAME|
 |Anbietername|DBPROP_PROVIDERFILENAME|
 |Anbieterversion|DBPROP_PROVIDERVER|
-|Schreibgeschützte Datenquelle|DBPROP_DATASOURCEREADONLY|
+|Datenquelle Read-Only|DBPROP_DATASOURCEREADONLY|
 |Rowsetkonvertierungen für Befehl|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |Schema Begriff|DBPROP_SCHEMATERM|
 |Schema Verwendung|DBPROP_SCHEMAUSAGE|

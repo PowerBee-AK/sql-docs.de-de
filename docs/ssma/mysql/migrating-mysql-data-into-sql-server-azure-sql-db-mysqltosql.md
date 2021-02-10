@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 16b6c68c520291b0f9ae6613940832c0fa77af68
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 3207dc38dd777ee6ccc36e37e9b18414dbea085e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988166"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017526"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-database-mysqltosql"></a>Migrieren von MySQL-Daten in SQL Server Azure SQL-Datenbank (mysqlto SQL)
 Nachdem Sie die konvertierten Objekte erfolgreich mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure synchronisiert haben, können Sie Daten von MySQL zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure migrieren.  
@@ -31,7 +31,7 @@ Nachdem Sie die konvertierten Objekte erfolgreich mit [!INCLUDE[ssNoVersion](../
   
 -   Mithilfe dieses Dialog Felds können Sie Optionen wie die Batch Größe für die Migration, das Sperren von Tabellen, die Einschränkungs Überprüfung, die Behandlung von NULL-Werten und die Verarbeitung von Identitäts Werten festlegen. Weitere Informationen zu den Projekt Migrations Einstellungen finden Sie unter [Projekteinstellungen (Migration)](./project-settings-migration-mysqltosql.md).  
   
-    Weitere Informationen zu **erweiterten Daten Migrations Einstellungen**finden Sie unter [Einstellungen für die Datenmigration](data-migration-settings-mysqltosql.md) .  
+    Weitere Informationen zu **erweiterten Daten Migrations Einstellungen** finden Sie unter [Einstellungen für die Datenmigration](data-migration-settings-mysqltosql.md) .  
   
 -   Die **Migrations-Engine** im Dialogfeld **Projekteinstellungen** ermöglicht dem Benutzer, den Migrationsprozess mit zwei Arten von Daten Migrations Modulen auszuführen:  
   
@@ -43,7 +43,7 @@ Nachdem Sie die konvertierten Objekte erfolgreich mit [!INCLUDE[ssNoVersion](../
   
 -   Wählen Sie im Dialogfeld **Projekteinstellungen** die Option **Client seitiges Daten Migrations** Modul aus, um die Datenmigration auf Clientseite zu initiieren.  
   
--   In den **Projekteinstellungen**ist die Option **Client seitiges Daten Migrations** Modul festgelegt.  
+-   In den **Projekteinstellungen** ist die Option **Client seitiges Daten Migrations** Modul festgelegt.  
   
     > [!NOTE]  
     > Die **Client seitige Daten Migrations-Engine** befindet sich in der SSMA-Anwendung und ist daher nicht von der Verfügbarkeit des Erweiterungspakets abhängig.  
@@ -60,7 +60,7 @@ Nachdem Sie die konvertierten Objekte erfolgreich mit [!INCLUDE[ssNoVersion](../
 ## <a name="migrating-data-to-sql-server-or-sql-azure"></a>Migrieren von Daten zu SQL Server oder SQL Azure  
 Beim Migrieren von Daten handelt es sich um einen Massen Ladevorgang, der Daten Zeilen aus MySQL-Tabellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Transaktionen verschiebt oder in diese SQL Azure. Die Anzahl der Zeilen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in jeder Transaktion geladen werden, wird in den Projekteinstellungen konfiguriert.  
   
-Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um Migrations Meldungen anzuzeigen. Wählen Sie andernfalls im Menü **Ansicht** die Option **Ausgabe**aus.  
+Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um Migrations Meldungen anzuzeigen. Wählen Sie andernfalls im Menü **Ansicht** die Option **Ausgabe** aus.  
   
 **So migrieren Sie Daten**  
   
@@ -80,7 +80,7 @@ Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um Migrations Meldun
   
     **Client seitige Daten Migration:**  
   
-    -   Wählen Sie zum Ausführen der **Client seitigen Datenmigration**im Dialogfeld **Projekteinstellungen** die Option **Client seitiges Daten Migrations** Modul aus.  
+    -   Wählen Sie zum Ausführen der **Client seitigen Datenmigration** im Dialogfeld **Projekteinstellungen** die Option **Client seitiges Daten Migrations** Modul aus.  
   
     **Server seitige Daten Migration:**  
   
@@ -90,7 +90,7 @@ Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um Migrations Meldun
   
         2.  Der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienst wird auf der-Instanz ausgeführt SQL Server  
   
-    -   Wählen Sie zum Durchführen der **serverseitigen Datenmigration**im Dialogfeld **Projekteinstellungen** die Option **serverseitiges Datenmigrations-Engine** aus.  
+    -   Wählen Sie zum Durchführen der **serverseitigen Datenmigration** im Dialogfeld **Projekteinstellungen** die Option **serverseitiges Datenmigrations-Engine** aus.  
   
 4.  Klicken Sie im MySQL-metadatenexplorer mit der rechten Maustaste auf **Schemas** , und klicken Sie dann auf **Daten migri** Sie können auch Daten für einzelne Objekte oder Objektkategorien migrieren: Klicken Sie mit der rechten Maustaste auf das Objekt oder seinen übergeordneten Ordner. Wählen Sie die Option **Daten migrieren** aus.  
   

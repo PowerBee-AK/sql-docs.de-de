@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03e454407c1b01b34ea918f81a404d579f8a3809
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 099cce7da61fbfa9f3a70904a6c8593b9be4d304
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167889"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027856"
 ---
 # <a name="append-method-ado"></a>Append-Methode (ADO)
 Fügt ein Objekt an eine Auflistung an. Wenn es sich bei der Auflistung um [Felder](./fields-collection-ado.md)handelt, kann ein neues [Feld](./field-object.md) Objekt erstellt werden, bevor es an die Auflistung angefügt wird.  
@@ -47,7 +47,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *Name*  
  Ein **Zeichen** folgen Wert, der den Namen des neuen **Feld** Objekts enthält und nicht denselben Namen wie ein beliebiges anderes Objekt in *Feldern* aufweisen darf.  
   
- *Type*  
+ *Typ*  
  Ein [datatyetenum](./datatypeenum.md) -Wert, dessen Standardwert " **adempty**" ist, der den Datentyp des neuen Felds angibt. Die folgenden Datentypen werden nicht von ADO unterstützt und sollten nicht verwendet werden, wenn neue Felder an ein [Recordset-Objekt (ADO)](./recordset-object-ado.md)angehängt werden: **adidispatch**, **adiunknown**, **advariant**.  
   
  *DefinedSize*  

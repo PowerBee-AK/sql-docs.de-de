@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bb85616a1d953e6a613419f5320fd483cbbe787
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2c87889a1d5812bb9ede48d7cf19e6479cc018cc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991821"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028645"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++-Erweiterungen – Beispiel
 Dieses Programm zeigt, wie Werte aus Feldern abgerufen und in C/C++-Variablen konvertiert werden.  
@@ -31,7 +31,7 @@ Dieses Programm zeigt, wie Werte aus Feldern abgerufen und in C/C++-Variablen ko
  Ohne intelligente Zeiger würden Sie Folgendes codieren:  
   
 ```cpp
-IADORecordBinding   *picRs = NULL;  
+IADORecordBinding   *picRs = NULL;  
 ...  
 TESTHR(pRs->QueryInterface(  
           __uuidof(IADORecordBinding), (LPVOID*)&picRs));  

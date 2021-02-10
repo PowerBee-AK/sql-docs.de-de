@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 408f93b0054709de09d5556be94371dd9adc472f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b12b01f0d1beeacac3862061718e71f1b650b51e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991761"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028675"
 ---
 # <a name="adding-records-using-addnew-method"></a>Hinzufügen von Datensätzen mithilfe der AddNew-Methode
 Dies ist die grundlegende Syntax der **AddNew** -Methode:
@@ -49,4 +49,4 @@ End If
 ```
 
 ## <a name="remarks"></a>Bemerkungen
- Da in diesem Code ein nicht verbundenes **Recordset** mit einem Client seitigen Cursor im Batch Modus verwendet wird, müssen Sie das **Recordset** erneut mit der Datenquelle mit einem neuen **Verbindungs** Objekt verbinden, bevor Sie die **UpdateBatch** -Methode aufrufen können, um Änderungen an der Datenbank zu veröffentlichen. Dies kann problemlos mithilfe der neuen Funktion **getNewConnection**erreicht werden.
+ Da in diesem Code ein nicht verbundenes **Recordset** mit einem Client seitigen Cursor im Batch Modus verwendet wird, müssen Sie das **Recordset** erneut mit der Datenquelle mit einem neuen **Verbindungs** Objekt verbinden, bevor Sie die **UpdateBatch** -Methode aufrufen können, um Änderungen an der Datenbank zu veröffentlichen. Dies kann problemlos mithilfe der neuen Funktion **getNewConnection** erreicht werden.

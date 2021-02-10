@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a6f4bc99caceeb7011c932c86e636304941c459c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a2f3e077a93d90afccf05023e41f8e5f2ea6fabc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418486"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017320"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Projekteinstellungen (Typzuordnung) (MySqlToSql)
 Mit den Projekteinstellungen für die Typzuordnung können Sie Standardtypmappings für das SSMA-Projekt festlegen.  
@@ -37,7 +37,7 @@ Der Datentyp der Zieldatenbank für den angegebenen MySQL-Datentyp.
 ##### <a name="add"></a>Hinzufügen  
 Klicken Sie hier, um der Zuordnungsliste einen Datentyp hinzuzufügen.  
   
-##### <a name="edit"></a>Bearbeiten  
+##### <a name="edit"></a>Edit (Bearbeiten)  
 Klicken Sie hierauf, um den ausgewählten Datentyp in der Liste Zuordnung zu bearbeiten.  
   
 ##### <a name="remove"></a>Remove (Entfernen)  
@@ -197,7 +197,7 @@ Die folgende Tabelle zeigt die Standard Zuordnung zwischen Quell-und Ziel Datent
 ##### <a name="add"></a>Hinzufügen  
 Klicken Sie hier, um der Zuordnungsliste einen Datentyp hinzuzufügen.  
   
-##### <a name="edit"></a>Bearbeiten  
+##### <a name="edit"></a>Edit (Bearbeiten)  
 Klicken Sie hierauf, um einen Datentyp in der Liste Zuordnung zu bearbeiten.  
   
 ##### <a name="remove"></a>Remove (Entfernen)  

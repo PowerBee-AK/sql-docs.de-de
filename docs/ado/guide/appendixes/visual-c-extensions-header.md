@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e8c15738d7ad6fe93a1401636239369b3a87381
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8d38a5d925bb90a85ccd41930bc5ef5ba49dfa94
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991801"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028684"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++-Erweiterungsheader
-Der folgende Header ( **icrsint. h**) beschreibt die Schnittstelle, mit der Clients Felder aus einem **Recordset** in Variablen abrufen können, die in einer Klasse definiert sind, die von **CADORecordBinding**abgeleitet wurde. Sie müssen für jedes Feld, auf das Sie zugreifen möchten, ein ADO-Bindungs Makro angeben.  
+Der folgende Header ( **icrsint. h**) beschreibt die Schnittstelle, mit der Clients Felder aus einem **Recordset** in Variablen abrufen können, die in einer Klasse definiert sind, die von **CADORecordBinding** abgeleitet wurde. Sie müssen für jedes Feld, auf das Sie zugreifen möchten, ein ADO-Bindungs Makro angeben.  
   
 ```cpp
 #ifndef _ICRSINT_H_  
@@ -58,16 +58,16 @@ enum ADOFieldStatusEnum
   
 typedef struct stADO_BINDING_ENTRY  
 {  
-   ULONG      ulOrdinal;  
-   WORD       wDataType;  
-   BYTE       bPrecision;  
-   BYTE       bScale;  
-   ULONG      ulSize;  
-   ULONG      ulBufferOffset;  
-   ULONG      ulStatusOffset;  
-   ULONG      ulLengthOffset;  
-   ULONG      ulADORecordBindingOffSet;  
-   BOOL       fModify;  
+   ULONG      ulOrdinal;  
+   WORD       wDataType;  
+   BYTE       bPrecision;  
+   BYTE       bScale;  
+   ULONG      ulSize;  
+   ULONG      ulBufferOffset;  
+   ULONG      ulStatusOffset;  
+   ULONG      ulLengthOffset;  
+   ULONG      ulADORecordBindingOffSet;  
+   BOOL       fModify;  
 } ADO_BINDING_ENTRY;  
   
 #define BEGIN_ADO_BINDING(cls) public: \  

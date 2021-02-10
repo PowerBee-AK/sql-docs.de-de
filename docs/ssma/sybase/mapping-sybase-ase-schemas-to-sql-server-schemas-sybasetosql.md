@@ -12,25 +12,25 @@ helpviewer_keywords:
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: db0c65c8def8c2a755fe6ca9a224c936e9085f8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a0084551b2e1ab6de4c3731f33525ccd3a8a48d5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320196"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017522"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Zuordnen von Sybase ASE-Schemas zu SQL Server-Schemas (SybaseToSQL)
 In Sybase Adaptive Server Enterprise (ASE) verfügt jede Datenbank über ein oder mehrere Schemas. Standardmäßig migriert SSMA alle Objekte innerhalb einer Datenbank und eines Schemas in die gleiche Datenbank und das gleiche Schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Sie können jedoch die Zuordnung zwischen ASE und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank anpassen.  
   
 ## <a name="ase-and-sql-server-or-sql-azure-schemas"></a>ASE-und SQL Server-oder SQL Azure Schemas  
-ASE und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure geben Datenbanken und Ihre Schemas mit zwei teiligen Schreibweise als " *Database. Schema*" an. Beispielsweise kann in einer ASE- **Demo** Datenbank ein **dbo** -Schema vorhanden sein. Diese Datenbank und das Schema paar werden als **Demo. dbo**angegeben. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure dieselbe Datenbank und dasselbe Schema hat, wird das Paar auch als **Demo. dbo**angegeben.  
+ASE und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure geben Datenbanken und Ihre Schemas mit zwei teiligen Schreibweise als " *Database. Schema*" an. Beispielsweise kann in einer ASE- **Demo** Datenbank ein **dbo** -Schema vorhanden sein. Diese Datenbank und das Schema paar werden als **Demo. dbo** angegeben. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure dieselbe Datenbank und dasselbe Schema hat, wird das Paar auch als **Demo. dbo** angegeben.  
   
 ## <a name="modifying-the-target-database-and-schema"></a>Ändern der Zieldatenbank und des Schemas  
 In SSMA können Sie einem beliebigen verfügbaren oder SQL Azure Schema ein ASE-Schema zuordnen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **So ändern Sie die Datenbank und das Schema**  
   
-1.  Wählen Sie im Sybase-metadatenexplorer **Datenbanken**aus.  
+1.  Wählen Sie im Sybase-metadatenexplorer **Datenbanken** aus.  
   
     Die Registerkarte **Schema Zuordnung** ist auch verfügbar, wenn Sie eine einzelne Datenbank, den Ordner **Schemas** oder einzelne Schemas auswählen. Die Liste auf der Registerkarte **Schema Zuordnung** ist für das ausgewählte Objekt angepasst.  
   
@@ -40,7 +40,7 @@ In SSMA können Sie einem beliebigen verfügbaren oder SQL Azure Schema ein ASE-
   
 3.  Wählen Sie die Zeile aus, die die Zuordnung enthält, die Sie ändern möchten, und klicken Sie dann auf **ändern**.  
   
-4.  Im Dialogfeld **Ziel Schema auswählen** können Sie nach verfügbaren Ziel Datenbanken und-Schemas suchen oder die Datenbank und den Schema Namen in das Textfeld in einer zwei teiligen Schreibweise (Database. Schema) eingeben und dann auf **OK**klicken.  
+4.  Im Dialogfeld **Ziel Schema auswählen** können Sie nach verfügbaren Ziel Datenbanken und-Schemas suchen oder die Datenbank und den Schema Namen in das Textfeld in einer zwei teiligen Schreibweise (Database. Schema) eingeben und dann auf **OK** klicken.  
   
 5.  Das Ziel ändert sich auf der Registerkarte **Schema Zuordnung** .  
   

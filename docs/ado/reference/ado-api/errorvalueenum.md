@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 238c8bf3d0c21625b9317690f70adbe16bd5075f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 519b505c0fcb985e6f0ca9cfd04f890114b3fdb2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171166"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025067"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Gibt den Typ des ADO-Lauf Zeit Fehlers an.  
@@ -32,14 +32,14 @@ Gibt den Typ des ADO-Lauf Zeit Fehlers an.
   
 -   Negatives Dezimaltrennzeichen: die Dezimal Übersetzung der vollständigen Fehlernummer.  
   
--   Hexadecimal-The hexadezimal Darstellung der vollständigen Fehlernummer. Der Windows-Einrichtungs Code ist in der vierten Ziffer. Der Einrichtungs Code für ADO-Fehlernummern ist *ein*. Beispiel: 0x800 ***A** _0E7B.  
+-   Hexadecimal-The hexadezimal Darstellung der vollständigen Fehlernummer. Der Windows-Einrichtungs Code ist in der vierten Ziffer. Der Einrichtungs Code für ADO-Fehlernummern ist *ein*. Beispiel: 0x800 ***A*** 0e7b.  
   
 > [!NOTE]
->  OLE DB Fehler können an Ihre ADO-Anwendung übermittelt werden. Diese können in der Regel durch einen Windows-Einrichtungs Code von _4 identifiziert werden *. Beispiel: 0x800 * * * 4* *_.  
+>  OLE DB Fehler können an Ihre ADO-Anwendung übermittelt werden. Diese können in der Regel durch einen Windows-Einrichtungs Code von *4* identifiziert werden. Beispiel: 0x800 ***4***.  
   
 |Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|_ *aderrbound-Befehl**|3707-2146824581 0x800a0e7b|Die **ActiveConnection** -Eigenschaft eines **Recordset** -Objekts, das über ein **Command** -Objekt als Quelle verfügt, kann nicht geändert werden.|  
+|**aderrboundto-Befehl**|3707-2146824581 0x800a0e7b|Die **ActiveConnection** -Eigenschaft eines **Recordset** -Objekts, das über ein **Command** -Objekt als Quelle verfügt, kann nicht geändert werden.|  
 |**aderrcannotcomplete**|3732-2146824556 0x800a0e94|Der Server kann den Vorgang nicht beenden.|  
 |**aderrcantchangeconnection**|3748-2146824540 0x800a0ea4|Die Verbindung wurde verweigert. Die von Ihnen angeforderte neue Verbindung weist andere Eigenschaften auf als die, die bereits verwendet werden.|  
 |**aderrcantchangeprovider**|3220-2146825068 0x800a0c94|Der angegebene Anbieter unterscheidet sich von dem bereits verwendeten Anbieter.|  

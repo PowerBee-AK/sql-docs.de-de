@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d485dbb17075033add5e3ee93dbcf9b6bf44e65
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c992b58b6b84f79efa62c63353e3b8f1efcc333d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991221"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030498"
 ---
 # <a name="ado-security-design-features"></a>ADO-Sicherheits Entwurfs Features
 In den folgenden Abschnitten werden die Sicherheits Entwurfs Features in ActiveX Data Objects (ADO) 2,8 und höher beschrieben. Diese Änderungen wurden in ADO 2,8 vorgenommen, um die Sicherheit zu verbessern. ADO 6,0, das in Windows DAC 6,0 in Windows Vista enthalten ist, ist funktional äquivalent zu ADO 2,8, das in MDAC 2,8 in Windows XP und Windows Server 2003 enthalten war. Dieses Thema enthält Informationen zur optimalen Absicherung Ihrer Anwendungen in ADO 2,8 oder höher.
@@ -103,7 +103,7 @@ This Website is using your identity to access a data source. If you trust this W
 
 2.  Abhängig von der Einstellung im OLE DB-Anbieter der [DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO](/previous-versions/windows/desktop/ms714905(v=vs.85)) -Eigenschaft werden Kenn Wörter zusammen mit anderen zurückgegebenen Verbindungs Zeichen folgen Informationen eingeschlossen.
 
- Wenn z. b. die dynamische Eigenschaft ADO-Verbindung persistente **Sicherheitsinformationen** auf **true**festgelegt ist, sind die Kenn Wort Informationen in der zurückgegebenen Verbindungs Zeichenfolge enthalten. Wenn der zugrunde liegende Anbieter die-Eigenschaft auf **false** festgelegt hat (z. b. mit dem SQLOLEDB-Anbieter), werden Kenn Wort Informationen in der zurückgegebenen Verbindungs Zeichenfolge ausgelassen.
+ Wenn z. b. die dynamische Eigenschaft ADO-Verbindung persistente **Sicherheitsinformationen** auf **true** festgelegt ist, sind die Kenn Wort Informationen in der zurückgegebenen Verbindungs Zeichenfolge enthalten. Wenn der zugrunde liegende Anbieter die-Eigenschaft auf **false** festgelegt hat (z. b. mit dem SQLOLEDB-Anbieter), werden Kenn Wort Informationen in der zurückgegebenen Verbindungs Zeichenfolge ausgelassen.
 
  Wenn Sie Drittanbieter (d. h. nicht-Microsoft) OLE DB Anbietern mit Ihrem ADO-Anwendungscode verwenden, können Sie überprüfen, wie die **DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO** -Eigenschaft implementiert wird, um zu bestimmen, ob die Einbindung von Kenn Wort Informationen mit ADO-Verbindungs Zeichenfolgen zulässig ist.
 

@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0419311c4d8e952a5212f60dee055c7b37aed5f4
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b5acd1b06bbaad8476ac48261ba49a6ca90cb0b5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990931"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028655"
 ---
 # <a name="visual-c-extensions"></a>Visual C++ Erweiterungen
 ## <a name="the-iadorecordbinding-interface"></a>Die IADORecordBinding-Schnittstelle
  Die Microsoft Visual C++ Erweiterungen für ADO-Zuordnungs-oder Bindungs Felder eines [Recordset](../../reference/ado-api/recordset-object-ado.md) -Objekts zu C/C++-Variablen. Wenn sich die aktuelle Zeile des gebundenen **Recordsets** ändert, werden alle gebundenen Felder im **Recordset** in die C/C++-Variablen kopiert. Bei Bedarf werden die kopierten Daten in den deklarierten Datentyp der C/C++-Variablen konvertiert.
 
- Die **BindToRecordset** -Methode der **IADORecordBinding** -Schnittstelle bindet Felder an C/C++-Variablen. Die **AddNew** -Methode fügt dem gebundenen **Recordset**eine neue Zeile hinzu. Die **Update** -Methode füllt Felder in neuen Zeilen des **Recordsets**auf oder aktualisiert Felder in vorhandenen Zeilen mit dem Wert der C/C++-Variablen.
+ Die **BindToRecordset** -Methode der **IADORecordBinding** -Schnittstelle bindet Felder an C/C++-Variablen. Die **AddNew** -Methode fügt dem gebundenen **Recordset** eine neue Zeile hinzu. Die **Update** -Methode füllt Felder in neuen Zeilen des **Recordsets** auf oder aktualisiert Felder in vorhandenen Zeilen mit dem Wert der C/C++-Variablen.
 
  Die **IADORecordBinding** -Schnittstelle wird durch das **Recordset** -Objekt implementiert. Sie müssen die Implementierung nicht selbst codieren.
 
 ## <a name="binding-entries"></a>Bindungs Einträge
- Die Visual C++ Erweiterungen für ADO-Karten Felder eines [Recordset](../../reference/ado-api/recordset-object-ado.md) -Objekts zu C/C++-Variablen. Die Definition einer Zuordnung zwischen einem Feld und einer Variablen wird als *Bindungs Eintrag*bezeichnet. Makros stellen Bindungs Einträge für numerische Daten mit fester Länge und variabler Länge bereit. Die Bindungs Einträge und C/C++-Variablen werden in einer Klasse deklariert, die von der Visual C++ Extensions-Klasse **CADORecordBinding**abgeleitet ist. Die **CADORecordBinding** -Klasse wird intern durch die Bindungs Eintrags Makros definiert.
+ Die Visual C++ Erweiterungen für ADO-Karten Felder eines [Recordset](../../reference/ado-api/recordset-object-ado.md) -Objekts zu C/C++-Variablen. Die Definition einer Zuordnung zwischen einem Feld und einer Variablen wird als *Bindungs Eintrag* bezeichnet. Makros stellen Bindungs Einträge für numerische Daten mit fester Länge und variabler Länge bereit. Die Bindungs Einträge und C/C++-Variablen werden in einer Klasse deklariert, die von der Visual C++ Extensions-Klasse **CADORecordBinding** abgeleitet ist. Die **CADORecordBinding** -Klasse wird intern durch die Bindungs Eintrags Makros definiert.
 
  ADO ordnet die Parameter in diesen Makros intern einer OLE DB **DBBINDING** -Struktur zu und erstellt ein **OLE DB** Accessorobjekt, um die Verschiebung und Konvertierung von Daten zwischen Feldern und Variablen zu verwalten. OLE DB definiert Daten, die aus drei Teilen bestehen: einem *Puffer* , in dem die Daten gespeichert werden. ein *Status* , der angibt, ob ein Feld erfolgreich im Puffer gespeichert wurde, oder wie die Variable im Feld wieder hergestellt werden soll. und die *Länge* der Daten. (Weitere Informationen finden Sie unter "beziehen [und Festlegen von Daten (OLE DB)](/previous-versions/windows/desktop/ms713700(v=vs.85))" in der OLE DB Programmierer-Referenz.)
 
@@ -53,12 +53,12 @@ ms.locfileid: "88990931"
 
      Geben Sie einen Bindungs Eintrag für jedes Feld an, das einer C/C++-Variablen zugeordnet werden soll. Verwenden Sie einen geeigneten Member aus der **ADO_FIXED_LENGTH_ENTRY**-, **ADO_NUMERIC_ENTRY**-oder **ADO_VARIABLE_LENGTH_ENTRY** Familie von Makros.
 
-3.  Erstellen Sie in Ihrer Anwendung eine Instanz der Klasse, die von **CADORecordBinding**abgeleitet wurde. Abrufen der **IADORecordBinding** -Schnittstelle aus dem **Recordset**. Anschließend können Sie die **BindToRecordset** -Methode aufrufen, um die **Recordsetfelder** an die C/C++-Variablen zu binden.
+3.  Erstellen Sie in Ihrer Anwendung eine Instanz der Klasse, die von **CADORecordBinding** abgeleitet wurde. Abrufen der **IADORecordBinding** -Schnittstelle aus dem **Recordset**. Anschließend können Sie die **BindToRecordset** -Methode aufrufen, um die **Recordsetfelder** an die C/C++-Variablen zu binden.
 
  Weitere Informationen finden Sie im [Beispiel für Visual C++ Erweiterungen](./visual-c-extensions-example.md).
 
 ## <a name="interface-methods"></a>Schnittstellenmethoden
- Die **IADORecordBinding** -Schnittstelle verfügt über drei Methoden: **BindToRecordset**, **AddNew**und **Update**. Das einzige Argument für jede Methode ist ein Zeiger auf eine Instanz der Klasse, die von **CADORecordBinding**abgeleitet ist. Daher können die **AddNew** -Methode und die **Update** -Methode keinen der Parameter Ihrer ADO-Methoden namesakes angeben.
+ Die **IADORecordBinding** -Schnittstelle verfügt über drei Methoden: **BindToRecordset**, **AddNew** und **Update**. Das einzige Argument für jede Methode ist ein Zeiger auf eine Instanz der Klasse, die von **CADORecordBinding** abgeleitet ist. Daher können die **AddNew** -Methode und die **Update** -Methode keinen der Parameter Ihrer ADO-Methoden namesakes angeben.
 
 ## <a name="syntax"></a>Syntax
  Die **BindToRecordset** -Methode ordnet die **Recordsetfelder** den C/C++-Variablen zu.
@@ -67,13 +67,13 @@ ms.locfileid: "88990931"
 BindToRecordset(CADORecordBinding *binding)
 ```
 
- Die **AddNew** -Methode ruft ihren Namespace, die ADO [AddNew](../../reference/ado-api/addnew-method-ado.md) -Methode, auf, um dem **Recordset**eine neue Zeile hinzuzufügen.
+ Die **AddNew** -Methode ruft ihren Namespace, die ADO [AddNew](../../reference/ado-api/addnew-method-ado.md) -Methode, auf, um dem **Recordset** eine neue Zeile hinzuzufügen.
 
 ```cpp
 AddNew(CADORecordBinding *binding)
 ```
 
- Die **Update** -Methode ruft ihren Namespace, die ADO- [Aktualisierungs](../../reference/ado-api/update-method.md) Methode, auf, um das **Recordset**zu aktualisieren.
+ Die **Update** -Methode ruft ihren Namespace, die ADO- [Aktualisierungs](../../reference/ado-api/update-method.md) Methode, auf, um das **Recordset** zu aktualisieren.
 
 ```cpp
 Update(CADORecordBinding *binding)
@@ -82,14 +82,14 @@ Update(CADORecordBinding *binding)
 ## <a name="binding-entry-macros"></a>Bindungs Eintrags Makros
  Bindungs Eintrags Makros definieren die Zuordnung eines **recordsetfelds** und einer Variablen. Ein Makro für den Anfang und das Ende begrenzt den Satz von Bindungs Einträgen.
 
- Familien von Makros werden für Daten mit fester Länge, z. b. **adDate** oder **adboolean**, bereitgestellt. numerische Daten, z. b. **adtinyint**, **adinteger**oder **adDouble**; und Daten variabler Länge, z. b. **adchar**, **adVarChar** oder **adVarBinary**. Alle numerischen Typen, mit Ausnahme von **advarnumeric**, sind auch Typen mit fester Länge. Jede Familie verfügt über unterschiedliche Sätze von Parametern, sodass Sie Bindungs Informationen ausschließen können, die nicht von Interesse sind.
+ Familien von Makros werden für Daten mit fester Länge, z. b. **adDate** oder **adboolean**, bereitgestellt. numerische Daten, z. b. **adtinyint**, **adinteger** oder **adDouble**; und Daten variabler Länge, z. b. **adchar**, **adVarChar** oder **adVarBinary**. Alle numerischen Typen, mit Ausnahme von **advarnumeric**, sind auch Typen mit fester Länge. Jede Familie verfügt über unterschiedliche Sätze von Parametern, sodass Sie Bindungs Informationen ausschließen können, die nicht von Interesse sind.
 
  Weitere Informationen finden Sie unter [Anhang A: Datentypen](/previous-versions/windows/desktop/ms723969(v=vs.85))der OLE DB Programmierer-Referenz.
 
 ### <a name="begin-binding-entries"></a>Binden von Einträgen beginnen
  **BEGIN_ADO_BINDING**(*Klasse*)
 
-### <a name="fixed-length-data"></a>Daten mit fester Länge
+### <a name="fixed-length-data"></a>Fixed-Length Daten
  **ADO_FIXED_LENGTH_ENTRY**(*Ordinal, DataType, Buffer, Status, Modify*)
 
  **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Modify*)
@@ -99,7 +99,7 @@ Update(CADORecordBinding *binding)
 
  **ADO_NUMERIC_ENTRY2**(*Ordinal, DataType, Buffer, Precision, Scale, Modify*)
 
-### <a name="variable-length-data"></a>Daten variabler Länge
+### <a name="variable-length-data"></a>Variable-Length Daten
  **ADO_VARIABLE_LENGTH_ENTRY**(*Ordinal, Datentyp, Puffer, Größe, Status, Länge, ändern*)
 
  **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Size, Status, Modify*)
@@ -111,25 +111,25 @@ Update(CADORecordBinding *binding)
 ### <a name="end-binding-entries"></a>Bindungs Einträge beenden
  **END_ADO_BINDING**()
 
-|Parameter|Beschreibung|
+|Parameter|BESCHREIBUNG|
 |---------------|-----------------|
 |*Klasse*|Die Klasse, in der die Bindungs Einträge und die C/C++-Variablen definiert werden.|
 |*Ordinal*|Die Ordinalzahl des **recordsetfelds** , die der C/C++-Variablen entspricht.|
 |*DataType*|Entsprechender ADO-Datentyp der C/C++-Variablen (Weitere Informationen finden Sie unter [datatypeer](../../reference/ado-api/datatypeenum.md) -Enumeration). Der Wert des **Recordset** -Felds wird bei Bedarf in diesen Datentyp konvertiert.|
 |*Buffer*|Der Name der C/C++-Variablen, in der das **Recordsetfeld** gespeichert wird.|
-|*Größe*|Maximale Größe des *Puffers*in Bytes. Wenn der *Puffer* eine Zeichenfolge variabler Länge enthält, lassen Sie Raum für eine abschließende NULL-Werte zu.|
+|*Größe*|Maximale Größe des *Puffers* in Bytes. Wenn der *Puffer* eine Zeichenfolge variabler Länge enthält, lassen Sie Raum für eine abschließende NULL-Werte zu.|
 |*Status*|Der Name einer Variablen, die angibt, ob der Inhalt des *Puffers* gültig ist und ob die Konvertierung des Felds in den *Datentyp* erfolgreich war.<br /><br /> Die zwei wichtigsten Werte für diese Variable sind **adFldOK**, was bedeutet, dass die Konvertierung erfolgreich war. und **adFldNull**. Dies bedeutet, dass der Wert des Felds eine Variante vom Typ VT_NULL und nicht nur leer ist.<br /><br /> Mögliche Werte für den *Status* sind in der nächsten Tabelle "Statuswerte" aufgeführt.|
-|*Modify* (Ändern)|Boolesches Flag; TRUE gibt an, dass ADO das entsprechende **Recordsetfeld** mit dem im *Puffer*enthaltenen Wert aktualisieren darf.<br /><br /> Legen Sie den booleschen Parameter *Modify* auf true fest, damit ADO das gebundene Feld aktualisieren kann, und false, wenn Sie das Feld untersuchen, aber nicht ändern möchten.|
+|*Modify*|Boolesches Flag; TRUE gibt an, dass ADO das entsprechende **Recordsetfeld** mit dem im *Puffer* enthaltenen Wert aktualisieren darf.<br /><br /> Legen Sie den booleschen Parameter *Modify* auf true fest, damit ADO das gebundene Feld aktualisieren kann, und false, wenn Sie das Feld untersuchen, aber nicht ändern möchten.|
 |*Genauigkeit*|Anzahl von Ziffern, die in einer numerischen Variablen dargestellt werden können.|
 |*Skalieren*|Anzahl der Dezimalstellen in einer numerischen Variablen.|
-|*Länge*|Der Name einer 4-Byte-Variablen, die die tatsächliche Länge der Daten im *Puffer*enthält.|
+|*Länge*|Der Name einer 4-Byte-Variablen, die die tatsächliche Länge der Daten im *Puffer* enthält.|
 
 ## <a name="status-values"></a>Statuswerte
  Der Wert der *Status* Variablen gibt an, ob ein Feld erfolgreich in eine Variable kopiert wurde.
 
  Beim Festlegen von Daten kann der *Status* auf **adFldNull** festgelegt werden, um anzugeben, dass das **Recordsetfeld** auf NULL festgelegt werden soll.
 
-|Konstante|Wert|Beschreibung|
+|Konstante|Wert|BESCHREIBUNG|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Es wurde ein Feldwert ungleich NULL zurückgegeben.|
 |**adfldbadaccessor**|1|Die Bindung war ungültig.|

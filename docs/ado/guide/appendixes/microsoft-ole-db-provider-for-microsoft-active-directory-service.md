@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08d945b101ac91300793920e3e01ea0a9619b372
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2174610e0747f984babae59c4b00d1245d763db2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991051"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029274"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB-Anbieter für Microsoft Active Directory Service
 Der ADSI-Anbieter (Active Directory Service Interfaces) ermöglicht ADO das Herstellen einer Verbindung mit heterogenen Verzeichnisdiensten über ADSI. Dies ermöglicht ADO-Anwendungen einen schreibgeschützten Zugriff auf die Verzeichnisdienste Microsoft Windows NT 4,0 und Microsoft Windows 2000, zusätzlich zu allen LDAP-kompatiblen Verzeichnisdienst-und Novell-Verzeichnisdiensten. ADSI selbst basiert auf einem Anbieter Modell. wenn es also einen neuen Anbieter gibt, der Zugriff auf ein anderes Verzeichnis bietet, kann die ADO-Anwendung nahtlos darauf zugreifen. Der ADSI-Anbieter ist frei Thread-und Unicode-fähig.  
@@ -44,7 +44,7 @@ ADSDSOObject
   
  Die Zeichenfolge besteht aus den folgenden Schlüsselwörtern.  
   
-|Schlüsselwort|Beschreibung|  
+|Schlüsselwort|BESCHREIBUNG|  
 |-------------|-----------------|  
 |**Anbieter**|Gibt den OLE DB Anbieter für Active Directory Dienst an.|  
 |**Benutzer-ID**|Gibt den Benutzernamen an. Wenn dieses Schlüsselwort weggelassen wird, wird die aktuelle Anmeldung verwendet.|  
@@ -60,12 +60,12 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|Wert|Beschreibung|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |*Fasst*|Gibt das **ADsPath** -Objekt an, aus dem die Suche gestartet werden soll (d. h. der Stamm der Suche).|  
 |*Filter*|Gibt den Suchfilter im RFC 1960-Format an.|  
 |*Attribute*|Gibt eine durch Trennzeichen getrennte Liste von Attributen an, die zurückgegeben werden sollen.|  
-|*Umfang*|Optional. Eine **Zeichenfolge** , die den Suchbereich angibt. Dabei kann es sich um eine der folgenden Methoden handeln:<br /><br /> -Base: sucht nur nach dem Basisobjekt (Stamm der Suche).<br />-Onelevel-nur eine Ebene suchen.<br />-Subtree: Durchsuchen Sie die gesamte Unterstruktur.|  
+|*Scope*|Optional. Eine **Zeichenfolge** , die den Suchbereich angibt. Dabei kann es sich um eine der folgenden Methoden handeln:<br /><br /> -Base: sucht nur nach dem Basisobjekt (Stamm der Suche).<br />-Onelevel-nur eine Ebene suchen.<br />-Subtree: Durchsuchen Sie die gesamte Unterstruktur.|  
   
  Beispiel:  
   
@@ -96,7 +96,7 @@ objectClass='user' AND objectCategory='Person'"
 |[AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md)|Lesen/Schreiben|  
 |[ActiveConnection](../../reference/ado-api/activeconnection-property-ado.md)|schreibgeschützt|  
 |[BOF](../../reference/ado-api/bof-eof-properties-ado.md)|schreibgeschützt|  
-|[Lesezeichen](../../reference/ado-api/bookmark-property-ado.md)|Lesen/Schreiben|  
+|[Textmarke](../../reference/ado-api/bookmark-property-ado.md)|Lesen/Schreiben|  
 |[CacheSize](../../reference/ado-api/cachesize-property-ado.md)|Lesen/Schreiben|  
 |[CursorLocation –](../../reference/ado-api/cursorlocation-property-ado.md)|immer **AD-eServer**|  
 |[CursorType](../../reference/ado-api/cursortype-property-ado.md)|Always **adop-static**|  
@@ -110,7 +110,7 @@ objectClass='user' AND objectCategory='Person'"
 |[PageSize](../../reference/ado-api/pagesize-property-ado.md)|Lesen/Schreiben|  
 |[RecordCount](../../reference/ado-api/recordcount-property-ado.md)|schreibgeschützt|  
 |[Quelle](../../reference/ado-api/source-property-ado-recordset.md)|Lesen/Schreiben|  
-|[State](../../reference/ado-api/state-property-ado.md)|schreibgeschützt|  
+|[Zustand](../../reference/ado-api/state-property-ado.md)|schreibgeschützt|  
 |[Status](../../reference/ado-api/status-property-ado-recordset.md)|schreibgeschützt|  
   
  **Verfügbarkeit der standardmäßigen ADO-recordsetmethoden:**  
@@ -118,7 +118,7 @@ objectClass='user' AND objectCategory='Person'"
 |Methode|Verfügbar?|  
 |------------|----------------|  
 |[AddNew](../../reference/ado-api/addnew-method-ado.md)|Nein|  
-|[Abbrechen](../../reference/ado-api/cancel-method-ado.md)|Nein|  
+|[Kündigen](../../reference/ado-api/cancel-method-ado.md)|Nein|  
 |[CancelBatch](../../reference/ado-api/cancelbatch-method-ado.md)|Nein|  
 |[CancelUpdate](../../reference/ado-api/cancelupdate-method-ado.md)|Nein|  
 |[Klonen](../../reference/ado-api/clone-method-ado.md)|Ja|  

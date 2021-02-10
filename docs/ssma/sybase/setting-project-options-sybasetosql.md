@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: df912a5a58bdcfb2777177bddef80899f31f38c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa8e45af93faa4ef175d129487a1d655a6d02ead
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468714"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030758"
 ---
 # <a name="setting-project-options-sybasetosql"></a>Festlegen von Projektoptionen (SybaseToSQL)
 Für jedes SSMA-Projekt können Sie Optionen auf Projektebene festlegen. Diese Optionen geben die Objekt Konvertierung, das Laden von Objekten, SQL Azure, die Benutzeroberfläche und Daten Migrations Einstellungen an. Vergewissern Sie sich, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dass die Konfigurationsoptionen für das Projekt geeignet sind, bevor Sie Objekte in oder SQL Azure oder Daten in oder SQL Azure migrieren.  
@@ -68,13 +68,13 @@ In SSMA können Sie die Standardeinstellungen für alle Projekte konfigurieren. 
   
 **So legen Sie Standard Projektoptionen fest**  
   
-1.  Wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen**aus.  
+1.  Wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen** aus.  
   
 2.  Verwenden Sie im Dialogfeld **Standard Projekteinstellungen** eines der folgenden Prozeduren:  
   
     -   Wählen Sie den Migrations Projekttyp aus, für den die Einstellungen in der Dropdown Liste **Migrations Ziel Version** angezeigt oder geändert werden müssen, klicken Sie unten im linken Bereich auf Allgemein, und wählen Sie dann Konvertierung oder Migration oder SQL Azure aus.  
   
-    -   Wählen Sie zum Auswählen eines vordefinierten Modus im Dropdown Feld **Modus** die Option **Standard**, **optimistische**oder **vollständig**aus.  
+    -   Wählen Sie zum Auswählen eines vordefinierten Modus im Dropdown Feld **Modus** die Option **Standard**, **optimistische** oder **vollständig** aus.  
   
     -   Um benutzerdefinierte Einstellungen anzugeben, wählen Sie einfach die neuen Einstellungen oder Werte aus, oder geben Sie Sie ein.  
   
@@ -84,13 +84,13 @@ Sie können auch die Einstellungen für das aktuelle Projekt anpassen. Diese Ein
   
 **So passen Sie die Einstellungen für das aktuelle Projekt an**  
   
-1.  Wählen Sie **im Menü Extras** die Option **Projekteinstellungen**aus.  
+1.  Wählen Sie **im Menü Extras** die Option **Projekteinstellungen** aus.  
   
 2.  Verwenden Sie im Dialogfeld **Projekteinstellungen** eines der folgenden Prozeduren:  
   
-    -   Wählen Sie zum Auswählen eines vordefinierten Modus im Dropdown Feld **Modus** die Option **Standard**, **optimistische**oder **vollständig**aus.  
+    -   Wählen Sie zum Auswählen eines vordefinierten Modus im Dropdown Feld **Modus** die Option **Standard**, **optimistische** oder **vollständig** aus.  
   
-    -   Um einen benutzerdefinierten Modus anzugeben, wählen Sie im Dropdown Feld **Modus** die Option **Benutzer**definiert aus, wählen Sie im linken Bereich eine Option aus, klicken Sie im rechten Bereich auf die Einstellung oder den Wert, und wählen Sie die neue Einstellung oder den Wert aus, oder geben Sie Sie ein.  
+    -   Um einen benutzerdefinierten Modus anzugeben, wählen Sie im Dropdown Feld **Modus** die Option **Benutzer** definiert aus, wählen Sie im linken Bereich eine Option aus, klicken Sie im rechten Bereich auf die Einstellung oder den Wert, und wählen Sie die neue Einstellung oder den Wert aus, oder geben Sie Sie ein.  
   
 3.  Klicken Sie auf **OK**, um die Einstellungen zu speichern.  
   

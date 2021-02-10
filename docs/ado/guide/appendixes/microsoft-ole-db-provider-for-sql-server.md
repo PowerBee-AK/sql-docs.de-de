@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a307a0de76ce1e74e3e1773a414fce93957572b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1b6a62e8946415cc9c1e869a173de43b98ba14f7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991001"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029254"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Übersicht über den Microsoft OLE DB-Anbieter für SQL Server
 Der Microsoft OLE DB-Anbieter für SQL Server SQLOLEDB ermöglicht ADO den Zugriff auf Microsoft SQL Server.
@@ -48,7 +48,7 @@ User ID=MyUserID;Password=MyPassword;"
 
  Die Zeichenfolge besteht aus folgenden Schlüsselwörtern:
 
-|Schlüsselwort|Beschreibung|
+|Schlüsselwort|BESCHREIBUNG|
 |-------------|-----------------|
 |**Anbieter**|Gibt den OLE DB Anbieter für SQL Server an.|
 |**Datenquelle** oder **Server**|Gibt den Namen eines Servers an.|
@@ -59,17 +59,17 @@ User ID=MyUserID;Password=MyPassword;"
 > [!NOTE]
 >  Wenn Sie eine Verbindung mit einem Datenquellen Anbieter herstellen, der die Windows-Authentifizierung unterstützt, sollten Sie in der Verbindungs Zeichenfolge **Trusted_Connection = yes** oder **Integrated Security = SSPI** anstelle von Benutzer-ID und Kennwort angeben.
 
-## <a name="provider-specific-connection-parameters"></a>Anbieterspezifische Verbindungsparameter
+## <a name="provider-specific-connection-parameters"></a>Verbindungsparameter Provider-Specific
  Der Anbieter unterstützt mehrere Anbieterspezifische Verbindungsparameter zusätzlich zu den von ADO definierten Verbindungsparametern. Wie bei den ADO-Verbindungs Eigenschaften können diese anbieterspezifischen Eigenschaften über die [Properties](../../reference/ado-api/properties-collection-ado.md) -Auflistung einer [Verbindung](../../reference/ado-api/connection-object-ado.md) festgelegt werden oder als Teil von " **ConnectionString**" festgelegt werden.
 
-|Parameter|Beschreibung|
+|Parameter|BESCHREIBUNG|
 |---------------|-----------------|
-|Trusted_Connection|Gibt den Benutzer Authentifizierungsmodus an. Dieser Wert kann auf **Ja** oder **Nein**festgelegt werden. Der Standardwert ist **Nein**. Wenn diese Eigenschaft auf " **Ja**" festgelegt ist, verwendet SQLOLEDB den Microsoft Windows NT-Authentifizierungsmodus, um den Benutzer Zugriff auf die SQL Server Datenbank zu autorisieren, die durch die Eigenschaften Werte **Location** und [DataSource](../../reference/ado-api/datasource-property-ado.md) angegeben wird. Wenn diese Eigenschaft auf **No**festgelegt ist, verwendet SQLOLEDB den gemischten Modus, um den Benutzer Zugriff auf die SQL Server Datenbank zu autorisieren. Die SQL Server-Anmeldung und das Kennwort werden in den Eigenschaften **Benutzer-ID** und **Kennwort** angegeben.|
-|Aktuelle Sprache|Gibt einen SQL Server Sprachen Namen an. Identifiziert die für die Auswahl und Formatierung von Systemnachrichten verwendete Sprache. Die Sprache muss auf der SQL Server installiert sein, andernfalls tritt beim Öffnen der Verbindung ein Fehler auf.|
+|Trusted_Connection|Gibt den Benutzer Authentifizierungsmodus an. Dieser Wert kann auf **Ja** oder **Nein** festgelegt werden. Der Standardwert ist **Nein**. Wenn diese Eigenschaft auf " **Ja**" festgelegt ist, verwendet SQLOLEDB den Microsoft Windows NT-Authentifizierungsmodus, um den Benutzer Zugriff auf die SQL Server Datenbank zu autorisieren, die durch die Eigenschaften Werte **Location** und [DataSource](../../reference/ado-api/datasource-property-ado.md) angegeben wird. Wenn diese Eigenschaft auf **No** festgelegt ist, verwendet SQLOLEDB den gemischten Modus, um den Benutzer Zugriff auf die SQL Server Datenbank zu autorisieren. Die SQL Server-Anmeldung und das Kennwort werden in den Eigenschaften **Benutzer-ID** und **Kennwort** angegeben.|
+|Current Language|Gibt einen SQL Server Sprachen Namen an. Identifiziert die für die Auswahl und Formatierung von Systemnachrichten verwendete Sprache. Die Sprache muss auf der SQL Server installiert sein, andernfalls tritt beim Öffnen der Verbindung ein Fehler auf.|
 |Netzwerkadresse|Gibt die Netzwerkadresse des SQL Server an, der von der **Location** -Eigenschaft angegeben wird.|
 |Network Library|Gibt den Namen der Netzwerk Bibliothek (dll) an, die für die Kommunikation mit dem SQL Server verwendet wird. Der Name sollte weder den Pfad noch die DLL-Dateinamenerweiterung enthalten. Der Standardwert wird von der SQL Server Client Konfiguration bereitgestellt.|
 |Verfahren für Vorbereitung verwenden|Bestimmt, ob SQL Server temporär gespeicherte Prozeduren erstellt, wenn Befehle vorbereitet werden (von der **vorbereiteten** Eigenschaft).|
-|Automatisches Übersetzen|Gibt an, ob OEM/ANSI-Zeichen konvertiert werden. Diese Eigenschaft kann auf " **true** " oder " **false**" festgelegt werden. Der Standardwert ist **True**. Wenn diese Eigenschaft auf **true**festgelegt ist, führt SQLOLEDB eine OEM/ANSI-Zeichen Konvertierung aus, wenn Multibyte-Zeichen folgen von der SQL Server abgerufen oder an diese gesendet werden. Wenn diese Eigenschaft auf **false**festgelegt ist, führt SQLOLEDB keine OEM/ANSI-Zeichen Konvertierung für Multibyte-Zeichen folgen Daten aus.|
+|Automatisches Übersetzen|Gibt an, ob OEM/ANSI-Zeichen konvertiert werden. Diese Eigenschaft kann auf " **true** " oder " **false**" festgelegt werden. Der Standardwert ist **True**. Wenn diese Eigenschaft auf **true** festgelegt ist, führt SQLOLEDB eine OEM/ANSI-Zeichen Konvertierung aus, wenn Multibyte-Zeichen folgen von der SQL Server abgerufen oder an diese gesendet werden. Wenn diese Eigenschaft auf **false** festgelegt ist, führt SQLOLEDB keine OEM/ANSI-Zeichen Konvertierung für Multibyte-Zeichen folgen Daten aus.|
 |Packet Size|Gibt eine Netzwerk Paketgröße in Bytes an. Der Eigenschafts Wert für die Paketgröße muss zwischen 512 und 32767 liegen. Die standardmäßige SQLOLEDB-Netzwerk Paketgröße ist 4096.|
 |Anwendungsname|Gibt den Namen der Client Anwendung an.|
 |Workstation ID|Eine Zeichenfolge, die die Arbeitsstation identifiziert.|
@@ -112,7 +112,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
  Mit SQL Server kann ADO XML für **Befehls** Eingaben verwenden und Ergebnisse im XML-Datenstrom Format anstelle von **Recordset** -Objekten abrufen. Weitere Informationen finden Sie unter [Verwenden von Streams für Befehlseingaben](../data/command-streams.md) und [Abrufen von Resultsets in Streams](../data/retrieving-resultsets-into-streams.md).
 
 ### <a name="accessing-sql_variant-data-using-mdac-27-mdac-28-or-windows-dac-60"></a>Zugreifen auf sql_variant Daten mithilfe von MDAC 2,7, MDAC 2,8 oder Windows DAC 6,0
- Microsoft SQL Server hat einen Datentyp namens **sql_variant**. Ähnlich wie bei der **DBTYPE_VARIANT**von OLE DB können mit dem **sql_variant** -Datentyp Daten verschiedener Typen gespeichert werden. Es gibt jedoch einige wichtige Unterschiede zwischen **DBTYPE_VARIANT** und **sql_variant**. ADO verarbeitet auch als **sql_variant** Wert gespeicherte Daten anders als bei der Verarbeitung anderer Datentypen. In der folgenden Liste werden Probleme beschrieben, die beim Zugriff auf SQL Server in Spalten vom Typ **sql_variant**gespeicherten Daten zu beachten sind.
+ Microsoft SQL Server hat einen Datentyp namens **sql_variant**. Ähnlich wie bei der **DBTYPE_VARIANT** von OLE DB können mit dem **sql_variant** -Datentyp Daten verschiedener Typen gespeichert werden. Es gibt jedoch einige wichtige Unterschiede zwischen **DBTYPE_VARIANT** und **sql_variant**. ADO verarbeitet auch als **sql_variant** Wert gespeicherte Daten anders als bei der Verarbeitung anderer Datentypen. In der folgenden Liste werden Probleme beschrieben, die beim Zugriff auf SQL Server in Spalten vom Typ **sql_variant** gespeicherten Daten zu beachten sind.
 
 -   In MDAC 2,7, MDAC 2,8 und Windows Data Access Components (Windows DAC) 6,0 unterstützt der OLE DB Anbieter für SQL Server den **sql_variant** Typ. Der OLE DB Anbieter für ODBC nicht.
 
@@ -122,9 +122,9 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
 -   Mehrere Datentyp Umwandlungen führen zu Typen, die nicht mit Stimmen. Das Umwandeln einer **sql_variant** mit einem Untertyp von **GUID** in eine **DBTYPE_VARIANT** führt beispielsweise zu einem Untertyp von **SAFEARRAY**(Bytes). Wenn Sie diesen Typ wieder in einen **sql_variant** zurückkehren, führt dies zu einem neuen Untertyp von **Array**(Bytes).
 
--   **Recordsetfelder** , die **sql_variant** Daten enthalten, können Remote (gemarshallt) oder nur persistent gespeichert werden, wenn die **sql_variant** bestimmte Untertypen enthält. Der Versuch, Daten mit den folgenden nicht unterstützten Untertypen zu Remote oder beizubehalten, führt zu einem Laufzeitfehler (nicht unterstützte Konvertierung) vom Microsoft-Persistenzanbieter (MSPersist): **VT_VARIANT**, **VT_RECORD**, **VT_ILLEGAL**, **VT_UNKNOWN**, **VT_BSTR**und **VT_DISPATCH.**
+-   **Recordsetfelder** , die **sql_variant** Daten enthalten, können Remote (gemarshallt) oder nur persistent gespeichert werden, wenn die **sql_variant** bestimmte Untertypen enthält. Der Versuch, Daten mit den folgenden nicht unterstützten Untertypen zu Remote oder beizubehalten, führt zu einem Laufzeitfehler (nicht unterstützte Konvertierung) vom Microsoft-Persistenzanbieter (MSPersist): **VT_VARIANT**, **VT_RECORD**, **VT_ILLEGAL**, **VT_UNKNOWN**, **VT_BSTR** und **VT_DISPATCH.**
 
--   Der OLE DB Anbieter für SQL Server in MDAC 2,7, MDAC 2,8 und Windows DAC 6,0 verfügt über eine dynamische Eigenschaft namens **native Varianten zulassen** , die es Entwicklern ermöglicht, im Gegensatz zu einer **DBTYPE_VARIANT**auf die **sql_variant** in der nativen Form zuzugreifen. Wenn diese Eigenschaft festgelegt ist und ein **Recordset** mit der Client Cursor-Engine (**adUseClient**) geöffnet wird, schlägt der **Recordset. Open** -Befehl fehl. Wenn diese Eigenschaft festgelegt ist und ein **Recordset** mit Server Cursorn (**adsereserver**) geöffnet wird, wird der **Recordset. Open** -Befehl erfolgreich ausgeführt, aber der Zugriff auf Spalten vom Typ **sql_variant** führt zu einem Fehler.
+-   Der OLE DB Anbieter für SQL Server in MDAC 2,7, MDAC 2,8 und Windows DAC 6,0 verfügt über eine dynamische Eigenschaft namens **native Varianten zulassen** , die es Entwicklern ermöglicht, im Gegensatz zu einer **DBTYPE_VARIANT** auf die **sql_variant** in der nativen Form zuzugreifen. Wenn diese Eigenschaft festgelegt ist und ein **Recordset** mit der Client Cursor-Engine (**adUseClient**) geöffnet wird, schlägt der **Recordset. Open** -Befehl fehl. Wenn diese Eigenschaft festgelegt ist und ein **Recordset** mit Server Cursorn (**adsereserver**) geöffnet wird, wird der **Recordset. Open** -Befehl erfolgreich ausgeführt, aber der Zugriff auf Spalten vom Typ **sql_variant** führt zu einem Fehler.
 
 -   In Client Anwendungen, die MDAC 2,5 verwenden, können **sql_variant** Daten mit Abfragen für Microsoft SQL Server verwendet werden. Die Werte der **sql_variant** Daten werden jedoch als Zeichen folgen behandelt. Solche Client Anwendungen sollten auf MDAC 2,7, MDAC 2,8 oder Windows DAC 6,0 aktualisiert werden.
 
@@ -161,7 +161,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Group by-Unterstützung|DBPROP_GROUPBY|
 |Unterstützung heterogener Tabellen|DBPROP_HETEROGENEOUSTABLES|
 |Sensitivität bei Bezeichnern|DBPROP_IDENTIFIERCASE|
-|Anfangskatalog|DBPROP_INIT_CATALOG|
+|Initial Catalog|DBPROP_INIT_CATALOG|
 |Isolationsstufen|DBPROP_SUPPORTEDTXNISOLEVELS|
 |Isolations Beibehaltung|DBPROP_SUPPORTEDTXNISORETAIN|
 |Locale Identifier|DBPROP_INIT_LCID|
@@ -182,7 +182,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Verfügbarkeit der Ausgabe Parameter|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |Pass-by-Verweis-Accessoren|DBPROP_BYREFACCESSORS|
 |Kennwort|DBPROP_AUTH_PASSWORD|
-|Sicherheitsinformationen permanent speichern|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
+|Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
 |Persistente ID-Typ|DBPROP_PERSISTENTIDTYPE|
 |Abbruch Verhalten vorbereiten|DBPROP_PREPAREABORTBEHAVIOR|
 |Commit-Verhalten vorbereiten|DBPROP_PREPARECOMMITBEHAVIOR|
@@ -191,7 +191,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Anzeige Name des Anbieters|DBPROP_PROVIDERFRIENDLYNAME|
 |Anbietername|DBPROP_PROVIDERFILENAME|
 |Anbieterversion|DBPROP_PROVIDERVER|
-|Schreibgeschützte Datenquelle|DBPROP_DATASOURCEREADONLY|
+|Datenquelle Read-Only|DBPROP_DATASOURCEREADONLY|
 |Rowsetkonvertierungen für Befehl|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |Schema Begriff|DBPROP_SCHEMATERM|
 |Schema Verwendung|DBPROP_SCHEMAUSAGE|

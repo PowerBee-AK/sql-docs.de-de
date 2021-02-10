@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a223f5dbf6e100ac776e2f3aebad51c9bb885abf
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: dd9c4116acd482fa12b74556b9d1ad1fe9b06cdd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869598"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014730"
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>Installieren von SSMA für DB2-Client (DB2ToSQL)
 
@@ -64,7 +64,7 @@ So installieren Sie den SSMA-Client:
 
 Das Standardinstallationsverzeichnis ist `C:\Program Files\Microsoft SQL Server Migration Assistant for DB2`.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Installieren von SSMA-Komponenten auf SQL Server](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)
 - [Migrieren von DB2-Datenbanken zu SQL Server](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)

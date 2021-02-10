@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02eaad96593af153b1692beed4bcf846ff92ab7f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 12224a64ffa8d67b212deacd3bd8794d6519cfb9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991091"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029384"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Übersicht über den Microsoft-Cursor Dienst für OLE DB
 Der Microsoft-Cursor Dienst für OLE DB ergänzt die Cursor Unterstützungsfunktionen von Datenanbietern. Folglich nimmt der Benutzer eine relativ einheitliche Funktionalität von allen Datenanbietern an.
@@ -29,7 +29,7 @@ Der Microsoft-Cursor Dienst für OLE DB ergänzt die Cursor Unterstützungsfunkt
  Der Cursor Dienst ermöglicht die Unterstützung für Batch Aktualisierungen in allen Fällen. Außerdem simuliert Sie mehr fähige Cursor Typen, z. b. dynamische Cursor, wenn ein Datenanbieter nur weniger fähige Cursor bereitstellen kann, z. b. statische Cursor.
 
 ## <a name="keyword"></a>Schlüsselwort
- Um diese Dienst Komponente aufzurufen, legen Sie die [Cursor Location](../../reference/ado-api/cursorlocation-property-ado.md) -Eigenschaft des [Recordsets](../../reference/ado-api/recordset-object-ado.md) oder des [Verbindungs](../../reference/ado-api/connection-object-ado.md) Objekts auf **adUseClient**fest.
+ Um diese Dienst Komponente aufzurufen, legen Sie die [Cursor Location](../../reference/ado-api/cursorlocation-property-ado.md) -Eigenschaft des [Recordsets](../../reference/ado-api/recordset-object-ado.md) oder des [Verbindungs](../../reference/ado-api/connection-object-ado.md) Objekts auf **adUseClient** fest.
 
 ```vb
 connection.CursorLocation=adUseClient
@@ -57,7 +57,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  Die dynamische Eigenschaft DBPROP_SERVERDATAONINSERT wird vom Cursor Dienst nicht unterstützt, auch wenn Sie vom zugrunde liegenden Datenanbieter unterstützt wird.
 
-|Eigenschaftenname|Beschreibung|
+|Eigenschaftenname|BESCHREIBUNG|
 |-------------------|-----------------|
 |Automatische Neuberechnung (DBPROP_ADC_AUTORECALC)|Bei mit dem Daten Strukturierungs Dienst erstellten Recordsets gibt dieser Wert an, wie oft berechnete und Aggregat Spalten berechnet werden. Der Standardwert (Wert = 1) ist die Neuberechnung, wenn der Daten Strukturierungs Dienst festlegt, dass sich die Werte geändert haben. Wenn der Wert 0 ist, werden die berechneten oder Aggregat Spalten nur bei der anfänglichen Erstellung der Hierarchie berechnet.|
 |Batch Größe (DBPROP_ADC_BATCHSIZE)|Gibt die Anzahl der Update-Anweisungen an, die als Batch verarbeitet werden können, bevor Sie an den Datenspeicher gesendet werden. Je mehr Anweisungen in einem Batch, desto weniger Roundtrips zum Datenspeicher.|
@@ -65,7 +65,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 |Cursor-Engine-Version (DBPROP_ADC_CEVER)|Gibt die Version des verwendeten Cursor Dienstanbieter an.|
 |Beibehalten des Änderungs Status (DBPROP_ADC_MAINTAINCHANGESTATUS)|Gibt den Text des Befehls an, der zum erneuten Synchronisieren einer oder mehrerer Zeilen in einem Join mehrerer Tabellen verwendet wird.|
 |[Optimieren](../../reference/ado-api/optimize-property-dynamic-ado.md)|Gibt an, ob ein Index erstellt werden soll. Wenn diese Einstellung auf " **true**" festgelegt ist, wird die temporäre Erstellung von Indizes autorisiert, um die Ausführung bestimmter Vorgänge zu verbessern.|
-|[Name der erneuten Form](../../reference/ado-api/reshape-name-property-dynamic-ado.md)|Gibt den Namen des **Recordsets**an. Kann innerhalb der aktuellen oder nachfolgenden Daten Strukturierungs Befehle referenziert werden.|
+|[Name der erneuten Form](../../reference/ado-api/reshape-name-property-dynamic-ado.md)|Gibt den Namen des **Recordsets** an. Kann innerhalb der aktuellen oder nachfolgenden Daten Strukturierungs Befehle referenziert werden.|
 |[Befehl zum erneuten Synchronisieren](../../reference/ado-api/resync-command-property-dynamic-ado.md)|Gibt eine benutzerdefinierte Befehls Zeichenfolge an, die von der [Resync](../../reference/ado-api/resync-method.md) -Methode verwendet wird, wenn die [Unique Table](../../reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) -Eigenschaft aktiviert ist.|
 |[Eindeutiger Katalog](../../reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Gibt den Namen der Datenbank an, die die Tabelle enthält, auf die in der **Unique Table** -Eigenschaft verwiesen wird.|
 |[Eindeutiges Schema](../../reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Gibt den Namen des Besitzers der Tabelle an, auf die in der **Unique Table** -Eigenschaft verwiesen wird.|
@@ -83,10 +83,10 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>Integriertes Eigenschafts Verhalten
  Der Cursor Dienst für OLE DB wirkt sich auch auf das Verhalten bestimmter integrierter Eigenschaften aus.
 
-|Eigenschaftenname|Beschreibung|
+|Eigenschaftenname|BESCHREIBUNG|
 |-------------------|-----------------|
-|[CursorType](../../reference/ado-api/cursortype-property-ado.md)|Ergänzt die Typen von Cursorn, die für ein **Recordset**verfügbar sind.|
-|[LockType](../../reference/ado-api/locktype-property-ado.md)|Ergänzt die Typen von Sperren, die für ein **Recordset**verfügbar sind. Aktiviert Batch Updates.|
+|[CursorType](../../reference/ado-api/cursortype-property-ado.md)|Ergänzt die Typen von Cursorn, die für ein **Recordset** verfügbar sind.|
+|[LockType](../../reference/ado-api/locktype-property-ado.md)|Ergänzt die Typen von Sperren, die für ein **Recordset** verfügbar sind. Aktiviert Batch Updates.|
 |[Sort](../../reference/ado-api/sort-property.md)|Gibt einen oder mehrere Feldnamen an, nach denen das **Recordset** sortiert ist, und gibt an, ob die einzelnen Felder in aufsteigender oder absteigender Reihenfolge sortiert sind.|
 
 ## <a name="method-behavior"></a>Methoden Verhalten

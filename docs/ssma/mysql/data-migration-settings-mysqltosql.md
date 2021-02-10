@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3bc5427d17a8678e81ee148d247d743bda9d53ff
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: c7dcbafc23b4489289a77e780bfa5694f4caa485
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988716"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016590"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>Einstellungen für die Datenmigration (MySqlToSql)
   
@@ -40,7 +40,7 @@ ms.locfileid: "91988716"
     -   Wenn dieses Textfeld nicht aktiviert ist, werden die migrierten Daten den vorhandenen Daten in der Zieldatenbank hinzugefügt.  
   
 2.  **Benutzerdefinierte Select-Option verwenden:**  
-     Mit dieser Option kann der Benutzer die vorhandene **Select** -Anweisung ändern (die**Select** -Anweisung ermöglicht es Benutzern, die Daten auszuwählen, die in der Zieldatenbank angezeigt werden sollen).  
+     Mit dieser Option kann der Benutzer die vorhandene **Select** -Anweisung ändern (die **Select** -Anweisung ermöglicht es Benutzern, die Daten auszuwählen, die in der Zieldatenbank angezeigt werden sollen).  
   
     1.  Standardmäßig ist dieses Textfeld deaktiviert.  
   

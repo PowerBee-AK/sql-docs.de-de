@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83f3d5e9408180c4ff513f1457a2972a676fa726
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cfb6a2ede665c939aa5824810c692bdbe02df6c1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991741"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028372"
 ---
 # <a name="ado-errors"></a>ADO-Fehler
 Die **ErrorValueEnum** -Konstante beschreibt die ADO-Fehler Werte. Eine umfassende Auflistung dieser Enumerationskonstanten, einschließlich der Werte, finden Sie unter [Anhang B: ADO-Fehler](../appendixes/appendix-b-ado-errors.md). In diesem Abschnitt werden einige der interessanteren Fehler erläutert und einige bestimmte Situationen erläutert, die Sie lösen können, oder Lösungen zur Behebung des Problems. Die " **ErrorValueEnum** "-Konstante und die kurze positive Dezimalzahl werden aufgelistet.
@@ -42,7 +42,7 @@ Die **ErrorValueEnum** -Konstante beschreibt die ADO-Fehler Werte. Eine umfassen
 |**3420**|**aderrobjectnotset**|Das Objekt ist nicht mehr gültig.|
 |**3421**|**aderrdataconversion**|Die Anwendung verwendet einen Wert des falschen Typs für den aktuellen Vorgang. Möglicherweise haben Sie eine Zeichenfolge für einen Vorgang bereitgestellt, der beispielsweise einen Stream erwartet.|
 |**3704**|**aderrobjectclosed**|Der Vorgang ist nicht zulässig, wenn das Objekt geschlossen wird. Die **Verbindung** oder das **Recordset** wurde geschlossen. Beispielsweise kann eine andere Routine ein globales Objekt geschlossen haben. Sie können diesen Fehler vermeiden, indem Sie die **State** -Eigenschaft überprüfen, bevor Sie einen Vorgang versuchen.|
-|**3705**|**aderrobjectopen**|Der Vorgang ist nicht zulässig, wenn das Objekt geöffnet ist. Ein Objekt, das geöffnet ist, kann nicht geöffnet werden. Felder können nicht an ein geöffnetes **Recordset**angehängt werden.|
+|**3705**|**aderrobjectopen**|Der Vorgang ist nicht zulässig, wenn das Objekt geöffnet ist. Ein Objekt, das geöffnet ist, kann nicht geöffnet werden. Felder können nicht an ein geöffnetes **Recordset** angehängt werden.|
 |**3706**|**aderrprovidernotfound**|Der Anbieter wurde nicht gefunden. Er ist möglicherweise nicht ordnungsgemäß installiert.<br /><br /> Möglicherweise ist der Name des Anbieters falsch angegeben, der angegebene Anbieter ist möglicherweise nicht auf dem Computer installiert, auf dem der Code ausgeführt wird, oder die Installation wurde beschädigt.|
 |**3707**|**aderrboundto-Befehl**|Die **ActiveConnection** -Eigenschaft eines **Recordset** -Objekts, das über ein **Command** -Objekt als Quelle verfügt, kann nicht geändert werden. Die Anwendung hat versucht, ein neues **Verbindungs** Objekt einem **Recordset** zuzuweisen, das über ein **Command** -Objekt als Quelle verfügt.|
 |**3708**|**aderrinvalidparaminfo**|Das **Parameter** Objekt ist nicht ordnungsgemäß definiert. Es wurden inkonsistente oder unvollständige Informationen bereitgestellt.|
@@ -54,10 +54,10 @@ Die **ErrorValueEnum** -Konstante beschreibt die ADO-Fehler Werte. Eine umfassen
 |**3714**|**aderrinvalidtransaction**|Die koordinierende Transaktion ist ungültig oder wurde nicht gestartet.|
 |**3715**|**aderrnotexecuting**|Der Vorgang kann nicht ausgeführt werden.|
 |**3716**|**aderrunsafeoperation**|Die Sicherheitseinstellungen auf diesem Computer verhindern den Zugriff auf eine Datenquelle in einer anderen Domäne.|
-|**3717**|**adwrnsecuritydialog**|Nur für interne Verwendung. Verwenden Sie nicht. (Der Eintrag wurde aus Gründen der Vollständigkeit eingeschlossen. Dieser Fehler sollte nicht in Ihrem Code angezeigt werden.)|
-|**3718**|**adwrnsecuritydialogheader**|Nur für interne Verwendung. Verwenden Sie nicht. (Der Eintrag ist aus Gründen der Vollständigkeit enthalten. Dieser Fehler sollte nicht in Ihrem Code angezeigt werden.)|
+|**3717**|**adwrnsecuritydialog**|Nur zur internen Verwendung. Verwenden Sie nicht. (Der Eintrag wurde aus Gründen der Vollständigkeit eingeschlossen. Dieser Fehler sollte nicht in Ihrem Code angezeigt werden.)|
+|**3718**|**adwrnsecuritydialogheader**|Nur zur internen Verwendung. Verwenden Sie nicht. (Der Eintrag ist aus Gründen der Vollständigkeit enthalten. Dieser Fehler sollte nicht in Ihrem Code angezeigt werden.)|
 |**3719**|**aderrintegrityverstoß**|Der Datenwert steht in Konflikt mit den Integritäts Einschränkungen des Felds. Ein neuer Wert für ein **Feld** führt zu einem doppelten Schlüssel. Ein Wert, der eine Seite einer Beziehung zwischen zwei Datensätzen bildet, ist möglicherweise nicht aktualisierbar.|
-|**3720**|**aderrpermissiondenied**|Unzureichende Berechtigungen verhindern das Schreiben in das Feld. Der Benutzer, der in der Verbindungs Zeichenfolge benannt ist, verfügt nicht über die erforderlichen Berechtigungen, um in ein **Feld**zu schreiben.|
+|**3720**|**aderrpermissiondenied**|Unzureichende Berechtigungen verhindern das Schreiben in das Feld. Der Benutzer, der in der Verbindungs Zeichenfolge benannt ist, verfügt nicht über die erforderlichen Berechtigungen, um in ein **Feld** zu schreiben.|
 |**3721**|**aderrdataoverflow**|Der Datenwert ist zu groß, um durch den Feld Datentyp dargestellt zu werden. Ein numerischer Wert, der für das vorgesehene Feld zu groß ist, wurde zugewiesen. Ein Long Integer-Wert wurde z. b. einem kurzen ganzzahligen Feld zugewiesen.|
 |**3722**|**aderrschemaverletzung**|Der Datenwert steht in Konflikt mit dem Datentyp oder den Einschränkungen des Felds. Der Datenspeicher weist Validierungs Einschränkungen auf, die sich vom **Feldwert** unterscheiden.|
 |**3723**|**aderrsignmismatch**|Fehler bei der Konvertierung, da der Datenwert signiert wurde und der vom Anbieter verwendete Feld Datentyp nicht signiert wurde.|

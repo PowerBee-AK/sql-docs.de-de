@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19ade6a2c9501523e97d30f496249a423445d3c0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 50535a71c1062bc04aa009bea1aab08d3cf1faf0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991791"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028695"
 ---
 # <a name="absolute-and-relative-urls"></a>Absolute und relative URLs
 Eine URL gibt den Speicherort eines Ziels an, das auf einem lokalen Computer oder einem vernetzten Computer gespeichert ist. Bei dem Ziel kann es sich um eine Datei, ein Verzeichnis, eine HTML-Seite, ein Bild, ein Programm usw. handeln.  
@@ -31,7 +31,7 @@ Eine URL gibt den Speicherort eines Ziels an, das auf einem lokalen Computer ode
   
  Ein *absolute URL* verwendet das folgende Format: *Scheme://Server/Path/Resource*  
   
- Ein relative URL besteht in der Regel nur aus dem *Pfad*und optional der *Ressource*, aber keinem *Schema* oder *Server*. In den folgenden Tabellen werden die einzelnen Teile des gesamten URL-Formats definiert.  
+ Ein relative URL besteht in der Regel nur aus dem *Pfad* und optional der *Ressource*, aber keinem *Schema* oder *Server*. In den folgenden Tabellen werden die einzelnen Teile des gesamten URL-Formats definiert.  
   
  *Schema*  
  Gibt an, wie auf die *Ressource* zugegriffen werden soll.  
@@ -63,12 +63,12 @@ Eine URL gibt den Speicherort eines Ziels an, das auf einem lokalen Computer ode
 ## <a name="relative-urls-as-command-text"></a>Relative URLs als Befehls Text  
  Sie können einen Befehl angeben, der für die Datenquelle ausgeführt werden soll, indem Sie eine Zeichenfolge in den *CommandText* -Parameter der [Execute](../../reference/ado-api/execute-method-ado-connection.md) -Methode des **Verbindungs** Objekts eingeben und im *Source* -Parameter der [Open](../../reference/ado-api/open-method-ado-recordset.md) -Methode des **Recordset** -Objekts.  
   
- Eine relative URL kann im *CommandText* -Parameter oder im *Source* -Parameter angegeben werden. Der relative URL stellt keinen Befehl dar, wie z. b. einen SQL-Befehl. Sie gibt lediglich die Parameter an. Der Kontext der aktiven Verbindung muss ein absolute URL sein, und der *Option* -Parameter muss auf **adCmdTableDirect**festgelegt sein.  
+ Eine relative URL kann im *CommandText* -Parameter oder im *Source* -Parameter angegeben werden. Der relative URL stellt keinen Befehl dar, wie z. b. einen SQL-Befehl. Sie gibt lediglich die Parameter an. Der Kontext der aktiven Verbindung muss ein absolute URL sein, und der *Option* -Parameter muss auf **adCmdTableDirect** festgelegt sein.  
   
  Im folgenden Codebeispiel wird z. b. gezeigt, wie ein **Recordset** für die Readme25.txt-Datei im Verzeichnis winnt/system32 geöffnet wird:  
   
 ```  
-recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
+recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
  Der absolute URL in der Verbindungs Zeichenfolge gibt den Server ( `YourServer` ) und den Pfad ( `Winnt` ) an. Diese URL definiert auch den Kontext.  
@@ -83,8 +83,8 @@ recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmd
 recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
-## <a name="ole-db-provider-supplied-url-schemes"></a>Vom Anbieter bereitgestellte URL-Schemas OLE DB  
- Der führende Teil einer voll qualifizierten URL ist das *Schema* , das für den Zugriff auf die Ressource verwendet wird, die durch den Rest der URL identifiziert wird. Beispiele hierfür sind http (Hypertext Transfer Protocol) und FTP (Dateiübertragungsprotokoll).  
+## <a name="ole-db-provider-supplied-url-schemes"></a>OLE DB Provider-Supplied URL-Schemas  
+ Der führende Teil einer voll qualifizierten URL ist das *Schema* , das für den Zugriff auf die Ressource verwendet wird, die durch den Rest der URL identifiziert wird. Beispiele hierfür sind http (Hypertext Transfer Protocol) und FTP (File Transfer Protocol).  
   
  ADO unterstützt OLE DB Anbietern, die eigene URL-Schemas erkennen. Beispielsweise erkennt der [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung](../appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*,* der auf "veröffentlichte" Windows 2000-Dateien zugreift, das vorhandene http-Schema.  
   

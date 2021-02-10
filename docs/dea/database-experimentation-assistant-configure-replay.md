@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 7001f188b00e70c2616e8c3592d7fa9e34147321
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 18428e87d1c769d10a4d1acbf0033c739db09d0d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419785"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017060"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Konfigurieren von Distributed Replay für Assistent für Datenbankexperimente
 
@@ -126,6 +126,6 @@ Die folgenden Schritte müssen für jede Wiedergabe ausgeführt werden:
 2. Erteilen von Berechtigungen für den Benutzer des Client Dienst Kontos für den Zugriff auf die Datenbanken unter der SQL Server Instanz. Berechtigungen sind erforderlich, damit die Abfragen für die SQL Server Instanz ausgeführt werden.
 3. Starten Sie die Wiedergabe.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - Informationen dazu, wie Sie eine aufgezeichnete Ablauf Verfolgung in einer aktualisierten Testumgebung wiedergeben, finden Sie unter Wiedergeben [einer Ablauf Verfolgung in Assistent für Datenbankexperimente](database-experimentation-assistant-replay-trace.md).

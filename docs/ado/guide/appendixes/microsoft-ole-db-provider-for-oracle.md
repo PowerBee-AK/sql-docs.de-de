@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8da5e3d5de1ac0ee3f3dfa1b0f989679af3cd1d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 04865a03bdb352d36e1ac3b445c7c0b4eb7c3da2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991011"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029294"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Übersicht über Microsoft OLE DB-Anbieter für Oracle
 > [!IMPORTANT]
@@ -48,7 +48,7 @@ MSDAORA
 
  Die Zeichenfolge besteht aus folgenden Schlüsselwörtern:
 
-|Schlüsselwort|Beschreibung|
+|Schlüsselwort|BESCHREIBUNG|
 |-------------|-----------------|
 |**Anbieter**|Gibt den OLE DB Anbieter für Oracle an.|
 |**Data Source**|Gibt den Namen eines Servers an.|
@@ -58,18 +58,18 @@ MSDAORA
 > [!NOTE]
 >  Wenn Sie eine Verbindung mit einem Datenquellen Anbieter herstellen, der die Windows-Authentifizierung unterstützt, sollten Sie in der Verbindungs Zeichenfolge **Trusted_Connection = yes** oder **Integrated Security = SSPI** anstelle von Benutzer-ID und Kennwort angeben.
 
-## <a name="provider-specific-connection-parameters"></a>Anbieterspezifische Verbindungsparameter
- Der Anbieter unterstützt mehrere Anbieterspezifische Verbindungsparameter zusätzlich zu den von ADO definierten Verbindungsparametern. Wie bei den ADO-Verbindungs Eigenschaften können diese anbieterspezifischen Eigenschaften über die [Properties](../../reference/ado-api/properties-collection-ado.md) -Auflistung einer [Verbindung](../../reference/ado-api/connection-object-ado.md) oder als Teil von **ConnectionString**festgelegt werden.
+## <a name="provider-specific-connection-parameters"></a>Verbindungsparameter Provider-Specific
+ Der Anbieter unterstützt mehrere Anbieterspezifische Verbindungsparameter zusätzlich zu den von ADO definierten Verbindungsparametern. Wie bei den ADO-Verbindungs Eigenschaften können diese anbieterspezifischen Eigenschaften über die [Properties](../../reference/ado-api/properties-collection-ado.md) -Auflistung einer [Verbindung](../../reference/ado-api/connection-object-ado.md) oder als Teil von **ConnectionString** festgelegt werden.
 
  Diese Parameter werden in der [OLE DB Programmierer-Referenz](/previous-versions/windows/desktop/ms713643(v=vs.85))vollständig beschrieben. Der [dynamische ADO-Eigenschafts Index](../../reference/ado-api/ado-dynamic-property-index.md) bietet einen Querverweis zwischen diesen Parameternamen und den entsprechenden OLE DB Eigenschaften.
 
-|Parameter|Beschreibung|
+|Parameter|BESCHREIBUNG|
 |---------------|-----------------|
 |**Fensterhandle**|Gibt das Fenster Handle an, das verwendet werden soll, um zusätzliche Informationen einzugeben.|
 |**Locale Identifier**|Gibt eine eindeutige 32-Bit-Nummer an (z. b. 1033), die Einstellungen im Zusammenhang mit der Sprache des Benutzers angibt. Diese Einstellungen geben an, wie Datumsangaben und Uhrzeiten formatiert, Elemente alphabetisch sortiert, Zeichen folgen verglichen werden usw.|
 |**OLE DB Dienste**|Gibt eine Bitmaske an, die OLE DB Dienste angibt, die aktiviert oder deaktiviert werden sollen.|
 |**Eingabeaufforderung**|Gibt an, ob der Benutzer beim Herstellen einer Verbindung aufgefordert werden soll.|
-|**Extended Properties**|Eine Zeichenfolge, die anbieterspezifische, erweiterte Verbindungsinformationen enthält. Verwenden Sie diese Eigenschaft nur für anbieterspezifische Verbindungsinformationen, die nicht über den-Eigenschafts Mechanismus beschrieben werden können.|
+|**Erweiterte Eigenschaften**|Eine Zeichenfolge, die anbieterspezifische, erweiterte Verbindungsinformationen enthält. Verwenden Sie diese Eigenschaft nur für anbieterspezifische Verbindungsinformationen, die nicht über den-Eigenschafts Mechanismus beschrieben werden können.|
 
 ## <a name="see-also"></a>Weitere Informationen
  [ConnectionString-Eigenschaft (](../../reference/ado-api/connectionstring-property-ado.md) [ADO)-](../../reference/ado-api/provider-property-ado.md) Objekt (ADO)- [Recordset-Objekt (](../../reference/ado-api/recordset-object-ado.md) ADO)

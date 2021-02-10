@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59cb4cceb81861460fbcf7f079801b08319c76d9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f29f2462f19200e486b3ed7b5635048028f4bbcc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991201"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031042"
 ---
 # <a name="ado-programming-task-table"></a>ADO-Programmieraufgaben Tabelle
 In der folgenden Tabelle werden die im *ADO-Programmier Handbuch* enthaltenen Programmieraufgaben aufgelistet, und es werden Verweise auf die einzelnen Aufgaben bereitgestellt. Diese Verweise können Textbeschreibungen oder Codebeispiele sein, in denen Sie Informationen über die ADO-Funktion finden können, die die Aufgabe ausführt.
 
-|ADO-Aufgabe|References|
+|ADO-Aufgabe|Referenzen|
 |--------------|----------------|
 |Herstellen einer Verbindung mit einem Datenanbieter|[Herstellen einer Verbindung mit Datenquellen](./data/connecting-to-data-sources.md)|
 |Ausführen von Befehlen oder Aufrufen gespeicherter Prozeduren|[Vorbereiten und Ausführen von Befehlen](./data/preparing-and-executing-commands.md)|
@@ -37,7 +37,7 @@ In der folgenden Tabelle werden die im *ADO-Programmier Handbuch* enthaltenen Pr
 |Hinzufügen neuer Daten|[Hinzufügen von Datensätzen](./data/adding-records.md)|
 |Löschen oder Entfernen von Daten|[Löschen von Datensätzen mit der Delete-Methode](./data/deleting-records-using-the-delete-method.md)|
 |Veröffentlichen von Änderungen an der Datenquelle|[Aktualisieren von Daten](./data/updating-data.md)|
-|Starten, Commit und Rollback von Transaktionen|[Verarbeiten von Transaktionen](./data/transaction-processing.md)|
+|Starten, Commit und Rollback von Transaktionen|[Transaktionsverarbeitung](./data/transaction-processing.md)|
 |Speichern von Datensätzen in einer Datei (XML oder binär)|[Beibehalten von Daten](./data/persisting-data.md)|
 |Behandlung von Fehlern|[ADO-Fehler](./data/ado-errors.md)|
 |Behandeln von Ereignissen, asynchrone Programmierung|[ADO-Ereignishandler – Übersicht](./data/ado-event-handler-summary.md)|

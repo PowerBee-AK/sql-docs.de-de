@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 027aa6557036c54c4b7e143cd94149fa5e8fe4f1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60a23edbcbad344ab3bf42286944f7c72acb8f92
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492359"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015175"
 ---
 # <a name="refresh-from-database-mysqltosql"></a>Aktualisieren der Datenbank (MySqlToSql)
 Im Dialogfeld **aus Datenbank aktualisieren** können Sie auswählen, welche Objekte aus der MySQL-Datenbank aktualisiert werden sollen. Zeilen im Dialogfeld sind basierend auf dem Status der Metadaten farblich codiert:  

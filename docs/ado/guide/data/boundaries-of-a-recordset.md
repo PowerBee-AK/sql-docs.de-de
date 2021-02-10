@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c0df560a7a70dd46c4a846e3271b5b5ea10584e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f737ad11af65045a1d923f427c7487e4b751aaa8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991591"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028015"
 ---
 # <a name="boundaries-of-a-recordset"></a>Grenzen eines Recordsets
-**Recordset** unterstützt die **BOF** -und **EOF** -Eigenschaften, um den Anfang bzw. das Ende des Datasets zu beschreiben. Sie können sich **BOF** und **EOF** als "Phantom"-Datensätze vorstellen, die am Anfang und am Ende des **Recordsets**positioniert sind. Wenn **BOF** und **EOF**gezählt werden, sieht das Beispiel- **Recordset** nun wie folgt aus:  
+**Recordset** unterstützt die **BOF** -und **EOF** -Eigenschaften, um den Anfang bzw. das Ende des Datasets zu beschreiben. Sie können sich **BOF** und **EOF** als "Phantom"-Datensätze vorstellen, die am Anfang und am Ende des **Recordsets** positioniert sind. Wenn **BOF** und **EOF** gezählt werden, sieht das Beispiel- **Recordset** nun wie folgt aus:  
   
 |ProductID|ProductName|UnitPrice|  
 |---------------|-----------------|---------------|  
@@ -35,7 +35,7 @@ ms.locfileid: "88991591"
 |74|Longlife-Tofu|10,0000|  
 |EOF|||  
   
- Wenn ein Cursor nach dem letzten Datensatz verschoben wird, wird **EOF** auf **true**festgelegt. Andernfalls ist der Wert **false**. Ebenso, wenn der Cursor vor dem ersten Datensatz verschoben wird, wird **BOF** auf **true**festgelegt. Andernfalls ist der Wert **false**. Diese Eigenschaften werden häufig verwendet, um Datensätze im DataSet aufzulisten, wie im folgenden JScript-Code Fragment veranschaulicht.  
+ Wenn ein Cursor nach dem letzten Datensatz verschoben wird, wird **EOF** auf **true** festgelegt. Andernfalls ist der Wert **false**. Ebenso, wenn der Cursor vor dem ersten Datensatz verschoben wird, wird **BOF** auf **true** festgelegt. Andernfalls ist der Wert **false**. Diese Eigenschaften werden häufig verwendet, um Datensätze im DataSet aufzulisten, wie im folgenden JScript-Code Fragment veranschaulicht.  
   
 ```  
 while (objRecordset.EOF != true)   
@@ -55,7 +55,7 @@ while (objRecordset.BOF != true)
 }  
 ```  
   
- Wenn sowohl **BOF** als auch **EOF** **true**sind, ist das **Recordset** -Objekt leer. Beide Eigenschaften werden für ein neu geöffnetes, nicht leeres Recordsetobjekt auf " **false** " **festgelegt** . Mithilfe der **BOF** -Eigenschaft und der **EOF** -Eigenschaft können Sie ermitteln, ob ein **Recordset** -Objekt leer ist, wie im folgenden JScript-Code Fragment dargestellt.  
+ Wenn sowohl **BOF** als auch **EOF** **true** sind, ist das **Recordset** -Objekt leer. Beide Eigenschaften werden für ein neu geöffnetes, nicht leeres Recordsetobjekt auf " **false** " **festgelegt** . Mithilfe der **BOF** -Eigenschaft und der **EOF** -Eigenschaft können Sie ermitteln, ob ein **Recordset** -Objekt leer ist, wie im folgenden JScript-Code Fragment dargestellt.  
   
 ```  
 if (objRecordset.EOF == true && objRecordset.BOF == true)  

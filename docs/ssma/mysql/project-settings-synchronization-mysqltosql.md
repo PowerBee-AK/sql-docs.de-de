@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3ea89bcdf9b10fb50e74228a26bfcd5cead83aca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f778b2bd361fab5ac1210005076692c813bb4b9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492383"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017310"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>Projekteinstellungen (Synchronisierung) (MySqlToSql)
 Mithilfe der Synchronisierungs **Projekteinstellungen** können Sie konfigurieren, wie MySQL-Datenbankobjekte mit SQL Server-Datenbankobjekten synchronisiert werden.  
@@ -49,59 +49,59 @@ Gibt die Standardeinstellung im Dialogfeld "Synchronisierung" an, wenn die Objek
 ##### <a name="action-on-local-object-change"></a>Aktion bei lokaler Objekt Änderung  
 Gibt die Standardeinstellung im Dialogfeld "Synchronisierung" an, wenn das Objekt in SSMA geändert wird.  
   
--   Wenn Sie **aus Datenbank aktualisieren**auswählen, lädt SSMA Daten Bank Definitionen in die Metadaten, wenn die Bedingung erfüllt ist.  
+-   Wenn Sie **aus Datenbank aktualisieren** auswählen, lädt SSMA Daten Bank Definitionen in die Metadaten, wenn die Bedingung erfüllt ist.  
   
--   Wenn Sie **Skip**auswählen, führt SSMA keine Aktualisierungs Aktionen aus.  
+-   Wenn Sie **Skip** auswählen, führt SSMA keine Aktualisierungs Aktionen aus.  
   
 ##### <a name="action-on-remote-object-change"></a>Aktion bei Remote Objekt Änderung  
 Gibt die Standardeinstellung im Dialogfeld "Synchronisierung" an, wenn sich die Objekte auf dem Datenbankserver ändern.  
   
--   Wenn Sie **aus Datenbank aktualisieren**auswählen, lädt SSMA Daten Bank Definitionen in die Metadaten, wenn die Bedingung erfüllt ist.  
+-   Wenn Sie **aus Datenbank aktualisieren** auswählen, lädt SSMA Daten Bank Definitionen in die Metadaten, wenn die Bedingung erfüllt ist.  
   
--   Wenn Sie **Skip**auswählen, führt SSMA keine Aktualisierungs Aktionen aus.  
+-   Wenn Sie **Skip** auswählen, führt SSMA keine Aktualisierungs Aktionen aus.  
   
 ##### <a name="action-when-local-object-metadata-is-missing"></a>Aktion, wenn lokale Objekt Metadaten fehlen  
 Gibt die Standardeinstellung im Dialogfeld "Synchronisierung" an, wenn die lokalen Metadaten fehlen.  
   
--   Wenn Sie **aus Datenbank aktualisieren**auswählen, lädt SSMA Daten Bank Definitionen in die Metadaten, wenn die Bedingung erfüllt ist.  
+-   Wenn Sie **aus Datenbank aktualisieren** auswählen, lädt SSMA Daten Bank Definitionen in die Metadaten, wenn die Bedingung erfüllt ist.  
   
--   Wenn Sie **Skip**auswählen, führt SSMA keine Aktualisierungs Aktionen aus.  
+-   Wenn Sie **Skip** auswählen, führt SSMA keine Aktualisierungs Aktionen aus.  
   
 ## <a name="synchronization-for-sql-server"></a>Synchronisierung für SQL Server  
   
 ##### <a name="action-on-local-and-remote-object-change"></a>Aktion bei lokaler und Remote Objekt Änderung  
 Gibt die Standardeinstellung im Dialogfeld "Synchronisierung" an, wenn die Objektdefinition in SSMA und auf dem Datenbankserver geändert wird.  
   
--   Wenn Sie **aus Datenbank aktualisieren**auswählen, lädt SSMA Daten Bank Definitionen in die Metadaten, wenn die Bedingung erfüllt ist.  
+-   Wenn Sie **aus Datenbank aktualisieren** auswählen, lädt SSMA Daten Bank Definitionen in die Metadaten, wenn die Bedingung erfüllt ist.  
   
--   Wenn Sie in **Datenbank schreiben**auswählen, werden die Objekte in der Datenbank von SSMA gemäß dem Inhalt der SSMA-Metadaten aktualisiert, wenn die Bedingung erfüllt ist.  
+-   Wenn Sie in **Datenbank schreiben** auswählen, werden die Objekte in der Datenbank von SSMA gemäß dem Inhalt der SSMA-Metadaten aktualisiert, wenn die Bedingung erfüllt ist.  
   
--   Wenn Sie **Skip**auswählen, führt SSMA keine Aktualisierungs Aktionen aus.  
+-   Wenn Sie **Skip** auswählen, führt SSMA keine Aktualisierungs Aktionen aus.  
   
 ##### <a name="action-on-local-object-change"></a>Aktion bei lokaler Objekt Änderung  
 Gibt die Standardeinstellung im Dialogfeld "Synchronisierung" an, wenn das Objekt in SSMA geändert wird.  
   
--   Wenn Sie **aus Datenbank aktualisieren**auswählen, lädt SSMA Daten Bank Definitionen in die Metadaten, wenn die Bedingung erfüllt ist.  
+-   Wenn Sie **aus Datenbank aktualisieren** auswählen, lädt SSMA Daten Bank Definitionen in die Metadaten, wenn die Bedingung erfüllt ist.  
   
--   Wenn Sie in **Datenbank schreiben**auswählen, wird das Objekt in der Datenbank von SSMA gemäß dem Inhalt der SSMA-Metadaten aktualisiert, wenn die Bedingung erfüllt ist.  
+-   Wenn Sie in **Datenbank schreiben** auswählen, wird das Objekt in der Datenbank von SSMA gemäß dem Inhalt der SSMA-Metadaten aktualisiert, wenn die Bedingung erfüllt ist.  
   
--   Wenn Sie **Skip**auswählen, führt SSMA keine Aktualisierungs Aktionen aus.  
+-   Wenn Sie **Skip** auswählen, führt SSMA keine Aktualisierungs Aktionen aus.  
   
 ##### <a name="action-on-remote-object-change"></a>Aktion bei Remote Objekt Änderung  
 Gibt die Standardeinstellung im Dialogfeld "Synchronisierung" an, wenn sich die Objekte auf dem Datenbankserver ändern.  
   
--   Wenn Sie **aus Datenbank aktualisieren**auswählen, lädt SSMA Daten Bank Definitionen in die Metadaten, wenn die Bedingung erfüllt ist.  
+-   Wenn Sie **aus Datenbank aktualisieren** auswählen, lädt SSMA Daten Bank Definitionen in die Metadaten, wenn die Bedingung erfüllt ist.  
   
--   Wenn Sie in **Datenbank schreiben**auswählen, wird das Objekt in der Datenbank von SSMA gemäß dem Inhalt der SSMA-Metadaten aktualisiert, wenn die Bedingung erfüllt ist.  
+-   Wenn Sie in **Datenbank schreiben** auswählen, wird das Objekt in der Datenbank von SSMA gemäß dem Inhalt der SSMA-Metadaten aktualisiert, wenn die Bedingung erfüllt ist.  
   
--   Wenn Sie **Skip**auswählen, führt SSMA keine Aktualisierungs Aktionen aus.  
+-   Wenn Sie **Skip** auswählen, führt SSMA keine Aktualisierungs Aktionen aus.  
   
 ##### <a name="action-when-local-object-metadata-is-missing"></a>Aktion, wenn lokale Objekt Metadaten fehlen  
 Gibt die Standardeinstellung im Dialogfeld "Synchronisierung" an, wenn lokale Metadaten fehlen.  
   
--   Wenn Sie **aus Datenbank aktualisieren**auswählen, wählt SSMA die Option aus Datenbank aktualisieren aus, wenn die Bedingung erfüllt ist.  
+-   Wenn Sie **aus Datenbank aktualisieren** auswählen, wählt SSMA die Option aus Datenbank aktualisieren aus, wenn die Bedingung erfüllt ist.  
   
--   Wenn Sie **in Datenbank schreiben**auswählen, wird das Objekt von SSMA aus der Datenbank gelöscht, wenn die Bedingung erfüllt ist.  
+-   Wenn Sie **in Datenbank schreiben** auswählen, wird das Objekt von SSMA aus der Datenbank gelöscht, wenn die Bedingung erfüllt ist.  
   
--   Wenn Sie **Skip**auswählen, führt SSMA keine Aktualisierungs Aktionen aus.  
+-   Wenn Sie **Skip** auswählen, führt SSMA keine Aktualisierungs Aktionen aus.  
   

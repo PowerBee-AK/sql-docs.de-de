@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8471d7e80599b96315fae47e130aaba8c23bd4f1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 13a518a3cbf7c4d9f83da5810e340406147f86f2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990941"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028830"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Verwenden des Microsoft SDK für Java
 
@@ -48,7 +48,7 @@ Das Microsoft SDK für Java ist das Developer Kit für die Microsoft Internet Ex
     jvc /g:t c:\<windows>\Java\trustlib\msado15\*.Java  
     ```  
   
-3.  Öffnen Sie das Projekt in Visual J++, um diese Dateien zu verwenden. Wählen Sie im Menü **Projekt** die Option **zu Projekt hinzufügen**aus. Wählen Sie **Dateien**aus, und fügen Sie alle hinzu. Java-Dateien, die im Verzeichnis trustlib\msado15 für Ihr Projekt generiert werden.  
+3.  Öffnen Sie das Projekt in Visual J++, um diese Dateien zu verwenden. Wählen Sie im Menü **Projekt** die Option **zu Projekt hinzufügen** aus. Wählen Sie **Dateien** aus, und fügen Sie alle hinzu. Java-Dateien, die im Verzeichnis trustlib\msado15 für Ihr Projekt generiert werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [ADO-Java-Klassen-Wrapper](./ado-java-class-wrappers.md)

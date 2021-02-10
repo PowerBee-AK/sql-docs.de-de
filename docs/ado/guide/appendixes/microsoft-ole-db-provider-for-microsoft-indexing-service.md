@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3e479ca023efb704bf496c9ffaeaca2f1b6ba15
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f7d2204a2d91e862616713dbfee6eec3d6d3e8ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991041"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029304"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Übersicht über den Microsoft OLE DB-Anbieter für den Index Dienst
 Der Microsoft OLE DB-Anbieter für den Index Dienst von Microsoft bietet programmgesteuerten schreibgeschützten Zugriff auf Dateisystem-und Webdaten, die vom Microsoft-Indizierungs Dienst indiziert werden. ADO-Anwendungen können SQL-Abfragen ausgeben, um Inhalt und Datei Eigenschafts Informationen abzurufen.
@@ -45,7 +45,7 @@ MSIDXS
 
  Die Zeichenfolge besteht aus folgenden Schlüsselwörtern:
 
-|Schlüsselwort|Beschreibung|
+|Schlüsselwort|BESCHREIBUNG|
 |-------------|-----------------|
 |**Anbieter**|Gibt den OLE DB Anbieter für den Microsoft-Indizierungs Dienst an. In der Regel ist dies das einzige in der Verbindungs Zeichenfolge angegebene Schlüsselwort.|
 |**Data Source**|Gibt den Namen des Index Dienst Katalogs an. Wenn dieses Schlüsselwort nicht angegeben wird, wird der Standardsystem Katalog verwendet.|
@@ -87,17 +87,17 @@ MSIDXS
 |[PageSize](../../reference/ado-api/pagesize-property-ado.md)|Lesen/Schreiben|
 |[RecordCount](../../reference/ado-api/recordcount-property-ado.md)|schreibgeschützt|
 |[Quelle](../../reference/ado-api/source-property-ado-recordset.md)|Lesen/Schreiben|
-|[State](../../reference/ado-api/state-property-ado.md)|schreibgeschützt|
+|[Zustand](../../reference/ado-api/state-property-ado.md)|schreibgeschützt|
 |[Status](../../reference/ado-api/status-property-ado-recordset.md)|schreibgeschützt|
 
- \*Lesezeichen müssen für den Anbieter aktiviert sein, damit diese Funktion im **Recordset**vorhanden ist.
+ \*Lesezeichen müssen für den Anbieter aktiviert sein, damit diese Funktion im **Recordset** vorhanden ist.
 
  **Verfügbarkeit der standardmäßigen ADO-recordsetmethoden:**
 
 |Methode|Verfügbar?|
 |------------|----------------|
 |[AddNew](../../reference/ado-api/addnew-method-ado.md)|Nein|
-|[Abbrechen](../../reference/ado-api/cancel-method-ado.md)|Ja|
+|[Kündigen](../../reference/ado-api/cancel-method-ado.md)|Ja|
 |[CancelBatch](../../reference/ado-api/cancelbatch-method-ado.md)|Nein|
 |[CancelUpdate](../../reference/ado-api/cancelupdate-method-ado.md)|Nein|
 |[Klonen](../../reference/ado-api/clone-method-ado.md)|Ja|

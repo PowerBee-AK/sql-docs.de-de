@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd781612557faebd4b6eefb710ffad2379928aee
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3a79a16b0fe5f0514b2d90333fcbe99e8e5b5023
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980851"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031052"
 ---
 # <a name="ado-glossary-terms"></a>ADO-Glossar Begriffe
 In diesem Thema werden die für ADO relevanten Begriffe definiert.
@@ -51,7 +51,7 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
 
  Geschäftsobjekt ein Objekt, das einen definierten Satz von Vorgängen ausführt, z. b. Datenvalidierung oder Geschäftsregel Logik. Geschäftsobjekte befinden sich normalerweise auf der mittleren Ebene.
 
- Geschäftsregel: die Kombination von Validierungs bearbeitvorgängen, Anmelde Überprüfungen, Daten Bank Suchvorgängen, Richtlinien und algorithmischen Transformationen, die die Geschäftstätigkeit eines Unternehmens darstellen. Wird auch als *Geschäftslogik*bezeichnet.
+ Geschäftsregel: die Kombination von Validierungs bearbeitvorgängen, Anmelde Überprüfungen, Daten Bank Suchvorgängen, Richtlinien und algorithmischen Transformationen, die die Geschäftstätigkeit eines Unternehmens darstellen. Wird auch als *Geschäftslogik* bezeichnet.
 
 ## <a name="c"></a>C
  Berechneter Ausdruck ein Ausdruck, der nicht konstant ist, aber dessen Wert von anderen Werten abhängt. Um ausgewertet zu werden, muss ein berechneter Ausdruck Werte aus anderen Quellen abrufen und berechnen, normalerweise in anderen Feldern oder Zeilen.
@@ -64,13 +64,13 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
 
  Zeichensatz: eine Zuordnung eines Satzes von Zeichen zu den numerischen Werten. Beispielsweise ist Unicode ein 16-Bit-Zeichensatz, der alle bekannten Zeichen codieren und als weltweiten Zeichen Codierungsstandard verwendet werden kann.
 
- untergeordnetes Element der abhängigen Seite einer hierarchischen Beziehung. Ein untergeordnetes Element ist ein Knoten in einer hierarchischen Struktur, der über einen anderen übergeordneten Knoten verfügt (näher an der Wurzel). Siehe auch untergeordneter *Alias*, über-/Unterordnungsbeziehung, über *geordnetes*Element. *parent-child relationship*
+ untergeordnetes Element der abhängigen Seite einer hierarchischen Beziehung. Ein untergeordnetes Element ist ein Knoten in einer hierarchischen Struktur, der über einen anderen übergeordneten Knoten verfügt (näher an der Wurzel). Siehe auch untergeordneter *Alias*, über-/Unterordnungsbeziehung, über *geordnetes* Element. 
 
- untergeordneter Alias ein Alias, der auf das untergeordnete Element verweist. Siehe auch *Alias*, *unter*geordnet.
+ untergeordneter Alias ein Alias, der auf das untergeordnete Element verweist. Siehe auch *Alias*, *unter* geordnet.
 
  CLSID (Klassen Bezeichner) ein universell eindeutiger Bezeichner (UUID), der eine COM-Komponente identifiziert. Jede COM-Komponente verfügt über Ihre CLSID in der Windows-Registrierung, sodass Sie von anderen Anwendungen geladen werden kann. Siehe auch *ProgID*, *com*.
 
- Client Ebene eine logische Ebene eines verteilten Systems, das in der Regel Daten für den Benutzer darstellt und verarbeitet, manchmal auch als Front- *End*bezeichnet. In der Regel fordert die Client Ebene Daten von einem Server basierend auf der Eingabe an und formatiert und zeigt dann das Ergebnis an. Siehe auch *mittlere Ebene*, *Datenquellen Ebene*, *verteilte Anwendung*.
+ Client Ebene eine logische Ebene eines verteilten Systems, das in der Regel Daten für den Benutzer darstellt und verarbeitet, manchmal auch als Front- *End* bezeichnet. In der Regel fordert die Client Ebene Daten von einem Server basierend auf der Eingabe an und formatiert und zeigt dann das Ergebnis an. Siehe auch *mittlere Ebene*, *Datenquellen Ebene*, *verteilte Anwendung*.
 
  COM (Component Object Model) ein binärer Standard, der es Objekten ermöglicht, in einer vernetzten Umgebung unabhängig von der Sprache, in der Sie entwickelt wurden, oder auf den Computern, in denen Sie sich befinden, zusammenzuarbeiten. Zu den COM-basierten Technologien zählen ActiveX-Steuerelemente, Automation und Object Linking and Embedding (OLE). COM ermöglicht einem Objekt, seine Funktionalität für andere Komponenten und für das Hosten von Anwendungen verfügbar zu machen. Es definiert sowohl, wie das Objekt sich selbst verfügbar macht, als auch, wie diese Offenlegung zwischen Prozessen und Netzwerk übergreifend funktioniert. COM definiert auch den Lebenszyklus des Objekts.
 
@@ -91,27 +91,27 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
  Cursor ein Daten Bank Element, das die Daten Satz Navigation, die Aktualisierbarkeit von Daten und die Sichtbarkeit von Änderungen, die von anderen Benutzern an der Datenbank vorgenommen wurden, steuert.
 
 ## <a name="d"></a>D
- Datenbindung der Prozess der Zuordnung der Objekte oder Steuerelemente einer Anwendung zu einer Datenquelle. Ein Steuerelement, das einer Datenquelle zugeordnet ist, wird als *Daten gebundenes Steuer*Element bezeichnet.
+ Datenbindung der Prozess der Zuordnung der Objekte oder Steuerelemente einer Anwendung zu einer Datenquelle. Ein Steuerelement, das einer Datenquelle zugeordnet ist, wird als *Daten gebundenes Steuer* Element bezeichnet.
 
- Der Inhalt eines Daten gebundenen Steuer Elements ist den Werten aus einer Datenbank zugeordnet. Beispielsweise kann ein Raster Steuerelement, das an ein **Recordset** -Objekt gebunden ist, aktualisiert werden, wenn die Zeilen im **Recordset** aktualisiert werden. Wenn neue Werte durch das **Recordset**abgerufen werden, werden im Raster neue Werte angezeigt.
+ Der Inhalt eines Daten gebundenen Steuer Elements ist den Werten aus einer Datenbank zugeordnet. Beispielsweise kann ein Raster Steuerelement, das an ein **Recordset** -Objekt gebunden ist, aktualisiert werden, wenn die Zeilen im **Recordset** aktualisiert werden. Wenn neue Werte durch das **Recordset** abgerufen werden, werden im Raster neue Werte angezeigt.
 
  Datenanbieter Software, die Daten entweder direkt oder über einen Dienstanbieter für eine ADO-Anwendung verfügbar macht. Siehe auch Dienstanbieter.
 
- Daten, die eine Technik verwenden, die eine formalisierte Syntax (sogenannte **Shape-Sprache**) verwendet, um ein spezielles **Recordset** -Objekt (als *geformtes Recordset*bezeichnet) zu definieren, das nicht nur Daten enthält, sondern auch Verweise auf andere **Recordsetobjekte** und/oder berechnete Werte basierend auf diesen anderen **Recordset** -Objekten.
+ Daten, die eine Technik verwenden, die eine formalisierte Syntax (sogenannte **Shape-Sprache**) verwendet, um ein spezielles **Recordset** -Objekt (als *geformtes Recordset* bezeichnet) zu definieren, das nicht nur Daten enthält, sondern auch Verweise auf andere **Recordsetobjekte** und/oder berechnete Werte basierend auf diesen anderen **Recordset** -Objekten.
 
  Datenquellen Ebene eine logische Ebene eines verteilten Systems, die einen Computer darstellt, auf dem ein DBMS ausgeführt wird, z. b. eine SQL Server Datenbank. Siehe auch *Client Ebene*, *mittlere Ebene*, *verteilte Anwendung*.
 
  DCOM ein Wire-Protokoll, das COM-Komponenten die direkte Kommunikation über ein Netzwerk ermöglicht. Siehe auch *com*, *Komponente*.
 
- DDL (Data Definition Language, Datendefinitionssprache) diese Anweisungen in SQL, die im Gegensatz zur Bearbeitung von Daten definieren. Das Schema einer Datenbank wird mit DDL erstellt oder geändert. **CREATE TABLE**, **Create Index**, **Grant**und **revosind z** . b. SQL-DDL-Anweisungen.
+ DDL (Data Definition Language, Datendefinitionssprache) diese Anweisungen in SQL, die im Gegensatz zur Bearbeitung von Daten definieren. Das Schema einer Datenbank wird mit DDL erstellt oder geändert. **CREATE TABLE**, **Create Index**, **Grant** und **revosind z** . b. SQL-DDL-Anweisungen.
 
- Standardmäßig streamen Sie einen Text-oder Binärdaten Strom (dargestellt durch ein **Streamobjekt** ), der **Daten Satz** -oder recordsetobjekten zugeordnet ist, wenn bestimmte OLE DB Anbieter verwendet werden, z. b. der Microsoft OLE DB-Anbieter für die Internet **Recordset** Der Standarddaten Strom enthält normalerweise den Inhalt einer Datei, z. b. den HTML-Code für den Stamm einer Website.
+ Standardmäßig streamen Sie einen Text-oder Binärdaten Strom (dargestellt durch ein **Streamobjekt** ), der **Daten Satz** -oder recordsetobjekten zugeordnet ist, wenn bestimmte OLE DB Anbieter verwendet werden, z. b. der Microsoft OLE DB-Anbieter für die Internet  Der Standarddaten Strom enthält normalerweise den Inhalt einer Datei, z. b. den HTML-Code für den Stamm einer Website.
 
  verteilte Anwendung: ein Programm, das so geschrieben ist, dass die Verarbeitung über ein Netzwerk auf mehrere Computer aufgeteilt werden kann. Eine verteilte Anwendung ist in der Regel in Präsentations-, Geschäftslogik-und Daten *Speicherebenen unterteilt.* Siehe auch Client Ebene, mittlere Ebene, Datenquellen Ebene.
 
  getrennte Recordsets ein **Recordset** -Objekt in einem Client Cache, das keine Live Verbindung mit dem Server mehr aufweist. Wenn die ursprüngliche Datenquelle aus irgendeinem Grund erneut aufgerufen werden muss, z. b. beim Aktualisieren von Daten, muss die Verbindung wieder hergestellt werden. Auf die Auflistungen, Eigenschaften und Methoden eines getrennten **Recordsets** kann jedoch weiterhin zugegriffen werden.
 
- DML (Daten Bearbeitungs Sprache) diese Anweisungen in SQL, die im Gegensatz zum Definieren von Daten bearbeitet werden. Die Werte in einer Datenbank werden mit DML ausgewählt und geändert. **Insert**, **Update**, **Delete**und **Select** sind z. b. SQL DML-Anweisungen.
+ DML (Daten Bearbeitungs Sprache) diese Anweisungen in SQL, die im Gegensatz zum Definieren von Daten bearbeitet werden. Die Werte in einer Datenbank werden mit DML ausgewählt und geändert. **Insert**, **Update**, **Delete** und **Select** sind z. b. SQL DML-Anweisungen.
 
  Dokument Quellen Anbieter eine spezielle Klasse von Anbietern, die Ordner und Dokumente verwalten. Wenn ein Dokument durch ein **Datensatz** -Objekt dargestellt wird oder ein Ordner mit Dokumenten durch ein **Recordset** -Objekt dargestellt wird, füllt der Dokument Quellen Anbieter diese Objekte mit einem eindeutigen Satz von Feldern auf, die die Merkmale des Dokuments beschreiben, anstelle des eigentlichen Dokuments. Siehe auch Ressourcen Daten Satz.
 
@@ -120,9 +120,9 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
  dynamische Eigenschaft eine Eigenschaft, die für einen Datenanbieter oder den Cursor Dienst spezifisch ist. Die **Properties** -Auflistung eines Objekts wird automatisch (dynamisch) aufgefüllt. Ein-Objekt besitzt keine dynamischen Eigenschaften, bis es über einen bestimmten Datenanbieter mit einer Datenquelle verbunden ist. Siehe auch Datenanbieter, Cursor.
 
 ## <a name="e"></a>E
- Enumeration eine Liste benannter Konstanten. Enumerationswerte müssen nicht eindeutig sein. Allerdings muss der Name jedes Werts innerhalb des Bereichs, in dem die Enumeration definiert ist, eindeutig sein. In ADO werden Enumerationen für numerische Parameter und Rückgabewerte verwendet, um die Bedeutung von ADO-Code hinzuzufügen und um den Entwickler vor den numerischen Werten zu schützen (die sich von Version zu Version ändern können). Verwenden Sie z. b. den Enumerationswert " **adOpenStatic** ", um ein statisches **Recordset**zu öffnen:`Recordset.Open ,,adOpenStatic`
+ Enumeration eine Liste benannter Konstanten. Enumerationswerte müssen nicht eindeutig sein. Allerdings muss der Name jedes Werts innerhalb des Bereichs, in dem die Enumeration definiert ist, eindeutig sein. In ADO werden Enumerationen für numerische Parameter und Rückgabewerte verwendet, um die Bedeutung von ADO-Code hinzuzufügen und um den Entwickler vor den numerischen Werten zu schützen (die sich von Version zu Version ändern können). Verwenden Sie z. b. den Enumerationswert " **adOpenStatic** ", um ein statisches **Recordset** zu öffnen:`Recordset.Open ,,adOpenStatic`
 
- Wird auch als *Enumerationskonstante*bezeichnet. Siehe auch *Konstante*.
+ Wird auch als *Enumerationskonstante* bezeichnet. Siehe auch *Konstante*.
 
  Ereignis eine Aktion, die von einem-Objekt erkannt wird, für das Sie Code schreiben können, der antwortet. Ereignisse können unter anderem durch Befehlsausführung, Transaktions Vervollständigung, Recordsetnavigation und Datenaktualisierungen generiert werden. Siehe auch *Ereignishandler*.
 
@@ -131,7 +131,7 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
 ## <a name="h"></a>H
  Handler eine Routine, die eine gängige und relativ einfache Bedingung oder Operation verwaltet, z. b. Fehlerwiederherstellung oder Datenverwaltung.
 
- Hierarchisches Recordset ein **Recordset** , das ein anderes **Recordset**enthält. Weitere Informationen finden Sie unter Daten Strukturierung (Kapitel).
+ Hierarchisches Recordset ein **Recordset** , das ein anderes **Recordset** enthält. Weitere Informationen finden Sie unter Daten Strukturierung (Kapitel).
 
  Weitere Informationen finden Sie unter [zugreifen auf Zeilen in einem hierarchischen Recordset](./guide/data/accessing-rows-in-a-hierarchical-recordset.md).
 
@@ -145,7 +145,7 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
 ## <a name="m"></a>M
  Marshalling des Prozesses zum Verpacken, senden und entpacken von Schnittstellen Methoden Parametern über Thread-oder Prozess Grenzen hinweg.
 
- mittlere Ebene die logische Ebene in einem verteilten System zwischen einer Benutzeroberfläche oder einem Webclient und der Datenbank. In der Regel werden Geschäftsobjekte instanziiert. Die mittlere Ebene ist eine Auflistung von Geschäftsregeln und-Funktionen, die nach dem Empfang von Informationen generieren und verarbeiten. Dies erreichen Sie mithilfe von Geschäftsregeln, die sich häufig ändern können und daher in Komponenten gekapselt werden, die physisch von der Anwendungslogik getrennt sind. Wird auch als *Anwendungsserver Ebene*bezeichnet. Siehe auch verteilte Anwendung, Client Ebene, Datenquellen Ebene.
+ mittlere Ebene die logische Ebene in einem verteilten System zwischen einer Benutzeroberfläche oder einem Webclient und der Datenbank. In der Regel werden Geschäftsobjekte instanziiert. Die mittlere Ebene ist eine Auflistung von Geschäftsregeln und-Funktionen, die nach dem Empfang von Informationen generieren und verarbeiten. Dies erreichen Sie mithilfe von Geschäftsregeln, die sich häufig ändern können und daher in Komponenten gekapselt werden, die physisch von der Anwendungslogik getrennt sind. Wird auch als *Anwendungsserver Ebene* bezeichnet. Siehe auch verteilte Anwendung, Client Ebene, Datenquellen Ebene.
 
  MIME (Mehrzweck-Internet Mail Erweiterung) ein Internetprotokoll, das ursprünglich für den Austausch von elektronischen e-Mail-Nachrichten mit umfangreichen Inhalten in heterogenen Netzwerk-, Computer-und e-Mail-Umgebungen entwickelt In der Praxis wurde MIME auch von nicht-e-Mail-Anwendungen übernommen und erweitert.
 
@@ -160,9 +160,9 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
 
  OLE DB einen Satz von Schnittstellen, die Daten aus einer Vielzahl von Quellen mithilfe von com verfügbar machen. OLE DB-Schnittstellen bieten Anwendungen einheitlichen Zugriff auf Daten, die in verschiedenen Informationsquellen gespeichert sind. Diese Schnittstellen unterstützen die Menge der DBMS-Funktionalität, die für die Datenquelle geeignet ist, sodass Sie Ihre Daten gemeinsam nutzen können. Siehe auch com.
 
- vollständiges Sperren eines Sperrtyps, bei dem die Datenseite mit einem oder mehreren Datensätzen, einschließlich des zu bearbeitenden Datensatzes, für andere Benutzer nicht verfügbar ist, während der Datensatz von der **Update** -Methode aktualisiert wird, aber vor und nach dem **Update Update**verfügbar ist.
+ vollständiges Sperren eines Sperrtyps, bei dem die Datenseite mit einem oder mehreren Datensätzen, einschließlich des zu bearbeitenden Datensatzes, für andere Benutzer nicht verfügbar ist, während der Datensatz von der **Update** -Methode aktualisiert wird, aber vor und nach dem **Update Update** verfügbar ist.
 
- Die optimistische Sperre wird verwendet, wenn das **Recordset** -Objekt geöffnet wird, wobei der **LockType** -Parameter oder die-Eigenschaft auf **adlockoptimioder** **adlockbatchoptimifest**gelegt ist. Siehe auch Pessimistisches Sperren.
+ Die optimistische Sperre wird verwendet, wenn das **Recordset** -Objekt geöffnet wird, wobei der **LockType** -Parameter oder die-Eigenschaft auf **adlockoptimioder** **adlockbatchoptimifest** gelegt ist. Siehe auch Pessimistisches Sperren.
 
  Ordinalwert die numerische Position eines Elements in einer Bestellung. In einer ADO-Auflistung ist der Ordinalwert des ersten Elements NULL (0). Das nächste Element ist eins (1) usw.
 
@@ -177,7 +177,7 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
 
  Pessimistisches Sperren eines Sperrtyps, bei dem die Seite, die einen oder mehrere Datensätze enthält, einschließlich des Datensatzes, der bearbeitet wird, für andere Benutzer nicht verfügbar ist, um sicherzustellen, dass ein Update durchgeführt wird. Das pessimistische Sperr Verhalten wird vom OLE DB-Anbieter definiert. In der Regel werden Datensätze bei der Bearbeitung gesperrt und bleiben solange nicht verfügbar, bis die **Update** -Methode abgeschlossen ist.
 
- Die pessimistische Sperrung wird aktiviert, wenn das **Recordset** -Objekt geöffnet wird, wenn der **LockType** -Parameter oder die Eigenschaft auf **adlockpessimifest**gelegt ist. Siehe auch optimistische Sperren.
+ Die pessimistische Sperrung wird aktiviert, wenn das **Recordset** -Objekt geöffnet wird, wenn der **LockType** -Parameter oder die Eigenschaft auf **adlockpessimifest** gelegt ist. Siehe auch optimistische Sperren.
 
  Pooling einer Leistungsoptimierung basierend auf der Verwendung von Sammlungen vorab zugeordneter Ressourcen, z. b. von Objekten oder Datenbankverbindungen. Es ist effizienter, eine vorhandene Ressource aus dem Pool zu zeichnen, als eine neue Ressource zu erstellen.
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: bc77109e51cff1169105f39c1898dfd1fc32588c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 310bcd0f3cd8db8a0c46f278d2b18bdcef2c42a9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472457"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016660"
 ---
 # <a name="creating-script-files-mysqltosql"></a>Erstellen von Skriptdateien (MySqlToSql)
 Der erste Schritt vor dem Starten der SSMA-Konsolenanwendung besteht darin, die Skriptdatei zu erstellen und bei Bedarf die Variablen Wert Datei und die Server Verbindungs Datei zu erstellen.  
@@ -325,9 +325,9 @@ Die vom benutzerkonfigurierbaren Optionen umfassen:
   
     Es treten zwei Fälle auf:  
   
-    1.  Wenn die Außerkraftsetzungs Option auf **false**gesetzt ist, wird die Such Reihenfolge durch den &gt; Benutzer geschützt &gt; &gt; .  
+    1.  Wenn die Außerkraftsetzungs Option auf **false** gesetzt ist, wird die Such Reihenfolge durch den &gt; Benutzer geschützt &gt; &gt; .  
   
-    2.  Wenn die Überschreibungs Option **true**ist, ist die Reihenfolge der Suche ein Skript für die Datei- &gt; Server-Verbindungs Datei &gt; .  
+    2.  Wenn die Überschreibungs Option **true** ist, ist die Reihenfolge der Suche ein Skript für die Datei- &gt; Server-Verbindungs Datei &gt; .  
   
     **Beispiel:**  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36ad54e1768b5164294d5de9767757ef3f376144
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 369d9ef5548a0ff30b08dc27c9df38b0f3c1fa1b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991781"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028635"
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>Zugreifen auf Zeilen in einem hierarchischen Recordset (Beispiel)
 Das folgende Beispiel zeigt die erforderlichen Schritte für den Zugriff auf Zeilen in einem hierarchischen [Recordset](../../reference/ado-api/recordset-object-ado.md):
@@ -28,11 +28,11 @@ Das folgende Beispiel zeigt die erforderlichen Schritte für den Zugriff auf Zei
 
 2.  Die äußere Schleife zeigt den vor-und Nachnamen, den Status und die Identifizierung jedes Autors an.
 
-3.  Das angefügte **Recordset** für jede Zeile wird aus der [Fields](../../reference/ado-api/fields-collection-ado.md) -Auflistung abgerufen und *rsttitleauthor*zugewiesen.
+3.  Das angefügte **Recordset** für jede Zeile wird aus der [Fields](../../reference/ado-api/fields-collection-ado.md) -Auflistung abgerufen und *rsttitleauthor* zugewiesen.
 
-4.  Die innere Schleife zeigt vier Felder aus jeder Zeile im angefügten **Recordset**an.
+4.  Die innere Schleife zeigt vier Felder aus jeder Zeile im angefügten **Recordset** an.
 
- Die [StayInSync](../../reference/ado-api/stayinsync-property.md) -Eigenschaft ist zur Veranschaulichung auf **false** festgelegt, sodass Sie das Kapitel ändern in jeder Iterations Schleife der äußeren Schleife explizit sehen können. Um das Codebeispiel effizienter zu gestalten, können Sie die Zuweisung in Schritt 3 vor der ersten Zeile in Schritt 2 verschieben, sodass die Zuweisung nur einmal ausgeführt wird. Legen Sie dann die [StayInSync](../../reference/ado-api/stayinsync-property.md) -Eigenschaft auf **true**fest, damit *rsttitleauthor* implizit und automatisch in das entsprechende Kapitel wechselt, wenn *RST* zu einer neuen Zeile wechselt.
+ Die [StayInSync](../../reference/ado-api/stayinsync-property.md) -Eigenschaft ist zur Veranschaulichung auf **false** festgelegt, sodass Sie das Kapitel ändern in jeder Iterations Schleife der äußeren Schleife explizit sehen können. Um das Codebeispiel effizienter zu gestalten, können Sie die Zuweisung in Schritt 3 vor der ersten Zeile in Schritt 2 verschieben, sodass die Zuweisung nur einmal ausgeführt wird. Legen Sie dann die [StayInSync](../../reference/ado-api/stayinsync-property.md) -Eigenschaft auf **true** fest, damit *rsttitleauthor* implizit und automatisch in das entsprechende Kapitel wechselt, wenn *RST* zu einer neuen Zeile wechselt.
 
 ## <a name="example"></a>Beispiel
 
@@ -69,4 +69,4 @@ End Sub
 ```
 
 ## <a name="see-also"></a>Weitere Informationen
- [Übersicht über die Daten Strukturierung](./data-shaping-overview.md) [Field Object](../../reference/ado-api/field-object.md) [Fields Collection (ADO)](../../reference/ado-api/fields-collection-ado.md) [formal Shape Grammar](./formal-shape-grammar.md) [Microsoft Data Strukturierung Service for OLE DB (ADO Service Provider)](../appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [(ADO)](../../reference/ado-api/recordset-object-ado.md) [erforderliche Anbieter für das Strukturieren von Daten strukturieren von](./required-providers-for-data-shaping.md) [Shape APPEND Clause](./shape-append-clause.md) [Form Befehlen in der allgemeinen](./shape-commands-in-general.md) [Form COMPUTE-Klausel](./shape-compute-clause.md) [Visual Basic for Applications Functions](./visual-basic-for-applications-functions.md)
+ [Übersicht über die Daten Strukturierung](./data-shaping-overview.md) [Field Object](../../reference/ado-api/field-object.md) [Fields Collection (ADO)](../../reference/ado-api/fields-collection-ado.md) [formal Shape Grammar](./formal-shape-grammar.md) [Microsoft Data Strukturierung Service for OLE DB (ADO Service Provider)](../appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [(ADO)](../../reference/ado-api/recordset-object-ado.md) [erforderliche Anbieter für das Strukturieren von Daten strukturieren von](./required-providers-for-data-shaping.md) [](./shape-append-clause.md) [Form Befehlen in der allgemeinen](./shape-commands-in-general.md) [Form COMPUTE-Klausel](./shape-compute-clause.md) [Visual Basic for Applications Functions](./visual-basic-for-applications-functions.md)

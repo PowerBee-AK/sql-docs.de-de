@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5a7e1ba17822d339e5ae40e6e6b5828191ce84ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a8b2ba53ef5f3dcb895d217e2acef3acc15e8784
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463172"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017642"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Zuordnen von Sybase ASE- und SQL Server-Datentypen (SybaseToSQL)
 Die Datenbanktypen von Sybase Adaptive Server Enterprise (ASE) unterscheiden sich von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL-Datenbanktypen. Beim Konvertieren von ASE-Datenbankobjekten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Objekte müssen Sie angeben, wie Datentypen von ASE zu oder SQL Azure zugeordnet werden sollen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können die standardmäßigen Datentyp Zuordnungen akzeptieren, oder Sie können die Zuordnungen anpassen, wie in den folgenden Abschnitten dargestellt.  
@@ -38,9 +38,9 @@ Im folgenden Verfahren wird gezeigt, wie Datentypen auf Projekt-, Datenbank-oder
   
 1.  Um die Datentyp Zuordnung für das gesamte Projekt anzupassen, öffnen Sie das Dialogfeld **Projekteinstellungen** :  
   
-    1.  Wählen Sie **im Menü Extras** die Option **Projekteinstellungen**aus.  
+    1.  Wählen Sie **im Menü Extras** die Option **Projekteinstellungen** aus.  
   
-    2.  Wählen Sie im linken Bereich **Typzuordnung**aus.  
+    2.  Wählen Sie im linken Bereich **Typzuordnung** aus.  
   
         Das Typmapping-Diagramm und die Schaltflächen werden im rechten Bereich angezeigt.  
   
@@ -54,13 +54,13 @@ Im folgenden Verfahren wird gezeigt, wie Datentypen auf Projekt-, Datenbank-oder
   
     1.  Klicken Sie auf **Hinzufügen**.  
   
-    2.  Wählen Sie unter **Quelltyp**den zu zuordnenden ASE-Datentyp aus.  
+    2.  Wählen Sie unter **Quelltyp** den zu zuordnenden ASE-Datentyp aus.  
   
     3.  Wenn der Typ eine Länge erfordert, geben Sie im Feld **von** die minimale Daten Länge für die Zuordnung an, und geben Sie im Feld **an** die maximale Daten Länge für die Zuordnung an.  
   
         Auf diese Weise können Sie die Datenzuordnung für kleinere und größere Werte desselben Datentyps anpassen.  
   
-    4.  Wählen Sie unter **Zieltyp**das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder den SQL Azure Datentyp aus.  
+    4.  Wählen Sie unter **Zieltyp** das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder den SQL Azure Datentyp aus.  
   
         Einige Typen erfordern eine Länge des Ziel Datentyps. Wenn dies erforderlich ist, geben Sie die neue Daten Länge in das Feld **Ersetzen durch** ein.  
   
@@ -70,13 +70,13 @@ Im folgenden Verfahren wird gezeigt, wie Datentypen auf Projekt-, Datenbank-oder
   
     1.  Klicken Sie auf **Bearbeiten**.  
   
-    2.  Wählen Sie unter **Quelltyp**den zu zuordnenden ASE-Datentyp aus.  
+    2.  Wählen Sie unter **Quelltyp** den zu zuordnenden ASE-Datentyp aus.  
   
     3.  Wenn der Typ eine Länge erfordert, geben Sie im Feld **von** die minimale Daten Länge für die Zuordnung an, und geben Sie im Feld **an** die maximale Daten Länge für die Zuordnung an.  
   
         Auf diese Weise können Sie die Datenzuordnung für kleinere und größere Werte desselben Datentyps anpassen.  
   
-    4.  Wählen Sie unter **Zieltyp**das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder den SQL Azure Datentyp aus.  
+    4.  Wählen Sie unter **Zieltyp** das Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder den SQL Azure Datentyp aus.  
   
         Einige Typen erfordern eine Länge des Ziel Datentyps. Wenn dies erforderlich ist, geben Sie die neue Daten Länge im Feld **Ersetzen durch** ein, und klicken Sie dann auf **OK**.  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6d1586800288d0a2d2984cf08e770f776c5ee3c6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 837ecdb45ead79e9e957a6d2381ccfaf1de6fb2c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991811"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028665"
 ---
 # <a name="visual-c-extensions-for-ado"></a>Visual C++-Erweiterungen für ADO
-Die bevorzugte Methode zum Programmieren von ADO mit Visual C++ ist die Verwendung der **#Import** -Direktive, wie in [Microsoft Visual C++ ADO-Programmierung](./visual-c-ado-programming.md)erläutert. In früheren Versionen von ADO gab es jedoch eine Alternative Programmiermethode mithilfe von Visual C++: die Visual C++ Erweiterungen. In diesem Abschnitt wird dieses Feature für diejenigen beschrieben, die Visual C++-Erweiterungs Code verwalten müssen, aber mit #**Import**muss neuer ADO-Code geschrieben werden.
+Die bevorzugte Methode zum Programmieren von ADO mit Visual C++ ist die Verwendung der **#Import** -Direktive, wie in [Microsoft Visual C++ ADO-Programmierung](./visual-c-ado-programming.md)erläutert. In früheren Versionen von ADO gab es jedoch eine Alternative Programmiermethode mithilfe von Visual C++: die Visual C++ Erweiterungen. In diesem Abschnitt wird dieses Feature für diejenigen beschrieben, die Visual C++-Erweiterungs Code verwalten müssen, aber mit #**Import** muss neuer ADO-Code geschrieben werden.
 
  Einer der aktivsten Aufträge Visual C++ Programmierern beim Abrufen von Daten mit ADO ist das Konvertieren von Daten, die als Variant-Datentyp zurückgegeben werden, in einen C++-Datentyp und das anschließende Speichern der konvertierten Daten in einer Klasse oder Struktur. Das Abrufen von C++-Daten über einen Variant-Datentyp ist nicht nur mühsam, sondern verringert auch die Leistung.
 

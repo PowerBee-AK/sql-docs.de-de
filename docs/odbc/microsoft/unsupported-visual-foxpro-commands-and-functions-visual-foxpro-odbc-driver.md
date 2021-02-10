@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fd7b34f35ac0fcc747cb30fb35537a33cc5cd4a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4ac7f25709cf91e03f9ad8b15f9fb0026ee5e98
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471421"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015390"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>Nicht unterstützte Visual FoxPro-Befehle und -Funktionen (Visual FoxPro-ODBC-Treiber)
 In der folgenden Tabelle sind FoxPro-Befehle und Funktionen aufgeführt, die nicht vom Visual FoxPro-ODBC-Treiber unterstützt werden, sondern von Microsoft® Visual FoxPro-® unterstützt werden.  
@@ -33,29 +33,29 @@ In der folgenden Tabelle sind FoxPro-Befehle und Funktionen aufgeführt, die nic
 
 :::row:::
     :::column:::
-        !(Siehe Ausführen von &#124;!S  
-        #<a name="defineundef"></a>definieren... #undef  
-        #<a name="ifendifpreprocessordirective"></a>If... #endif-Präprozessordirektive  
-        #<a name="ifdef124ifndef"></a>Ifdef-&#124; #ifndef  
-        #<a name="includepreprocessordirective"></a>Präprozessordirektive einschließen  
+        ! (Siehe Ausführen von &#124;! S  
+        #<a name="define--undef"></a>definieren... #undef  
+        #<a name="if--endif-preprocessor-directive"></a>If... #endif-Präprozessordirektive  
+        #<a name="ifdef-124-ifndef"></a>Ifdef-&#124; #ifndef  
+        #<a name="include-preprocessor-directive"></a>Präprozessordirektive einschließen  
         :: Scope Resolution-Operator  
-        ?&#124;?Get-Help  
+        ? &#124;? Befehl  
     :::column-end:::
     :::column:::
-        ???Get-Help  
-        @ ... Box-Befehl  
-        @ ... Class-Befehl  
-        @ ... Befehl "Löschen"  
-        @ ... Befehl "Bearbeiten-Felder bearbeiten"  
-        @ ... Befehl "ausfüllen"  
-        @ ... Erhalten  
+        ??? Befehl  
+        @ ... Box-Befehl  
+        @ ... Class-Befehl  
+        @ ... Befehl "Löschen"  
+        @ ... Befehl "Bearbeiten-Felder bearbeiten"  
+        @ ... Befehl "ausfüllen"  
+        @ ... Erhalten  
     :::column-end:::
     :::column:::
-        @ ... Menübefehl  
-        @ ... Befehl zur Eingabeaufforderung  
-        @ ... Befehl zum Beispiel  
-        @ ... Scrollbefehl  
-        @ ... TO-Befehl  
+        @ ... Menübefehl  
+        @ ... Befehl zur Eingabeaufforderung  
+        @ ... Befehl zum Beispiel  
+        @ ... Scrollbefehl  
+        @ ... TO-Befehl  
         Befehl \ &#124; \\ \  
     :::column-end:::
 :::row-end:::
@@ -461,7 +461,7 @@ NumLock ()-Funktion
         System Speicher Variable _PPITCH  
         System Speicher Variable _PQUALITY  
         System Speicher Variable _PRETEXT  
-        PrintJob... Befehl "endprintjob"  
+        PrintJob... Befehl "endprintjob"  
     :::column-end:::
     :::column:::
         PRINTSTATUS ()-Funktion  
@@ -527,7 +527,7 @@ Befehl "beenden"
         System Speicher Variable _RMARGIN  
         Rmdir-Befehl  
         Row ()-Funktion  
-        Führen Sie &#124; aus.Get-Help  
+        Führen Sie &#124; aus. Befehl  
         Befehl "RunScript"  
     :::column-end:::
 :::row-end:::
@@ -546,7 +546,7 @@ Befehl "beenden"
         Scrollbefehl  
         SET-Befehl  
         Alternativen Befehl festlegen  
-        Befehl SET ANSI  
+        SET ANSI-Befehl  
         Befehl "aplabout" festlegen  
         Befehl "Autosave" festlegen  
         Befehl "Glocken festlegen"  
@@ -658,7 +658,7 @@ Befehl "beenden"
 :::row:::
     :::column:::
         System Speicher Variable _TABS  
-        Text... ENDTEXT-Befehl  
+        Text... ENDTEXT-Befehl  
         System Speicher Variable _THROTTLE  
     :::column-end:::
     :::column:::
@@ -707,7 +707,7 @@ Befehl "beenden"
         Wexist ()-Funktion  
         Wfont ()-Funktion  
         System Speicher Variable _WINDOWS  
-        Mit... Befehl "EndWith"  
+        Mit... Befehl "EndWith"  
     :::column-end:::
     :::column:::
         System Speicher Variable _WIZARD  

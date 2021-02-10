@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 868731f7f7c88a2f6a26b5fab1670de8de96b1b3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1f1919f3524f05035a4376f30cf2e36ae731bdea
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990951"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028850"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Verwenden von ADO mit Skriptsprachen
 In einer Skript Umgebung können Sie mithilfe von ADO Daten mithilfe von serverseitiger Skripterstellung verfügbar machen. In diesem Szenario werden ADO, der zugrunde liegende OLE DB-Anbieter und alle anderen Komponenten, die für den Verweis auf einen bestimmten Datenspeicher erforderlich sind, auf einem Server installiert, auf dem Internetinformationsdienste (IIS) ausgeführt wird. Mithilfe von Active Server Pages (ASP) ist ADO eine Komponente, auf die in einem Skript verwiesen wird, das z. b. HTML generieren kann. Dieser HTML-Inhalt kann über HTTP an einen Client-Webbrowser übermittelt werden. Mithilfe der Skripterstellung kann die Webseite Aktionen an das serverseitige Skript zurücksenden, um bestimmte Daten zu aktualisieren, zu durchlaufen oder anzuzeigen.  
