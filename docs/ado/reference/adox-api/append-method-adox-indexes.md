@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f451f93c41ba8fae501d9fb52233f9a4dbe03d30
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: feb259809798e3260e4e201c4658bfbc1455f168
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169578"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050541"
 ---
 # <a name="append-method-adox-indexes"></a>Append-Methode (ADOX-Indizes)
 Fügt [der](./indexes-collection-adox.md) Index Auflistung ein neues [Index](./index-object-adox.md) Objekt hinzu.  

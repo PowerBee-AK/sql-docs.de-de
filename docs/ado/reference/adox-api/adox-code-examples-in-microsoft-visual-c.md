@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07fcce336bd636f24ff1d01551aa016f29eb075f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1e0bf40a5762599fc6c5f6970e0537a67e8eca5d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169646"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050731"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>ADOX-Codebeispiele in Microsoft Visual C++
 Diese Themen enthalten Beispielcode, der Ihnen das Verständnis der Verwendung von ADOX erleichtert. Alle Codebeispiele werden mithilfe von Microsoft Visual C++ geschrieben.  
@@ -78,6 +78,6 @@ Diese Themen enthalten Beispielcode, der Ihnen das Verständnis der Verwendung v
   
 -   [Table Type-Eigenschaft, Connection close method example (VC + +)](./connection-close-method-table-type-property-example-vc.md)  
   
-## <a name="collections"></a>Sammlungen  
+## <a name="collections"></a>Auflistungen  
   
 -   [Parameters-Collection, Command-Eigenschaft – Beispiel (VC++)](./parameters-collection-command-property-example-vc.md)

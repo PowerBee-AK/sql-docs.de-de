@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70795cf5c645ba3eaf9d6c869a067b02fad9d0c4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0d68a27408a6066ec98851c20df3f03b77381e68
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169075"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049560"
 ---
 # <a name="views-refresh-method-example-vb"></a>Refresh-Methode für Sichten – Beispiel (VB)
 Der folgende Code zeigt, wie die [views](./views-collection-adox.md) -Auflistung eines [Katalogs](./catalog-object-adox.md)aktualisiert wird. Dies ist erforderlich, bevor [auf Sicht](./view-object-adox.md) Objekte aus dem **Katalog** zugegriffen werden kann.  

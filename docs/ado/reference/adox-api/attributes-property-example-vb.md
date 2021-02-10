@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9536ad522be7a323113e23466de5abb82cbb5824
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2dfc8f93b2c185b530a142dde8206c77799818c3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172271"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050381"
 ---
 # <a name="attributes-property-example-vb"></a>Attributes-Eigenschaft – Beispiel (VB)
 Dieses Beispiel veranschaulicht die [Attribute](./attributes-property-adox.md) -Eigenschaft einer [Spalte](./column-object-adox.md). Wenn Sie es auf **adcolnullable** festlegen, kann der Benutzer den Wert eines [recordsetfelds](../ado-api/recordset-object-ado.md) [](../ado-api/field-object.md) auf eine leere Zeichenfolge festlegen. In dieser Situation kann der Benutzer zwischen einem Datensatz unterscheiden, bei dem keine Daten bekannt sind, und einem Datensatz, in dem die Daten nicht zutreffen.  

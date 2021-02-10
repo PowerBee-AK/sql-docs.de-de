@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bdf4f36eb4f88a6cfd87b94a8722c3a1214cd0c0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 38ce372d01ea94008ea6ef2439b39059bbdc53f1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164333"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050621"
 ---
 # <a name="adox-object-model"></a>ADOX-Objektmodell
 Im folgenden Diagramm wird veranschaulicht, wie Objekte in ADOX dargestellt und verknüpft werden. Weitere Informationen zu einem bestimmten Objekt oder einer bestimmten Sammlung finden Sie im Referenz Thema oder in den [ADOX-Objekten](./adox-objects.md) und [ADOX](./adox-collections.md)-Auflistungen.  

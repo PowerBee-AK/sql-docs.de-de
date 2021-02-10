@@ -9,12 +9,12 @@ ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: 2989be74f4c180d07a6270a8ba5f685460780fbd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 18bec3d694985e15b1ae2d813fddf2f378c9d78a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243474"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049106"
 ---
 # <a name="configure-polybase-in-parallel-data-warehouse-to-access-external-data-in-hadoop"></a>Paralleles Konfigurieren von polybase Data Warehouse für den Zugriff auf externe Daten in Hadoop
 
@@ -49,7 +49,7 @@ Konfigurieren Sie zunächst APS für die Verwendung Ihres bestimmten Hadoop-Anbi
 
 2. Neustart der APS-Region mithilfe der Dienst Status Seite auf [Appliance-Configuration Manager](launch-the-configuration-manager.md).
   
-## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> Aktivieren der Weitergabeberechnung  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> Weitergabeberechnung aktivieren  
 
 Um die Abfrageleistung zu verbessern, aktivieren Sie die Weitergabeberechnung für Ihren Hadoop-Cluster:  
   
@@ -278,7 +278,7 @@ Um die Daten in Ihrer Hadoop-Datenquelle abzufragen, müssen Sie eine externe Ta
 
 Es gibt drei Funktionen, für die PolyBase geeignet ist:  
   
-- Ad-hoc-Abfragen für externe Tabellen.  
+- Ad-hoc-Abfragen von externen Tabellen  
 - Importieren von Daten  
 - Exportieren von Daten  
 
@@ -286,7 +286,7 @@ Die folgenden Abfragen stellen fiktive Kfz-Sensordaten für das Beispiel bereit.
 
 ### <a name="ad-hoc-queries"></a>Ad-hoc-Abfragen  
 
-Die folgende Ad-hoc-Abfrage wird relationalen mit Hadoop-Daten verbunden. Es wählt Kunden aus, die schneller als 35 mph sind, und verbindet strukturierte Kundendaten, die in APS gespeichert sind, mit Fahrzeug Sensordaten, die in Hadoop gespeichert sind  
+Die folgende Ad-hoc-Abfrage verknüpft relationale Daten mit Hadoop-Daten. Es wählt Kunden aus, die schneller als 35 mph sind, und verbindet strukturierte Kundendaten, die in APS gespeichert sind, mit Fahrzeug Sensordaten, die in Hadoop gespeichert sind  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -336,7 +336,7 @@ WHERE T2.YearMeasured = 2009 and T2.Speed > 40;
 
 ## <a name="view-polybase-objects-in-ssdt"></a>Anzeigen von polybase-Objekten in SSDT  
 
-In SQL Server Data Tools werden externe Tabellen in einem separaten Ordner **externe Tabellen**angezeigt. Externe Datenquellen und externe Dateiformate befinden sich in Unterordnern unter **Externe Ressourcen**.  
+In SQL Server Data Tools werden externe Tabellen in einem separaten Ordner **externe Tabellen** angezeigt. Externe Datenquellen und externe Dateiformate befinden sich in Unterordnern unter **Externe Ressourcen**.  
   
 ![Polybase-Objekte in SSDT](media/polybase/external-tables-datasource.png)  
 

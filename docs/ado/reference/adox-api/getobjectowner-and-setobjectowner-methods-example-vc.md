@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fb68ca4eb7cd8c1591ef52b399649dac7614b308
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fc0838e16533d5c9c75d9dfbec7bfb934efeb5f2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169411"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050100"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner- und SetObjectOwner-Methoden – Beispiel (VC++)
 In diesem Beispiel werden die [GetObjectOwner](./getobjectowner-method-adox.md) [-Methode](./setobjectowner-method.md) und die-Methode für die Methode "". Dieser Code setzt voraus, dass die Gruppen Buchhaltungs Führung vorhanden ist (siehe das [Beispiel Gruppen und Benutzer anfügen, ChangePassword-Methoden (VC + +)](./groups-and-users-append-changepassword-methods-example-vc.md) , um zu erfahren, wie diese Gruppe dem System hinzugefügt wird). Der Besitzer der Categories-Tabelle ist auf Accounting festgelegt.  

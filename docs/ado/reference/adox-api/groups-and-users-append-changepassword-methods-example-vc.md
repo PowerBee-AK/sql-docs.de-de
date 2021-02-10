@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d442d0ce32c7cdb7aa249c21172a6c8db8966f05
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 70368dba6eb121219ef871f1c87034e1764f0e94
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172050"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050060"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>Append- und ChangePassword-Methode für Gruppen und Benutzer – Beispiel (VC++)
 In diesem Beispiel werden die [Append](./append-method-adox-groups.md) -Methode von [Gruppen](./groups-collection-adox.md)sowie die [Append](./append-method-adox-users.md) -Methode von [Benutzern](./users-collection-adox.md) veranschaulicht, indem dem System eine neue [Gruppe](./group-object-adox.md) und ein neuer [Benutzer](./user-object-adox.md) hinzugefügt werden. Die neue **Gruppe** wird an die **Groups** -Auflistung des neuen **Benutzers** angehängt. Folglich wird der neue **Benutzer** der **Gruppe** hinzugefügt. Außerdem wird die [ChangePassword](./changepassword-method-adox.md) -Methode verwendet, um das **Benutzer** Kennwort anzugeben.  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea2ec614-34c8-41b7-8ebd-063798bd56b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ba9f3402822936726125bf10f6b8bbb14d77815d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 368a673eff64e98c934b99e6531714637db6c4fe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169655"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050761"
 ---
 # <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>ADOX-Codebeispiel: NumericScale- und Precision-Eigenschaften – Beispiel (VB)
 In diesem Beispiel werden die [NumericScale](./numericscale-property-adox.md) -Eigenschaft und die [Precision](./precision-property-adox.md) -Eigenschaft des [Column](./column-object-adox.md) -Objekts veranschaulicht. Dieser Code zeigt den Wert für die **Order Details** -Tabelle der *Northwind* -Datenbank an.  

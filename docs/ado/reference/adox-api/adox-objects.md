@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff34689eac4f9aff1729b316c4aff25b02191c83
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2234203a70bfbc4fd031b85e4f1f66327d58d62b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169640"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050601"
 ---
 # <a name="adox-objects"></a>ADOX-Objekte
 ## <a name="adox-object-summary"></a>ADOX-Objekt Zusammenfassung  
@@ -31,8 +31,8 @@ ms.locfileid: "99169640"
 |[Gruppe](./group-object-adox.md)|Stellt ein Gruppenkonto dar, das über Zugriffsberechtigungen in einer gesicherten Datenbank verfügt.|  
 |[Index](./index-object-adox.md)|Stellt einen Index aus einer Datenbanktabelle dar.|  
 |[Schlüssel](./key-object-adox.md)|Stellt ein primäres, fremdes oder eindeutiges Schlüsselfeld aus einer Datenbanktabelle dar.|  
-|[Dringlichkeit](./procedure-object-adox.md)|Stellt eine gespeicherte Prozedur dar.|  
-|[Tabelle](./table-object-adox.md)|Stellt eine Datenbanktabelle dar, einschließlich Spalten, Indizes und Schlüsseln.|  
+|[Prozedur](./procedure-object-adox.md)|Stellt eine gespeicherte Prozedur dar.|  
+|[Table](./table-object-adox.md)|Stellt eine Datenbanktabelle dar, einschließlich Spalten, Indizes und Schlüsseln.|  
 |[Benutzer](./user-object-adox.md)|Stellt ein Benutzerkonto dar, das über Zugriffsberechtigungen in einer gesicherten Datenbank verfügt.|  
 |[Anzeigen](./view-object-adox.md)|Stellt einen gefilterten Satz von Datensätzen oder eine virtuelle Tabelle dar.|  
   
