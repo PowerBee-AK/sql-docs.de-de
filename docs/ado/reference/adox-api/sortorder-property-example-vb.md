@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 09ecc9649da8d080ac0fc1dbde4f26cc850907e5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: dd66a90a039531ec3aeeaa78ed0bea5716f39d0d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164024"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053491"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder-Eigenschaft – Beispiel (VB)
 Dieses Beispiel veranschaulicht die [sortor](./sortorder-property-adox.md) der-Eigenschaft einer [Spalte](./column-object-adox.md) , die an die [Columns](./columns-collection-adox.md) -Auflistung eines [Indexes](./index-object-adox.md)angefügt wurde. Der Code fügt der Spalte Country in der Tabelle **Employees** einen aufsteigenden Index hinzu und zeigt dann die Datensätze an. Anschließend fügt der Code einen absteigenden Index an die Spalte Country in der Tabelle **Employees** an und zeigt die Datensätze erneut an. Der Unterschied zwischen aufsteigenden und absteigenden Indizes wird angezeigt.  

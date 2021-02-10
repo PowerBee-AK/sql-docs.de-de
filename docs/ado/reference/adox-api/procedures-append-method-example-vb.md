@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ed763f0b7e1eea2df28811ab506c1baeda19d41
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e6fcbbcd93ac77863e967539fa27a1a9f01f0158
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164091"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053855"
 ---
 # <a name="procedures-append-method-example-vb"></a>Append-Methode für Prozeduren – Beispiel(VB)
 Der folgende Code veranschaulicht, wie ein [Befehls](../ado-api/command-object-ado.md) Objekt und die [Prozeduren](./procedures-collection-adox.md) -Auflistungs [Methode zum](./append-method-adox-procedures.md) Erstellen einer neuen Prozedur in der zugrunde liegenden Datenquelle verwendet werden.  

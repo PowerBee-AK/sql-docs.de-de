@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cfb44f5e35b1f30e504cfbf83a85c5a61aceb987
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 00e698ed85e739b2ea6a8dccebef7ce36e3be8e0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164293"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054475"
 ---
 # <a name="catalog-object-adox"></a>Catalog-Objekt (ADOX)
 Enthält Sammlungen ([Tabellen](./tables-collection-adox.md), [Sichten](./views-collection-adox.md), [Benutzer](./users-collection-adox.md), [Gruppen](./groups-collection-adox.md)und [Prozeduren](./procedures-collection-adox.md)), die den Schema Katalog einer Datenquelle beschreiben.  
