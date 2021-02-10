@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a46a863f6e4f230c0f314d7207cf03ad6dd790a0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 56df1a9ee6f79f2bba06ca4d4c0e8a2e62942b62
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172174"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052041"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated- und DateModified-Eigenschaften – Beispiel (VB)
 In diesem Beispiel werden die [DateCreated](./datecreated-property-adox.md) -Eigenschaft und die [DateModified](./datemodified-property-adox.md) -Eigenschaft durch Hinzufügen einer neuen [Spalte](./column-object-adox.md) zu einer vorhandenen [Tabelle](./table-object-adox.md) und durch Erstellen einer neuen **Tabelle** veranschaulicht. Die dateoutput-Prozedur ist erforderlich, damit das Beispiel ausgeführt werden kann.  

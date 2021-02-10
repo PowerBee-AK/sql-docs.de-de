@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f5e99f97179323e92ff04153b5cb9fe0d67fe46
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4df128f2885dc3f4a582c34ffdb436dc255b538c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170333"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051531"
 ---
 # <a name="rowset-property-ado"></a>Rowset-Eigenschaft (ADO)
 Ruft ein OLE DB Rowsetobjekt aus/in einem **adorecordsetconstruction** -Objekt ab oder legt dieses **fest** . Wenn Sie put_Rowset verwenden, wird das Rowset in ein ADO- **Recordset** -Objekt umgewandelt.  

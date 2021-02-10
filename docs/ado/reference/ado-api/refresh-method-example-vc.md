@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f35815aeddb607a976f823bc0a438c28fa5e492
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a385f1cce10cff211f6758e1898110bccc0c8e83
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170389"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051651"
 ---
 # <a name="refresh-method-example-vc"></a>Refresh-Methode – Beispiel (VC++)
 In diesem Beispiel wird die Verwendung der [Refresh](./refresh-method-ado.md) -Methode zum Aktualisieren der [Parameter](./parameters-collection-ado.md) Auflistung für ein [Befehls](./command-object-ado.md) Objekt einer gespeicherten Prozedur veranschaulicht.  

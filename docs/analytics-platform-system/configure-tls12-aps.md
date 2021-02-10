@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.date: 10/29/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 988cac765a596b541d128b0b6190f6f228d95ee7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 561a0a4f1d45d78e0f2fd23d61aae67f6adb6ff7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401254"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052741"
 ---
 # <a name="configure-tls-12-in-aps"></a>Konfigurieren von TLS 1,2 in APS
 
 Um APS so zu sichern, dass nur TLS 1,2 verwendet wird, müssen Sie das andere Protokoll auf allen physischen und virtuellen Hosts explizit deaktivieren. Das Deaktivieren von Protokollen erfordert Änderungen an der Registrierungs Einstellung. Registrierungs Änderungen erfordern einen Neustart der virtuellen und physischen Hosts.
 
 > [!WARNING]
-> Dieser Abschnitt bzw. diese Methode oder Aufgabe enthält Schritte, in denen erläutert wird, wie die Registrierung geändert wird. Schwerwiegende Probleme können jedoch auftreten, wenn Sie die Registrierung falsch ändern, was zu Datenverlusten führen kann und eine Neuinstallation des Betriebssystems erforderlich ist. Es wird dringend empfohlen, die Registrierung zu sichern, bevor Sie Sie ändern. Auf diese Weise können Sie die Registrierung wiederherstellen, falls ein Problem auftritt. Weitere Informationen zum Sichern und Wiederherstellen der Registrierung erhalten Sie, indem Sie auf die folgende Artikelnummer klicken, um den Artikel in der Microsoft Knowledge Base anzuzeigen:<br>
+> Dieser Abschnitt, diese Methode oder Aufgabe enthält Schritte, die Ihnen zeigen, wie Sie die Registrierung ändern. Schwerwiegende Probleme können jedoch auftreten, wenn Sie die Registrierung falsch ändern, was zu Datenverlusten führen kann und eine Neuinstallation des Betriebssystems erforderlich ist. Es wird dringend empfohlen, die Registrierung zu sichern, bevor Sie Sie ändern. Sie können dann die Registrierung wiederherstellen, falls ein Problem auftritt. Weitere Informationen zum Sichern und Wiederherstellen der Registrierung erhalten Sie, indem Sie auf die folgende Artikelnummer klicken, um den Artikel in der Microsoft Knowledge Base anzuzeigen:<br>
 [322756](https://support.microsoft.com/help/322756) sichern und Wiederherstellen der Registrierung in Windows
 
 **Ier**

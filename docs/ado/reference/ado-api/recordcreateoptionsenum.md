@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 99c13920d8a786b4d9eae0d22a794b9ed34ddbb0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 942f11dfa25a92f6914c868ffcdeb65c434e490c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166730"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051851"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 Gibt an, ob ein vorhandener **Datensatz** geöffnet oder ein neuer **Datensatz** für die [Open](./open-method-ado-record.md) -Methode des [Aufzeichnungs](./record-object-ado.md) Objekts erstellt werden soll. Die Werte können mit einem and-Operator kombiniert werden.  

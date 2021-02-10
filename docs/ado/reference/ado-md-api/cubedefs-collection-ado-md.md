@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c79a5e36-71fd-44c4-948d-d6a7a89bb3b5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f031945ed84560cbd63413b262330354e3f1c80f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c6c556ae61c3a1b2f3e4155d796ea5e914411309
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99174299"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051211"
 ---
 # <a name="cubedefs-collection-ado-md"></a>CubeDefs-Collection (ADO MD)
 Enthält die [CubeDef](./cubedef-object-ado-md.md) -Objekte, die einen Cube aus einem mehrdimensionalen Katalog darstellen.  

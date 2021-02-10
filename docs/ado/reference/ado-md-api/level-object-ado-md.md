@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ebbebb2150cbe9c03e51ac296c39c362a6670e1d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 501a7e3eda723579a63b39cf7fd09c9a39216604
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169803"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051141"
 ---
 # <a name="level-object-ado-md"></a>Level-Objekt (ADO MD)
 Enthält einen Satz von Membern, von denen jeder denselben Rang innerhalb einer Hierarchie aufweist.  

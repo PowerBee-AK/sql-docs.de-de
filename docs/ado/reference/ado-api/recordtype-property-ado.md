@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 790e46a2-13d2-451e-a8be-130bd9a206a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60e7241cc7c11fe66767793478bf09d45a013e48
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e5bf9326adeb7d1025eb011bf9474da3c77e65fa
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170404"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051701"
 ---
 # <a name="recordtype-property-ado"></a>RecordType-Eigenschaft (ADO)
 Gibt den Typ des [Daten Satz](./record-object-ado.md) Objekts an.  
