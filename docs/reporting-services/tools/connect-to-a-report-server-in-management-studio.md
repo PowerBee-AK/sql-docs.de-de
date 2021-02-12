@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 027d3bb67c087f119c3848a2d81ac0875b138db3
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 735c7805d1deba9861a6e51249acf9928d97db7c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934850"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076781"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio
 
@@ -80,7 +80,7 @@ ms.locfileid: "91934850"
 
 3. Klicken Sie mit der rechten Maustaste auf **Reporting Services** > **Neu** > **Serverregistrierung**. Das Dialogfeld **Neue Serverregistrierung** wird angezeigt.
 
-4. Geben Sie für **Servername**einen Wert ein. Geben Sie den Wert je nach Servermodus an:
+4. Geben Sie für **Servername** einen Wert ein. Geben Sie den Wert je nach Servermodus an:
 
     - Geben Sie für einen Berichtsserver im einheitlichen Modus den Namen der Berichtsserverinstanz ein. Die Namen von Berichtsserverinstanzen basieren auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Standardmäßig ist der Instanzname eines lokalen Berichtsservers der Computername. Wenn Sie den Berichtsserver als benannte Instanz installiert haben, müssen Sie den Server mit der folgenden Syntax angeben: *\<servername>[\\<Instanzname\>]* .
 
@@ -89,7 +89,7 @@ ms.locfileid: "91934850"
 5. Wählen Sie unter **Authentifizierung** den Authentifizierungsmodus aus, der bereits vom Berichtsserver verwendet wird.
 
    - Wenn Sie die Standardsicherheitseinstellungen verwenden, wählen Sie **Windows-Authentifizierung** aus.
-   - Wenn eine benutzerdefinierte Sicherheitserweiterung installiert und bereitgestellt wurde, wählen Sie **Formularauthentifizierung**aus.
+   - Wenn eine benutzerdefinierte Sicherheitserweiterung installiert und bereitgestellt wurde, wählen Sie **Formularauthentifizierung** aus.
    - Wenn Sie den Berichtsserver für die Standardauthentifizierung konfiguriert haben, wählen Sie **Standardauthentifizierung**.
    - Wenn der Berichtsserver für den integrierten SharePoint-Modus konfiguriert ist, wählen Sie **Windows-Authentifizierung**.
 

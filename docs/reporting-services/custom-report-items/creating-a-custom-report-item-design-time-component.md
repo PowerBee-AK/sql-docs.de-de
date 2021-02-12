@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 237d056f8b42570fcab375330a9eb3172eb11758
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 1b5ccf62185045dc8d3efaccfe00e26a01f01a9d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596960"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015660"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Erstellen einer Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement
   Die Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement ist eine Steuerung, die in der Berichts-Designer-Umgebung von Visual Studio verwendet werden kann. Diese Komponente bietet eine aktivierte Entwurfsoberfläche, die Drag und Drop-Vorgänge, Integration in den Eigenschaftenbrowser von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] und die Möglichkeit zum Bereitstellen von Editoren für benutzerdefinierte Eigenschaften zulassen.  

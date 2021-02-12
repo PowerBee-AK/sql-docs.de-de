@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18a131ba868bdac376aa816327fb032fe29f0900
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: bb653797aa0c89b16daeff71974a26781770a9ff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987346"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100019801"
 ---
 # <a name="use-my-subscriptions-native-mode-report-server"></a>Verwenden von "Meine Abonnements" (Berichtsserver im einheitlichen Modus)
 Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webportal enthält die Seite **Meine Abonnements** , auf der alle Ihre Abonnements zentral aufgelistet werden. Mithilfe von *Meine Abonnements* können Sie vorhandene Abonnements anzeigen, ändern und löschen. Abonnements können damit jedoch nicht erstellt werden.  Meine Abonnements zeigt nur die von Ihnen erstellten Abonnements. Abonnements anderer Benutzer werden nicht angezeigt, selbst wenn Sie als Abonnent zu diesen Abonnements hinzugefügt werden, und es werden auch keine datengesteuerten Abonnements angezeigt.

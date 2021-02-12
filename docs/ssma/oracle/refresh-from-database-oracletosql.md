@@ -11,12 +11,12 @@ ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 66bb67e64f3b95b78cdcf78d84145df25a02d4b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ecf7edd43af59f2d388f83b118ad8b6a1583b0be
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320176"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067645"
 ---
 # <a name="refresh-from-database-oracletosql"></a>Aktualisieren der Datenbank (OracleToSQL)
 Im Dialogfeld **aus Datenbank aktualisieren** können Sie auswählen, welche Objekte aus der Oracle-Datenbank aktualisiert werden sollen. Zeilen im Dialogfeld sind basierend auf dem Status der Metadaten farblich codiert:  

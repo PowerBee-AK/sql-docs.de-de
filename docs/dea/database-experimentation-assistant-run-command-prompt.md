@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: c7443ed363a4968415b651e460bbc4f69cb7415b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0e52cf31a94f2fd63f92305b80f7f7ae049c2809
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951105"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066445"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Ausführen von Assistent für Datenbankexperimente an einer Eingabeaufforderung
 
@@ -28,7 +28,7 @@ In diesem Artikel wird beschrieben, wie Sie eine Ablauf Verfolgung in Assistent 
    >
    > `Deacmd.exe -o <operation> --help`
    >
-   > Ein Vorgangs Name ist erforderlich. gültige Vorgänge sind **Analysis**, **startcapture**und **stopcapture**.
+   > Ein Vorgangs Name ist erforderlich. gültige Vorgänge sind **Analysis**, **startcapture** und **stopcapture**.
 
 ## <a name="start-a-new-workload-capture-by-using-the-dea-command"></a>Starten einer neuen Arbeits Auslastungs Erfassung mit dem Befehl "DEA"
 
@@ -40,7 +40,7 @@ Führen Sie an einer Eingabeaufforderung den folgenden Befehl aus, um eine neue 
 
 `Deacmd.exe -o StartCapture -n sql2008capture -x 0 -h localhost -f adventureworks -e --trust -m 0 -l c:\test  -d 60`
 
-**Zusätzliche Optionen**
+**Weitere Optionen**
 
 Beim Starten einer neuen Arbeits Auslastungs Erfassung mit dem `Deacmd.exe` Befehl können Sie die folgenden zusätzlichen Optionen verwenden:
 
@@ -111,7 +111,7 @@ Führen Sie an einer Eingabeaufforderung den folgenden Befehl aus, um eine neue 
 
 Zum Anzeigen der Analyseberichte dieser Ablauf Verfolgungs Dateien müssen Sie die GUI zum Anzeigen von Diagrammen und organisierten Metriken verwenden.  Die Analysedatenbank wird jedoch in die angegebene SQL Server Instanz geschrieben, sodass Sie die generierten Analyse Tabellen auch direkt abfragen können.
 
-**Zusätzliche Optionen**
+**Weitere Optionen**
 
 Beim Analysieren von Ablauf Verfolgungen mit dem Befehl "DEA" können Sie die folgenden zusätzlichen Optionen verwenden:
 

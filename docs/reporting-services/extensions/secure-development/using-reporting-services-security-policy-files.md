@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1390e53ddbc864f634b581bd2a1b42902c6b6bb9
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: e5f82b3db5f52656e88c54062f203d273d8ab24c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529326"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065265"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Verwenden von Reporting Services-Sicherheitsrichtliniendateien
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] speichert Informationen zu Komponentensicherheitsrichtlinien in drei Konfigurationsdateien, die bei der Installation in das Dateisystem kopiert werden. Diese Konfigurationsdateien können eine Kombination aus nur intern verwendeten und benutzerdefinierten Sicherheitsrichtlinien für Codeassemblys in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthalten. Die drei Konfigurationsdateien entsprechen drei sicherungsfähigen Komponenten in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: Berichtsserver und Windows-Dienst, Berichts-Manager-Webanwendung und Vorschaufenster des Berichts-Designers.  

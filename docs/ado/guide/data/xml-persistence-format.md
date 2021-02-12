@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2da0090b9e06a9df7692a27242a08303174f51aa
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3a1a1b832f9e34cbf99e5fd01c424bf54c50c3bc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978831"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036720"
 ---
 # <a name="xml-persistence-format"></a>XML-Beibehaltungsformat
 ADO verwendet UTF-8-Codierung für den persistent verwendeten XML-Stream.  
@@ -67,7 +67,7 @@ xmlns:z="#RowsetSchema">
   
  Das Schema zeigt die Deklarationen von Namespaces, den Abschnitt "Schema" und den Abschnitt "Data". Der Abschnitt Schema enthält Definitionen für "Row", "ShipperID", "CompanyName" und "Phone".  
   
- Schema Definitionen entsprechen der [W3C-XML-Daten Spezifikation](http://www.w3.org/TR/1998/NOTE-XML-data/) und können vollständig überprüft werden (obwohl die Validierung in Internet Explorer 5 nicht erfolgt). XML-Data ist derzeit das einzige unterstützte Schema Format für die recordsetpersistenz.  
+ Schema Definitionen entsprechen der [W3C-XML-Data Spezifikation](http://www.w3.org/TR/1998/NOTE-XML-data/) und können vollständig überprüft werden (obwohl die Validierung in Internet Explorer 5 nicht erfolgt). XML-Data ist derzeit das einzige unterstützte Schema Format für die recordsetpersistenz.  
   
  Der Daten Abschnitt enthält drei Zeilen, die Informationen über die Verlader enthalten. Für ein leeres Rowset ist der Daten Abschnitt möglicherweise leer, aber die \<rs:data> Tags müssen vorhanden sein. Wenn keine Daten angezeigt werden, können Sie die tagkurzform einfach schreiben \<rs:data/> . Jedes Tag mit dem Präfix "RS" weist darauf hin, dass es sich im Namespace befindet, der durch "urn: Schemas-Microsoft-com: Rowset" definiert ist.  
   

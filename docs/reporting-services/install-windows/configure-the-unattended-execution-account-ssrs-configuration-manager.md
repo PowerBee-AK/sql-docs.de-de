@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 616397e2032ca5855f9213073f495f1f7ec163db
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 549a1659bcbcf954a4039a152c5b372a758d0c74
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933556"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014830"
 ---
 # <a name="configure-the-unattended-execution-account-report-server-configuration-manager"></a>Configure the Unattended Execution Account (Report Server Configuration Manager) (Konfigurieren des unbeaufsichtigten Ausführungskontos (Berichtsserver-Konfigurations-Manager))
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt ein besonderes Konto bereit, das für die unbeaufsichtigte Berichtsverarbeitung und zum Senden von Verbindungsanforderungen über das Netzwerk verwendet wird. Das Konto wird bei folgenden Vorgängen verwendet:  
@@ -43,7 +43,7 @@ ms.locfileid: "91933556"
   
 1.  Starten Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool, und stellen Sie eine Verbindung zu der zu konfigurierenden Berichtsserverinstanz her. Weitere Informationen finden Sie unter [Berichtsserver-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
-2.  Wählen Sie auf der Seite „Ausführungskonto“ die Option **Ausführungskonto angeben**aus.  
+2.  Wählen Sie auf der Seite „Ausführungskonto“ die Option **Ausführungskonto angeben** aus.  
   
 3.  Geben Sie das Konto und das Kennwort ein, geben Sie das Kennwort erneut ein, und klicken Sie anschließend auf **Anwenden**.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "91933556"
   
 1.  Erstellen Sie ein Domänenkonto, oder wählen Sie ein Domänenkonto aus, das auf Computer und Server zugreifen kann, die Daten oder Dienste für einen Berichtsserver bereitstellen. Sie sollten ein Konto verwenden, das über beschränkte Berechtigungen verfügt (z. B. Nur-Lese-Zugriff).  
   
-2.  Öffnen Sie eine Eingabeaufforderung: Klicken Sie im **Startmenü** auf **Ausführen**, geben Sie **cmd**ein, und klicken Sie anschließend auf **OK**.  
+2.  Öffnen Sie eine Eingabeaufforderung: Klicken Sie im **Startmenü** auf **Ausführen**, geben Sie **cmd** ein, und klicken Sie anschließend auf **OK**.  
   
 3.  Geben Sie den folgenden Befehl ein, um das Konto in einer lokalen Berichtsserverinstanz zu konfigurieren:  
   

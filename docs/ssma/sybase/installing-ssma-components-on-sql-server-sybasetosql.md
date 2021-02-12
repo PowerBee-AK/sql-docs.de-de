@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 33b5663e7693de8c031f2b39c0436a771920be56
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 82f5d7eef228326f0dba9b194b87bffce4bb5eff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372366"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078231"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>Installieren von SSMA-Komponenten auf SQL Server (sybasedesql)
 
@@ -23,7 +23,7 @@ Zusätzlich zur Installation von SSMA müssen Sie für die Verwendung der Server
 
 ## <a name="ssma-for-sybase-extension-pack"></a>SSMA für Sybase-Erweiterungspaket
 
-Das SSMA-Erweiterungspaket fügt die Datenbanken **sysdb** und **ssmatesterdb_syb**der angegebenen Instanz von hinzu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Die **sysdb** -Datenbank enthält die Tabellen und gespeicherten Prozeduren, die zum Migrieren von Daten erforderlich sind. Die **ssmatester_syb** -Datenbank enthält das Schema **ssma_sybase_utilities**, in dem die von der SSMA-Tester-Komponente verwendeten Objekte (Tabellen, Trigger, Sichten) erstellt werden.
+Das SSMA-Erweiterungspaket fügt die Datenbanken **sysdb** und **ssmatesterdb_syb** der angegebenen Instanz von hinzu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Die **sysdb** -Datenbank enthält die Tabellen und gespeicherten Prozeduren, die zum Migrieren von Daten erforderlich sind. Die **ssmatester_syb** -Datenbank enthält das Schema **ssma_sybase_utilities**, in dem die von der SSMA-Tester-Komponente verwendeten Objekte (Tabellen, Trigger, Sichten) erstellt werden.
 
 Beim Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden von SSMA außerdem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agentaufträge erstellt, wenn die serverseitige Daten Migrations-Engine zum Migrieren der Daten verwendet wird.
 
@@ -49,9 +49,9 @@ Sie können das Erweiterungspaket jederzeit installieren, bevor Sie Daten zu mig
 
 So installieren Sie das Erweiterungspaket:
 
-1. Kopieren Sie **SSMAforSybaseExtensionPack_*n*. msi**, wobei *n* die Buildnummer ist, auf den Computer, auf dem ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
-2. Doppelklicken Sie auf **SSMAforSybaseExtensionPack_*n*. msi**.
-3. Klicken Sie auf der Seite **Willkommen**auf **Weiter**.
+1. Kopieren Sie **SSMAforSybaseExtensionPack_ *n*. msi**, wobei *n* die Buildnummer ist, auf den Computer, auf dem ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+2. Doppelklicken Sie auf **SSMAforSybaseExtensionPack_ *n*. msi**.
+3. Klicken Sie auf der Seite **Willkommen** auf **Weiter**.
 4. Lesen Sie auf der Seite **Endbenutzer-Lizenzvertrag** den Lizenzvertrag. Wenn Sie zustimmen, aktivieren Sie die Option **Ich akzeptiere die Vereinbarung** , und klicken Sie dann auf **weiter**.
 5. Klicken Sie auf der Seite Setuptyp **auswählen** auf **typisch**.
 6. Klicken Sie auf der Seite **Bereit zum Installieren** auf **Installieren**.
@@ -67,7 +67,7 @@ So installieren Sie das Erweiterungspaket:
 
    Die Windows-Authentifizierung verwendet Ihre Windows-Anmelde Informationen, um sich bei der Instanz von anzumelden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Wenn Sie Server Authentifizierung auswählen, müssen Sie einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Namen und ein Kennwort eingeben.
 
-10. Im nächsten Schritt müssen Sie das Kennwort für einen Hauptschlüssel festlegen, der zum Verschlüsseln vertraulicher Daten verwendet wird, die während der serverseitigen Datenmigration in der Erweiterungspaket-Datenbank gespeichert werden. Geben **Sie ein**sicheres Kennwort ein, und klicken Sie auf
+10. Im nächsten Schritt müssen Sie das Kennwort für einen Hauptschlüssel festlegen, der zum Verschlüsseln vertraulicher Daten verwendet wird, die während der serverseitigen Datenmigration in der Erweiterungspaket-Datenbank gespeichert werden. Geben **Sie ein** sicheres Kennwort ein, und klicken Sie auf
 
 11. Wählen Sie auf der nächsten Seite **Utilities Database *n* installieren aus, und installieren Sie Extension Pack-Bibliotheken**, wobei *n* die Versionsnummer ist. Wenn Sie das Tester-Feature verwenden möchten, aktivieren Sie das Kontrollkästchen **Tester Datenbank installieren** , und klicken Sie dann auf **weiter**.
 
@@ -75,11 +75,11 @@ So installieren Sie das Erweiterungspaket:
 
     Wenn die Option zum **Installieren der Tester-Datenbank** aktiviert ist, wird die **ssmatesterdb_syb** Datenbank erstellt.
 
-12. Sobald die Installation fertiggestellt ist, wird eine Eingabeaufforderung angezeigt, in der Sie gefragt werden, ob Sie die hilfsprogrammdatenbank auf einer anderen Instanz von installieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wählen Sie **Ja**aus, und klicken Sie dann auf **weiter**, um den Assistenten zu beenden, und **Wählen Sie** dann **Beenden**
+12. Sobald die Installation fertiggestellt ist, wird eine Eingabeaufforderung angezeigt, in der Sie gefragt werden, ob Sie die hilfsprogrammdatenbank auf einer anderen Instanz von installieren möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wählen Sie **Ja** aus, und klicken Sie dann auf **weiter**, um den Assistenten zu beenden, und **Wählen Sie** dann **Beenden**
 
 ### <a name="sql-server-database-objects"></a>Datenbankobjekte SQL Server
 
-Nachdem Sie das Erweiterungspaket installiert haben, wird eine **ssma_syb. bcp_migration_packages** -Tabelle in der **sysdb** -Datenbank angezeigt. Außerdem werden die folgenden gespeicherten Prozeduren angezeigt:
+Nachdem Sie das Erweiterungspaket installiert haben, wird eine **ssma_syb. bcp _migration_packages** -Tabelle in der **sysdb** -Datenbank angezeigt. Außerdem werden die folgenden gespeicherten Prozeduren angezeigt:
 
 - `bcp_clean_migration_data`
 - `bcp_ensure_message_table`

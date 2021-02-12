@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: 344e5f35e35202b6a44a4932db8a27424fdb8753
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f7d4c2e2408bbcc78c0ea74f0d50bd4e0599b826
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471801"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069780"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Erweiterbarkeitsarchitektur in SQL Server-Spracherweiterungen
 
@@ -38,15 +38,15 @@ Jede unterstützte externe Sprache kann durch Aufrufen einer gespeicherten Proze
 
 Die Architektur ist so konzipiert, dass externer Code in einem separaten Prozess von SQL Server ausgeführt wird, jedoch mit Komponenten, die intern die Kette von Anforderungen für Daten und Vorgänge auf SQL Server verwalten. 
   
-  ***Komponentenarchitektur unter Windows:** _
+  ***Komponentenarchitektur unter Windows:***
 
   ![Komponentenarchitektur unter Windows](../media/generic-architecture-windows.png "Komponentenarchitektur unter Windows")
   
-  _*_Komponentenarchitektur unter Linux:_*_
+  ***Komponentenarchitektur unter Linux:***
   
   ![Komponentenarchitektur unter Linux](../media/generic-architecture-linux.png "Komponentenarchitektur unter Linux")
   
-Zu den Komponenten gehört ein *Launchpad*-Dienst, der zum Aufrufen externer Runtimes (z. B. Java) und bibliotheksspezifischer Logik für das Laden von Interpretern und Bibliotheken verwendet wird.
+Zu den Komponenten gehört ein **Launchpad**-Dienst, der zum Aufrufen externer Runtimes (z. B. Java) und bibliotheksspezifischer Logik für das Laden von Interpretern und Bibliotheken verwendet wird.
 
 <a name="launchpad"></a>
 

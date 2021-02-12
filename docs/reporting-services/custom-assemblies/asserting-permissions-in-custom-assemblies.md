@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2b3f4600c4c03fe356f5694f0d9a6cd5bc7afb98
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e63239176b15eb1b1044c6b281cdc8014c26d973
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80217057"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064605"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>Berechtigungserteilung in benutzerdefinierten Assemblys
   Standardmäßig wird Code von benutzerdefinierten Assemblys mit dem eingeschränkten Berechtigungssatz **Execution** ausgeführt. In einigen Fällen möchten Sie vielleicht eine benutzerdefinierte Assembly implementieren, die gesicherte Aufrufe an geschützte Ressourcen innerhalb Ihres Sicherheitssystems durchführt (z. B. an Dateien oder die Registrierung). Hierzu müssen Sie folgende Schritte durchführen:  

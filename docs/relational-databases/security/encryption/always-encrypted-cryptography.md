@@ -13,12 +13,12 @@ ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 630732f9f1d56292a72ddd180ee536008c4ecf83
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 04a4515467265456797fbff8f5dc0446748229ba
+ms.sourcegitcommit: 6f4fb9cfd0cad06127a6328adc745e2ba7c191d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97475591"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99570467"
 ---
 # <a name="always-encrypted-cryptography"></a>Always Encrypted-Kryptografie
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "97475591"
  Ein Spaltenverschlüsselungsschlüssel (column encryption key; CEK) ist ein Inhaltsverschlüsselungsschlüssel (d.h. ein Schlüssel zum Schützen von Daten), der durch einen CMK geschützt ist.  
   
  Alle [!INCLUDE[msCoName](../../../includes/msconame-md.md)]-CMK-Speicheranbieter verschlüsseln CEKs, indem sie RSA-OAEP (RSA mit optimalem asymmetrischen Verschlüsselungspadding) verwenden. Der Schlüsselspeicheranbieter, der die Microsoft Cryptography API unterstützt: Next Generation (CNG) in .NET Framework ([SqlColumnEncryptionCngProvider-Klasse](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncngprovider)) verwendet dich von RFC 8017 in Abschnitt A.2.1 angegeben Standardparameter Diese Standardparameter verwenden eine Hashfunktion von SHA-1 und eine Maskengenerierungsfunktion von MGF1 mit SHA-1. Alle anderen Schlüsselspeicheranbieter verwenden SHA-256. 
-  
+
+Always Encrypted verwendet intern überprüfte FPS 140-2-Kryptografiemodule. 
+
 ## <a name="data-encryption-algorithm"></a>Datenverschlüsselungsalgorithmus  
  Always Encrypted verwendet den Algorithmus **AEAD_AES_256_CBC_HMAC_SHA_256** zum Verschlüsseln von Daten in der Datenbank.  
   

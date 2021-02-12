@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7cb317fc73f32a8795fe5ce4e5be9af776edf938
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1829101a62a3f2602e32b6e4d3535292a90a140d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454261"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069515"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Getting Started with SSMA for DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) für DB2 ermöglicht Ihnen das schnelle Konvertieren von DB2-Datenbankschemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Schemas, das Hochladen der resultierenden Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und das Migrieren von Daten von DB2 zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -25,7 +25,7 @@ Dieses Thema enthält eine Einführung in den Installationsvorgang und hilft Ihn
 ## <a name="installing-ssma"></a>Installieren von SSMA  
 Zum Verwenden von SSMA müssen Sie zuerst das SSMA-Client Programm auf einem Computer installieren, der auf die DB2-Quelldatenbank und die-Ziel Instanz zugreifen kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . DB2-OLEDB-Anbieter auf dem Computer, auf dem ausgeführt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Diese Komponenten unterstützen die Datenmigration und die Emulation von DB2-Systemfunktionen. Installationsanweisungen finden Sie unter [Installieren von SSMA für DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-db2tosql.md).  
   
-Klicken Sie zum Starten von SSMA auf **Start**, zeigen Sie auf **Alle Programme**, zeigen Sie auf ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant für DB2**, und klicken Sie dann auf ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant für DB2**.  
+Klicken Sie zum Starten von SSMA auf **Start**, zeigen Sie auf **Alle Programme**, zeigen Sie auf **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant für DB2**, und klicken Sie dann auf **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant für DB2**.  
   
 ## <a name="ssma-for-db2-user-interface"></a>SSMA für DB2-Benutzeroberfläche  
 Nach der Installation von SSMA können Sie SSMA zum Migrieren von DB2-Datenbanken zu verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Es hilft Ihnen, sich mit der SSMA-Benutzeroberfläche vertraut zu machen, bevor Sie beginnen. Das folgende Diagramm zeigt die Benutzeroberfläche für SSMA, einschließlich der Metadaten-Explorer, Metadaten, Symbolleisten, Ausgabebereich und Fehlerlisten Bereich:  
@@ -60,7 +60,7 @@ Der DB2-metadatenexplorer zeigt Informationen zu DB2-Schemas an. Mit dem DB2-met
 Sie können den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadatenexplorer verwenden, um konvertierte DB2-Datenbankobjekte auszuwählen und diese Objekte dann mit der Instanz von zu synchronisieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="metadata"></a>Metadaten  
-Auf der rechten Seite jedes metadatenexplorers sind Registerkarten, die das ausgewählte Objekt beschreiben. Wenn Sie z. b. eine Tabelle im DB2-metadatenexplorer auswählen, werden sechs Registerkarten angezeigt: **Table**, **SQL**, **Type Mapping, Report**, **Properties**und **Data**. Die Registerkarte **Bericht** enthält nur Informationen, nachdem Sie einen Bericht erstellt haben, der das ausgewählte Objekt enthält. Wenn Sie eine Tabelle im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadatenexplorer auswählen, werden drei Registerkarten angezeigt: **Table**, **SQL**und **Data**.  
+Auf der rechten Seite jedes metadatenexplorers sind Registerkarten, die das ausgewählte Objekt beschreiben. Wenn Sie z. b. eine Tabelle im DB2-metadatenexplorer auswählen, werden sechs Registerkarten angezeigt: **Table**, **SQL**, **Type Mapping, Report**, **Properties** und **Data**. Die Registerkarte **Bericht** enthält nur Informationen, nachdem Sie einen Bericht erstellt haben, der das ausgewählte Objekt enthält. Wenn Sie eine Tabelle im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadatenexplorer auswählen, werden drei Registerkarten angezeigt: **Table**, **SQL** und **Data**.  
   
 Die meisten metadateneinstellungen sind schreibgeschützt. Sie können jedoch die folgenden Metadaten ändern:  
   
@@ -79,7 +79,7 @@ Die Projektsymbol Leiste enthält Schaltflächen zum Arbeiten mit Projekten, zum
 #### <a name="migration-toolbar"></a>Migrations Symbolleiste  
 In der folgenden Tabelle werden die Befehle für die Migrations Symbolleiste angezeigt:  
   
-|Schaltfläche|Funktion|  
+|Taste|Funktion|  
 |------|--------|  
 |**Erstellen von Berichten**|Konvertiert die ausgewählten DB2-Objekte in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Syntax und erstellt dann einen Bericht, der die erfolgreiche Konvertierung der Konvertierung anzeigt.<br /><br />Dieser Befehl ist deaktiviert, es sei denn, Objekte sind im DB2-metadatenexplorer ausgewählt.|  
 |**Schema konvertieren**|Konvertiert die ausgewählten DB2-Objekte in- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte.<br /><br />Dieser Befehl ist deaktiviert, es sei denn, Objekte sind im DB2-metadatenexplorer ausgewählt.|  
@@ -93,8 +93,8 @@ In der folgenden Tabelle sind die SSMA-Menüs aufgeführt.
 |----|-----------|  
 |**File**|Enthält Befehle für das Arbeiten mit-Projekten, das Herstellen einer Verbindung mit DB2 und das Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Bearbeiten**|Enthält Befehle zum Suchen und arbeiten mit Text auf den Detailseiten, z. b [!INCLUDE[tsql](../../includes/tsql-md.md)] . zum Kopieren aus dem SQL-Detailbereich. Enthält auch die Option **Lesezeichen verwalten** , in der eine Liste vorhandener Lesezeichen angezeigt werden kann. Sie können die Schaltflächen auf der rechten Seite des Dialog Felds verwenden, um die Lesezeichen zu verwalten.|  
-|**Ansicht**|Enthält den Befehl Metadaten-Explorer **Synchronisieren** . , Der die Objekte zwischen dem DB2-metadatenexplorer und dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadatenexplorer synchronisiert. Enthält auch Befehle zum Anzeigen und Ausblenden der **Ausgabe** -und **Fehlerliste** Bereiche sowie ein Options **Layout** zum Verwalten der Layouts.|  
-|**Tools**|Enthält Befehle zum Erstellen von Berichten und zum Migrieren von Objekten und Daten. Bietet auch Zugriff auf die Dialogfelder **globale Einstellungen** und **Projekteinstellungen** .|  
+|**Anzeigen**|Enthält den Befehl Metadaten-Explorer **Synchronisieren** . , Der die Objekte zwischen dem DB2-metadatenexplorer und dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadatenexplorer synchronisiert. Enthält auch Befehle zum Anzeigen und Ausblenden der **Ausgabe** -und **Fehlerliste** Bereiche sowie ein Options **Layout** zum Verwalten der Layouts.|  
+|**Extras**|Enthält Befehle zum Erstellen von Berichten und zum Migrieren von Objekten und Daten. Bietet auch Zugriff auf die Dialogfelder **globale Einstellungen** und **Projekteinstellungen** .|  
 |**Hilfe**|Bietet Zugriff **auf die** SSMA-Hilfe und das Dialogfeld Info.|  
   
 ### <a name="output-pane-and-error-list-pane"></a>Ausgabebereich und Fehlerliste Bereich  

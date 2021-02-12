@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3b7b88e9342c818645e0a9e1430cc5fe5c9400c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1be919afaea2693329ae6fe957fb6fc5ff3357f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468989"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015200"
 ---
 # <a name="create-and-manage-role-assignments"></a>Erstellen und Verwalten von Rollenzuweisungen
 
@@ -30,7 +30,7 @@ Rollenzuweisungen gelten auf *Elementebene* oder *Systemebene*.
 
 - Rollenzuweisungen auf Elementebene werden für ein bestimmtes Element oder Verzweigungen in der Ordnerhierarchie des Berichtsservers erstellt. Sie navigieren zu einem bestimmten Ordner oder Element, um eine Rollenzuweisung dafür zu erstellen.
 
-- Mit Rollenzuweisungen auf Systemebene können ausgewählte Benutzer Aufgaben ausführen, die den gesamten Berichtsserverstandort betreffen. Zu diesen Aufgaben zählt Folgendes:
+- Mit Rollenzuweisungen auf Systemebene können ausgewählte Benutzer Aufgaben ausführen, die den gesamten Berichtsserverstandort betreffen. Diese Aufgaben sind unter anderem:
   - Erstellen von freigegebenen Zeitplänen
   - Verwalten von Aufträgen
   - Verarbeiten von Berichten
@@ -68,7 +68,7 @@ Es kann immer nur eine Rollenzuweisung geändert werden. Sie können keine globa
 
 ## <a name="deleting-a-role-assignment"></a>Löschen einer Rollenzuweisung
 
-Zum Löschen von Rollenzuweisungen aktivieren Sie das Kontrollkästchen neben den Rollenzuweisungen, die Sie löschen möchten, und klicken Sie dann auf **Löschen**. Zum Löschen von Rollenzuweisungen können Sie auch auf die Schaltfläche **Zur übergeordneten Sicherheit zurückkehren**klicken. Wenn Sie auf diese Schaltfläche klicken, werden die vorhandenen Rollenzuweisungen für das Element gelöscht und durch die Zuweisungen ersetzt, die vom übergeordneten Element geerbt werden.
+Zum Löschen von Rollenzuweisungen aktivieren Sie das Kontrollkästchen neben den Rollenzuweisungen, die Sie löschen möchten, und klicken Sie dann auf **Löschen**. Zum Löschen von Rollenzuweisungen können Sie auch auf die Schaltfläche **Zur übergeordneten Sicherheit zurückkehren** klicken. Wenn Sie auf diese Schaltfläche klicken, werden die vorhandenen Rollenzuweisungen für das Element gelöscht und durch die Zuweisungen ersetzt, die vom übergeordneten Element geerbt werden.
 
 ## <a name="see-also"></a>Weitere Informationen
 

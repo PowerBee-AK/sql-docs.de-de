@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 731ed382c029fb2115c4351d306bf5b33d294a48
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f2df0e4bd2a78b52fcf08587ffed2eff219282b1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198517"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074881"
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>Integrieren von Reporting Services mithilfe des URL-Zugriffs: Webanwendung
   Der URL-Zugriff in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wurde speziell konzipiert, um den Zugriff auf einzelne Berichte über ein Netzwerk zu ermöglichen. Dieser Zugriffstyp eignet sich am besten, um die Anzeige und Navigation von Berichten in eine benutzerdefinierte Webanwendung zu integrieren. Um den URL-Zugriff in Webanwendungen zu verwenden, können Sie Folgendes tun:  

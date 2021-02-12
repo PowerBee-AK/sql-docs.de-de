@@ -12,26 +12,28 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4a2624566444f5cc3b9531d5b6767937dabb2da6
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: f99e5892f697b06bcafcfc35f9672d8ee474bc40
+ms.sourcegitcommit: 10ae200635b9e8554e6bc6f658125e1a80d4d5ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643991"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99589295"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>Wiederherstellen der von der Suche verwendeten Wörtertrennungen auf die vorherige Version (SQL Server-Suche)
+
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installiert und aktiviert eine Version der Wörtertrennung und Wortstammerkennung für alle von der Volltextsuche unterstützten Sprachen, mit Ausnahme von Koreanisch. Dieser Artikel beschreibt, wie Sie von der neuen Version dieser Komponenten zur früheren Version wechseln und von der früheren Version zur neuen Version zurückwechseln.  
+
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] installiert und aktiviert eine Version der Wörtertrennung und Wortstammerkennung für alle von der Volltextsuche unterstützten Sprachen, mit Ausnahme von Koreanisch. Dieser Artikel beschreibt, wie Sie von der neuen Version dieser Komponenten zur früheren Version wechseln und von der früheren Version zur neuen Version zurückwechseln.  
   
  Die folgenden Sprachen werden in diesem Artikel nicht berücksichtigt:  
   
--   **Englisch**. Informationen zum Wiederherstellen der englischen Komponenten finden Sie unter [Ändern der für Englisch (USA) und Englisch (Vereinigtes Königreich) verwendeten Wörtertrennung](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+- **Englisch**. Informationen zum Wiederherstellen der englischen Komponenten finden Sie unter [Ändern der für Englisch (USA) und Englisch (Vereinigtes Königreich) verwendeten Wörtertrennung](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
--   **Dänisch, Polnisch und Türkisch**. Die Wörtertrennungen von Drittanbietern für Dänisch, Polnisch und Türkisch, die in vorherigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthalten waren, wurden durch [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Komponenten ersetzt.  
+- **Dänisch, Polnisch und Türkisch**. Die Wörtertrennungen von Drittanbietern für Dänisch, Polnisch und Türkisch, die in vorherigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthalten waren, wurden durch [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Komponenten ersetzt.  
   
--   **Tschechisch und Griechisch**. Es gibt neue Wörtertrennungen für Tschechisch und Griechisch. Vorherige Versionen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Volltextsuche unterstützten diese zwei Sprachen nicht.  
+- **Tschechisch und Griechisch**. Es gibt neue Wörtertrennungen für Tschechisch und Griechisch. Vorherige Versionen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Volltextsuche unterstützten diese zwei Sprachen nicht.  
   
--   **Koreanisch**. Die Wörtertrennung und die Wortstammerkennung für die koreanische Sprache werden in dieser Version nicht aktualisiert.  
+- **Koreanisch**. Die Wörtertrennung und die Wortstammerkennung für die koreanische Sprache werden in dieser Version nicht aktualisiert.  
   
  Allgemeine Informationen zur Wörtertrennung und Wortstammerkennung finden Sie unter [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
@@ -42,7 +44,7 @@ ms.locfileid: "97643991"
 |------------------|-------------------|----------------------------------|----------------------|---------------------------------|  
 |NaturalLanguage6.dll|NaturalLanguage6.dll|34|Erhalten und installieren Sie eine frühere Version von NaturalLanguage6.dll und überschreiben Sie die aktuelle Version der Datei.|Keine weiteren Maßnahmen erforderlich.<br /><br /> Die Registrierungsschlüssel und Werte haben sich für diese Version nicht geändert.|  
 |(Anderer Dateiname)|NaturalLanguage6.dll|5|Erhalten und installieren Sie eine frühere Version von NaturalLanguage6.dll und überschreiben Sie die aktuelle Version der Datei.|Ändern Sie einen Satz von Registrierungseinträgen, um die frühere Version der Komponenten anzugeben.|  
-|(Anderer Dateiname)|(Anderer Dateiname)|6|Keine weiteren Maßnahmen erforderlich.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Setup kopiert sowohl die aktuelle als auch die früheren Versionen der Komponenten in den Ordner "Binn".|Ändern Sie einen Satz von Registrierungseinträgen, um die frühere Version der Komponenten anzugeben.|  
+|(Anderer Dateiname)|(Anderer Dateiname)|6|Keine weiteren Maßnahmen erforderlich.<br /><br /> [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Setup kopiert sowohl die aktuelle als auch die früheren Versionen der Komponenten in den Ordner "Binn".|Ändern Sie einen Satz von Registrierungseinträgen, um die frühere Version der Komponenten anzugeben.|  
   
 > [!WARNING]  
 >  Wenn Sie die aktuelle Version der Datei NaturalLanguage6.dll mit einer anderen Version ersetzen, dann ist das Verhalten aller Sprachen, die diese Datei verwenden, davon betroffen.  
@@ -61,40 +63,40 @@ ms.locfileid: "97643991"
   
 |Sprache|Abkürzung<br />verwendet in<br />Registrierung|LCID|  
 |--------------|---------------------------------------|----------|  
-|Bengali|ben|1093|  
-|Bulgarisch|bgr|1026|  
-|Katalanisch|cat|1027|  
-|Spanisch|esn|3082|  
-|Französisch|fra|1036|  
-|Gujarati|guj|1095|  
-|Hebräisch|heb|1037|  
-|Hindi|hin|1081|  
-|Kroatisch|hrv|1050|  
-|Indonesisch|ind|1057|  
-|Isländisch|isl|1039|  
-|Italienisch|ita|1040|  
-|Kannada|kan|1099|  
-|Litauisch|lth|1063|  
-|Lettisch|lvi|1062|  
-|Malayalam|mal|1100|  
-|Marathi|mar|1102|  
-|Malaiisch|msl|1086|  
-|Neutral|Neutral|0000|  
-|Norwegial Bokmaal|nor|1044|  
-|Pandschabi|Pfanne|1094|  
-|Portugiesisch (Brasilien)|ptb|1046|  
-|Portugiesisch|ptg|2070|  
-|Rumänisch|rom|1048|  
-|Slowakisch|sky|1051|  
-|Slowenisch|slv|1060|  
-|Serbisch (Kyrillisch)|srb|3098|  
-|Serbisch (Lateinisch)|srl|2074|  
-|Schwedisch|sve|1053|  
-|Tamilisch|tam|1097|  
-|Telugu|tel|1.098|  
-|Ukrainisch|ukr|1058|  
-|Urdu|urd|1056|  
-|Vietnamesisch|vit|1066|  
+|Bengali|`ben`|1093|  
+|Bulgarisch|`bgr`|1026|  
+|Katalanisch|`cat`|1027|  
+|Spanisch|`esn`|3082|  
+|Französisch|`fra`|1036|  
+|Gujarati|`guj`|1095|  
+|Hebräisch|`heb`|1037|  
+|Hindi|`hin`|1081|  
+|Kroatisch|`hrv`|1050|  
+|Indonesisch|`ind`|1057|  
+|Isländisch|`isl`|1039|  
+|Italienisch|`ita`|1040|  
+|Kannada|`kan`|1099|  
+|Litauisch|`lth`|1063|  
+|Lettisch|`lvi`|1062|  
+|Malayalam|`mal`|1100|  
+|Marathi|`mar`|1102|  
+|Malaiisch|`msl`|1086|  
+|Neutral|`Neutral`|0000|  
+|Norwegial Bokmaal|`nor`|1044|  
+|Pandschabi|`pan`|1094|  
+|Portugiesisch (Brasilien)|`ptb`|1046|  
+|Portugiesisch|`ptg`|2070|  
+|Rumänisch|`rom`|1048|  
+|Slowakisch|`sky`|1051|  
+|Slowenisch|`slv`|1060|  
+|Serbisch (Kyrillisch)|`srb`|3098|  
+|Serbisch (Lateinisch)|`srl`|2074|  
+|Schwedisch|`sve`|1053|  
+|Tamilisch|`tam`|1097|  
+|Telugu|`tel`|1.098|  
+|Ukrainisch|`ukr`|1058|  
+|Urdu|`urd`|1056|  
+|Vietnamesisch|`vit`|1066|  
   
  Die obige Tabelle ist nach der Spalte "Abkürzung" alphabetisch sortiert.  
   
@@ -102,9 +104,9 @@ ms.locfileid: "97643991"
   
 1.  Navigieren Sie zum Ordner "Binn", der oben beschrieben wurde.  
   
-2.  Sichern Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version von NaturalLanguage6.dll an einem anderen Speicherort.  
+2.  Sichern Sie die [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Version von NaturalLanguage6.dll an einem anderen Speicherort.  
   
-3.  Kopieren Sie die frühere Version von NaturalLanguage6.dll aus dem Ordner "Binn" einer Instanz von [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] in den Ordner "Binn" der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanz.  
+3.  Kopieren Sie die frühere Version von NaturalLanguage6.dll aus dem Ordner "Binn" einer Instanz von [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] in den Ordner "Binn" der [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Instanz.  
   
     > [!WARNING]  
     >  Diese Änderung wirkt sich auf alle Sprachen aus, die NaturalLanguage6.dll sowohl in der aktuellen als auch der früherer Version verwenden.  
@@ -113,9 +115,9 @@ ms.locfileid: "97643991"
 
 ###  <a name="to-restore-the-current-components"></a><a name="nl6nl6restore"></a> So stellen Sie aktuelle Komponenten wieder her  
   
-1.  Navigieren Sie zum Speicherort, an dem Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version von NaturalLanguage6.dll gesichert haben.  
+1.  Navigieren Sie zum Speicherort, an dem Sie die [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Version von NaturalLanguage6.dll gesichert haben.  
   
-2.  Kopieren Sie die aktuelle Version von NaturalLanguage6.dll vom Sicherungsspeicherort in den Ordner "Binn" der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanz.  
+2.  Kopieren Sie die aktuelle Version von NaturalLanguage6.dll vom Sicherungsspeicherort in den Ordner "Binn" der [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Instanz.  
   
     > [!WARNING]  
     >  Diese Änderung wirkt sich auf alle Sprachen aus, die NaturalLanguage6.dll sowohl in der aktuellen als auch der früherer Version verwenden.  
@@ -148,9 +150,9 @@ ms.locfileid: "97643991"
   
 2.  Entfernen Sie die Dateien für die aktuelle Version der Komponenten nicht aus dem Ordner "Binn".  
   
-3.  Sichern Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version von NaturalLanguage6.dll an einem anderen Speicherort.  
+3.  Sichern Sie die [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Version von NaturalLanguage6.dll an einem anderen Speicherort.  
   
-4.  Kopieren Sie die frühere Version von NaturalLanguage6.dll aus dem Ordner "Binn" einer Instanz von [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] in den Ordner "Binn" der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanz.  
+4.  Kopieren Sie die frühere Version von NaturalLanguage6.dll aus dem Ordner "Binn" einer Instanz von [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] in den Ordner "Binn" der neuen [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]-Instanz.  
   
     > [!WARNING]  
     >  Diese Änderung wirkt sich auf alle Sprachen aus, die NaturalLanguage6.dll sowohl in der aktuellen als auch der früherer Version verwenden.  
@@ -177,9 +179,9 @@ ms.locfileid: "97643991"
   
 ###  <a name="to-restore-the-current-components"></a><a name="newnl6restore"></a> So stellen Sie aktuelle Komponenten wieder her  
   
-1.  Navigieren Sie zum Speicherort, an dem Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version von NaturalLanguage6.dll gesichert haben.  
+1.  Navigieren Sie zum Speicherort, an dem Sie die [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Version von NaturalLanguage6.dll gesichert haben.  
   
-2.  Kopieren Sie die aktuelle Version von NaturalLanguage6.dll vom Sicherungsspeicherort in den Ordner "Binn" der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanz.  
+2.  Kopieren Sie die aktuelle Version von NaturalLanguage6.dll vom Sicherungsspeicherort in den Ordner "Binn" der [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Instanz.  
   
     > [!WARNING]  
     >  Diese Änderung wirkt sich auf alle Sprachen aus, die NaturalLanguage6.dll sowohl in der aktuellen als auch der früherer Version verwenden.  
@@ -255,7 +257,7 @@ ms.locfileid: "97643991"
 |Aktueller Dateiname|MSWB7.dll|MSWB7.dll|  
   
 ##  <a name="languages-for-which-neither-the-previous-nor-the-current-file-name-is-naturallanguage6dll"></a><a name="newnew"></a> Sprachen, für die weder der vorherige noch der aktuelle Dateiname NaturalLanguage6.dll ist  
- Für die Sprachen in der folgenden Tabelle unterscheiden sich die Dateinamen der vorherigen Wörtertrennungen und Wortstammerkennungen von den Dateinamen der neuen Versionen. Weder der vorherige noch der aktuelle Dateiname ist NaturalLanguage6.dll. Sie müssen keine Dateien ersetzen, da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Setup sowohl die aktuellen als auch die früheren Versionen der Komponenten in den Ordner "Binn" kopiert. Sie müssen jedoch einen Satz von Registrierungseinträgen ändern, um die vorherige oder aktuelle Version der Komponenten anzugeben.  
+ Für die Sprachen in der folgenden Tabelle unterscheiden sich die Dateinamen der vorherigen Wörtertrennungen und Wortstammerkennungen von den Dateinamen der neuen Versionen. Weder der vorherige noch der aktuelle Dateiname ist NaturalLanguage6.dll. Sie müssen keine Dateien ersetzen, da [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] -Setup sowohl die aktuellen als auch die früheren Versionen der Komponenten in den Ordner "Binn" kopiert. Sie müssen jedoch einen Satz von Registrierungseinträgen ändern, um die vorherige oder aktuelle Version der Komponenten anzugeben.  
   
  **Liste betroffener Sprachen**  
   

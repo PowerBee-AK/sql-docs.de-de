@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cc1cdb31969eb94c29a6c58f974aef92c5cdfc62
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: a86ae9cff414e052865cf0efd1ec5c7889877d0f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988656"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066755"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-database-accesstosql"></a>Migrieren von Zugriffsdaten in SQL Server Azure SQL-Datenbank (Access Token)
 Nachdem Sie die Datenbankobjekte erfolgreich in erstellt haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie Daten von Access zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure migrieren.  
@@ -35,7 +35,7 @@ Nachdem Sie die Datenbankobjekte erfolgreich in erstellt haben [!INCLUDE[ssNoVer
 ## <a name="migrating-data"></a>Migrieren von Daten  
 Beim Migrieren von Daten handelt es sich um einen Massen Ladevorgang, bei dem Daten Zeilen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Transaktionen verschoben oder in Transaktionen SQL Azure werden. Die Anzahl der Zeilen, die in jede Transaktion in geladen oder SQL Azure werden sollen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird in den Projekteinstellungen konfiguriert.  
   
-Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um Migrations Meldungen anzuzeigen. Wenn dies nicht der Fall ist, wählen Sie im Menü **Ansicht** die Option **Ausgabe**aus.  
+Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um Migrations Meldungen anzuzeigen. Wenn dies nicht der Fall ist, wählen Sie im Menü **Ansicht** die Option **Ausgabe** aus.  
   
 **So migrieren Sie Daten**  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ce8afd47260ebc402f3d93cd191529eb7640f99d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb8c8994b9fb2804816663801612f5085eeedce4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488274"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100075091"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>Menübefehle und andere Tastenkombinationen (accesstosql)
 In den folgenden Abschnitten werden die Tastenkombinationen für den Zugriff auf Menübefehle und andere Tastenkombinationen beschrieben, die in den verschiedenen Dialogfeldern von SSMA für Access Application verwendet werden.  

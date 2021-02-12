@@ -13,12 +13,12 @@ ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 89460a8efb6278d8e4aaa4def6310d6dec687429
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7de2ab3447a35f9d55489673adaa532866a4f89f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492351"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067675"
 ---
 # <a name="setting-project-options-oracletosql"></a>Festlegen von Projektoptionen (OracleToSQL)
 Für jedes SSMA-Projekt können Sie Optionen auf Projektebene festlegen. Diese Optionen geben die Objekt Konvertierung, das Laden von Objekten, die Benutzeroberfläche und die Daten Migrations Einstellungen an. Bevor Sie-Objekte in konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Daten in migrieren, müssen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüfen, ob die Konfigurationsoptionen für das Projekt geeignet sind.  
@@ -73,7 +73,7 @@ In SSMA können Sie die Standardeinstellungen für alle Projekte konfigurieren. 
   
     -   Wählen Sie den Migrations Projekttyp aus, für den die Einstellungen in der Dropdown Liste **Migrations Ziel Version** angezeigt oder geändert werden müssen, klicken Sie unten im linken Bereich auf **Allgemein** , und wählen Sie dann Konvertierung oder Migration aus.  
   
-    -   Wählen Sie zum Auswählen eines vordefinierten Modus im Dropdown Feld **Modus** die Option **Standard**, **optimistische**oder **vollständig**aus.  
+    -   Wählen Sie zum Auswählen eines vordefinierten Modus im Dropdown Feld **Modus** die Option **Standard**, **optimistische** oder **vollständig** aus.  
   
     -   Zum Angeben benutzerdefinierter Einstellungen wählen Sie die neuen Einstellungen oder Werte aus, oder geben Sie Sie ein.  
   
@@ -87,9 +87,9 @@ Sie können auch die Einstellungen für das aktuelle Projekt anpassen. Diese Ein
   
 2.  Verwenden Sie im Dialogfeld **Projekteinstellungen** eines der folgenden Prozeduren:  
   
-    -   Wählen Sie zum Auswählen eines vordefinierten Modus im Dropdown Feld **Modus** die Option **Standard**, **optimistische**oder **vollständig**aus.  
+    -   Wählen Sie zum Auswählen eines vordefinierten Modus im Dropdown Feld **Modus** die Option **Standard**, **optimistische** oder **vollständig** aus.  
   
-    -   Um einen benutzerdefinierten Modus anzugeben, wählen Sie im Feld **Modus** die Option **Benutzer**definiert aus, und wählen Sie dann die entsprechenden Projekteinstellungen aus.  
+    -   Um einen benutzerdefinierten Modus anzugeben, wählen Sie im Feld **Modus** die Option **Benutzer** definiert aus, und wählen Sie dann die entsprechenden Projekteinstellungen aus.  
   
 3.  Klicken Sie auf **OK**, um die Einstellungen zu speichern.  
   

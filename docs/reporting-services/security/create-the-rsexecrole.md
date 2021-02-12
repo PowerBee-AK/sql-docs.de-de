@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3735f53eac6101d2cc02568d1ea6fa789df50512
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: fc9beaae557b81ae65e4fd63a22f5696b4f78052
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935396"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015310"
 ---
 # <a name="create-the-rsexecrole"></a>Erstellen der Rolle RSExecRole
 
@@ -33,7 +33,7 @@ ms.locfileid: "91935396"
   
 ## <a name="before-you-start"></a>Vorbereitung  
   
--   Sichern Sie die Verschlüsselungsschlüssel, damit Sie sie wiederherstellen können, nachdem die Datenbank verschoben wurde. Dieser Schritt wirkt sich nicht direkt auf die Erstellung oder Bereitstellung der Rolle **RSExecRole**aus. Sie müssen jedoch über eine Sicherung der Schlüssel verfügen, um die durchgeführten Schritte verifizieren zu können. Weitere Informationen finden Sie unter [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
+-   Sichern Sie die Verschlüsselungsschlüssel, damit Sie sie wiederherstellen können, nachdem die Datenbank verschoben wurde. Dieser Schritt wirkt sich nicht direkt auf die Erstellung oder Bereitstellung der Rolle **RSExecRole** aus. Sie müssen jedoch über eine Sicherung der Schlüssel verfügen, um die durchgeführten Schritte verifizieren zu können. Weitere Informationen finden Sie unter [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
 -   Überzeugen Sie sich davon, dass Sie unter einem Benutzerkonto angemeldet sind, das über **sysadmin** -Berechtigungen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz verfügt.  
   
@@ -60,11 +60,11 @@ ms.locfileid: "91935396"
   
 6.  Öffnen Sie **Rollen**.  
   
-7.  Klicken Sie mit der rechten Maustaste auf **Datenbankrollen**, und wählen Sie **Neue Datenbankrolle**aus. Die Seite **Database Role - New** (Datenbankrolle - Neu) wird angezeigt.  
+7.  Klicken Sie mit der rechten Maustaste auf **Datenbankrollen**, und wählen Sie **Neue Datenbankrolle** aus. Die Seite **Database Role - New** (Datenbankrolle - Neu) wird angezeigt.  
   
-8.  Geben Sie im Feld **Rollennamen**den Namen **RSExecRole**ein.  
+8.  Geben Sie im Feld **Rollennamen** den Namen **RSExecRole** ein.  
   
-9. Geben Sie im Feld **Besitzer**die Zeichenfolge **dbo** ein.  
+9. Geben Sie im Feld **Besitzer** die Zeichenfolge **dbo** ein.  
   
 10. Navigieren Sie zur Seite **Sicherungsfähige Elemente**.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "91935396"
   
 19. Aktivieren Sie das Kontrollkästchen in der Zeile **Ausführen** in der Spalte **Erteilen**.  
   
-20. Wiederholen Sie diesen Schritt für alle übrigen gespeicherten Prozeduren. Der Rolle**RSExecRole** müssen Berechtigungen zum Ausführen aller drei gespeicherten Prozeduren gewährt werden.  
+20. Wiederholen Sie diesen Schritt für alle übrigen gespeicherten Prozeduren. Der Rolle **RSExecRole** müssen Berechtigungen zum Ausführen aller drei gespeicherten Prozeduren gewährt werden.  
 
 21. Klicken Sie auf **OK**, um den Vorgang abzuschließen.  
   
@@ -111,9 +111,9 @@ ms.locfileid: "91935396"
   
 4.  Öffnen Sie **Rollen**.  
   
-5.  Klicken Sie mit der rechten Maustaste auf **Datenbankrollen**, und wählen Sie **Neue Datenbankrolle**aus. Die Seite Allgemein wird angezeigt.  
+5.  Klicken Sie mit der rechten Maustaste auf **Datenbankrollen**, und wählen Sie **Neue Datenbankrolle** aus. Die Seite Allgemein wird angezeigt.  
   
-6.  Geben Sie im Feld **Rollennamen**den Namen RSExecRole ein.  
+6.  Geben Sie im Feld **Rollennamen** den Namen RSExecRole ein.  
   
 7.  Geben Sie im Feld „Besitzer“ die Zeichenfolge **dbo** ein.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "91935396"
   
 3.  Klicken Sie auf **Datenbank ändern**.  
   
-4.  Sie können auch auf **Wählen Sie eine vorhandene Berichtsserver-Datenbank aus**klicken.  
+4.  Sie können auch auf **Wählen Sie eine vorhandene Berichtsserver-Datenbank aus** klicken.  
   
 5.  Geben Sie den Servernamen der Datenbank-Engine ein. Wenn Sie die Berichtsserver-Datenbanken an eine benannte Instanz angefügt haben, müssen Sie den Instanznamen im folgenden Format eingeben: \<servername>\\<Instanzname\>.  
   

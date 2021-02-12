@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 835b09b5-eb42-47ea-b46e-e115d4d6461f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: bc7bec3f7f4ce358ccbb725e039208f574ae7aae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d9a4c8ea82558598700f5ae18121335c4a181f6b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472563"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078851"
 ---
 # <a name="global-settings-logging-accesstosql"></a>Globale Einstellungen (Protokollierung) (accesstosql)
 Verwenden Sie das Dialogfeld **globale Einstellungen** , um die Protokollierungs Einstellungen für SSMA anzugeben. In der Regel ändern Sie diese Einstellungen nur, wenn Sie mit dem Produktsupport arbeiten.  
@@ -24,9 +24,9 @@ Um auf dieses Dialogfeld zuzugreifen, wählen Sie **im Menü Extras die Option**
   
 ## <a name="options"></a>Tastatur  
 **Nachrichten Ebene**  
-Die folgenden Optionen sind unter **Nachrichten Ebene**verfügbar:  
+Die folgenden Optionen sind unter **Nachrichten Ebene** verfügbar:  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |----------|---------------|  
 |**[alle Kategorien]**|Wird verwendet, um den Protokolliergrad für alle folgenden Optionen festzulegen.|  
 |**Collector**|Sammelt Metadaten über das Quell Schema und speichert Sie im Projekt.|  
@@ -40,13 +40,13 @@ Die folgenden Optionen sind unter **Nachrichten Ebene**verfügbar:
 |**Synchronisierung**|Lädt Quelldaten Bank Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Treeconverter**|Konvertiert Objekte in den Quell Metadaten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten.|  
   
-Konfigurieren Sie für jede Option unter **Nachrichten Ebene**einen der folgenden Protokolliergrade für SSMA:  
+Konfigurieren Sie für jede Option unter **Nachrichten Ebene** einen der folgenden Protokolliergrade für SSMA:  
   
 |||  
 |-|-|  
 |**Schwerwiegender Fehler**|Schreiben Sie nur schwerwiegende Fehlermeldungen in das Protokoll.|  
 |**Fehler**|Schreiben Sie Fehler-und schwerwiegende Fehlermeldungen in das Protokoll.|  
-|**Warning**|Schreiben Sie Warnungs-, Fehler-und schwerwiegende Fehlermeldungen in das Protokoll.|  
+|**Warnung**|Schreiben Sie Warnungs-, Fehler-und schwerwiegende Fehlermeldungen in das Protokoll.|  
 |**Info**|Schreiben Sie Informations-, Warnungs-, Fehler-und schwerwiegende Fehlermeldungen in das Protokoll.|  
 |**Debuggen**|Schreiben Sie alle Meldungen, einschließlich des Debuggens von Nachrichten, in das Protokoll.|  
   

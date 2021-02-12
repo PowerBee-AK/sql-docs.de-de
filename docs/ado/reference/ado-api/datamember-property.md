@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71b4f59b4315d61f1d8f6d4d3fe840cc64016e5b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1026951122336e67760f74077044ff5fd9b9fd76
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167610"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034430"
 ---
 # <a name="datamember-property"></a>DataMember-Eigenschaft
 Gibt den Namen des Datenmembers an, der aus dem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) abgerufen wird, auf das von der [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) -Eigenschaft verwiesen wird.  
@@ -36,7 +36,7 @@ Gibt den Namen des Datenmembers an, der aus dem [Recordset](../../../ado/referen
   
  Die **DataMember** -Eigenschaft bestimmt, welches von der **DataSource** -Eigenschaft angegebene Objekt als **Recordset** -Objekt dargestellt wird. Das **Recordset** -Objekt muss geschlossen werden, bevor diese Eigenschaft festgelegt wird. Ein Fehler wird generiert, wenn die **DataMember** -Eigenschaft nicht vor der **DataSource** -Eigenschaft festgelegt ist oder wenn der **DataMember** -Name nicht durch das in der **DataSource** -Eigenschaft angegebene Objekt erkannt wird.  
   
-## <a name="usage"></a>Verbrauch  
+## <a name="usage"></a>Verwendung  
   
 ```  
 Dim rs as New ADODB.Recordset  

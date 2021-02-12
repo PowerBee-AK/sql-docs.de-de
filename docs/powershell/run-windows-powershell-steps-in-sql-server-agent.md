@@ -10,12 +10,12 @@ ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, drskwier
-ms.openlocfilehash: 2b303e01ab1dd15401d8ee64f2160f761320616a
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: a4ca54d68e62c4d9691df15d20261ec850f499c5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006155"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062405"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Ausführen von Windows PowerShell-Schritten in SQL Server-Agent
 
@@ -46,7 +46,7 @@ Jeder Auftragsschritt des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   
 2.  Klicken Sie im Dialogfeld **Auftragseigenschaften** auf die Seite **Schritte** und dann auf **Neu**.  
   
-3.  Geben Sie im Dialogfeld **Neuer Auftragsschritt** unter **Schrittname**einen Schrittnamen für den Auftrag ein.  
+3.  Geben Sie im Dialogfeld **Neuer Auftragsschritt** unter **Schrittname** einen Schrittnamen für den Auftrag ein.  
   
 4.  Klicken Sie in der Liste **Typ** auf **PowerShell**.  
   
@@ -63,7 +63,7 @@ Jeder Auftragsschritt des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   
 2.  Klicken Sie im Dialogfeld **Auftragseigenschaften** auf die Seite **Schritte** und dann auf **Neu**.  
   
-3.  Geben Sie im Dialogfeld **Neuer Auftragsschritt** unter **Schrittname**einen Schrittnamen für den Auftrag ein.  
+3.  Geben Sie im Dialogfeld **Neuer Auftragsschritt** unter **Schrittname** einen Schrittnamen für den Auftrag ein.  
   
 4.  Wählen Sie in der Liste **Typ** den Eintrag **Betriebssystem (CmdExec)** aus.  
   

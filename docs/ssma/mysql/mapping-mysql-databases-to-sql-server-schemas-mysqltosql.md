@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ded91465a2a9c7b5a0e8ddcdc219b2af5a84395e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 44ac691a0fe9cb4b513a2f9b435457c699c7e3e9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935351"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076074"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Zuordnen von MySQL-Datenbanken zu SQL Server-Schemas (MySqlToSql)
 Standardmäßig werden alle Objekte in einem MySQL-Schema von SSMA für MySQL zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL-Datenbank mit dem Namen für das Schema migriert. Sie können jedoch die Zuordnung zwischen MySQL-Schemas und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank anpassen.  
@@ -26,7 +26,7 @@ Standardmäßig werden alle Objekte in einem MySQL-Schema von SSMA für MySQL zu
 ## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>MySQL-und SQL Server-oder SQL Azure Schemas  
 Das MySQL-Konzept eines Schemas wird dem SQL Server Konzept einer Datenbank und einem ihrer Schemas zugeordnet. SSMA bezieht sich auf die SQL Server Kombination von Datenbank und Schema als Schema.  
   
-Das MySQL-Konzept eines Schemas wird dem SQL Server Konzept einer Datenbank und einem ihrer Schemas zugeordnet. Beispielsweise kann MySQL ein Schema mit dem Namen **HR**aufweisen. Eine Instanz von SQL Server könnte eine Datenbank mit dem Namen **HR**aufweisen, und innerhalb dieser Datenbank sind Schemas. Ein Schema ist das **dbo** -Schema (oder das Datenbankbesitzer Schema). Standardmäßig wird das MySQL-Schema **HR** der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank und dem Schema **HR. dbo**zugeordnet. SSMA bezieht sich auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Kombination von Datenbank und Schema als Schema.  
+Das MySQL-Konzept eines Schemas wird dem SQL Server Konzept einer Datenbank und einem ihrer Schemas zugeordnet. Beispielsweise kann MySQL ein Schema mit dem Namen **HR** aufweisen. Eine Instanz von SQL Server könnte eine Datenbank mit dem Namen **HR** aufweisen, und innerhalb dieser Datenbank sind Schemas. Ein Schema ist das **dbo** -Schema (oder das Datenbankbesitzer Schema). Standardmäßig wird das MySQL-Schema **HR** der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank und dem Schema **HR. dbo** zugeordnet. SSMA bezieht sich auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Kombination von Datenbank und Schema als Schema.  
   
 Sie können die Zuordnung zwischen MySQL-und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure-Schemas ändern.  
   
@@ -35,7 +35,7 @@ In SSMA können Sie einem beliebigen verfügbaren oder SQL Azure Schema ein MySQ
   
 **So ändern Sie die Datenbank und das Schema**  
   
-1.  Wählen Sie im MySQL-metadatenexplorer **Schemas**aus.  
+1.  Wählen Sie im MySQL-metadatenexplorer **Schemas** aus.  
   
     Die Registerkarte **Schema Zuordnung** ist auch verfügbar, wenn Sie einzelne Schemas auswählen. Die Liste auf der Registerkarte **Schema Zuordnung** ist für das ausgewählte Objekt angepasst.  
   
@@ -45,7 +45,7 @@ In SSMA können Sie einem beliebigen verfügbaren oder SQL Azure Schema ein MySQ
   
 3.  Wählen Sie die Zeile aus, die die Zuordnung enthält, die Sie ändern möchten, und klicken Sie dann auf **ändern**.  
   
-    Im Dialogfeld **Ziel Schema auswählen** können Sie nach verfügbaren Ziel Datenbanken und-Schemas suchen oder die Datenbank und den Schema Namen in das Textfeld in einer zwei teiligen Schreibweise (Database. Schema) eingeben und dann auf **OK**klicken.  
+    Im Dialogfeld **Ziel Schema auswählen** können Sie nach verfügbaren Ziel Datenbanken und-Schemas suchen oder die Datenbank und den Schema Namen in das Textfeld in einer zwei teiligen Schreibweise (Database. Schema) eingeben und dann auf **OK** klicken.  
   
 4.  Das Ziel ändert sich auf der Registerkarte **Schema Zuordnung** .  
   

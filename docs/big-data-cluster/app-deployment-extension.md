@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 74f3306167a4c2fbc248f65e5384ea9847f48f7a
-ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
+ms.openlocfilehash: d373b6739f30c0cae6d9534c26da2114dd0f718b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92678908"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039870"
 ---
 # <a name="how-to-use-visual-studio-code-to-deploy-applications-to-big-data-clusters-2019"></a>Verwenden von Visual Studio Code zum Bereitstellen von Anwendungen für [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -93,7 +93,7 @@ Nachdem Sie den zu verwendenden Endpunkt gefunden haben, stellen Sie eine Verbin
 
 ### <a name="app-template"></a>App-Vorlage
 
-In Visual Studio Code müssen Sie den *Arbeitsbereich öffnen* , in dem Sie die Artefakte der App speichern werden.
+In Visual Studio Code müssen Sie den *Arbeitsbereich öffnen*, in dem Sie die Artefakte der App speichern werden.
 
 Sie können eine neue App mithilfe einer unserer Vorlagen bereitstellen. Klicken Sie dazu im Bereich `App Specifications` auf die Schaltfläche `New App Template`. Sie werden aufgefordert, den Namen, die Runtime und den Speicherort der App auf Ihrem lokalen Computer anzugeben. Der Name und die Version, die Sie angeben, muss eine DNS-1035-Bezeichnung sein und aus Kleinbuchstaben, Ziffern oder Bindestrichen bestehen, mit einem Buchstaben beginnen und einem alphanumerischen Zeichen enden.
 

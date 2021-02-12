@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 593c36c193b95d1484f3d478018992ea130d5417
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bddb9d2329c20203aca602e7aec37f235c4b6850
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418636"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077671"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Zugreifen auf Inventur Schemas (Access Token-SQL)
 In den folgenden Abschnitten werden die Tabellen beschrieben, die von SSMA beim Exportieren von Zugriffs Schemas in erstellt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -50,13 +50,13 @@ In den folgenden Abschnitten werden die Tabellen beschrieben, die von SSMA beim 
 ## <a name="databases"></a>Datenbanken  
 Daten Bank Metadaten werden in die **SSMA_Access_InventoryDatabases** Tabelle exportiert. Diese Tabelle enthält die folgenden Spalten:  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |---------------|-------------|---------------|  
 |**DatabaseID**|**uniqueidentifier**|Eine GUID, die jede Datenbank eindeutig identifiziert. Diese Spalte ist auch der Primärschlüssel für die Tabelle.|  
 |**DatabaseName**|**nvarchar(4000)**|Der Name der Access-Datenbank.|  
 |**Export Zeit**|**datetime**|Das Datum und die Uhrzeit, zu denen diese Metadaten von SSMA erstellt wurden.|  
 |**FilePath**|**nvarchar(4000)**|Der vollständige Pfad und der Dateiname der Access-Datenbank.|  
-|**Filesize**|**bigint**|Die Größe der Access-Datenbank in KB.|  
+|**FileSize**|**bigint**|Die Größe der Access-Datenbank in KB.|  
 |**Dateibesitzer**|**nvarchar(4000)**|Das Windows-Konto, das als Besitzer der Access-Datenbank angegeben wird.|  
 |**DateCreated**|**datetime**|Das Datum und die Uhrzeit der Erstellung der Access-Datenbank.|  
 |**DateModified**|**datetime**|Das Datum und die Uhrzeit der letzten Änderung der Access-Datenbank.|  
@@ -75,7 +75,7 @@ Daten Bank Metadaten werden in die **SSMA_Access_InventoryDatabases** Tabelle ex
 ## <a name="tables"></a>Tabellen  
 Tabellen Metadaten werden in die **SSMA_Access_InventoryTables** Tabelle exportiert. Diese Tabelle enthält die folgenden Spalten:  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |---------------|-------------|---------------|  
 |**DatabaseID**|**uniqueidentifier**|Identifiziert die Datenbank, die diese Tabelle enthält.|  
 |**TableID**|**uniqueidentifier**|Eine GUID, die die Tabelle eindeutig identifiziert. Diese Spalte ist auch der Primärschlüssel für die Tabelle.|  
@@ -88,7 +88,7 @@ Tabellen Metadaten werden in die **SSMA_Access_InventoryTables** Tabelle exporti
 ## <a name="columns"></a>Spalten  
 Spalten Metadaten werden in die **SSMA_Access_InventoryColumns** Tabelle exportiert. Diese Tabelle enthält die folgenden Spalten:  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |---------------|-------------|---------------|  
 |**DatabaseID**|**uniqueidentifier**|Identifiziert die Datenbank, die diese Spalte enthält.|  
 |**TableID**|**uniqueidentifier**|Identifiziert die Tabelle, die diese Spalte enthält.|  
@@ -104,7 +104,7 @@ Spalten Metadaten werden in die **SSMA_Access_InventoryColumns** Tabelle exporti
 ## <a name="indexes"></a>Indizes  
 Index Metadaten werden in die **SSMA_Access_InventoryIndexes** Tabelle exportiert. Diese Tabelle enthält die folgenden Spalten:  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |---------------|-------------|---------------|  
 |**DatabaseID**|**uniqueidentifier**|Identifiziert die Datenbank, die diesen Index enthält.|  
 |**TableID**|**uniqueidentifier**|Identifiziert die Tabelle, die diesen Index enthält.|  
@@ -118,7 +118,7 @@ Index Metadaten werden in die **SSMA_Access_InventoryIndexes** Tabelle exportier
 ## <a name="foreign-keys"></a>Fremdschlüssel  
 Fremdschlüssel Metadaten werden in die **SSMA_Access_InventoryForeignKeys** Tabelle exportiert. Diese Tabelle enthält die folgenden Spalten:  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |---------------|-------------|---------------|  
 |**DatabaseID**|**uniqueidentifier**|Identifiziert die Datenbank, die diesen Fremdschlüssel enthält.|  
 |**TableID**|**uniqueidentifier**|Gibt die Tabelle an, die diesen Fremdschlüssel enthält.|  
@@ -134,7 +134,7 @@ Fremdschlüssel Metadaten werden in die **SSMA_Access_InventoryForeignKeys** Tab
 ## <a name="queries"></a>Abfragen  
 Abfrage Metadaten werden in die **SSMA_Access_InventoryQueries** Tabelle exportiert. Diese Tabelle enthält die folgenden Spalten:  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |---------------|-------------|---------------|  
 |**DatabaseID**|**uniqueidentifier**|Identifiziert die Datenbank, in der diese Abfrage enthalten ist.|  
 |**QueryId**|**int**|Eine inkrementellen Ganzzahl, die die Abfrage identifiziert. Diese Spalte ist der Primärschlüssel für die Tabelle.|  
@@ -147,7 +147,7 @@ Abfrage Metadaten werden in die **SSMA_Access_InventoryQueries** Tabelle exporti
 ## <a name="forms"></a>Formulare  
 Formular Metadaten werden in die **SSMA_Access_InventoryForms** Tabelle exportiert. Diese Tabelle enthält die folgenden Spalten:  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |---------------|-------------|---------------|  
 |**DatabaseID**|**uniqueidentifier**|Identifiziert die Datenbank, die dieses Formular enthält.|  
 |**Formid**|**int**|Eine inkrementellen Ganzzahl, die das Formular bezeichnet. Diese Spalte ist der Primärschlüssel für die Tabelle.|  
@@ -156,7 +156,7 @@ Formular Metadaten werden in die **SSMA_Access_InventoryForms** Tabelle exportie
 ## <a name="macros"></a>Makros  
 Makro Metadaten werden in die **SSMA_Access_InventoryMacros** Tabelle exportiert. Diese Tabelle enthält die folgenden Spalten:  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |---------------|-------------|---------------|  
 |**DatabaseID**|**uniqueidentifier**|Identifiziert die Datenbank, die das Makro enthält.|  
 |**Makroid**|**int**|Eine inkrementellen Ganzzahl, die das Makro identifiziert. Diese Spalte ist der Primärschlüssel für die Tabelle.|  
@@ -165,7 +165,7 @@ Makro Metadaten werden in die **SSMA_Access_InventoryMacros** Tabelle exportiert
 ## <a name="reports"></a>Berichte  
 Die Berichts Metadaten werden in die **SSMA_Access_InventoryReports** Tabelle exportiert. Diese Tabelle enthält die folgenden Spalten:  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |---------------|-------------|---------------|  
 |**DatabaseID**|**uniqueidentifier**|Identifiziert die Datenbank, die den Bericht enthält.|  
 |**ReportId**|**int**|Eine inkrementellen Ganzzahl, die den Bericht identifiziert. Diese Spalte ist der Primärschlüssel für die Tabelle.|  
@@ -174,7 +174,7 @@ Die Berichts Metadaten werden in die **SSMA_Access_InventoryReports** Tabelle ex
 ## <a name="modules"></a>Module  
 Modul Metadaten werden in die **SSMA_Access_InventoryModules** Tabelle exportiert. Diese Tabelle enthält die folgenden Spalten:  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |---------------|-------------|---------------|  
 |**DatabaseID**|**uniqueidentifier**|Identifiziert die Datenbank, die das Modul enthält.|  
 |**ModuleID**|**int**|Eine inkrementellen Ganzzahl, die das Modul identifiziert. Diese Spalte ist der Primärschlüssel für die Tabelle.|  

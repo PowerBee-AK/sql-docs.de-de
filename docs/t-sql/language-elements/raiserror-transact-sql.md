@@ -30,12 +30,12 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ccb8c1e7f26102aa960ab720283debaceff2dd2c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e9892fe80ff3f29dca2ac46c99249fa603ab5528
+ms.sourcegitcommit: 6f4fb9cfd0cad06127a6328adc745e2ba7c191d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99203614"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99570484"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -132,7 +132,7 @@ RAISERROR ( { msg_str | @local_variable }
  Eine Variable eines beliebigen Zeichendatentyps, die eine Zeichenfolge enthält, die auf die gleiche Weise wie *msg_str* formatiert ist. *\@local_variable* muss auf **char** oder **varchar** festgelegt oder implizit in diese Datentypen konvertierbar sein.  
   
  *severity*  
- Ist der benutzerdefinierte Schweregrad, der dieser Meldung zugeordnet ist. Wird *msg_id* zum Auslösen einer mithilfe von „sp_addmessage“ erstellten benutzerdefinierten Meldung verwendet, überschreibt der in RAISERROR angegebene Schweregrad den Schweregrad in „sp_addmessage“.  
+ Der benutzerdefinierte [Schweregrad](../../relational-databases/errors-events/database-engine-error-severities.md), der dieser Meldung zugeordnet ist. Wird *msg_id* zum Auslösen einer mithilfe von „sp_addmessage“ erstellten benutzerdefinierten Meldung verwendet, überschreibt der in RAISERROR angegebene Schweregrad den Schweregrad in „sp_addmessage“.  
   
  Schweregrade von 0 bis 18 können von jedem Benutzer angegeben werden. Schweregrade von 19 bis 25 können nur von Mitgliedern der festen Serverrolle „sysadmin“ oder von Benutzern mit ALTER TRACE-Berechtigungen angegeben werden. Für Schweregrade von 19 bis 25 ist die Option WITH LOG erforderlich. Geringere Schweregrade als 0 werden als 0 interpretiert. Höhere Schweregrade als 25 werden als 25 interpretiert.  
   

@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 04f6f0adb61a0bb7ccf33e3705a4a32b9ed9d69e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 38385657de137e9e13bf03f7a4209be1303452d3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988226"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076077"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Datenbankobjekte werden umgerechnet (accesstosql)
 Nachdem Sie Access-Datenbanken hinzugefügt und eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure hergestellt haben, zeigt SSMA Metadaten für Access-und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL-Datenbankobjekte an. Sie können jetzt auf Datenbankobjekte zugreifen auswählen und dann die Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Schemas konvertieren.  
@@ -60,7 +60,7 @@ In der folgenden Tabelle wird gezeigt, welche Zugriffs Objekte konvertiert werde
 |column|column|  
 |Index|Index|  
 |Fremdschlüssel|Fremdschlüssel|  
-|Abfrage|Sicht<br /><br />Die meisten SELECT-Abfragen werden in Sichten konvertiert. Andere Abfragen, z. b. Update Abfragen, werden nicht migriert.<br /><br />SELECT-Abfragen, die Parameter akzeptieren, werden nicht konvertiert, und es handelt sich nicht um Kreuz Registerkarten Abfragen.|  
+|Abfrage|Ansicht<br /><br />Die meisten SELECT-Abfragen werden in Sichten konvertiert. Andere Abfragen, z. b. Update Abfragen, werden nicht migriert.<br /><br />SELECT-Abfragen, die Parameter akzeptieren, werden nicht konvertiert, und es handelt sich nicht um Kreuz Registerkarten Abfragen.|  
 |report|nicht konvertiert|  
 |form|nicht konvertiert|  
 |Makro|nicht konvertiert|  
@@ -72,7 +72,7 @@ In der folgenden Tabelle wird gezeigt, welche Zugriffs Objekte konvertiert werde
 |Primärschlüssel|Primärschlüssel|  
   
 ## <a name="converting-access-objects"></a>Umstellen von Zugriffs Objekten  
-Zum Konvertieren von Access-Datenbankobjekten müssen Sie zuerst die Objekte auswählen, die Sie konvertieren möchten, und SSMA dann die Konvertierung durchführen. Wenn Sie während der Konvertierung Ausgabemeldungen anzeigen möchten, wählen Sie im Menü **Ansicht** die Option **Ausgabe**aus.  
+Zum Konvertieren von Access-Datenbankobjekten müssen Sie zuerst die Objekte auswählen, die Sie konvertieren möchten, und SSMA dann die Konvertierung durchführen. Wenn Sie während der Konvertierung Ausgabemeldungen anzeigen möchten, wählen Sie im Menü **Ansicht** die Option **Ausgabe** aus.  
   
 **So können Sie Access-Datenbankobjekte auswählen und in SQL Server-oder SQL Azure-Syntax konvertieren**  
   
@@ -92,11 +92,11 @@ Zum Konvertieren von Access-Datenbankobjekten müssen Sie zuerst die Objekte aus
   
     -   Zum Konvertieren von Schemas klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Schema konvertieren**  
   
-        Sie können auch einzelne Objekte konvertieren. Klicken Sie mit der rechten Maustaste auf das Objekt, und wählen Sie **Schema konvertieren**aus, um ein Objekt zu konvertieren, unabhängig von den ausgewählten Objekten.  
+        Sie können auch einzelne Objekte konvertieren. Klicken Sie mit der rechten Maustaste auf das Objekt, und wählen Sie **Schema konvertieren** aus, um ein Objekt zu konvertieren, unabhängig von den ausgewählten Objekten.  
   
         Wenn ein Objekt konvertiert wurde, wird es Fett in Access Metadata Explorer angezeigt.  
   
-    -   Wenn Sie Schemas und Daten in einem Schritt konvertieren, laden und migrieren möchten, klicken Sie mit der rechten Maustaste auf Datenbanken, und wählen Sie **konvertieren, laden und Migrieren**aus.  
+    -   Wenn Sie Schemas und Daten in einem Schritt konvertieren, laden und migrieren möchten, klicken Sie mit der rechten Maustaste auf Datenbanken, und wählen Sie **konvertieren, laden und Migrieren** aus.  
   
 4.  Überprüfen Sie die Meldungen im **Ausgabe** Bereich und alle Fehler und Warnungen im **Fehlerliste** Bereich.  
   

@@ -3,15 +3,15 @@ title: Includedateien für die SQL Server PowerShell-Version
 description: Erläutert, dass das Sqlserver-PowerShell-Modul der aktuelle SQL Server-PowerShell-Befehlssatz ist.
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29fb145b1134404fb977171066d72c34cc712785
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 7d2072705186ad2006ae52adb821359a5c64e39e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005163"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062349"
 ---
 > [!NOTE]
-> Es gibt zwei SQL Server PowerShell-Module: [SqlServer](https://docs.microsoft.com/powershell/module/sqlserver) und [SQLPS](https://docs.microsoft.com/powershell/module/sqlps).
+> Es gibt zwei SQL Server PowerShell-Module: [SqlServer](/powershell/module/sqlserver) und [SQLPS](/powershell/module/sqlps).
 >
 > Das **SqlServer**-Modul ist das zu verwendende aktuelle PowerShell-Modul.
 >

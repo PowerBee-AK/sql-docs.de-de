@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bef4a075eefffd0f9ec4b918189d40ae71ea78ec
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fb822d707b89dd0f7597ad4acf6783118ec92f54
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99207129"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072574"
 ---
 # <a name="numeric-functions"></a>Numerische Funktionen
 In der folgenden Tabelle werden numerische Funktionen beschrieben, die in der ODBC-skalarfunktionsmenge enthalten sind. Durch den Aufruf von **SQLGetInfo** mit dem *Informationstyp* SQL_NUMERIC_FUNCTIONS kann eine Anwendung bestimmen, welche numerischen Funktionen von einem Treiber unterstützt werden.  

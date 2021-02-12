@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 92a9678c-bc4f-4d7a-ba44-85989bfe27ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 37d6552c328daff4793ea65d9670752378e1ab3b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d40d77660fd722e668fc5d1d080b52b37bd30822
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79509761"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100075155"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>Erstellen von Anwendungen mit dem Webdienst und .NET Framework
   Mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] können Sie bekannte Programmierkonstrukte wie z. B. Methoden, einfache Typen und benutzerdefinierte komplexe Typen für die Arbeit mit Webdiensten verwenden. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] enthält eine Infrastruktur und Tools, mit denen Sie Webdienstclients erstellen können, die jeden Webdienst von World Wide Web Consortium (W3C) aufrufen können, der den Standards entspricht.  

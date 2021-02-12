@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 05ee90e9ccbf781e0145665b8f1dd06ca2fb8d45
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 6631325809a468aed4e7c7fd00cf71aedecc7ba0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396084"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042058"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Überwachen von Reporting Services-Abonnements
   Sie können [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements über die Benutzeroberfläche, Windows PowerShell oder Protokolldateien überwachen. Die für die Überwachung verfügbaren Optionen hängen davon ab, welchen Modus des Berichtsservers Sie ausführen.  
@@ -97,7 +97,7 @@ ms.locfileid: "87396084"
   
 3.  Wählen Sie die erweiterte Menüoption ( **...** ) aus.  
   
-4.  Wählen Sie **Abonnements verwalten**aus.  
+4.  Wählen Sie **Abonnements verwalten** aus.  
   
 ### <a name="sharepoint-uls-log-files"></a>SharePoint ULS-Protokolldateien  
  Abonnementbezogene Informationen werden in das SharePoint ULS-Protokoll geschrieben. Weitere Informationen zum Konfigurieren von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Ereignissen für das ULS-Protokoll finden Sie unter [Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll (ULS)](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md).  Das folgende Beispiel zeigt einen ULS-Protokolleintrag im Zusammenhang mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements.  

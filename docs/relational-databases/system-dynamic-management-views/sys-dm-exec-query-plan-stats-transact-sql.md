@@ -1,6 +1,6 @@
 ---
-description: sys. dm_exec_query_plan_stats (Transact-SQL)
-title: sys. dm_exec_query_plan_stats (Transact-SQL) | Microsoft-Dokumentation
+description: sys.dm_exec_query_plan_stats (Transact-SQL)
+title: sys.dm_exec_query_plan_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -18,14 +18,14 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 0ab11e74205f47d50e927680081e8e13dfee37fb
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: c1f833351fd342629b858b19c113015e81ec3db1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042477"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072024"
 ---
-# <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats (Transact-SQL)
+# <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 Gibt den-Wert des letzten bekannten tatsächlichen Ausführungs Plans für einen zuvor zwischengespeicherten Abfrageplan zurück.
@@ -48,22 +48,22 @@ Ein Token, das einen Abfrage Ausführungsplan für einen Batch eindeutig identif
   
 -   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [sys. dm_exec_procedure_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [sys.dm_exec_procedure_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys. dm_exec_trigger_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+-   [sys.dm_exec_trigger_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
 
 ## <a name="table-returned"></a>Zurückgegebene Tabelle
 
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|
 |**DBID**|**smallint**|ID der Kontextdatenbank, die gültig war, als die diesem Plan entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung kompiliert wurde. Für Ad-hoc-Anweisungen und vorbereitete SQL-Anweisungen, die ID der Datenbank, in der die Anweisungen kompiliert wurden.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
 |**objectid**|**int**|ID des Objekts (z. B. gespeicherte Prozedur oder benutzerdefinierte Funktion) für diesen Abfrageplan. Für Ad-hoc- und vorbereitete Batches entspricht diese Spalte dem Wert **NULL**.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
 |**Zahl**|**smallint**|Gespeicherte Prozedur mit ganzer Zahl. Eine Gruppe von Prozeduren für die **orders**-Anwendung kann z. B. die Namen **orderproc;1**, **orderproc;2** usw. haben. Für Ad-hoc- und vorbereitete Batches entspricht diese Spalte dem Wert **NULL**.<br /><br /> Die Spalte lässt NULL-Werte zu.|  
 |**.**|**bit**|Zeigt an, ob die entsprechende Prozedur verschlüsselt ist.<br /><br /> 0 = nicht verschlüsselt<br /><br /> 1 = verschlüsselt<br /><br /> NULL-Werte sind in der Spalte nicht zulässig.|  
-|**query_plan**|**xml**|Enthält die letzte bekannte Runtime-Showplan-Darstellung des tatsächlichen Abfrage Ausführungs Plans, der mit *plan_handle*angegeben wird. Der Showplan liegt im XML-Format vor. Für jeden Batch, der z. B. Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, Aufrufe von gespeicherten Prozeduren und benutzerdefinierten Funktionen enthält, wird jeweils ein Plan generiert.<br /><br /> Die Spalte lässt NULL-Werte zu.| 
+|**query_plan**|**xml**|Enthält die letzte bekannte Runtime-Showplan-Darstellung des tatsächlichen Abfrage Ausführungs Plans, der mit *plan_handle* angegeben wird. Der Showplan liegt im XML-Format vor. Für jeden Batch, der z. B. Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, Aufrufe von gespeicherten Prozeduren und benutzerdefinierten Funktionen enthält, wird jeweils ein Plan generiert.<br /><br /> Die Spalte lässt NULL-Werte zu.| 
 
 ## <a name="remarks"></a>Bemerkungen
-Dies ist ein Opt-in-Feature. Verwenden Sie das Ablaufverfolgungsflag [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451, um auf Serverebene zu aktivieren. Um auf Datenbankebene zu aktivieren, verwenden Sie die Option LAST_QUERY_PLAN_STATS in [ALTER DATABASE scoped Configuration &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+Dies ist ein Opt-in-Feature. Verwenden Sie das Ablaufverfolgungsflag [](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451, um auf Serverebene zu aktivieren. Um auf Datenbankebene zu aktivieren, verwenden Sie die Option LAST_QUERY_PLAN_STATS in [ALTER DATABASE scoped Configuration &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 Diese Systemfunktion funktioniert unter der **Lightweight** -Infrastruktur für die Abfrage Ausführungs Statistik-Profilerstellung. Weitere Informationen finden Sie unter [Profilerstellungsinfrastruktur für Abfragen](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
@@ -73,13 +73,13 @@ Die Showplan-Ausgabe von `sys.dm_exec_query_plan_stats` enthält die folgenden I
 
 Unter den folgenden Bedingungen wird eine Showplan-Ausgabe, die **einem tatsächlichen Ausführungsplan entspricht** , in der **query_plan** -Spalte der zurückgegebenen Tabelle für zurückgegeben `sys.dm_exec_query_plan_stats` :  
 
--   Der Plan kann in [sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)gefunden werden.     
+-   Der Plan befindet sich in [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
     **AND**    
 -   Die ausgeführte Abfrage ist komplex oder Ressourcen aufwendig.
 
-Unter den folgenden Bedingungen wird eine **vereinfachte <sup>1</sup> ** Showplan-Ausgabe in der **query_plan** -Spalte der zurückgegebenen Tabelle für zurückgegeben `sys.dm_exec_query_plan_stats` :  
+Unter den folgenden Bedingungen wird eine **vereinfachte <sup>1</sup>** Showplan-Ausgabe in der **query_plan** -Spalte der zurückgegebenen Tabelle für zurückgegeben `sys.dm_exec_query_plan_stats` :  
 
--   Der Plan kann in [sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)gefunden werden.     
+-   Der Plan befindet sich in [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
     **AND**    
 -   Die Abfrage ist einfach genug und wird normalerweise als Teil einer OLTP-Arbeitsauslastung kategorisiert.
 
@@ -100,14 +100,14 @@ Unter den folgenden Bedingungen **wird keine Ausgabe von zurückgegeben** `sys.d
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-looking-at-last-known-actual-query-execution-plan-for-a-specific-cached-plan"></a>A. Betrachten des letzten bekannten Abfrage Ausführungs Plans für einen bestimmten zwischengespeicherten Plan  
- Im folgenden Beispiel wird **sys. dm_exec_cached_plans** abgefragt, um den interessanten Plan zu suchen und dessen `plan_handle` aus der Ausgabe zu kopieren.  
+ Im folgenden Beispiel wird **sys.dm_exec_cached_plans** abgefragt, um den interessanten Plan zu suchen und dessen `plan_handle` aus der Ausgabe zu kopieren.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_cached_plans;  
 GO  
 ```  
   
-Verwenden Sie dann zum Abrufen des letzten bekannten Abfrage Ausführungs Plans den, der `plan_handle` mit der Systemfunktion **sys. dm_exec_query_plan_stats**kopiert wurde.  
+Verwenden Sie dann zum Abrufen des letzten bekannten Abfrage Ausführungs Plans die `plan_handle` mit der Systemfunktion kopierte **sys.dm_exec_query_plan_stats**.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_query_plan_stats(< copied plan_handle >);  

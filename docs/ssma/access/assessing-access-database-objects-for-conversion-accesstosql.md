@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6bf9144249bc8707bce9c812da19a07bacc43c68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 07adac4e991afd70b70a5f087a881f1933baaae1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418606"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076421"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Bewerten von Access-Datenbankobjekten für die Konvertierung (accesstosql)
 Bevor Sie Objekte laden und Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure migrieren, sollten Sie bestimmen, wie viel der Migration erfolgreich verlaufen soll und wie lange die Konvertierung dauern kann. SSMA kann einen Bewertungsbericht erstellen, in dem der Prozentsatz der Objekte angezeigt wird, die erfolgreich in konvertiert wurden, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Syntax-und Zeit Schätzwerte zum Durchführen der Migration. Mit SSMA können Sie auch die spezifischen Probleme anzeigen, die Konvertierungs Fehler verursacht haben.  
@@ -38,9 +38,9 @@ Wenn ein Bewertungsbericht erstellt wird, konvertiert SSMA die ausgewählten Acc
   
 2.  Wenn Sie einzelne Objekte weglassen möchten, deaktivieren Sie die Kontrollkästchen neben den Objekten, die nicht bewertet werden sollen.  
   
-3.  Klicken Sie mit der rechten Maustaste auf **Datenbanken**und dann auf **Bericht erstellen**.  
+3.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** und dann auf **Bericht erstellen**.  
   
-    Sie können einzelne Objekte auch analysieren, indem Sie mit der rechten Maustaste auf ein Objekt klicken und dann **Bericht erstellen**auswählen.  
+    Sie können einzelne Objekte auch analysieren, indem Sie mit der rechten Maustaste auf ein Objekt klicken und dann **Bericht erstellen** auswählen.  
   
     SSMA zeigt den Fortschritt in der Statusleiste am unteren Rand des Fensters an. Wenn der Ausgabebereich sichtbar ist, werden im Ausgabebereich auch Meldungen angezeigt.  
   

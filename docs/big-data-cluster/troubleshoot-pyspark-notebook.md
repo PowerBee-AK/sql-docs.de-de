@@ -9,12 +9,12 @@ ms.date: 06/01/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d631a74bc71c814a70ef0ecfa33485ee4631ccd4
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 02ac9f72b7cd688cd38bdc5e785732e8b97bc2dc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257074"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100043400"
 ---
 # <a name="troubleshoot-pyspark-notebook"></a>Troubleshooting für `pyspark`-Notebooks
 
@@ -127,7 +127,7 @@ Für diese Troubleshootingschritte ist Folgendes erforderlich:
 
 1. Überprüfen Sie die Anwendungs-ID und die einzelnen application_master- und Containerprotokolle.
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="Zelle mit Fehler":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="Überprüfen der Anwendungs-ID":::
 
 1. Überprüfen Sie die YARN-Anwendungsprotokolle.
 
@@ -165,7 +165,7 @@ Für diese Troubleshootingschritte ist Folgendes erforderlich:
 
 1. Überprüfen Sie die Spark-Benutzeroberfläche.
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="Zelle mit Fehler":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="Spark-Benutzeroberfläche":::
 
    Führen Sie ein Drilldown in die Tasks der Stufen durch, und suchen Sie nach Fehlern.
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 00665e16-2990-4bfc-8e17-d97ca9fb4999
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 88b8566b0ed3b264f09f0307251dcf9e69270e19
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 5492027b30b96e315225c640c48e3e4cfd34b3e9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987670"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076411"
 ---
 # <a name="appendix---1-accesstosql"></a>Anhang-1 (accesstosql)
 Schnellansicht der Befehlszeilenoptionen der SSMA-Konsole:  

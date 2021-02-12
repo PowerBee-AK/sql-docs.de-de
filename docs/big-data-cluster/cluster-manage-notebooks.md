@@ -10,18 +10,18 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e549a8005144e85a20cf613ff6695d11f7ff030f
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 34592d9a6cb3db8bde5a2a25098314fd9ace1208
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378399"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039480"
 ---
 # <a name="manage-big-data-clusters-bdc-the-cluster-with-notebooks"></a>Verwalten von Big Data-Clustern (BDC) mit Notebooks
 
 Diese Seite ist ein Index der Notebooks für SQL Server Big Data-Cluster. Dieses ausführbaren Notebooks (IPYNB) sind für SQL Server 2019 entwickelt, um bei der Verwaltung von Big Data-Clustern zu helfen.
 
-Jedes Notebook überprüft seine eigenen Abhängigkeiten. Die Ausführung von **run all cells** (Alle Zellen ausführen) wird entweder erfolgreich abgeschlossen oder löst eine Ausnahme aus, die einen Hinweis mit einem Link zu einem anderen Notebook enthält, um die fehlende Abhängigkeit aufzulösen. Folgen Sie dem Link im Hinweis zu dem folgenden Notebook, klicken Sie auf **run all cells** , und wenn die Aktion erfolgreich ist, kehren Sie zum ursprünglichen Notebook zurück, und führen Sie **run all cells** aus.
+Jedes Notebook überprüft seine eigenen Abhängigkeiten. Die Ausführung von **run all cells** (Alle Zellen ausführen) wird entweder erfolgreich abgeschlossen oder löst eine Ausnahme aus, die einen Hinweis mit einem Link zu einem anderen Notebook enthält, um die fehlende Abhängigkeit aufzulösen. Folgen Sie dem Link im Hinweis zu dem folgenden Notebook, klicken Sie auf **run all cells**, und wenn die Aktion erfolgreich ist, kehren Sie zum ursprünglichen Notebook zurück, und führen Sie **run all cells** aus.
 
 Wenn alle Abhängigkeiten installiert wurden, **run all cells** aber fehlschlägt, analysiert jedes Notebook die Ergebnisse und erzeugt, wo möglich, einen Hinweis mit Link zu einem weiteren Notebook, um bei der weitergehenden Behandlung des Problems zu helfen.
 
@@ -75,7 +75,7 @@ Eine Gruppe von Notebooks zum Ausführen eines Notebooks für die Verwaltung von
 |CER043: Signiertes Controllerzertifikat installieren|Mit diesem Notebook wird das Zertifikat im Big Data-Cluster installiert, das mit **CER034: Controllerzertifikat mit Cluster-Stammzertifizierungsstelle signieren** signiert wurde. Beachten Sie ferner, dass am Ende dieses Notebooks der Controllerpod sowie alle Pods, die PolyBase (Masterpool- und Computepoolpods) verwenden, neu gestartet werden, um die neuen Zertifikate zu laden.|
 |CER050: Auf Fehlerfreiheit von BDC warten|Dieses Notebook wartet, bis sich der Big Data-Cluster wieder in einem fehlerfreien Zustand befindet, nachdem der Controllerpod und die Pods, die PolyBase verwenden, neu gestartet wurden, um die neuen Zertifikate zu laden.|
 |CER100: Cluster mit selbstsignierten Zertifikaten konfigurieren|Dieses Notebook generiert eine neue Stammzertifizierungsstelle im Big Data-Cluster, und erstellt neue Zertifikate für jeden Endpunkt (diese Endpunkte sind: Verwaltung, Gateway, App-Proxy und Controller). Signieren Sie jedes neue Zertifikat mit der neuen generierten Stammzertifizierungsstelle, mit Ausnahme des Controllerzertifikats (das mit der vorhandenen Cluster-Stammzertifizierungsstelle signiert ist), und installieren Sie dann jedes Zertifikate im Big Data-Cluster. Laden Sie die neue generierte Stammzertifizierungsstelle in den Zertifikatspeicher „Vertrauenswürdige Stammzertifizierungsstellen“ herunter. Alle generierten selbstsignierten Zertifikate werden im Controllerpod am Speicherort „test_cert_store_root“ gespeichert.|
-|CER101: Cluster mit selbstsignierten Zertifikaten mithilfe der vorhandenen Stammzertifizierungsstelle konfigurieren|In diesem Notebook wird eine vorhandene generierte Stammzertifizierungsstelle im Big Data-Cluster verwendet (hochgeladen mit **CER003** ), und es werden für jeden Endpunkt (Verwaltung, Gateway, App-Proxy und Controller) neue Zertifikate erstellt. Anschließend wird jedes neue Zertifikat mit der neuen generierten Stammzertifizierungsstelle signiert, mit Ausnahme des Controllerzertifikats (das mit der vorhandenen Cluster-Stammzertifizierungsstelle signiert ist), und jedes Zertifikat wird im Big Data-Cluster installiert. Alle generierten selbstsignierten Zertifikate werden im Controllerpod (am Speicherort „test_cert_store_root“) gespeichert. Nach Abschluss dieses Notebooks wird der gesamte „https://“-Zugriff auf den Big Data-Cluster von diesem Computer aus (und von jedem Computer, auf dem die neue Stammzertifizierungsstelle installiert wird) als sicher angezeigt. Im Kapitel „Notebook-Runner“ wird sichergestellt, dass CronJobs, die zur Ausführung von App-Deploy erstellt wurden (OPR003), die Cluster-Stammzertifizierungsstelle installieren, damit ein sicheres Abrufen von JWT-Token und der Datei „swagger.json“ ermöglicht wird.|
+|CER101: Cluster mit selbstsignierten Zertifikaten mithilfe der vorhandenen Stammzertifizierungsstelle konfigurieren|In diesem Notebook wird eine vorhandene generierte Stammzertifizierungsstelle im Big Data-Cluster verwendet (hochgeladen mit **CER003**), und es werden für jeden Endpunkt (Verwaltung, Gateway, App-Proxy und Controller) neue Zertifikate erstellt. Anschließend wird jedes neue Zertifikat mit der neuen generierten Stammzertifizierungsstelle signiert, mit Ausnahme des Controllerzertifikats (das mit der vorhandenen Cluster-Stammzertifizierungsstelle signiert ist), und jedes Zertifikat wird im Big Data-Cluster installiert. Alle generierten selbstsignierten Zertifikate werden im Controllerpod (am Speicherort „test_cert_store_root“) gespeichert. Nach Abschluss dieses Notebooks wird der gesamte „https://“-Zugriff auf den Big Data-Cluster von diesem Computer aus (und von jedem Computer, auf dem die neue Stammzertifizierungsstelle installiert wird) als sicher angezeigt. Im Kapitel „Notebook-Runner“ wird sichergestellt, dass CronJobs, die zur Ausführung von App-Deploy erstellt wurden (OPR003), die Cluster-Stammzertifizierungsstelle installieren, damit ein sicheres Abrufen von JWT-Token und der Datei „swagger.json“ ermöglicht wird.|
 
 ## <a name="backup-and-restore-from-big-data-cluster-bdc"></a>Sichern und Wiederherstellen von Big Data-Clustern (BDC)
 

@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 06/09/2020
-ms.openlocfilehash: b0e5df690fd141a60a81a64c0d0a4ce9a72723ee
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 530478c30885e603d73a5bd35fe3a759b607b836
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935447"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014910"
 ---
 # <a name="configure-the-report-server-service-account-report-server-configuration-manager"></a>Configure the Report Server Service Account (SSRS Configuration Manager) (Konfigurieren des Berichtsserver-Dienstkontos (Berichtsserver-Konfigurations-Manager))
 
@@ -21,7 +21,7 @@ ms.locfileid: "91935447"
   
 ## <a name="initial-configuration"></a>Anfängliche Konfiguration
 
- Das Berichtsserver-Dienstkonto wird während der Ausführung von Setup definiert. Sie können den Dienst unter einem Domänenbenutzerkonto oder unter einem integrierten Konto wie einem **virtuellen Dienstkonto**ausführen. Da es kein Standardkonto gibt, wird das Konto, das Sie auf der Seite **Dienstkonten** des Installations-Assistenten angeben, als Konto für den Berichtsserverdienst verwendet.  
+ Das Berichtsserver-Dienstkonto wird während der Ausführung von Setup definiert. Sie können den Dienst unter einem Domänenbenutzerkonto oder unter einem integrierten Konto wie einem **virtuellen Dienstkonto** ausführen. Da es kein Standardkonto gibt, wird das Konto, das Sie auf der Seite **Dienstkonten** des Installations-Assistenten angeben, als Konto für den Berichtsserverdienst verwendet.  
   
 > [!IMPORTANT]  
 > Obwohl der Berichtsserver-Webdienst und [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] separate [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Anwendungen sind, werden sie unter einer einzelnen Dienstarchitektur innerhalb der gleichen Berichtsserver-Prozessidentität ausgeführt.
@@ -74,8 +74,8 @@ ms.locfileid: "91935447"
 |-------------|-----------------|  
 |Domänenbenutzerkonten|Wenn Sie über ein Windows-Domänenbenutzerkonto verfügen, das mindestens die für Berichtsservervorgänge erforderlichen Berechtigungen aufweist, sollten Sie dieses verwenden.<br /><br /> Ein Domänenbenutzerkonto wird empfohlen, da es den Berichtsserverdienst von anderen Anwendungen trennt. Wenn Sie mehrere Anwendungen unter einem freigegebenen Konto wie Netzwerkdienst ausführen, steigt das Risiko, dass böswillige Benutzer die Kontrolle über den Berichtsserver erlangen, da sich eine Sicherheitsverletzung in einer Anwendung leicht auf alle anderen Anwendungen auswirken kann, die unter diesem Konto ausgeführt werden.<br /><br /> Wenn Sie ein Domänenbenutzerkonto verwenden, müssen Sie das Kennwort regelmäßig ändern, wenn Ihre Organisation eine Richtlinie für das Ablaufen von Kennwörtern verwendet. Möglicherweise müssen Sie auch den Dienst für das Benutzerkonto registrieren. Weitere Informationen finden Sie unter [Registrieren eines Dienstprinzipalnamens (SPN) für einen Berichtsserver](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).<br /><br /> Verwenden Sie kein lokales Windows-Benutzerkonto. In der Regel verfügen lokale Konten nicht über ausreichende Berechtigungen für den Zugriff auf Ressourcen auf anderen Computern. Weitere Informationen über Einschränkungen der Berichtsserverfunktion bei Verwendung lokaler Konten finden Sie unter [Überlegungen zur Verwendung lokaler Konten](#localaccounts) in diesem Thema.| 
 | **Gruppenverwaltetes Dienstkonto (gMSA)** | Eigenständige verwaltete Dienstkonten wurden in Windows Server 2008 R2 und unter Windows 7 eingeführt. Es handelt sich dabei um verwaltete Domänenkonten, die eine automatische Kennwortverwaltung und vereinfachte SPN-Verwaltung bieten, einschließlich der Delegierung der Verwaltung an andere Administratoren. Ein **gruppenverwaltetes Dienstkonto** bietet dieselben Funktionen innerhalb der Domäne. Diese Funktionen werden jedoch auch auf mehrere Server ausgeweitet. |
-|**Virtuelles Dienstkonto**|Das**virtuelle Dienstkonto** repräsentiert den Windows-Dienst. Dies ist ein integriertes Konto mit Minimalprivilegien, das über Berechtigungen für die Netzwerkanmeldung verfügt. Dieses Konto wird empfohlen, wenn kein Domänenbenutzerkonto verfügbar ist oder wenn Sie mögliche Dienstausfälle aufgrund von Richtlinien zum Ablauf von Kennwörtern vermeiden möchten.|  
-|**Netzwerkdienst**|Ein **Netzwerkdienst** ist ein integriertes Konto mit Minimalprivilegien, das über Berechtigungen für die Netzwerkanmeldung verfügt. <br /><br /> Versuchen Sie, die Anzahl der Dienste, die unter einem Konto ausgeführt werden, so gering wie möglich zu halten, wenn Sie **Netzwerkdienst**auswählen. Eine Sicherheitsverletzung bei einer Anwendung gefährdet die Sicherheit aller anderen Anwendungen, die unter diesem Konto ausgeführt werden.|  
+|**Virtuelles Dienstkonto**|Das **virtuelle Dienstkonto** repräsentiert den Windows-Dienst. Dies ist ein integriertes Konto mit Minimalprivilegien, das über Berechtigungen für die Netzwerkanmeldung verfügt. Dieses Konto wird empfohlen, wenn kein Domänenbenutzerkonto verfügbar ist oder wenn Sie mögliche Dienstausfälle aufgrund von Richtlinien zum Ablauf von Kennwörtern vermeiden möchten.|  
+|**Netzwerkdienst**|Ein **Netzwerkdienst** ist ein integriertes Konto mit Minimalprivilegien, das über Berechtigungen für die Netzwerkanmeldung verfügt. <br /><br /> Versuchen Sie, die Anzahl der Dienste, die unter einem Konto ausgeführt werden, so gering wie möglich zu halten, wenn Sie **Netzwerkdienst** auswählen. Eine Sicherheitsverletzung bei einer Anwendung gefährdet die Sicherheit aller anderen Anwendungen, die unter diesem Konto ausgeführt werden.|  
 |**Lokaler Dienst**|**Lokaler Dienst** ist ein integriertes Konto, das einem authentifizierten lokalen Windows-Benutzerkonto entspricht. Bei Diensten, die unter dem Konto **Lokaler Dienst** ausgeführt werden, erfolgt der Zugriff auf Netzwerkressourcen als NULL-Sitzung ohne Anmeldeinformationen. Dieses Konto ist nicht für Bereitstellungsszenarien im Intranet geeignet, bei denen eine Verbindung zwischen dem Berichtsserver und einer Remoteberichtsserver-Datenbank oder einem Netzwerkdomänencontroller hergestellt werden muss, um einen Benutzer vor dem Öffnen eines Berichts oder vor dem Verarbeiten eines Abonnements zu authentifizieren.|  
 |**Lokales System**|**Lokales System** ist ein Konto mit weit reichenden Berechtigungen, das für die Ausführung eines Berichtsservers nicht erforderlich ist. Verwenden Sie dieses Konto nicht für Berichtsserverinstallationen. Wählen Sie stattdessen ein Domänenkonto oder einen **Netzwerkdienst** aus.|  
   

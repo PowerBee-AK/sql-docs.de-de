@@ -12,12 +12,12 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 12e392d083b9b47e3330d8a95b6c2d199a146cea
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: d5e02aa025d65fd7f3db6d1f5bd8f43e44566ac9
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809916"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552663"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Aktivieren der erforderlichen Komponenten für FileTable
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -146,9 +146,9 @@ GO
   
 -   Wenn die Datenbank FileTables enthält, können Sie den **DIRECTORY_NAME** nicht auf einen NULL-Wert zurücksetzen.  
   
--   Wenn Sie eine Datenbank anfügen oder wiederherstellen, schlägt der Vorgang fehl, wenn die neue Datenbank über einen Wert für **DIRECTORY_NAME** verfügt, der bereits in der Zielinstanz vorhanden ist. Geben Sie einen eindeutigen Wert für **DIRECTORY_NAME** an, wenn Sie **CREATE DATABASE FOR ATTACH** oder **RESTORE DATABASE**aufrufen.  
+-   Wenn Sie eine Datenbank anfügen oder wiederherstellen, schlägt der Vorgang fehl, wenn die neue Datenbank über einen Wert für **DIRECTORY_NAME** verfügt, der bereits in der Zielinstanz vorhanden ist. Geben Sie einen eindeutigen Wert für **DIRECTORY_NAME** an, wenn Sie **CREATE DATABASE FOR ATTACH** oder **RESTORE DATABASE** aufrufen.  
   
--   Wenn Sie eine vorhandene Datenbank auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisieren, ist der Wert von **DIRECTORY_NAME** NULL.  
+-   Wenn Sie eine vorhandene Datenbank aktualisieren, ist der Wert von **DIRECTORY_NAME** NULL.  
   
 -   Wenn Sie nicht transaktionalen Zugriff auf Datenbankebene aktivieren oder deaktivieren, wird nicht überprüft, ob der Verzeichnisname angegeben wurde oder ob er eindeutig ist.  
   

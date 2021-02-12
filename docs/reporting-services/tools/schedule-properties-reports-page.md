@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ad2720898bc340d71644356b0ced7a4b8d647a5a
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 132aa67a1542e0a175fb08aed4c9a9a798c779d6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988122"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077331"
 ---
 # <a name="schedule-properties-reports-page"></a>Zeitplaneigenschaften (Registerkarte Berichte)
   Verwenden Sie die [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Seite mit den Zeitplaneigenschaften in [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] , um eine Liste aller Berichte anzuzeigen, die den bestimmten freigegebenen Zeitplan verwenden. Zeitpläne können zum Aktualisieren von Berichtsmomentaufnahmen, zum Generieren des Berichtsverlaufs, zum Auslösen eines Abonnements oder zum Kennzeichnen einer zwischengespeicherten Kopie des Berichts als abgelaufen verwendet werden. Wenn Sie herausfinden möchten, wie der Zeitplan verwendet wird, dann zeigen Sie die Eigenschaften- und Abonnementinformationen des Berichts an.  
@@ -27,7 +27,7 @@ ms.locfileid: "91988122"
  1. Starten Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
  2. Stellen Sie eine Verbindung mit einem Berichtsserver her.
  3. Öffnen Sie den Ordner **Freigegebene Zeitpläne** .
- 4. Klicken Sie mit der rechten Maustaste auf einen freigegebenen Zeitplan, und wählen Sie **Eigenschaften**aus.
+ 4. Klicken Sie mit der rechten Maustaste auf einen freigegebenen Zeitplan, und wählen Sie **Eigenschaften** aus.
  5. Klicken Sie auf **Berichte**.  
   
   Sie können freigegebene Zeitpläne auch im **-Webportal über** Siteeinstellungen [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] verwalten.

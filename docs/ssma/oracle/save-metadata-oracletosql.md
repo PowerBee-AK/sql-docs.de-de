@@ -11,12 +11,12 @@ ms.assetid: 9e49c25f-9216-43f4-8e99-2eaab298e215
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: ceac171c2eed43e1ee0c1feff2db9a3b4f21e7e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 51226304bfd8201a841a38a2c95b1c4973225ffb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492323"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067635"
 ---
 # <a name="save-metadata--oracletosql"></a>Speichern von Metadaten (OracleToSQL)
 Im Dialogfeld **Metadaten speichern** werden Sie aufgefordert, Metadaten vor dem Speichern in das SSMA-Projekt zu laden. Auf diese Weise können Sie eine komplette Projektdatei verwenden, die Sie offline verwenden und an andere Personen wie z. b. technische Supportmitarbeiter senden können.  
@@ -35,12 +35,12 @@ SSMA lädt bei Bedarf Metadaten in das Projekt. Metadaten werden automatisch gel
 **Alles markieren**  
 Wählt alle aufgelisteten Datenbanken aus.  
   
-**Clear**  
+**Clear** (Deaktiviert)  
 Löscht das Kontrollkästchen für alle Datenbanken mit fehlenden Metadaten. Sie können das Kontrollkästchen nicht deaktivieren, wenn eine Metadaten geladen wurde.  
   
 **Speichern**  
 Speichert das Projekt und lädt Metadaten für ausgewählte Datenbanken, die über fehlende Metadaten verfügen.  
   
-**Abbrechen**  
+**Kündigen**  
 Bricht den Speichervorgang ab. Fehlende Metadaten werden nicht in das Projekt geladen.  
   

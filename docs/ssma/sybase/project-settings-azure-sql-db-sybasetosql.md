@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 39a099eb243d767d18402bcd6baeb6280dbeaad4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b532fddbc5eda07ab38aedcb806347846cc0ac59
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418276"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068765"
 ---
 # <a name="project-settings-azure-sql-database--sybasetosql"></a>Projekteinstellungen (Azure SQL-Datenbank) (sybasedesql)
 Mit den Azure SQL-Datenbankprojekt Einstellungen können Sie das Azure SQL-Daten Bank Suffix konfigurieren, das im Verbindungs Dialogfeld hinzugefügt werden soll, und die Implementierung des Takt Mechanismus in der Azure SQL-Datenbankverbindung  
   
 Der Bereich Azure SQL-Datenbank ist in den Dialogfeldern **Projekteinstellungen** und **Standard Projekteinstellungen** verfügbar.  
   
--   Verwenden Sie das Dialogfeld Projekteinstellungen, um Konfigurationsoptionen für das aktuelle Projekt festzulegen. Um **auf die Azure** SQL-Datenbankeinstellungen zuzugreifen, wählen Sie im Menü Extras die Option **Projekteinstellungen**aus, klicken Sie unten im linken Bereich auf **Allgemein** , und wählen Sie dann **Azure SQL-Datenbank**aus.  
+-   Verwenden Sie das Dialogfeld Projekteinstellungen, um Konfigurationsoptionen für das aktuelle Projekt festzulegen. Um **auf die Azure** SQL-Datenbankeinstellungen zuzugreifen, wählen Sie im Menü Extras die Option **Projekteinstellungen** aus, klicken Sie unten im linken Bereich auf **Allgemein** , und wählen Sie dann **Azure SQL-Datenbank** aus.  
   
--   Verwenden Sie das Dialogfeld Standard Projekteinstellungen, um Konfigurationsoptionen für alle Projekte festzulegen. Um auf die Azure SQL-Datenbankeinstellungen zuzugreifen, wählen Sie **im Menü Extras** die Option **defaultproject Settings**aus, klicken Sie unten im linken Bereich auf **Allgemein** , und wählen Sie dann **Azure SQL-Datenbank**aus.  
+-   Verwenden Sie das Dialogfeld Standard Projekteinstellungen, um Konfigurationsoptionen für alle Projekte festzulegen. Um auf die Azure SQL-Datenbankeinstellungen zuzugreifen, wählen Sie **im Menü Extras** die Option **defaultproject Settings** aus, klicken Sie unten im linken Bereich auf **Allgemein** , und wählen Sie dann **Azure SQL-Datenbank** aus.  
   
 ## <a name="connectivity"></a>Konnektivität  
 **Taktintervall**  

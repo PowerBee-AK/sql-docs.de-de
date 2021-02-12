@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e183c885cc08f699926dc88838d8650be55b400b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 9847b7a709fe64f3fcb7fca92ce1f8a4003843e5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987876"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070255"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Erste Schritte mit SSMA für MySQL (MySqlToSql)
 Mit SQL Server Migration Assistant (SSMA) für MySQL können Sie schnell MySQL-Datenbankschemas in SQL Server-oder Azure SQL-Datenbankschemas konvertieren, die resultierenden Schemas in SQL Server oder Azure SQL-Datenbank hochladen und Daten aus MySQL in SQL Server oder Azure SQL-Datenbank migrieren.  
@@ -76,7 +76,7 @@ Mit diesem metadatenexplorer können Sie konvertierte MySQL-Datenbankobjekte aus
 Weitere Informationen finden Sie unter [Synchronisierung (MySQL zu SQL Server/Azure SQL-Datenbank)](./loading-converted-database-objects-into-sql-server-mysqltosql.md) .  
   
 ### <a name="metadata"></a>Metadaten  
-Auf der rechten Seite jedes metadatenexplorers sind Registerkarten, die das ausgewählte Objekt beschreiben. Wenn Sie z. b. eine Tabelle im MySQL-metadatenexplorer auswählen, werden neun Registerkarten angezeigt: **Tabelle**, **SQL**, **Typzuordnung**, **Daten**, **Einstellungen**, Zeichen **Satz Zuordnung**, **SQL-Modi**, **Eigenschaften**und **Bericht**. Die Registerkarte **Bericht** enthält nur Informationen, nachdem Sie einen Bericht erstellt haben, der das ausgewählte Objekt enthält. Wenn Sie eine Tabelle in SQL Server Metadaten-Explorer auswählen, werden drei Registerkarten angezeigt: **Table**, **SQL** und **Data**.  
+Auf der rechten Seite jedes metadatenexplorers sind Registerkarten, die das ausgewählte Objekt beschreiben. Wenn Sie z. b. eine Tabelle im MySQL-metadatenexplorer auswählen, werden neun Registerkarten angezeigt: **Tabelle**, **SQL**, **Typzuordnung**, **Daten**, **Einstellungen**, Zeichen **Satz Zuordnung**, **SQL-Modi**, **Eigenschaften** und **Bericht**. Die Registerkarte **Bericht** enthält nur Informationen, nachdem Sie einen Bericht erstellt haben, der das ausgewählte Objekt enthält. Wenn Sie eine Tabelle in SQL Server Metadaten-Explorer auswählen, werden drei Registerkarten angezeigt: **Table**, **SQL** und **Data**.  
   
 Die meisten metadateneinstellungen sind schreibgeschützt. Sie können jedoch die folgenden Metadaten ändern:  
   
@@ -109,10 +109,10 @@ In der folgenden Tabelle sind die SSMA-Menüs aufgeführt.
 |||  
 |-|-|  
 |**Menü**|**Beschreibung**|  
-|**File**|Enthält Befehle für das Arbeiten mit Projekten, das Herstellen einer Verbindung mit MySQL und das Herstellen einer Verbindung mit SQL Server oder Azure SQL-Datenbank.|  
+|**Datei**|Enthält Befehle für das Arbeiten mit Projekten, das Herstellen einer Verbindung mit MySQL und das Herstellen einer Verbindung mit SQL Server oder Azure SQL-Datenbank.|  
 |**Bearbeiten**|Enthält Befehle zum Suchen und arbeiten mit Text auf den Detailseiten. Um das Dialogfeld **Lesezeichen verwalten** zu öffnen, klicken Sie im Menü Bearbeiten auf Lesezeichen verwalten. Im Dialogfeld wird eine Liste vorhandener Lesezeichen angezeigt. Sie können die Schaltflächen auf der rechten Seite des Dialog Felds verwenden, um die Lesezeichen zu verwalten.|  
-|**Ansicht**|Enthält den Befehl Metadaten-Explorer **Synchronisieren** . Damit werden die Objekte zwischen dem MySQL-metadatenexplorer und SQL Server oder dem Metadaten-Explorer von Azure SQL-Datenbank synchronisiert. Enthält auch Befehle zum Anzeigen und Ausblenden der **Ausgabe** -und **Fehlerliste** Bereiche sowie ein Options **Layout** , das mit den Layouts verwaltet werden soll.|  
-|**Tools**|Enthält Befehle zum Erstellen von Berichten, zum Konvertieren von Schemas, zum Aktualisieren von Datenbanken, zum Migrieren von Objekten und Daten und zum Speichern als Skript. Bietet auch Zugriff auf die Dialogfelder " **globale Einstellungen", "Standard Projekteinstellungen** " und " **Projekteinstellungen** ".|  
+|**Anzeigen**|Enthält den Befehl Metadaten-Explorer **Synchronisieren** . Damit werden die Objekte zwischen dem MySQL-metadatenexplorer und SQL Server oder dem Metadaten-Explorer von Azure SQL-Datenbank synchronisiert. Enthält auch Befehle zum Anzeigen und Ausblenden der **Ausgabe** -und **Fehlerliste** Bereiche sowie ein Options **Layout** , das mit den Layouts verwaltet werden soll.|  
+|**Extras**|Enthält Befehle zum Erstellen von Berichten, zum Konvertieren von Schemas, zum Aktualisieren von Datenbanken, zum Migrieren von Objekten und Daten und zum Speichern als Skript. Bietet auch Zugriff auf die Dialogfelder " **globale Einstellungen", "Standard Projekteinstellungen** " und " **Projekteinstellungen** ".|  
 |**Hilfe**|Bietet Zugriff **auf die** SSMA-Hilfe und das Dialogfeld Info.|  
   
 ### <a name="output-pane-and-error-list-pane"></a>Ausgabebereich und Fehlerliste Bereich  

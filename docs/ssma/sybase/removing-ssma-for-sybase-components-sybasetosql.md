@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: aec09593-17d9-4ec2-ac56-3cd8851406fd
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4c4e0f94f5672c96972a3cf3f3d35255dce91208
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02a782e583463e5a986e3c7c1a42152fc27b14cd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468828"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069943"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>Entfernen von SSMA-Komponenten für Sybase (SybaseToSQL)
 Wenn Sie die Migration von Datenbanken von Sybase Adaptive Server Enterprise (ASE) zu abgeschlossen haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie SSMA-Komponenten deinstallieren. Sie können die Client Komponenten jederzeit deinstallieren. Sie sollten das Erweiterungspaket jedoch nicht von deinstallieren, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es sei denn, Sie sind sicher, dass die migrierten Datenbanken nicht mehr Funktionen im **ssma_syb** Schema der **sysdb** -Datenbank verwenden.  
   
 ## <a name="uninstalling-the-ssma-for-sybase-client"></a>Deinstallieren von SSMA für den Sybase-Client  
-Sie können SSMA **mithilfe der**Option Software deinstallieren.  
+Sie können SSMA **mithilfe der** Option Software deinstallieren.  
   
 **So deinstallieren Sie SSMA**  
   
@@ -32,7 +32,7 @@ Sie können SSMA **mithilfe der**Option Software deinstallieren.
 3.  Um zu bestätigen, dass Sie SSMA deinstallieren möchten, klicken Sie auf **Ja**.  
   
 ## <a name="uninstalling-the-extension-pack"></a>Deinstallieren des Erweiterungspakets  
-Wenn Sie sicher sind, dass die migrierten Datenbanken keine Objekte im **sysdb. ssma_syb** -Schema verwenden, können Sie das Erweiterungspaket **mithilfe der**Option "Software" entfernen.  
+Wenn Sie sicher sind, dass die migrierten Datenbanken keine Objekte im **sysdb.ssma_syb** Schema verwenden, können Sie das Erweiterungspaket mithilfe der Option "Software **" entfernen.**  
   
 So deinstallieren Sie das Erweiterungspaket  
   
@@ -52,9 +52,9 @@ So deinstallieren Sie das Erweiterungspaket
   
 7.  Klicken Sie auf der Seite Fertigstellen **auf beenden.**  
   
-Nachdem Sie deinstalliert haben, können Sie überprüfen, ob das **sysdb. ssma_syb** -Schema und möglicherweise die gesamte **sysdb** -Datenbank mithilfe von entfernt wurde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Wenn Sie jedoch andere SSMA-Produkte verwenden, verwenden Sie auch die **sysdb** -Datenbank. Wenn die Datenbank vorhanden ist und Sie sicher sind, dass keine anderen Datenbanken auf Objekte in dieser Datenbank verweisen, können Sie die Datenbank trennen.  
+Nachdem Sie deinstalliert haben, können Sie überprüfen, ob das **sysdb.ssma_syb** Schema und möglicherweise die gesamte **sysdb** -Datenbank mithilfe von entfernt wurde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Wenn Sie jedoch andere SSMA-Produkte verwenden, verwenden Sie auch die **sysdb** -Datenbank. Wenn die Datenbank vorhanden ist und Sie sicher sind, dass keine anderen Datenbanken auf Objekte in dieser Datenbank verweisen, können Sie die Datenbank trennen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Installieren von SSMA für den Sybase-Client &#40;sybasedesql&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
 [Installieren von SSMA-Komponenten auf SQL Server &#40;sybasedesql-&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
   

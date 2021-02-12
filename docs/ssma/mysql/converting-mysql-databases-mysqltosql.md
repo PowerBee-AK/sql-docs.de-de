@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cd6dcfc6613b1290fb0798a29a5302b7ede34b43
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 61298bb7e2c65e85959b52ab3750dc49a5105504
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936119"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068999"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>Konvertieren von MySQL-Datenbanken (MySqlToSql)
 Nachdem Sie eine Verbindung mit MySQL hergestellt, eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure hergestellt und Projekt-und Daten Zustellungs Optionen festgelegt haben, können Sie MySQL-Datenbankobjekte in- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbankobjekte konvertieren.  
@@ -39,10 +39,10 @@ In der folgenden Tabelle werden die konvertierten MySQL-Objekte und die resultie
 |Datenbankkonvertierung|Datenbanken als MySQL-Objekte werden nicht direkt von SSMA für MySQL konvertiert. MySQL-Datenbanken werden eher wie Schema Namen behandelt, und alle physischen Parameter gehen bei der Konvertierung verloren. SSMA für MySQL verwendet [die Zuordnung von MySQL-Datenbanken zu SQL Server Schemas &#40;mysqltosql&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md) , um Objekte aus einer MySQL-Datenbank einem geeigneten SQL Server Database/Schema-Paar zuzuordnen.|  
 |Umwandlungs Konvertierung|**SSMA erstellt Trigger auf der Grundlage der folgenden Regeln:**<br /><br />Vor dem Konvertieren von Triggern in anstelle von T-SQL-Triggern<br /><br />AFTER-Trigger werden in nach T-SQL-Triggern mit oder ohne Iterationen pro Zeilen konvertiert.|  
 |Konvertierung anzeigen|SSMA erstellt Sichten mit abhängigen Objekten.|  
-|Anweisungs Konvertierung|-Jedes SQL-Anweisungsobjekt kann eine einzelne MySQL-Anweisung enthalten (z. b. DDL-, DML-und andere Typen von Anweisungen) oder BEGIN... Endblock.<br />-   **Multistatement-Konvertierung: begin... **Die SQL-Anweisung für die End-Block Konvertierung kann auch einen Anfang enthalten... Beenden Sie den Block wie einen in der Prozedur, der Funktion oder der Triggerdefinition. Diese Blöcke sollten auf die gleiche Weise konvertiert werden, wie Sie für die einzelnen MySQL-Anweisungs Objekte konvertiert werden.|  
+|Anweisungs Konvertierung|-Jedes SQL-Anweisungsobjekt kann eine einzelne MySQL-Anweisung enthalten (z. b. DDL-, DML-und andere Typen von Anweisungen) oder BEGIN... Endblock.<br />-   **Multistatement-Konvertierung: begin...** Die SQL-Anweisung für die End-Block Konvertierung kann auch einen Anfang enthalten... Beenden Sie den Block wie einen in der Prozedur, der Funktion oder der Triggerdefinition. Diese Blöcke sollten auf die gleiche Weise konvertiert werden, wie Sie für die einzelnen MySQL-Anweisungs Objekte konvertiert werden.|  
   
 ## <a name="converting-mysql-database-objects"></a>MySQL-Datenbankobjekte werden umgerechnet  
-Um MySQL-Datenbankobjekte zu konvertieren, wählen Sie zuerst die Objekte aus, die Sie konvertieren möchten, und lassen Sie die Konvertierung von SSMA durchführen. Wenn Sie während der Konvertierung Ausgabemeldungen anzeigen möchten, wählen Sie im Menü **Ansicht** die Option **Ausgabe**aus.  
+Um MySQL-Datenbankobjekte zu konvertieren, wählen Sie zuerst die Objekte aus, die Sie konvertieren möchten, und lassen Sie die Konvertierung von SSMA durchführen. Wenn Sie während der Konvertierung Ausgabemeldungen anzeigen möchten, wählen Sie im Menü **Ansicht** die Option **Ausgabe** aus.  
   
 **So konvertieren Sie MySQL-Objekte in SQL Server-oder SQL Azure-Syntax**  
   
@@ -58,16 +58,16 @@ Um MySQL-Datenbankobjekte zu konvertieren, wählen Sie zuerst die Objekte aus, d
   
     -   Wenn Sie einzelne Objekte konvertieren oder weglassen möchten, erweitern Sie den Ordner Category, und aktivieren oder deaktivieren Sie das Kontrollkästchen neben dem Objekt.  
   
-3.  Zum Konvertieren aller ausgewählten Objekte klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Schema konvertieren**aus.  
+3.  Zum Konvertieren aller ausgewählten Objekte klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Schema konvertieren** aus.  
   
-    Sie können auch einzelne Objekte oder Kategorien von Objekten konvertieren, indem Sie mit der rechten Maustaste auf das Objekt oder seinen übergeordneten Ordner klicken und dann **Schema konvertieren**auswählen.  
+    Sie können auch einzelne Objekte oder Kategorien von Objekten konvertieren, indem Sie mit der rechten Maustaste auf das Objekt oder seinen übergeordneten Ordner klicken und dann **Schema konvertieren** auswählen.  
   
 ## <a name="viewing-conversion-problems"></a>Anzeigen von Konvertierungs Problemen  
 Einige MySQL-Objekte werden möglicherweise nicht konvertiert. Sie können die Erfolgsraten der Konvertierung ermitteln, indem Sie den Zusammenfassungs Bericht für die Zusammenfassung anzeigen  
   
 **So zeigen Sie einen Zusammenfassungs Bericht an**  
   
-1.  Wählen Sie im MySQL-metadatenexplorer **Datenbanken**aus.  
+1.  Wählen Sie im MySQL-metadatenexplorer **Datenbanken** aus.  
   
 2.  Wählen Sie im rechten Bereich die Registerkarte **Bericht** aus.  
   
@@ -91,7 +91,7 @@ Bei Objekten, die nicht erfolgreich konvertiert werden konnten, können Sie die 
   
 5.  Klicken Sie im rechten Bereich auf die Registerkarte **Bericht** .  
   
-6.  Am oberen Rand der Registerkarte **Bericht** befindet sich eine Dropdown Liste. Wenn in der Liste **Statistiken**angezeigt werden, ändern Sie die Auswahl in **Quelle**.  
+6.  Am oberen Rand der Registerkarte **Bericht** befindet sich eine Dropdown Liste. Wenn in der Liste **Statistiken** angezeigt werden, ändern Sie die Auswahl in **Quelle**.  
   
     SSMA zeigt den Quellcode und mehrere Schaltflächen direkt oberhalb des Codes an.  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7782a8853e1b17ecba0950e647d1335758b998af
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 13b2accd6b4dc2ba2bbd8c9c1e6db312650d2d62
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935279"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077621"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Zuordnen von MySQL- und SQL Server-Zeichensätzen (MySqlToSql)
 Der Zeichensatz (CharSet) kann für MySQL-Zeichen Datentypen, Ausdrücke und Literale angegeben werden.  
@@ -103,7 +103,7 @@ Die Zeichensatz Zuordnung variiert auf verschiedenen Knoten Ebenen, nämlich:
     |utf8|UTF-8-Unicode|Nchar/nvarchar (Standard)|  
     |ucs2|UCS-2 Unicode|Nchar/nvarchar (Standard)|  
     |cp866|DOS Russisch|Char/varchar (Standard)|  
-    |keybcs2|DOS Kamenicky, Tschechisch (slowakisch)|Char/varchar (Standard)|  
+    |keybcs2|DOS Kamenicky-Czech-Slovak|Char/varchar (Standard)|  
     |macce|Mac Central europäisch|Char/varchar (Standard)|  
     |MacRoman|Mac West europäisch|Char/varchar (Standard)|  
     |cp852|DOS Central europäisch|Char/varchar (Standard)|  

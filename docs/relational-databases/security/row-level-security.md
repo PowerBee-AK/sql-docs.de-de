@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 828218dcebe5f2e5ab6c0759083f497876dae6b2
-ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.openlocfilehash: 739501f78f313f8fbff20d71cc63376a8da27343
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98813528"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552668"
 ---
 # <a name="row-level-security"></a>Sicherheit auf Zeilenebene
 
@@ -302,7 +302,7 @@ In diesem kurzen Beispiel werden drei Benutzer und eine externe Tabelle mit sech
 ### <a name="prerequisites"></a>Voraussetzungen
 
 1. Sie besitzen einen dedizierten SQL-Pool. Siehe [Erstellen eines dedizierten SQL-Pools](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal).
-1. Der Server, auf dem der dedizierte SQL-Pool gehostet wird, muss bei AAD registriert sein, und Sie müssen über ein Azure-Speicherkonto mit den Berechtigungen eines Speicherblogmitwirkenden verfügen. Führen Sie [die hier beschriebenen Schritte](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps) aus.
+1. Der Server, auf dem der dedizierte SQL-Pool gehostet wird, muss bei AAD registriert sein, und Sie müssen über ein Azure-Speicherkonto mit den Berechtigungen eines Speicherblogdaten-Mitwirkenden verfügen. Führen Sie [die hier beschriebenen Schritte](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps) aus.
 1. Erstellen Sie ein Dateisystem fürIhr Azure Storage-Konto. Zeigen Sie Ihr Speicherkonto mit Storage-Explorer an. Klicken Sie mit der rechten Maustaste auf Container, und wählen Sie *Dateisystem erstellen* aus.  
 
 Sobald Sie die Voraussetzungen eingerichtet haben, erstellen Sie drei Benutzerkonten, anhand derer unterschiedliche Zugriffsmöglichkeiten gezeigt werden.

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6b23f80859a572ea8bb3f96a0460d0f5eba0183a
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 6f0e165c04e303a5cb65046b013df8814bfbf515
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410956"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100038365"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Vorgehensweise: Abrufen von Eingabe-/Ausgabeparametern mit dem SQLSRV-Treiber
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "87410956"
 In diesem Thema wird veranschaulicht, wie eine gespeicherten Prozedur aufgerufen wird, in der ein Parameter als Ausgabeparameter definiert wurde. Beim Abrufen eines Ausgabe- oder Eingabe-/Ausgabeparameters müssen alle von der gespeicherten Prozedur zurückgegebenen Ergebnisse verarbeitet werden, bevor auf den Wert des zurückgegebenen Parameters zugegriffen werden kann.  
   
 > [!NOTE]  
->  Variablen, die auf **NULL**, **DateTime**oder Streamtypen aktualisiert oder initialisiert werden, können nicht als Ausgabeparameter verwendet werden.  
+>  Variablen, die auf **NULL**, **DateTime** oder Streamtypen aktualisiert oder initialisiert werden, können nicht als Ausgabeparameter verwendet werden.  
   
 Es kann vorkommen, dass Daten abgeschnitten werden, wenn Streamtypen wie z. B. SQLSRV_SQLTYPE_VARCHAR('max') als Ausgabeparameter verwendet werden. Streamtypen werden nicht als Ausgabeparameter unterstützt. Bei nicht-Streamtypen kann es vorkommen, dass Daten abgeschnitten werden, wenn die Länge der Ausgabeparameter nicht angegeben wird oder wenn die angegebene Länge nicht groß genug für den Ausgabeparameter ist.  
   
@@ -33,7 +33,7 @@ Es kann vorkommen, dass Daten abgeschnitten werden, wenn Streamtypen wie z. B. 
 Das folgende Beispiel ruft eine gespeicherte Prozedur auf, die die Jahr-bis-heute-Verkäufe eines bestimmten Mitarbeiters zurückgibt. Die PHP-Variable *$lastName* ist ein Eingabeparameter und *$salesYTD* ist ein Ausgabeparameter.  
   
 > [!NOTE]  
-> Initialisieren von *$salesYTD* auf 0.0 setzt den zurückgegebenen PHPTYPE auf **float**zurück. Um Datentypintegrität sicherzustellen, sollten Ausgabeparameter vor dem Aufruf der gespeicherten Prozedur initialisiert werden, oder der gewünschte PHPTYPE angegeben werden. Informationen zum Angeben des PHPTYPE finden Sie unter [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+> Initialisieren von *$salesYTD* auf 0.0 setzt den zurückgegebenen PHPTYPE auf **float** zurück. Um Datentypintegrität sicherzustellen, sollten Ausgabeparameter vor dem Aufruf der gespeicherten Prozedur initialisiert werden, oder der gewünschte PHPTYPE angegeben werden. Informationen zum Angeben des PHPTYPE finden Sie unter [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 Da nur ein Ergebnis von der gespeicherten Prozedur zurückgegeben wird, enthält *$salesYTD* sofort den zurückgegebenen Wert des Ausgabeparameters, nachdem die gespeicherte Prozedur ausgeführt wurde.  
   

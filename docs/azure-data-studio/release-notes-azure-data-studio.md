@@ -9,18 +9,18 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 1/22/2021
-ms.openlocfilehash: e85b2edca08cbb2f30fa4a2ce865ebe77ee7cb24
-ms.sourcegitcommit: e4b6357756a9c691b0441208a0058f7b8f3bea51
+ms.openlocfilehash: 2325f5744c58ee047cde096b3bf4c96174a3d92c
+ms.sourcegitcommit: 6f4fb9cfd0cad06127a6328adc745e2ba7c191d1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2021
-ms.locfileid: "99510321"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99570404"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Versionshinweise für Azure Data Studio
 
 **[Neuestes Release herunterladen und installieren](./download-azure-data-studio.md)**
 
-## <a name="december-2020-hotfix"></a>Dezember 2020 (Hotfix)
+## <a name="january-2021-hotfix"></a>Januar 2021 (Hotfix)
 
 22. Januar 2021 &nbsp; / &nbsp; Version: 1.25.2
 
