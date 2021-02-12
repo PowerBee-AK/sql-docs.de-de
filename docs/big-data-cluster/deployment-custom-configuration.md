@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cef348aee2b917b0a6afd61d30b5e4f7fa7da665
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: d983b4d0d7cfb02a587675984fdc42c54bf9f0ec
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257200"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100047200"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Konfigurieren von Bereitstellungseinstellungen für Clusterressourcen und -dienste
 
@@ -678,7 +678,7 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 ## <a name="turn-pods-and-nodes-metrics-collection-onoff"></a>Aktivieren und Deaktivieren der Sammlung von Pod- und Knotenmetriken
 
 SQL Server 2019 CU5 hat zwei Funktionsparameter eingeführt, um die Sammlung von Pod- und Knotenmetriken zu steuern. Wenn Sie Ihre Kubernetes-Infrastruktur mithilfe anderer Lösungen überwachen, können Sie die integrierte Metriksammlung für Pods und Hostknoten deaktivieren, indem Sie *allowNodeMetricsCollection* und *allowPodMetricsCollection* in der Bereitstellungskonfigurationsdatei *control.json* auf *False* festlegen. Bei OpenShift-Umgebungen werden diese Einstellungen in den integrierten Bereitstellungsprofilen standardmäßig auf *False* festgelegt, da für das Sammeln von Pod- und Knotenmetriken von Berechtigungen abhängige Funktionen erforderlich sind.
-Führen Sie diesen Befehl aus, um die Werte dieser Einstellungen in Ihrer benutzerdefinierten Konfigurationsdatei mithilfe der *azdata* -CLI zu aktualisieren:
+Führen Sie diesen Befehl aus, um die Werte dieser Einstellungen in Ihrer benutzerdefinierten Konfigurationsdatei mithilfe der *azdata*-CLI zu aktualisieren:
 
 ```bash
  azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowNodeMetricsCollection=false"

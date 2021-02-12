@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 875c5944a0b74c7140843388da1e783e9f2ba5b8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4a5c5747dad97cc54859cb9b40b966cec66970fc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726757"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058400"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>Unterstützung für hohe Verfügbarkeit bei Notfallwiederherstellung
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -63,7 +63,7 @@ try {
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Aktualisieren zur Verwendung von Multisubnetzclustern aus Datenbankspiegelung  
 Ein Verbindungsfehler tritt auf, wenn die Verbindungsschlüsselwörter **MultiSubnetFailover** und **Failover_Partner** in der Verbindungszeichenfolge vorhanden sind. Es tritt auch ein Fehler auf, wenn **MultiSubnetFailover** verwendet wird und SQL Server eine Failoverpartnerantwort zurückgibt, die angibt, dass es Teil eines Datenbankspiegelungspaars ist.  
   
-Wenn Sie ein Upgrade einer PHP-Anwendung ausführen, die derzeit die Datenbankspiegelung in einem Szenario mit mehreren Subnetzen verwendet, entfernen Sie die Verbindungseigenschaft **Failover_Partner**, und ersetzen Sie sie durch **MultiSubnetFailover**, festgelegt auf **True**. Ersetzen Sie außerdem den Servernamen in der Verbindungszeichenfolge durch einen Verfügbarkeitsgruppenlistener. Wenn eine Verbindungszeichenfolge **Failover_Partner** und **MultiSubnetFailover=true**verwendet, generiert der Treiber einen Fehler. Wenn eine Verbindungszeichenfolge jedoch **Failover_Partner** und **MultiSubnetFailover=false** (oder **ApplicationIntent=ReadWrite**) verwendet, verwendet die Anwendung Datenbankspiegelung.  
+Wenn Sie ein Upgrade einer PHP-Anwendung ausführen, die derzeit die Datenbankspiegelung in einem Szenario mit mehreren Subnetzen verwendet, entfernen Sie die Verbindungseigenschaft **Failover_Partner**, und ersetzen Sie sie durch **MultiSubnetFailover**, festgelegt auf **True**. Ersetzen Sie außerdem den Servernamen in der Verbindungszeichenfolge durch einen Verfügbarkeitsgruppenlistener. Wenn eine Verbindungszeichenfolge **Failover_Partner** und **MultiSubnetFailover=true** verwendet, generiert der Treiber einen Fehler. Wenn eine Verbindungszeichenfolge jedoch **Failover_Partner** und **MultiSubnetFailover=false** (oder **ApplicationIntent=ReadWrite**) verwendet, verwendet die Anwendung Datenbankspiegelung.  
   
 Der Treiber gibt einen Fehler zurück, wenn die Datenbankspiegelung in der primären Datenbank in der Verfügbarkeitsgruppe verwendet wird, und wenn **MultiSubnetFailover=true** in der Verbindungszeichenfolge verwendet wird, die statt mit einem Verfügbarkeitsgruppenlistener eine Verbindung mit einer primären Datenbank herstellt.  
 

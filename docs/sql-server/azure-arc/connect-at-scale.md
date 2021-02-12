@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 0bd60864615e1ffbf2aecac5eb41efa86407ba68
-ms.sourcegitcommit: b09f069c6bef0655b47e9953a4385f1b52bada2b
+ms.openlocfilehash: b78c76504cb9ffb76b62c1867630760fe52cf22c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92734381"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063185"
 ---
 # <a name="connect-sql-server-instances-to-azure-arc-at-scale"></a>Herstellen einer Verbindung zwischen SQL Server-Instanzen und Azure Arc im großen Stil
 
@@ -116,7 +116,7 @@ Auf jedem Zielcomputer muss die [Azure CLI installiert](/cli/azure/install-azure
 
 ## <a name="validate-successful-onboarding"></a>Überprüfen des erfolgreichen Onboardings
 
-Navigieren Sie nach dem Registrieren der SQL Server-Instanzen mit Azure Arc-fähigen SQL Server-Instanzen (Vorschau) zum [Azure-Portal](https://aka.ms/azureportal), und zeigen Sie die neu erstellten Azure Arc-Ressourcen an. Für jeden verbundenen Computer wird eine neue Ressource vom Typ __Computer – Azure Arc__ angezeigt und für jede registrierte SQL Server-Instanz eine neue Ressource vom Typ __SQL Server – Azure Arc__ . 
+Navigieren Sie nach dem Registrieren der SQL Server-Instanzen mit Azure Arc-fähigen SQL Server-Instanzen (Vorschau) zum [Azure-Portal](https://aka.ms/azureportal), und zeigen Sie die neu erstellten Azure Arc-Ressourcen an. Für jeden verbundenen Computer wird eine neue Ressource vom Typ __Computer – Azure Arc__ angezeigt und für jede registrierte SQL Server-Instanz eine neue Ressource vom Typ __SQL Server – Azure Arc__. 
 
 ![Erfolgreiches Onboarding](./media/join-at-scale/successful-onboard.png)
 

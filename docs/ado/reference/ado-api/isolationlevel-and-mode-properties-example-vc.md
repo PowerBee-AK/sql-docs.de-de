@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 29ef200146cdd048375c815e426f3d208095238f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ea7af1176e4fb123df44f1640107b7c7ad345309
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167208"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041920"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel-und Mode-Eigenschaften (Beispiel) (VC + +)
 In diesem Beispiel wird die [Mode](./mode-property-ado.md) -Eigenschaft verwendet, um eine exklusive Verbindung zu öffnen, und die [IsolationLevel](./isolationlevel-property.md) -Eigenschaft, um eine Transaktion zu öffnen, die isoliert von anderen Transaktionen durchgeführt wird.  

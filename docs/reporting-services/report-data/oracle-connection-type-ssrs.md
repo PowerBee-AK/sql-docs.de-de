@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1df8e6c21f4aba600d36314ea224d1a77d6f2332
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bc812447f38575375de10cea13d0376e879375c5
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464441"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978422"
 ---
 # <a name="oracle-connection-type-ssrs--power-bi-report-server"></a>Oracle-Verbindungstyp (SSRS und Power BI-Berichtsserver)
 
@@ -150,7 +150,7 @@ Bevor Sie eine Verbindung mit einer Oracle-Datenquelle herstellen können, muss 
 Weitere Informationen finden Sie in den folgenden Artikeln:  
   
 - [Verwenden von Reporting Services zum Konfigurieren und Zugreifen auf eine Oracle-Datenquelle](/archive/blogs/dataaccesstechnologies/configure-oracle-data-source-for-sql-server-reporting-services-ssdt-and-report-server)  
-- [Hinzufügen von Berechtigungen für den NETZWERKDIENST-Sicherheitsprinzipal](https://support.microsoft.com/kb/870668)  
+- [Hinzufügen von Berechtigungen für den NETZWERKDIENST-Sicherheitsprinzipal](https://mskb.pkisolutions.com/kb/870668)  
   
 ### <a name="alternate-data-extensions"></a>Alternative Datenerweiterungen 
 

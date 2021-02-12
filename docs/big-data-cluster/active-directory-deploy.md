@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 48dde8000274ea74df1c6095714b54669c5becdd
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 2a79c82f2c3fd443d7237fc3b0a1f7c51102bceb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257290"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048015"
 ---
 # <a name="deploy-sql-server-big-data-cluster-in-active-directory-mode"></a>Bereitstellen eines SQL Server-Big Data-Clusters im Active Directory-Modus
 
@@ -50,12 +50,12 @@ Für die AD-Integration sind die folgenden Parameter erforderlich. Fügen Sie di
 - `security.activeDirectory.domainControllerFullyQualifiedDns`: Liste der FQDNs der Domänencontroller. Der FQDN enthält den Computer-/Hostnamen eines Domänencontrollers. Wenn Sie über mehrere Domänencontroller verfügen, können Sie hier eine Liste angeben. Beispiel: `HOSTNAME.CONTOSO.LOCAL`.
 
   > [!IMPORTANT]
-  > Wenn mehrere Domänencontroller eine Domäne bereitstellen, verwenden Sie den primären Domänencontroller als ersten Eintrag in der `domainControllerFullyQualifiedDns`-Liste der Sicherheitskonfiguration. Geben Sie `netdom query fsmo` zum Abrufen des Namens des primären Domänencontrollers in die Eingabeaufforderung ein, und drücken Sie dann die **EINGABETASTE** .
+  > Wenn mehrere Domänencontroller eine Domäne bereitstellen, verwenden Sie den primären Domänencontroller als ersten Eintrag in der `domainControllerFullyQualifiedDns`-Liste der Sicherheitskonfiguration. Geben Sie `netdom query fsmo` zum Abrufen des Namens des primären Domänencontrollers in die Eingabeaufforderung ein, und drücken Sie dann die **EINGABETASTE**.
 
 - **Optionaler Parameter** `security.activeDirectory.realm`: In den meisten Fällen entspricht der Bereich dem Domänennamen. Falls sich Bereich und Domänenname unterscheiden, verwenden Sie diesen Parameter zum Definieren des Bereichs (z. B. `CONTOSO.LOCAL`). Der für diesen Parameter angegebene Wert sollte vollqualifiziert sein.
 
   > [!IMPORTANT]
-  > Zurzeit unterstützt der BDC keine Konfiguration, bei der der Active Directory-Domänenname sich vom **NETBIOS** -Namen der Active Directory-Domäne unterscheidet.
+  > Zurzeit unterstützt der BDC keine Konfiguration, bei der der Active Directory-Domänenname sich vom **NETBIOS**-Namen der Active Directory-Domäne unterscheidet.
 
 - `security.activeDirectory.domainDnsName`: Dies ist der Name Ihrer DNS-Domäne, die für den Cluster verwendet wird (z. B. `contoso.local`).
 
@@ -77,7 +77,7 @@ Ausführliche Informationen zum Aktualisieren der AD-Gruppen für diese Einstell
   >Erstellen Sie diese Gruppen in AD, bevor Sie mit der Bereitstellung beginnen. Wenn der Bereich für eine dieser AD-Gruppen „domain local“ ist, schlägt die Bereitstellung fehl.
 
   >[!IMPORTANT]
-  >Wenn Ihre Domänenbenutzer über eine große Anzahl an Gruppenmitgliedschaften verfügen, sollten Sie die Werte für die Gatewayeinstellung `httpserver.requestHeaderBuffer` (der Standardwert ist `8192`) und die HDFS-Einstellung `hadoop.security.group.mapping.ldap.search.group.hierarchy.levels` (der Standardwert ist `10`) mithilfe der benutzerdefinierten Bereitstellungskonfigurationsdatei *bdc.json* anpassen. Dies ist eine bewährte Methode zum Vermeiden von Verbindungstimeouts des Gateways und/oder HTTP-Antworten mit dem Statuscode 431 ( *Anforderungsheaderfelder zu groß* ). Im folgenden Abschnitt der Konfigurationsdatei wird gezeigt, wie die Werte dieser Einstellungen definiert werden und welche Werte für eine höhere Anzahl an Gruppenmitgliedschaften empfohlen werden:
+  >Wenn Ihre Domänenbenutzer über eine große Anzahl an Gruppenmitgliedschaften verfügen, sollten Sie die Werte für die Gatewayeinstellung `httpserver.requestHeaderBuffer` (der Standardwert ist `8192`) und die HDFS-Einstellung `hadoop.security.group.mapping.ldap.search.group.hierarchy.levels` (der Standardwert ist `10`) mithilfe der benutzerdefinierten Bereitstellungskonfigurationsdatei *bdc.json* anpassen. Dies ist eine bewährte Methode zum Vermeiden von Verbindungstimeouts des Gateways und/oder HTTP-Antworten mit dem Statuscode 431 (*Anforderungsheaderfelder zu groß*). Im folgenden Abschnitt der Konfigurationsdatei wird gezeigt, wie die Werte dieser Einstellungen definiert werden und welche Werte für eine höhere Anzahl an Gruppenmitgliedschaften empfohlen werden:
 
 ```json
 {
@@ -89,7 +89,7 @@ Ausführliche Informationen zum Aktualisieren der AD-Gruppen für diese Einstell
                 "spec": {
                     "replicas": 1,
                     "endpoints": [{...}],
-                    "settings": {
+                    "settings": {
                         "gateway-site.gateway.httpserver.requestHeaderBuffer": "65536"
                     }
                 }
@@ -138,7 +138,7 @@ In der folgenden Tabelle wird das Autorisierungsmodell für die Anwendungsverwal
 
   Weitere Informationen über die Bereitstellung mehrerer Big Data-Cluster in derselben Active Directory-Domäne finden Sie unter [Konzept: Bereitstellen von [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] im Active Directory-Modus](active-directory-deployment-background.md).
 
-- `security.activeDirectory.accountPrefix`: Dieser **optionale Parameter** wurde mit dem Release von SQL Server 2019 CU5 eingeführt, um die Bereitstellung mehrerer Big Data-Cluster für dieselbe Domäne zu unterstützen. Mit dieser Einstellung wird die Eindeutigkeit des Kontonamens für verschiedene Big Data-Clusterdienste gewährleistet, die sich zwischen zwei Clustern unterscheiden müssen. Das Anpassen des Namens für das Kontopräfix ist optional, standardmäßig wird der Unterdomänenname als Kontopräfix verwendet. Wenn der Unterdomänenname länger als 12 Zeichen ist, werden die ersten 12 Zeichen des Unterdomänennamens als Kontopräfix verwendet.  
+- `security.activeDirectory.accountPrefix`: Dieser **optionale Parameter** wurde mit dem Release von SQL Server 2019 CU5 eingeführt, um die Bereitstellung mehrerer Big Data-Cluster für dieselbe Domäne zu unterstützen. Mit dieser Einstellung wird die Eindeutigkeit des Kontonamens für verschiedene Big Data-Clusterdienste gewährleistet, die sich zwischen zwei Clustern unterscheiden müssen. Das Anpassen des Namens für das Kontopräfix ist optional, standardmäßig wird der Unterdomänenname als Kontopräfix verwendet. Wenn der Unterdomänenname länger als 12 Zeichen ist, werden die ersten 12 Zeichen des Unterdomänennamens als Kontopräfix verwendet.  
 
   >[!NOTE]
   >Active Directory erfordert, dass Kontonamen auf 20 Zeichen eingeschränkt werden. Der Big Data-Cluster muss 8 Zeichen zum Unterscheiden von Pods und StatefulSets verwenden. Es verbleiben also 12 Zeichen als Grenzwert für das Kontopräfix.

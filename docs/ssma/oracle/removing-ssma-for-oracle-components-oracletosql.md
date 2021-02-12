@@ -13,29 +13,29 @@ ms.assetid: 8b527a56-4e52-487a-9ac9-2320388e6d7d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 263d04b401146ce2975a810b084e4957f1daf718
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df992d19ecb90ad78e060dccdfa5e2e015988477
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492400"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067727"
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>Entfernen von SSMA-Komponenten für Oracle (OracleToSQL)
 Wenn Sie die Migration von Datenbanken von Oracle zu abgeschlossen haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie die SSMA-Komponenten deinstallieren. Sie können die Client Komponenten jederzeit deinstallieren. Sie sollten das Erweiterungspaket jedoch nicht von deinstallieren, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es sei denn, die migrierten Datenbanken verwenden keine Funktionen mehr im **ssma_oracle** Schema der **sysdb** -Datenbank.  
   
 ## <a name="uninstalling-the-ssma-for-oracle-client"></a>Deinstallieren von SSMA für Oracle Client  
-Sie können SSMA **mithilfe der**Option Software deinstallieren.  
+Sie können SSMA **mithilfe der** Option Software deinstallieren.  
   
 **So deinstallieren Sie SSMA**  
   
 1.  Öffnen Sie in der Systemsteuerung **Programme hinzufügen/entfernen**.  
   
-2.  Wählen Sie ** [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant für Oracle aus**, und klicken Sie dann auf **Entfernen**.  
+2.  Wählen Sie **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant für Oracle aus**, und klicken Sie dann auf **Entfernen**.  
   
 3.  Um zu bestätigen, dass Sie SSMA deinstallieren möchten, klicken Sie auf **Ja**.  
   
 ## <a name="uninstalling-the-extension-pack"></a>Deinstallieren des Erweiterungspakets  
-Wenn Sie sicher sind, dass die migrierten Datenbanken keine Objekte im **sysdb. ssma_oracle** -Schema verwenden, können Sie das Erweiterungspaket **mithilfe der**Option "Software" entfernen.  
+Wenn Sie sicher sind, dass die migrierten Datenbanken keine Objekte im **sysdb.ssma_oracle** Schema verwenden, können Sie das Erweiterungspaket mithilfe der Option "Software **" entfernen.**  
   
 **So deinstallieren Sie das Erweiterungspaket**  
   
@@ -55,9 +55,9 @@ Wenn Sie sicher sind, dass die migrierten Datenbanken keine Objekte im **sysdb. 
   
 7.  Klicken Sie auf der Seite Fertigstellen **auf beenden.**  
   
-Nach der Deinstallation können Sie überprüfen, ob Objekte im **sysdb. ssma_oracle** -Schema und möglicherweise die gesamte **sysdb** -Datenbank mithilfe von entfernt wurden [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Wenn Sie jedoch andere SSMA-Produkte verwenden, verwenden Sie auch die **sysdb** -Datenbank. Wenn die Datenbank vorhanden ist und Sie sicher sind, dass keine anderen Datenbanken auf Objekte in dieser Datenbank verweisen, können Sie die Datenbank trennen.  
+Nach der Deinstallation können Sie überprüfen, ob Objekte im **sysdb.ssma_oracle** Schema und möglicherweise die gesamte **sysdb** -Datenbank mithilfe von entfernt wurden [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Wenn Sie jedoch andere SSMA-Produkte verwenden, verwenden Sie auch die **sysdb** -Datenbank. Wenn die Datenbank vorhanden ist und Sie sicher sind, dass keine anderen Datenbanken auf Objekte in dieser Datenbank verweisen, können Sie die Datenbank trennen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
 [Installieren von SSMA für Oracle Client &#40;oracleto SQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
 [Installieren von SSMA-Komponenten auf SQL Server &#40;oracledesql-&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
   

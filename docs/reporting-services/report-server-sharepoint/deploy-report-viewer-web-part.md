@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6c0280e54fab14c4a3f76f75a4639dad99a0635
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 4b8638e0c9a958e8f5dd6b6039540e8492555b03
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933566"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074831"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Bereitstellen des Webparts des Berichts-Viewers für SQL Server Reporting Services auf einer SharePoint-Website
 
@@ -29,7 +29,7 @@ Verwenden Sie die folgenden Anweisungen, um zwei Lösungspakete manuell bereitzu
 
 > [!IMPORTANT]
 > Ab der Version „15.X.X.X“ können Sie das ReportViewerWebPart parallel mit Ihren vorhandenen Anwendungen im integrierten SharePoint-Modus von Reporting Services installieren.
-> Mit diesem Update der WSP-Projektmappe wurden neue Dateien eingeführt. Deshalb muss die vorherige Projektmappe zurückgezogen und die neue WSP-Datei neu bereitgestellt werden, indem Sie das Cmdlet „Uninstall-SPSolution“ bzw. „Install-SPSolution“ verwenden.
+> Mit diesem Update der WSP-Lösung haben wir neue Dateien eingeführt, und die vorherige Projektmappe muss zurückgezogen und die neue WSP-Datei neu bereitgestellt werden, indem Sie das Cmdlet „Uninstall-SPSolution“ bzw. „Install-SPSolution“ verwenden.
 >
 
 **Unterstützte SharePoint Server-Versionen:**
@@ -87,7 +87,7 @@ In diesem Abschnitt erfahren Sie, wie Sie das Lösungspaket für Ihre SharePoint
 
 4. Scrollen Sie auf der Seite nach unten, bis Sie auf die **Berichts-Viewer-Webparts**-Funktion stoßen.
 
-5. Wählen Sie **Aktivieren**aus.
+5. Wählen Sie **Aktivieren** aus.
 
     ![Aktivieren der Berichts-Viewer-Webparts-Funktion](media/web-part-activiate-feature.png)
 

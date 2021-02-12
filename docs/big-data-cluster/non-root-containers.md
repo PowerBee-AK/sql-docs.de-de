@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e74e08146ea4c92f23ba17816738122147150e7b
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 52a24c1dbe2a239450b440c07de1a7852f9c627a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257120"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046040"
 ---
 # <a name="non-root-big-data-clusters-containers"></a>Bereitstellen von anderen Containern als dem Stammcontainer in Big Data-Clustern
 
@@ -31,7 +31,7 @@ Mit dem fünften kumulativen Update (Cumulative Update 5, CU5) für SQL Server�
 > Es wird empfohlen, den Cluster mit der Standardeinstellung, d. h. nicht mit der Stammeinstellung auszuführen. Falls Sie das Verhalten vor CU5 wiederherstellen möchten und einige Ihrer Container im BDC als `root`-Benutzer ausgeführt werden, können Sie das Standardverhalten mit dem neuen Featureoption `allowRunAsRoot` deaktivieren. Dieses kann nur zur Bereitstellungszeit festgelegt werden. Geben Sie die Einstellung zum Festlegen im Abschnitt `security` der Konfigurationsdatei der `control.json`-Bereitstellung an:
 
 ```json
- "security": {
+ "security": {
   …
     "allowRunAsRoot": true,
   …

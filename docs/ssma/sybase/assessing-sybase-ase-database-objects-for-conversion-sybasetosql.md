@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6e8bd25b8529f09896cbec2ec31578375a015f2a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0926c350d02bf2cdbb5ae7fe4fdefbda3ef6863
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372627"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077221"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>Bewerten von SAP ASE-Datenbankobjekten für die Konvertierung (sybasetoisql)
 Vor dem Laden von Objekten und der Migration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Daten zu oder Azure SQL sollten Sie bestimmen, wie komplex die Migration und wie viel Zeit Sie dauern sollte. SSMA kann einen Bewertungsbericht erstellen, der den Prozentsatz der Objekte und Prozeduren anzeigt, die erfolgreich in konvertiert werden [!INCLUDE[tsql](../../includes/tsql-md.md)] . Mit SSMA können Sie auch die spezifischen Probleme anzeigen, die Konvertierungs Fehler verursachen können.  
@@ -29,9 +29,9 @@ Beim Erstellen dieses Bewertungsberichts konvertiert SSMA die ausgewählten SAP 
   
 2.  Wenn Sie einzelne Objekte weglassen möchten, deaktivieren Sie die Kontrollkästchen neben den Objekten, die nicht bewertet werden sollen.  
   
-3.  Klicken Sie mit der rechten Maustaste auf **Datenbanken**und dann auf **Bericht erstellen**.  
+3.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** und dann auf **Bericht erstellen**.  
   
-    Sie können einzelne Objekte auch analysieren, indem Sie mit der rechten Maustaste auf ein Objekt klicken und dann **Bericht erstellen**auswählen.  
+    Sie können einzelne Objekte auch analysieren, indem Sie mit der rechten Maustaste auf ein Objekt klicken und dann **Bericht erstellen** auswählen.  
   
     SSMA zeigt den Fortschritt in der Statusleiste am unteren Rand des Fensters an. Wenn der Ausgabebereich sichtbar ist, werden auch zugehörige Meldungen angezeigt.  
   
@@ -52,7 +52,7 @@ Das Fenster "Bewertungsbericht" enthält drei Bereiche:
     -   Der Quellbereich zeigt den Quellcode des-Objekts, das im linken Bereich ausgewählt ist. Die markierten Bereiche zeigen problematischen Quellcode.  
     -   Der Zielbereich zeigt den konvertierten Code. Roter Text zeigt problematische Code und Fehlermeldungen an.  
   
--   Der untere Bereich zeigt Konvertierungs Meldungen nach Nachrichtennummer gruppiert an. Wählen Sie **Fehler**, **Warnungen**oder **Informationen** aus, um Kategorien von Nachrichten anzuzeigen, und erweitern Sie dann eine Gruppe von Nachrichten. Klicken Sie auf eine einzelne Nachricht, um das Objekt im linken Bereich auszuwählen, und zeigen Sie dann die Details im rechten Bereich an.  
+-   Der untere Bereich zeigt Konvertierungs Meldungen nach Nachrichtennummer gruppiert an. Wählen Sie **Fehler**, **Warnungen** oder **Informationen** aus, um Kategorien von Nachrichten anzuzeigen, und erweitern Sie dann eine Gruppe von Nachrichten. Klicken Sie auf eine einzelne Nachricht, um das Objekt im linken Bereich auszuwählen, und zeigen Sie dann die Details im rechten Bereich an.  
   
 ## <a name="analyze-conversion-problems-by-using-the-assessment-report"></a>Analysieren von Konvertierungs Problemen mithilfe des Bewertungsberichts  
 Im Bereich **Konvertierungs Statistik** werden die Konvertierungsstatistiken angezeigt. Wenn der Prozentsatz für eine Kategorie weniger als 100 Prozent beträgt, sollten Sie bestimmen, warum die Konvertierung nicht erfolgreich war.  
@@ -63,7 +63,7 @@ Im Bereich **Konvertierungs Statistik** werden die Konvertierungsstatistiken ang
   
 2.  Erweitern Sie im linken Bereich Schemas oder Ordner mit einem roten Fehler Symbol. Erweitern Sie Elemente, bis Sie ein einzelnes Element auswählen, für das die Konvertierung fehlgeschlagen ist.  
   
-3.  Wählen Sie oben im Bereich Quelle die Option **nächstes Problem**aus.  
+3.  Wählen Sie oben im Bereich Quelle die Option **nächstes Problem** aus.  
     Der problematische Code wird hervorgehoben, ebenso wie der zugehörige Code im **Ziel Navigations** Bereich.  
   
 4.  Überprüfen Sie alle Fehlermeldungen, und legen Sie dann fest, was Sie mit dem Objekt tun möchten, das das Konvertierungs Problem verursacht hat:  

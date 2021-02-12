@@ -10,18 +10,18 @@ ms.date: 09/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 99e62be597e4ce08d38db199116f1bd4d5ab33f6
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 8cbf034873b690262ff6acb395ed8eca5d09ae79
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92378427"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039510"
 ---
 # <a name="common-notebooks-for-sql-server-big-data-clusters"></a>Allgemeine Notebooks für SQL Server-Big Data-Cluster
 
 In diesem Artikel sind Notebooks für SQL Server-Big Data-Cluster aufgeführt. Die ausführbaren Notebooks (.ipynb) sind für SQL Server 2019 entwickelt, um beim Darstellen von häufigen Szenarien für Big Data-Cluster zu helfen.
 
-Jedes Notebook überprüft seine eigenen Abhängigkeiten. Eine **Alle Zellen ausführen** -Option (run all cells) wird entweder erfolgreich abgeschlossen oder löst eine Ausnahme aus, die einen *Hinweis* mit einem Link zu einem anderen Notebook enthält, um die fehlende Abhängigkeit aufzulösen. Folgen Sie dem Link im Hinweis zu dem folgenden Notebook, klicken Sie auf **run all cells** , und wenn die Aktion erfolgreich ist, kehren Sie zum ursprünglichen Notebook zurück, und führen Sie **run all cells** aus.
+Jedes Notebook überprüft seine eigenen Abhängigkeiten. Eine **Alle Zellen ausführen**-Option (run all cells) wird entweder erfolgreich abgeschlossen oder löst eine Ausnahme aus, die einen *Hinweis* mit einem Link zu einem anderen Notebook enthält, um die fehlende Abhängigkeit aufzulösen. Folgen Sie dem Link im Hinweis zu dem folgenden Notebook, klicken Sie auf **run all cells**, und wenn die Aktion erfolgreich ist, kehren Sie zum ursprünglichen Notebook zurück, und führen Sie **run all cells** aus.
 
 Wenn alle Abhängigkeiten installiert wurden, **run all cells** aber fehlschlägt, analysiert jedes Notebook die Ergebnisse und erzeugt, wo möglich, einen Hinweis mit Link zu einem weiteren Notebook, um bei der weitergehenden Behandlung des Problems zu helfen.
 

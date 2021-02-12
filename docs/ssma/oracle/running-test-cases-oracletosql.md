@@ -11,12 +11,12 @@ ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 9d44b04aba4d1ea1fa437bbd3b957178b361a4db
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bc811575dd845be43aef7a9398d8b4fb3458db1b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418436"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067715"
 ---
 # <a name="running-test-cases-oracletosql"></a>Ausführen von Testfällen (OracleToSQL)
 Wenn der SSMA-Tester einen Testfall ausführt, führt er die für das Testen ausgewählten Objekte aus und erstellt einen Bericht über Überprüfungs Ergebnisse. Wenn die Ergebnisse auf beiden Plattformen identisch sind, war der Test erfolgreich. Die Entsprechung von Objekten zwischen Oracle und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird anhand der Schema-Mapping-Einstellungen für das aktuelle SSMA-Projekt festgelegt.  
@@ -42,32 +42,32 @@ In diesem Schritt erstellt SSMA Tester Hilfsobjekte (Tabellen, Trigger und Sicht
   
 Angenommen, die überprüfte Tabelle hat den Namen USER_TABLE. Für eine solche Tabelle werden die folgenden Hilfsobjekte in Oracle erstellt.  
   
-|Name|type|Beschreibung|  
+|Name|type|BESCHREIBUNG|  
 |-|-|-|  
 |USER_TABLE $ trg|Trigger (trigger)|Löst die Überprüfung der Änderungen in der verifizierten Tabelle aus.|  
 |USER_TABLE $ AUD|table|Tabelle, in der gelöschte und über schriebene Zeilen gespeichert werden.|  
 |USER_TABLE $ audid|table|Tabelle, in der neue und geänderte Zeilen gespeichert werden.|  
-|USER_TABLE|Sicht|Vereinfachte Darstellung der Tabellen Änderungen.|  
-|USER_TABLE $ New|Sicht|Vereinfachte Darstellung von eingefügten und über schriebenen Zeilen.|  
-|USER_TABLE $ NEW_ID|Sicht|Identifizierung eingefügter und geänderter Zeilen.|  
-|USER_TABLE $ Old|Sicht|Vereinfachte Darstellung gelöschter und überschriebener Zeilen.|  
+|USER_TABLE|Ansicht|Vereinfachte Darstellung der Tabellen Änderungen.|  
+|USER_TABLE $ New|Ansicht|Vereinfachte Darstellung von eingefügten und über schriebenen Zeilen.|  
+|USER_TABLE $ NEW_ID|Ansicht|Identifizierung eingefügter und geänderter Zeilen.|  
+|USER_TABLE $ Old|Ansicht|Vereinfachte Darstellung gelöschter und überschriebener Zeilen.|  
   
 Das folgende Objekt wird im Schema der verifizierten Tabelle unter erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Name|type|Beschreibung|  
+|Name|type|BESCHREIBUNG|  
 |-|-|-|  
 |USER_TABLE $ trg|Trigger (trigger)|Löst die Überprüfung der Änderungen in der verifizierten Tabelle aus.|  
   
 Und die folgenden Objekte werden unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der ssmatesterdb-Datenbank erstellt.  
   
-|Name|type|Beschreibung|  
+|Name|type|BESCHREIBUNG|  
 |-|-|-|  
 |USER_TABLE $ AUD|table|Tabelle, in der gelöschte und über schriebene Zeilen gespeichert werden.|  
 |USER_TABLE $ audid|table|Tabelle, in der neue und geänderte Zeilen gespeichert werden.|  
-|USER_TABLE|Sicht|Vereinfachte Darstellung der Tabellen Änderungen.|  
-|USER_TABLE $ New|Sicht|Vereinfachte Darstellung von eingefügten und über schriebenen Zeilen.|  
-|USER_TABLE $ new_id|Sicht|Identifizierung eingefügter und geänderter Zeilen.|  
-|USER_TABLE $ Old|Sicht|Vereinfachte Darstellung gelöschter und überschriebener Zeilen.|  
+|USER_TABLE|Ansicht|Vereinfachte Darstellung der Tabellen Änderungen.|  
+|USER_TABLE $ New|Ansicht|Vereinfachte Darstellung von eingefügten und über schriebenen Zeilen.|  
+|USER_TABLE $ new_id|Ansicht|Identifizierung eingefügter und geänderter Zeilen.|  
+|USER_TABLE $ Old|Ansicht|Vereinfachte Darstellung gelöschter und überschriebener Zeilen.|  
   
 ### <a name="test-object-calls"></a>Testen von Objekt aufrufen  
 Bei diesem Schritt ruft der SSMA-Tester alle für die Tests ausgewählten Objekte auf, vergleicht die Ergebnisse und zeigt den Bericht an.  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6eedf7ae96f41a75a8690162de01473d7e2e5664
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d61d02d7c5bf3e4de8199ebdc59f1c6f8ed157b4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80342790"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015650"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Generieren von Datenfeeds aus einem Bericht (Berichts-Generator und SSRS)
 
@@ -50,7 +50,7 @@ Sie können Atom-kompatible Datenfeeds aus Berichten generieren und dann in Anwe
     > [!NOTE]  
     >  Standardmäßig entspricht der Dokumentname dem Berichtsnamen.  
   
-7.  Stellen Sie sicher, dass der Dokumenttyp einer **ATOMSVC-Datei**entspricht, und klicken Sie dann auf **Speichern**.  
+7.  Stellen Sie sicher, dass der Dokumenttyp einer **ATOMSVC-Datei** entspricht, und klicken Sie dann auf **Speichern**.  
   
 8.  Öffnen Sie die ATOMSVC-Datei optional in einem Browser bzw. einem Text- oder XML-Editor.  
   
@@ -77,7 +77,7 @@ Sie können Atom-kompatible Datenfeeds aus Berichten generieren und dann in Anwe
     > [!NOTE]  
     >  Standardmäßig entspricht der Dokumentname dem Berichtsnamen. Wenn das Atom-Dienstdokument mehrere Feeds enthält, verwenden alle standardmäßig den gleichen Namen, und zwar den Berichtsnamen. Um zwischen den Datenfeeds zu unterscheiden, benennen Sie diese mit aussagekräftigen Namen um.  
   
-7.  Stellen Sie sicher, dass der Dokumenttyp einer **ATOM-Datei**entspricht, und klicken Sie dann auf **Speichern**.  
+7.  Stellen Sie sicher, dass der Dokumenttyp einer **ATOM-Datei** entspricht, und klicken Sie dann auf **Speichern**.  
   
 8.  Öffnen Sie die ATOM-Datei optional in einem Browser bzw. Text-Editor oder XML-Editor.  
 

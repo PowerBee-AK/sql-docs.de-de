@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 7b5bc161cc66aa904ed63e67bbc5f2ff4695168f
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 6b0eaf98f4d10c08548e898c261a489ad71f0ff4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987936"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016730"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Exemplarische Vorgehensweise: Erstellen und Ausführen eines SQL Server-Komponententests
 
@@ -232,13 +232,13 @@ Zum Durchführen dieser exemplarischen Vorgehensweise müssen Sie in der Lage se
   
 2.  Wählen Sie unter **Installierte Vorlagen** den Knoten **SQL Server** und dann **SQL Server-Datenbankprojekt** aus.  
   
-3.  Geben Sie im Feld **Name**den Namen **SimpleUnitTestDB**ein.  
+3.  Geben Sie im Feld **Name** den Namen **SimpleUnitTestDB** ein.  
   
 4.  Aktivieren Sie das Kontrollkästchen **Projektmappenverzeichnis erstellen** , falls es noch nicht aktiviert ist.  
   
 5.  Deaktivieren Sie das Kontrollkästchen **Zur Quellcodeverwaltung hinzufügen** , wenn es noch nicht deaktiviert ist, und klicken Sie auf **OK**.  
   
-    Das Datenbankprojekt wird erstellt und im **Projektmappen-Explorer**angezeigt. Als Nächstes importieren Sie das Datenbankschema aus einem Skript.  
+    Das Datenbankprojekt wird erstellt und im **Projektmappen-Explorer** angezeigt. Als Nächstes importieren Sie das Datenbankschema aus einem Skript.  
   
 #### <a name="to-import-a-database-schema-from-a-script"></a>So importieren Sie ein Datenbankschema aus einem Skript  
   
@@ -259,7 +259,7 @@ Zum Durchführen dieser exemplarischen Vorgehensweise müssen Sie in der Lage se
   
 #### <a name="to-examine-the-resulting-project"></a>So überprüfen Sie das resultierende Projekt  
   
-1.  Untersuchen Sie im **Projektmappen-Explorer**die Skriptdateien, die in das Projekt importiert wurden.  
+1.  Untersuchen Sie im **Projektmappen-Explorer** die Skriptdateien, die in das Projekt importiert wurden.  
   
 2.  Suchen Sie im **SQL Server-Objekt-Explorer** die Datenbank unter dem Knoten „Projekte“.  
   
@@ -274,22 +274,22 @@ Wenn Sie F5 drücken, wird die Datenbank standardmäßig auf einer LocalDB-Daten
   
 2.  Klicken Sie mit der rechten Maustaste auf eine der gespeicherten Prozeduren und dann auf **Komponententests erstellen**, um das Dialogfeld **Komponententests erstellen** anzuzeigen.  
   
-3.  Aktivieren Sie die Kontrollkästchen für alle fünf gespeicherten Prozeduren: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder**und **Sales.uspShowOrderDetails**.  
+3.  Aktivieren Sie die Kontrollkästchen für alle fünf gespeicherten Prozeduren: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder** und **Sales.uspShowOrderDetails**.  
   
 4.  Wählen Sie in der Dropdownliste **Projekt** die Option **Neues Visual C#-Testprojekt erstellen** aus.  
   
 5.  Akzeptieren Sie die standardmäßigen Projekt- und Klassennamen, und klicken Sie auf **OK**.  
   
-6.  Geben Sie im Dialogfeld „Testkonfiguration“ unter **Komponententests unter Verwendung folgender Datenverbindung ausführen**eine Verbindung mit der Datenbank an, die Sie zuvor in dieser exemplarischen Vorgehensweise bereitgestellt haben. Wenn Sie beispielsweise den Standardbereitstellungsspeicherort, d.h. LocalDB, verwendet haben, würden Sie auf **Neue Verbindung** klicken und **(LocalDB)\Projects** angeben. Wählen Sie anschließend den Namen der Datenbank aus. Klicken Sie dann auf „OK“, um das Dialogfeld **Verbindungseigenschaften** zu schließen.  
+6.  Geben Sie im Dialogfeld „Testkonfiguration“ unter **Komponententests unter Verwendung folgender Datenverbindung ausführen** eine Verbindung mit der Datenbank an, die Sie zuvor in dieser exemplarischen Vorgehensweise bereitgestellt haben. Wenn Sie beispielsweise den Standardbereitstellungsspeicherort, d.h. LocalDB, verwendet haben, würden Sie auf **Neue Verbindung** klicken und **(LocalDB)\Projects** angeben. Wählen Sie anschließend den Namen der Datenbank aus. Klicken Sie dann auf „OK“, um das Dialogfeld **Verbindungseigenschaften** zu schließen.  
   
     > [!NOTE]  
     > Zum Testen von Sichten oder gespeicherte Prozeduren mit eingeschränkten Berechtigungen würden Sie in diesem Schritt normalerweise diese Verbindung angeben. Anschließend würden Sie die sekundäre Verbindung mit ausgedehnteren Berechtigungen angeben, um den Test zu überprüfen. Falls Sie über eine sekundäre Verbindung verfügen, sollten Sie diesen Benutzer dem Datenbankprojekt hinzufügen und im Skript vor der Bereitstellung einen Anmeldenamen für den Benutzer erstellen.  
   
 7.  Aktivieren Sie im Dialogfeld „Testkonfiguration“ im Abschnitt **Bereitstellung** das Kontrollkästchen **Datenbankprojekt automatisch vor dem Ausführen von Komponententests bereitstellen** .  
   
-8.  Klicken Sie unter **Datenbankprojekt**auf **SimpleUnitTestDB.sqlproj**.  
+8.  Klicken Sie unter **Datenbankprojekt** auf **SimpleUnitTestDB.sqlproj**.  
   
-9. Klicken Sie unter **Bereitstellungskonfiguration**auf **Debuggen**.  
+9. Klicken Sie unter **Bereitstellungskonfiguration** auf **Debuggen**.  
   
     Sie können im Rahmen der SQL Server-Komponententests auch Testdaten generieren. In dieser exemplarischen Vorgehensweise überspringen Sie diesen Schritt, da durch die Tests eigene Daten erstellt werden.  
   
@@ -843,7 +843,7 @@ Zum Erstellen und Überprüfen eines negativen Tests führen Sie folgende Aufgab
   
 3.  Klicken Sie im Menü **Datei** auf **uspCancelOrder.sql speichern**.  
   
-4.  Drücken Sie F5, um **SimpleUnitTestDB**bereitzustellen.  
+4.  Drücken Sie F5, um **SimpleUnitTestDB** bereitzustellen.  
   
     Sie stellen die Updates für die gespeicherte Prozedur uspCancelOrder bereit. Da Sie keine anderen Objekte geändert haben, wird nur diese gespeicherte Prozedur aktualisiert.  
   

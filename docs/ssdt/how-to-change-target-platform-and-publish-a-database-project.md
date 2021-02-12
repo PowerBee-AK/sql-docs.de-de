@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c5ee0b9febeec7da287e26a40adcb6910b80991d
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 8a5a9cec35620f408182af3df75702eb85ce4e27
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987216"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018460"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Gewusst wie: Ändern der Zielplattform und Veröffentlichen eines Datenbankprojekts
 
@@ -33,7 +33,7 @@ SSDT vereinfacht auch diese Aufgabe durch Berücksichtigung der Zielplattform un
   
 1.  Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **Eigenschaften** aus. Klicken Sie links auf die Registerkarte **Projekteinstellungen** , um die Eigenschaftenseite **Projekteinstellungen** zu öffnen.  
   
-2.  Die Dropdownliste **Zielplattform** auf dieser Seite enthält alle unterstützten SQL Server-Plattformen, auf denen ein Datenbankprojekt veröffentlicht werden kann. Wählen Sie für diese Prozedur **SQL Azure**aus.  
+2.  Die Dropdownliste **Zielplattform** auf dieser Seite enthält alle unterstützten SQL Server-Plattformen, auf denen ein Datenbankprojekt veröffentlicht werden kann. Wählen Sie für diese Prozedur **SQL Azure** aus.  
   
 ### <a name="to-use-platform-validation-when-editing-scripts"></a>So verwenden Sie beim Bearbeiten von Skripts Plattformüberprüfung  
   
@@ -45,7 +45,7 @@ SSDT vereinfacht auch diese Aufgabe durch Berücksichtigung der Zielplattform un
   
     SSDT überprüft das Skript automatisch auf Grundlage der Zielplattform. Da Dateigruppen in SQL Azure nicht unterstützt werden, gibt SSDT in diesem Fall einen Fehler zurück. Eine Liste der in SQL Azure nicht unterstützten Transact\-SQL-Anweisungen finden Sie unter [Teilweise unterstützte Transact-SQL-Anweisungen (Microsoft Azure SQL-Datenbank)](/previous-versions/azure/ee336267(v=azure.100)).  
   
-4.  Entfernen Sie die `ON` -Klausel. Beachten Sie, dass der Fehler unmittelbar darauf nicht mehr in der **Fehlerliste**angezeigt wird.  
+4.  Entfernen Sie die `ON` -Klausel. Beachten Sie, dass der Fehler unmittelbar darauf nicht mehr in der **Fehlerliste** angezeigt wird.  
   
 ### <a name="to-publish-a-database-project"></a>So veröffentlichen Sie ein Datenbankprojekt  
   
@@ -55,7 +55,7 @@ SSDT vereinfacht auch diese Aufgabe durch Berücksichtigung der Zielplattform un
   
 3.  Klicken Sie im Dialogfeld **Datenbank veröffentlichen** auf **Bearbeiten** , um die Zieldatenbankverbindung zu bearbeiten.  
   
-4.  Geben Sie im Dialogfeld **Verbindungseigenschaften** zur Authentifizierung den Namen der SQL Server-Instanz und Ihre Anmeldeinformationen ein. Geben Sie in **Mit Datenbank verbinden**den Wert **NewTrade**ein. Hierdurch wird versucht, das Datenbankprojekt in einer neuen Datenbank zu veröffentlichen. Sie können zum Veröffentlichen des Projekts auch eine vorhandene Datenbank auswählen. Wenn Sie z.B. die vorhandene Datenbank **TradeDev** auswählen, werden alle Änderungen, die Sie im Offlineprojekt **TradeDev** an den Objekten (als Skripts) vorgenommen haben, an die Livedatenbank **TradeDev** weitergegeben.  
+4.  Geben Sie im Dialogfeld **Verbindungseigenschaften** zur Authentifizierung den Namen der SQL Server-Instanz und Ihre Anmeldeinformationen ein. Geben Sie in **Mit Datenbank verbinden** den Wert **NewTrade** ein. Hierdurch wird versucht, das Datenbankprojekt in einer neuen Datenbank zu veröffentlichen. Sie können zum Veröffentlichen des Projekts auch eine vorhandene Datenbank auswählen. Wenn Sie z.B. die vorhandene Datenbank **TradeDev** auswählen, werden alle Änderungen, die Sie im Offlineprojekt **TradeDev** an den Objekten (als Skripts) vorgenommen haben, an die Livedatenbank **TradeDev** weitergegeben.  
   
     Wenn Sie über die Berechtigung verfügen, Änderungen an der Datenbank vorzunehmen, in der Sie das Projekt veröffentlichen möchten, klicken Sie auf die Schaltfläche **Veröffentlichen** . Wenn Sie jedoch keinen Schreibzugriff auf eine Produktionsdatenbank haben, können Sie auf die Schaltfläche **Skript generieren** klicken, um ein Transact\-SQL-Veröffentlichungsskript zu erzeugen, das anschließend an einen Datenbankadministrator übergeben werden kann. Der Datenbankadministrator kann dann das Skript ausführen, um den Produktionsserver zu aktualisieren, damit dessen Schema mit dem Datenbankprojekt synchron ist.  
   

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 10/29/2020
-ms.openlocfilehash: 0c77b957f14401aec3130fa5fa4f78f0d34de9b5
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.openlocfilehash: 15b2dc331a1387039c79cbab164682f00981c591
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067202"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052031"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Kusto-Erweiterung (KQL) für Azure Data Studio (Vorschau)
 
@@ -57,7 +57,7 @@ Suchen Sie im [Azure-Portal](https://ms.portal.azure.com/#home) nach Ihrem Azure
 
 :::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="URI":::
 
-Sie können jedoch auch sofort mit dem *help.kusto.windows.net* -Cluster loslegen.
+Sie können jedoch auch sofort mit dem *help.kusto.windows.net*-Cluster loslegen.
 
 Für diesen Artikel werden zu Beispielzwecken die Daten aus dem help.kusto.windows.net-Cluster verwendet.
 
@@ -124,7 +124,7 @@ Die Erweiterungseinstellungen sehen wie folgt aus:
 
 ## <a name="sanddance-visualization"></a>SandDance-Visualisierung
 
-Die [SandDance-Erweiterung](sanddance-extension.md) in Kombination mit der Kusto-Erweiterung (KQL) in Azure Data Studio bringt eine umfangreiche interaktive Visualisierung mit sich. Klicken Sie im Resultset der KQL-Abfrage auf die Schaltfläche **Schnellansicht** , um [SandDance](https://sanddance.js.org/) zu starten.
+Die [SandDance-Erweiterung](sanddance-extension.md) in Kombination mit der Kusto-Erweiterung (KQL) in Azure Data Studio bringt eine umfangreiche interaktive Visualisierung mit sich. Klicken Sie im Resultset der KQL-Abfrage auf die Schaltfläche **Schnellansicht**, um [SandDance](https://sanddance.js.org/) zu starten.
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="SandDance-Visualisierung":::
 

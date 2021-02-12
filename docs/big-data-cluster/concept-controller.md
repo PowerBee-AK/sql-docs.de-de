@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 70ca43a017edaa760a5ffa999f40d99516f232bb
-ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
+ms.openlocfilehash: 9e2a7413578a8625231ffa0dad1750e98445f339
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92914341"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100039440"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>Was ist der Controller in einem SQL Server-Big Data Cluster?
 
@@ -42,7 +42,7 @@ Der Erstellungsworkflow errichtet auf der Basis von Kubernetes einen voll funkti
 
 ## <a name="managing-the-cluster-through-the-controller-service"></a>Verwalten des Clusters über den Controllerdienst
 
-Sie können den Cluster mithilfe der **azdata** -Befehle über den Controllerdienst verwalten. Wenn Sie zusätzliche Kubernetes-Objekte wie Pods im gleichen Namespace bereitstellen, werden sie nicht vom Controllerdienst verwaltet oder überwacht. Sie können auch **kubectl** -Befehle verwenden, um den Cluster auf Kubernetes-Ebene zu verwalten. Weitere Informationen finden Sie unter [Überwachen und Behandeln von Problemen eines [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
+Sie können den Cluster mithilfe der **azdata**-Befehle über den Controllerdienst verwalten. Wenn Sie zusätzliche Kubernetes-Objekte wie Pods im gleichen Namespace bereitstellen, werden sie nicht vom Controllerdienst verwaltet oder überwacht. Sie können auch **kubectl**-Befehle verwenden, um den Cluster auf Kubernetes-Ebene zu verwalten. Weitere Informationen finden Sie unter [Überwachen und Behandeln von Problemen eines [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
 
 Der Controller und die Kubernetes-Objekte (zustandsbehaftete Sätze, Pods, Geheimnisse usw.), die für einen Big Data-Cluster erstellt wurden, befinden sich in einem dedizierten Kubernetes-Namespace. Dem Controllerdienst wird vom Administrator des Kubernetes-Clusters die Berechtigung zum Verwalten aller Ressourcen innerhalb dieses Namespace erteilt.  Die RBAC-Richtlinie für dieses Szenario wird automatisch als Teil der anfänglichen Clusterbereitstellung mithilfe von **azdata** konfiguriert.
 

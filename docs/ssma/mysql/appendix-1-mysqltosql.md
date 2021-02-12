@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2d22766d-ff09-420d-ae7c-13b443e28bd0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e3c86b950eb156e966db1cfe030bc40753d01f6e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 03cfe3d70f35a22cceef5d813bce591f98e612b5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988432"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069175"
 ---
 # <a name="appendix---1-mysqltosql"></a>Anhang – 1 (MySqlToSql)
 Schnellansicht der Befehlszeilenoptionen der SSMA-Konsole:  

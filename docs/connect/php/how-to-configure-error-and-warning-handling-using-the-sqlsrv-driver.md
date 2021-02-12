@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 257c6f53-9137-4619-a613-eee33d2077e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0e4905b618c20d945946831c5492ec0e75ea882d
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: aa96471a6702836b48e95e65fdb40bde30ecd14f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680705"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042450"
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>Vorgehensweise: Konfigurieren der Behandlung von Fehlern und Warnungen unter Verwendung des SQLSRV-Treibers
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ Die folgende Codezeile setzt das Standardverhalten zurück (Warnungen werden als
 `sqlsrv_configure("WarningsReturnAsErrors", 1);`  
   
 > [!NOTE]  
-> Warnungen, die den SQLSTATE-Werten 01000, 01001, 01003 und 01S02 entsprechen, werden nie als Fehler behandelt. Eine **sqlsrv** -Funktion, die nur Warnungen generiert, die einem dieser Zustände entsprechen, gibt unabhängig von der Konfiguration nicht **false**zurück.  
+> Warnungen, die den SQLSTATE-Werten 01000, 01001, 01003 und 01S02 entsprechen, werden nie als Fehler behandelt. Eine **sqlsrv** -Funktion, die nur Warnungen generiert, die einem dieser Zustände entsprechen, gibt unabhängig von der Konfiguration nicht **false** zurück.  
   
 Der Wert für **WarningsReturnAsErrors** kann auch in der Datei php.ini festgelegt werden. Zum Beispiel deaktiviert dieser Eintrag im Abschnitt `[sqlsrv]` der Datei „php.ini“ das Standardverhalten.  
   

@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ac26973c4d1ff8b2a9e689f3aa372d3888f939d6
-ms.sourcegitcommit: ab9ddcc16fdfc245cf9a49d1e90bb1ffe3958c38
+ms.openlocfilehash: 8c1f6b4895e872289095411cfd8ecdaf1e2eb087
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92914297"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100047650"
 ---
 # <a name="what-is-application-deployment-on-a-sql-server-big-data-cluster"></a>Was ist Anwendungsbereitstellung in einem SQL Server-Big Data-Cluster?
 
@@ -59,7 +59,7 @@ Wenn eine Anwendung ausgeführt wird, leitet der Kubernetes-Dienst für die Anwe
 
 SQL Server 2019 CU5 umfasst die Unterstützung für die Bereitstellung von Big Data-Cluster in Red Hat OpenShift sowie ein aktualisiertes Sicherheitsmodell für Big Data-Cluster, für das keine privilegierten Container mehr erforderlich sind. Zusätzlich zu nicht privilegierten Containern werden Container standardmäßig für alle neuen Bereitstellungen unter Verwendung von SQL Server 2019 CU5 nicht als Root-Benutzer ausgeführt.
 
-Zum Zeitpunkt der Veröffentlichung von CU5 wird der Setupschritt der Anwendungen, die mit [App Deploy]()-Schnittstellen bereitgestellt wurden, weiterhin als *Root* -Benutzer ausgeführt. Dies ist erforderlich, da während des Setups zusätzliche, von der Anwendung verwendete Pakete installiert werden. Anderer Benutzercode, der als Teil der Anwendung bereitgestellt wird, wird als Benutzer mit niedrigen Berechtigungen ausgeführt. 
+Zum Zeitpunkt der Veröffentlichung von CU5 wird der Setupschritt der Anwendungen, die mit [App Deploy]()-Schnittstellen bereitgestellt wurden, weiterhin als *Root*-Benutzer ausgeführt. Dies ist erforderlich, da während des Setups zusätzliche, von der Anwendung verwendete Pakete installiert werden. Anderer Benutzercode, der als Teil der Anwendung bereitgestellt wird, wird als Benutzer mit niedrigen Berechtigungen ausgeführt. 
 
 Außerdem steht die optionale Funktion **CAP_AUDIT_WRITE** zur Verfügung, die benötigt wird, um mithilfe von Cron-Aufträgen Zeitpläne für SSIS-Anwendungen zu erstellen. Wenn die YAML-Spezifikationsdatei der Anwendung einen Zeitplan vorgibt, wird die Anwendung über einen Cron-Auftrag ausgelöst. Dafür wird diese zusätzliche Funktion benötigt.  Alternativ kann die Anwendung nach Bedarf mit dem Befehl *azdata app run* über einen Webdienstaufruf ausgelöst werden. Hierfür wird die Funktion „CAP_AUDIT_WRITE“ nicht benötigt. 
 
