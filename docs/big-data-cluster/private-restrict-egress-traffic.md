@@ -9,12 +9,12 @@ ms.date: 08/20/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 962e155b3b0b5906d36fa4d884be2af353cb25a9
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 589031e40ba0f1e53afd5b4082d132358e9cda32
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076608"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046020"
 ---
 # <a name="restrict-egress-traffic-of-big-data-clusters-bdc-clusters-in-azure-kubernetes-service-aks-private-cluster"></a>Einschränken des ausgehenden Datenverkehrs von Big Data-Clustern (BDC) in einem privaten Azure Kubernetes Service-Cluster (AKS-Cluster)
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 59df65daf56708a2b30b1e0a75e554750e95cb47
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: 4c4a7e894052ec9799039d45ff5bb9e2aa29a23b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235187"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078211"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Erste Schritte mit der SSMA-Konsole für MySQL (MySqlToSql)
 In diesem Abschnitt wird das Verfahren zum Starten von und ersten Schritten mit der MySQL-Konsolenanwendung beschrieben. Hier sind auch die Konventionen aufgeführt, die in einem typischen Ausgabefenster der SSMA-Konsole verwendet werden.  
@@ -26,7 +26,7 @@ In diesem Abschnitt wird das Verfahren zum Starten von und ersten Schritten mit 
 ## <a name="launching-ssma-console"></a>Starten der SSMA-Konsole  
 Verwenden Sie die folgenden Schritte, um die SSMA-Konsolenanwendung zu starten:  
   
-1.  Wechseln Sie zu **Start** , und zeigen Sie auf **Alle Programme** .  
+1.  Wechseln Sie zu **Start** , und zeigen Sie auf **Alle Programme**.  
   
 2.  Klicken Sie auf die Verknüpfung **SQL Server Migration Assistant für MySQL-Eingabeaufforderung** .  
   
@@ -60,7 +60,7 @@ Farb Interpretation der Konsolenausgabe in der folgenden Tabelle:
 |---------|---------------|  
 |Red|Schwerwiegender Fehler während der Ausführung|  
 |Grau|Datums-und Zeitstempel, Meldung an den Benutzer|  
-|White|Skriptdatei Befehle, Nachrichtentyp|  
+|Weiß|Skriptdatei Befehle, Nachrichtentyp|  
 |Gelb|Warnung|  
 |Grün|Eingabeaufforderung für Benutzereingabe|  
 |Cyan|Starten, beenden und Ergebnis eines Vorgangs|  

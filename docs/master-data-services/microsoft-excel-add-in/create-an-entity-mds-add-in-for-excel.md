@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 73161344ae6722e2b7e3ece9d1b8725779c82780
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b6a150ba658ff65991f0c6d73cbb557268075474
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257692"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272411"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>Erstellen einer Entität (MDS-Add-In für Excel)
 
@@ -37,11 +37,11 @@ ms.locfileid: "92257692"
   
     -   Die Daten sollten eine Kopfzeile haben.  
   
-    -   Es ist hilfreich, wenn die Spalten **Name** und **Code** vorhanden sind. Der**Code** ist ein eindeutiger Bezeichner für jede Zeile.  
+    -   Es ist hilfreich, wenn die Spalten **Name** und **Code** vorhanden sind. Der **Code** ist ein eindeutiger Bezeichner für jede Zeile.  
   
     -   Außer der Kopfzeile sollte mindestens eine Zeile mit Daten vorhanden sein. Nicht in allen Spalten müssen Werte enthalten sein, aber die Daten sollten repräsentativ für die Daten sein, die in der Entität enthalten sein sollen.  
   
-    -   Wenn Sie eine Spalte verwenden, die einen eindeutigen Bezeichner enthält (unter MDS als **Code**bezeichnet), sollten Sie sicherstellen, dass die Werte eindeutig sind. Falls keine Spalte Bezeichner enthält, können Sie diese beim Erstellen der Entität automatisch generieren lassen.  
+    -   Wenn Sie eine Spalte verwenden, die einen eindeutigen Bezeichner enthält (unter MDS als **Code** bezeichnet), sollten Sie sicherstellen, dass die Werte eindeutig sind. Falls keine Spalte Bezeichner enthält, können Sie diese beim Erstellen der Entität automatisch generieren lassen.  
   
     -   Stellen Sie sicher, dass keine Zellen Formeln enthalten.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "92257692"
   
 10. Wählen Sie in der Liste **Code** die Spalte aus, die eindeutige Bezeichner enthält, oder lassen Sie die Codes automatisch generieren.  
   
-11. Dies ist optional. Wählen Sie in der Liste **Name** eine Spalte aus, die Namen für jedes Element enthält.  
+11. Optional. Wählen Sie in der Liste **Name** eine Spalte aus, die Namen für jedes Element enthält.  
   
 12. Klicken Sie auf **OK**. Nachdem die Entität erfolgreich erstellt wurde, wird eine neue Kopfzeile angezeigt, die Zellen werden hervorgehoben, und der Blattname wird an den Entitätsnamen angepasst.  
   

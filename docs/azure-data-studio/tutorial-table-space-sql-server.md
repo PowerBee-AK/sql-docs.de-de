@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
-ms.openlocfilehash: d0dd2b33c5f37b58e1442c4ba4cef2a4f38f293c
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: 128b9e0b63cf006577250afe04e6a28c92379497
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439274"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048080"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-azure-data-studio"></a>Tutorial: Aktivieren des Erkenntniswidgets zur Nutzung des Tabellenspeicherplatzes mithilfe von Azure Data Studio
 
@@ -27,7 +27,7 @@ Dieses Tutorial veranschaulicht, wie Sie ein Erkenntniswidget auf dem Datenbankd
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-Für dieses Tutorial ist die SQL Server- oder Azure SQL-Datenbank *TutorialDB* erforderlich. Um die *TutorialDB* -Datenbank zu erstellen, führen Sie eine der folgenden Schnellstartanleitungen vollständig aus:
+Für dieses Tutorial ist die SQL Server- oder Azure SQL-Datenbank *TutorialDB* erforderlich. Um die *TutorialDB*-Datenbank zu erstellen, führen Sie eine der folgenden Schnellstartanleitungen vollständig aus:
 
 * [Herstellen einer Verbindung mit und Abfragen von SQL Server mithilfe von [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 * [Herstellen einer Verbindung mit und Abfragen von Azure SQL-Datenbank mithilfe von [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
@@ -36,17 +36,17 @@ Für dieses Tutorial ist die SQL Server- oder Azure SQL-Datenbank *TutorialDB* e
 
 Azure Data Studio verfügt über ein integriertes Beispielwidget zum Überwachen des Speicherplatzes, der von Tabellen in einer Datenbank genutzt wird.
 
-1. Öffnen Sie die *Benutzereinstellungen* , indem Sie **STRG+UMSCHALT+P** drücken, um die *Befehlspalette* zu öffnen.
+1. Öffnen Sie die *Benutzereinstellungen*, indem Sie **STRG+UMSCHALT+P** drücken, um die *Befehlspalette* zu öffnen.
 
-2. Geben Sie *Einstellungen* in das Suchfeld ein, und wählen Sie Folgendes aus: **Einstellungen: Benutzereinstellungen öffnen** .
+2. Geben Sie *Einstellungen* in das Suchfeld ein, und wählen Sie Folgendes aus: **Einstellungen: Benutzereinstellungen öffnen**.
 
-3. Geben Sie *Dashboard* in das Eingabefeld „Einstellungssuche“ ein, und suchen Sie nach **dashboard.database.widgets** .
+3. Geben Sie *Dashboard* in das Eingabefeld „Einstellungssuche“ ein, und suchen Sie nach **dashboard.database.widgets**.
 
 4. Wenn Sie die Einstellungen **dashboard.database.widgets** anpassen möchten, müssen Sie im Abschnitt **BENUTZEREINSTELLUNGEN** den Eintrag **dashboard.database.widgets** bearbeiten.
 
    ![Screenshot: Bereich „Benutzereinstellungen“ mit umrandetem Bereich „Dashboard“ > „Database Widgets“ (Datenbankwidgets)](media/tutorial-table-space-sql-server/search-settings.png)
 
-   Wenn im Abschnitt **BENUTZEREINSTELLUNGEN** kein Eintrag **dashboard.database.widgets** vorhanden ist, zeigen Sie mit dem Mauszeiger in der Spalte „STANDARDEINSTELLUNGEN“ auf den Text **dashboard.database.widgets** . Klicken Sie auf das *Zahnradsymbol* , das links neben dem Text angezeigt wird, und klicken Sie dann auf **Als JSON-Einstellung kopieren** . Wenn im Popupfenster **In Einstellungen ersetzen** angezeigt wird, klicken Sie nicht darauf! Wechseln Sie zur Spalte **BENUTZEREINSTELLUNGEN** auf der rechten Seite, suchen Sie den Abschnitt **dashboard.database.widgets** , und fahren Sie mit dem nächsten Schritt fort.
+   Wenn im Abschnitt **BENUTZEREINSTELLUNGEN** kein Eintrag **dashboard.database.widgets** vorhanden ist, zeigen Sie mit dem Mauszeiger in der Spalte „STANDARDEINSTELLUNGEN“ auf den Text **dashboard.database.widgets**. Klicken Sie auf das *Zahnradsymbol*, das links neben dem Text angezeigt wird, und klicken Sie dann auf **Als JSON-Einstellung kopieren**. Wenn im Popupfenster **In Einstellungen ersetzen** angezeigt wird, klicken Sie nicht darauf! Wechseln Sie zur Spalte **BENUTZEREINSTELLUNGEN** auf der rechten Seite, suchen Sie den Abschnitt **dashboard.database.widgets**, und fahren Sie mit dem nächsten Schritt fort.
 
 5. Fügen Sie im Abschnitt **dashboard.database.widgets** die folgenden Zeilen hinzu:
 
@@ -67,7 +67,7 @@ Azure Data Studio verfügt über ein integriertes Beispielwidget zum Überwachen
 
     ![Screenshot: Datei „settings.josn“ mit dem ersten Objekt des Arrays „dashboard.database.widgets“](./media/tutorial-table-space-sql-server/insight-table-space.png)
 
-6. Drücken Sie **STRG+S** , um die Einstellungen zu speichern.
+6. Drücken Sie **STRG+S**, um die Einstellungen zu speichern.
 
 7. Öffnen Sie das Datenbankdashboard, indem Sie mit der rechten Maustaste auf **TutorialDB** klicken und dann auf **Verwalten** klicken.
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2268615b8a8ed25883d7d9dce92d8e775f228a4b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 0406997ade10e6ddfc9b13c76240973662255f78
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034981"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076041"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-database--sybasetosql"></a>Migrieren von Sybase ASE-Daten in SQL Server Azure SQL-Datenbank (sybaseto SQL)
 Nachdem Sie die Datenbankobjekte von Sybase Adaptive Server Enterprise (ASE) erfolgreich in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank geladen haben, können Sie Daten von ASE zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Datenbank migrieren.  
@@ -31,7 +31,7 @@ Nachdem Sie die Datenbankobjekte von Sybase Adaptive Server Enterprise (ASE) erf
   
 -   Mithilfe dieses Dialog Felds können Sie Optionen wie die Batch Größe für die Migration, das Sperren von Tabellen, die Einschränkungs Überprüfung, die Verarbeitung von NULL-Werten und die Verarbeitung von Identitäts Werten festlegen. Weitere Informationen zu den Projekt Migrations Einstellungen finden Sie unter [Projekteinstellungen (Migration) (Sybase)](./project-settings-migration-sybasetosql.md).  
   
-    Weitere Informationen zu **erweiterten Daten Migrations Einstellungen**finden Sie unter [Einstellungen für die Datenmigration](data-migration-settings-sybasetosql.md) .  
+    Weitere Informationen zu **erweiterten Daten Migrations Einstellungen** finden Sie unter [Einstellungen für die Datenmigration](data-migration-settings-sybasetosql.md) .  
   
 -   Die **Migrations-Engine** im Dialogfeld **Projekteinstellungen** ermöglicht dem Benutzer das Ausführen des Migrationsprozesses mit zwei Arten von Datenmigrations-Engines:  
   
@@ -43,7 +43,7 @@ Nachdem Sie die Datenbankobjekte von Sybase Adaptive Server Enterprise (ASE) erf
   
 -   Wählen Sie im Dialogfeld **Projekteinstellungen** die Option **Client seitiges Daten Migrations** Modul aus, um die Datenmigration auf Clientseite zu initiieren.  
   
--   In den **Projekteinstellungen**ist die Option **Client seitiges Daten Migrations** Modul standardmäßig festgelegt.  
+-   In den **Projekteinstellungen** ist die Option **Client seitiges Daten Migrations** Modul standardmäßig festgelegt.  
   
     > [!NOTE]  
     > Die Client-Side-Datenmigrations-Engine befindet sich in der SSMA-Anwendung und ist daher nicht von der Verfügbarkeit des Erweiterungspakets abhängig.  
@@ -80,7 +80,7 @@ Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um die Migrations Me
   
     **Client seitige Daten Migration:**  
   
-    Wählen Sie zum Ausführen der **Client seitigen Datenmigration**im Dialogfeld **Projekteinstellungen** die Option **Client seitiges Daten Migrations** Modul aus.  
+    Wählen Sie zum Ausführen der **Client seitigen Datenmigration** im Dialogfeld **Projekteinstellungen** die Option **Client seitiges Daten Migrations** Modul aus.  
   
     **Server seitige Daten Migration:**  
   
@@ -90,7 +90,7 @@ Stellen Sie sicher, dass der Ausgabebereich angezeigt wird, um die Migrations Me
   
         2.  Der SQL Server-Agent-Dienst wird auf der-Instanz ausgeführt SQL Server  
   
-    -   Wählen Sie zum Durchführen der **serverseitigen Datenmigration**im Dialogfeld **Projekteinstellungen** die Option **serverseitiges Datenmigrations-Engine** aus.  
+    -   Wählen Sie zum Durchführen der **serverseitigen Datenmigration** im Dialogfeld **Projekteinstellungen** die Option **serverseitiges Datenmigrations-Engine** aus.  
   
 4.  Klicken Sie im Sybase-metadatenexplorer mit der rechten Maustaste auf **Schemas** , und klicken Sie dann auf **Daten migri** Sie können auch Daten für einzelne Objekte oder Objektkategorien migrieren: Klicken Sie mit der rechten Maustaste auf das Objekt oder seinen übergeordneten Ordner, und wählen Sie die Option **Daten migrieren** aus.  
   

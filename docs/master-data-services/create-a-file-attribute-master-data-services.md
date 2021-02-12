@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cc1b9b6cd36d12e39823cb0915e6fe7b5af4d7bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25023eb11f9968f9edc3e7159f32252b0a116291
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461856"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272681"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>Erstellen eines Dateiattributs (Master Data Services)
 
@@ -39,12 +39,12 @@ ms.locfileid: "88461856"
 ## <a name="attribute-information"></a>Attributinformationen
  Für jedes erstellte Attribut wird dem Raster eine Zeile mit sieben Spalten hinzugefügt. In der folgenden Tabelle werden diese Spalten beschrieben.
 
-|Column|Beschreibung|
+|Spalte|BESCHREIBUNG|
 |------------|-----------------|
 |Status|Der Attributstatus.<br /><br /> Wenn Sie auf Speichern klicken, wird das Bild ![Symbol zum Aktualisieren des Status](../master-data-services/media/mds-statusicon-updating.png "Symbol für Aktualisierungs Status") angezeigt, das angibt, dass das Attribut aktualisiert wird.<br /><br /> Wenn beim Erstellen oder Bearbeiten eines Attributs Fehler auftreten, wird das Bild ![Symbol für den Fehlerstatus](../master-data-services/media/mds-statusicon-error.png "Symbol für Fehlerstatus") angezeigt.<br /><br /> Andernfalls lautet der Status "OK", und das Bild ![Symbol für den Status OK](../master-data-services/media/mds-statusicon-ok.png "Symbol für Status OK") wird angezeigt.|
 |Name|Der Attributname.|
 |Anzeigename|Der Anzeigename des Attributs.|
-|Beschreibung|Die Attributbeschreibung.|
+|BESCHREIBUNG|Die Attributbeschreibung.|
 |Pixelbreite anzeigen|Die Breite des Attributs.|
 |Typ und Eigenschaften|Die Typ- und Datentypinformationen des Attributs.|
 |Änderungsnachverfolgung aktivieren|Gibt an, ob das Attribut für die Änderungsnachverfolgung aktiviert ist, und zeigt die Gruppennummer in Klammern.|
@@ -83,7 +83,7 @@ ms.locfileid: "88461856"
 
 8.  Geben Sie im Feld **Pixelbreite anzeigen** die Breite der Attributspalte ein, die im **Explorerraster** angezeigt werden soll.
 
-9. Wählen Sie in der Liste **Attributtyp** die Option **Datei**aus.
+9. Wählen Sie in der Liste **Attributtyp** die Option **Datei** aus.
 
 10. Wählen Sie aus der Liste **Dateierweiterung** einen Dateityp aus, den ein Benutzer hochladen kann, oder akzeptieren Sie den Standardwert (*\*), um alle Dateitypen zuzulassen.
 
@@ -92,6 +92,6 @@ ms.locfileid: "88461856"
 12. Klicken Sie auf **Speichern**.
 
 ## <a name="see-also"></a>Weitere Informationen
- [Attribute &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md) [Ändern eines Attribut namens und Datentyps &#40;Master Data Services](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)&#41;[Erstellen eines domänenbasierten Attributs &#40;](../master-data-services/create-a-domain-based-attribute-master-data-services.md) Master Data Services&#41;&#40;[Erstellen eines Text Attributs Master Data Services](../master-data-services/create-a-text-attribute-master-data-services.md)&#41;
+ [Attribute &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md) [Ändern eines Attribut namens und Datentyps &#40;Master Data Services](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)&#41;Domain-Based [Attribut](../master-data-services/create-a-domain-based-attribute-master-data-services.md) &#40;[Master Data Services erstellen&#41;](../master-data-services/create-a-text-attribute-master-data-services.md) &#40;Master Data Services&#41;
 
 

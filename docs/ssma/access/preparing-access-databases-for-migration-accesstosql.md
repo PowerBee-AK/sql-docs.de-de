@@ -22,12 +22,12 @@ ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 038ffa60562a443c916d0143fa432d3e5da87bc4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7c52b13a2a71afc005f19d1733e8dff435d2a582
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937871"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066585"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Vorbereiten von Access-Datenbanken für die Migration (accesstosql)
 Bevor Sie Access-Datenbanken zu migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , müssen Sie die zu migrierenden Datenbanken ermitteln und sicherstellen, dass diese Datenbanken für die Migration bereit sind.  
@@ -38,7 +38,7 @@ Die Jet-Datenbank-Engine, die als Datenbank-Engine für den Zugriff verwendet wi
 Nachdem Sie Datenbanken zu migriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] haben, können Sie den Zugriff weiterhin mithilfe verknüpfter Tabellen verwenden, oder Sie können Ihre Anwendungen manuell zu [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework basierten Code migrieren, der direkt mit interagiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="determining-which-databases-to-migrate"></a>Bestimmen der zu migrierenden Datenbanken  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) für den Zugriff kann Zugriffs Datenbanken für Sie finden. Anschließend können Sie Metadaten zu diesen Datenbanken in exportieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Weitere Informationen zum Exportieren und Abfragen von Metadaten finden Sie unter [Exportieren einer Zugriffs Inventur](exporting-an-access-inventory-accesstosql.md).  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) für den Zugriff kann Zugriffs Datenbanken für Sie finden. Anschließend können Sie Metadaten zu diesen Datenbanken in exportieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Weitere Informationen zum Exportieren und Abfragen von Metadaten finden Sie unter [Exportieren einer Zugriffs Inventur](exporting-an-access-inventory-accesstosql.md).  
 
    > [!NOTE]
    > Nicht alle Zugriffs Features und-Einstellungen werden von unterstützt oder können problemlos in konvertiert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Informationen zum Migrieren von Datenbanken finden Sie unter [inkompatible Zugriffs Features](incompatible-access-features-accesstosql.md).
@@ -56,7 +56,7 @@ SSMA kann keine Datenbanken migrieren, die den Arbeitsgruppen Schutz verwenden. 
   
 2.  Öffnen Sie die kopierte Datenbank.  
   
-3.  Zeigen Sie **im Menü Extras** auf **Sicherheit**, und wählen Sie dann **Benutzer-und Gruppenberechtigungen**aus.  
+3.  Zeigen Sie **im Menü Extras** auf **Sicherheit**, und wählen Sie dann **Benutzer-und Gruppenberechtigungen** aus.  
   
 4.  Wählen Sie die Option **Benutzer** aus, wählen Sie den **Administrator** Benutzer aus, und stellen Sie sicher, dass die Berechtigung **Verwalten** ausgewählt ist.  
   
@@ -69,7 +69,7 @@ Nun können Sie SSMA verwenden, um die kopierte Datenbank zu migrieren. Nachdem 
 ### <a name="backing-up-databases"></a>Sichern von Datenbanken  
 Bevor Sie Ihre Access-Datenbanken zu migrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sollten Sie sowohl die Access-Datenbanken, die Sie migrieren möchten, als auch die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanken sichern, in die Sie Access-Objekte und-Daten migrieren möchten.  
   
-Zeigen Sie zum Sichern einer Access-Datenbank im **Menü Extras** auf **Daten Bank Dienstprogramme**, und wählen Sie dann **Datenbank sichern**aus.  
+Zeigen Sie zum Sichern einer Access-Datenbank im **Menü Extras** auf **Daten Bank Dienstprogramme**, und wählen Sie dann **Datenbank sichern** aus.  
   
 Weitere Informationen zum Sichern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbanken finden Sie unter "sichern und Wiederherstellen von Datenbanken in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Online Dokumentation.  
   

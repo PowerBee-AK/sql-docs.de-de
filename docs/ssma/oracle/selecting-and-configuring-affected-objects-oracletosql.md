@@ -14,12 +14,12 @@ ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 5cd9ca7c8789133fdbccc3367f3bda121d2499ed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8256909a2ebc460da2dd2db826e809dd6dfb50c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418346"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067625"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Auswählen und Konfigurieren von betroffenen Objekten (OracleToSQL)
 Auf dieser Seite können Sie Tabellen und Fremdschlüssel auswählen, Änderungen, die verglichen werden sollen, wenn SSMA die Ausführungs Ergebnisse für die im vorherigen Schritt ausgewählten Objekte überprüft. Außerdem können Sie die Überprüfungs Parameter anpassen.  
@@ -46,7 +46,7 @@ Die Registerkarte Tabelle enthält die Rasteransicht der ausgewählten Tabelle. 
   
 -   Identity  
   
--   Nullable  
+-   Nullwerte zulässig  
   
 ## <a name="sql"></a>Sql  
 Die Registerkarte "SQL" enthält die SQL-Tabelle "CREATE TABLE" der ausgewählten Tabelle.  
@@ -67,40 +67,40 @@ Legen Sie die Vergleichs Regeln für Tabellen Spalten auf der Seite mit den **Sp
 ### <a name="use-during-test-comparisons"></a>Verwendung während der Test Vergleiche  
 Bestimmen Sie, ob diese Spalte an der Überprüfung der Testergebnisse beteiligt ist.  
   
--   Wenn Sie **true**auswählen, vergleicht SSMA den Inhalt dieser Spalte nach dem Ausführen des Tests für Oracle mit dem Inhalt der Spalte in SQL Server. 
+-   Wenn Sie **true** auswählen, vergleicht SSMA den Inhalt dieser Spalte nach dem Ausführen des Tests für Oracle mit dem Inhalt der Spalte in SQL Server. 
   
--   Wenn Sie**false**auswählen, wird die Spalte von der Ergebnis Überprüfung ausgeschlossen.  
+-   Wenn Sie **false** auswählen, wird die Spalte von der Ergebnis Überprüfung ausgeschlossen.  
   
 ### <a name="use-custom-scale"></a>Benutzerdefinierte Skalierung verwenden  
 Für Spalten mit einem numerischen Datentyp können Sie eine benutzerdefinierte Skala für den Vergleich festlegen.  
   
--   Wenn Sie **true**auswählen, werden numerische Werte entsprechend dem **Vergleichs Skalierungs** Wert gerundet, bevor Sie verglichen werden.  
+-   Wenn Sie **true** auswählen, werden numerische Werte entsprechend dem **Vergleichs Skalierungs** Wert gerundet, bevor Sie verglichen werden.  
   
--   Wenn Sie**false**auswählen, ist der numerische Vergleich genau.  
+-   Wenn Sie **false** auswählen, ist der numerische Vergleich genau.  
   
 ### <a name="comparing-scale"></a>Vergleichen der Skala  
   
--   Nur verfügbar, wenn die Option **benutzerdefinierte Skalierung verwenden** auf **true**festgelegt ist. Dies ist die Genauigkeit für den numerischen Vergleich.  
+-   Nur verfügbar, wenn die Option **benutzerdefinierte Skalierung verwenden** auf **true** festgelegt ist. Dies ist die Genauigkeit für den numerischen Vergleich.  
   
 ### <a name="date-time-comparing"></a>Vergleichen von Datum und Uhrzeit  
 Definiert, wie Datums-/Uhrzeitwerte verglichen werden.  
   
--   Wenn Sie die Option **gesamtes Datum vergleichen**auswählen, wird ein vollständiger Vergleich der Werte beider Plattformen ausgeführt.  
+-   Wenn Sie die Option **gesamtes Datum vergleichen** auswählen, wird ein vollständiger Vergleich der Werte beider Plattformen ausgeführt.  
   
--   Wenn Sie **Datum nur vergleichen**auswählen, wird der Uhrzeit Teil ignoriert.  
+-   Wenn Sie **Datum nur vergleichen** auswählen, wird der Uhrzeit Teil ignoriert.  
   
--   Wenn Sie **nur die Zeit vergleichen**auswählen, wird der Datums Teil ignoriert.  
+-   Wenn Sie **nur die Zeit vergleichen** auswählen, wird der Datums Teil ignoriert.  
   
--   Wenn Sie die Option **Millisekunden ignorieren**auswählen, werden die Ergebnisse bis zu Sekunden verglichen.  
+-   Wenn Sie die Option **Millisekunden ignorieren** auswählen, werden die Ergebnisse bis zu Sekunden verglichen.  
   
--   Wenn Sie **Datum und Millisekunden ignorieren**auswählen, wird das Ergebnis nur nach Zeit Teil verglichen, und die Sekundenbruchteile werden ignoriert.  
+-   Wenn Sie **Datum und Millisekunden ignorieren** auswählen, wird das Ergebnis nur nach Zeit Teil verglichen, und die Sekundenbruchteile werden ignoriert.  
   
 ### <a name="ignore-strings-case"></a>Zeichen folgen ignorieren  
 Steuert die Groß-/Kleinschreibung des Vergleichs.  
   
--   Wenn Sie **true**auswählen, wird beim Vergleich die Groß-/Kleinschreibung nicht beachtet.  
+-   Wenn Sie **true** auswählen, wird beim Vergleich die Groß-/Kleinschreibung nicht beachtet.  
   
--   Wenn Sie **false**auswählen, wird beim Vergleich der Buchstabe Groß-/Kleinschreibung berücksichtigt.  
+-   Wenn Sie **false** auswählen, wird beim Vergleich der Buchstabe Groß-/Kleinschreibung berücksichtigt.  
   
 ## <a name="comparing-sql"></a>Vergleichen von SQL  
 Sie können die von SSMA Tester generierten SELECT-Anweisungen auf der Seite **SQL vergleichen** anzeigen. Der Tester vergleicht die Resultsets dieser Anweisungen zeilenweise. Jede nächste Zeile eines Oracle-Resultsets sollte gleich der nächsten Zeile des Resultsets sein, das in SQL Server erstellt wurde.

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d8a02e714f78f830da467cb35cf227d73e3a6277
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 0a9c522bf292147852203fb9ac740e7103195b35
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194574"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835992"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Exemplarische Vorgehensweise: Veröffentlichen eines SSIS-Pakets als eine SQL-Ansicht
 
@@ -30,7 +30,7 @@ ms.locfileid: "92194574"
 ## <a name="prerequisites"></a>Voraussetzungen  
  Die folgende Software muss auf Ihrem Computer installiert sein, bevor Sie diese exemplarische Vorgehensweise durchführen können.  
   
-1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder höher mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+1.  [!INCLUDE[ssNoVersion ](../../includes/ssnoversion-md.md)] mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 2.  [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "92194574"
   
     3.  Wählen Sie **Integration Services-Projekt** aus, sofern nicht bereits ausgewählt.  
   
-    4.  Geben Sie **SSISPackagePublishing** für **Projektname**an.  
+    4.  Geben Sie **SSISPackagePublishing** für **Projektname** an.  
   
     5.  Geben Sie einen Speicherort für das Projekt an.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "92194574"
   
 3.  Ziehen Sie die Komponente **Datenfluss** aus der **SSIS-Toolbox** auf die Entwurfsoberfläche der Registerkarte **Ablaufsteuerung** .  
   
-4.  Doppelklicken Sie auf die Komponente **Datenfluss** in der **Ablaufsteuerung** , um den **Datenfluss-Designer**zu öffnen.  
+4.  Doppelklicken Sie auf die Komponente **Datenfluss** in der **Ablaufsteuerung** , um den **Datenfluss-Designer** zu öffnen.  
   
 5.  Ziehen Sie eine **Quellkomponente** aus der Toolbox auf den **Datenfluss-Designer** , und konfigurieren Sie ihn für das Extrahieren von Daten aus einer Datenquelle.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "92194574"
   
     4.  Ziehen Sie die Komponente **OLE DB-Quelle** aus der **SSIS-Toolbox** auf die Registerkarte **Datenfluss-Designer**.  
   
-    5.  Konfigurieren Sie die Komponente für das Extrahieren von Daten aus der Tabelle **Mitarbeiter** in die Datenbank **TestDB** . Wählen Sie **(local).TestDB** für **OLE DB-Verbindungs-Manager**, **Tabelle oder Sicht** für **Datenzugriffsmodus**und **[dbo].[Employee** ] für **Name der Tabelle oder Sicht**.  
+    5.  Konfigurieren Sie die Komponente für das Extrahieren von Daten aus der Tabelle **Mitarbeiter** in die Datenbank **TestDB** . Wählen Sie **(local).TestDB** für **OLE DB-Verbindungs-Manager**, **Tabelle oder Sicht** für **Datenzugriffsmodus** und **[dbo].[Employee** ] für **Name der Tabelle oder Sicht**.  
   
          ![Datenstreamingziel – OLE-DB-Verbindung](../../integration-services/data-flow/media/dsd-oledbconnectionmanager.jpg "Datenstreamingziel: OLE-DB-Verbindung")  
   
@@ -121,7 +121,7 @@ ms.locfileid: "92194574"
   
          ![Datenfeedveröffentlichungs-Assistent: Seite für Veröffentlichungseinstellungen](../../integration-services/data-flow/media/dsd-feedpublishingwizard-publishsettingspage.jpg "Datenfeedveröffentlichungs-Assistent: Seite für Veröffentlichungseinstellungen")  
   
-    2.  Geben Sie einen **Namen** für die **Sicht**ein. Sie können auch eine vorhandene Sicht aus der Dropdownliste auswählen.  
+    2.  Geben Sie einen **Namen** für die **Sicht** ein. Sie können auch eine vorhandene Sicht aus der Dropdownliste auswählen.  
   
     3.  Geben Sie in der Liste **Einstellungen** einen **Namen** für den **Verbindungsserver** an, der der Sicht zugeordnet werden soll. Wenn der Verbindungsserver nicht bereits vorhanden ist, erstellt der Assistent den Verbindungsserver vor dem Erstellen der Sicht. Sie können hier auch Werte für **User32BitRuntime** - und **Timeout** -Werte festlegen.  
   
@@ -133,13 +133,13 @@ ms.locfileid: "92194574"
   
         2.  Geben Sie an, ob die Daten vor dem Senden über das Netzwerk verschlüsselt werden sollen (Feld „Verschlüsselung“). Weitere Informationen zu dieser Einstellung und der „TrustServerCertificate“-Einstellung finden Sie unter [Verwenden von Verschlüsselung ohne Überprüfung](../../relational-databases/native-client/features/using-encryption-without-validation.md) .  
   
-        3.  Geben Sie an, ob ein selbstsigniertes Serverzertifikat verwendet werden kann, wenn die Verschlüsselungseinstellung aktiviert ist (Feld**TrustServerCertificate** ).  
+        3.  Geben Sie an, ob ein selbstsigniertes Serverzertifikat verwendet werden kann, wenn die Verschlüsselungseinstellung aktiviert ist (Feld **TrustServerCertificate** ).  
   
         4.  Klicken Sie auf **OK** , um das Dialogfeld **Erweiterte Einstellungen** zu schließen.  
   
     6.  Klicken Sie auf **Weiter** , um zur Seite **Überprüfung** zu wechseln.  
   
-5.  Auf der Seite **Überprüfung** überprüfen Sie die Ergebnisse der Überprüfung der Werte für alle Einstellungen. Im folgenden Beispiel wird eine **Warnung** für das Vorhandensein des Verbindungsservers angezeigt, da der Verbindungsserver für die ausgewählte SQL Server-Instanz nicht vorhanden ist. Wenn für **Ergebnis** der Wert **Fehler**angezeigt wird, bewegen Sie den Mauszeiger über **Fehler** , um die Details zu diesem Fehler anzuzeigen. Wenn Sie z. B. die Option „InProcess zulassen“ für den SSISOLEDB-Anbieter nicht aktiviert haben, erhalten Sie einen Fehler zur Aktion „Konfiguration des Verbindungsservers“.  
+5.  Auf der Seite **Überprüfung** überprüfen Sie die Ergebnisse der Überprüfung der Werte für alle Einstellungen. Im folgenden Beispiel wird eine **Warnung** für das Vorhandensein des Verbindungsservers angezeigt, da der Verbindungsserver für die ausgewählte SQL Server-Instanz nicht vorhanden ist. Wenn für **Ergebnis** der Wert **Fehler** angezeigt wird, bewegen Sie den Mauszeiger über **Fehler** , um die Details zu diesem Fehler anzuzeigen. Wenn Sie z. B. die Option „InProcess zulassen“ für den SSISOLEDB-Anbieter nicht aktiviert haben, erhalten Sie einen Fehler zur Aktion „Konfiguration des Verbindungsservers“.  
   
      ![Datenfeedveröffentlichungs-Assistent: Seite „Überprüfung“](../../integration-services/data-flow/media/dsd-feedpublishingwizard-validationpage.jpg "Datenfeedveröffentlichungs-Assistent: Seite „Überprüfung“")  
   
@@ -174,7 +174,7 @@ ms.locfileid: "92194574"
 ## <a name="step-4-verify-the-ssis-package-execution"></a>Schritt 4: Überprüfen der SSIS-Paketausführung  
  In diesem Schritt überprüfen Sie, ob das SSIS-Paket ausgeführt wurde.  
   
-1.  Erweitern Sie in SQL Server Management Studio **Integration Services-Kataloge**und dann **SSISDB**. Anschließend erweitern Sie den **Ordner** , der Ihr SSIS-Projekt enthält, dann **Projekte**sowie Ihren Projektknoten, und abschließend erweitern Sie **Pakete**.  
+1.  Erweitern Sie in SQL Server Management Studio **Integration Services-Kataloge** und dann **SSISDB**. Anschließend erweitern Sie den **Ordner** , der Ihr SSIS-Projekt enthält, dann **Projekte** sowie Ihren Projektknoten, und abschließend erweitern Sie **Pakete**.  
   
 2.  Klicken Sie mit der rechten Maustaste auf das SSIS-Paket, klicken Sie auf **Berichte**, und zeigen Sie dann auf **Standardberichte**. Anschließend klicken Sie auf **Alle Ausführungen**.  
   
@@ -222,7 +222,7 @@ GO
     ```  
   
     > [!IMPORTANT]  
-    >  Aktualisieren Sie bei Bedarf den Ordnernamen, Projektnamen und Paketnamen. Wenn bei der OPENQUERY-Funktion ein Fehler auftritt, erweitern Sie in **SQL Server Management Studio**die Option **Serverobjekte**, **Verbindungsserver**sowie **Anbieter**, und doppelklicken Sie auf den Anbieter **SSISOLEDB** . Stellen Sie anschließend sicher, dass die Option **InProcess zulassen** aktiviert ist.  
+    >  Aktualisieren Sie bei Bedarf den Ordnernamen, Projektnamen und Paketnamen. Wenn bei der OPENQUERY-Funktion ein Fehler auftritt, erweitern Sie in **SQL Server Management Studio** die Option **Serverobjekte**, **Verbindungsserver** sowie **Anbieter**, und doppelklicken Sie auf den Anbieter **SSISOLEDB** . Stellen Sie anschließend sicher, dass die Option **InProcess zulassen** aktiviert ist.  
   
 2.  Erstellen Sie in der Datenbank **TestDB** im Rahmen dieser exemplarischen Vorgehensweise eine Sicht, indem Sie die folgende Abfrage ausführen.  
   

@@ -10,24 +10,24 @@ ms.topic: conceptual
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 99ab880b69d2c06d462ed42ca0a2529ba6bf7bc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e9086feb8adcb64ba1a24191e91028fc870d488
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372116"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069918"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Projekteinstellungen (Typzuordnung) (SybaseToSQL)
 Die Seite Typzuordnung des Dialog Felds **Projekteinstellungen** enthält Einstellungen, die anpassen, wie SSMA die Datentypen von Sybase Adaptive Server Enterprise (ASE) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen konvertiert.  
   
 Die Seite Typzuordnung ist in den Dialogfeldern **Projekteinstellungen** und **Standard Projekteinstellungen** verfügbar.  
   
--   Wenn Sie die typzuordnungseinstellungen für alle zukünftigen SSMA-Projekte angeben möchten, wählen Sie **im Menü Extras die Option** **Standard Projekteinstellungen**aus, wählen Sie den Migrations Projekttyp aus, für den die Einstellungen in der Dropdown Liste **Migrations Ziel Version** angezeigt oder geändert werden müssen, und wählen Sie dann unten im linken Bereich **Typzuordnung** aus.  
+-   Wenn Sie die typzuordnungseinstellungen für alle zukünftigen SSMA-Projekte angeben möchten, wählen Sie **im Menü Extras die Option** **Standard Projekteinstellungen** aus, wählen Sie den Migrations Projekttyp aus, für den die Einstellungen in der Dropdown Liste **Migrations Ziel Version** angezeigt oder geändert werden müssen, und wählen Sie dann unten im linken Bereich **Typzuordnung** aus.  
   
--   Um Einstellungen für das aktuelle Projekt anzugeben, wählen Sie **im Menü Extras** die Option **Projekteinstellungen**aus, und klicken Sie dann unten im linken Bereich auf **Typzuordnung** .  
+-   Um Einstellungen für das aktuelle Projekt anzugeben, wählen Sie **im Menü Extras** die Option **Projekteinstellungen** aus, und klicken Sie dann unten im linken Bereich auf **Typzuordnung** .  
   
 ## <a name="options"></a>Tastatur  
-**Quelltyp**  
+**Quellentyp**  
 Der zugeordnete ASE-Datentyp.  
   
 **Zieltyp**  
@@ -63,7 +63,7 @@ Die folgende Tabelle enthält die Standardtyp Zuordnung zwischen ASE und [!INCLU
 |**char-Variation [8001.. \* ]**|**varchar(max)**|  
 |**Char [ \* .. 8000]**|**Char [ \* ]**|  
 |**Char [8001... \* ]**|**varchar(max)**|  
-|**Art**|**char**|  
+|**character**|**char**|  
 |**character varying**|**varchar**|  
 |**variierendes Zeichen [ \* .. 8000]**|**varchar [ \* ]**|  
 |**variierendes Zeichen [8001.. \* ]**|**varchar(max)**|  
@@ -77,7 +77,7 @@ Die folgende Tabelle enthält die Standardtyp Zuordnung zwischen ASE und [!INCLU
 |**decimal**|**decimal**|  
 |**Dezimal [ \* .. \* ]**|**Dezimalzahl [ \* ]**|  
 |**Dezimal [ \* .. \* ] [\*..\*]**|**Dezimal [ \* ] [ \* ]**|  
-|**double precision**|**float [53]**|  
+|**doppelte Genauigkeit**|**float [53]**|  
 |**float**|**float [53]**|  
 |**float [ \* .. 17.15**|**float [24]**|  
 |**float [16.. \* ]**|**float [53]**|  

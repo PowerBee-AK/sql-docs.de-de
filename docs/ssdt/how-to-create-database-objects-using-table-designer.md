@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 410b2674f407018b895ed84781bedf5fa8766feb
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: a055bd1f8de41686e1c3477e3e4810e78d6b5025
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364392"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018310"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>Gewusst wie: Erstellen von Datenbankobjekten mit dem Tabellen-Designer
 
@@ -31,13 +31,13 @@ Sie können z.B. unter dem Knoten **Datenbanken** eine neue Datenbank erstellen.
   
 1.  Erweitern Sie im **SQL Server-Objekt-Explorer** unter dem Knoten **SQL Server** die verbundene Serverinstanz.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken** , und wählen Sie **Neue Datenbank hinzufügen** aus.  
+2.  Klicken Sie mit der rechten Maustaste auf den Knoten **Datenbanken**, und wählen Sie **Neue Datenbank hinzufügen** aus.  
   
 3.  Benennen Sie die neue Datenbank in **Trade** um.  
   
 ### <a name="to-create-new-tables-using-the-table-designer"></a>So erstellen Sie neue Tabellen mithilfe des Tabellen-Designers  
   
-1.  Erweitern Sie den neu erstellten Knoten **Trade**. Klicken Sie mit der rechten Maustaste auf den Knoten **Tabellen** , und wählen Sie **Neue Tabelle hinzufügen** aus.  
+1.  Erweitern Sie den neu erstellten Knoten **Trade**. Klicken Sie mit der rechten Maustaste auf den Knoten **Tabellen**, und wählen Sie **Neue Tabelle hinzufügen** aus.  
   
 2.  Der Tabellen-Designer wird in einem neuen Fenster geöffnet. Der Designer besteht aus dem Spaltenraster, dem Skriptbereich und dem Kontextbereich. Im Spaltenraster werden alle Spalten in der Tabelle aufgelistet. Andere Komponenten des Designers werden in späteren Prozeduren behandelt.  
   
@@ -81,7 +81,7 @@ Sie können z.B. unter dem Knoten **Datenbanken** eine neue Datenbank erstellen.
   
 1.  Im Kontextbereich des Tabellen-Designers erhalten Sie eine logische Sicht der Tabellendefinition und (Schlüssel, Einschränkungen, Trigger usw.). Hier können Sie ein Objekt auswählen, um dessen Beziehungen zu einzelnen Spalten hervorzuheben.  
   
-    Klicken Sie für die Tabelle „Products“ im Kontextbereich des Tabellen-Designers mit der rechten Maustaste auf den Knoten **CHECK-Einschränkungen** , und klicken Sie auf **Neue CHECK-Einschränkung hinzufügen**.  
+    Klicken Sie für die Tabelle „Products“ im Kontextbereich des Tabellen-Designers mit der rechten Maustaste auf den Knoten **CHECK-Einschränkungen**, und klicken Sie auf **Neue CHECK-Einschränkung hinzufügen**.  
   
 2.  Beachten Sie, dass die Knotenanzahl automatisch um 1 inkrementiert wird.  
   
@@ -95,7 +95,7 @@ Sie können z.B. unter dem Knoten **Datenbanken** eine neue Datenbank erstellen.
   
 ### <a name="to-create-new-foreign-key-references-using-the-table-designer"></a>So erstellen Sie mithilfe des Tabellen-Designers neue Fremdschlüsselverweise  
   
-1.  Klicken Sie für die Tabelle „Products“ im Kontextbereich mit der rechten Maustaste auf den Knoten **Fremdschlüssel** , und klicken Sie auf **Neuen Fremdschlüssel hinzufügen**.  
+1.  Klicken Sie für die Tabelle „Products“ im Kontextbereich mit der rechten Maustaste auf den Knoten **Fremdschlüssel**, und klicken Sie auf **Neuen Fremdschlüssel hinzufügen**.  
   
 2.  Beachten Sie, dass die Knotenanzahl automatisch um 1 inkrementiert wird.  
   

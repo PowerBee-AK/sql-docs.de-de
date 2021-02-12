@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 55456185a6503ee11465a1e65cb9cd91de3ba6e2
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 0ec2ab7fa84dc3f4b4155a093794d5a4e49b56ec
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92199567"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046820"
 ---
 # <a name="sql-server-big-data-clusters-transparent-data-encryption-tde-at-rest-usage-guide"></a>Leitfaden zur Verwendung von SQL Server Transparent Data Encryption(transparente Datenverschlüsselung, TDE) für Big Data-Cluster
 

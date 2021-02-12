@@ -10,12 +10,12 @@ ms.date: 10/19/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: de0bc20d7551e8d42c5dc1463fada6ffcbb6a0fd
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: df878f94c2ed6338ae28cbff156460ffdef87826
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257150"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046660"
 ---
 # <a name="encryption-at-rest-concepts-and-configuration-guide"></a>Konzepte- und Konfigurationsleitfaden für die Verschlüsselung ruhender Daten
 
@@ -23,19 +23,19 @@ Beginnend mit SQL Server Big Data-Clustern CU8 ist ein umfassender Funktionssat
 
 In SQL Server Big Data-Clustern werden Daten an den folgenden zwei Orten gespeichert:
 
-* __SQL Server__ -Masterinstanz
-* __HDFS__ , von Speicherpool und Spark verwendet.
+* __SQL Server__-Masterinstanz
+* __HDFS__, von Speicherpool und Spark verwendet.
 
 Um Daten in SQL Server Big Data-Clustern transparent verschlüsseln zu können, gibt es zwei mögliche Ansätze:
 
-* __Volumeverschlüsselung__ . Dieser Ansatz wird von der Kubernetes-Plattform unterstützt und als bewährte Methode für Big Data-Clusterbereitstellungen vorausgesetzt. Dieser Leitfaden behandelt die Volumeverschlüsselung nicht. Anleitungen zum ordnungsgemäßen Verschlüsseln von Volumes, die für SQL Server Big Data-Cluster verwendet werden sollen, finden Sie in der Dokumentation Ihrer Kubernetes-Plattform oder Appliance.
-* __Verschlüsselung auf Anwendungsebene__ . Diese Architektur bezieht sich auf die Verschlüsselung von Daten durch die Anwendung, die die Daten verarbeitet, bevor sie auf den Datenträger geschrieben werden. Für den Fall, dass die Volumes verfügbar gemacht werden, wäre ein Angreifer nicht in der Lage, Datenartefakte an anderer Stelle wiederherzustellen, es sei denn, das wurde ebenfalls mit denselben Verschlüsselungsschlüsseln konfiguriert. 
+* __Volumeverschlüsselung__. Dieser Ansatz wird von der Kubernetes-Plattform unterstützt und als bewährte Methode für Big Data-Clusterbereitstellungen vorausgesetzt. Dieser Leitfaden behandelt die Volumeverschlüsselung nicht. Anleitungen zum ordnungsgemäßen Verschlüsseln von Volumes, die für SQL Server Big Data-Cluster verwendet werden sollen, finden Sie in der Dokumentation Ihrer Kubernetes-Plattform oder Appliance.
+* __Verschlüsselung auf Anwendungsebene__. Diese Architektur bezieht sich auf die Verschlüsselung von Daten durch die Anwendung, die die Daten verarbeitet, bevor sie auf den Datenträger geschrieben werden. Für den Fall, dass die Volumes verfügbar gemacht werden, wäre ein Angreifer nicht in der Lage, Datenartefakte an anderer Stelle wiederherzustellen, es sei denn, das wurde ebenfalls mit denselben Verschlüsselungsschlüsseln konfiguriert. 
 
 Der Verschlüsselungsfunktionssatz für ruhende Daten von SQL Server Big Data-Clustern unterstützt das Kernszenario der Verschlüsselung auf Anwendungsebene für die SQL Server- und HDFS-Komponenten.
 
 Folgende Funktionen werden bereitgestellt:
 
-* __Systemseitig verwaltete Verschlüsselung ruhender Daten__ . Diese Funktion ist in CU8 verfügbar.
+* __Systemseitig verwaltete Verschlüsselung ruhender Daten__. Diese Funktion ist in CU8 verfügbar.
 * __Benutzerseitig verwaltete Verschlüsselung von ruhenden Daten (BYOK)__ mit Intergrationen von sowohl dienstseitig verwalteten als auch externen Schlüsselanbietern. Aktuell werden nur dienstseitig verwaltete, benutzerseitig erstellte Schlüssel unterstützt.
 
 ## <a name="key-definitions"></a>Wichtige Definitionen
@@ -49,9 +49,9 @@ Ein vom Controller gehosteter Dienst, der für die Verwaltung von Schlüsseln un
 * Verwaltung des SQL Server TDE-Zertifikats.
 
 Die folgende Funktion wird zurzeit nicht unterstützt:
-* *Unterstützung für Versionsverwaltung von Schlüsseln* . 
+* *Unterstützung für Versionsverwaltung von Schlüsseln*. 
 
-Im Rest dieses Dokuments bezeichnen wir diesen Dienst als __BDC KMS__ . Außerdem wird der Begriff __BDC__ verwendet, um die Computingplattform __SQL Server Big Data-Cluster__ zu bezeichnen.
+Im Rest dieses Dokuments bezeichnen wir diesen Dienst als __BDC KMS__. Außerdem wird der Begriff __BDC__ verwendet, um die Computingplattform __SQL Server Big Data-Cluster__ zu bezeichnen.
 
 ### <a name="system-managed-keys-and-certificates"></a>Systemseitig verwaltete Schlüssel und Zertifikate
 
@@ -71,7 +71,7 @@ SQL Server Big Data-Cluster CU8 ist die erste Version des Funktionssatzes für 
 
 Der Funktionssatz führt den __BDC KMS-Controllerdienst__ ein, um systemseitig verwaltete Schlüssel und Zertifikate für die Verschlüsselung ruhender Daten sowohl in SQL Server als auch in HDFS bereitzustellen. Diese Schlüssel und Zertifikate werden vom Dienst verwaltet, und diese Dokumentation bietet eine Betriebsanleitung für die Interaktion mit dem Dienst.
 
-* __SQL Server__ -Instanzen nutzen die bestehende [Transparent Data Encryption](../relational-databases/security/encryption/transparent-data-encryption.md)-Funktion (TDE).
+* __SQL Server__-Instanzen nutzen die bestehende [Transparent Data Encryption](../relational-databases/security/encryption/transparent-data-encryption.md)-Funktion (TDE).
 * __HDFS__ verwendet den nativen Hadoop KMS in jedem Pod für die Interaktion mit BDC KMS auf dem Controller. Dies ermöglicht HDFS-Verschlüsselungszonen, die sichere Pfade auf HDFS bereitstellen.
 
 ### <a name="sql-server-instances"></a>SQL Server-Instanzen
@@ -98,7 +98,7 @@ Der Funktionssatz führt den __BDC KMS-Controllerdienst__ ein, um systemseitig v
 
 Die Verschlüsselung ruhender Daten für SQL Server Big Data-Cluster ist eine dienstseitig verwaltete Funktion, die, je nach Bereitstellungspfad, noch zusätzliche Schritte erfordern kann.
 
-Während __neuer Bereitstellungen von SQL Server Big Data-Clustern__ (ab CU8) wird die __Verschlüsselung ruhender Daten standardmäßig aktiviert und konfiguriert__ . Dies bedeutet:
+Während __neuer Bereitstellungen von SQL Server Big Data-Clustern__ (ab CU8) wird die __Verschlüsselung ruhender Daten standardmäßig aktiviert und konfiguriert__. Dies bedeutet:
 
 * Die BDC KMS-Komponente wird im Controller bereitgestellt und generiert einen Standardsatz von Schlüsseln und Zertifikaten.
 * SQL Server wird mit aktivierter TDE bereitgestellt, und Zertifikate werden vom Controller installiert.
@@ -106,7 +106,7 @@ Während __neuer Bereitstellungen von SQL Server Big Data-Clustern__ (ab CU8) wi
 
 Die im vorherigen Abschnitt beschriebenen Anforderungen und Standardverhalten sind gültig.
 
-Wenn Sie ein __Upgrade Ihres Clusters auf CU8 vornehmen__ , __lesen Sie den nächsten Abschnitt sorgfältig__ .
+Wenn Sie ein __Upgrade Ihres Clusters auf CU8 vornehmen__, __lesen Sie den nächsten Abschnitt sorgfältig__.
 
 ### <a name="upgrading-to-cu8"></a>Upgrade auf CU8
 
@@ -117,14 +117,14 @@ In vorhandenen Clustern erzwingt der Upgradeprozess keine Verschlüsselung von B
 
 * __SQL Server__
 
-    1. __SQL Server-Masterinstanz__ . Der Upgradevorgang hat keine Auswirkungen auf Masterinstanz-Datenbanken und installierte TDE-Zertifikate. Es wird allerdings dringend empfohlen, Ihre Datenbanken sowie Ihre manuell installierten TDE-Zertifikate vor dem Upgradevorgang zu sichern. Ferner wird empfohlen, diese Artefakte außerhalb des SQL Server BDC-Clusters zu speichern.
-    1. __Compute- und Speicherpool__ . Diese Datenbanken werden systemseitig verwaltet, sind flüchtig und werden beim Clusterupgrade neu erstellt und automatisch verschlüsselt.
-    1. __Datenpool__ . Das Upgrade hat keine Auswirkungen auf Datenbanken im SQL Server-Instanzenteil des Datenpools.
+    1. __SQL Server-Masterinstanz__. Der Upgradevorgang hat keine Auswirkungen auf Masterinstanz-Datenbanken und installierte TDE-Zertifikate. Es wird allerdings dringend empfohlen, Ihre Datenbanken sowie Ihre manuell installierten TDE-Zertifikate vor dem Upgradevorgang zu sichern. Ferner wird empfohlen, diese Artefakte außerhalb des SQL Server BDC-Clusters zu speichern.
+    1. __Compute- und Speicherpool__. Diese Datenbanken werden systemseitig verwaltet, sind flüchtig und werden beim Clusterupgrade neu erstellt und automatisch verschlüsselt.
+    1. __Datenpool__. Das Upgrade hat keine Auswirkungen auf Datenbanken im SQL Server-Instanzenteil des Datenpools.
 
 * __HDFS__
 
-    1. __HDFS__ . Beim Upgradeprozess werden keine HDFS-Dateien und -Ordner außerhalb von Verschlüsselungszonen angefasst.
-    1. __Verschlüsselungszonen werden nicht konfiguriert__ . Die Hadoop KMS-Komponente wird nicht für die Verwendung von BDC KMS konfiguriert. Um die HDFS-Verschlüsselungszonenfunktion nach dem Upgrade zu konfigurieren und zu aktivieren, befolgen Sie den nächsten Abschnitt.
+    1. __HDFS__. Beim Upgradeprozess werden keine HDFS-Dateien und -Ordner außerhalb von Verschlüsselungszonen angefasst.
+    1. __Verschlüsselungszonen werden nicht konfiguriert__. Die Hadoop KMS-Komponente wird nicht für die Verwendung von BDC KMS konfiguriert. Um die HDFS-Verschlüsselungszonenfunktion nach dem Upgrade zu konfigurieren und zu aktivieren, befolgen Sie den nächsten Abschnitt.
 
 ### <a name="enable-hdfs-encryption-zones-after-upgrade"></a>Aktivieren von HDFS-Verschlüsselungszonen nach einem Upgrade
 

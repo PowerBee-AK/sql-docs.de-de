@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 87cdbd49-a0c9-4b00-8a93-34188b18d11a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3a7932d79c414fb79dfc29074c1b8a5888c85827
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 898b55146317a09b43b1b4df63a22a9a74882ee9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418506"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074631"
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>Entfernen der SSMA-Komponenten für MySQL (MySqlToSql)
-Wenn Sie die Migration von Datenbanken von MySQL zu abgeschlossen haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie die SSMA-Komponenten deinstallieren. Sie können die Client Komponenten jederzeit deinstallieren. Wenn Sie jedoch das Erweiterungspaket von deinstallieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , unterstützt SSMA nicht mehr die Migration von Daten aus MySQL in die Zieldatenbank (SQL Server/SQL Azure) mithilfe der Server seitigen Daten Migrations-Engine.  
+Wenn Sie die Migration von Datenbanken von MySQL zu abgeschlossen haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , können Sie die SSMA-Komponenten deinstallieren. Sie können die Client Komponenten jederzeit deinstallieren. Wenn Sie jedoch das Erweiterungspaket von deinstallieren, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt SSMA nicht mehr die Migration von Daten aus MySQL in die Zieldatenbank (SQL Server/SQL Azure) mithilfe der Server-Side Datenmigrations-Engine.  
   
 ## <a name="uninstalling-the-ssma-for-mysql-client"></a>Deinstallieren des SSMA für MySQL-Clients  
-Sie können SSMA **mithilfe der**Option Software deinstallieren.  
+Sie können SSMA **mithilfe der** Option Software deinstallieren.  
   
 **So deinstallieren Sie SSMA**  
   
@@ -35,7 +35,7 @@ Sie können SSMA **mithilfe der**Option Software deinstallieren.
 3.  Um zu bestätigen, dass Sie SSMA deinstallieren möchten, klicken Sie auf **Ja**.  
   
 ## <a name="uninstalling-the-extension-pack"></a>Deinstallieren des Erweiterungspakets  
-Sie können das Erweiterungs **Paket mithilfe der**Option "Software" entfernen.  
+Sie können das Erweiterungs **Paket mithilfe der** Option "Software" entfernen.  
   
 **So deinstallieren Sie das Erweiterungspaket**  
   
@@ -55,9 +55,9 @@ Sie können das Erweiterungs **Paket mithilfe der**Option "Software" entfernen.
   
 7.  Klicken Sie auf der Seite Fertigstellen **auf beenden.**  
   
-Nachdem die Installation abgeschlossen ist, können Sie überprüfen, ob Objekte im **sysdb. ssma_MySQL** -Schema und möglicherweise die gesamte **sysdb** -Datenbank mithilfe von entfernt wurden [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Wenn Sie jedoch andere SSMA-Produkte verwenden, verwenden Sie auch die **sysdb** -Datenbank. Wenn die Datenbank vorhanden ist und Sie sicher sind, dass keine anderen Datenbanken auf die Objekte in dieser Datenbank verweisen, können Sie die Datenbank trennen.  
+Nachdem die Installation abgeschlossen ist, können Sie überprüfen, ob Objekte im **sysdb.ssma_MySQL** Schema und möglicherweise die gesamte **sysdb** -Datenbank mithilfe von entfernt wurden [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Wenn Sie jedoch andere SSMA-Produkte verwenden, verwenden Sie auch die **sysdb** -Datenbank. Wenn die Datenbank vorhanden ist und Sie sicher sind, dass keine anderen Datenbanken auf die Objekte in dieser Datenbank verweisen, können Sie die Datenbank trennen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Installieren von SSMA für MySQL-Client &#40;mysqlto SQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
-[Installieren von SSMA-Komponenten für SQL Server](installing-ssma-components-on-sql-server-mysqltosql.md)  
+[Installieren von SSMA-Komponenten auf SQL Server](installing-ssma-components-on-sql-server-mysqltosql.md)  
   
